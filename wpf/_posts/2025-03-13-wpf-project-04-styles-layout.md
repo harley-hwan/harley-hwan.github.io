@@ -6,7 +6,7 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [c#, wpf, styles, layout, ui, xaml]
 comments: true
-filename: "2025-03-13-wpf-project-styles-layout.md"
+filename: "2025-03-13-wpf-project-04-styles-layout.md"
 ---
 
 # (WPF) 4. WPF에서 스타일 및 레이아웃 활용하기
