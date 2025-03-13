@@ -6,7 +6,7 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [c#, wpf, controls, ui, xaml]
 comments: true
-filename: "2023-05-20-wpf-project-03-controls.md"
+filename: "2025-02-11-wpf-project-03-controls.md"
 ---
 
 # (WPF) 3. WPF에서 컨트롤 사용하기
