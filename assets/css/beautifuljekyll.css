@@ -11,62 +11,51 @@ html {
 }
 
 body {
-  font-family: 'Inter', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  font-family: 'Inter', 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  color: #333;
-  background-color: #fff;
+  color: #343541; /* ChatGPT의 글자색과 유사 */
+  background-color: #FFFFFF;
   word-break: keep-all;
 }
+
 p {
-  line-height: 1.5;
-  margin: 1.875rem 0;
+  margin: 1rem 0;
+  line-height: 1.75;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 800;
-  line-height: 1.1;
-}
-h1 {
-  font-size: 2.25rem;
-}
-h2 {
-  font-size: 1.875rem;
-}
-h3 {
-  font-size: 1.5rem;
-}
-h4 {
-  font-size: 1.125rem;
-}
-h1, h2, h3, h4 {
+
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  color: #111;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  line-height: 1.4;
+  color: #343541;
+  margin-top: 1.5rem;
 }
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+ul, ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  line-height: 1.75;
+}
+
 a {
-  color: {{ site.link-col | default: "#008AFF" }};
+  color: #0b69ff; /* ChatGPT의 링크 색상과 유사 */
+  text-decoration: none;
 }
-a:hover,
-a:focus {
-  color: {{ site.hover-col | default: "#0085A1" }};
+
+a:hover {
+  text-decoration: underline;
 }
-blockquote {
-  color: #808080;
-  font-style: italic;
+
+hr {
+  border: none;
+  border-top: 1px solid #eaeaea;
+  margin: 2rem 0;
 }
-blockquote p:first-child {
-  margin-top: 0;
-}
-hr.small {
-  max-width: 6.25rem;
-  margin: 1rem auto;
-  border-width: 0.25rem;
-  border-color: inherit;
-  border-radius: 0.1875rem;
-}
+
 
 /* fix in-page anchors to not be behind fixed header */
 :target:before {
