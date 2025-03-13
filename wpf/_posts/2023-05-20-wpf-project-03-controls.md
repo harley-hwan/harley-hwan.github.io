@@ -1,3 +1,4 @@
+---
 layout: post
 title: "(WPF) 3. WPF에서 컨트롤 사용하기"
 subtitle: "라벨(Label), 체크 박스(CheckBox), 라디오 버튼(RadioButton), 텍스트 박스(TextBox), 버튼(Button), 패스워드 박스(PasswordBox), 리스트 뷰(ListView) 활용"
@@ -6,7 +7,6 @@ gh-badge: [star, fork, follow]
 tags: [c#, wpf, controls, ui, xaml]
 comments: true
 filename: "2023-05-20-wpf-project-03-controls.md"
-
 ---
 
 # (WPF) 3. WPF에서 컨트롤 사용하기
