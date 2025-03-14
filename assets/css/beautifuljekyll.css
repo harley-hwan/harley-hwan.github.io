@@ -952,7 +952,7 @@ pre code {
 
 .blog-post img {
   display: block;
-  margin: 1rem auto;
+  margin: 1rem 0;
   max-width: 80%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
