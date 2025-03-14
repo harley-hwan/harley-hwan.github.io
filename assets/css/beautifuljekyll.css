@@ -971,10 +971,11 @@ pre code {
 }
 
 .blog-post hr {
-  max-width: 25%;
+  max-width: 100%;
   border-width: 0.25rem;
   border-radius: 0.1875rem;
   border-color: #808080;
+  margin: 3.5rem 0; /* Increased from the default 2rem to 3.5rem */
 }
 
 .blog-post blockquote {
