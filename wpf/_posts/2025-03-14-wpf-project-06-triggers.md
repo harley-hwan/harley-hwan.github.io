@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: "(WPF) 6. WPF에서 트리거와 데이터 트리거 활용하기"
 subtitle: "트리거를 활용한 스타일 및 데이터 연동 방법"
@@ -8,7 +7,6 @@ gh-badge: [star, fork, follow]
 tags: [c#, wpf, triggers, data-triggers, ui, xaml]
 comments: true
 filename: "2025-03-14-wpf-project-06-triggers.md"
-
 ---
 
 # (WPF) 6. 트리거와 데이터 트리거 활용하기
