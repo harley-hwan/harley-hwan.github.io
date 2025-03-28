@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "WPF에서 AsyncRelayCommand로 장시간 작업 처리하기"
+title: "(WPF) 8. AsyncRelayCommand로 장시간 작업 처리하기"
 subtitle: "Async/await를 활용해 UI를 멈추지 않고 작업 실행하기"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
