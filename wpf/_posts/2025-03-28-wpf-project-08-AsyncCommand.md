@@ -1,136 +1,145 @@
 ---
 layout: post
-title: "(WPF) 8. AsyncRelayCommand로 장시간 작업 처리하기"
+title: "(WPF) 8. AsyncRelayCommand로 비동기 작업 처리하기"
 subtitle: "Async/await를 활용해 UI를 멈추지 않고 작업 실행하기"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
-tags: [WPF, MVVM, async, AsyncRelayCommand, C#]
+tags: [WPF, MVVM, async, AsyncRelayCommand, Command, C#]
 comments: true
 filename: "2025-03-28-wpf-project-08-AsyncCommand.md"
 ---
 
-WPF 애플리케이션에서 오래 걸리는 작업을 실행할 때, UI가 멈추지 않도록 비동기 처리가 필요하다. 이번 장에서는 `AsyncRelayCommand`를 사용하여 이러한 장시간 작업을 MVVM 패턴으로 구현하고, `async/await`를 통해 **응답성 있는 UI**를 유지하는 방법을 알아본다.
-
-## 목차
-- [비동기 작업이 필요한 이유](#비동기-작업이-필요한-이유)
-- [AsyncRelayCommand 설치 방법](#asyncrelaycommand-설치-방법)
-- [코드 설명](#코드-설명)
-- [실행 결과 확인](#실행-결과-확인)
-- [결론](#결론)
-
 ## 비동기 작업이 필요한 이유
-일반적인 `RelayCommand`를 통해 무거운 작업을 동기적으로 수행하면 UI 스레드가 그 작업이 끝날 때까지 막혀 있게 된다. 예를 들어 버튼 클릭 이벤트에서 복잡한 계산이나 대용량 파일 I/O를 바로 처리하면 프로그램의 창을 움직이거나 다른 입력을 할 수 없게 되고, 심하면 Windows에서 해당 창에 “응답 없음” 표시가 뜨게 된다. **UI 스레드가 작업에 붙잡혀 있는 동안에는 다른 UI 이벤트를 처리하지 못하기 때문**이다 ([Await, and UI, and deadlocks! Oh my! - .NET Blog](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/#:~:text=for%20developers%20to%20write%20the,also%20really%20useful%20for%20responsiveness)). 결과적으로 사용자는 프로그램이 멈춘 것처럼 느끼게 되며, 매우 불편한 경험을 하게 된다.
 
- ([image]()) 동기식 명령 실행 중 UI가 멈춘 모습 (창 제목에 '응답 없음' 표시). 이처럼 시간이 오래 걸리는 작업을 UI 스레드에서 처리하면 화면 갱신도 이루어지지 않고, 사용자는 진행 상황을 알 수 없게 된다. 응용 프로그램이 몇 초 이상 응답하지 않으면 **치명적인 사용자 경험 저하**로 이어진다. 따라서 긴 작업은 UI 스레드를 블로킹하지 않도록 별도의 스레드에서 수행해야 한다.
+WPF 애플리케이션에서 버튼 클릭으로 시간이 오래 걸리는 작업을 수행하면 UI가 멈추는 현상을 겪게 된다. 예를 들어, 버튼 클릭 시 5초 정도 걸리는 파일 처리나 웹 요청을 UI 스레드에서 바로 실행하면 그 5초 동안 윈도우가 **“응답 없음”** 상태로 얼어붙게 된다. 이는 WPF의 **UI 스레드**가 긴 작업을 처리하느라 화면 그리기나 사용자 입력 처리와 같은 다른 일을 못 하기 때문에 발생한다.
 
-이를 구현하기 위해 과거에는 `BackgroundWorker`나 스레드 생성, `Dispatcher.Invoke` 등을 사용했으나, **C#의 `async/await` 패턴**을 사용하면 훨씬 간결하게 구현할 수 있다 ([Using Async, Await, and Task to keep the WinForms UI responsive](https://grantwinney.com/using-async-await-and-task-to-keep-the-winforms-ui-more-responsive/#:~:text=Update%3A%20Sep%209%2C%202024)). `async/await`을 쓰면 **현재 스레드를 블로킹하지 않고** 작업을 비동기로 처리할 수 있어 UI 프리즈(freeze)를 쉽게 방지할 수 있다 ([Using Async, Await, and Task to keep the WinForms UI responsive](https://grantwinney.com/using-async-await-and-task-to-keep-the-winforms-ui-more-responsive/#:~:text=Update%3A%20Sep%209%2C%202024)). MVVM 패턴에서는 명령(Command)을 비동기로 실행하기 위해 `AsyncRelayCommand`를 활용할 수 있는데, 이것은 `RelayCommand`를 확장하여 `Task` 반환형 메서드를 사용할 수 있게 해준다 ([AsyncRelayCommand - Community Toolkits for .NET | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/asyncrelaycommand#:~:text=The%20AsyncRelayCommand%20%20and%20,with%20support%20for%20asynchronous%20operations)).
+이 문제를 해결하려면 작업을 **비동기(async)**로 처리하여 UI 스레드를 블로킹하지 않아야 한다. 즉, 오래 걸리는 작업은 별도 작업으로 실행하고, 완료되면 결과를 받아 UI를 업데이트하는 방식이다. MVVM 패턴에서는 보통 `ICommand` 구현체인 **커맨드(Command)**를 통해 버튼 클릭 같은 이벤트를 처리한다. 그런데 흔히 사용하는 RelayCommand(동기 커맨드)로 긴 작업을 실행하면 결국 UI 프리즈 문제가 생긴다. 이를 우회하기 위해 **AsyncRelayCommand**와 같은 비동기 커맨드를 사용하여 오래 걸리는 작업을 처리할 수 있다.
 
-## AsyncRelayCommand 설치 방법
-`AsyncRelayCommand`는 **CommunityToolkit.Mvvm** (구 Microsoft.Toolkit.Mvvm) 라이브러리에서 제공되는 MVVM 도구 중 하나이다. 이 패키지를 NuGet에서 설치하면 `RelayCommand`와 함께 `AsyncRelayCommand` 클래스를 사용할 수 있다. `AsyncRelayCommand`는 내부적으로 `ICommand`를 구현하며, 비동기 작업을 처리할 수 있도록 설계되어 있다 ([AsyncRelayCommand - Community Toolkits for .NET | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/asyncrelaycommand#:~:text=The%20AsyncRelayCommand%20%20and%20,with%20support%20for%20asynchronous%20operations)). 설치 후 뷰모델 코드에서 `using CommunityToolkit.Mvvm.Input;` 네임스페이스를 추가하면 `AsyncRelayCommand`를 바로 사용할 수 있다.
+## NuGet 패키지 설치 방법
 
-> **Note:** .NET Community Toolkit의 MVVM 패키지는 .NET 5 이상에서 동작하며, WPF와 WinUI 등 다양한 UI 프레임워크에서 사용 가능하다. 이 패키지에는 `AsyncRelayCommand<T>`(제네릭 버전), `IAsyncRelayCommand` 인터페이스, 명령의 실행 상태를 나타내는 `IsRunning` 프로퍼티 등도 제공된다 ([AsyncRelayCommand - Community Toolkits for .NET | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/asyncrelaycommand#:~:text=,elements%20such%20as%20loading%20indicators)). 본문에서는 기본적인 사용 방법에 초점을 맞춘다.
+AsyncRelayCommand는 .NET Community Toolkit의 MVVM 패키지에 포함되어 있다. 이 기능을 프로젝트에서 사용하려면 NuGet을 통해 해당 라이브러리를 추가해야 한다:
 
-## 코드 설명
-이제 `AsyncRelayCommand`를 사용하여 **장시간 작업을 수행하면서도 UI가 멈추지 않게 만드는 코드**를 구현해보자. 예제로, 5초 정도 걸리는 가상의 무거운 작업을 실행하면서 진행률을 화면에 표시하는 시나리오를 구성한다. 먼저 MainViewModel에 비동기 명령과 진행률 속성을 정의한다:
+1. Visual Studio에서 **NuGet 패키지 관리자**를 연다 (프로젝트를 마우스 오른쪽 클릭하여 **NuGet 패키지 관리** 메뉴 선택).
+2. **CommunityToolkit.Mvvm** 패키지를 검색한다.
+3. 검색 결과에서 **CommunityToolkit.Mvvm**를 선택하고 최신 버전을 설치한다.
+4. 패키지 설치 후 코드 파일 상단에 `using CommunityToolkit.Mvvm.Input;` 지시어를 추가하면 AsyncRelayCommand 클래스를 사용할 수 있다.
+
+> **Note:** CommunityToolkit.Mvvm 패키지는 과거 **Microsoft.Toolkit.Mvvm**으로 불리던 라이브러리의 최신 버전이다.  
+
+## ViewModel 코드 작성
+
+NuGet 패키지 설치를 마쳤다면, 이제 ViewModel에서 AsyncRelayCommand를 활용해 보자. AsyncRelayCommand는 `ICommand`를 구현한 클래스이며, `Task`를 반환하는 비동기 메서드를 받아 UI 스레드를 블로킹하지 않고 실행해 준다. 아래는 긴 작업을 비동기로 처리하는 ViewModel 코드 예시이다:
 
 ```csharp
-// MainViewModel.cs (INotifyPropertyChanged 구현 가정)
-public class MainViewModel : INotifyPropertyChanged
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+public class MyViewModel : ObservableObject
 {
-    public ICommand StartTaskCommand { get; set; }
+    // 1. 비동기 커맨드 프로퍼티 선언
+    public IAsyncRelayCommand LoadDataCommand { get; }
 
-    private int progressValue;
-    public int ProgressValue
+    // 2. 예시로 UI에 표시할 결과 문자열 프로퍼티
+    private string _resultText;
+    public string ResultText
     {
-        get => progressValue;
-        set 
-        { 
-            progressValue = value;
-            OnPropertyChanged();   // INotifyPropertyChanged 구현 메서드
-        }
+        get => _resultText;
+        set => SetProperty(ref _resultText, value);
     }
 
-    public MainViewModel()
+    public MyViewModel()
     {
-        // AsyncRelayCommand로 비동기 작업 실행 커맨드 설정
-        StartTaskCommand = new AsyncRelayCommand(LongTaskAsync);
+        // 3. AsyncRelayCommand 초기화: 실행할 비동기 메서드 지정
+        LoadDataCommand = new AsyncRelayCommand(LoadDataAsync);
     }
 
-    // 오래 걸리는 작업을 비동기적으로 처리
-    public async Task LongTaskAsync()
+    // 4. 오래 걸리는 작업을 비동기로 처리하는 메서드
+    private async Task LoadDataAsync()
     {
-        // 진행률 초기화
-        ProgressValue = 0;
-        // 무거운 작업을 별도 스레드에서 실행
-        Task<int> task = Task.Run(() =>
-        {
-            int result = 0;
-            for (int i = 1; i <= 10; i++)
-            {
-                // 작업 진행 (0.5초 지연)
-                Thread.Sleep(500);
-                // 진행률 10%씩 증가
-                ProgressValue += 10;
-                result = i;
-            }
-            return result;
-        });
-        // 비동기로 대기: UI 스레드를 블로킹하지 않음
-        int finalResult = await task;
-        // 작업 완료 후 결과 표시 (UI 스레드)
-        MessageBox.Show($"작업 완료! 최종 결과: {finalResult}");
+        // (예시) 3초 동안 대기했다가 결과 설정
+        await Task.Delay(3000);
+        // 5. 작업 완료 후 결과 프로퍼티 갱신 (UI에 반영)
+        ResultText = "데이터 로드 완료";
     }
-
-    // ... (OnPropertyChanged 구현 등 생략)
 }
 ```
 
-위 코드에서는 **무거운 작업을 `Task.Run`으로 래핑**하고 `await` 키워드로 그 작업이 완료될 때까지 비동기적으로 기다린다. `Task.Run` 내부의 람다식에서는 `Thread.Sleep`으로 시간이 걸리는 작업을 흉내내고, 반복문을 돌면서 `ProgressValue`를 갱신하고 있다. 중요한 부분은 `await task;` 부분으로, 여기서 UI 스레드는 이 줄에서 작업 완료를 기다리면서도 **블로킹되지 않고 다른 작업을 처리할 수 있게 된다** ([Await, and UI, and deadlocks! Oh my! - .NET Blog](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/#:~:text=for%20developers%20to%20write%20the,also%20really%20useful%20for%20responsiveness)). 즉, `LongTaskAsync` 메서드는 처음 호출될 때 `Task.Run(...)`까지 실행하고 나서 바로 **제어를 호출한 쪽(UI 스레드)에 반환**하며, 백그라운드 스레드의 작업이 끝나면 나중에 다시 이어 실행된다. 그 사이에 UI 스레드는 자유롭게 사용자 입력 처리나 화면 갱신을 계속할 수 있어 응답성이 유지된다.
+1. **비동기 명령 프로퍼티 선언:** `LoadDataCommand`라는 커맨드 프로퍼티를 정의한다. 타입은 `IAsyncRelayCommand` 인터페이스로 선언하였는데, 이는 AsyncRelayCommand의 인터페이스 타입이다. (`AsyncRelayCommand` 타입으로 직접 써도 무방하다.) 이 커맨드는 나중에 XAML에서 바인딩하여 사용할 것이다.  
+2. **결과 저장 프로퍼티:** `ResultText`라는 문자열 프로퍼티를 추가했다. 백그라운드 작업의 결과를 저장해 UI에 표시하는 용도이다. `ObservableObject`를 상속받았기 때문에 `SetProperty` 메서드를 통해 값이 변경되면 `PropertyChanged` 이벤트가 자동으로 발생하여 바인딩된 UI가 업데이트된다. (MyViewModel이 `ObservableObject`를 상속함으로써 **INotifyPropertyChanged** 구현을 이미 갖추고 있다.)  
+3. **커맨드 초기화:** 생성자에서 `LoadDataCommand`를 초기화한다. `AsyncRelayCommand` 생성자에 실행할 비동기 메서드(`LoadDataAsync`)를 전달한다. 이렇게 설정하면 버튼 클릭 시 `LoadDataAsync` 메서드가 호출된다.  
+4. **비동기 작업 메서드:** `LoadDataAsync` 메서드는 실제 오래 걸리는 작업을 수행한다. 반환 타입을 `Task`로 하고 `async` 키워드를 붙여 비동기 메서드로 정의한다.  
+5. **`await`를 통한 UI 비동기 처리:** `await Task.Delay(3000)`는 3초 동안 비동기적으로 대기하는 예제이다. 이 줄을 실행하면 3초 동안 **UI 스레드를 블로킹하지 않고** 기다린다. 즉, 3초 대기 동안에도 UI는 반응성을 유지한다. 3초 후 대기가 끝나면 다음 줄로 진행한다. 아래줄에서 `ResultText = "데이터 로드 완료";`로 결과를 설정하면, 앞서 정의한 `ResultText` 프로퍼티의 set 접근자에서 `PropertyChanged`가 발생하여 UI의 바인딩된 텍스트가 갱신된다.
 
-만약 `await`를 쓰지 않고 잘못된 방법으로 `Task.Wait()`를 사용했다면 어떻게 될까? 예를 들어 아래와 같이 코드를 작성하면 문제가 된다:
+정리하면, 위 ViewModel에서는 **AsyncRelayCommand**를 사용하여 `LoadDataAsync` 작업을 비동기로 실행하고, 완료 시 결과를 `ResultText`에 저장한다. 이때 `await` 덕분에 작업 대기 중에도 UI가 멈추지 않으며, `ResultText` 변경은 UI에 자동 반영된다.
 
-```csharp
-// 잘못된 예: Task.Wait()로 동기 대기 (UI 스레드 블로킹)
-StartTaskCommand = new RelayCommand(() =>
-{
-    Task task = Task.Run(() => LongOperation()); // 백그라운드 작업 시작
-    task.Wait();  // 작업이 끝날 때까지 현재 스레드 대기 (UI 멈춤)
-});
-```
+## XAML 코드 예시
 
-위 코드는 백그라운드 스레드에서 `LongOperation`을 시작한 뒤 **`Wait()`로 UI 스레드를 정지시켜 결과를 기다리기 때문에**, 결국 UI가 멈추는 것은 마찬가지다. 실제로 `task.Wait()`가 호출되면 그 순간 UI 스레드는 작업 완료까지 блок 상태가 되어 버린다 ([c# - Why is Task.Wait() causing application to freeze - Stack Overflow](https://stackoverflow.com/questions/45640363/why-is-task-wait-causing-application-to-freeze#:~:text=You%20have%20a%20deadlock,is%20the%20main%20UI%20thread)). `await`는 이와 달리 **UI 스레드를 차단하지 않고** 비동기 대기를 함으로써 작업이 끝난 뒤 이어서 실행을 계속하게 해준다 ([c# - Why is Task.Wait() causing application to freeze - Stack Overflow](https://stackoverflow.com/questions/45640363/why-is-task-wait-causing-application-to-freeze#:~:text=match%20at%20L258%20on%20the,thread%20not%20being%20available%20indefinitely)). 따라서 WPF 애플리케이션에서는 **절대로 UI 스레드에서 `.Wait()`나 `.Result`로 Task 결과를 동기적으로 기다리지 않도록 해야 한다**.
-
-다음으로, XAML에서 이 뷰모델의 커맨드와 속성을 바인딩하여 UI와 연결한다. MainWindow.xaml에 `DataContext`를 MainViewModel로 설정하고, 버튼과 ProgressBar를 배치하는 예시는 다음과 같다:
+이제 View(XAML)에서 해당 커맨드를 어떻게 사용하는지 알아보자. View의 `DataContext`를 우리의 ViewModel로 설정한 후, 버튼과 텍스트블록에 바인딩을 걸어준다. 아래 XAML은 간단한 예제이다 (DataContext 설정은 예시로 포함):
 
 ```xml
-<!-- MainWindow.xaml -->
-<Window x:Class="AsyncDemo.MainWindow"
-        ... xmlns:local="clr-namespace:AsyncDemo" >
+<!-- Window의 DataContext에 ViewModel 인스턴스를 할당했다고 가정 -->
+<Window x:Class="MyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MyApp"
+        Title="Async Command Example" Height="150" Width="300">
     <Window.DataContext>
-        <local:MainViewModel/>
+        <local:MyViewModel/>
     </Window.DataContext>
+
     <StackPanel Margin="20">
-        <!-- 비동기 명령 바인딩된 버튼 -->
-        <Button Content="작업 시작"
-                Command="{Binding StartTaskCommand}" Width="100"/>
-        <!-- 진행률 표시 ProgressBar -->
-        <ProgressBar Minimum="0" Maximum="100"
-                     Value="{Binding ProgressValue}"
-                     Height="20" Width="300" Margin="0,10,0,0"/>
+        <!-- 1. 버튼의 Command 속성을 ViewModel의 AsyncRelayCommand에 바인딩 -->
+        <Button Content="데이터 불러오기" Command="{Binding LoadDataCommand}" Margin="0 0 0 10"/>
+        <!-- 2. TextBlock의 Text 속성을 ViewModel의 ResultText 프로퍼티에 바인딩 -->
+        <TextBlock Text="{Binding ResultText}" FontWeight="Bold" />
     </StackPanel>
 </Window>
 ```
 
-위 XAML에서는 `Button`의 `Command` 속성에 뷰모델의 `StartTaskCommand`를 바인딩하였다. 이제 사용자가 이 버튼을 클릭하면 `LongTaskAsync` 메서드가 실행되고, `ProgressValue` 변수가 변화할 때마다 `INotifyPropertyChanged`를 통해 바인딩된 `ProgressBar`의 값이 업데이트된다. `ProgressBar`는 0부터 100까지의 범위를 가지며, 우리가 10번에 걸쳐 10씩 증가시키도록 구현했으므로 작업 시작 후 약 5초에 걸쳐 막대가 차오르게 된다. 이 동안에도 **UI 스레드는 멈추지 않고**, 사용자는 진행률이 업데이트되는 것을 실시간으로 볼 수 있다.
+- **1:** `<Button>`의 `Command` 속성을 ViewModel의 `LoadDataCommand`에 바인딩했다. 이렇게 하면 버튼을 클릭할 때 해당 커mand(`LoadDataCommand`)가 실행된다. 즉, 앞서 정의한 `LoadDataAsync` 메서드가 호출된다.  
+- **2:** `<TextBlock>`은 `Text="{Binding ResultText}"`로 바인딩되어 있다. ViewModel에서 `ResultText` 값이 변경되면 TextBlock에 자동으로 반영되어 결과가 표시된다. 예제에서는 작업 완료 후 `"데이터 로드 완료"` 문자열이 나타나게 된다.
 
-## 실행 결과 확인
-이제 완성된 애플리케이션을 실행하여 동작을 확인해보자. 버튼을 클릭하면 5초 동안 가상의 작업이 진행되고, 그 사이 ProgressBar를 통해 진행률이 표시된다. 중요한 것은 **작업 도중에도 창이 응답하고 있다는 것**을 사용자가 느낄 수 있다는 점이다. 작업이 진행되는 동안에도 창을 드래그해서 움직일 수도 있고, ProgressBar 애니메이션이나 다른 UI 업데이트가 정상적으로 이루어진다.
+이처럼 XAML에서 **AsyncRelayCommand**도 일반 `ICommand`와 동일한 방법으로 바인딩하여 사용할 수 있다. 추가로, AsyncRelayCommand는 실행 상태를 나타내는 `IsRunning` 프로퍼티를 제공한다. **`IsRunning`**은 커맨드가 실행중일 때 `true`가 되므로, 이를 이용해 UI 피드백을 줄 수 있다. 예를 들어 `ProgressBar`의 표시 여부를 `IsRunning`에 바인딩하거나, 커맨드 실행 중 버튼을 비활성화(disable)하여 중복 클릭을 막는 등의 처리가 가능하다.
 
- ([image]()) AsyncRelayCommand를 사용하여 비동기 작업을 처리하면 진행 상황이 UI에 즉시 반영되고 창이 멈추지 않는다. 예를 들어 위 그림처럼 작업 진행 중에도 ProgressBar가 자연스럽게 업데이트되며, UI 스레드가 계속 반응하기 때문에 창 이동이나 버튼 클릭 등의 **다른 상호작용도 처리 가능**하다. 작업이 완료되면 MessageBox를 통해 완료 메시지를 표시하도록 구현했으므로, 사용자는 작업 종료도 즉시 알 수 있다.
+## 잘못된 예 vs 좋은 예
 
-만약 동일한 작업을 `RelayCommand`로 동기 실행했다면 위와 같은 **원활한 진행 표시나 UI 반응은 불가능**했을 것이다. 사용자는 몇 초 동안 정지된 화면을 보게 되고, 작업이 끝난 뒤에야 한꺼번에 UI 변경이 반영되거나 결과를 확인하게 된다. 이처럼 **비동기 명령을 사용한 구현은 사용자 경험 측면에서 큰 차이**를 만든다.
+비동기 처리를 잘못 구현하면 여전히 UI가 멈추거나 예기치 않은 문제가 생길 수 있다. 특히 `async/await`를 제대로 쓰지 않고 **Task를 동기 대기**하면 의미가 없어진다. 아래 코드 비교를 통해 올바른 사용 방법을 확인해 보자.
 
-## 결론
-WPF에서 긴 처리 시간을 갖는 작업이라도 `async/await`와 `AsyncRelayCommand`를 활용하면 UI를 멈추지 않고 실행할 수 있다. 핵심은 **UI 스레드에서는 긴 작업을 직접 수행하지 않고 비동기로 넘기는 것**이다. `AsyncRelayCommand`는 MVVM 패턴에서 이러한 비동기 처리를 쉽게 구현하도록 도와주는 도구로서, 개발자는 마치 동기 메서드를 작성하듯이 비동기 메서드를 작성하고 `await`를 통해 결과를 이어받는 형태로 코드를 구성하면 된다. 
+**잘못된 예:** 일반 RelayCommand 안에서 `Task.Wait()`(동기 대기)로 비동기 작업을 처리하는 경우이다. UI 스레드를 그대로 잠겨 버리므로 피해야 한다.
 
-마지막으로 기억해야 할 것은, **절대로 UI 스레드를 블로킹하는 코드를 넣지 않는 것**이다. `Task.Wait()`이나 `.Result`를 사용한 잘못된 패턴은 피하고, 항상 `await`를 사용하여 **작업 중에도 UI 제어권이 유지되도록** 해야 한다. 이를 통해 사용자는 작업이 오래 걸려도 응답이 끊기지 않는 **부드러운 UI 경험**을 누릴 수 있다. AsyncRelayCommand와 같은 패턴은 처음 접하면 생소할 수 있지만, 한 번 익혀 두면 WPF 개발에서 안정적이고 효율적인 비동기 처리를 구현하는 데 큰 도움이 된다.
+```csharp
+// 잘못된 방식: 동기식 커맨드에서 비동기 작업을 강제로 대기
+public RelayCommand LoadDataCommand { get; }
+
+public MyViewModel()
+{
+    LoadDataCommand = new RelayCommand(() =>
+    {
+        // 비동기 작업을 동기적으로 기다림 -> UI 스레드 블로킹 발생
+        LoadDataAsync().Wait();
+    });
+}
+```
+
+위 코드처럼 `LoadDataAsync().Wait();`를 호출하면 작업이 완료될 때까지 UI 스레드가 기다리게 된다. 이 동안 앱의 화면 갱신과 입력 처리가 중단되어 사용자 입장에서는 프로그램이 먹통이 된 것처럼 보인다. `Task.Wait()`나 `Task.Result`를 UI 쓰레드에서 호출하는 것은 **Deadlock**(교착 상태)을 일으킬 위험도 있으므로 지양해야 한다.
+
+**올바른 예:** AsyncRelayCommand를 사용하여 **await**으로 비동기 작업을 처리하는 경우이다. AsyncRelayCommand 자체가 `ICommand`를 구현하므로 별도의 RelayCommand 래핑 없이 바로 사용하면 된다.
+
+```csharp
+// 올바른 방식: AsyncRelayCommand로 비동기 작업 수행
+public IAsyncRelayCommand LoadDataCommand { get; }
+
+public MyViewModel()
+{
+    // 비동기 메서드를 커맨드에 직접 전달 (내부적으로 await 처리, UI 블로킹 없음)
+    LoadDataCommand = new AsyncRelayCommand(LoadDataAsync);
+}
+```
+
+이 방식에서는 별도로 `Wait()`를 호출하지 않는다. `LoadDataAsync` 메서드의 내부에서 `await`를 사용하고 있으므로 버튼 클릭 시 UI 스레드를 막지 않고 작업이 시작된다. AsyncRelayCommand는 작업 완료 후 UI 스레드로 결과를 마샬링(marshalling)해주므로, `ResultText` 업데이트처럼 UI 바인딩 갱신도 안전하게 처리된다. 결과적으로 **UI는 멈추지 않고**, 작업 완료 시점에만 UI가 업데이트된다.
+
+## 실행 결과 설명
+
+이제 완성된 예제를 실행해 보면 어떻게 동작하는지 확인할 수 있다. 애플리케이션을 시작하고 **“데이터 불러오기”** 버튼을 클릭하면, `LoadDataCommand`가 실행되어 `LoadDataAsync` 메서드가 호출된다. 이 메서드는 3초 동안 비동기 대기를 하고 나서 `ResultText`를 `"데이터 로드 완료"`로 설정한다. 중요한 점은 이 3초 동안 **애플리케이션 UI가 계속 반응한다**는 것이다. 작업이 진행되는 동안에도 윈도우를 드래그하거나 다른 입력을 시도할 수 있으며, 앱이 “먹통”이 되지 않는다. 만약 별도로 로딩 중임을 표시하는 UI 요소(예: ProgressBar)를 `IsRunning`에 바인딩했다면, 버튼을 누른 순간부터 완료 시까지 그 표시가 나타났다가 완료 후 사라질 것이다. 
+
+3초가 지나면 TextBlock에 결과 문자열이 표시되어 사용자는 작업 완료를 확인할 수 있다. 전체 흐름 동안 UI 스레드는 블로킹되지 않았고, 긴 작업도 백그라운드에서 원활히 처리되었다. 이처럼 **AsyncRelayCommand**를 사용하면 WPF MVVM에서 시간 소요가 큰 작업도 사용자 경험을 해치지 않으면서 수행할 수 있다. 이제 필요에 따라 이 패턴을 응용하여 파일 다운로드, 데이터베이스 쿼리 등 다양한 작업을 UI 프리즈 없이 구현할 수 있을 것이다.
