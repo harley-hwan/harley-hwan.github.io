@@ -1,7 +1,12 @@
 ---
+layout: post
 title: "WPF에서 AsyncRelayCommand로 장시간 작업 처리하기"
 subtitle: "Async/await를 활용해 UI를 멈추지 않고 작업 실행하기"
-tags: [WPF, MVVM, 비동기, AsyncRelayCommand, C#]
+gh-repo: harley-hwan/harley-hwan.github.io
+gh-badge: [star, fork, follow]
+tags: [WPF, MVVM, async, AsyncRelayCommand, C#]
+comments: true
+filename: "2025-03-28-wpf-project-08-AsyncCommand.md"
 ---
 
 WPF 애플리케이션에서 오래 걸리는 작업을 실행할 때, UI가 멈추지 않도록 비동기 처리가 필요하다. 이번 장에서는 `AsyncRelayCommand`를 사용하여 이러한 장시간 작업을 MVVM 패턴으로 구현하고, `async/await`를 통해 **응답성 있는 UI**를 유지하는 방법을 알아본다.
