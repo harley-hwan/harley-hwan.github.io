@@ -9,7 +9,7 @@ comments: true
 filename: "2025-03-13-wpf-project-04-styles-layout.md"
 ---
 
-# (WPF) 4. WPF에서 스타일 및 레이아웃 활용하기
+# WPF에서 스타일 및 레이아웃 활용하기
 
 - 최초 작성일: 2025년 3월 13일 (목)
 
