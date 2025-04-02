@@ -6,26 +6,27 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [c#, wpf, showdialog, mvvm, asyncRelayCommand, window, ui]
 comments: true
-filename: "2025-04-02-wpf-project-10-showdialog.md"
+filename: "2025-03-30-wpf-project-10-showdialog.md"
 ---
 
 # (WPF) 10. ShowDialog를 활용한 다른 창 호출하기
 
-- 최초 작성일: 2025년 4월 2일 (수)
+- 최초 작성일: 2025년 3월 30일 (일)
 
 ## 목차
 
-1. [ShowDialog와 Modal 창 개념](#showdialog와-modal-창-개념)
-2. [MVVM 패턴에서 새 창 호출 흐름](#mvvm-패턴에서-새-창-호출-흐름)
-3. [예제 구현: ProgressBar가 있는 Modal 창 열기](#예제-구현-progressbar가-있는-modal-창-열기)
+1. [ShowDialog와 Modal 창 개념](#1-showdialog와-modal-창-개념)
+2. [MVVM 패턴에서 새 창 호출 흐름](#2-mvvm-패턴에서-새-창-호출-흐름)
+3. [예제 구현: ProgressBar가 있는 Modal 창 열기](#3-예제-구현-progressbar가-있는-modal-창-열기)
    - [MainWindow.xaml – 메인 창 UI 구성](#mainwindowxaml--메인-창-ui-구성)
    - [MainViewModel.cs – 메인 ViewModel과 명령 정의](#mainviewmodelcs--메인-viewmodel과-명령-정의)
    - [SecondView.xaml – 두 번째 창 UI (ProgressBar 포함)](#secondviewxaml--두-번째-창-ui-progressbar-포함)
    - [SecondViewModel.cs – ProgressBar 업데이트 ViewModel](#secondviewmodelcs--progressbar-업데이트-viewmodel)
-4. [AsyncRelayCommand를 사용한 ICommand 구현](#asyncrelaycommand를-사용한-icommand-구현)
-5. [실행 결과: 동작 과정 정리](#실행-결과-동작-과정-정리)
-6. [정리 및 결론](#정리-및-결론)
+4. [AsyncRelayCommand를 사용한 ICommand 구현](#4-asyncrelaycommand를-사용한-icommand-구현)
+5. [실행 결과: 동작 과정 정리](#5-실행-결과-동작-과정-정리)
+6. [정리 및 결론](#6-정리-및-결론)
 
+---
 
 ## 1. ShowDialog와 Modal 창 개념
 WPF에서 `Window.ShowDialog()` 메서드는 새 윈도우를 **모달 창**으로 표시합니다. 모달 창이 뜨면 **사용자가 그 창을 닫기 전까지** 부모 창을 조작할 수 없고, `ShowDialog()`를 호출한 코드 실행도 창이 닫힐 때까지 멈춥니다. 예를 들어 확인/취소를 받는 대화상자, 진행 상황을 표시하는 Progress 창 등이 모달 창으로 구현됩니다. 반면 `Window.Show()`는 **모달이 아닌(non-modal)** 창을 띄워 부모 창과 독립적으로 동작하게 합니다.
