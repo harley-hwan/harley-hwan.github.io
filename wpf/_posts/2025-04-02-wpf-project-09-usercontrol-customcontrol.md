@@ -9,7 +9,7 @@ comments: true
 filename: "2025-03-29-wpf-project-09-usercontrol-customcontrol.md"
 ---
 
-# (WPF) 9. UserControl과 Custom Control 활용하기
+# UserControl과 Custom Control 활용하기
 
 - 최초 작성일: 2025년 3월 29일 (토)
 
