@@ -9,7 +9,7 @@ comments: true
 filename: "2025-02-11-wpf-project-03-controls.md"
 ---
 
-# (WPF) 3. WPF에서 컨트롤 사용하기
+# WPF에서 컨트롤 사용하기
 
 - 최초 작성일: 2025년 2월 11일 (화)
 
