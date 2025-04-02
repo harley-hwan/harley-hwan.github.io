@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "(WPF) 9. UserControl과 Custom Control 활용하기"
-subtitle: "사용자 정의 컨트롤과 커스텀 컨트롤의 차이와 실전 구현"
+subtitle: "UserControl과 Custom Control의 차이점과 구현 방법"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [c#, wpf, usercontrol, customcontrol, mvvm, xaml, ui]
