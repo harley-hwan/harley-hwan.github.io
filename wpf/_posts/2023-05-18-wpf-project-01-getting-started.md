@@ -9,7 +9,7 @@ comments: true
 filename: "2023-05-18-wpf-project-01-getting-started.md"
 ---
 
-# (WPF) 1. WPF 프로젝트 시작하기 (프로젝트 생성, MVVM)
+# WPF 프로젝트 시작하기 (프로젝트 생성, MVVM)
 - 최초 작성일: 2023년 5월 18일 (목)
 
 ## 목차
