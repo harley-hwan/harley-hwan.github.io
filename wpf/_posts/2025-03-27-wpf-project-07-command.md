@@ -9,7 +9,7 @@ comments: true
 filename: "2025-03-27-wpf-project-07-command.md"
 ---
 
-# (WPF) 7. Command 패턴을 활용한 버튼 이벤트 처리
+# Command 패턴을 활용한 버튼 이벤트 처리
 
 - 최초 작성일: 2025년 3월 27일 (토)
 
