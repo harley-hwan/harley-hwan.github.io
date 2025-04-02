@@ -9,7 +9,7 @@ comments: true
 filename: "2025-03-14-wpf-project-05-gml-resources.md"
 ---
 
-# (WPF) 5. GML 리소스 활용하기
+# GML 리소스 활용하기
 
 - 최초 작성일: 2025년 3월 14일 (금)
 
