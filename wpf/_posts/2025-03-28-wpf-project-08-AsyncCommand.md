@@ -4,9 +4,24 @@ title: "(WPF) 8. AsyncRelayCommand로 비동기 작업 처리하기"
 subtitle: "Async/await를 활용해 UI를 멈추지 않고 작업 실행하기"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
-tags: [WPF, MVVM, async, AsyncRelayCommand, Command, C#]
+tags: [c#, wpf, async, await, asyncRelayCommand, mvvm, command]
 comments: true
-filename: "2025-03-28-wpf-project-08-AsyncCommand.md"
+filename: "2025-03-28-wpf-project-08-async-command.md"
+---
+
+# (WPF) 8. AsyncRelayCommand로 비동기 작업 처리하기
+
+- 최초 작성일: 2025년 3월 28일 (일)
+
+## 목차
+
+1. [비동기 작업이 필요한 이유](#비동기-작업이-필요한-이유)
+2. [NuGet 패키지 설치 방법](#nuget-패키지-설치-방법)
+3. [ViewModel 코드 작성](#viewmodel-코드-작성)
+4. [XAML 코드 예시](#xaml-코드-예시)
+5. [잘못된 예 vs 좋은 예](#잘못된-예-vs-좋은-예)
+6. [실행 결과 설명](#실행-결과-설명)
+
 ---
 
 ## 비동기 작업이 필요한 이유
