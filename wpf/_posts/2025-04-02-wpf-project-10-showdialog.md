@@ -9,7 +9,7 @@ comments: true
 filename: "2025-03-30-wpf-project-10-showdialog.md"
 ---
 
-# (WPF) 10. ShowDialog를 활용한 다른 창 호출하기
+# ShowDialog를 활용한 다른 창 호출하기
 
 - 최초 작성일: 2025년 3월 30일 (일)
 
