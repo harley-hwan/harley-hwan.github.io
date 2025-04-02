@@ -9,7 +9,7 @@ comments: true
 filename: "2023-05-19-wpf-project-02-structure-ui.md"
 ---
 
-# (WPF) 2. WPF 프로젝트의 구조 및 UI 구성
+# WPF 프로젝트의 구조 및 UI 구성
 - 최초 작성일: 2023년 5월 19일 (금)
 
 ## 목차
