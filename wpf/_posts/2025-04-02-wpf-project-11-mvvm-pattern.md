@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "2025-04-01 WPF 프로젝트 11 - MVVM 패턴"
+title: "2025-04-02 WPF 프로젝트 11 - MVVM 패턴"
 subtitle: "MVVM 패턴 이론과 폴더 구조 실습"
 gh-repo: user/repo
 gh-badge: [star, fork, follow]
 tags: [WPF, MVVM, C#]
 comments: true
-filename: "2025-04-01-wpf-project-11-mvvm-pattern.md"
+filename: "2025-04-02-wpf-project-11-mvvm-pattern.md"
 ---
 
-# 2025-04-01 WPF 프로젝트 11 - MVVM 패턴
+# 2025-04-02 WPF 프로젝트 11 - MVVM 패턴
 
 ## 목차  
 - [MVVM 패턴의 구성 요소](#mvvm-패턴의-구성-요소)  
