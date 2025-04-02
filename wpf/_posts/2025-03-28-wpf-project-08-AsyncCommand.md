@@ -9,7 +9,7 @@ comments: true
 filename: "2025-03-28-wpf-project-08-async-command.md"
 ---
 
-# (WPF) 8. AsyncRelayCommand로 비동기 작업 처리하기
+# AsyncRelayCommand로 비동기 작업 처리하기
 
 - 최초 작성일: 2025년 3월 28일 (일)
 
