@@ -9,7 +9,7 @@ comments: true
 filename: "2025-03-14-wpf-project-06-triggers.md"
 ---
 
-# (WPF) 6. 트리거와 데이터 트리거 활용하기
+# 트리거와 데이터 트리거 활용하기
 
 - 최초 작성일: 2025년 3월 14일 (금)
 
