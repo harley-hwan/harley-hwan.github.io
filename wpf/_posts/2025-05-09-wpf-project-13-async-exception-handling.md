@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "(C#) 13. 비동기 함수의 예외 처리"
-subtitle: "C#에서의 async/await 패턴과 예외 처리 방법"
+title: "(WPF) 13. 비동기 함수의 예외 처리"
+subtitle: "async/await 패턴과 예외 처리 방법"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
-tags: [C#, Async, Await, Exception Handling, Task]
+tags: [WPF, C#, Async, Await, Exception Handling, Task]
 comments: true
 filename: "2025-05-09-csharp-async-exception-handling.md"
 ---
 
-# 비동기 함수의 예외 처리: C#에서의 async/await 패턴 이해하기
+# 비동기 함수의 예외 처리: async/await 패턴 이해하기
 
 ## 목차
 1. [비동기 프로그래밍 기초](#비동기-프로그래밍-기초)
