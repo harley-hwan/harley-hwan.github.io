@@ -4,7 +4,7 @@ title: "캐글(Kaggle) 커널 사용하기 - 계정 등록 및 GPU 인증"
 subtitle: "캐글 계정 생성부터 GPU 사용을 위한 전화번호 인증까지 상세 가이드"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: \[star, fork, follow]
-tags: \[kaggle, gpu, python, machine learning, data science]
+tags: \[cnn, kaggle, gpu, python, machine learning, data science]
 comments: true
 filename: "2025-05-26-kaggle-kernel-gpu-setup.md"
 ---
