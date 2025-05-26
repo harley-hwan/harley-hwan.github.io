@@ -27,6 +27,7 @@ navbar-links:
     - MFC: "mfc"
     - WPF: "wpf"
     - Opencv: "opencv"
+    - CNN: "cnn"
     - ETC: "dev_etc"
   Project: "project"
   ETC: "etc"
