@@ -26,7 +26,7 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 먼저 인공지능(AI), 머신러닝, 딥러닝의 관계를 이해하는 것이 중요하다. 이 세 개념은 서로 포함 관계에 있다.
 
-<img src="https://github.com/user-attachments/assets/a824e534-1175-4d30-9cf1-7d89571bc429" alt="AI, ML, DL의 관계" width="600">
+<img src="https://github.com/user-attachments/assets/a824e534-1175-4d30-9cf1-7d89571bc429" alt="AI, ML, DL의 관계" width="500">
 
 <p align="center"><em>그림 1: 인공지능, 머신러닝, 딥러닝의 포함 관계</em></p>
 
@@ -129,7 +129,7 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 **인공 신경망**은 가장 기본적인 형태의 신경망으로, 생물학적 뉴런의 작동 방식을 모방한 구조다.
 
-<img src="https://github.com/user-attachments/assets/27277280-5a02-407d-835e-b0bd6c671e42" alt="ANN 구조" width="600">
+<img src="https://github.com/user-attachments/assets/27277280-5a02-407d-835e-b0bd6c671e42" alt="ANN 구조" width="500">
 
 <p align="center"><em>그림 3: 기본적인 ANN 구조 - 입력층, 은닉층, 출력층</em></p>
 
@@ -158,7 +158,7 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 **합성곱 신경망**은 **이미지나 영상 데이터 처리**에 특화된 신경망이다. 인간의 시각 처리 과정을 모방한 구조를 가지고 있다.
 
-<img src="https://github.com/user-attachments/assets/bb350918-1047-4566-860b-d75974fe5d0e" alt="CNN 구조" width="600">
+<img src="https://github.com/user-attachments/assets/bb350918-1047-4566-860b-d75974fe5d0e" alt="CNN 구조" width="800">
 
 <p align="center"><em>그림 4: CNN의 계층별 구조와 특징맵의 변화</em></p>
 
@@ -193,7 +193,7 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 **순환 신경망**은 **시간적 순서가 있는 데이터**를 처리하기 위한 신경망이다. 이전 정보를 기억하고 활용할 수 있는 구조를 가지고 있다.
 
-<img src="https://github.com/user-attachments/assets/99f49432-115b-421d-b33c-a3125bfad7b2" alt="RNN 구조" width="600">
+<img src="https://github.com/user-attachments/assets/99f49432-115b-421d-b33c-a3125bfad7b2" alt="RNN 구조" width="800">
 
 <p align="center"><em>그림 5: RNN의 순환 구조와 시간에 따른 전개</em></p>
 
