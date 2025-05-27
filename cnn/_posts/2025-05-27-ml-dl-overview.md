@@ -26,9 +26,9 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 먼저 인공지능(AI), 머신러닝, 딥러닝의 관계를 이해하는 것이 중요하다. 이 세 개념은 서로 포함 관계에 있다.
 
-![image](https://github.com/user-attachments/assets/a824e534-1175-4d30-9cf1-7d89571bc429)
+<img src="https://github.com/user-attachments/assets/a824e534-1175-4d30-9cf1-7d89571bc429" alt="AI, ML, DL의 관계" width="600">
 
-*그림 1: 인공지능, 머신러닝, 딥러닝의 포함 관계*
+<p align="center"><em>그림 1: 인공지능, 머신러닝, 딥러닝의 포함 관계</em></p>
 
 위 그림에서 볼 수 있듯이:
 - **인공지능(AI)**: 가장 넓은 개념으로, 감지하고 추론하며 행동하고 적응할 수 있는 프로그램을 의미한다
@@ -67,9 +67,9 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 머신러닝의 학습 방법은 데이터에 정답(레이블)이 있는지 여부에 따라 크게 두 가지로 나뉜다.
 
-![image](https://github.com/user-attachments/assets/a4cae495-7bc6-42cb-91cb-0d6692a6bfea)
+<img src="https://github.com/user-attachments/assets/a4cae495-7bc6-42cb-91cb-0d6692a6bfea" alt="지도학습과 비지도학습" width="600">
 
-*그림 2: 지도학습과 비지도학습의 프로세스 비교*
+<p align="center"><em>그림 2: 지도학습과 비지도학습의 프로세스 비교</em></p>
 
 ### 지도학습 (Supervised Learning)
 
@@ -129,9 +129,9 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 **인공 신경망**은 가장 기본적인 형태의 신경망으로, 생물학적 뉴런의 작동 방식을 모방한 구조다.
 
-![image](https://github.com/user-attachments/assets/27277280-5a02-407d-835e-b0bd6c671e42)
+<img src="https://github.com/user-attachments/assets/27277280-5a02-407d-835e-b0bd6c671e42" alt="ANN 구조" width="600">
 
-*그림 3: 기본적인 ANN 구조 - 입력층, 은닉층, 출력층*
+<p align="center"><em>그림 3: 기본적인 ANN 구조 - 입력층, 은닉층, 출력층</em></p>
 
 **구조 설명:**
 - **입력층(Input)**: 빨간색 노드들로, 데이터를 받아들이는 층이다
@@ -158,9 +158,9 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 **합성곱 신경망**은 **이미지나 영상 데이터 처리**에 특화된 신경망이다. 인간의 시각 처리 과정을 모방한 구조를 가지고 있다.
 
-![image](https://github.com/user-attachments/assets/bb350918-1047-4566-860b-d75974fe5d0e)
+<img src="https://github.com/user-attachments/assets/bb350918-1047-4566-860b-d75974fe5d0e" alt="CNN 구조" width="600">
 
-*그림 4: CNN의 계층별 구조와 특징맵의 변화*
+<p align="center"><em>그림 4: CNN의 계층별 구조와 특징맵의 변화</em></p>
 
 **주요 구성 요소:**
 
@@ -193,9 +193,9 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 **순환 신경망**은 **시간적 순서가 있는 데이터**를 처리하기 위한 신경망이다. 이전 정보를 기억하고 활용할 수 있는 구조를 가지고 있다.
 
-![image](https://github.com/user-attachments/assets/99f49432-115b-421d-b33c-a3125bfad7b2)
+<img src="https://github.com/user-attachments/assets/99f49432-115b-421d-b33c-a3125bfad7b2" alt="RNN 구조" width="600">
 
-*그림 5: RNN의 순환 구조와 시간에 따른 전개*
+<p align="center"><em>그림 5: RNN의 순환 구조와 시간에 따른 전개</em></p>
 
 **핵심 개념:**
 - 왼쪽은 순환 연결을 가진 압축된 표현이다
