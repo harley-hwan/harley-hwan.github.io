@@ -158,7 +158,7 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 **합성곱 신경망**은 **이미지나 영상 데이터 처리**에 특화된 신경망이다. 인간의 시각 처리 과정을 모방한 구조를 가지고 있다.
 
-<img src="https://github.com/user-attachments/assets/bb350918-1047-4566-860b-d75974fe5d0e" alt="CNN 구조" width="800">
+<img src="https://github.com/user-attachments/assets/4ca5fc45-0583-4598-9343-05e0e3d2b0e7" alt="CNN 구조" width="800">
 
 <p align="center"><em>그림 4: CNN의 계층별 구조와 특징맵의 변화</em></p>
 
