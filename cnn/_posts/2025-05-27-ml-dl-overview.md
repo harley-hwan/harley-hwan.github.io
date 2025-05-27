@@ -129,7 +129,7 @@ filename: "2025-05-27-ml-dl-overview.md"
 
 **인공 신경망**은 가장 기본적인 형태의 신경망으로, 생물학적 뉴런의 작동 방식을 모방한 구조다.
 
-<img src="https://github.com/user-attachments/assets/27277280-5a02-407d-835e-b0bd6c671e42" alt="ANN 구조" width="500">
+<img src="https://github.com/user-attachments/assets/401e1a4d-f473-4803-bd75-f9bacc20f1a1" alt="ANN 구조" width="800">
 
 <p align="center"><em>그림 3: 기본적인 ANN 구조 - 입력층, 은닉층, 출력층</em></p>
 
