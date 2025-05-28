@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "파이토치(Pytorch)의 Tensor 소개"
+title: "(CNN) Pytorch의 Tensor 소개"
 subtitle: "파이토치 텐서의 개념부터 NumPy와의 차이점까지"
 gh-repo: harley-hwan/harley-hwan.github.io
-gh-badge: \[star, fork, follow]
-tags: \[pytorch, tensor, numpy, deep learning, python]
+gh-badge: [star, fork, follow]
+tags: [pytorch, tensor, numpy, deep learning, python]
 comments: true
 filename: "2025-05-28-pytorch-tensor-intro.md"
 ---
 
 ----------------------------------------------
 
-# 파이토치(Pytorch)의 Tensor 소개
+# Pytorch의 Tensor 소개
 
 * 최초 작성일: 2025년 5월 28일 (수)
 
