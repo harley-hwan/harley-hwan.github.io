@@ -6,8 +6,10 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [cnn, deep learning, machine learning, python, data science]
 comments: true
-filename: "2025-05-27-ml-dl-overview.md"
+filename: "2025-05-27-cnn-ml-dl-overview.md"
 ---
+
+----------------------------------------------
 
 # 머신 러닝의 이해 및 딥러닝의 개요
 
