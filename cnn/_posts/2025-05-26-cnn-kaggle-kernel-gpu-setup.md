@@ -6,8 +6,10 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: \[star, fork, follow]
 tags: \[cnn, kaggle, gpu, python, machine learning, data science]
 comments: true
-filename: "2025-05-26-kaggle-kernel-gpu-setup.md"
+filename: "2025-05-26-cnn-kaggle-kernel-gpu-setup.md"
 ---
+
+---------------------------------------------------
 
 # 캐글(Kaggle) 커널 사용하기 - 계정 등록 및 GPU 사용 인증
 
