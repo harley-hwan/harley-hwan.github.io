@@ -6,14 +6,14 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [pytorch, tensor, numpy, deep learning, python]
 comments: true
-filename: "2025-05-28-cnn-numpy-torch-conversion.md"
+filename: "2025-05-29-cnn-numpy-torch-conversion.md"
 ---
 
 ------------------------------------------------
 
 # NumPy 배열과 PyTorch 텐서 간 상호 변환 방법
 
-* 최초 작성일: 2025년 5월 28일 (수)
+* 최초 작성일: 2025년 5월 29일 (목)
 
 ## 목차
 
