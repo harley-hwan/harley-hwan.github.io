@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "파이토치(Pytorch)의 Tensor 생성, Shape, 차원, 타입"
+title: "(CNN) Pytorch의 Tensor 생성, Shape, 차원, 타입"
 subtitle: "텐서 생성 방법부터 형태, 차원 및 데이터 타입 관리까지 상세 설명"
 gh-repo: harley-hwan/harley-hwan.github.io
-gh-badge: \[star, fork, follow]
-tags: \[pytorch, tensor, numpy, deep learning, python]
+gh-badge: [star, fork, follow]
+tags: [pytorch, tensor, numpy, deep learning, python]
 comments: true
 filename: "2025-05-26-pytorch-tensor-shape-type.md"
 ---
 
 ---------------------------------------------------
 
-# 파이토치(Pytorch)의 Tensor 생성, Shape, 차원, 타입
+# Pytorch의 Tensor 생성, Shape, 차원, 타입
 
-* 최초 작성일: 2025년 5월 26일 (월)
+* 최초 작성일: 2025년 5월 28일 (수)
 
 ## 목차
 
