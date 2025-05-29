@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "PyTorch 텐서 생성 완벽 가이드 - arange, zeros, ones, random"
-subtitle: "딥러닝 모델 개발을 위한 필수 텐서 생성 함수 마스터하기"
+title: "(CNN) PyTorch 텐서 생성 - arange, zeros, ones, random"
+subtitle: "arange와 기본 텐서 함수 및 난수 생성 함수"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [pytorch, tensor, random, arange, deep learning, initialization]
 comments: true
-filename: "2025-05-29-pytorch-arange-zeros-ones-random-tensor-creation.md"
+filename: "2025-05-29-cnn-pytorch-arange-zeros-ones-random-tensor-creation.md"
 ---
 
 -------------------------------------------------------
 
-# PyTorch 텐서 생성 완벽 가이드 - arange, zeros, ones와 random 값 생성하기
+# PyTorch 텐서 생성- arange, zeros, ones와 random
 
 * 최초 작성일: 2025년 5월 29일 (목)
 
