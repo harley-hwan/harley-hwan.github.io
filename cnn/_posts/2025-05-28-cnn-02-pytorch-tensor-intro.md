@@ -6,7 +6,7 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [pytorch, tensor, numpy, deep learning, python]
 comments: true
-filename: "2025-05-28-cnn-2-pytorch-tensor-intro.md"
+filename: "2025-05-28-cnn-02-pytorch-tensor-intro.md"
 ---
 
 ----------------------------------------------
