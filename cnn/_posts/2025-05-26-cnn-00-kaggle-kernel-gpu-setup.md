@@ -6,7 +6,7 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: \[star, fork, follow]
 tags: \[cnn, kaggle, gpu, python, machine learning, data science]
 comments: true
-filename: "2025-05-26-cnn-0-kaggle-kernel-gpu-setup.md"
+filename: "2025-05-26-cnn-00-kaggle-kernel-gpu-setup.md"
 ---
 
 ---------------------------------------------------
