@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "(CNN) PyTorch 텐서 차원 변환"
+title: "(CNN) PyTorch Tensor 차원 변환"
 subtitle: "reshape, view, permute, transpose를 활용한 텐서 형태 변환"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
@@ -11,7 +11,7 @@ filename: "2025-05-29-cnn-06-tensor-dimension-transformation.md"
 
 -------------------------------------------------------
 
-# PyTorch 텐서 차원 변환
+# PyTorch Tensor 차원 변환
 
 * 최초 작성일: 2025년 5월 29일 (목)
 
