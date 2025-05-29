@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "(CNN) PyTorch 텐서 생성 - arange, zeros, ones, random"
+title: "(CNN) arange, zeros, ones, random"
 subtitle: "arange와 기본 텐서 함수 및 난수 생성 함수"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
@@ -11,7 +11,7 @@ filename: "2025-05-29-cnn-pytorch-arange-zeros-ones-random.md"
 
 -------------------------------------------------------
 
-# PyTorch 텐서 생성- arange, zeros, ones와 random
+# arange, zeros, ones와 random
 
 * 최초 작성일: 2025년 5월 29일 (목)
 
