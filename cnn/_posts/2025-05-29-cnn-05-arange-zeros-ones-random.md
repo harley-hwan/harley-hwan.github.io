@@ -6,7 +6,7 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [pytorch, tensor, random, arange, deep learning, initialization]
 comments: true
-filename: "2025-05-29-cnn-pytorch-arange-zeros-ones-random.md"
+filename: "2025-05-29-05-cnn-pytorch-arange-zeros-ones-random.md"
 ---
 
 -------------------------------------------------------
