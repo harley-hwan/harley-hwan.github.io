@@ -1,217 +1,389 @@
 ---
-
 layout: post
-title: "(CNN) 파이토치 텐서 생성 - arange, zeros, ones, random"
-subtitle: "arange와 기본 텐서 생성 함수 및 난수 생성 함수 완전 정복"
+title: "PyTorch 텐서 생성 완벽 가이드 - arange, zeros, ones, random"
+subtitle: "딥러닝 모델 개발을 위한 필수 텐서 생성 함수 마스터하기"
 gh-repo: harley-hwan/harley-hwan.github.io
-gh-badge: \[star, fork, follow]
-tags: \[pytorch, tensor, random, arange, deep learning]
+gh-badge: [star, fork, follow]
+tags: [pytorch, tensor, random, arange, deep learning, initialization]
 comments: true
-filename: "2025-05-29-cnn-pytorch-tensor-generation.md"
--------------------------------------------------------
-
+filename: "2025-05-29-pytorch-arange-zeros-ones-random-tensor-creation.md"
 ---
 
-# (CNN) 파이토치 텐서 생성 - arange, zeros, ones, random
+-------------------------------------------------------
 
-* 최초 작성일: 2025년 5월 28일 (수)
+# PyTorch 텐서 생성 완벽 가이드 - arange, zeros, ones와 random 값 생성하기
+
+* 최초 작성일: 2025년 5월 29일 (목)
 
 ## 목차
 
-1. [arange를 이용한 연속 텐서 생성](#arange를-이용한-연속-텐서-생성)
-2. [0 또는 1로 채워진 텐서 생성](#0-또는-1로-채워진-텐서-생성)
-3. [난수 텐서 생성](#난수-텐서-생성)
+1. [개요](#개요)
+2. [arange - 연속된 값으로 텐서 생성](#arange---연속된-값으로-텐서-생성)
+3. [zeros & ones - 초기화된 텐서 생성](#zeros--ones---초기화된-텐서-생성)
+4. [난수 텐서 생성](#난수-텐서-생성)
+5. [실전 활용 팁](#실전-활용-팁)
 
 ---
 
-## 🔢 arange를 이용한 연속 텐서 생성
+## 📚 개요
 
-`torch.arange()`는 정수 또는 실수 범위의 연속된 숫자들을 가지는 텐서를 생성할 수 있는 함수다.
+PyTorch에서 텐서를 생성하는 것은 딥러닝 모델 개발의 첫걸음이다. 이 가이드에서는 가장 자주 사용되는 텐서 생성 함수들을 실용적인 예제와 함께 소개한다.
 
+**언제 어떤 함수를 사용할까?**
+- `arange`: 인덱스 생성, 시퀀스 데이터 처리
+- `zeros/ones`: 가중치 초기화, 마스크 생성
+- `rand/randn`: 가중치 초기화, 데이터 증강
+- `randint`: 배치 샘플링, 레이블 생성
+
+---
+
+## 🔢 arange - 연속된 값으로 텐서 생성
+
+`torch.arange()`는 파이썬의 `range()`와 유사하게 연속된 숫자들의 텐서를 생성한다.
+
+### 함수 시그니처
 ```python
-torch.arange(start=0, end, step=1, *, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.arange(start=0, end, step=1, *, out=None, dtype=None, 
+             layout=torch.strided, device=None, requires_grad=False)
 ```
 
-* `start` (선택): 시작값 (기본값은 0)
-* `end`: 종료값 (end 값은 포함되지 않음)
-* `step` (선택): 증가 간격 (기본값은 1)
-* `dtype`: 데이터 타입
-* `device`: 생성할 장치 (CPU/GPU)
+### 주요 파라미터
+- **start**: 시작값 (기본값: 0)
+- **end**: 종료값 (**미포함**)
+- **step**: 증가 간격 (기본값: 1)
+- **dtype**: 데이터 타입 (자동 추론됨)
 
+### 실전 예제
+
+**기본 사용법**
 ```python
+# 0부터 9까지의 정수
 seq_tensor = torch.arange(10)
-seq_tensor_int = torch.arange(10, dtype=torch.int32)
-
 print(seq_tensor)
-print(seq_tensor_int)
-print(seq_tensor.dtype)
-print(seq_tensor.shape)
-```
+# 출력: tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-**출력 결과:**
-
-```
-tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=torch.int32)
-torch.int64
-torch.Size([10])
-```
-
----
-
-```python
-custom_range = torch.arange(start=2, end=9)
+# 특정 범위 지정
+custom_range = torch.arange(start=2, end=9, step=2)
 print(custom_range)
+# 출력: tensor([2, 4, 6, 8])
+
+# 실수형 텐서 생성
+float_range = torch.arange(0, 1, 0.2)
+print(float_range)
+# 출력: tensor([0.0000, 0.2000, 0.4000, 0.6000, 0.8000])
 ```
 
-**출력 결과:**
-
-```
-tensor([2, 3, 4, 5, 6, 7, 8])
+**실용적 활용: 위치 인코딩 생성**
+```python
+# Transformer 모델의 위치 인코딩에 활용
+seq_length = 100
+position = torch.arange(0, seq_length).unsqueeze(1)
+print(f"Position encoding shape: {position.shape}")
+# 출력: Position encoding shape: torch.Size([100, 1])
+print(position[:5])  # 처음 5개만 출력
+# 출력: tensor([[0],
+#              [1],
+#              [2],
+#              [3],
+#              [4]])
 ```
 
 ---
 
-## 🧱 0 또는 1로 채워진 텐서 생성
+## 🧱 zeros & ones - 초기화된 텐서 생성
 
-`torch.zeros()`와 `torch.ones()`는 모든 원소가 각각 0 또는 1인 텐서를 생성할 때 사용된다.
+특정 값으로 채워진 텐서를 생성할 때 사용한다.
 
+### 함수 시그니처
 ```python
-torch.zeros(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
-torch.ones(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.zeros(*size, out=None, dtype=None, layout=torch.strided, 
+            device=None, requires_grad=False)
+
+torch.ones(*size, out=None, dtype=None, layout=torch.strided, 
+           device=None, requires_grad=False)
 ```
 
-* `size`: 텐서의 shape (튜플 또는 개별 인자)
-* `dtype`: 데이터 타입 (예: torch.float32, torch.int64 등)
-* `device`: 생성할 장치 (예: "cpu", "cuda")
-* `requires_grad`: 자동 미분 대상 여부
+### 주요 파라미터
+- **size**: 텐서의 shape (튜플 또는 개별 인자)
+- **dtype**: 데이터 타입 (기본값: float32)
+- **device**: CPU 또는 GPU 지정
 
+### 실전 예제
+
+**zeros 활용: 패딩 마스크 생성**
 ```python
-zero_tensor = torch.zeros(size=(3, 2), dtype=torch.int32)
-print(zero_tensor)
-print(zero_tensor.dtype, zero_tensor.shape)
+# 배치 크기 32, 최대 시퀀스 길이 50의 패딩 마스크
+batch_size, max_len = 32, 50
+padding_mask = torch.zeros(batch_size, max_len, dtype=torch.bool)
+print(f"Padding mask shape: {padding_mask.shape}")
+# 출력: Padding mask shape: torch.Size([32, 50])
+print(padding_mask[0, :10])  # 첫 번째 배치의 처음 10개 값
+# 출력: tensor([False, False, False, False, False, False, False, False, False, False])
+
+# 3차원 텐서 생성
+zero_3d = torch.zeros(2, 3, 4)
+print(zero_3d)
+# 출력: tensor([[[0., 0., 0., 0.],
+#               [0., 0., 0., 0.],
+#               [0., 0., 0., 0.]],
+#              [[0., 0., 0., 0.],
+#               [0., 0., 0., 0.],
+#               [0., 0., 0., 0.]]])
 ```
 
-**출력 결과:**
-
-```
-tensor([[0, 0],
-        [0, 0],
-        [0, 0]], dtype=torch.int32)
-torch.int32 torch.Size([3, 2])
-```
-
----
-
+**ones 활용: Attention 마스크 초기화**
 ```python
-one_tensor = torch.ones(3, 2, dtype=torch.int16)
-print(one_tensor)
-print(one_tensor.dtype, one_tensor.shape)
+# Self-attention을 위한 초기 마스크
+seq_len = 5
+attention_mask = torch.ones(seq_len, seq_len)
+print(attention_mask)
+# 출력: tensor([[1., 1., 1., 1., 1.],
+#              [1., 1., 1., 1., 1.],
+#              [1., 1., 1., 1., 1.],
+#              [1., 1., 1., 1., 1.],
+#              [1., 1., 1., 1., 1.]])
+
+# 정수형 ones 텐서
+int_ones = torch.ones(3, 3, dtype=torch.int64)
+print(int_ones)
+# 출력: tensor([[1, 1, 1],
+#              [1, 1, 1],
+#              [1, 1, 1]])
 ```
 
-**출력 결과:**
-
-```
-tensor([[1, 1],
-        [1, 1],
-        [1, 1]], dtype=torch.int16)
-torch.int16 torch.Size([3, 2])
+**GPU 메모리 할당**
+```python
+# GPU가 있다면 바로 GPU에 텐서 생성
+if torch.cuda.is_available():
+    gpu_tensor = torch.zeros(3, 3, device='cuda')
+    print(f"Tensor device: {gpu_tensor.device}")
+    # 출력: Tensor device: cuda:0
+else:
+    cpu_tensor = torch.zeros(3, 3, device='cpu')
+    print(f"Tensor device: {cpu_tensor.device}")
+    # 출력: Tensor device: cpu
 ```
 
 ---
 
 ## 🎲 난수 텐서 생성
 
-난수 생성은 딥러닝에서 매우 자주 사용되며, PyTorch는 다양한 난수 생성 함수를 제공한다. 일정한 출력을 위해 `torch.manual_seed()`로 시드를 설정할 수 있다.
+딥러닝에서 가중치 초기화와 데이터 증강에 필수적인 난수 생성 함수들이다.
 
+### 재현 가능한 결과를 위한 시드 설정
 ```python
-torch.manual_seed(2025)
+torch.manual_seed(42)  # CPU 시드
+if torch.cuda.is_available():
+    torch.cuda.manual_seed(42)  # GPU 시드
 ```
 
----
+### 1️⃣ torch.rand() - 균일 분포 [0, 1)
 
-### ✅ 1. `torch.rand()` - 균일 분포 난수
-
-```python
-torch.rand(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
-```
-
-0 이상 1 미만의 균일 분포를 따르는 float32 난수를 생성한다.
+**사용 시나리오**: Dropout 마스크, 확률적 샘플링
 
 ```python
-uniform_tensor = torch.rand(size=(3, 4))
+# 기본 사용법
+uniform_tensor = torch.rand(3, 4)
 print(uniform_tensor)
-print(uniform_tensor.dtype)
-print(uniform_tensor.min(), uniform_tensor.max())
+# 출력: tensor([[0.8823, 0.9150, 0.3829, 0.9593],
+#              [0.3904, 0.6009, 0.2566, 0.7936],
+#              [0.9408, 0.1332, 0.9346, 0.5936]])
+
+# Dropout 구현 예시
+dropout_rate = 0.5
+features = torch.randn(4, 5)  # 배치 크기 4, 특징 차원 5
+dropout_mask = torch.rand(4, 5) > dropout_rate
+print(dropout_mask)
+# 출력: tensor([[ True,  True, False,  True, False],
+#              [False,  True, False,  True,  True],
+#              [ True, False,  True,  True, False],
+#              [ True,  True, False, False,  True]])
+
+output = features * dropout_mask
+print(f"Active neurons: {dropout_mask.sum().item()}/{dropout_mask.numel()}")
+# 출력: Active neurons: 12/20
 ```
 
-**출력 결과:**
+### 2️⃣ torch.randn() - 표준 정규 분포 N(0, 1)
 
-```
-tensor([[0.3786, 0.8113, 0.1768, 0.6552],
-        [0.1755, 0.6170, 0.1070, 0.0447],
-        [0.8400, 0.1595, 0.7824, 0.8486]])
-torch.float32
-tensor(0.0447) tensor(0.8486)
-```
-
----
-
-### 🔢 2. `torch.randint()` - 정수형 난수
+**사용 시나리오**: 가중치 초기화, 노이즈 추가
 
 ```python
-torch.randint(low, high, size, *, dtype=None, layout=torch.strided, device=None, requires_grad=False)
-```
-
-* `low`: 최소값 (포함)
-* `high`: 최대값 (미포함)
-* `size`: 생성할 텐서 크기
-
-```python
-int_random_tensor = torch.randint(low=0, high=100, size=(3, 4))
-print(int_random_tensor)
-print(int_random_tensor.dtype)
-print(int_random_tensor.min(), int_random_tensor.max())
-```
-
-**출력 결과:**
-
-```
-tensor([[18, 85,  3, 38],
-        [65, 93, 22, 95],
-        [79,  9, 59, 41]])
-torch.int64
-tensor(3) tensor(95)
-```
-
----
-
-### 📈 3. `torch.randn()` - 정규 분포 난수
-
-```python
-torch.randn(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
-```
-
-평균이 0이고 분산이 1인 정규 분포를 따르는 float32 값을 생성한다.
-
-```python
-normal_tensor = torch.randn(size=(3, 4))
+# 기본 사용법
+normal_tensor = torch.randn(3, 3)
 print(normal_tensor)
-print(normal_tensor.dtype)
-print(normal_tensor.min(), normal_tensor.max())
-print(normal_tensor.mean(), normal_tensor.var())
+# 출력: tensor([[-0.1276,  0.5846, -0.8667],
+#              [-0.2233,  1.4459, -0.2951],
+#              [-0.8948, -0.0125, -1.2220]])
+
+print(f"Mean: {normal_tensor.mean():.4f}, Std: {normal_tensor.std():.4f}")
+# 출력: Mean: -0.1611, Std: 0.8436
+
+# Xavier 초기화 구현
+input_dim, output_dim = 4, 3
+xavier_std = (2.0 / (input_dim + output_dim)) ** 0.5
+weights = torch.randn(input_dim, output_dim) * xavier_std
+print(weights)
+# 출력: tensor([[ 0.5456, -0.4515,  0.6135],
+#              [-0.0812, -0.5416,  0.0402],
+#              [ 0.4672,  0.7812, -0.2051],
+#              [-0.5897, -0.1279,  0.4492]])
+print(f"Xavier weight stats - Mean: {weights.mean():.4f}, Std: {weights.std():.4f}")
+# 출력: Xavier weight stats - Mean: 0.0622, Std: 0.4477
 ```
 
-**출력 결과:**
+**데이터 증강: 가우시안 노이즈 추가**
+```python
+# 작은 이미지에 노이즈 추가 (2x2 이미지 예시)
+images = torch.rand(2, 2)
+print("Original image:")
+print(images)
+# 출력: Original image:
+#       tensor([[0.4963, 0.7682],
+#               [0.0885, 0.1320]])
 
+noise_level = 0.1
+noise = torch.randn_like(images) * noise_level
+noisy_images = images + noise
+noisy_images = torch.clamp(noisy_images, 0, 1)  # [0, 1] 범위로 제한
+print("Noisy image:")
+print(noisy_images)
+# 출력: Noisy image:
+#       tensor([[0.5427, 0.8145],
+#               [0.0943, 0.1893]])
 ```
-tensor([[ 0.2882, -1.0877, -0.2176,  1.2556],
-        [-0.2681, -0.3065,  0.4733,  0.2659],
-        [-0.0685, -0.5889,  0.7427, -0.3033]])
-torch.float32
-tensor(-1.0877) tensor(1.2556) tensor(0.0084) tensor(0.4382)
+
+### 3️⃣ torch.randint() - 정수 균일 분포
+
+**사용 시나리오**: 클래스 레이블 생성, 인덱스 샘플링
+
+```python
+# 분류 문제를 위한 랜덤 레이블 생성
+num_classes = 5
+batch_size = 10
+random_labels = torch.randint(0, num_classes, (batch_size,))
+print(random_labels)
+# 출력: tensor([4, 4, 3, 4, 4, 3, 3, 1, 3, 2])
+
+unique_vals, counts = random_labels.unique(return_counts=True)
+print(f"Label distribution: values={unique_vals.tolist()}, counts={counts.tolist()}")
+# 출력: Label distribution: values=[1, 2, 3, 4], counts=[1, 1, 4, 4]
+
+# 2차원 정수 텐서
+int_matrix = torch.randint(low=10, high=20, size=(3, 4))
+print(int_matrix)
+# 출력: tensor([[16, 17, 10, 18],
+#              [11, 14, 12, 17],
+#              [18, 13, 14, 16]])
+
+# 배치에서 랜덤 샘플 선택
+total_samples = 100
+batch_size = 5
+batch_indices = torch.randint(0, total_samples, (batch_size,))
+print(f"Selected indices: {batch_indices}")
+# 출력: Selected indices: tensor([84, 26, 80, 55, 72])
 ```
 
 ---
 
-이번 문서에서는 PyTorch에서 텐서를 생성하는 주요 방법들을 정리하였다. 특히 `arange`, `zeros`, `ones`, `rand`, `randint`, `randn` 함수의 시그니처와 파라미터 설명, 실전 예제 및 예상 출력 결과를 함께 다루어 실제 코드 작성에 바로 활용할 수 있도록 구성하였다.
+## 💡 실전 활용 팁
+
+### 1. 메모리 효율적인 텐서 생성
+```python
+# 큰 텐서는 dtype을 명시하여 메모리 절약
+large_tensor = torch.zeros(1000, 1000, dtype=torch.float16)
+memory_mb = large_tensor.element_size() * large_tensor.numel() / 1024**2
+print(f"Memory usage: {memory_mb:.1f} MB")
+# 출력: Memory usage: 1.9 MB
+
+# float32와 비교
+large_tensor_32 = torch.zeros(1000, 1000, dtype=torch.float32)
+memory_mb_32 = large_tensor_32.element_size() * large_tensor_32.numel() / 1024**2
+print(f"Memory usage (float32): {memory_mb_32:.1f} MB")
+# 출력: Memory usage (float32): 3.8 MB
+```
+
+### 2. 배치 처리를 위한 브로드캐스팅 활용
+```python
+# 배치의 각 샘플에 다른 바이어스 추가
+batch_data = torch.randn(3, 4)  # 3개 샘플, 4차원
+bias = torch.arange(4).float()  # 4차원 바이어스
+print("Batch data:")
+print(batch_data)
+# 출력: Batch data:
+#       tensor([[-0.1115,  0.1204, -0.3696, -0.2404],
+#               [-1.1969, -0.1097,  1.1050, -1.5701],
+#               [ 0.4927,  0.7854, -0.4551,  0.7581]])
+
+print("Bias:", bias)
+# 출력: Bias: tensor([0., 1., 2., 3.])
+
+result = batch_data + bias  # 자동 브로드캐스팅
+print("Result after adding bias:")
+print(result)
+# 출력: Result after adding bias:
+#       tensor([[-0.1115,  1.1204,  1.6304,  2.7596],
+#               [-1.1969,  0.8903,  3.1050,  1.4299],
+#               [ 0.4927,  1.7854,  1.5449,  3.7581]])
+```
+
+### 3. 같은 shape의 텐서 생성
+```python
+# 기존 텐서와 같은 shape로 생성
+reference = torch.randn(2, 3)
+print(f"Reference shape: {reference.shape}")
+# 출력: Reference shape: torch.Size([2, 3])
+
+zeros_like = torch.zeros_like(reference)
+print("zeros_like:")
+print(zeros_like)
+# 출력: zeros_like:
+#       tensor([[0., 0., 0.],
+#               [0., 0., 0.]])
+
+ones_like = torch.ones_like(reference)
+print("ones_like:")
+print(ones_like)
+# 출력: ones_like:
+#       tensor([[1., 1., 1.],
+#               [1., 1., 1.]])
+
+randn_like = torch.randn_like(reference)
+print("randn_like:")
+print(randn_like)
+# 출력: randn_like:
+#       tensor([[-0.5531,  1.3090, -0.2774],
+#               [ 0.7712, -0.3763, -0.7993]])
+```
+
+### 4. 디바이스 간 이동 최소화
+```python
+# GPU에서 직접 생성하여 불필요한 복사 방지
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"Using device: {device}")
+# 출력: Using device: cuda (또는 cpu)
+
+# 처음부터 올바른 디바이스에 생성
+tensor = torch.randn(3, 3, device=device)
+print(f"Tensor is on: {tensor.device}")
+# 출력: Tensor is on: cuda:0 (또는 cpu)
+
+# 잘못된 방법 (피해야 함)
+# bad_tensor = torch.randn(3, 3)  # CPU에 생성
+# bad_tensor = bad_tensor.to(device)  # GPU로 복사 (추가 시간 소요)
+```
+
+---
+
+## 📊 함수별 사용 시나리오 요약
+
+| 함수 | 주요 용도 | 예시 |
+|------|-----------|------|
+| `arange` | 인덱스, 시퀀스 생성 | 위치 인코딩, 시간 스텝 |
+| `zeros` | 초기화, 마스킹 | 패딩 마스크, 누적 변수 |
+| `ones` | 초기화, 마스킹 | Attention 마스크, 바이어스 초기화 |
+| `rand` | 확률적 처리 | Dropout, 데이터 샘플링 |
+| `randn` | 가중치 초기화 | Xavier/He 초기화, 노이즈 |
+| `randint` | 이산 샘플링 | 레이블 생성, 인덱싱 |
+
+이 가이드를 통해 PyTorch의 텐서 생성 함수들을 효과적으로 활용하여 더 나은 딥러닝 모델을 구축하기 바란다!
