@@ -6,7 +6,7 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [pytorch, tensor, reshape, view, permute, transpose, deep learning]
 comments: true
-filename: "2025-05-29-cnn-06-tensor-dimension-transformation.md"
+filename: "2025-05-29-cnn-06-pytorch-tensor-dimension-transformation.md"
 ---
 
 -------------------------------------------------------
