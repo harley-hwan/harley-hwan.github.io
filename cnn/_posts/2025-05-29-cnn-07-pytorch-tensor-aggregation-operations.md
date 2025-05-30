@@ -6,7 +6,7 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [pytorch, tensor, aggregation, sum, mean, max, min, argmax, deep learning]
 comments: true
-filename: "2025-05-29-cnn-07-tensor-aggregation-operations.md"
+filename: "2025-05-29-cnn-07-pytorch-tensor-aggregation-operations.md"
 ---
 
 -------------------------------------------------------
