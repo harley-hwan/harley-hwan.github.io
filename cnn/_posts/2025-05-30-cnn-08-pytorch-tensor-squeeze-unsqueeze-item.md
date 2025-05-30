@@ -6,7 +6,7 @@ gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [pytorch, tensor, squeeze, unsqueeze, item, dimension manipulation]
 comments: true
-filename: "2025-05-30-cnn-08-pytorch-squeeze-unsqueeze-item.md"
+filename: "2025-05-30-cnn-08-pytorch-tensor-squeeze-unsqueeze-item.md"
 ---
 
 -------------------------------------------------------
