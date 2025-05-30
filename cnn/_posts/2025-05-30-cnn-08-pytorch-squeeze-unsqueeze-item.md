@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "PyTorch 텐서 차원 조작: squeeze, unsqueeze, item"
+title: "(CNN) PyTorch 텐서 차원 조작: squeeze, unsqueeze, item"
 subtitle: "불필요한 차원 제거와 추가, 그리고 스칼라 값 추출하기"
 gh-repo: harley-hwan/harley-hwan.github.io
 gh-badge: [star, fork, follow]
 tags: [pytorch, tensor, squeeze, unsqueeze, item, dimension manipulation]
 comments: true
-filename: "2025-05-30-pytorch-squeeze-unsqueeze-item.md"
+filename: "2025-05-30-cnn-08-pytorch-squeeze-unsqueeze-item.md"
 ---
 
 -------------------------------------------------------
