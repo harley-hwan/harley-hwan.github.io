@@ -28,9 +28,10 @@ filename: "2025-05-27-cnn-01-ml-dl-overview.md"
 
 먼저 인공지능(AI), 머신러닝, 딥러닝의 관계를 이해하는 것이 중요하다. 이 세 개념은 서로 포함 관계에 있다.
 
-<img src="https://github.com/user-attachments/assets/a824e534-1175-4d30-9cf1-7d89571bc429" alt="AI, ML, DL의 관계" width="500">
-
-<p align="center"><em>그림 1: 인공지능, 머신러닝, 딥러닝의 포함 관계</em></p>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a824e534-1175-4d30-9cf1-7d89571bc429" alt="AI, ML, DL의 관계" width="500">
+  <p><em>그림 1: 인공지능, 머신러닝, 딥러닝의 포함 관계</em></p>
+</div>
 
 위 그림에서 볼 수 있듯이:
 - **인공지능(AI)**: 가장 넓은 개념으로, 감지하고 추론하며 행동하고 적응할 수 있는 프로그램을 의미한다
@@ -69,10 +70,11 @@ filename: "2025-05-27-cnn-01-ml-dl-overview.md"
 
 머신러닝의 학습 방법은 데이터에 정답(레이블)이 있는지 여부에 따라 크게 두 가지로 나뉜다.
 
+<div align="center">
 <img src="https://github.com/user-attachments/assets/a4cae495-7bc6-42cb-91cb-0d6692a6bfea" alt="지도학습과 비지도학습" width="600">
-
 <p align="center"><em>그림 2: 지도학습과 비지도학습의 프로세스 비교</em></p>
-
+</div>
+   
 ### 지도학습 (Supervised Learning)
 
 **지도학습**은 입력 데이터에 대한 **정답 레이블**이 주어진 상태에서 모델을 학습시키는 방법이다. 위 그림의 상단 프로세스가 지도학습을 보여준다.
@@ -131,9 +133,10 @@ filename: "2025-05-27-cnn-01-ml-dl-overview.md"
 
 **인공 신경망**은 가장 기본적인 형태의 신경망으로, 생물학적 뉴런의 작동 방식을 모방한 구조다.
 
-<img src="https://github.com/user-attachments/assets/401e1a4d-f473-4803-bd75-f9bacc20f1a1" alt="ANN 구조" width="800">
-
-<p align="center"><em>그림 3: 기본적인 ANN 구조 - 입력층, 은닉층, 출력층</em></p>
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/401e1a4d-f473-4803-bd75-f9bacc20f1a1" alt="ANN 구조" width="800">
+   <p align="center"><em>그림 3: 기본적인 ANN 구조 - 입력층, 은닉층, 출력층</em></p>
+</div>
 
 **구조 설명:**
 - **입력층(Input)**: 빨간색 노드들로, 데이터를 받아들이는 층이다
@@ -160,9 +163,10 @@ filename: "2025-05-27-cnn-01-ml-dl-overview.md"
 
 **합성곱 신경망**은 **이미지나 영상 데이터 처리**에 특화된 신경망이다. 인간의 시각 처리 과정을 모방한 구조를 가지고 있다.
 
-<img src="https://github.com/user-attachments/assets/4ca5fc45-0583-4598-9343-05e0e3d2b0e7" alt="CNN 구조" width="800">
-
-<p align="center"><em>그림 4: CNN의 계층별 구조와 특징맵의 변화</em></p>
+<div align="center"
+   <img src="https://github.com/user-attachments/assets/4ca5fc45-0583-4598-9343-05e0e3d2b0e7" alt="CNN 구조" width="800">
+   <em>그림 4: CNN의 계층별 구조와 특징맵의 변화</em></p>
+</div>
 
 **주요 구성 요소:**
 
@@ -195,9 +199,10 @@ filename: "2025-05-27-cnn-01-ml-dl-overview.md"
 
 **순환 신경망**은 **시간적 순서가 있는 데이터**를 처리하기 위한 신경망이다. 이전 정보를 기억하고 활용할 수 있는 구조를 가지고 있다.
 
-<img src="https://github.com/user-attachments/assets/99f49432-115b-421d-b33c-a3125bfad7b2" alt="RNN 구조" width="800">
-
-<p align="center"><em>그림 5: RNN의 순환 구조와 시간에 따른 전개</em></p>
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/99f49432-115b-421d-b33c-a3125bfad7b2" alt="RNN 구조" width="800">
+   <p align="center"><em>그림 5: RNN의 순환 구조와 시간에 따른 전개</em></p>
+</div>
 
 **핵심 개념:**
 - 왼쪽은 순환 연결을 가진 압축된 표현이다
