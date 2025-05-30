@@ -58,8 +58,10 @@ print(f"최저점: {scores.min():.1f}")
 # 출력: 최저점: 78.9
 ```
 
+<br/>
+
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/86930e98-093b-4e23-bab6-d36e1644a311" width="1000">
+  <img src="https://github.com/user-attachments/assets/86930e98-093b-4e23-bab6-d36e1644a311" width="1200">
 </div>
 
 ---
@@ -224,9 +226,10 @@ print(class_scores.sum(dim=0))
 #               [24, 26, 28],
 #               [30, 32, 34]])
 ```
+<br/>
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/936ac5f1-b3c8-4c2a-9253-1eade3a49ac8" width="1000">
+  <img src="https://github.com/user-attachments/assets/936ac5f1-b3c8-4c2a-9253-1eade3a49ac8" width="1200">
 </div>
 
 
