@@ -58,8 +58,7 @@ print(f"최저점: {scores.min():.1f}")
 # 출력: 최저점: 78.9
 ```
 
-![텐서 집계 연산 개념도]
-*[이미지 위치: 1D 텐서에서 각 집계 함수가 어떻게 작동하는지 보여주는 시각화]*
+![image](https://github.com/user-attachments/assets/86930e98-093b-4e23-bab6-d36e1644a311)
 
 ---
 
@@ -224,8 +223,7 @@ print(class_scores.sum(dim=0))
 #               [30, 32, 34]])
 ```
 
-![3D 텐서 차원 집계]
-*[이미지 위치: 3D 텐서에서 각 dim이 어떤 축을 나타내는지 보여주는 3D 큐브 다이어그램]*
+![image](https://github.com/user-attachments/assets/936ac5f1-b3c8-4c2a-9253-1eade3a49ac8)
 
 ### 다중 차원 동시 집계
 ```python
