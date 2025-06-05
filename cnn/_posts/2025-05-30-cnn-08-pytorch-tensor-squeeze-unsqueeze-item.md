@@ -51,9 +51,7 @@ print(f"배치 형태 shape: {batch_img.shape}")
 # 출력: 배치 형태 shape: torch.Size([1, 3, 224, 224])
 ```
 
-![image](https://github.com/user-attachments/assets/58ce9aec-18c9-4c64-bffd-fe7649840722)
-
-![image](https://github.com/user-attachments/assets/a1ddd547-7ad3-4cea-8d5f-ce7b09d4f6ca)
+<img src="https://github.com/user-attachments/assets/e5600edc-16cb-4cf8-a1a7-a4d0fa9153c3" width="100%" alt="image">
 
 ---
 
