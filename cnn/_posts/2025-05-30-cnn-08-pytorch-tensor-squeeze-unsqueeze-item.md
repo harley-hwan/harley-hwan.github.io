@@ -51,8 +51,9 @@ print(f"배치 형태 shape: {batch_img.shape}")
 # 출력: 배치 형태 shape: torch.Size([1, 3, 224, 224])
 ```
 
-![텐서 차원 조작 개념도]
-*[이미지 위치: squeeze/unsqueeze의 동작을 보여주는 3D 시각화]*
+![image](https://github.com/user-attachments/assets/58ce9aec-18c9-4c64-bffd-fe7649840722)
+
+![image](https://github.com/user-attachments/assets/a1ddd547-7ad3-4cea-8d5f-ce7b09d4f6ca)
 
 ---
 
