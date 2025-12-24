@@ -46,7 +46,7 @@ Previously, I was a Taekwondo athlete, but I had to stop due to a major injury, 
 
 ## Countries I've Visited
 
-🇬🇧 UK · 🇮🇸 Iceland · 🇵🇱 Poland · 🇫🇷 France · 🇮🇹 Italy · 🇩🇪 Germany · 🇦🇹 Austria · 🇵🇭 Philippines · 🇨🇳 China · 🇯🇵 Japan · 🇹🇭 Thailand · 🇻🇳 Vietnam
+UK, Iceland, Poland, France, Italy, Germany, Austria, Philippines, China, Japan, Thailand, Vietnam
 
 ...and more in the future! ✈️
 
@@ -54,9 +54,13 @@ Previously, I was a Taekwondo athlete, but I had to stop due to a major injury, 
 
 ## GitHub Stats
 
-[![Harley's GitHub stats](https://github-readme-stats.vercel.app/api?username=harley-hwan&show_icons=true&theme=dracula)](https://github.com/harley-hwan)
+<a href="https://github.com/harley-hwan">
+  <img src="https://github-readme-stats.vercel.app/api?username=harley-hwan&show_icons=true&theme=dracula" alt="Harley's GitHub stats">
+</a>
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=harley-hwan&layout=compact&theme=dracula)](https://github.com/harley-hwan)
+<a href="https://github.com/harley-hwan">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harley-hwan&layout=compact&theme=dracula" alt="Top Langs">
+</a>
 
 ---
 
