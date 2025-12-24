@@ -4,12 +4,13 @@ description: 백준 9658 돌 게임 4 (c++)
 date: 2021-09-21 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
 tags: [baekjoon, 백준, algorithm, dp]
+toc: false
 ---
 
 # Baekjoon 9658 돌 게임 4
 
 - 최초 작성일: 2021년 9월 21일(화)
-- 주소: https://www.acmicpc.net/problem/9658
+- 주소: <https://www.acmicpc.net/problem/9658>
 
 ## 문제
 
@@ -20,7 +21,6 @@ tags: [baekjoon, 백준, algorithm, dp]
 - 두 사람이 완벽하게 게임을 했을 때, 이기는 사람을 구하는 프로그램을 작성하시오. 게임은 상근이가 먼저 시작한다.
 
 ## 입력
-
 - 첫째 줄에 N이 주어진다. (1 ≤ N ≤ 1000)
 
 ## 출력
@@ -30,7 +30,6 @@ tags: [baekjoon, 백준, algorithm, dp]
   ![image](https://user-images.githubusercontent.com/68185569/134134286-cd41c62a-7798-474e-b0bb-b59b25ffcdfd.png)
 
 ## 알고리즘 분류
-
 - 다이나믹 프로그래밍
 - 게임 이론
 

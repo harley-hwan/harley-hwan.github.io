@@ -4,9 +4,12 @@ description: "arange와 기본 텐서 함수 및 난수 생성 함수"
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, random, arange, deep learning, initialization]
+toc: false
 ---
 
-# arange, zeros, ones와 random
+-------------------------------------------------------
+
+# arange, zeros, ones random
 
 * 최초 작성일: 2025년 5월 29일 (목)
 
@@ -67,10 +70,10 @@ print(f"Position encoding shape: {position.shape}")
 # 출력: Position encoding shape: torch.Size([100, 1])
 print(position[:5])  # 처음 5개만 출력
 # 출력: tensor([[0],
-#              [1],
-#              [2],
-#              [3],
-#              [4]])
+# [1],
+# [2],
+# [3],
+# [4]])
 ```
 
 ---
@@ -109,11 +112,11 @@ print(padding_mask[0, :10])  # 첫 번째 배치의 처음 10개 값
 zero_3d = torch.zeros(2, 3, 4)
 print(zero_3d)
 # 출력: tensor([[[0., 0., 0., 0.],
-#               [0., 0., 0., 0.],
-#               [0., 0., 0., 0.]],
-#              [[0., 0., 0., 0.],
-#               [0., 0., 0., 0.],
-#               [0., 0., 0., 0.]]])
+# [0., 0., 0., 0.],
+# [0., 0., 0., 0.]],
+# [[0., 0., 0., 0.],
+# [0., 0., 0., 0.],
+# [0., 0., 0., 0.]]])
 ```
 
 **ones 활용: Attention 마스크 초기화**
@@ -123,17 +126,17 @@ seq_len = 5
 attention_mask = torch.ones(seq_len, seq_len)
 print(attention_mask)
 # 출력: tensor([[1., 1., 1., 1., 1.],
-#              [1., 1., 1., 1., 1.],
-#              [1., 1., 1., 1., 1.],
-#              [1., 1., 1., 1., 1.],
-#              [1., 1., 1., 1., 1.]])
+# [1., 1., 1., 1., 1.],
+# [1., 1., 1., 1., 1.],
+# [1., 1., 1., 1., 1.],
+# [1., 1., 1., 1., 1.]])
 
-# 정수형 ones 텐서
+# ones 정수형 텐서
 int_ones = torch.ones(3, 3, dtype=torch.int64)
 print(int_ones)
 # 출력: tensor([[1, 1, 1],
-#              [1, 1, 1],
-#              [1, 1, 1]])
+# [1, 1, 1],
+# [1, 1, 1]])
 ```
 
 **GPU 메모리 할당**
@@ -162,7 +165,7 @@ if torch.cuda.is_available():
     torch.cuda.manual_seed(42)  # GPU 시드
 ```
 
-### torch.rand() - 균일 분포 [0, 1)
+### 1⃣ torch.rand() - 균일 분포 [0, 1)
 
 **사용 시나리오**: Dropout 마스크, 확률적 샘플링
 
@@ -171,25 +174,25 @@ if torch.cuda.is_available():
 uniform_tensor = torch.rand(3, 4)
 print(uniform_tensor)
 # 출력: tensor([[0.8823, 0.9150, 0.3829, 0.9593],
-#              [0.3904, 0.6009, 0.2566, 0.7936],
-#              [0.9408, 0.1332, 0.9346, 0.5936]])
+# [0.3904, 0.6009, 0.2566, 0.7936],
+# [0.9408, 0.1332, 0.9346, 0.5936]])
 
 # Dropout 구현 예시
 dropout_rate = 0.5
 features = torch.randn(4, 5)  # 배치 크기 4, 특징 차원 5
 dropout_mask = torch.rand(4, 5) > dropout_rate
 print(dropout_mask)
-# 출력: tensor([[ True,  True, False,  True, False],
-#              [False,  True, False,  True,  True],
-#              [ True, False,  True,  True, False],
-#              [ True,  True, False, False,  True]])
+# 출력: tensor([[ True, True, False, True, False],
+# [False, True, False, True, True],
+# [ True, False, True, True, False],
+# [ True, True, False, False, True]])
 
 output = features * dropout_mask
 print(f"Active neurons: {dropout_mask.sum().item()}/{dropout_mask.numel()}")
 # 출력: Active neurons: 12/20
 ```
 
-### torch.randn() - 표준 정규 분포 N(0, 1)
+### 2⃣ torch.randn() - 표준 정규 분포 N(0, 1)
 
 **사용 시나리오**: 가중치 초기화, 노이즈 추가
 
@@ -197,9 +200,9 @@ print(f"Active neurons: {dropout_mask.sum().item()}/{dropout_mask.numel()}")
 # 기본 사용법
 normal_tensor = torch.randn(3, 3)
 print(normal_tensor)
-# 출력: tensor([[-0.1276,  0.5846, -0.8667],
-#              [-0.2233,  1.4459, -0.2951],
-#              [-0.8948, -0.0125, -1.2220]])
+# 출력: tensor([[-0.1276, 0.5846, -0.8667],
+# [-0.2233, 1.4459, -0.2951],
+# [-0.8948, -0.0125, -1.2220]])
 
 print(f"Mean: {normal_tensor.mean():.4f}, Std: {normal_tensor.std():.4f}")
 # 출력: Mean: -0.1611, Std: 0.8436
@@ -209,10 +212,10 @@ input_dim, output_dim = 4, 3
 xavier_std = (2.0 / (input_dim + output_dim)) ** 0.5
 weights = torch.randn(input_dim, output_dim) * xavier_std
 print(weights)
-# 출력: tensor([[ 0.5456, -0.4515,  0.6135],
-#              [-0.0812, -0.5416,  0.0402],
-#              [ 0.4672,  0.7812, -0.2051],
-#              [-0.5897, -0.1279,  0.4492]])
+# 출력: tensor([[ 0.5456, -0.4515, 0.6135],
+# [-0.0812, -0.5416, 0.0402],
+# [ 0.4672, 0.7812, -0.2051],
+# [-0.5897, -0.1279, 0.4492]])
 print(f"Xavier weight stats - Mean: {weights.mean():.4f}, Std: {weights.std():.4f}")
 # 출력: Xavier weight stats - Mean: 0.0622, Std: 0.4477
 ```
@@ -224,8 +227,8 @@ images = torch.rand(2, 2)
 print("Original image:")
 print(images)
 # 출력: Original image:
-#       tensor([[0.4963, 0.7682],
-#               [0.0885, 0.1320]])
+# tensor([[0.4963, 0.7682],
+# [0.0885, 0.1320]])
 
 noise_level = 0.1
 noise = torch.randn_like(images) * noise_level
@@ -234,11 +237,11 @@ noisy_images = torch.clamp(noisy_images, 0, 1)  # [0, 1] 범위로 제한
 print("Noisy image:")
 print(noisy_images)
 # 출력: Noisy image:
-#       tensor([[0.5427, 0.8145],
-#               [0.0943, 0.1893]])
+# tensor([[0.5427, 0.8145],
+# [0.0943, 0.1893]])
 ```
 
-### torch.randint() - 정수 균일 분포
+### 3⃣ torch.randint() - 정수 균일 분포
 
 **사용 시나리오**: 클래스 레이블 생성, 인덱스 샘플링
 
@@ -258,8 +261,8 @@ print(f"Label distribution: values={unique_vals.tolist()}, counts={counts.tolist
 int_matrix = torch.randint(low=10, high=20, size=(3, 4))
 print(int_matrix)
 # 출력: tensor([[16, 17, 10, 18],
-#              [11, 14, 12, 17],
-#              [18, 13, 14, 16]])
+# [11, 14, 12, 17],
+# [18, 13, 14, 16]])
 
 # 배치에서 랜덤 샘플 선택
 total_samples = 100
@@ -296,9 +299,9 @@ bias = torch.arange(4).float()  # 4차원 바이어스
 print("Batch data:")
 print(batch_data)
 # 출력: Batch data:
-#       tensor([[-0.1115,  0.1204, -0.3696, -0.2404],
-#               [-1.1969, -0.1097,  1.1050, -1.5701],
-#               [ 0.4927,  0.7854, -0.4551,  0.7581]])
+# tensor([[-0.1115, 0.1204, -0.3696, -0.2404],
+# [-1.1969, -0.1097, 1.1050, -1.5701],
+# [ 0.4927, 0.7854, -0.4551, 0.7581]])
 
 print("Bias:", bias)
 # 출력: Bias: tensor([0., 1., 2., 3.])
@@ -307,9 +310,9 @@ result = batch_data + bias  # 자동 브로드캐스팅
 print("Result after adding bias:")
 print(result)
 # 출력: Result after adding bias:
-#       tensor([[-0.1115,  1.1204,  1.6304,  2.7596],
-#               [-1.1969,  0.8903,  3.1050,  1.4299],
-#               [ 0.4927,  1.7854,  1.5449,  3.7581]])
+# tensor([[-0.1115, 1.1204, 1.6304, 2.7596],
+# [-1.1969, 0.8903, 3.1050, 1.4299],
+# [ 0.4927, 1.7854, 1.5449, 3.7581]])
 ```
 
 ### 3. 같은 shape의 텐서 생성
@@ -323,22 +326,22 @@ zeros_like = torch.zeros_like(reference)
 print("zeros_like:")
 print(zeros_like)
 # 출력: zeros_like:
-#       tensor([[0., 0., 0.],
-#               [0., 0., 0.]])
+# tensor([[0., 0., 0.],
+# [0., 0., 0.]])
 
 ones_like = torch.ones_like(reference)
 print("ones_like:")
 print(ones_like)
 # 출력: ones_like:
-#       tensor([[1., 1., 1.],
-#               [1., 1., 1.]])
+# tensor([[1., 1., 1.],
+# [1., 1., 1.]])
 
 randn_like = torch.randn_like(reference)
 print("randn_like:")
 print(randn_like)
 # 출력: randn_like:
-#       tensor([[-0.5531,  1.3090, -0.2774],
-#               [ 0.7712, -0.3763, -0.7993]])
+# tensor([[-0.5531, 1.3090, -0.2774],
+# [ 0.7712, -0.3763, -0.7993]])
 ```
 
 ### 4. 디바이스 간 이동 최소화
@@ -354,8 +357,8 @@ print(f"Tensor is on: {tensor.device}")
 # 출력: Tensor is on: cuda:0 (또는 cpu)
 
 # 잘못된 방법 (피해야 함)
-# bad_tensor = torch.randn(3, 3)  # CPU에 생성
-# bad_tensor = bad_tensor.to(device)  # GPU로 복사 (추가 시간 소요)
+# bad_tensor = torch.randn(3, 3) # CPU에 생성
+# bad_tensor = bad_tensor.to(device) # GPU로 복사 (추가 시간 소요)
 ```
 
 ---

@@ -4,7 +4,10 @@ description: "reshape, view, permute, transpose를 활용한 텐서 형태 변�
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, reshape, view, permute, transpose, deep learning]
+toc: false
 ---
+
+-------------------------------------------------------
 
 # PyTorch Tensor 차원 변환
 
@@ -55,22 +58,22 @@ print(f"4D tensor shape: {img_batch.shape}")
 # reshape 기본 사용법
 data = torch.arange(12)
 print(f"Original: {data}")
-# 출력: Original: tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+# 출력: Original: tensor([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
 
 # 2x6 행렬로 변환
 mat_2x6 = data.reshape(2, 6)
 print(f"2x6 matrix:\n{mat_2x6}")
 # 출력: 2x6 matrix:
-# tensor([[ 0,  1,  2,  3,  4,  5],
-#         [ 6,  7,  8,  9, 10, 11]])
+# tensor([[ 0, 1, 2, 3, 4, 5],
+# [ 6, 7, 8, 9, 10, 11]])
 
 # 3x4 행렬로 변환
 mat_3x4 = data.reshape(3, 4)
 print(f"3x4 matrix:\n{mat_3x4}")
 # 출력: 3x4 matrix:
-# tensor([[ 0,  1,  2,  3],
-#         [ 4,  5,  6,  7],
-#         [ 8,  9, 10, 11]])
+# tensor([[ 0, 1, 2, 3],
+# [ 4, 5, 6, 7],
+# [ 8, 9, 10, 11]])
 
 # -1을 사용한 자동 크기 계산
 auto_shape = data.reshape(2, -1)
@@ -85,10 +88,10 @@ vec = torch.arange(20)
 mat = vec.view(4, 5)
 print(f"View result:\n{mat}")
 # 출력: View result:
-# tensor([[ 0,  1,  2,  3,  4],
-#         [ 5,  6,  7,  8,  9],
-#         [10, 11, 12, 13, 14],
-#         [15, 16, 17, 18, 19]])
+# tensor([[ 0, 1, 2, 3, 4],
+# [ 5, 6, 7, 8, 9],
+# [10, 11, 12, 13, 14],
+# [15, 16, 17, 18, 19]])
 
 # CNN 출력을 FC 레이어 입력으로 변환
 torch.manual_seed(2025)
@@ -109,8 +112,8 @@ print(f"Original contiguous: {t1.is_contiguous()}")
 print(f"View contiguous: {t2.is_contiguous()}")
 print(f"Reshape contiguous: {t3.is_contiguous()}")
 # 출력: Original contiguous: True
-#       View contiguous: True
-#       Reshape contiguous: True
+# View contiguous: True
+# Reshape contiguous: True
 ```
 
 ### 주의사항
@@ -177,8 +180,8 @@ matrix = torch.rand(size=(3, 5))
 print(f"Original matrix:\n{matrix}")
 # 출력: Original matrix:
 # tensor([[0.5234, 0.3456, 0.7890, 0.1234, 0.9876],
-#         [0.2345, 0.6789, 0.3456, 0.8901, 0.4567],
-#         [0.8901, 0.2345, 0.5678, 0.3456, 0.7890]])
+# [0.2345, 0.6789, 0.3456, 0.8901, 0.4567],
+# [0.8901, 0.2345, 0.5678, 0.3456, 0.7890]])
 
 transposed = matrix.t()
 print(f"Transposed shape: {transposed.shape}")
@@ -302,10 +305,10 @@ print(f"After transpose, contiguous: {permuted.is_contiguous()}")
 ```
 
 ### 2. 체크리스트
-- 변환 전후 원소 개수가 동일한지 확인
-- contiguous 메모리가 필요한 경우 확인
-- 차원의 의미가 올바르게 유지되는지 확인
-- 배치 차원은 보통 첫 번째 차원으로 유지
+- ✅ 변환 전후 원소 개수가 동일한지 확인
+- ✅ contiguous 메모리가 필요한 경우 확인
+- ✅ 차원의 의미가 올바르게 유지되는지 확인
+- ✅ 배치 차원은 보통 첫 번째 차원으로 유지
 
 ### 3. 디버깅 팁
 ```python
@@ -320,10 +323,10 @@ def debug_tensor_shape(tensor, name="tensor"):
 test_tensor = torch.randn(2, 3, 4).permute(2, 0, 1)
 debug_tensor_shape(test_tensor, "Permuted tensor")
 # 출력: Permuted tensor:
-#       Shape: torch.Size([4, 2, 3])
-#       Size: 24
-#       Contiguous: False
-#       Device: cpu
+# Shape: torch.Size([4, 2, 3])
+# Size: 24
+# Contiguous: False
+# Device: cpu
 ```
 
 ---

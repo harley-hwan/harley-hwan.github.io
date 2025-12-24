@@ -4,6 +4,7 @@ description: "커맨드(Command) 패턴을 이용한 이벤트 처리와 MVVM �
 date: 2025-03-27 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, command, relaycommand, mvvm, ui, xaml]
+toc: false
 ---
 
 # Command 패턴을 활용한 버튼 이벤트 처리

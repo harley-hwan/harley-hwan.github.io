@@ -4,7 +4,10 @@ description: "불필요한 차원 제거와 추가, 그리고 스칼라 값 추�
 date: 2025-05-30 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, squeeze, unsqueeze, item, dimension manipulation]
+toc: false
 ---
+
+-------------------------------------------------------
 
 # PyTorch 차원 조작: squeeze, unsqueeze, item
 
@@ -35,7 +38,7 @@ print(f"배치 형태 shape: {batch_img.shape}")
 # 출력: 배치 형태 shape: torch.Size([1, 3, 224, 224])
 ```
 
-![image](https://github.com/user-attachments/assets/e5600edc-16cb-4cf8-a1a7-a4d0fa9153c3)
+![squeeze unsqueeze 시각화](https://github.com/user-attachments/assets/e5600edc-16cb-4cf8-a1a7-a4d0fa9153c3)
 
 ---
 
@@ -87,16 +90,6 @@ print(f"dim=2 squeeze: {dim2_squeezed.shape}")
 # 출력: dim=2 squeeze: torch.Size([1, 3, 224, 1])
 ```
 
-### 주의사항: 크기가 1이 아닌 차원은 유지
-
-```python
-# 크기가 1이 아닌 차원은 squeeze로 제거되지 않음
-tensor = torch.rand(2, 3, 4)
-squeezed = tensor.squeeze()
-print(f"원본: {tensor.shape}, squeeze 후: {squeezed.shape}")
-# 출력: 원본: torch.Size([2, 3, 4]), squeeze 후: torch.Size([2, 3, 4])
-```
-
 ---
 
 ## unsqueeze() - 새로운 차원 추가하기
@@ -143,20 +136,6 @@ print(f"배치 이미지: {batch_image.shape}")
 expanded = single_image.unsqueeze(0).unsqueeze(-1)
 print(f"다중 unsqueeze: {expanded.shape}")
 # 출력: 다중 unsqueeze: torch.Size([1, 3, 64, 64, 1])
-```
-
-### 브로드캐스팅을 위한 차원 추가
-
-```python
-# 브로드캐스팅 예제
-batch = torch.rand(32, 100)  # [배치, 특징]
-bias = torch.rand(100)       # [특징]
-
-# bias에 배치 차원 추가하여 브로드캐스팅
-bias_expanded = bias.unsqueeze(0)  # [1, 특징]
-result = batch + bias_expanded     # [32, 100] + [1, 100] -> [32, 100]
-print(f"결과 shape: {result.shape}")
-# 출력: 결과 shape: torch.Size([32, 100])
 ```
 
 ---
