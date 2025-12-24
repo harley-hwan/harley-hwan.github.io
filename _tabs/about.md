@@ -52,18 +52,6 @@ UK, Iceland, Poland, France, Italy, Germany, Austria, Philippines, China, Japan,
 
 ---
 
-## GitHub Stats
-
-<a href="https://github.com/harley-hwan">
-  <img src="https://github-readme-stats.vercel.app/api?username=harley-hwan&show_icons=true&theme=dracula" alt="Harley's GitHub stats">
-</a>
-
-<a href="https://github.com/harley-hwan">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harley-hwan&layout=compact&theme=dracula" alt="Top Langs">
-</a>
-
----
-
 ## Contact
 
 - 📧 Email: [kjhg3254@naver.com](mailto:kjhg3254@naver.com)
