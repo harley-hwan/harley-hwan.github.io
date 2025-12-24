@@ -54,5 +54,5 @@ UK, Iceland, Poland, France, Italy, Germany, Austria, Philippines, China, Japan,
 
 ## Contact
 
-- 📧 Email: [kjhg3254@naver.com](mailto:kjhg3254@naver.com)
+- 📧 Email: [kjhg3254@naver.com](mailto:harley_hwan@naver.com)
 - 💼 GitHub: [harley-hwan](https://github.com/harley-hwan)
