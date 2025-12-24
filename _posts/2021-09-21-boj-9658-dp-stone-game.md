@@ -6,12 +6,12 @@ categories: [Algorithm, Baekjoon]
 tags: [baekjoon, 백준, algorithm, dp]
 ---
 
-# Baekjoon 9658: 4
+# Baekjoon 9658 돌 게임 4
 
 - 최초 작성일: 2021년 9월 21일(화)
-- 주소: <https://www.acmicpc.net/problem/9658>
+- 주소: https://www.acmicpc.net/problem/9658
 
-## 
+## 문제
 
 ![image](https://user-images.githubusercontent.com/68185569/134134241-4d9d27c3-5bbd-4ed1-a489-06485dba8967.png)
 
@@ -19,20 +19,22 @@ tags: [baekjoon, 백준, algorithm, dp]
 - 탁자 위에 돌 N개가 있다. 상근이와 창영이는 턴을 번갈아가면서 돌을 가져가며, 돌은 1개, 3개 또는 4개 가져갈 수 있다. 마지막 돌을 가져가는 사람이 게임을 지게 된다.
 - 두 사람이 완벽하게 게임을 했을 때, 이기는 사람을 구하는 프로그램을 작성하시오. 게임은 상근이가 먼저 시작한다.
 
-## 
+## 입력
+
 - 첫째 줄에 N이 주어진다. (1 ≤ N ≤ 1000)
 
-## 
+## 출력
 
 - 상근이가 게임을 이기면 SK를, 창영이가 게임을 이기면 CY을 출력한다.
 
   ![image](https://user-images.githubusercontent.com/68185569/134134286-cd41c62a-7798-474e-b0bb-b59b25ffcdfd.png)
 
-## 
+## 알고리즘 분류
+
 - 다이나믹 프로그래밍
 - 게임 이론
 
-## 
+## 풀이
 
 - 이 문제는 두 명이서 최선의 플레이를 했을 때, 승자가 누구인지 맞추는 문제이다. 이때 마지막 돌을 가져가는 사람이 패자이다.
 - 한번에 1개, 3개 또는 4개를 가져갈 수 있다고 했기 때문에, 만약 SK가 2개를 가져갔다면, 여기서 CY는 주어지는 돌의 수가 2+1개, 2+3개 또는 2+4개일 때 무조건 승자가 된다.
@@ -84,4 +86,3 @@ int main() {
     return 0;
 }
 ```
-
