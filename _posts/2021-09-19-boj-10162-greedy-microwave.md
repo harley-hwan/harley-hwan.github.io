@@ -12,7 +12,7 @@ tags: [baekjoon, 백준, algorithm, greedy]
 - 주소: <https://www.acmicpc.net/problem/10162>
 
 ## 목차
-[TOC]
+
 
 ## 문제 설명
 ![image](https://user-images.githubusercontent.com/68185569/133917563-09ad9064-6a6b-4035-964c-af102048d8c7.png)

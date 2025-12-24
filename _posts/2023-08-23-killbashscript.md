@@ -12,7 +12,7 @@ tags: [linux, embedded, bash, shell, sh, kill, bash, script]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

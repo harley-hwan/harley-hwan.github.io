@@ -11,7 +11,7 @@ tags: [c, c++, linux, command, pipe, arp]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

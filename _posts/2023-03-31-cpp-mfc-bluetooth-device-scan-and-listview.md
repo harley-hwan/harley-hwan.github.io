@@ -11,7 +11,7 @@ tags: [c, c++, mfc, bluetooth, devices, ble, listview, blescan, bluetoothscan, a
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

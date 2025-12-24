@@ -12,7 +12,7 @@ tags: [c#, unity, dataoperation]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

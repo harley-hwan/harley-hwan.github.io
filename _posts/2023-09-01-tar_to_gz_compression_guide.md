@@ -12,7 +12,7 @@ tags: [linux, tar, gzip, bash, 압축]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

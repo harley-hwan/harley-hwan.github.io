@@ -13,7 +13,7 @@ tags: [c++, mfc, slider, rgb, windowprogramming]
 
 ## 목차
 
-[TOC]
+
 
 ## 실습
 

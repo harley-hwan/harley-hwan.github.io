@@ -12,7 +12,7 @@ tags: [c#, unity, maze, algorithm, binary tree]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

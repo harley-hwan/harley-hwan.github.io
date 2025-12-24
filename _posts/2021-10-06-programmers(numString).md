@@ -13,7 +13,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
 ## 목차
 
-[TOC]
+
 
 ## 문제 설명
 

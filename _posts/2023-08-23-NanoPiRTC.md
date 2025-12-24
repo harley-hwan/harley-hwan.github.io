@@ -12,7 +12,7 @@ tags: [linux, bash, shell, script, date, hwclock]
 
 ## 목차
 
-[TOC]
+
 
 ## 전체 개요
 

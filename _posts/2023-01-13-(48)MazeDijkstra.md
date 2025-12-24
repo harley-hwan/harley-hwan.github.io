@@ -12,7 +12,7 @@ tags: [c#, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

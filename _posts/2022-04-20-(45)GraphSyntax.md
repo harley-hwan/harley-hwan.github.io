@@ -12,7 +12,7 @@ tags: [c#, datastructure, graph]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

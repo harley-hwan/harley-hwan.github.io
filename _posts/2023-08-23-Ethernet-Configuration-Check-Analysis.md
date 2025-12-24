@@ -12,7 +12,7 @@ tags: [linux, ifconfig, grep, gawk, sudo, bash, shell, script]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

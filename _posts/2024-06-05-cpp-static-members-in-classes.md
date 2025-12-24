@@ -10,7 +10,7 @@ tags: [c++, programming, static keyword, static member variable, static member f
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

@@ -12,7 +12,7 @@ tags: [c++, mfc, slider, windowprogramming]
 
 ## 목차
 
-[TOC]
+
 
 ## 목적
 

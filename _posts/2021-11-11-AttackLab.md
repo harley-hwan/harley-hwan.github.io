@@ -15,7 +15,7 @@ tags: [system software, lab, linux]
 
 ## 목차
 
-[TOC]
+
 
 ## 풀이 과정
 

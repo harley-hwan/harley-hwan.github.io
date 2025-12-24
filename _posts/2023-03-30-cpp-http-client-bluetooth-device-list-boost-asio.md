@@ -11,7 +11,7 @@ tags: [c, c++, boost, asio, boost.asio, bluetooth, ble, bluetoothscanner]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

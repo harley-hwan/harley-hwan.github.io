@@ -12,7 +12,7 @@ tags: [c++, mfc, calculator]
 
 ## 목차
 
-[TOC]
+
 
 ## 목적
 

@@ -13,7 +13,7 @@ tags: [linux, cat, grep, gawk, XML, parsing]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

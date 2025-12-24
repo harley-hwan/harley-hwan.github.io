@@ -11,7 +11,7 @@ tags: [c, c++, shellapi, windowsapi, system, command, exe, execute, HWND, window
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

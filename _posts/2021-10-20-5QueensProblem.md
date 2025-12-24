@@ -14,7 +14,7 @@ tags: [machinelearning, 머신러닝, algorithm, genetic]
 
 ## 목차
 
-[TOC]
+
 
 ## 문제 설명
 

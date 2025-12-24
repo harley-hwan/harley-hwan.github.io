@@ -12,7 +12,7 @@ tags: [c++, mfc, debug]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

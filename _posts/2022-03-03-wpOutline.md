@@ -12,7 +12,7 @@ tags: [c++, mfc, windowprogramming]
 
 ## 목차
 
-[TOC]
+
 
 ## 윈도우 운영체제의 특징
 

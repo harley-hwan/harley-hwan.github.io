@@ -12,7 +12,7 @@ tags: [c#, datastructure, tree, algorihtm, list, add]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

@@ -12,7 +12,7 @@ tags: [baekjoon, 백준, algorithm, sort]
 - 주소: <https://www.acmicpc.net/problem/2108>
 
 ## 목차
-[TOC]
+
 
 ## 문제 설명
 ![image](https://user-images.githubusercontent.com/68185569/135301978-78dcb4a7-4112-4599-b91c-b207bb1edb7f.png)

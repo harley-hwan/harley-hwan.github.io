@@ -13,7 +13,7 @@ tags: [linux, STM32F, firmware, download, bash]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

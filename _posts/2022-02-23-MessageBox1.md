@@ -12,7 +12,7 @@ tags: [c++, mfc, serialport, registry]
 
 ## 목차
 
-[TOC]
+
 
 ## 목적
 

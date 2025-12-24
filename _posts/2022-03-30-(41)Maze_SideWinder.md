@@ -12,7 +12,7 @@ tags: [c#, unity, maze, algorithm, sidewinder]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

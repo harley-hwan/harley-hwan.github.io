@@ -12,7 +12,7 @@ tags: [c, c++, file, rename, ifstream, ofstream]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

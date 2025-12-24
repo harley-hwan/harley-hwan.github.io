@@ -11,7 +11,7 @@ tags: [c, c++, vs, sftp, ftp, CkSFtp, xml, pugi, pugixml]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

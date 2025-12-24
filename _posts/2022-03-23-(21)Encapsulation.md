@@ -12,7 +12,7 @@ tags: [c#, unity, oop, encapsulation]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

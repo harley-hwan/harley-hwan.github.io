@@ -12,7 +12,7 @@ tags: [c++, mfc, win32, windowprogramming]
 
 ## 목차
 
-[TOC]
+
 
 ## 목적
 

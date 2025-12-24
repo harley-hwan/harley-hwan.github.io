@@ -12,7 +12,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/77484>
 
 ## 목차
-[TOC]
+
 
 ## 문제 설명
 

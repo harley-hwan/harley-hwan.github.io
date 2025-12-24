@@ -12,7 +12,7 @@ tags: [c#, unity, oop, class, type, conversion]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

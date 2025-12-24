@@ -11,7 +11,7 @@ tags: [c, c++, mfc, clipboard, copy, copytoclipboard, OpenClipboard(), EmptyClip
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

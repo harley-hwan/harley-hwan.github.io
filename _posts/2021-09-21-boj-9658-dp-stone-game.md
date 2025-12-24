@@ -12,7 +12,7 @@ tags: [baekjoon, 백준, algorithm, dp]
 - 주소: <https://www.acmicpc.net/problem/9658>
 
 ## 목차
-[TOC]
+
 
 ## 문제 설명
 

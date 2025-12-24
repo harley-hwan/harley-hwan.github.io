@@ -12,7 +12,7 @@ tags: [c#, unity, datacontrol]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

@@ -12,7 +12,7 @@ tags: [c++, programming, explicit keyword]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

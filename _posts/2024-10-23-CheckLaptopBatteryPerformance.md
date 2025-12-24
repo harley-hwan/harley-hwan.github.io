@@ -12,7 +12,7 @@ tags: [battery performance, laptop battery, laptop, battery]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

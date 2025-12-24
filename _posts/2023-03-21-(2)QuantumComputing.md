@@ -12,7 +12,7 @@ tags: [quantumcomputing, quantum, computing, science]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

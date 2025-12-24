@@ -14,7 +14,7 @@ tags: [eqtransformer, deap learning, machine learning, python, big data science]
 
 
 ## 목차
-[TOC]
+
 
 ## 코드 실행
 - colab 위치: <https://colab.research.google.com/drive/1hmBsEhi4hozDsI6aCdfL1t6FBR69WXRc?usp=sharing>

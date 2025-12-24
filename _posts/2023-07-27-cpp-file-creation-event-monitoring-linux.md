@@ -11,7 +11,7 @@ tags: [c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

@@ -12,7 +12,7 @@ tags: [c#, unity, maze, algorithm, player]
 
 ## 목차
 
-[TOC]
+
 
 ## 내용
 

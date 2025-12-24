@@ -11,7 +11,7 @@ tags: [c++, lotto, srand. algorithm, ctime]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

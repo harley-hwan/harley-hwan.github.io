@@ -13,7 +13,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
 ## 목차
 
-[TOC]
+
 
 ## 풀이 방법 1
 

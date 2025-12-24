@@ -12,7 +12,7 @@ tags: [opencv, Mat, cvtColor, GaussianBlur, Canny, findContours, approxPolyDP, d
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

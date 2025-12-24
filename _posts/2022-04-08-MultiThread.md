@@ -12,7 +12,7 @@ tags: [c++, mfc, multi-thread, thread]
 
 ## 목차
 
-[TOC]
+
 
 ## 목적
 

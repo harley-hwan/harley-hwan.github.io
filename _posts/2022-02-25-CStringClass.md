@@ -12,7 +12,7 @@ tags: [c++, mfc, CString]
 
 ## 목차
 
-[TOC]
+
 
 ## 설명
 

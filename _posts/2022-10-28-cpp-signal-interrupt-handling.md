@@ -12,7 +12,7 @@ tags: [SIGINT, SIGPIPE, SIGALRM, signal, signal(), signal.h]
 
 ## 목차
 
-[TOC]
+
 
 <br/>
 

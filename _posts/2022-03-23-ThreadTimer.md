@@ -12,7 +12,7 @@ tags: [c++, mfc, thread, timer]
 
 ## 목차
 
-[TOC]
+
 
 ## 목적
 

@@ -12,7 +12,7 @@ tags: [c++, mfc, messagebox]
 
 ## 목차
 
-[TOC]
+
 
 ## 목적
 

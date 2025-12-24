@@ -12,7 +12,7 @@ tags: [c++, programming, radar sensor, phase difference, spin axis]
   
 ## 목차
 
-[TOC]
+
 
 <br/>
 
