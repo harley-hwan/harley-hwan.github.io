@@ -14,12 +14,12 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: BS. Janghwan Kim # the main title
+title: harley's dev note # the main title
 
 tagline: Welcome to my workspace # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  C++, MFC, Deep Learning, Algorithm 개발 블로그
+  C/C++/C#, WPF/MFC, Deep Learning, Algorithm 개발 블로그
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -95,7 +95,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/hwan-square-2.jpg
+avatar: /assets/img/git-square.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
