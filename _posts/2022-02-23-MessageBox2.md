@@ -6,19 +6,19 @@ categories: [Dev, MFC]
 tags: [c++, mfc, messagebox]
 ---
 
-# [MFC] 메시지 박스 프로그램 작성 -2
+# [MFC] -2
 
 - 최초 작성일: 2022년 2월 23일 (수)
 
-## 목적
+## 
 
 2개의 버튼을 생성하고, 생성된 버튼을 클릭하면 새로운 창이 표시된다.
 
 <br/>
 
-## 구현
+## 
 
-### 프로젝트 생성
+### 
 
 아래와 같이 MFC Application을 생성해준다. 프로젝트명은 MsgBox2로 했다.
 
@@ -32,7 +32,7 @@ tags: [c++, mfc, messagebox]
 
 <br/>
 
-### 다이얼로그 생성 및 설정
+### 
 
 그러면 아래와 같은 창이 나오는데, 안 나온다면 [Ctrl]-[Shift]-[R] 혹은 [메뉴]-[보기]-[다른 창]-[리소스 뷰]를 클릭하면 된다.
 
@@ -53,7 +53,7 @@ tags: [c++, mfc, messagebox]
 
 <br/>
 
-### 멤버 변수 추가
+### 
 
 멤버 함수를 추가하기 위해서 [메뉴]-[프로젝트]-[클래스 마법사] 또는, [Ctrl + Shift + X] 키를 눌러 [클래스 마법사]를 실행시킨다.
 
@@ -75,7 +75,7 @@ Control Variable(제어 변수) 창에서 다음과 같이 설정하고 Finish �
 
 <br/>
 
-### 멤버 함수 추가
+### 
 
 그러면, 클래스 마법사를 키고 IDC_BUTTON_YN [명령], BN_CLICKED [메시지] 를 클릭하고 [처리기 추가] 를 눌러 멤버 함수를 추가한다.
 
@@ -106,7 +106,7 @@ void CMsgBox2Dlg::OnClickedButtonYn()
 
 <br/>
 
-### 실행 결과 1
+### 1
 
 ![image](https://user-images.githubusercontent.com/68185569/155265940-ab814dd2-a5b1-407f-8969-3dd4f028d4a0.png)
 
@@ -135,13 +135,13 @@ void CMsgBox2Dlg::OnClickedButtonOc()
 
 <br/>
 
-### 실행 결과 2
+### 2
 
 ![image](https://user-images.githubusercontent.com/68185569/155266612-a28548fa-8284-4436-aedc-dc53d6a44a4d.png)
 
 <br/>
 
-## 마무리
+## 
 
 마지막으로, Exit 버튼에 대한 멤버 함수 'OnClickedButtonExit()'를 생성하고 아래의 코드를 삽입해주면, Exit 클릭시 프로그램이 종료된다.
 

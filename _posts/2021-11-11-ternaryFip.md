@@ -6,27 +6,27 @@ categories: [Algorithm, Programmers]
 tags: [programmers, 프로그래머스, algorithm, c++]
 ---
 
-# Programmers 3진법 뒤집기
+# Programmers 3 
 
 - 최초 작성일: 2021년 11월 11일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/68935>
 
-## 문제 설명
+## 
 
 - 자연수 n이 매개변수로 주어집니다. n을 3진법 상에서 앞뒤로 뒤집은 후, 이를 다시 10진법으로 표현한 수를 return 하도록 solution 함수를 완성해주세요.
 
-## 제한 사항
+## 
 
 - n은 1 이상 100,000,000 이하인 자연수입니다.
 
-## 입출력 예
+## 
 
 | n    | result |
 | ---- | ------ |
 | 45   | 7      |
 | 125  | 229    |
 
-##### **입출력 예에 대한 설명**
+##### ** **
 
 - 입출력 예 #1
 
@@ -48,7 +48,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
   - 따라서 229를 return 해야 합니다.
 
-## 풀이 방법
+## 
 
 - 주어진 자연수 n에서 3으로 나눴을 때 나머지값을 빈 vector v에 하나씩 넣어준다.
 - 그리고, n을 3으로 나눈 값을 다시 n으로 선언한다.

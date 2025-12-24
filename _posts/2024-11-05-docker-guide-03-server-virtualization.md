@@ -6,19 +6,19 @@ categories: [Dev, Docker]
 tags: [docker, server, virtualization, devops, infrastructure]
 ---
 
-# Docker 실전 가이드: 서버와 가상화 이해하기
+# Docker : 
 - 최초 작성일: 2024년 11월 5일 (화)
 
 <br>
 
-## 서버의 이해
+## 
 
-### 도커를 배우기 전에 서버를 알아야 하는 이유
+### 
 도커는 서버를 효율적으로 사용하기 위해 만들어진 기술이다. 도커를 제대로 이해하고 활용하기 위해서는 먼저 서버가 무엇이고, 어떻게 사용되는지 알아야 한다.
 
 특히 도커의 핵심 개념인 '컨테이너'는 하나의 서버를 여러 개의 독립된 공간으로 나누어 사용하는 기술이다. 서버의 특성과 구조를 이해하면 왜 이러한 컨테이너 기술이 필요한지, 어떤 장점이 있는지 더 명확하게 알 수 있다.
 
-### 서버란 무엇인가
+### 
 서버는 컴퓨터 네트워크에서 다른 컴퓨터에게 서비스를 제공하는 컴퓨터 또는 프로그램이다. 일반 PC와 비교하면 다음과 같은 특징이 있다:
 
 - 24시간 365일 안정적인 운영이 가능하다.
@@ -26,7 +26,7 @@ tags: [docker, server, virtualization, devops, infrastructure]
 - 동시에 많은 사용자의 요청을 처리할 수 있다.
 - 안정성과 신뢰성이 매우 중요하다.
 
-### 서버의 종류
+### 
 목적에 따라 다양한 서버가 존재한다:
 
 1. **파일 서버**
@@ -50,7 +50,7 @@ tags: [docker, server, virtualization, devops, infrastructure]
    - 구조화된 데이터의 추가, 수정, 삭제, 조회를 처리한다.
    - MySQL, PostgreSQL 등이 있다.
 
-### 서버 자원의 개념
+### 
 서버의 주요 자원은 다음과 같다:
 
 1. **CPU (프로세서)**
@@ -71,12 +71,12 @@ tags: [docker, server, virtualization, devops, infrastructure]
 
 <br>
 
-## 가상화 기술
+## 
 
-### 가상화의 정의
+### 
 가상화는 물리적인 컴퓨터 자원을 논리적으로 분할하여 효율적으로 사용하는 기술이다. 하나의 물리적 서버를 여러 개의 가상 서버로 나누거나, 여러 개의 물리적 서버를 하나의 가상 서버처럼 사용할 수 있다.
 
-### 가상화가 필요한 이유
+### 
 
 1. **자원 활용의 효율성**
    - 물리 서버는 보통 10-15% 정도의 자원만 사용한다.
@@ -92,7 +92,7 @@ tags: [docker, server, virtualization, devops, infrastructure]
    - 장애 발생 시 빠른 복구 가능
    - 시스템 이전이 용이
 
-### 가상화의 장점
+### 
 
 1. **격리성**
    - 각 가상 환경은 독립적으로 동작한다.
@@ -108,9 +108,9 @@ tags: [docker, server, virtualization, devops, infrastructure]
 
 <br>
 
-## 실무에서의 활용
+## 
 
-### 기업의 서버 활용 사례
+### 
 
 1. **개발 환경**
    - 각 개발자에게 독립된 환경 제공
@@ -124,7 +124,7 @@ tags: [docker, server, virtualization, devops, infrastructure]
    - 시스템 백업과 복구가 용이
    - 고가용성 구현이 가능
 
-### 클라우드와 가상화
+### 
 클라우드 서비스는 가상화 기술을 기반으로 한다:
 
 1. **IaaS (Infrastructure as a Service)**
@@ -135,7 +135,7 @@ tags: [docker, server, virtualization, devops, infrastructure]
    - Heroku, Google App Engine 등
    - 개발 플랫폼을 가상화하여 제공
 
-### 개발 환경에서의 활용
+### 
 가상화는 개발 과정에서 다음과 같은 이점을 제공한다:
 
 1. **환경 일관성**

@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [c, c++, shellapi, windowsapi, system, command, exe, execute, HWND, windows.h, Shellapi.h, DT1-Remote]
 ---
 
-# DT1-Remote 버튼 자동화 프로그램 (응용 프로그램(.exe 실행파일) 실행 후 버튼 클릭)
+# DT1-Remote ( (.exe ) )
 - 최초 작성일: 2023년 4월 4일 (화)
 
-## 내용
+## 
 
 이 C++ 코드는 "DT1-Remote.exe" 프로세스를 찾아 실행하고, 해당 프로그램의 창을 찾는 작업을 수행한다.
 
@@ -17,7 +17,7 @@ tags: [c, c++, shellapi, windowsapi, system, command, exe, execute, HWND, window
 
 <br/>
 
-## 코드 설명
+## 
 
 - __'IsProcessRunning'__ 함수: 이 함수는 주어진 프로세스 이름을 사용하여 프로세스가 실행 중인지 확인한다. 프로세스 이름을 비교하기 위해 __'\_wcsicmp'__ 함수를 사용하며, 프로세스가 실행 중이면 __'true'__ 를 반환한다.
 - __'main'__ 함수: 프로그램의 주 실행 부분
@@ -32,7 +32,7 @@ tags: [c, c++, shellapi, windowsapi, system, command, exe, execute, HWND, window
 
 <br/>
 
-## 코드 1
+## 1
 
 ```c++
 #include <iostream>
@@ -78,7 +78,7 @@ int main() {
 
 <br/>
 
-## 코드 2
+## 2
 
 DT1-Remote.exe 파일이 이미 실행 중인지 체크하는거 추가
 

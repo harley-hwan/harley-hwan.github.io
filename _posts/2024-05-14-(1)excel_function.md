@@ -6,15 +6,15 @@ categories: [Dev, ETC]
 tags: [Excel, 매크로, 조건부 서식, vba, macro]
 ---
 
-# Excel 조건부 서식 매크로 적용하기
+# Excel 
 
 - 최초 작성일: 2024년 5월 14일(화)
 
-## 소개
+## 
 
 이 글에서는 Excel에서 조건부 서식으로 설정(변경)된 셀 서식을 그대로 다른 셀들에도 똑같이 적용할 수 있는 매크로 기능을 설명한다. 매크로를 사용하면 반복적인 작업을 자동화하여 생산성을 높일 수 있다.
 
-## 매크로 예제
+## 
 
 아래는 조건부 서식을 포함한 셀 서식을 다른 범위로 복사하는 매크로 코드이다. 이 매크로는 셀의 배경색, 글꼴 색상, 그리고 조건부 서식으로 인해 변경된 테두리를 복사한다.
 
@@ -68,7 +68,7 @@ Sub CopyBordersIfChanged(ByVal sourceCell As Range, ByRef destCell As Range)
 End Sub
 ```
 
-### 코드 설명
+### 
 
 - `CopyColorsAndBorders` 매크로는 원본 범위(`sourceRange`)의 서식을 첫 번째 대상 범위(`destRange1`)와 두 번째 대상 범위(`destRange2`)에 복사한다.
 - 셀의 배경색과 글꼴 색상을 복사하며, 조건부 서식으로 인해 변경된 테두리도 복사한다.

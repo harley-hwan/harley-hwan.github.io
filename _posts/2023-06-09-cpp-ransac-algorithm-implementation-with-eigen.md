@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [c, c++, vs, ransac, algorithm, eigen]
 ---
 
-# Eigen 라이브러리를 이용하여 RANSAC 구현
+# Eigen RANSAC 
 - 최초 작성일: 2023년 6월 9일 (금)
 
-## 코드1
+## 1
 
 ```c++
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 
 <br/>
 
-## 결과1
+## 1
 
 ```c++
 Best model: y = 2.06363 * x + 1.06259
@@ -100,7 +100,7 @@ Inlier count: 193
 
 <br/>
 
-## 코드2
+## 2
 
 ```c++
 #include <Eigen/Dense>
@@ -243,7 +243,7 @@ int main() {
 
 <br/>
 
-## 결과2
+## 2
 
 ```c++
 Result H: 0.00547198   0.292524   -80.6625

@@ -6,12 +6,12 @@ categories: [Dev, C++]
 tags: [c, c++, linux, command, pipe, arp]
 ---
 
-# Linux Command pipe로 변수값으로 끌고오기 pipe()
+# Linux Command pipe pipe()
 - 최초 작성일: 2023년 2월 16일 (목)
 
-## 내용
+## 
 
-### 소스코드 1
+### 1
 
 ```c++
 #include <iostream>
@@ -38,7 +38,7 @@ int main() {
 
 </br>
 
-### 결과 1
+### 1
 
 ```c++
 ? (192.168.8.152) at 88:36:6c:fc:2c:4f [ether] on wlan0
@@ -49,7 +49,7 @@ int main() {
 
 <br/>
 
-### 소스코드 2
+### 2
 
 ```c++
 #include <stdio.h>
@@ -127,7 +127,7 @@ std::vector<std::string> getE6ServerIPpipe()
 
 <br/>
 
-### 결과 2
+### 2
 
 ```c++
 192.168.8.152
@@ -159,7 +159,7 @@ const char* arguments[] = {"arp", NULL};
 
 <br/>
 
-### 소스코드 3
+### 3
 
 ```c++
 std::vector<std::string> getIPList() {
@@ -194,7 +194,7 @@ std::vector<std::string> getIPList() {
 
 <br/>
 
-### 결과 3
+### 3
 
 ```c++
 192.168.8.152

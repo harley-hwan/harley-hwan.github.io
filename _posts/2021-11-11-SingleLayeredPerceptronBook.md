@@ -6,7 +6,7 @@ categories: [Project]
 tags: [AI, deap learning, machine learning, single layered perceptron]
 ---
 
-#  The Undergraduate's Guide to the Perceptron
+# The Undergraduate's Guide to the Perceptron
 
 - 최초 작성일: 2021년 11월 11일(월)
 - 주소: <https://github.com/harley-hwan/SingleLayeredPerceptronBook>

@@ -8,23 +8,23 @@ tags: [pytorch, tensor, matmul, dot, deep learning]
 
 ------------------------------------------------------
 
-# (CNN) Pytorch Tensor 연산 - 내적과 행렬곱(dot, matmul)
+# (CNN) Pytorch Tensor - (dot, matmul)
 
 * 최초 작성일: 2025년 6월 11일 (수)
 
-## torch.dot() - 벡터의 내적
+## torch.dot() - 
 
 `torch.dot()` 함수는 두 1차원 벡터 간 내적(dot product)을 계산한다. **1차원 텐서만 가능**하다.
 
 ```python
 import torch
 
-# 1차원 텐서 생성
+# 1 
 ts_01 = torch.arange(1, 4)
 ts_02 = torch.arange(4, 7)
 print('ts_01:', ts_01, 'ts_02:', ts_02)
 
-# 내적 연산 수행
+# 
 ts_03 = torch.dot(ts_01, ts_02)
 print('내적 결과 ts_03:', ts_03)
 ```
@@ -38,18 +38,18 @@ ts_01: tensor([1, 2, 3]) ts_02: tensor([4, 5, 6])
 
 ---
 
-## torch.matmul() - 행렬곱
+## torch.matmul() - 
 
 `torch.matmul()` 함수는 행렬 간 곱셈 연산을 수행한다. 이 연산은 **1차원-2차원, 2차원-2차원** 및 **3차원 이상의 텐서들 간**에도 가능하다.
 
-### 2차원 텐서 간 행렬곱
+### 2 
 
 ```python
 ts_01 = torch.arange(1, 7).view(2, 3)
 ts_02 = torch.arange(7, 13).view(3, 2)
 print('ts_01:\n', ts_01, '\nts_02:\n', ts_02)
 
-# 행렬곱 수행
+# 
 ts_03 = torch.matmul(ts_01, ts_02)
 print('행렬곱 결과 ts_03:\n', ts_03)
 ```
@@ -69,7 +69,7 @@ ts_02:
          [139, 154]])
 ```
 
-### 3차원 이상 텐서 간 행렬곱 (배치 처리)
+### 3 ( )
 
 3차원 이상 텐서의 경우 맨 뒤 두 차원은 행렬로 간주하고, 그 앞의 차원은 배치(batch)로 처리한다.
 
@@ -78,7 +78,7 @@ ts_01 = torch.arange(0, 24).view(2, 3, 4)  # [배치=2, 행=3, 열=4]
 ts_02 = torch.arange(0, 40).view(2, 4, 5)  # [배치=2, 행=4, 열=5]
 print('ts_01:\n', ts_01, '\nts_02:\n', ts_02)
 
-# 배치 행렬곱 수행
+# 
 ts_03 = torch.matmul(ts_01, ts_02)
 print('배치 행렬곱 결과 ts_03:\n', ts_03)
 print('ts_03의 shape:', ts_03.shape)

@@ -6,11 +6,11 @@ categories: [Dev, MFC]
 tags: [c++, mfc, win32, windowprogramming]
 ---
 
-# [MFC] 마우스 좌표값 구하기 프로그램
+# [MFC] 
 
 - 최초 작성일: 2022년 2월 10일 (목)
 
-## 목적
+## 
 
 이번 예제에서는 빈 프로젝트를 이용하는 것이 아닌, MFC를 이용하여 마우스 좌표값을 보여주는 프로그램을 작성한다.
 
@@ -20,9 +20,9 @@ tags: [c++, mfc, win32, windowprogramming]
 
 <br/>
 
-## 실습
+## 
 
-### 프로젝트 생성
+### 
 
 다음과 같이 프로젝트를 새로 생성해주자. (MFC app)
 
@@ -34,7 +34,7 @@ tags: [c++, mfc, win32, windowprogramming]
 
 <br/>
 
-### 코드 작성
+### 
 
 [View]-[Solution Explorer] 를 눌러 솔루션 탐색기를 띄우고, 거기서 [MouseMFC]-[Header Files]-[MouseMFCView.h] 파일을 더블클릭한다.
 
@@ -99,6 +99,6 @@ void CMouseMFCView::OnMouseMove(UINT nFlags, CPoint point)
 
 <br/>
 
-### 실행 결과
+### 
 
 <iframe id="video" width="750" height="500" src="/assets/video/2022-02-10-MouseMove.mp4" frameborder="0"> </iframe>

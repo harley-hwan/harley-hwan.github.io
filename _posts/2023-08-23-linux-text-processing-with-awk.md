@@ -6,14 +6,14 @@ categories: [Dev, Linux]
 tags: [linux, gawk, awk, bash, shell, text-processing, command-line]
 ---
 
-# 리눅스 텍스트 처리: AWK를 활용한 명령어 출력 파싱
+# : AWK 
 - 최초 작성일: 2023년 8월 23일(수)
 
 <br/>
 
-## 명령어 구조 분석
+## 
 
-### 기본 명령어
+### 
 
 ```bash
 sudo /usr/local/bin/app-version -v | gawk 'NR == 1 {print $2}'
@@ -26,14 +26,14 @@ sudo /usr/local/bin/app-version -v | gawk 'NR == 1 {print $2}'
 
 <br/>
 
-## 각 구성 요소 설명
+## 
 
-### 1. sudo 명령어
+### 1. sudo 
 - 용도: 관리자 권한으로 명령어 실행
 - 특징: 보안 정책에 따른 권한 상승
 - 동작 방식: 사용자 인증 후 권한 상승
 
-### 2. 프로그램 경로와 옵션
+### 2. 
 
 ```bash
 /usr/local/bin/app-version -v
@@ -42,7 +42,7 @@ sudo /usr/local/bin/app-version -v | gawk 'NR == 1 {print $2}'
 - 옵션: -v (버전 정보 출력)
 - 예상 출력: "Version: 1.2.3"
 
-### 3. 파이프와 AWK 처리
+### 3. AWK 
 
 ```bash
 | gawk 'NR == 1 {print $2}'
@@ -55,19 +55,19 @@ sudo /usr/local/bin/app-version -v | gawk 'NR == 1 {print $2}'
 
 <br/>
 
-## 실제 사용 예제
+## 
 
-### 1. 기본 사용법
+### 1. 
 
 ```bash
-# 버전 정보 추출
+# 
 sudo /usr/local/bin/app-version -v | gawk 'NR == 1 {print $2}'
 
-# 결과 예시
+# 
 1.2.3
 ```
 
-### 2. 변수에 저장
+### 2. 
 
 ```bash
 VERSION=$(sudo /usr/local/bin/app-version -v | gawk 'NR == 1 {print $2}')
@@ -76,23 +76,23 @@ echo "현재 버전: $VERSION"
 
 <br/>
 
-## 고급 활용 방법
+## 
 
-### 1. 조건부 필드 추출
+### 1. 
 
 ```bash
-# 특정 조건에 맞는 필드만 추출
+# 
 gawk '$1 == "Version:" {print $2}'
 ```
 
-### 2. 다중 필드 처리
+### 2. 
 
 ```bash
-# 여러 필드 동시 처리
+# 
 gawk '{print $2, $3}'
 ```
 
-### 3. 에러 처리 추가
+### 3. 
 
 ```bash
 #!/bin/bash
@@ -105,5 +105,5 @@ echo "추출된 버전: $version"
 
 <br/>
 
-## 결론
+## 
 AWK를 활용한 텍스트 처리는 리눅스 시스템에서 명령어 출력을 파싱하고 필요한 정보를 추출하는데 매우 효과적인 방법이다. 특히 버전 정보, 로그 파일, 시스템 상태 정보 등을 처리할 때 유용하게 활용할 수 있다.

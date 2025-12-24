@@ -6,19 +6,19 @@ categories: [Dev, Linux]
 tags: [linux, embedded, optimization, binary, elf, strip, linker]
 ---
 
-# Strip 명령어: ELF 파일 최적화의 핵심 도구
+# Strip : ELF 
 - 최초 작성일: 2024년 10월 25일 (금)
 
 <br/>
 
-## 소개
+## 
 Strip은 GNU Binutils의 핵심 구성 요소로, 실행 파일에서 불필요한 심볼과 섹션을 제거하여 파일 크기를 최적화하는 도구다. 특히 임베디드 시스템에서 중요한 역할을 하며, 실행 파일의 메모리 점유율을 최소화하는 데 결정적인 기여를 한다.
 
 <br/>
 
-## ELF 파일 구조와 이론적 배경
+## ELF 
 
-### ELF(Executable and Linkable Format) 파일의 구조
+### ELF(Executable and Linkable Format) 
 ELF 파일은 크게 다음과 같은 주요 섹션들로 구성된다:
 
 ```plaintext
@@ -64,7 +64,7 @@ ELF 파일 구조
     └── 섹션 메타데이터
 ```
 
-### 링커와 로더의 관점에서 본 ELF
+### ELF
 1. **링커 관점**
    - 재배치 가능한 객체 파일들을 하나의 실행 파일로 결합
    - 심볼 해석과 주소 재배치 수행
@@ -77,9 +77,9 @@ ELF 파일 구조
 
 <br/>
 
-## Strip의 동작 원리
+## Strip 
 
-### 1. 심볼 테이블 처리
+### 1. 
 Strip은 심볼 테이블(.symtab)을 분석하여 다음과 같은 작업을 수행한다:
 
 ```c
@@ -109,7 +109,7 @@ for (each symbol in symtab) {
 }
 ```
 
-### 2. 섹션 정리
+### 2. 
 불필요한 섹션을 식별하고 제거하는 과정은 다음과 같다:
 
 1. **제거 대상 섹션**
@@ -128,9 +128,9 @@ for (each symbol in symtab) {
 
 <br/>
 
-## Strip이 제거하는 정보의 상세 분석
+## Strip 
 
-### 1. 디버깅 정보 (DWARF 포맷)
+### 1. (DWARF )
 DWARF(Debugging With Attributed Record Formats) 디버깅 정보는 다음과 같은 요소들을 포함한다:
 
 ```plaintext
@@ -144,7 +144,7 @@ DWARF 구조
 └── .debug_str (디버그 문자열)
 ```
 
-### 2. 심볼 정보의 분류
+### 2. 
 심볼 정보는 다음과 같이 분류되어 처리된다:
 
 1. **필수 심볼**
@@ -160,15 +160,15 @@ DWARF 구조
 
 <br/>
 
-## Strip 사용법과 고급 기능
+## Strip 
 
-### 1. 기본 명령어와 옵션
+### 1. 
 
 ```bash
-# 기본 사용법
+# 
 strip [옵션] <파일명>
 
-# 주요 옵션
+# 
 --strip-all        # 모든 심볼 제거
 --strip-debug      # 디버그 심볼만 제거
 --strip-unneeded   # 재배치에 불필요한 심볼 제거
@@ -176,26 +176,26 @@ strip [옵션] <파일명>
 --keep-file-symbols # 파일 심볼 보존
 ```
 
-### 2. 고급 사용 예제
+### 2. 
 
 ```bash
-# 1. 특정 섹션만 제거
+# 1. 
 strip --remove-section=.note.ABI-tag --remove-section=.comment binary
 
-# 2. 디버그 정보를 별도 파일로 분리
+# 2. 
 objcopy --only-keep-debug binary binary.debug
 strip --strip-debug binary
 objcopy --add-gnu-debuglink=binary.debug binary
 
-# 3. 선택적 심볼 보존
+# 3. 
 strip -K main -K _init -K _fini binary
 ```
 
 <br/>
 
-## 성능과 트레이드오프
+## 
 
-### 1. 메모리 사용량 분석
+### 1. 
 
 ```text
 일반적인 크기 감소 비율:
@@ -204,7 +204,7 @@ strip -K main -K _init -K _fini binary
 - 정적 라이브러리: 60-80% 감소
 ```
 
-### 2. 성능 영향
+### 2. 
 1. **긍정적 효과**
    - 파일 로딩 시간 단축
    - 메모리 캐시 효율성 증가
@@ -217,26 +217,26 @@ strip -K main -K _init -K _fini binary
 
 <br/>
 
-## 실전 최적화 전략
+## 
 
-### 1. 단계별 최적화 프로세스
+### 1. 
 
 ```bash
-# 1. 원본 백업
+# 1. 
 cp binary binary.full
 
-# 2. 불필요 섹션 제거
+# 2. 
 strip --remove-section=.comment --remove-section=.note binary
 
-# 3. 디버그 정보 분리
+# 3. 
 objcopy --only-keep-debug binary binary.debug
 strip --strip-debug binary
 
-# 4. 디버그 링크 설정
+# 4. 
 objcopy --add-gnu-debuglink=binary.debug binary
 ```
 
-### 2. 보안 고려사항
+### 2. 
 1. **심볼 스트리핑과 보안**
    - 리버스 엔지니어링 난이도 증가
    - 취약점 분석 복잡도 증가
@@ -245,16 +245,16 @@ objcopy --add-gnu-debuglink=binary.debug binary
 2. **권장 보안 설정**
    
 ```bash
-# 모든 불필요 정보 제거
+# 
 strip --strip-all --remove-section=.note --remove-section=.comment binary
 
-# 중요 심볼만 보존
+# 
 strip -K main -K _start --strip-unneeded binary
 ```
 
 <br/>
 
-## 결론
+## 
 Strip은 단순한 바이너리 축소 도구를 넘어서, 임베디드 시스템과 제한된 환경에서의 소프트웨어 최적화에 핵심적인 역할을 한다. ELF 파일 구조에 대한 깊은 이해를 바탕으로 Strip을 효과적으로 활용하면, 실행 파일의 크기를 최적화하면서도 필요한 기능은 모두 보존할 수 있다.
 
 효과적인 Strip 활용을 위해서는:

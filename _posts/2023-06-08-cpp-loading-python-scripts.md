@@ -6,20 +6,20 @@ categories: [Dev, C++]
 tags: [c, c++, shellapi, windowsapi, system, command, exe, execute, HWND, windows.h, Shellapi.h, DT1-Remote]
 ---
 
-# C++에서 파이썬 스크립트 불러오기
+# C++ 
 
-## 소개
+## 
 C++ 프로그램 내에서 파이썬 스크립트를 실행하는 방법을 설명한다. C++의 성능과 파이썬의 유연성을 결합할 수 있다.
 
 <br/>
 
-## 필요 사항
+## 
 - C++ 컴파일러
 - Python 개발 라이브러리 (예: Python.h)
 
 <br/>
 
-## 코드 설명
+## 
 
 ```c++
 #include <Python.h>
@@ -52,7 +52,7 @@ int main(int argc, char* argv[])
 
 <br/>
 
-## 상세 설명
+## 
 
 1. **프로그램 이름 디코딩**
    - `Py_DecodeLocale` 함수를 사용해 프로그램 이름(argv[0])을 디코딩한다.
@@ -74,11 +74,11 @@ int main(int argc, char* argv[])
 
 <br/>
 
-## 주의사항
+## 
 - 이 코드를 컴파일할 때는 파이썬 개발 라이브러리를 링크해야 한다.
 - 시스템에 설치된 파이썬 버전과 호환되는 헤더 파일을 사용해야 한다.
 
 <br/>
 
-## 결론
+## 
 이런 식으로 C++ 프로그램 내에서 파이썬 스크립트를 쉽게 실행할 수 있다. 이는 두 언어의 장점을 결합하여 더 강력하고 유연한 프로그램을 만들 수 있게 해준다.

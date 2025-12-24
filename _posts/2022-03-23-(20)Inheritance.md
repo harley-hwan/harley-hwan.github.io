@@ -6,11 +6,11 @@ categories: [Dev, CSharp]
 tags: [c#, unity, oop, inheritance]
 ---
 
-# 상속성 (inheritance) : OOP
+# (inheritance) : OOP
 
 - 최초 작성일: 2021년 3월 21일(월)
 
-## 내용
+## 
 
 ```c#
 using System;

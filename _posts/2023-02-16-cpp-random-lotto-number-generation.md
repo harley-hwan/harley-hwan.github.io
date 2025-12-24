@@ -6,16 +6,16 @@ categories: [Dev, C++]
 tags: [c++, lotto, srand. algorithm, ctime]
 ---
 
-# 로또 번호 랜덤 추출 (c++)
+# (c++)
 - 최초 작성일: 2023년 2월 16일 (목)
 
-## 내용
+## 
 
 재미로 만든거니 안됐다고 탓하지 마세요^^
 
 <br/>
 
-### 코드
+### 
 
 ```c++
 #include <iostream>

@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [c, c++, vs, csv, excel, ifstream, ofstream, std::ifstream, std::ofstream, tellp, map, lambda function]
 ---
 
-# csv 파일에 헤더 작성 및 입출력
+# csv 
 - 최초 작성일: 2023년 8월 3일 (목)
 
-## 부분 설명
+## 
 
 1. __std::map<std::string, std::string> lines__ : CSV 파일의 각 행을 저장. 키는 시리얼 번호이고, 값은 해당 시리얼 번호에 해당하는 전체 행이다.
 2. __auto escapeCSV 람다 함수__ : 특정 필드(데이터 값)가 CSV 파일에서 제대로 처리되도록 이스케이프한다. 예를 들어, 데이터 값에 쉼표가 포함되어 있으면, 이것은 CSV에서 새로운 필드를 생성하는 데 사용되는 구분자로 해석될 수 있으므로, 이스케이프 처리가 필요.
@@ -24,7 +24,7 @@ tags: [c, c++, vs, csv, excel, ifstream, ofstream, std::ifstream, std::ofstream,
 
 <br/>
 
-## 코드
+## 
 
 ```c++
 void UpdateCSV() {
@@ -109,7 +109,7 @@ void UpdateCSV() {
 
 <br/>
 
-## 처음 구현했던 코드
+## 
 
 ```c++
 void CRadarCalibrationDlg::UpdateCSV() {

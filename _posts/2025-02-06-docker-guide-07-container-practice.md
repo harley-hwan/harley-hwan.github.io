@@ -6,25 +6,25 @@ categories: [Dev, Docker]
 tags: [docker, container, nginx, webserver, cli]
 ---
 
-# Docker 실전 가이드: Nginx 컨테이너 실습
+# Docker : Nginx 
 - 최초 작성일: 2025년 2월 6일 (목)
 
 <br>
 
-## 실습 개요
+## 
 
 이 실습에서는 **Docker를 이용하여 Nginx 웹 서버 컨테이너를 실행하고 접속하는 방법**을 설명한다.
 
-### 실습 목표
+### 
 1. Docker 명령어를 사용하여 컨테이너 실행
 2. Nginx 컨테이너가 제공하는 웹페이지 접속
 3. 컨테이너 종료 및 삭제 방법 학습
 
 Nginx는 전 세계적으로 많이 사용되는 웹 서버이며, 컨테이너 환경에서 빠르고 간편하게 배포할 수 있다.
 
-## 도커 환경 확인
+## 
 
-### 1. Docker 버전 확인
+### 1. Docker 
 먼저 도커가 정상적으로 실행되고 있는지 확인한다.
 
 ```bash
@@ -35,7 +35,7 @@ docker version
 
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/b4ec4691-0aa1-457e-ab4b-4512ede5f562" />
 
-### 2. Docker 시스템 정보 확인
+### 2. Docker 
 현재 실행 중인 Docker 환경에 대한 자세한 정보를 확인하려면 다음 명령어를 실행한다.
 
 ```bash
@@ -51,16 +51,16 @@ docker info
 
 <br>
 
-## Nginx 컨테이너 실행
+## Nginx 
 
-### 1. 기본적인 Docker 실행 명령어
+### 1. Docker 
 컨테이너를 실행하려면 **docker run** 명령어를 사용한다.
 
 ```bash
 docker run -p 80:80 --name hellonginx nginx
 ```
 
-### 2. 실행 옵션 설명
+### 2. 
 - `-p 80:80` → 호스트의 80 포트를 컨테이너의 80 포트로 연결
 - `--name hellonginx` → 컨테이너 이름을 `hellonginx`로 지정
 - `nginx` → 사용할 이미지(웹서버 소프트웨어) 지정
@@ -71,7 +71,7 @@ docker run -p 80:80 --name hellonginx nginx
 
 <br>
 
-## 웹페이지 접속 및 확인
+## 
 
 Nginx가 실행되었으면 웹 브라우저를 열고 **localhost** 또는 **127.0.0.1**에 접속한다.
 
@@ -91,9 +91,9 @@ docker logs hellonginx
 
 <br>
 
-## 컨테이너 종료 및 삭제
+## 
 
-### 1. 실행 중인 컨테이너 중지
+### 1. 
 컨테이너 실행을 중지하려면 다음 명령을 실행한다:
 
 ```bash
@@ -107,7 +107,7 @@ docker stop hellonginx
 
 <br>
 
-### 2. 컨테이너 삭제
+### 2. 
 실행이 종료된 컨테이너를 삭제하려면 다음 명령을 실행한다:
 
 ```bash
@@ -118,11 +118,11 @@ docker rm hellonginx
 
 <br>
 
-## 정리
+## 
 
 이 실습에서는 **Docker를 사용하여 Nginx 웹 서버 컨테이너를 실행하고 관리하는 방법**을 설명했다.
 
-### 주요 내용 정리
+### 
 1. **Docker 버전 및 환경 확인**
 2. **Nginx 컨테이너 실행 및 웹페이지 접속**
 3. **컨테이너 로그 확인 및 종료, 삭제**

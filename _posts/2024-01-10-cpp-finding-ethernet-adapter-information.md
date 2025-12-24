@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [c++, windows, ethernet, network, interface, com]
 ---
 
-# Windows 환경에서의 이더넷 어댑터 정보 추출
+# Windows 
 - 최초 작성일: 2024년 1월 10일 (수)
 
 <br/>
 
-## 소개
+## 
 Windows 환경에서 COM 인터페이스를 통해 현재 연결된 네트워크 어댑터의 정보를 가져오는 기능을 구현한다. NetworkListManager를 사용하여 연결된 모든 네트워크 인터페이스를 열거하고, 각 인터페이스의 이름을 추출한다.
 
 <br/>
 
-## 구현 코드
+## 
 NetworkListManager를 사용하여 Wi-Fi 인터페이스 이름을 가져오는 함수이다.
 
 ```cpp
@@ -65,7 +65,7 @@ std::vector<std::wstring> GetWifiInterfaceNames() {
 
 <br/>
 
-## 주요 기능 설명
+## 
 
 1. **COM 초기화 관련 함수**
    - CoInitializeEx

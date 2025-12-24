@@ -6,12 +6,12 @@ categories: [Algorithm, Programmers]
 tags: [programmers, 프로그래머스, algorithm, c++]
 ---
 
-# Programmers 없는 숫자 더하기
+# Programmers 
 
 - 최초 작성일: 2021년 10월 26일(화)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/86051>
 
-## 문제 설명
+## 
 
 - 0부터 9까지의 숫자 중 일부가 들어있는 배열 `numbers`가 매개변수로 주어집니다. 
 
@@ -19,7 +19,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
   
 
-## 제한사항
+## 
 
 - 1 ≤ `numbers`의 길이 ≤ 9
 
@@ -29,14 +29,14 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
   
 
-## 입출력 예
+## 
 
 | numbers             | result |
 | ------------------- | ------ |
 | `[1,2,3,4,6,7,8,0]` | 14     |
 | `[5,8,4,0,6,7,9]`   | 6      |
 
-## 풀이 방법 1
+## 1
 
 - 주어지는 numbers들 중 0~9 사이의 숫자 중 없는 것을 골라 합을 구하는 문제로 아주 쉬운 문제이다.
 - numbers 벡터를 돌며 0~9사이의 숫자와 비교하여 일치하는 순간 isvisited 라는 배열의 해당 숫자 인덱스의 값을 1로 바꿔주고 break하여 다음 작업을 이어서 한다.

@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm_watch]
 ---
 
-# 원하는 파일 생성 이벤트 모니터링
+# 
 - 최초 작성일: 2023년 7월 27일 (수)
 
-## 내용
+## 
 
 이 함수는 주로 리눅스 기반의 시스템에서 파일 시스템 작업을 수행하기 전에 특정 디렉토리의 존재를 보장하는 용도로 사용된다. 
 
@@ -17,7 +17,7 @@ tags: [c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm
 
 <br/>
 
-## 설명
+## 
 
 ensure_directory_exists() 함수는 주어진 경로에 디렉토리가 존재하는지 확인하고, 만약 없다면 그 디렉토리를 생성한다. 함수는 두 개의 인자를 받는다.
 - path: 디렉토리의 경로를 나타내는 문자열
@@ -25,7 +25,7 @@ ensure_directory_exists() 함수는 주어진 경로에 디렉토리가 존재�
 
 <br/>
 
-## 구현
+## 
 
 1. 파일 상태 확인: stat 함수를 사용해 경로에 해당하는 파일의 상태를 확인. stat 함수는 성공할 경우 0을 반환하고, 실패할 경우 -1을 반환. 디렉토리나 파일이 존재하지 않을 경우 stat은 -1을 반환. 이 경우, 함수는 다음 단계로 넘어간다.
 2. 디렉토리 생성: stat 함수가 -1을 반환했다면, mkdir 함수를 사용해 디렉토리를 생성. mkdir 역시 성공할 경우 0을 반환하고, 실패할 경우 -1을 반환. 만약 디렉토리 생성에 실패했고, 그 이유가 이미 같은 이름의 디렉토리가 존재해서가 아니라면(errno != EEXIST), 오류 메시지를 출력하고 프로그램을 종료.
@@ -34,7 +34,7 @@ ensure_directory_exists() 함수는 주어진 경로에 디렉토리가 존재�
 
 <br/>
 
-## 코드
+## 
 
 ```c++
     void ensure_directory_exists(const std::string& path, mode_t mode)

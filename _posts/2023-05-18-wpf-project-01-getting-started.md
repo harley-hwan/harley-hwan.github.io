@@ -6,12 +6,12 @@ categories: [Dev, WPF]
 tags: [c#, wpf, mvvm, data-binding]
 ---
 
-# WPF 프로젝트 시작하기 (프로젝트 생성, MVVM)
+# WPF ( , MVVM)
 - 최초 작성일: 2023년 5월 18일 (목)
 
-## WPF 프로젝트 생성
+## WPF 
 
-### 프로젝트 생성 및 선택
+### 
 
 Visual Studio 2019 Professional 또는 최신 버전에서 WPF 애플리케이션 프로젝트를 생성하는 방법을 설명한다. 아래 이미지와 함께 단계별로 따라가면 쉽게 설정할 수 있다.
 
@@ -30,12 +30,12 @@ Visual Studio 2019 Professional 또는 최신 버전에서 WPF 애플리케이�
 
 ---
 
-## MVVM 패턴의 이해
+## MVVM 
 
-### MVVM이란?
+### MVVM?
 MVVM (Model-View-ViewModel)은 WPF 및 다른 UI 프레임워크에서 널리 사용되는 아키텍처 패턴으로, UI와 비즈니스 로직을 분리하여 모듈화 및 유지보수를 용이하게 한다.
 
-### MVVM의 구성 요소
+### MVVM 
 1. **Model (모델)**
    - 애플리케이션의 데이터와 비즈니스 로직을 포함한다.
    - 예: 데이터베이스에서 가져온 사용자 정보, 파일 데이터 등
@@ -52,9 +52,9 @@ MVVM (Model-View-ViewModel)은 WPF 및 다른 UI 프레임워크에서 널리 �
 
 ---
 
-## WPF에서 MVVM 적용하기
+## WPF MVVM 
 
-### MVVM을 적용한 WPF 프로젝트 기본 구성
+### MVVM WPF 
 
 1. **모델 (Model) 생성**
    - 애플리케이션에서 사용할 데이터를 정의하는 클래스를 만든다.
@@ -79,9 +79,9 @@ MVVM (Model-View-ViewModel)은 WPF 및 다른 UI 프레임워크에서 널리 �
 
 ---
 
-## 프로젝트 구조 및 예제
+## 
 
-### 프로젝트 폴더 구조
+### 
 
 WPF 프로젝트에서 MVVM 패턴을 적용할 때 일반적인 폴더 구조는 다음과 같다:
 
@@ -97,9 +97,9 @@ WPFProject/
 ├── MainWindow.xaml.cs
 ```
 
-### 예제 코드
+### 
 
-#### 1. 모델 (User.cs)
+#### 1. (User.cs)
 ```csharp
 public class User
 {
@@ -108,7 +108,7 @@ public class User
 }
 ```
 
-#### 2. 뷰모델 (MainViewModel.cs)
+#### 2. (MainViewModel.cs)
 ```csharp
 using System.ComponentModel;
 
@@ -129,7 +129,7 @@ public class MainViewModel : INotifyPropertyChanged
 }
 ```
 
-#### 3. 뷰 (MainWindow.xaml)
+#### 3. (MainWindow.xaml)
 ```xml
 <Window x:Class="WPFProject.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -141,7 +141,7 @@ public class MainViewModel : INotifyPropertyChanged
 </Window>
 ```
 
-#### 4. 데이터 컨텍스트 설정 (MainWindow.xaml.cs)
+#### 4. (MainWindow.xaml.cs)
 ```csharp
 public partial class MainWindow : Window
 {
@@ -155,7 +155,7 @@ public partial class MainWindow : Window
 
 ---
 
-## 마무리
+## 
 
 최신 WPF 프로젝트에서는 `.NET Core` 또는 `.NET 5/6/7`을 사용하는 것이 권장된다. MVVM 패턴을 적용하여 프로젝트를 시작하면 유지보수성과 확장성을 극대화할 수 있다.
 

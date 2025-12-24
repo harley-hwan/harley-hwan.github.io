@@ -6,11 +6,11 @@ categories: [Dev, CSharp]
 tags: [c#, unity, oop, class, type, conversion]
 ---
 
-# 클래스 형식 변환
+# 
 
 - 최초 작성일: 2021년 3월 21일(월)
 
-## 내용
+## 
 
 ```c#
 using System;

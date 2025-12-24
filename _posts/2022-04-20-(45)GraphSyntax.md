@@ -6,13 +6,13 @@ categories: [Dev, CSharp]
 tags: [c#, datastructure, graph]
 ---
 
-# 그래프 (Graph)
+# (Graph)
 
 - 최초 작성일: 2021년 4월 20일(수)
 
-## 내용
+## 
 
-### 그래프 개념
+### 
 
 [현실 세계의 사물 및 추상적 개념 간]의 [연결 관계]를 표현
 
@@ -21,11 +21,11 @@ tags: [c#, datastructure, graph]
 
 <br/>
 
-### 그래프 구현
+### 
 
 ![image](https://user-images.githubusercontent.com/68185569/164148133-b487957c-01b8-45c6-94c5-3eb932b5e393.png)
 
-#### 인스턴스 생성 (LinkedList의 Node처럼)
+#### (LinkedList Node)
 
 ```c#
  // 인스턴스 생성 (LinkedList의 Node처럼)
@@ -57,7 +57,7 @@ void CreateGraph()
 
 <br/>
 
-#### 리스트를 이용한 그래프 표현
+#### 
 
 ```c#
 // 읽는 방법: adjacent[from] -> 연결된 목록
@@ -77,7 +77,7 @@ List<int>[] adjacent = new List<int>[6]
 
 <br/>
 
-#### 가중치 추가
+#### 
 
 ```c#
 // 가중치 추가
@@ -94,7 +94,7 @@ List<Edge>[] adjacent_1 = new List<Edge>[6]
 
 <br/>
 
-#### 행렬을 이용한 그래프 표현 (2차원 배열)
+#### (2 )
 
 ```c#
 // 읽는 방법: adjacent3[from, to]
@@ -114,7 +114,7 @@ int[,] adjacent2 = new int[6, 6]
 
 <br/>
 
-#### 가중치 부여
+#### 
 
 ```c#
 // 가중치 부여, 안쓰는 숫자(-1)를 사용해 연결이 끊긴 것을 표현

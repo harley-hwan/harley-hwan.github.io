@@ -10,7 +10,7 @@ tags: [machinelearning, 머신러닝, algorithm, genetic]
 
 - 최초 작성일: 2021년 10월 20일(수)
 
-## 문제 설명
+## 
 
 N-Queens Problem에서 n의 값을 5로 하고
 
@@ -22,7 +22,7 @@ Genetic Algorithm(유전 알고리즘)으로 풀어보자.
 
 ﻿
 
-## 1) Chromosome design (염색체 디자인)
+## 1) Chromosome design ( )
 
 ![image](https://user-images.githubusercontent.com/68185569/138053274-7e2a7fda-5ac3-48cb-91d6-c03583440d4a.png)
 
@@ -32,7 +32,7 @@ Genetic Algorithm(유전 알고리즘)으로 풀어보자.
 
 ﻿
 
-## 2) Initialization (초기화)
+## 2) Initialization ()
 
 np.array([1, 2, 3, 4, 5] 와 같이
 
@@ -47,7 +47,7 @@ np.array([1, 2, 3, 4, 5] 와 같이
 
 ﻿
  
-## 3) Fitness (적합도)
+## 3) Fitness ()
 
 나는 중복 체크의 기준점이 되는 퀸이 죽는 상황인지 아닌지를 판별하도록 코드를 짰다.
 Queens-Problem의 조건 상 상하좌우 대각선으로 잡아먹는다는 Queen의 특성을 고려하여 대각선, 대각선 반대방향, horizon 방향에 대한 중복을 체크한다.
@@ -120,7 +120,7 @@ Index값이 무작위로 섞인 모습이므로 죽은 퀸 수를 기준으로 �
 
 ﻿
 
-## 6) Mutation (돌연변이 생성) & Update generation
+## 6) Mutation ( ) & Update generation
 
 위의 작업들을 통해 더 나은 값들의 집합들을 모아 해를 구할 수 있지만 그렇게 구해진 값들은 100% 완벽하다고 할 수 있는 해들이 아니기 때문에 위의 단계에서 생성된 100개의 리스트들에서 무작위로 선별된 리스트들의 숫자들을 바꾸어 돌연변이들을 만들어낸다.
 
@@ -148,7 +148,7 @@ Target value를 0으로 설정을 했는데 모든 것들이 0이 되는 경우�
 
 ﻿
 
-## ⩥ 결론
+## 
 
 Genetic Algorithm의 목적은 유일한 해를 찾기 보다는 적합한 값들을 찾는 것을 목적으로 하는 것이기 때문에 매 실행 때마다 모델이 적합하다고 생각하는 값들은 항상 변할 수밖에 없다.
 
@@ -174,7 +174,7 @@ Genetic Algorithm은 Local Search Algorithms처럼 탐욕적 알고리즘의 일
 
 ﻿
 
-### <실제 코드 실행 결과값 (1)>
+### < (1)>
 
 아래의 실행 결과값들은 선별하는 비율(selected_rate)을 10% (0.1)로 했을 때의 결과이다.
 
@@ -188,7 +188,7 @@ Genetic Algorithm은 Local Search Algorithms처럼 탐욕적 알고리즘의 일
 
 ﻿
 
-### <실제 코드 실행 결과값 (2)>
+### < (2)>
 
 아래의 실행 결과값은 선별하는 비율(selected_rate)를 50% (0.5)로 했을 때의 결과이다.
 
@@ -214,7 +214,7 @@ import time
 
 # 1 chromosome design
 # np.array([1,2,3,4,5])
-# 총 가짓수 5^5 => 25 125 625 3125가지
+# 5^5 => 25 125 625 3125
 
 def initialization(n = 100):
     '''
@@ -334,7 +334,7 @@ print("< result1 >")
 print(result_generation[::10]) # 결과값 10개만 출력
 print("\n\n")
 
-# 실행할 때마다 값이 다르게 나온다는걸 보여줌
+# 
 
 chess_boards = initialization(n = 100)
 result_generation2, fit_scores, spend_time = n_queens(chess_boards)

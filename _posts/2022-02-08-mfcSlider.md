@@ -6,13 +6,13 @@ categories: [Dev, MFC]
 tags: [c++, mfc, slider, rgb, windowprogramming]
 ---
 
-# [MFC] 색상 슬라이드 프로그램 작성
+# [MFC] 
 
 - 최초 작성일: 2022년 2월 8일 (화)
 
-## 실습
+## 
 
-### 프로젝트 생성
+### 
 
 다이얼로그 기반으로 mfc App 프로젝트를 새로 생성한다.
 
@@ -20,7 +20,7 @@ tags: [c++, mfc, slider, rgb, windowprogramming]
 
 <br/>
 
-### 다이얼로그 편집/디자인
+### /
 
 우선, 다이얼로그를 편집하자. 아래와 같이 Resource View에서 해당 다이얼로그를 더블클릭하고, 다이얼로그에 있는 컨트롤들을 모두 삭제한다. (Ctrl + A) + Delete 하면 된다.
 
@@ -35,7 +35,7 @@ tags: [c++, mfc, slider, rgb, windowprogramming]
 
 <br/>
 
-### 변수 추가
+### 
 
 위의 단계를 마쳤으면, 이제 멤버 변수들을 추가해보자.
 
@@ -79,7 +79,7 @@ tags: [c++, mfc, slider, rgb, windowprogramming]
 
 <br/>
 
-### 코드 작성
+### 
 
  OnInitDialog() 함수에서 RGB 값을 각각 초기화한다.
  
@@ -220,7 +220,7 @@ void CRGBSlideDlg::Clear()
 
 <br/>
 
-### 실행 결과 1
+### 1
 
 <iframe id="video" width="750" height="500" src="/assets/video/2022-02-08-mfcSlider.mp4" frameborder="0"> </iframe>
 

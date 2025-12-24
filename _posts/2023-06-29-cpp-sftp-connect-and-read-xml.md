@@ -6,12 +6,12 @@ categories: [Dev, C++]
 tags: [c, c++, vs, sftp, ftp, CkSFtp, xml, pugi, pugixml]
 ---
 
-# sftp 접속 및 xml 다운로드 후, 원하는 값 꺼내오기
+# sftp xml , 
 - 최초 작성일: 2023년 6월 29일 (목)
 
-## 코드 (CksFtp 라이브러리 활용)
+## (CksFtp )
 
-### 사용한 라이브러리
+### 
 
 - sftp 접속: CksFtp
 - xml 접속: pugixml
@@ -135,7 +135,7 @@ std::pair<std::string, std::string> CExampleDlg::connectSftp() {
 
 <br/>
 
-## 코드2 (libssh2 라이브러리 활용)
+## 2 (libssh2 )
 
 ```c++
 bool CExampleDlg::connectToServer(LIBSSH2_SESSION*& session, const char* hostname, int port, const char* username, const char* password) {

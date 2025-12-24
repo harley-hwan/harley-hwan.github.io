@@ -6,11 +6,11 @@ categories: [Dev, C++]
 tags: [__FILE__, __func__, __LINE__, __PRETTY_FUNCTION__, 로그, 매크로, C++, g++, log, typeid, typeid(T t).name()]
 ---
 
-# 로그를 좀더 보기쉽게 찍기(g++)
+# (g++)
 - 최초 작성일: 2022년 9월 21일 (수)
 - 참조: http://dev-crazybird.blogspot.com/2014/04/g.html
 
-## 내용
+## 
 
 로그를 작성할 때 해당 파일명과 소스라인 위치의 함수명까지 확인할 수 있는 방법이다.
 
@@ -26,7 +26,7 @@ tags: [__FILE__, __func__, __LINE__, __PRETTY_FUNCTION__, 로그, 매크로, C++
 
 <br/>
 
-## 예제
+## 
 
 ```c++
 #include <iostream>
@@ -78,7 +78,7 @@ int main(int argc, char** argv)
 
 <br/>
 
-## 결과
+## 
 
 ```c++
 __PRETTY_FUNCTION__ = void CPrettyLog::Print()

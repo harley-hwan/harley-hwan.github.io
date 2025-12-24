@@ -6,13 +6,13 @@ categories: [Dev, CSharp]
 tags: [c#, unity, maze, algorithm, binary tree]
 ---
 
-# Binary Tree 미로 생성 알고리즘 (Maza Algorithm)
+# Binary Tree (Maza Algorithm)
 
 - 최초 작성일: 2021년 3월 30일(수)
 
-## 내용
+## 
 
-### 맵 만들기
+### 
 
 우선, 우리가 미로 생성 알고리즘을 구현할 맵을 먼저 만들어보자.
 
@@ -146,7 +146,7 @@ namespace Maze
 
 ---
 
-### Binary Tree 미로 알고리즘
+### Binary Tree 
 
 Board.cs의 Initialize 함수만 살짝 바꿔본다.
 

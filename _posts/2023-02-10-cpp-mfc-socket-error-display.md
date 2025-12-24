@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [c++, windows, socket, error, mfc]
 ---
 
-# Windows 소켓 에러 메시지 출력 구현
+# Windows 
 - 최초 작성일: 2023년 2월 10일 (금)
 
 <br/>
 
-## 소개
+## 
 Windows 소켓 프로그래밍에서 발생하는 에러 코드를 사용자가 이해하기 쉬운 메시지로 변환하여 출력한다. FormatMessage API를 사용하여 시스템 에러 코드에 대한 상세 설명을 획득한다.
 
 <br/>
 
-## 구현 코드
+## 
 시스템 에러 코드를 해석하여 출력하는 함수이다.
 
 ```cpp
@@ -40,7 +40,7 @@ void displayerror(int nErrorCode)
 
 <br/>
 
-## 함수 설명
+## 
 
 1. **FormatMessage 매개변수 설명**
    - FORMAT_MESSAGE_ALLOCATE_BUFFER

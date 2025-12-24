@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [c, c++, mfc, bluetooth, devices, ble, listview, blescan, bluetoothscan, arcrylic, analyzer]
 ---
 
-# 주변의 모든 블루투스 기기 스캔하여 MFC 리스트 뷰에 출력
+# MFC 
 - 최초 작성일: 2023년 3월 31일 (금)
 
-## 내용
+## 
 
 주변의 모든 블루투스 기기를 스캔하고, 해당 기기의 장치명(LocalName)과 SSID(신호 세기) 를 출력하는 프로그램이며,
 
@@ -25,7 +25,7 @@ Acrylic Suite 의 "Acrylic BLE Analyzer" 앱을 사용했을 때의 결과와 �
 
 <br/>
 
-### 코드 구성
+### 
 
 1. __using namespace winrt::Windows::Devices::Bluetooth::Advertisement;__ 를 사용하여 블루투스 Advertisement API를 사용할 수 있도록 한다.
 2. __BluetoothLEAdvertisementWatcher watcher;__ 객체를 생성한다. 이 객체는 블루투스 Low Energy 장치를 검색하는 데 사용된다.
@@ -41,7 +41,7 @@ Acrylic Suite 의 "Acrylic BLE Analyzer" 앱을 사용했을 때의 결과와 �
 
 <br/>
 
-## 참고
+## 
 
 만약, 빌드 시 아래와 같은 에러가 발생한다면, Windows SDK Version을 업데이트해주어야 한다.
 
@@ -109,7 +109,7 @@ private:
 
 <br/>
 
-## 소스 (MFC)
+## (MFC)
 
 #### MainDlg.h
 
@@ -248,7 +248,7 @@ void CMainDlg::OnBnClickedBtnBlescanstop()
 
 <br/>
 
-### 추가 소스
+### 
 
 위의 소스는 쓰레드를 이용하여, 최신 정보를 계속적으로 갱신하는 구조이다.
 
@@ -352,7 +352,7 @@ void CMainDlg::OnBnClickedBtnBlescan()
 
 <br/>
 
-## 소스 (C++)
+## (C++)
 
 ```c++
 #include <winrt/Windows.Devices.Bluetooth.Advertisement.h>

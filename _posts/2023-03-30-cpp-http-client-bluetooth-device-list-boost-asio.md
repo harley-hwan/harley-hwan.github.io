@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [c, c++, boost, asio, boost.asio, bluetooth, ble, bluetoothscanner]
 ---
 
-# Boost.Asio를 사용한 간단한 HTTP 클라이언트 (블루투스 장치 목록 스캔 및 출력)
+# Boost.Asio HTTP ( )
 - 최초 작성일: 2023년 3월 30일 (목)
 
-## 내용
+## 
 
 Boost.Asio를 사용하여 간단한 HTTP 클라이언트를 구현한 것이다.
 
@@ -21,7 +21,7 @@ Boost.Asio를 사용하여 간단한 HTTP 클라이언트를 구현한 것이다
 
 <br/>
 
-### 코드 구성
+### 
 
 1. BluetoothScanner 클래스를 정의한다. 이 클래스는 Bluetooth 장치를 스캔하는 것처럼 보이지만, 실제로는 HTTP 요청을 통해 장치 목록을 가져오는 클라이언트이다.
 2. BluetoothScanner 클래스의 생성자는 io_context 객체를 받아 소켓을 초기화한다.
@@ -46,7 +46,7 @@ Boost.Asio를 사용하여 간단한 HTTP 클라이언트를 구현한 것이다
 
 <br/>
 
-## 참고
+## 
 
 1. Boost 라이브러리가 올바르게 설치되었는지 확인하세요. Boost 라이브러리를 다운로드하고 설치하는 방법은 다음 페이지에서 확인할 수 있습니다: https://www.boost.org/users/download/
 2. 프로젝트 설정을 열고 헤더 파일 검색 경로를 확인하세요. Boost 라이브러리 헤더 파일이 있는 디렉토리를 포함하도록 경로를 업데이트해야 합니다. Visual Studio를 사용하는 경우 다음 단계를 따르세요:
@@ -59,7 +59,7 @@ Boost.Asio를 사용하여 간단한 HTTP 클라이언트를 구현한 것이다
 
 <br/>
 
-### 소스 1
+### 1
 
 ```c++
 std::vector<std::tuple<std::wstring, LONG, CString>> ListAvailableWifiNetworks()

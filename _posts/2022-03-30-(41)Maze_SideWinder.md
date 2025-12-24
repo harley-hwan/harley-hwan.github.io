@@ -6,13 +6,13 @@ categories: [Dev, CSharp]
 tags: [c#, unity, maze, algorithm, sidewinder]
 ---
 
-# SideWinder 미로 생성 알고리즘 (Maza Algorithm)
+# SideWinder (Maza Algorithm)
 
 - 최초 작성일: 2021년 3월 30일(수)
 
-## 내용
+## 
 
-### SideWinder 원리
+### SideWinder 
 
 ![image](https://user-images.githubusercontent.com/68185569/160752280-ff737c12-11df-4f84-85f2-f57e8301e7f9.png)
 

@@ -11,7 +11,7 @@ tags: [system software, lab, linux]
 - 최초 작성일: 2021년 11월 11일(목)
 - github 주소: <https://github.com/harley-hwan/SystemSoftwareLecture>
 
-## 풀이 과정
+## 
 
 ### Phase 1
 

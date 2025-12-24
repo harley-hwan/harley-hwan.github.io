@@ -6,12 +6,12 @@ categories: [Algorithm, Programmers]
 tags: [programmers, 프로그래머스, algorithm, c++]
 ---
 
-# Programmers 스킬트리
+# Programmers 
 
 - 최초 작성일: 2021년 9월 20일(월)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/49993>
 
-## 문제 설명
+## 
 ![image](https://user-images.githubusercontent.com/68185569/133917563-09ad9064-6a6b-4035-964c-af102048d8c7.png)
 
 - 선행 스킬이란 어떤 스킬을 배우기 전에 먼저 배워야 하는 스킬을 뜻합니다.
@@ -19,7 +19,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 - 위 순서에 없는 다른 스킬(힐링 등)은 순서에 상관없이 배울 수 있습니다. 따라서 `스파크 → 힐링 → 라이트닝 볼트 → 썬더`와 같은 스킬트리는 가능하지만, `썬더 → 스파크`나 `라이트닝 볼트 → 스파크 → 힐링 → 썬더`와 같은 스킬트리는 불가능합니다.
 - 선행 스킬 순서 skill과 유저들이 만든 스킬트리[1](https://programmers.co.kr/learn/courses/30/lessons/49993#fn1)를 담은 배열 skill_trees가 매개변수로 주어질 때, 가능한 스킬트리 개수를 return 하는 solution 함수를 작성해주세요.
 
-## 제한 조건
+## 
 - 스킬은 알파벳 대문자로 표기하며, 모든 문자열은 알파벳 대문자로만 이루어져 있습니다.
 - 스킬 순서와 스킬트리는 문자열로 표기합니다.
   - 예를 들어, `C → B → D` 라면 "CBD"로 표기합니다
@@ -28,17 +28,17 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 - skill_trees의 원소는 스킬을 나타내는 문자열입니다.
   - skill_trees의 원소는 길이가 2 이상 26 이하인 문자열이며, 스킬이 중복해 주어지지 않습니다.
 
-## 입출력 예
+## 
 ![image](https://user-images.githubusercontent.com/68185569/133933238-8ea1b1a2-c89d-4b93-8d8c-40cc419b32b7.png)
 
-## 입출력 예 설명
+## 
 
 - "BACDE": B 스킬을 배우기 전에 C 스킬을 먼저 배워야 합니다. 불가능한 스킬트립니다.
 - "CBADF": 가능한 스킬트리입니다.
 - "AECB": 가능한 스킬트리입니다.
 - "BDA": B 스킬을 배우기 전에 C 스킬을 먼저 배워야 합니다. 불가능한 스킬트리입니다.
 
-## 풀이 방법
+## 
 
 - 이 문제는, 만약 string으로 주어지는 입력인 skill이 CBD라면 스킬 순서가 무조건 C->B->D 순이어야 하므로, 일단 가장 처음이 C가 나와야 한다. C가 없으면 C->D 순서가 맞아도 틀린 것이 된다.
 - 그렇기 때문에, 두번째로 주어지는 skill_trees 입력 벡터에서 CBD를 제외한 나머지 skill은 논외이기 때문에, 나 지워줘도 무방하다.

@@ -6,13 +6,13 @@ categories: [Dev, CSharp]
 tags: [c#, unity, maze, algorithm, right hand rule]
 ---
 
-# 우수법 (오른손 법칙)을 이용한 미로 생성 알고리즘
+# ( ) 
 
 - 최초 작성일: 2021년 3월 30일(수)
 
-## 내용
+## 
 
-### 오른손 법칙을 이용한 플레이어의 이동 구현
+### 
 
 앞서 플레이어 클래스를 추가하여, 플레이어가 랜덤으로 미로를 찾아가는 과정을 구현해보았다.
 
@@ -24,7 +24,7 @@ tags: [c#, unity, maze, algorithm, right hand rule]
 
 <br/>
 
-### C# 코드
+### C# 
 
 #### Player.cs
 

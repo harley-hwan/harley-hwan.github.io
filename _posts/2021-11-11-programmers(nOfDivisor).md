@@ -6,27 +6,27 @@ categories: [Algorithm, Programmers]
 tags: [programmers, 프로그래머스, algorithm, c++]
 ---
 
-# Programmers 약수의 개수와 덧셈
+# Programmers 
 
 - 최초 작성일: 2021년 11월 11일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/77884>
 
-## 문제 설명
+## 
 
 - 두 정수 `left`와 `right`가 매개변수로 주어집니다. `left`부터 `right`까지의 모든 수들 중에서, 약수의 개수가 짝수인 수는 더하고, 약수의 개수가 홀수인 수는 뺀 수를 return 하도록 solution 함수를 완성해주세요.
 
-## 제한 사항
+## 
 
 - 1 ≤ `left` ≤ `right` ≤ 1,000
 
-## 입출력 예
+## 
 
 | left | right | result |
 | ---- | ----- | ------ |
 | 13   | 17    | 43     |
 | 24   | 27    | 52     |
 
-##### **입출력 예에 대한 설명**
+##### ** **
 
 - **입출력 예 #1**	
 
@@ -55,7 +55,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
   - 따라서, 24 - 25 + 26 + 27 = 52를 return 해야 합니다.
 
-## 풀이 방법
+## 
 
 - 주어진 left에서 right까지 모두 돌며, 해당 숫자의 약수의 갯수를 세어 약수의 갯수가 짝수면 answer에 더해주고, 홀수면 빼준다.
 - 간단한 문제다.

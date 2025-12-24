@@ -6,12 +6,12 @@ categories: [Algorithm, Baekjoon]
 tags: [baekjoon, 백준, algorithm, sort]
 ---
 
-# Baekjoon 2108 통계학
+# Baekjoon 2108 
 
 - 최초 작성일: 2021년 9월 30일(목)
 - 주소: <https://www.acmicpc.net/problem/2108>
 
-## 문제 설명
+## 
 ![image](https://user-images.githubusercontent.com/68185569/135301978-78dcb4a7-4112-4599-b91c-b207bb1edb7f.png)
 
 - 수를 처리하는 것은 통계학에서 상당히 중요한 일이다. 통계학에서 N개의 수를 대표하는 기본 통계값에는 다음과 같은 것들이 있다. 단, N은 홀수라고 가정하자.
@@ -23,10 +23,10 @@ tags: [baekjoon, 백준, algorithm, sort]
 
 - N개의 수가 주어졌을 때, 네 가지 기본 통계값을 구하는 프로그램을 작성하시오.
 
-## 입력
+## 
 - 첫째 줄에 수의 개수 N(1 ≤ N ≤ 500,000)이 주어진다. 단, N은 홀수이다. 그 다음 N개의 줄에는 정수들이 주어진다. 입력되는 정수의 절댓값은 4,000을 넘지 않는다.
 
-## 출력
+## 
 
 - 첫째 줄에는 산술평균을 출력한다. 소수점 이하 첫째 자리에서 반올림한 값을 출력한다.
 
@@ -38,12 +38,12 @@ tags: [baekjoon, 백준, algorithm, sort]
 
 ![image](https://user-images.githubusercontent.com/68185569/135302077-29c058dc-2da2-4eb2-9763-3da08596bf50.png)
 
-## 알고리즘 분류
+## 
 
 - 구현
 - 정렬
 
-## 풀이 방법
+## 
 
 - 문제는 간단했고, 그것을 어떻게 표현하고 구현하느냐가 중요한 문제이다.
 1. 산술평균

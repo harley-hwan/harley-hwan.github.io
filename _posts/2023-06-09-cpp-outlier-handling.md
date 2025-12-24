@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [c++, outlier, filtering, smoothing, interpolation]
 ---
 
-# 이상치(Outlier) 데이터 처리 구현
+# (Outlier) 
 - 최초 작성일: 2023년 6월 9일 (금)
 
 <br/>
 
-## 소개
+## 
 1차원 데이터에서 이상치(Outlier)를 효과적으로 제거하고 부드러운 데이터 피팅을 구현한다. 선형 보간법과 이동 평균 두 가지 방식을 사용하여 데이터를 처리한다.
 
 <br/>
 
-## 선형 보간법 구현
+## 
 이웃한 데이터 값을 사용하여 이상치를 보정하는 방법이다.
 
 ```cpp
@@ -48,7 +48,7 @@ std::vector<float> handleOutliers(const std::vector<float>& values,
 }
 ```
 
-#### 구현 특징:
+#### :
 1. **윈도우 기반 처리**
    - windowSize로 지정된 범위의 데이터를 사용한다
    - 데이터의 시작과 끝 부분을 고려한 범위 처리를 한다
@@ -63,7 +63,7 @@ std::vector<float> handleOutliers(const std::vector<float>& values,
 
 <br/>
 
-## 이동 평균 구현
+## 
 윈도우 내의 평균값으로 이상치를 대체하는 방법이다.
 
 ```cpp
@@ -95,7 +95,7 @@ std::vector<float> handleOutliers(const std::vector<float>& values,
 }
 ```
 
-#### 구현 특징:
+#### :
 1. **이동 평균 계산**
    - 각 위치에서의 윈도우 평균을 미리 계산한다
    - 전체 데이터에 대한 이동 평균 배열을 생성한다

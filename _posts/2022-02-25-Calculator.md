@@ -6,24 +6,24 @@ categories: [Dev, MFC]
 tags: [c++, mfc, calculator]
 ---
 
-# [MFC] 계산기 프로그램 작성 1
+# [MFC] 1
 
 - 최초 작성일: 2022년 2월 25일 (금)
 
-## 목적
+## 
 
 사칙 연산과 CString 함수의 형 변환을 이용하여 계산기 프로그램을 작성한다.
 
 <br/>
 
-### 프로젝트 생성
+### 
 
 - 프로젝트명: 'Calc'
 - 응용 프로그램 종류: '대화 상자 기반'
 
 <br/>
 
-### 다이얼로그 설정
+### 
 
 ![image](https://user-images.githubusercontent.com/68185569/155664654-42f13675-ba60-43c9-85fb-e1b83736c382.png)
 
@@ -31,7 +31,7 @@ tags: [c++, mfc, calculator]
 
 <br/>
 
-### 멤버 변수 설정
+### 
 
 아래와 같이, [클래스 뷰]-[Calc]-[CCalcDlg]에서 [추가]-[변수 추가]를 클릭하고 멤버 변수를 추가한다.
 
@@ -53,7 +53,7 @@ tags: [c++, mfc, calculator]
 
 ![image](https://user-images.githubusercontent.com/68185569/155672210-78256d1b-ae21-42ff-be38-c2364cc41119.png)
 
-### 코드 작성
+### 
 
 ```c++
 void CCalcDlg::OnClickedButtonAdd()
@@ -131,7 +131,7 @@ void CCalcDlg::OnClickedButtonExit()
 
 <br/>
 
-### 결과
+### 
 
 ![image](https://user-images.githubusercontent.com/68185569/155672509-8ce8846c-ae0f-4521-b013-d7484b451a61.png)
 

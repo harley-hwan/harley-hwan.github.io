@@ -6,16 +6,16 @@ categories: [Dev, WPF]
 tags: [c#, wpf, showdialog, mvvm, asyncRelayCommand, window, ui]
 ---
 
-# ShowDialog를 활용한 다른 창 호출하기
+# ShowDialog 
 
 - 최초 작성일: 2025년 3월 30일 (일)
 
-## 1. ShowDialog와 Modal 창 개념
+## 1. ShowDialog Modal 
 WPF에서 `Window.ShowDialog()` 메서드는 새 윈도우를 **모달 창**으로 표시한다. 모달 창이 뜨면 **사용자가 그 창을 닫기 전까지** 부모 창을 조작할 수 없고, `ShowDialog()`를 호출한 코드 실행도 창이 닫힐 때까지 멈춘다. 예를 들어 확인/취소를 받는 대화상자, 진행 상황을 표시하는 Progress 창 등이 모달 창으로 구현된다. 반면 `Window.Show()`는 **모달이 아닌(non-modal)** 창을 띄워 부모 창과 독립적으로 동작하게 한다.
 
 모달 창을 사용할 때 **데이터 바인딩**을 위해 **DataContext** 설정이 중요하다. 새 창을 열 때 해당 창의 `DataContext`에 **ViewModel 인스턴스**를 할당하면, XAML에서 ViewModel 속성을 바인딩한 컨트롤들이 제대로 값을 표시하고 업데이트한다. 이제 MVVM 패턴에서 ViewModel을 통해 모달 창을 여는 일반적인 흐름을 알아보자.
 
-## 2. MVVM 패턴에서 새 창 호출 흐름
+## 2. MVVM 
 MVVM에서 **ViewModel은 UI 요소에 직접 접근하지 않는 것**이 원칙이지만, **새 창 열기** 같은 동작은 보통 다음 두 가지 방법으로 구현한다:
 
 - **View의 코드비하인드에서 처리**: 메인 View(XAML 코드비하인드)에서 버튼 클릭 이벤트 등으로 `ShowDialog()`를 호출하고, 필요한 ViewModel을 DataContext로 설정한다. 이 방법은 간단하지만 View 코드비하인드에 로직이 들어간다.
@@ -23,10 +23,10 @@ MVVM에서 **ViewModel은 UI 요소에 직접 접근하지 않는 것**이 원�
 
 **핵심 흐름:** 사용자 버튼 클릭 → **MainViewModel의 Command 실행** → 새로운 **SecondView 창과 SecondViewModel 생성** → **SecondView.DataContext에 SecondViewModel 주입** → `SecondView.ShowDialog()`로 모달 표시 → SecondView 내 UI가 SecondViewModel에 바인딩되어 동작.
 
-## 3. 예제 구현: ProgressBar가 있는 Modal 창 열기
+## 3. : ProgressBar Modal 
 예제 시나리오: 메인 창에 "Open Progress Window" 버튼이 있고, 이를 누르면 모달 대화창(Progress 창)이 뜬다. 이 SecondView 창에는 ProgressBar와 "Start" 버튼이 있으며, Start를 누르면 백그라운드 작업을 **비동기 처리**하면서 ProgressBar가 0%부터 100%까지 올라간다. 이 모든 동작을 **MVVM 데이터 바인딩**으로 구현한다.
 
-### MainWindow.xaml – 메인 창 UI 구성
+### MainWindow.xaml – UI 
 먼저 메인 창 XAML을 설정한다. **DataContext**로 `MainViewModel`을 지정하고, 버튼의 `Command`를 MainViewModel의 커맨드에 바인딩한다.
 
 ```xml
@@ -52,7 +52,7 @@ MVVM에서 **ViewModel은 UI 요소에 직접 접근하지 않는 것**이 원�
 - `Window.DataContext`에 `<local:MainViewModel />`을 설정하여 **MainViewModel 인스턴스**를 연결했다. 이렇게 하면 XAML에서 `{Binding ...}`으로 MainViewModel의 속성이나 ICommand에 접근할 수 있다.
 - `<Button>`의 `Command="{Binding OpenDialogCommand}"`는 MainViewModel에 정의된 `OpenDialogCommand`에 바인딩된다. 이제 버튼 클릭 시 해당 커맨드가 실행된다.
 
-### MainViewModel.cs – 메인 ViewModel과 명령 정의
+### MainViewModel.cs – ViewModel 
 이제 MainViewModel 클래스를 구현하자. 버튼과 바인딩된 `OpenDialogCommand`를 정의하고, 이 커맨드가 실행되면 새로운 창을 띄우도록 한다. **AsyncRelayCommand**를 사용하여 ICommand를 쉽게 구현할 수 있다.
 
 ```csharp
@@ -94,7 +94,7 @@ namespace WpfModalExample
 
 > **Note:** 엄밀히 따지면 ViewModel에서 View (`SecondView`)를 직접 생성하는 것은 MVVM 원칙상 권장되지 않는다. 그러나 작은 예제이므로 간단히 이 방법을 사용했다. 규모가 커지면 **Dialog 서비스** 등을 통해 ViewModel이 창 표시를 요청하고 View 쪽에서 열도록 구현할 수 있다.
 
-### SecondView.xaml – 두 번째 창 UI (ProgressBar 포함)
+### SecondView.xaml – UI (ProgressBar )
 다음으로 모달로 표시될 두 번째 창 (`SecondView`)의 XAML을 작성한다. ProgressBar와 이를 제어할 UI를 배치하고, 나중에 주입될 SecondViewModel의 속성/커맨드에 바인딩한다.
 
 ```xml
@@ -128,7 +128,7 @@ namespace WpfModalExample
 - `"Start"` 버튼의 `Command`를 `{Binding StartWorkCommand}`로 바인딩했다. 이것은 SecondViewModel에 정의될 ICommand로, ProgressBar 증가 작업을 수행한다.
 - **중요:** `SecondView` XAML에는 **DataContext를 설정하지 않았다.** 대신 MainViewModel에서 `SecondView.DataContext = new SecondViewModel()`로 주입할 것이므로, XAML 바인딩 경로만 맞게 적어두면 된다. (디자인 타임 지원을 원한다면 XAML에 d:DataContext 등을 지정할 수도 있다.)
 
-### SecondViewModel.cs – ProgressBar 업데이트 ViewModel
+### SecondViewModel.cs – ProgressBar ViewModel
 마지막으로 SecondViewModel 클래스를 구현한다. 이 ViewModel은 ProgressBar와 상호작용하므로 **진행률 값 속성**과 **시작 커맨드**를 가진다. ProgressBar를 업데이트하는 작업은 시간이 걸릴 수 있으므로, **AsyncRelayCommand**를 사용하여 UI스레드를 막지 않고 비동기로 진행한다.
 
 ```csharp
@@ -187,7 +187,7 @@ namespace WpfModalExample
 - `StartWorkAsync` 메서드: 1부터 100까지 `ProgressValue`를 변경하면서 `Task.Delay(50)`로 약간의 지연을 준다. `await`를 사용하므로 UI 스레드를 블로킹하지 않고도 ProgressValue 변경 시마다 UI의 ProgressBar가 업데이트된다. 이 루프가 끝나면 ProgressValue가 100이 되어 작업 완료 상태를 나타낸다.
 - `INotifyPropertyChanged` 구현: `OnPropertyChanged` 메서드는 `PropertyChanged` 이벤트를 발생시켜 WPF 바인딩에 현재 ViewModel의 속성 값이 변했음을 알린다. 덕분에 ProgressValue가 변할 때마다 ProgressBar와 TextBlock이 자동으로 새 값을 반영하게 된다.
 
-## 4. AsyncRelayCommand를 사용한 ICommand 구현
+## 4. AsyncRelayCommand ICommand 
 위 예제에서 **AsyncRelayCommand**를 사용하여 MainViewModel과 SecondViewModel의 ICommand를 구현했다. `AsyncRelayCommand`는 **Microsoft CommunityToolkit.Mvvm** 라이브러리의 기능으로, `Task` 반환형의 메서드를 손쉽게 ICommand로 바꿔 준다. 일반 `RelayCommand`와 달리 작업이 **비동기 처리**되는 동안 UI 응답을 유지하고, 작업 완료 후 UI 스레드로 돌아와 결과를 처리한다. 
 
 이 예제에서:
@@ -196,7 +196,7 @@ namespace WpfModalExample
 
 > **참고:** AsyncRelayCommand 등을 사용하려면 프로젝트에 **CommunityToolkit.Mvvm** NuGet 패키지를 설치하고, `using CommunityToolkit.Mvvm.Input;` 지시어를 추가해야 한다. 해당 Toolkit의 `ObservableRecipient`나 `ObservableObject`를 상속하면 INotifyPropertyChanged를 쉽게 구현할 수도 있지만, 이해를 돕기 위해 여기서는 수동으로 `INotifyPropertyChanged`를 구현했다.
 
-## 5. 실행 결과: 동작 과정 정리
+## 5. : 
 이제 모든 구현을 마쳤다. 전체 흐름을 정리하며, 실제 실행 시 어떤 일이 일어나는지 단계별로 알아보겠다.
 
 - **메인 창 표시:** MainWindow가 뜨면 DataContext로 연결된 MainViewModel이 로드되어 있다. 메인 창의 버튼은 `OpenDialogCommand`에 바인딩되어 있으므로 현재 활성화되어 있다.
@@ -211,7 +211,7 @@ namespace WpfModalExample
 
 요약하면, **MainWindow → (커맨드) → SecondView + SecondViewModel 생성 → (ShowDialog) → SecondView에서 작업 실행 (Progress 업데이트) → 창 닫힘 → MainWindow로 복귀** 순서이다. 모든 데이터 전달과 UI 업데이트는 **DataContext를 통한 바인딩**으로 이루어지므로, 코드 상으로 View와 ViewModel이 깔끔하게 분리되어 유지된다.
 
-## 6. 정리 및 결론
+## 6. 
 이번 예제에서는 WPF에서 **ShowDialog**를 사용해 모달 창을 열고, **ViewModel을 DataContext로 주입**하여 ProgressBar 값을 바인딩하는 방법을 살펴봤다. MVVM 패턴에 따라 **ViewModel의 ICommand** (여기서는 AsyncRelayCommand 활용)로 새 창을 띄우고, **View-ViewModel 간 데이터 바인딩**을 설정하면 별도의 UI 업데이트 코드 없이도 ViewModel 속성 변화가 즉시 UI에 반영됨을 확인했다.
 
 초보자 입장에서도 따라하기 쉽게 **단계별 구현**을 진행해 보았는데, 요점을 다시 한 번 정리하면 다음과 같다:

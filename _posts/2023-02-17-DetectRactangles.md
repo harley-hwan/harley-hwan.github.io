@@ -6,11 +6,11 @@ categories: [Dev, OpenCV]
 tags: [opencv, Mat, cvtColor, GaussianBlur, Canny, findContours, approxPolyDP, drawContours, detectRectangle]
 ---
 
-# opencv c++ 직사각형 검출 알고리즘
+# opencv c++ 
 
 - 최초 작성일: 2023년 2월 17일(금)
 
-## 목표
+## 
 
 MFC에서 opencv 를 활용한 이미지 처리를 통한 직사각형 검출 알고리즘을 만들어보자.
 
@@ -18,7 +18,7 @@ MFC에서 opencv 를 활용한 이미지 처리를 통한 직사각형 검출 �
 
 ---
 
-## 내용
+## 
 
 C++과 OpenCV를 사용하여 이미지에서 직사각형을 검출하는 함수를 만들어
 
@@ -79,7 +79,7 @@ isContourConvex 함수를 사용하여 해당 근사치가 볼록한 도형인�
 
 <br/>
 
-### MFC 환경에서 구현
+### MFC 
 
 MFC(C++)에서 OpenCV를 사용하여 이미지에서 직사각형을 검출하는 코드는 다음과 같다.
 
@@ -166,20 +166,20 @@ cv::findContours 함수를 사용하여 이미지에서 컨투어를 검출하�
 
 <br/>
 
-### python 환경에서 구현
+### python 
 
 ```python
 import cv2
 
-# 이미지 읽어오기
+# 
 image = cv2.imread("이미지 파일 경로")
 
-# 이미지 전처리
+# 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray, (5, 5), 0)
 canny = cv2.Canny(blur, 50, 150)
 
-# 직사각형 검출
+# 
 contours, _ = cv2.findContours(canny, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
 for contour in contours:
@@ -187,7 +187,7 @@ for contour in contours:
     if len(approx) == 4:
         cv2.drawContours(image, [approx], 0, (0, 255, 0), 3)
 
-# 결과 출력
+# 
 cv2.imshow("Image", image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

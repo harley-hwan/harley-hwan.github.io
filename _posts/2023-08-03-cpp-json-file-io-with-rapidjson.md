@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [C, C++, Visual Studio, JSON, RapidJSON, Exception Handling, File I/O, fopen_s, FileReadStream, FileWriteStream, RapidJSON Document, RapidJSON Value, RapidJSON Writer, String Manipulation]
 ---
 
-# json 파일 입출력 
+# json 
 - 최초 작성일: 2023년 8월 3일 (목)
 
-## 주요 동작 설명
+## 
 
 1. 파일을 읽기 모드("r")로 열려고 시도한다. 파일을 열 수 없는 경우, 새 파일을 작성 모드("w")로 열고 초기 객체를 작성한 다음 파일을 다시 읽기 모드로 열려고 시도.
 2. 파일의 내용을 저장할 버퍼를 만든 다음, rapidjson::FileReadStream을 사용하여 파일의 내용을 읽는다.
@@ -23,7 +23,7 @@ tags: [C, C++, Visual Studio, JSON, RapidJSON, Exception Handling, File I/O, fop
 
 <br/>
 
-## 코드
+## 
 
 ```c++
 void CMyDlg::UpdateJSON() {

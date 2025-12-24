@@ -6,17 +6,17 @@ categories: [Dev, WPF]
 tags: [c#, wpf, triggers, data-triggers, ui, xaml]
 ---
 
-# 트리거와 데이터 트리거 활용하기
+# 
 
 - 최초 작성일: 2025년 3월 14일 (금)
 
-## 트리거(Trigger) 개요
+## (Trigger) 
 
 WPF에서 **트리거(Trigger)**는 특정 이벤트나 속성 값의 변화가 발생했을 때, 미리 정의된 스타일을 자동으로 적용하여 UI를 동적으로 변경할 수 있는 기능이다. 대표적인 사용 예는 버튼 클릭, 마우스 오버, 컨트롤 활성화 여부 등에 따라 컨트롤의 스타일을 변경하는 경우가 있다.
 
 ---
 
-## 트리거를 활용한 스타일 변경
+## 
 
 아래의 예제는 버튼 위에 마우스를 올리거나 클릭했을 때 글자 색상을 변경하는 방법을 보여준다.
 
@@ -40,7 +40,7 @@ WPF에서 **트리거(Trigger)**는 특정 이벤트나 속성 값의 변화가 
 
 ---
 
-## 데이터 트리거(DataTrigger)를 통한 컨트롤 상태 변경
+## (DataTrigger) 
 
 **데이터 트리거(DataTrigger)**는 특정 데이터의 상태나 다른 컨트롤의 속성 값이 변경될 때 이를 감지하여 UI의 스타일 또는 상태를 변경한다. 예를 들어, 체크박스를 선택하면 버튼의 글자 색상과 활성 상태를 변경하는 방법을 아래에서 확인할 수 있다.
 
@@ -65,11 +65,11 @@ WPF에서 **트리거(Trigger)**는 특정 이벤트나 속성 값의 변화가 
 
 ---
 
-## INotifyPropertyChanged와 데이터 트리거 활용
+## INotifyPropertyChanged 
 
 데이터 트리거는 MVVM 패턴에서 ViewModel의 속성 값 변경에 따라 View를 동적으로 변경하는 데 사용된다. **INotifyPropertyChanged** 인터페이스를 통해 데이터의 변화를 View에 즉시 반영할 수 있다.
 
-### ViewModel 클래스 생성 과정
+### ViewModel 
 
 MVVM 패턴을 명확히 활용하기 위해 ViewModel 클래스는 일반적으로 프로젝트 내의 `ViewModels`라는 별도의 폴더에 생성한다. 다음과 같은 순서를 따른다.
 
@@ -77,7 +77,7 @@ MVVM 패턴을 명확히 활용하기 위해 ViewModel 클래스는 일반적으
 2. `ViewModels` 폴더를 마우스 오른쪽 버튼으로 클릭하고, **추가 → 클래스**를 선택한다.
 3. 클래스 이름을 `MainViewModel`로 입력하고 추가 버튼을 클릭한다.
 
-### MainViewModel 클래스 작성 예제
+### MainViewModel 
 
 ```csharp
 using System;
@@ -113,7 +113,7 @@ namespace WpfAppProject.ViewModels
 }
 ```
 
-### View와 ViewModel 연결
+### View ViewModel 
 
 아래는 MainWindow 코드에서 ViewModel과 View를 연결하는 방법이다.
 
@@ -131,7 +131,7 @@ private void btnTest1_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### 데이터 트리거를 이용한 상태 변경
+### 
 
 아래 예제는 프로그레스 바의 값이 100일 때 자동으로 프로그레스 바를 숨기도록 하는 데이터 트리거 설정 방법이다.
 

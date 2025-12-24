@@ -10,13 +10,13 @@ tags: [c++, mfc, thread, timer]
 
 - 최초 작성일: 2022년 3월 23일(수)
 
-## 목적
+## 
 
 - 간단한 예제를 통해 쓰레드를 활용한 타이머를 구현해보자.
 
 <br/>
 
-## 구현
+## 
 
 아래와 같이 간단한 다이얼로그를 만들어주자. 현재 시간이 출력되는 Static Text를 하나 생성해주고, 쓰레드의 Start와 Stop을 위한 버튼을 2개 만들어준다.
 
@@ -113,7 +113,7 @@ UINT CThreadEXDlg::TimeThread(LPVOID _mothod)
 
 <br/>
 
-## 구현2
+## 2
 
 ```c++
 UINT CThreadEXDlg::TimeThread(LPVOID _mothod)
@@ -170,7 +170,7 @@ void print_time(struct tm* now, int tail)
 
 <br/>
 
-## 구현3
+## 3
 
 아래의 코드 커서 위치를 지정하는 부분을 지워보자.
 

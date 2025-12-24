@@ -6,13 +6,13 @@ categories: [Dev, CSharp]
 tags: [c#, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
 ---
 
-# 다익스트라 (Dijkstra) 최단 경로 알고리즘 (Graph)
+# (Dijkstra) (Graph)
 
 - 최초 작성일: 2023년 1월 13일(금)
 
-## 내용
+## 
 
-## 개념
+## 
 
 - 가중치 값을 갖는 경로의 경우 사용할 수 있다.
 - 그 정보가 정말로 최단 거리라는 보장이 없기 때문에 미리 예약된 지점도 언제든지 뒤바뀔 수 있다. 
@@ -20,9 +20,9 @@ tags: [c#, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
 
 <br/>
 
-## 실습
+## 
 
-### Dijistra 함수
+### Dijistra 
 
 ```c#
   public void Dijikstra(int start)
@@ -88,7 +88,7 @@ tags: [c#, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
 
 <br/>
 
-### 풀소스
+### 
 
 ```c#
 using System;

@@ -6,17 +6,17 @@ categories: [Dev, MFC]
 tags: [c++, mfc, CString]
 ---
 
-# [MFC] CSting 클래스
+# [MFC] CSting 
 
 - 최초 작성일: 2022년 2월 25일 (금)
 
-## 설명
+## 
 
 CString 클래스는 문자열을 관리하는 클래스이다.
 
 <br/>
 
-## CString 멤버 함수
+## CString 
 
 |멤버 함수|설명|
 |---|---|
@@ -39,7 +39,7 @@ CString 클래스는 문자열을 관리하는 클래스이다.
 
 <br/>
 
-## CString 변환 함수
+## CString 
 
 (1) atoi() : char형을 int(부호있는 2byte 정수) 로 변환
 (2) atol() : char형을 long(4byte 정수) 로 변환

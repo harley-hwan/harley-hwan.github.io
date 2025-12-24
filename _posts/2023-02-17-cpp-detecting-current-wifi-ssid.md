@@ -6,11 +6,11 @@ categories: [Dev, C++]
 tags: [c++, wifi, ssid, wlanopenhandle, WlanEnumInterfaces, WlanQueryInterface, windows, wlan_intf_opcode_current_connection]
 ---
 
-# 현재 연결된 와이파이의 SSID 검출
+# SSID 
 
 - 최초 작성일: 2023년 2월 17일(금)
 
-## 내용
+## 
 
 ```c++
 #include <iostream>
@@ -73,6 +73,6 @@ int main() {
 
 <br/>
 
-## 결과
+## 
 
 ![image](https://user-images.githubusercontent.com/68185569/219562755-0a57223c-955d-483e-8061-9f8a0e5227df.png)

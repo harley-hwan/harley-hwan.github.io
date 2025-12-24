@@ -6,7 +6,7 @@ categories: [Dev, Docker]
 tags: [docker, installation, configuration, devops, containerization, git-bash, winpty]
 ---
 
-# Docker 실전 가이드: 설치와 환경 구성
+# Docker : 
 - 최초 작성일: 2024년 10월 24일 (금)
 - 수정일: 2024년 11월 4일 (월)
 - Docker 버전: 24.0.6
@@ -14,9 +14,9 @@ tags: [docker, installation, configuration, devops, containerization, git-bash, 
 
 <br>
 
-## Git 및 Git Bash 설정
+## Git Git Bash 
 
-### Git 설치
+### Git 
 Windows 환경에서 Docker를 효과적으로 사용하기 위해서는 먼저 Git과 Git Bash를 설치해야 한다.
 
 1. **Git 다운로드 및 설치**
@@ -33,7 +33,7 @@ Windows 환경에서 Docker를 효과적으로 사용하기 위해서는 먼저 
 
    &nbsp;
 
-### Git Bash 환경설정과 winpty 이해
+### Git Bash winpty 
 
 1. **winpty가 필요한 이유**
    - Git Bash는 MSYS2 기반의 UNIX-like 환경을 Windows에서 제공
@@ -79,9 +79,9 @@ Windows 환경에서 Docker를 효과적으로 사용하기 위해서는 먼저 
 
    &nbsp;
 
-## 개발 환경 구성
+## 
 
-### Visual Studio Code 설치
+### Visual Studio Code 
 효율적인 개발을 위해 VS Code를 설치하고 필요한 확장을 구성한다.
 
 1. **VS Code 설치**
@@ -107,7 +107,7 @@ Windows 환경에서 Docker를 효과적으로 사용하기 위해서는 먼저 
 
    &nbsp;
 
-### Docker Desktop 설치
+### Docker Desktop 
 Windows에서 Docker를 사용하기 위해 Docker Desktop을 설치한다.
 
 1. **사전 준비사항 확인**
@@ -125,7 +125,7 @@ Windows에서 Docker를 사용하기 위해 Docker Desktop을 설치한다.
 
    &nbsp;
 
-### 프로젝트 workspace 구성
+### workspace 
 
 1. **작업 디렉토리 생성**
    ```bash
@@ -192,7 +192,7 @@ Windows에서 Docker를 사용하기 위해 Docker Desktop을 설치한다.
 
    &nbsp;
 
-### 개발 환경 사용 팁
+### 
 1. **VS Code 통합 터미널 설정**
    - VS Code에서 `Ctrl + `` 로 터미널 열기
    - 기본 터미널을 Git Bash로 설정하기:
@@ -210,9 +210,9 @@ Windows에서 Docker를 사용하기 위해 Docker Desktop을 설치한다.
 
    &nbsp;
 
-## Docker 설치 가이드
+## Docker 
 
-### Windows 환경 설치
+### Windows 
 
 1. **시스템 요구사항 확인**
    - Windows 10 Pro, Enterprise, Education (Build 16299 이상)
@@ -252,7 +252,7 @@ Windows에서 Docker를 사용하기 위해 Docker Desktop을 설치한다.
 
    &nbsp;
 
-### Linux(Ubuntu) 환경 설치
+### Linux(Ubuntu) 
 Linux 환경에서는 패키지 관리자를 통해 Docker를 설치한다. 여기서는 Ubuntu 22.04 LTS를 기준으로 설명한다.
 
 1. **시스템 업데이트 및 필수 패키지 설치**
@@ -304,7 +304,7 @@ Linux 환경에서는 패키지 관리자를 통해 Docker를 설치한다. 여�
 
    &nbsp;
 
-### Mac 환경 설치
+### Mac 
 Mac 환경에서는 Docker Desktop을 통해 Docker를 설치하고 관리한다.
 
 1. **시스템 요구사항**
@@ -331,9 +331,9 @@ Mac 환경에서는 Docker Desktop을 통해 Docker를 설치하고 관리한다
 
 <br>
 
-## 초기 설정
+## 
 
-### Docker 서비스 설정
+### Docker 
 Docker 데몬의 기본 설정을 최적화하고 보안을 강화한다.
 
 1. **데몬 설정 파일 구성**
@@ -375,7 +375,7 @@ Docker 데몬의 기본 설정을 최적화하고 보안을 강화한다.
 
 <br>
 
-### 네트워크 설정
+### 
 Docker의 네트워크는 컨테이너 간 통신과 외부 연결을 관리한다.
 
 1. **네트워크 드라이버 이해**
@@ -404,9 +404,9 @@ Docker의 네트워크는 컨테이너 간 통신과 외부 연결을 관리한�
    
 <br>
 
-## 기본 명령어 실습
+## 
 
-### 컨테이너 생명주기 관리
+### 
 컨테이너의 전체 라이프사이클을 관리하는 기본 명령어들이다.
 
 1. **컨테이너 실행과 관리**
@@ -462,7 +462,7 @@ Docker의 네트워크는 컨테이너 간 통신과 외부 연결을 관리한�
 
    &nbsp;
 
-### 이미지 관리
+### 
 Docker 이미지의 생성, 저장, 배포를 위한 명령어들이다.
 
 1. **이미지 기본 관리**
@@ -506,9 +506,9 @@ Docker 이미지의 생성, 저장, 배포를 위한 명령어들이다.
 
    &nbsp;
 
-## 실전 컨테이너 구성
+## 
 
-### 웹 애플리케이션 스택 구성
+### 
    ```yaml
    # docker-compose.yml
    version: '3.8'
@@ -550,7 +550,7 @@ Docker 이미지의 생성, 저장, 배포를 위한 명령어들이다.
 
    &nbsp;
 
-### CI/CD 파이프라인 구성
+### CI/CD 
    ```yaml
    # .gitlab-ci.yml
    stages:
@@ -578,7 +578,7 @@ Docker 이미지의 생성, 저장, 배포를 위한 명령어들이다.
 
    &nbsp;
 
-### 백업 및 복구 시스템
+### 
    ```bash
    #!/bin/bash
    # backup.sh
@@ -596,9 +596,9 @@ Docker 이미지의 생성, 저장, 배포를 위한 명령어들이다.
 
    &nbsp;
    
-## 문제 해결 가이드
+## 
 
-### 일반적인 문제와 해결
+### 
 1. **컨테이너 시작 실패**
    ```bash
    # 로그 확인
@@ -626,7 +626,7 @@ Docker 이미지의 생성, 저장, 배포를 위한 명령어들이다.
 
    &nbsp;
 
-## 결론
+## 
 
 Docker 개발 환경을 체계적으로 구축하는 방법을 정리한다.
 

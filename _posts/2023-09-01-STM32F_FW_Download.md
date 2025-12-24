@@ -10,7 +10,7 @@ tags: [linux, STM32F, firmware, download, bash]
 
 - 최초 작성일: 2023년 9월 1일(금)
 
-## 코드
+## 
 
 ```bash
 #!/bin/bash
@@ -33,7 +33,7 @@ else
  exit 0
 fi
 
-# STEP2 : Wait 5 second until detect STM DUT  
+# STEP2 : Wait 5 second until detect STM DUT 
 while [ $COUNT1 -ne $UNTIL ]
  do
   USBis=`lsusb | grep -i "STM" | gawk -F" " '{printf $8}'`
@@ -66,11 +66,11 @@ exit 0
 
 <br/>
 
-## 설명
+## 
 
 이 Bash 스크립트는 STM32F 디지털 보드의 펌웨어를 다운로드하기 위한 프로세스를 제공한다.
 
-#### **1. 주석 및 초기화**
+#### **1. **
 
 ```bash
 #!/bin/bash
@@ -87,7 +87,7 @@ UNTIL=10
 - `COUNT1`은 초기값 0을 갖는 카운터 변수.
 - `UNTIL` 변수는 값 10을 갖고, 어떤 조건이 충족될 때까지 대기할 최대 시간을 설정하는데 사용됨.
 
-#### **2. 펌웨어 파일 확인 및 다운로드**
+#### **2. **
 
 ```bash
 # STEP1 : FW File check(???())
@@ -103,10 +103,10 @@ fi
 - 파일이 존재한다면, 이 파일은 STM32F 펌웨어 파일로 간주되며, 펌웨어 다운로드 작업 수행.
 - 만약 파일이 존재하지 않으면, 오류 메시지가 출력되며 스크립트 종료.
 
-#### **3. STM DUT 확인**
+#### **3. STM DUT **
 
 ```bash
-# STEP2 : Wait 5 second until detect STM DUT  
+# STEP2 : Wait 5 second until detect STM DUT 
 while [ $COUNT1 -ne $UNTIL ]
  ...
  done
@@ -118,7 +118,7 @@ while [ $COUNT1 -ne $UNTIL ]
 - 찾아낸 장치의 Vendor ID (`VEN`)와 Product ID (`PRO`)를 추출한다.
 - 만약 Vendor ID가 "0483"이고 Product ID가 "df11"인 경우, STM DUT가 감지된 것으로 판단하며, 펌웨어 다운로드 작업이 수행된다.
 
-#### **4. 펌웨어 다운로드**
+#### **4. **
 
 ```bash
 sudo dfu-util -a 0 -D $FILE | tee /home/pi/test/fw_down.log
@@ -127,7 +127,7 @@ sudo dfu-util -a 0 -D $FILE | tee /home/pi/test/fw_down.log
 - `dfu-util`은 USB DFU (Device Firmware Upgrade) 프로토콜을 사용하여 펌웨어를 다운로드하는 도구이다.
 - 다운로드한 내용은 `/home/pi/test/fw_down.log` 파일에 로깅된다.
 
-#### **5. 펌웨어 다운로드 완료 확인 및 장치 재설정**
+#### **5. **
 
 ```bash
 sudo /home/pi/test/check_fw_finish.sh

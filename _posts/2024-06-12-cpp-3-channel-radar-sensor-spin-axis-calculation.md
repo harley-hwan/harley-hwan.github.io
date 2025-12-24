@@ -6,19 +6,19 @@ categories: [Dev, C++]
 tags: [c++, programming, radar sensor, phase difference, spin axis]
 ---
 
-# 3채널 레이더 센서로 물체 운동의 스핀축 계산하기
+# 3 
 
 - 최초 작성일: 2024년 6월 12일 (수)
   
-## 내용
+## 
 
-### 3채널 레이더 센서로 물체 운동의 스핀축 계산하기
+### 3 
 
 3개 채널의 레이더 센서 수신부(RX)를 'ㄴ' 형태로 배치하고, 위 아래 채널 두 개로 상하 위상차를 구하고, 좌우 채널 두 개로 좌우 위상차를 구한 뒤, 해당 상하 위상차와 좌우 위상차 데이터를 이용해 스핀축을 계산하는 원리를 설명한다.
 
 <br/>
 
-#### 레이더 센서 배치 및 위상차 측정
+#### 
 
 1. **센서 배치**:
    - 3개의 레이더 센서를 'ㄴ' 형태로 배치한다.
@@ -31,7 +31,7 @@ tags: [c++, programming, radar sensor, phase difference, spin axis]
      
 <br/>
 
-#### 변수의 의미
+#### 
 
 1. **lambda ($$\lambda$$)**: 파장
    - `lambda`는 레이더 신호의 파장을 나타낸다. 파장은 주파수와 속도의 관계를 나타내며, 특정 주파수의 신호가 공기 중에서 진행될 때의 거리이다.
@@ -47,7 +47,7 @@ tags: [c++, programming, radar sensor, phase difference, spin axis]
      
 <br/>
 
-#### 동작 원리
+#### 
 
 위상차를 이용하여 각도를 계산하는 기본 원리는 삼각법과 파동의 간섭 원리를 사용한다. 공의 움직임으로 인한 위상차를 통해 공의 운동 방향을 추정할 수 있다.
 
@@ -80,7 +80,7 @@ tags: [c++, programming, radar sensor, phase difference, spin axis]
      
 <br/>
 
-#### 예시 코드
+#### 
 
 ```cpp
 double calculateSpinAxisAngle(double phaseV, double phaseH) {

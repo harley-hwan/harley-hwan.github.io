@@ -6,7 +6,7 @@ categories: [Project]
 tags: [eqtransformer, deap learning, machine learning, python, big data science]
 ---
 
-# 레이더 센서 신호 처리 및 검증 툴 (MFC)
+# (MFC)
 
 - 최초 작성일: 2022년 3월 7일(월)
 - 프로젝트명: 레이더센서 신호 처리 및 검증 툴 (MFC 프로그래밍)

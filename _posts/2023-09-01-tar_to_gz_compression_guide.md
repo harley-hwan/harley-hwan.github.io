@@ -6,11 +6,11 @@ categories: [Dev, Linux]
 tags: [linux, tar, gzip, bash, 압축]
 ---
 
-# Bash를 사용하여 파일 아카이빙 및 압축하기 가이드
+# Bash 
 
 - 최초 작성일: 2023년 9월 1일(금)
 
-## 개요
+## 
 
 리눅스에서 파일을 아카이빙 및 압축하는 bash 스크립트. 
 
@@ -18,7 +18,7 @@ tags: [linux, tar, gzip, bash, 압축]
 
 <br/>
 
-## 코드
+## 
 
 ```bash
 #!/bin/bash
@@ -47,7 +47,7 @@ fi
 
 <br/>
 
-## 설명
+## 
 
 1. **변수 초기화**:
     ```bash

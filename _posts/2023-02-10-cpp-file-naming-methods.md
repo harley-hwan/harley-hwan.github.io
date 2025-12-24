@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [c++, file, stream, formatting, mfc]
 ---
 
-# 동적 파일명 생성 및 파일 열기 구현
+# 
 - 최초 작성일: 2023년 2월 10일 (금)
 
 <br/>
 
-## 소개
+## 
 파일을 열 때 시리얼 번호나 날짜 등의 동적 데이터를 포함한 파일명을 생성하는 방법을 구현한다. MFC의 CString과 C 스타일의 sprintf를 사용하는 두 가지 방식을 소개한다.
 
 <br/>
 
-## MFC 구현
+## MFC 
 CString 클래스의 Format 함수를 사용한 구현이다.
 
 ```cpp
@@ -26,7 +26,7 @@ fileName.Format(_T("Result_%s.txt"), Serialno.c_str());
 fout.open(fileName_res);
 ```
 
-#### 구현 특징:
+#### :
 1. **CString 사용**
    - MFC의 CString 클래스를 활용한다
    - 유니코드를 자동으로 지원한다
@@ -37,7 +37,7 @@ fout.open(fileName_res);
 
 <br/>
 
-## C 스타일 구현
+## C 
 sprintf_s 함수를 사용한 구현이다.
 
 ```c
@@ -47,7 +47,7 @@ sprintf_s(filename, "Result_%s.txt", Serialno);
 fout.open(filename);
 ```
 
-#### 구현 특징:
+#### :
 1. **버퍼 관리**
    - 고정 크기 버퍼를 사용한다
    - 버퍼 오버플로우 방지를 위해 sprintf_s를 사용한다
@@ -58,7 +58,7 @@ fout.open(filename);
 
 <br/>
 
-## 구현 비교
+## 
 
 1. **안전성**
    - C 스타일: sprintf_s로 버퍼 오버플로우 방지

@@ -6,18 +6,18 @@ categories: [Dev, C++]
 tags: [c++, printer, windows, spooler, labelprinter, tsc, zpl]
 ---
 
-# Windows 프린터 스풀러를 이용한 라벨 프린터 제어
+# Windows 
 - 최초 작성일: 2023년 3월 10일 (금)
 - 참고: [ZPL Programming Guide](https://www.zebra.com/content/dam/zebra_new_ia/en-us/manuals/printers/common/programming/zpl-zbi2-pm-en.pdf)
 
 <br/>
 
-## 소개
+## 
 Windows 프린터 스풀러를 사용하여 TSC P200 라벨 프린터를 제어하는 방법을 구현한다. 프린터와의 통신은 RAW 모드를 사용하며, TSPL과 ZPL 두 가지 명령어 체계를 모두 지원한다.
 
 <br/>
 
-## 기본 구현 - TSPL
+## - TSPL
 기본적인 TSPL(TSC Printer Language) 명령어를 사용하는 구현이다.
 
 ```cpp
@@ -91,7 +91,7 @@ int main() {
 }
 ```
 
-#### 구현 세부사항:
+#### :
 1. **프린터 연결**
    - OpenPrinterW 함수로 프린터와 연결한다
    - 프린터 이름은 시스템에 설치된 이름과 일치해야 한다
@@ -106,7 +106,7 @@ int main() {
 
 <br/>
 
-## 확장 구현 - ZPL
+## - ZPL
 Zebra 프린터 호환을 위한 ZPL(Zebra Programming Language) 명령어 구현이다.
 
 ```cpp
@@ -120,7 +120,7 @@ Zebra 프린터 호환을 위한 ZPL(Zebra Programming Language) 명령어 구�
         "^PQ1,0,1,Y^XZ\n";
 ```
 
-#### ZPL 명령어 설명:
+#### ZPL :
 1. **기본 명령어**
    - ^XA: 라벨 형식 시작
    - ^XZ: 라벨 형식 종료
@@ -142,7 +142,7 @@ Zebra 프린터 호환을 위한 ZPL(Zebra Programming Language) 명령어 구�
 
 <br/>
 
-## 주요 함수 설명
+## 
 
 1. **OpenPrinterW**
    - Windows 프린터 연결을 시작한다

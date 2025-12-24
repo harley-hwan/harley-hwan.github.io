@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm_watch]
 ---
 
-# 원하는 파일 생성 이벤트 모니터링
+# 
 - 최초 작성일: 2023년 7월 27일 (수)
 
-## 내용
+## 
 
 리눅스에서 제공하는 inotify 기능을 사용하여 특정 디렉터리에서 파일 생성 이벤트를 모니터링하는 프로그램. 
 
@@ -17,7 +17,7 @@ tags: [c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm
 
 <br/>
 
-### 작동 방식
+### 
 
 - 먼저, inotify 시스템을 초기화하고, 감시할 디렉토리(/path)를 등록한다. 그 후, 무한루프를 돌며 read() 함수를 통해 inotify 이벤트를 읽는다.
 - 무한루프를 돌며 버퍼에서 inotify 이벤트를 하나씩 처리하며, 만약 이 이벤트가 파일 생성(IN_CREATE) 이벤트이고 디렉토리가 아니면, 그 파일의 확장자가 'rbf'인지 확인합니다. (확장자는 원하는대로 변경 가능)
@@ -27,7 +27,7 @@ tags: [c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm
 
 <br/>
 
-## 코드
+## 
 
 ```c++
 #include <iostream>

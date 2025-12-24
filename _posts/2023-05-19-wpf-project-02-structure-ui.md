@@ -6,10 +6,10 @@ categories: [Dev, WPF]
 tags: [c#, wpf, ui, xaml, visualstudio]
 ---
 
-# WPF 프로젝트의 구조 및 UI 구성
+# WPF UI 
 - 최초 작성일: 2023년 5월 19일 (금)
 
-## Visual Studio에서 WPF 프로젝트 시작하기
+## Visual Studio WPF 
 
 WPF 애플리케이션을 개발하기 위해서는 먼저 Visual Studio를 실행하고 새로운 WPF 프로젝트를 생성해야 한다.
 
@@ -23,7 +23,7 @@ WPF 애플리케이션을 개발하기 위해서는 먼저 Visual Studio를 실�
 
 ---
 
-## 솔루션 탐색기 구조 이해
+## 
 
 Visual Studio의 **솔루션 탐색기**에서 기본적인 프로젝트 구조를 확인할 수 있다.
 
@@ -36,9 +36,9 @@ Visual Studio의 **솔루션 탐색기**에서 기본적인 프로젝트 구조�
 
 ---
 
-## XAML과 UI 구성 요소
+## XAML UI 
 
-### XAML 파일 이해
+### XAML 
 
 XAML은 WPF에서 UI를 구성하는 XML 기반의 마크업 언어이다. UI 요소를 선언적으로 정의할 수 있으며, `MainWindow.xaml` 파일을 열어보면 기본적인 구조를 확인할 수 있다.
 
@@ -53,7 +53,7 @@ XAML은 WPF에서 UI를 구성하는 XML 기반의 마크업 언어이다. UI �
   </Window>
   ```
 
-### 도구 상자 활용
+### 
 
 Visual Studio의 **도구 상자 (Toolbox)** 에는 WPF에서 사용할 수 있는 다양한 UI 컨트롤이 포함되어 있다.
 
@@ -68,7 +68,7 @@ Visual Studio의 **도구 상자 (Toolbox)** 에는 WPF에서 사용할 수 있�
 
 ---
 
-## 버튼 및 이벤트 핸들러 추가
+## 
 
 1. `MainWindow.xaml`에서 버튼을 추가한 후 속성 창에서 `Click` 이벤트를 더블 클릭한다.
 2. `MainWindow.xaml.cs`에서 자동으로 생성된 이벤트 핸들러에 코드를 추가한다.
@@ -84,7 +84,7 @@ Visual Studio의 **도구 상자 (Toolbox)** 에는 WPF에서 사용할 수 있�
 
 ---
 
-## 라벨 (Label) 추가 및 수정
+## (Label) 
 
 라벨을 추가하고, 코드에서 동적으로 내용을 변경해 보자.
 
@@ -107,7 +107,7 @@ Visual Studio의 **도구 상자 (Toolbox)** 에는 WPF에서 사용할 수 있�
 
 ---
 
-## 앱 실행 원리 이해
+## 
 
 WPF 애플리케이션이 실행될 때 **App.xaml** 파일이 초기 설정을 담당한다.
 

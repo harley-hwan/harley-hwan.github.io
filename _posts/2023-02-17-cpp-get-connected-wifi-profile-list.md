@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [c++, windows, wlan, api, profile, network]
 ---
 
-# Windows WLAN API를 이용한 WiFi 프로필 검출
+# Windows WLAN API WiFi 
 - 최초 작성일: 2023년 2월 17일 (금)
 
 <br/>
 
-## 소개
+## 
 시스템 커맨드 "netsh wlan show profiles"의 기능을 프로그래밍 방식으로 구현한다. WLAN API를 사용하여 현재 연결된 Wi-Fi와 일치하는 사용자 프로필을 검출한다.
 
 <br/>
 
-## 기본 구현
+## 
 WlanAPI를 사용하여 WiFi 프로필을 검출하는 기본 구현이다.
 
 ```cpp
@@ -104,7 +104,7 @@ int main() {
 }
 ```
 
-#### 구현 설명:
+#### :
 1. **초기화 및 설정**
    - WlanOpenHandle로 WLAN 클라이언트를 초기화한다
    - WlanEnumInterfaces로 무선 인터페이스 목록을 가져온다
@@ -117,12 +117,12 @@ int main() {
    - WlanGetProfileList로 모든 프로필을 가져온다
    - 현재 연결된 프로필과 다른 프로필을 구분하여 출력한다
 
-#### 실행 결과:
+#### :
 ![기본 구현 결과](https://user-images.githubusercontent.com/68185569/219573236-74c8eccc-7a33-4673-a126-c28e20bdaaa5.png)
 
 <br/>
 
-## 문제 해결 및 개선
+## 
 WlanQueryInterface 함수 호출 시 발생하는 오류를 수정한 개선된 구현이다.
 
 ```cpp
@@ -137,7 +137,7 @@ ret = WlanQueryInterface(
     NULL);
 ```
 
-#### 주요 수정사항:
+#### :
 1. **매개변수 타입 수정**
    - (PVOID)&pConnectInfo를 (PVOID*)&pConnectInfo로 수정
    - 포인터의 포인터로 올바르게 캐스팅
@@ -152,7 +152,7 @@ ret = WlanQueryInterface(
 
 <br/>
 
-## 특정 프로필 검출
+## 
 특정 문자열로 시작하는 프로필만 선택적으로 검출하는 구현이다.
 
 ```cpp
@@ -169,7 +169,7 @@ for (DWORD j = 0; j < pProfileList->dwNumberOfItems; j++) {
 }
 ```
 
-#### 구현 특징:
+#### :
 1. **프로필 필터링**
    - compare 함수로 문자열 시작 부분 비교
    - 특정 접두사를 가진 프로필만 선택
@@ -178,7 +178,7 @@ for (DWORD j = 0; j < pProfileList->dwNumberOfItems; j++) {
    - 매칭된 프로필 정보 출력
    - 선택된 프로필 별도 표시
 
-#### 실행 결과:
+#### :
 ![선택적 프로필 검출 결과](https://user-images.githubusercontent.com/68185569/219586052-a188aa65-f17a-44b0-bef6-bf65ea401082.png)
 
 이 구현을 통해 Windows 환경에서 Wi-Fi 프로필을 효과적으로 검출하고 관리할 수 있다. WLAN API의 다양한 함수들을 활용하여 현재 연결 상태 확인, 프로필 목록 획득, 특정 프로필 선택 등의 기능을 구현했다.

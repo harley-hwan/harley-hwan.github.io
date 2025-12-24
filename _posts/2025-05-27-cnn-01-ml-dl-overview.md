@@ -8,13 +8,13 @@ tags: [cnn, deep learning, machine learning, python, data science]
 
 ----------------------------------------------
 
-# 머신 러닝의 이해 및 딥러닝의 개요
+# 
 
 * 최초 작성일: 2025년 5월 27일 (화)
 
-## 1. 머신러닝과 딥러닝의 차이
+## 1. 
 
-### AI, 머신러닝, 딥러닝의 관계
+### AI, , 
 
 먼저 인공지능(AI), 머신러닝, 딥러닝의 관계를 이해하는 것이 중요하다. 이 세 개념은 서로 포함 관계에 있다.
 
@@ -28,7 +28,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 - **머신러닝(ML)**: AI의 하위 분야로, 시간이 지남에 따라 더 많은 데이터에 노출되면서 성능이 향상되는 알고리즘이다
 - **딥러닝(DL)**: 머신러닝의 하위 분야로, 다층 신경망이 방대한 양의 데이터로부터 학습하는 기술이다
 
-### 머신러닝이란?
+### ?
 
 머신러닝(Machine Learning)은 **명시적으로 프로그래밍하지 않고도** 데이터로부터 학습하여 예측이나 의사결정을 내리는 기술이다. 전통적인 프로그래밍이 규칙을 직접 코딩하는 방식이라면, 머신러닝은 데이터와 정답을 제공하면 컴퓨터가 스스로 규칙을 찾아내는 방식이다.
 
@@ -36,11 +36,11 @@ tags: [cnn, deep learning, machine learning, python, data science]
 - **전통적 방법**: "광고", "무료", "클릭" 등의 단어가 포함되면 스팸으로 분류하는 규칙을 직접 코딩한다
 - **머신러닝 방법**: 스팸 메일과 정상 메일의 예시를 대량으로 제공하고, 컴퓨터가 스스로 패턴을 찾도록 한다
 
-### 딥러닝이란?
+### ?
 
 딥러닝(Deep Learning)은 머신러닝의 한 분야로, **인공신경망**을 여러 계층으로 쌓아 올려 데이터의 **추상적 특징**을 자동으로 학습한다. "딥(Deep)"이라는 이름은 신경망의 층이 깊다는 의미에서 유래했다.
 
-### 주요 차이점 정리
+### 
 
 머신러닝과 딥러닝의 핵심적인 차이는 **특징 추출 방식**에 있다:
 
@@ -56,7 +56,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 
 ---
 
-## 2. 지도학습 vs 비지도학습
+## 2. vs 
 
 머신러닝의 학습 방법은 데이터에 정답(레이블)이 있는지 여부에 따라 크게 두 가지로 나뉜다.
 
@@ -65,7 +65,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 <p align="center"><em>그림 2: 지도학습과 비지도학습의 프로세스 비교</em></p>
 </div>
    
-### 지도학습 (Supervised Learning)
+### (Supervised Learning)
 
 **지도학습**은 입력 데이터에 대한 **정답 레이블**이 주어진 상태에서 모델을 학습시키는 방법이다. 위 그림의 상단 프로세스가 지도학습을 보여준다.
 
@@ -84,7 +84,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 - **분류 문제**: 이메일 스팸 필터, 이미지 속 동물 분류, 질병 진단
 - **회귀 문제**: 집값 예측, 주식 가격 예측, 날씨 예보
 
-### 비지도학습 (Unsupervised Learning)
+### (Unsupervised Learning)
 
 **비지도학습**은 **정답이 없는 데이터**를 다루며, 주어진 입력 데이터들에서 **숨겨진 패턴이나 구조**를 스스로 발견한다. 위 그림의 하단 프로세스가 비지도학습을 보여준다.
 
@@ -104,7 +104,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 - **차원 축소**: 데이터 시각화, 특징 압축
 - **이상 탐지**: 신용카드 사기 감지, 제조 불량품 검출
 
-### 두 방법의 선택 기준
+### 
 
 | 상황 | 적합한 방법 | 이유 |
 |------|------------|------|
@@ -115,11 +115,11 @@ tags: [cnn, deep learning, machine learning, python, data science]
 
 ---
 
-## 3. 딥러닝 주요 구조 소개 (ANN, CNN, RNN)
+## 3. (ANN, CNN, RNN)
 
 딥러닝에서는 문제의 특성에 따라 다양한 신경망 구조를 사용한다. 가장 대표적인 세 가지 구조를 살펴보자.
 
-### 인공 신경망 (ANN - Artificial Neural Network)
+### (ANN - Artificial Neural Network)
 
 **인공 신경망**은 가장 기본적인 형태의 신경망으로, 생물학적 뉴런의 작동 방식을 모방한 구조다.
 
@@ -149,7 +149,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 - 간단한 분류 및 회귀 문제
 - 다른 신경망의 기본 구성 요소
 
-### 합성곱 신경망 (CNN - Convolutional Neural Network)
+### (CNN - Convolutional Neural Network)
 
 **합성곱 신경망**은 **이미지나 영상 데이터 처리**에 특화된 신경망이다. 인간의 시각 처리 과정을 모방한 구조를 가지고 있다.
 
@@ -185,7 +185,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 - 의료 영상 분석 (X-ray, MRI)
 - 문자 인식 (OCR)
 
-### 순환 신경망 (RNN - Recurrent Neural Network)
+### (RNN - Recurrent Neural Network)
 
 **순환 신경망**은 **시간적 순서가 있는 데이터**를 처리하기 위한 신경망이다. 이전 정보를 기억하고 활용할 수 있는 구조를 가지고 있다.
 
@@ -222,7 +222,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 - 시계열 예측 (주가, 날씨)
 - 텍스트 생성 (작문, 코드 생성)
 
-### 세 가지 신경망 비교
+### 
 
 | 구조 | 특화 분야 | 입력 데이터 | 주요 특징 | 대표 응용 |
 |------|-----------|-------------|-----------|-----------|
@@ -232,7 +232,7 @@ tags: [cnn, deep learning, machine learning, python, data science]
 
 ---
 
-## 마무리
+## 
 
 이번 포스트에서는 머신러닝과 딥러닝의 기본 개념과 주요 신경망 구조들을 살펴보았다. 핵심 내용을 정리하면:
 

@@ -6,12 +6,12 @@ categories: [Algorithm, Programmers]
 tags: [programmers, 프로그래머스, algorithm, c++]
 ---
 
-# Programmers 로또의 최고 순서와 최저 순위
+# Programmers 
 
 - 최초 작성일: 2021년 10월 01일(금)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/77484>
 
-## 문제 설명
+## 
 
 - 로또 6/45`(이하 '로또'로 표기)는 1부터 45까지의 숫자 중 6개를 찍어서 맞히는 대표적인 복권입니다. 아래는 로또의 순위를 정하는 방식입니다. 
 
@@ -42,7 +42,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
 - 민우가 구매한 로또 번호를 담은 배열 lottos, 당첨 번호를 담은 배열 win_nums가 매개변수로 주어집니다. 이때, 당첨 가능한 최고 순위와 최저 순위를 차례대로 배열에 담아서 return 하도록 solution 함수를 완성해주세요.
 
-## 제한사항
+## 
 - lottos는 길이 6인 정수 배열입니다.
 - lottos의 모든 원소는 0 이상 45 이하인 정수입니다.
   - 0은 알아볼 수 없는 숫자를 의미합니다.
@@ -53,7 +53,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
   - win_nums에는 같은 숫자가 2개 이상 담겨있지 않습니다.
   - win_nums의 원소들은 정렬되어 있지 않을 수도 있습니다.
 
-## 입출력
+## 
 
 | lottos                | win_nums                 | result |
 | --------------------- | ------------------------ | ------ |
@@ -61,7 +61,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 | [0, 0, 0, 0, 0, 0]    | [38, 19, 20, 40, 15, 25] | [1, 6] |
 | [45, 4, 35, 20, 3, 9] | [20, 9, 3, 45, 4, 35]    | [1, 1] |
 
-## 풀이 방법
+## 
 
 - 이 문제는 lottos 벡터의 원소와 win_nums 벡터의 원소를 모두 돌며 비교하며 같을 때 count를 1 증가 해주고, lottos 벡터에서 0을 만났을 때 zero_count를 1 증가 해준다.
 - 그런 후, 출력 시 7-(일치하는 숫자의 카운트 + lottos의 0의 갯수) 해주면 최고 순위를 구할 수 있다.

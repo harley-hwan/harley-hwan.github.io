@@ -10,7 +10,7 @@ tags: [linux, cat, grep, gawk, XML, parsing]
 
 - 최초 작성일: 2023년 8월 23일(수)
 
-## 코드
+## 
 
 ```bash
 IP1=`cat /Info.xml|grep -i "RFCH"|gawk -F"<" '{print $2}'|gawk -F">" '{print $2}'`
@@ -18,9 +18,9 @@ IP1=`cat /Info.xml|grep -i "RFCH"|gawk -F"<" '{print $2}'|gawk -F">" '{print $2}
 
 <br/>
 
-## 설명
+## 
 
-### `/Info.xml` 파일에서 "RFCH" 문자열 추출하기
+### `/Info.xml` "RFCH" 
 
 1. **`cat /Info.xml`**:
     - `cat`: 주어진 파일의 내용을 화면에 출력하는 명령어.
@@ -48,7 +48,7 @@ IP1=`cat /Info.xml|grep -i "RFCH"|gawk -F"<" '{print $2}'|gawk -F">" '{print $2}
 
 <br/>
 
-## 예시:
+## :
 
 `/Info.xml`에 아래와 같은 내용이 있다면:
 

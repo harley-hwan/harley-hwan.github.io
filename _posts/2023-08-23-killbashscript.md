@@ -6,11 +6,11 @@ categories: [Dev, Linux]
 tags: [linux, embedded, bash, shell, sh, kill, bash, script]
 ---
 
-# 모든 타켓 프로세스 kill하기 (kill_proc.sh 스크립트)
+# kill (kill_proc.sh )
 
 - 최초 작성일: 2023년 8월 23일(수)
 
-## 코드
+## 
 
 ```bash
 "kill_proc.sh" 31L, 704C
@@ -51,7 +51,7 @@ sleep 2
 
 <br/>
 
-## 설명
+## 
 
 ### **1. Shebang**
 ```bash
@@ -59,7 +59,7 @@ sleep 2
 ```
 - **Shebang(`#!`)**: 스크립트 파일의 첫 줄에 위치하며 해당 스크립트를 어떤 인터프리터로 실행할지를 지정해줍니다. 여기서는 bash 쉘로 실행하라고 지정되어 있다.
 
-### **2. 변수 초기화**
+### **2. **
 ```bash
 FILES=0
 CTIME2=10
@@ -67,7 +67,7 @@ CTIME2=10
 - `FILES`: "proc" 프로세스가 하나도 실행 중이지 않을 때의 기대되는 개수를 나타내는 변수이다. 여기서는 0으로 초기화.
 - `CTIME2`: 초기 값 10이다.
 
-### **3. 타겟 프로세스 정보 추출**
+### **3. **
 ```bash
 KILL="proc"
 COUNT=`ps -ef | grep -i $KILL | grep -v grep | wc -l`
@@ -77,13 +77,13 @@ GETpid=`ps -ef | grep -i $KILL | grep -v grep | gawk NR==$COUNT | gawk -F" " '{p
 - `COUNT`: 현재 시스템에서 실행 중인 "E6Client" 프로세스의 개수를 저장한다.
 - `GETpid`: "proc" 프로세스 중 마지막 프로세스의 PID(Process ID)를 저장한다.
 
-### **4. 스크립트 시작 상태 출력**
+### **4. **
 ```bash
 echo "start[$0 $KILL $COUNT $GETpid]"
 ```
 - 스크립트가 시작될 때의 상태를 출력합니다. 출력되는 정보에는 스크립트의 경로와 이름(`$0`), 타겟 프로세스 이름(`$KILL`), 실행 중인 프로세스의 개수(`$COUNT`), 마지막 프로세스의 PID(`$GETpid`)가 포함된다.
 
-### **5. 조건문을 통한 프로세스 종료**
+### **5. **
 ```bash
 if [ "$COUNT" == "$FILES" ]; then
  echo "not running !!![$0]"
@@ -112,7 +112,7 @@ fi
 ```
 - 조건문 `if`를 종료.
 
-### **6. 스크립트 종료 전 대기**
+### **6. **
 ```bash
 echo "end[$0]"
 ```

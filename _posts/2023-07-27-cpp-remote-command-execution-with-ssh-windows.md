@@ -6,10 +6,10 @@ categories: [Dev, C++]
 tags: [c, c++, vs, windows, C++, libssh2, SSH, Remote Command Execution, Networking]
 ---
 
-# libssh2를 활용한 원격 SSH 연결 및 명령어 실행
+# libssh2 SSH 
 - 최초 작성일: 2023년 7월 27일 (수)
 
-## 내용
+## 
 
 SSH(Secure Shell)를 사용하여 원격 서버에 접속하고, 주어진 명령어를 실행한 뒤 그 결과를 출력하는 작업을 수행하는 코드이다.
 
@@ -24,7 +24,7 @@ SSH(Secure Shell)를 사용하여 원격 서버에 접속하고, 주어진 명�
 
 <br/>
 
-## 코드
+## 
 
 ```c++
 #include <libssh2/include/libssh2.h>

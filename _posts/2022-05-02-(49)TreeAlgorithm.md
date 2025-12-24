@@ -6,13 +6,13 @@ categories: [Dev, CSharp]
 tags: [c#, datastructure, tree, algorihtm, list, add]
 ---
 
-# 트리 (Tree)
+# (Tree)
 
 - 최초 작성일: 2023년 5월 2일(화)
 
-## 내용
+## 
 
-## 개념
+## 
 
 계층적 구조를 갖는 데이터를 표현하기 위한 자료구조
 
@@ -21,13 +21,13 @@ tags: [c#, datastructure, tree, algorihtm, list, add]
 
 <br/>
 
-### 트리의 예시
+### 
 
 ![image](https://user-images.githubusercontent.com/68185569/235040840-3b5e7ef4-37b2-4714-b79f-014385aaa948.png)
 
 <br/>
 
-## 실습 1
+## 1
 
 ```c#
 using System;
@@ -83,7 +83,7 @@ namespace Tree
 
 <br/>
 
-## 결과 1
+## 1
 
 ![image](https://user-images.githubusercontent.com/68185569/235040654-7c28fe41-7e56-4e14-8264-445ca76fcd5a.png)
 
@@ -91,7 +91,7 @@ namespace Tree
 
 <br/>
 
-## 실습 2
+## 2
 
 트리를 전부 출력하는 코드를 작성해보자.
 
@@ -163,7 +163,7 @@ namespace Tree
 
 <br/>
 
-## 결과 2
+## 2
 
 ![image](https://user-images.githubusercontent.com/68185569/235041589-6ce88f2f-74cd-4469-a0b4-f0db7d93e2ea.png)
 
@@ -171,7 +171,7 @@ namespace Tree
 
 <br/>
 
-## 실습 3
+## 3
 
 이번에는 트리의 높이를 구해는 코드이다.
 

@@ -6,7 +6,7 @@ categories: [Dev, C++]
 tags: [C++, Visual Studio, FFT, Cooley-Tukey, 복소수, 재귀]
 ---
 
-# Fast Fourier Transform (FFT) 알고리즘
+# Fast Fourier Transform (FFT) 
 
 Fast Fourier Transform (FFT)는 Discrete Fourier Transform (DFT) 및 그 역변환을 계산하기 위한 효율적인 알고리즘이다.
 
@@ -16,7 +16,7 @@ Fast Fourier Transform (FFT)는 Discrete Fourier Transform (DFT) 및 그 역변�
 
 <br/>
 
-## Cooley-Tukey FFT 알고리즘
+## Cooley-Tukey FFT 
 
 Cooley-Tukey 알고리즘은 크기 N의 DFT를 크기 N/2의 두 개의 작은 DFT로 재귀적으로 나누어 계산 속도를 향상시킨다. 
 
@@ -36,9 +36,9 @@ DFT는 다음 공식으로 정의된다:
 
 <br/>
 
-## C++로 구현하기
+## C++ 
 
-### 1. 헤더 파일
+### 1. 
 
 ```cpp
 #include <iostream>
@@ -49,7 +49,7 @@ DFT는 다음 공식으로 정의된다:
 
 <br/>
 
-### 2. 타입 정의
+### 2. 
 
 ```cpp
 typedef complex<double> Complex;
@@ -58,7 +58,7 @@ const double PI = 3.14159265358979323846;
 
 <br/>
 
-### 3. FFT 함수
+### 3. FFT 
 
 ```cpp
 vector<Complex> fft(vector<Complex>& a) {
@@ -91,7 +91,7 @@ vector<Complex> fft(vector<Complex>& a) {
 
 <br/>
 
-### 4. IFFT 함수
+### 4. IFFT 
 
 ```cpp
 vector<Complex> ifft(vector<Complex>& a) {
@@ -113,7 +113,7 @@ vector<Complex> ifft(vector<Complex>& a) {
 
 <br/>
 
-### 5. Main 함수
+### 5. Main 
 
 ```cpp
 int main() {
@@ -143,7 +143,7 @@ Cooley-Tukey 알고리즘이 가장 널리 사용되는 FFT 알고리즘 중 하
 
 <br/>
 
-#### 예시
+#### 
 
 - Radix-2 FFT: Cooley-Tukey 알고리즘의 특별한 경우로, 입력 크기 N이 2의 거듭제곱일 때만 작동. 일반적으로 매우 효율적이지만, 2의 거듭제곱 크기의 입력에만 제한된다.
 - Mixed-Radix FFT: Cooley-Tukey 알고리즘의 일반화이며, 여러 기수(radix)를 사용하여 계산을 수행한다. 2의 거듭제곱이 아닌 입력 크기에 대해 효율적일 수 있다.

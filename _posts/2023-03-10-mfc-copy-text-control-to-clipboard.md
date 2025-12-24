@@ -6,10 +6,10 @@ categories: [Dev, MFC]
 tags: [c, c++, mfc, clipboard, copy, copytoclipboard, OpenClipboard(), EmptyClipboard(), wcstombs_s()]
 ---
 
-# Text Control의 값을 버튼 클릭하여 클립보드에 복사하기
+# Text Control 
 - 최초 작성일: 2023년 3월 10일 (금)
 
-## 내용
+## 
 
 MFC 기반의 윈도우 응용 프로그램에서, 버튼을 클릭하면 시리얼 번호를 클립보드에 복사하는 기능을 구현하는 함수들이다.
  
@@ -31,7 +31,7 @@ MFC 기반의 윈도우 응용 프로그램에서, 버튼을 클릭하면 시리
 
 <br/>
 
-### 소스 코드
+### 
 
 ```c++
 void SetClipboardText(CStringW strText)

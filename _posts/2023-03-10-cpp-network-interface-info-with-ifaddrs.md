@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [c++, linux, windows, network, ifaddrs, ip, interface]
 ---
 
-# getifaddrs를 이용한 네트워크 인터페이스 정보 구현
+# getifaddrs 
 - 최초 작성일: 2023년 3월 10일 (금)
 
 <br/>
 
-## 소개
+## 
 리눅스 환경에서는 네트워크 인터페이스 정보를 가져오기 위해 ifconfig나 ip 명령어를 사용할 수 있다. 그러나 프로그래밍 방식으로는 getifaddrs 함수를 사용하여 더 효율적으로 정보를 얻을 수 있다.
 
 <br/>
 
-## 기본 구현 - 리눅스
+## - 
 Wi-Fi 인터페이스의 IP 주소를 가져오는 기본적인 구현이다.
 
 ```cpp
@@ -56,10 +56,10 @@ std::vector<std::string> get_wifi_ips() {
 }
 ```
 
-#### 실행 결과:
+#### :
 ![리눅스 Wi-Fi IP 목록](https://user-images.githubusercontent.com/68185569/224203955-c5e35379-41da-422c-8081-da33da12b77b.png)
 
-#### 동작 원리:
+#### :
 1. **초기화**
    - getifaddrs 함수로 네트워크 인터페이스 정보를 가져온다
    - 실패 시 빈 벡터를 반환한다
@@ -75,7 +75,7 @@ std::vector<std::string> get_wifi_ips() {
 
 <br/>
 
-## 확장 구현 - 모든 인터페이스
+## - 
 모든 네트워크 인터페이스의 상세 정보를 출력하는 확장 구현이다.
 
 ```cpp
@@ -136,10 +136,10 @@ int main() {
 }
 ```
 
-#### 실행 결과:
+#### :
 ![모든 네트워크 인터페이스 정보](https://user-images.githubusercontent.com/68185569/224610333-a240b558-e48c-475b-b006-f9438ef9a43f.png)
 
-#### 주요 기능:
+#### :
 1. **Wi-Fi 주소 검색**
    - wlan0 인터페이스의 IPv4 주소를 찾아 출력한다
    - 다른 Wi-Fi 인터페이스 이름을 사용할 경우 수정이 필요하다
@@ -150,7 +150,7 @@ int main() {
 
 <br/>
 
-## 크로스 플랫폼 구현
+## 
 윈도우와 리눅스 환경에서 모두 동작하는 구현이다.
 
 ```cpp
@@ -224,7 +224,7 @@ std::vector<std::string> getWiFiIPAddresses() {
 }
 ```
 
-#### 구현 세부사항:
+#### :
 1. **Windows 환경**
    - GetAdaptersAddresses API를 사용한다
    - IP_ADAPTER_ADDRESSES 구조체로 정보를 가져온다
@@ -241,5 +241,5 @@ std::vector<std::string> getWiFiIPAddresses() {
 
 <br/>
 
-## 결론
+## 
 네트워크 인터페이스 정보를 가져오는 방법은 운영체제별로 다른 API를 사용해야 한다. 윈도우에서는 GetAdaptersAddresses를, 리눅스에서는 getifaddrs를 사용하여 구현할 수 있다. 이 코드는 두 환경에서 모두 동작하는 크로스 플랫폼 솔루션을 제공하며, 필요에 따라 특정 인터페이스나 주소 체계만 필터링하여 사용할 수 있다.

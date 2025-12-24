@@ -6,12 +6,12 @@ categories: [Dev, C++]
 tags: [c++, programming, wifi, wlanapi, windows]
 ---
 
-# WlanAPI를 이용한 Wi-Fi 검색 및 연결 기능 구현
+# WlanAPI Wi-Fi 
 - 최초 작성일: 2023년 3월 28일 (화)
 
 <br/>
 
-## 소개
+## 
 Windows에서는 WlanAPI를 통해 Wi-Fi 네트워크 관련 기능을 프로그래밍 방식으로 제어할 수 있다. 
 
 이 문서에서는 주변의 Wi-Fi 네트워크를 검색하고 선택한 네트워크에 연결하는 기능의 구현 방법을 자세히 알아보겠다. 
@@ -20,9 +20,9 @@ Windows에서는 WlanAPI를 통해 Wi-Fi 네트워크 관련 기능을 프로그
 
 <br/>
 
-## Wi-Fi 검색 기능
+## Wi-Fi 
 
-### 스캔 버튼 이벤트 처리
+### 
 Wi-Fi 스캔 버튼 클릭 시 실행되는 함수로, 사용자 인터페이스와 Wi-Fi 스캔 로직을 연결한다.
 
 ```cpp
@@ -59,7 +59,7 @@ void CWifiManagerDlg::OnBnClickedButtonWifiScan()
 
 ```
 
-#### 동작 원리:
+#### :
 1. **초기화 및 데이터 구조**
    - `std::tuple<CString, LONG, CString>`을 사용하여 각 네트워크의 SSID, 신호 강도, 연결 시간을 저장
    - 기존 리스트 항목들을 모두 삭제하여 새로운 스캔 결과를 표시할 준비
@@ -77,7 +77,7 @@ void CWifiManagerDlg::OnBnClickedButtonWifiScan()
    - 각 네트워크 정보를 포맷팅하여 리스트에 추가
    - 신호 강도와 첫 연결 시간 정보를 함께 표시
 
-### Wi-Fi 목록 스캔 구현
+### Wi-Fi 
 실제 Wi-Fi 스캔을 수행하는 핵심 함수이다.
 
 ```cpp
@@ -146,7 +146,7 @@ std::vector<std::tuple<CString, LONG, CString>> CWifiManagerDlg::ListAvailableWi
 }
 ```
 
-#### 구현 세부사항:
+#### :
 1. **WlanAPI 초기화**
    - `WlanOpenHandle`을 사용하여 Wlan 클라이언트 핸들 생성
    - 버전 2를 지정하여 최신 기능 사용
@@ -166,9 +166,9 @@ std::vector<std::tuple<CString, LONG, CString>> CWifiManagerDlg::ListAvailableWi
 
 <br/>
 
-## Wi-Fi 연결 기능
+## Wi-Fi 
 
-### 연결 버튼 이벤트 처리
+### 
 사용자가 선택한 Wi-Fi 네트워크에 연결을 시도하는 함수이다.
 
 ```cpp
@@ -206,7 +206,7 @@ void CWifiManagerDlg::OnBnClickedButtonWifiConnect()
 }
 ```
 
-#### 주요 기능:
+#### :
 1. **선택 항목 확인**
    - 리스트에서 선택된 항목의 위치 확인
    - 선택된 항목이 없는 경우 사용자에게 알림
@@ -220,7 +220,7 @@ void CWifiManagerDlg::OnBnClickedButtonWifiConnect()
    - 연결 성공/실패 여부를 사용자에게 알림
    - 성공 시 윈도우 타이틀 업데이트
 
-### Wi-Fi 연결 구현
+### Wi-Fi 
 XML 프로파일을 생성하고 실제 연결을 수행하는 함수이다.
 
 ```cpp
@@ -272,7 +272,7 @@ bool CWifiManagerDlg::ConnectToSelectedWifi(const std::wstring& networkName, con
 }
 ```
 
-#### 구현 세부사항:
+#### :
 1. **XML 프로파일 구조**
    - WLANProfile 형식의 XML 문서 생성
    - SSID 정보를 일반 텍스트와 16진수 형태로 모두 포함
@@ -291,7 +291,7 @@ bool CWifiManagerDlg::ConnectToSelectedWifi(const std::wstring& networkName, con
 
 <br/>
 
-## 유틸리티 함수들
+## 
 문자열 변환과 SSID 처리를 위한 보조 함수들이다.
 
 ```cpp
@@ -329,7 +329,7 @@ std::string CWifiManagerDlg::WStringToString(const std::wstring& wstr)
 }
 ```
 
-#### 기능 설명:
+#### :
 1. **ConvertSSID**
    - 바이트 배열 형태의 SSID를 문자열로 변환
    - UTF-8 인코딩 우선 시도
@@ -343,7 +343,7 @@ std::string CWifiManagerDlg::WStringToString(const std::wstring& wstr)
 
 <br/>
 
-## 결론
+## 
 이 구현은 Windows 환경에서 WlanAPI를 사용하여 Wi-Fi 네트워크를 효과적으로 제어하는 방법을 보여준다. 특히 다음과 같은 특징을 가지고 있다:
 
 1. **기능적 특징**

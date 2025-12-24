@@ -6,9 +6,9 @@ categories: [Dev, WPF]
 tags: [WPF, MVVM, C#, XAML, ViewModel]
 ---
 
-# MVVM 패턴 복습 및 이론, 실습
+# MVVM , 
 
-## MVVM 패턴의 구성 요소
+## MVVM 
 
 - **Model**: 애플리케이션에서 사용되는 **데이터**와 그 데이터를 처리하는 **비즈니스 로직**을 담당한다.  
 - **View**: 사용자에게 보이는 **UI 화면**으로, XAML 등의 **디자인 요소**를 포함한다. (예: Window, UserControl)  
@@ -16,7 +16,7 @@ tags: [WPF, MVVM, C#, XAML, ViewModel]
 
 ---
 
-## MVVM 패턴을 쓰는 이유와 장점
+## MVVM 
 
 - **UI와 로직 분리:** 화면 코드(XAML)와 데이터 로직(C#)을 분리하여 **관심사 분리**를 달성한다. View와 Model이 직접 의존하지 않으므로, 한쪽을 변경해도 다른 쪽에 미치는 영향이 적다.  
 - **유지보수 및 확장 용이:** 역할별로 코드가 나뉘어 있어 구조가 **깔끔**해지고, 기능 추가나 수정이 쉬워진다. 팀 작업 시에도 **분업**이 수월하다.  
@@ -25,7 +25,7 @@ tags: [WPF, MVVM, C#, XAML, ViewModel]
 
 ---
 
-## 프로젝트 폴더 구조 예시
+## 
 
 WPF 프로젝트에 MVVM 패턴을 적용할 때는 보통 폴더를 나눠 파일들을 관리한다. 예를 들어 **Views**, **ViewModels**, **Models** 폴더를 만들어 각 역할별 파일을 넣는다:
 
@@ -50,7 +50,7 @@ MyWpfApp/
 
 ---
 
-## MainWindow.xaml을 Views 폴더로 이동
+## MainWindow.xaml Views 
 
 기존에 프로젝트 루트에 있던 `MainWindow.xaml` 파일을 **Views 폴더**로 옮겨 MVVM 구조를 적용해보자. Visual Studio를 사용한다면 다음 순서로 진행한다:
 
@@ -62,7 +62,7 @@ MyWpfApp/
 
 ---
 
-## App.xaml의 StartupUri 경로 변경
+## App.xaml StartupUri 
 
 마지막으로, 애플리케이션이 시작할 때 참조하는 경로인 `App.xaml`의 **StartupUri**를 수정해야 한다. `MainWindow.xaml`을 Views 폴더로 옮겼으므로, `App.xaml`에서 StartupUri에 폴더 경로를 추가해준다:
 

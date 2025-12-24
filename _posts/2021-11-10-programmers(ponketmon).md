@@ -6,12 +6,12 @@ categories: [Algorithm, Programmers]
 tags: [programmers, 프로그래머스, algorithm, c++]
 ---
 
-# Programmers 없는 숫자 더하기
+# Programmers 
 
 - 최초 작성일: 2021년 11월 10일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/1845>
 
-## 문제 설명
+## 
 
 - 당신은 폰켓몬을 잡기 위한 오랜 여행 끝에, 홍 박사님의 연구실에 도착했습니다. 홍 박사님은 당신에게 자신의 연구실에 있는 총 N 마리의 폰켓몬 중에서 N/2마리를 가져가도 좋다고 했습니다.
 
@@ -34,7 +34,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
   
 
-## 제한사항
+## 
 
 - nums는 폰켓몬의 종류 번호가 담긴 1차원 배열입니다.
 
@@ -46,7 +46,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 
   
 
-## 입출력 예
+## 
 
 | nums          | result |
 | ------------- | ------ |
@@ -54,7 +54,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 | [3,3,3,2,2,4] | 3      |
 | [3,3,3,2,2,2] | 2      |
 
-## 풀이 방법 1
+## 1
 
 - 우선, 폰켓몬 종류 번호는 최대 200000개이므로, Having이라는 정수형 빈 배열을 200001개 선언해준다.
 - nums 벡터의 모든 원소들을 돌며, 해당 번호를 Having 배열의 인덱스로 하여 해당 인덱스를 1로 바꿔준다.

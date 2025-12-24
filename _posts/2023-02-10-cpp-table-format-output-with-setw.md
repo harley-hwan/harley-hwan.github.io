@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [c++, iomanip, formatting, output, console]
 ---
 
-# iomanip을 이용한 표 형식 출력 구현
+# iomanip 
 - 최초 작성일: 2024년 1월 6일 (월)
 
 <br/>
 
-## 소개
+## 
 C++의 iomanip 라이브러리를 사용하여 콘솔 출력을 표 형식으로 정렬한다. setw와 cout.setf를 활용하여 데이터를 일정한 간격으로 정렬하고 표시한다.
 
 <br/>
 
-## 구현 코드
+## 
 정렬된 표 형식으로 시스템 정보를 출력하는 구현이다.
 
 ```cpp
@@ -74,7 +74,7 @@ int main() {
 
 <br/>
 
-## 주요 기능 설명
+## 
 
 1. **출력 정렬 설정**
    - cout.setf(ios_base::left)로 왼쪽 정렬을 설정한다
@@ -93,7 +93,7 @@ int main() {
    - 각 행은 시스템의 다른 구성 요소를 나타낸다
    - 빈 행은 공백 문자로 채워진다
 
-#### 실행 결과:
+#### :
 ![표 형식 출력 결과](https://user-images.githubusercontent.com/68185569/218002463-c66dc783-8de1-4220-a3b3-5d4a7f14aa33.png)
 
 이 구현을 통해 데이터를 정렬된 표 형식으로 출력할 수 있다. setw 함수로 열 너비를 일정하게 유지하고, cout.setf로 정렬 방식을 지정하여 가독성 높은 출력을 생성한다.

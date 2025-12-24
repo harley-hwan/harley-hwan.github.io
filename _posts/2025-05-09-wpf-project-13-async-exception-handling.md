@@ -6,9 +6,9 @@ categories: [Dev, WPF]
 tags: [WPF, C#, Async, Await, Exception Handling, Task]
 ---
 
-# 비동기 함수의 예외 처리: async/await 패턴 이해하기
+# : async/await 
 
-## 비동기 프로그래밍 기초
+## 
 
 C#에서 비동기 프로그래밍은 `async`와 `await` 키워드를 통해 구현한다. 이 패턴은 I/O 작업이나 시간이 오래 걸리는 작업을 수행할 때 애플리케이션의 응답성을 유지하는 데 중요하다.
 
@@ -22,11 +22,11 @@ public async Task DoSomethingAsync()
 
 비동기 메서드는 일반적으로 `Task` 또는 `Task<T>`를 반환하며, 이는 작업의 완료 상태와 결과를 나타낸다. `async void`는 이벤트 핸들러에서만 권장한다.
 
-## async/await에서의 예외 처리 방식
+## async/await 
 
 비동기 코드에서 예외 처리는 동기 코드와 다르다. 이 차이점을 이해하는 것이 중요하다.
 
-### 핵심 원칙: 예외는 await 지점에서 전파된다
+### : await 
 
 ```csharp
 public async void ConnCall()
@@ -45,9 +45,9 @@ public async void ConnCall()
 
 비동기 메서드에서 예외가 발생하면, 해당 예외는 `Task` 객체 내에 캡슐화된다. `await` 키워드를 사용할 때만 이 예외가 호출 스택으로 다시 전파되어 `catch` 블록으로 잡힌다.
 
-## 예외 처리의 두 가지 접근법: await vs Wait()
+## : await vs Wait()
 
-### 1. await 키워드 사용 (권장)
+### 1. await ()
 
 ```csharp
 try
@@ -67,7 +67,7 @@ catch (Exception ex)
 - UI 응답성 유지
 - 비동기 컨텍스트 유지
 
-### 2. Wait() 메서드 사용
+### 2. Wait() 
 
 ```csharp
 try
@@ -87,7 +87,7 @@ catch (Exception ex)
 - 데드락 가능성 있음
 - UI 스레드에서 사용 시 응답성 저하
 
-### 중요 차이점
+### 
 
 `Wait()`를 사용하면 원래 예외가 `AggregateException`으로 감싸져서 전달된다. 이 경우 원래 예외에 접근하려면 `AggregateException.InnerException` 속성을 확인해야 한다:
 
@@ -104,9 +104,9 @@ catch (AggregateException ex)
 }
 ```
 
-## 비동기 코드에서의 모범 사례
+## 
 
-### 1. async void 대신 async Task 사용하기
+### 1. async void async Task 
 
 ```csharp
 // 피해야 할 패턴
@@ -118,7 +118,7 @@ public async Task GoodMethod() { ... }
 
 `async void`는 예외를 호출자에게 전파할 수 없어 예외 처리가 어렵다. 이벤트 핸들러를 제외하고는 사용을 피해야 한다.
 
-### 2. 비동기 라이브러리 함수 호출 시 await 사용하기
+### 2. await 
 
 ```csharp
 // SQL 명령 실행 시 권장 방식
@@ -130,7 +130,7 @@ await File.ReadAllTextAsync(path);
 
 .NET에서 제공하는 비동기 라이브러리 함수를 호출할 때는 항상 `await` 키워드를 사용해야 예외 처리가 정상적으로 작동한다.
 
-### 3. Thread.Sleep 대신 Task.Delay 사용하기
+### 3. Thread.Sleep Task.Delay 
 
 ```csharp
 // 피해야 할 패턴
@@ -142,9 +142,9 @@ await Task.Delay(1000); // 스레드 차단 없음
 
 `Thread.Sleep`은 현재 스레드를 차단하여 리소스를 낭비하지만, `await Task.Delay`는 비차단 방식으로 대기한다.
 
-## 실제 응용 예시
+## 
 
-### 데이터베이스 연결 예제
+### 
 
 ```csharp
 public async Task<DataTable> GetDataAsync()
@@ -184,7 +184,7 @@ public async Task<DataTable> GetDataAsync()
 
 이 예제는 데이터베이스 연결, 명령 실행, 예외 처리를 모두 비동기적으로 수행하는 패턴을 보여준다.
 
-### 요약
+### 
 
 비동기 함수에서 예외를 올바르게 처리하려면:
 

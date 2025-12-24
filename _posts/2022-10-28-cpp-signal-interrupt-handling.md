@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [SIGINT, SIGPIPE, SIGALRM, signal, signal(), signal.h]
 ---
 
-# signal() - 인터럽트 신호 처리
+# signal() - 
 - 최초 작성일: 2022년 11월 9일 (수)
 - 참조: https://www.ibm.com/docs/ko/i/7.3?topic=functions-signal-handle-interrupt-signals
 
-## 내용
+## 
 
 signal() 함수를 이용해 프로그램이 운영체제나 raise() 함수에서 인터럽트 신호를 처리할 수 있는 여러 방법 중 하나를 선택할 수 있다.
 
 SISIFCOPT(\*ASYNCSIGNAL) 옵션으로 컴파일하는 경우 이 함수는 비동기 신호를 사용한다. 이때 이 함수의 비동기 버전은 SA_NODEFER 및 SA_RESETHAND 옵션으로 sigaction() 같이 작동한다. 비동기 신호 핸들러는 abort() 또는 exit()를 호출하지 않을 수 있다고 한다. 
 
-### 형식
+### 
 
 ```c++
 #include <signal.h>
@@ -28,7 +28,7 @@ void ( *signal (int sig, void(*func)(int)) )(int);
 
 <br/>
 
-### sig 인수
+### sig 
 
 **SIGABRT**
 - 비정상 종료
@@ -67,7 +67,7 @@ void ( *signal (int sig, void(*func)(int)) )(int);
 
 <br/>
 
-### func 인수
+### func 
 
 **SIG_DFL**
 - 신호에 대한 기본 처리기가 발생한다.
@@ -77,7 +77,7 @@ void ( *signal (int sig, void(*func)(int)) )(int);
 
 <br/>
 
-### 리턴 값
+### 
 
 SIG_ERR의 리턴값은 signal()에 대한 호출에서의 오류를 표시한다.
 
@@ -85,7 +85,7 @@ SIG_ERR의 리턴값은 signal()에 대한 호출에서의 오류를 표시한�
 
 errno의 값은 EINVAL으로 설정될 수 있다. (신호가 유효하지 X)
 
-## 예제
+## 
 
 ```c++
 std::atomic_bool quit(false);
@@ -121,7 +121,7 @@ int main() {
 ```
 <br/>
 
-### 관련 정보
+### 
 
 - abort() : 프로그램 중단
 - atexit() : 프로그램 종료 함수 레코드

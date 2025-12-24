@@ -6,13 +6,13 @@ categories: [Dev, C++]
 tags: [C++, Visual Studio, FFT, iFFT, inverse FFT, 고속 푸리에 변환, Fast Fourier Transform]
 ---
 
-# inverse FFT 한 후, 다시 FFT 연산
+# inverse FFT , FFT 
 
 해당 작업은 분해능을 높이고, 노이즈를 제거하여 높은 해상도의 신호를 추출하기 위함.
 
 <br/>
 
-## 소스
+## 
 
 ```c++
 #include <iostream>

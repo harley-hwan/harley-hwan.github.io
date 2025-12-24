@@ -6,17 +6,17 @@ categories: [Dev, C++]
 tags: [c++, windows, wlan, mac, network, wlanapi]
 ---
 
-# WlanAPI를 이용한 Wi-Fi MAC 주소 검출
+# WlanAPI Wi-Fi MAC 
 - 최초 작성일: 2023년 2월 17일 (금)
 
 <br/>
 
-## 소개
+## 
 Windows 환경에서 WlanAPI를 사용하여 현재 연결된 Wi-Fi의 MAC 주소(BSSID)를 추출한다. WLAN_CONNECTION_ATTRIBUTES 구조체를 통해 AP의 MAC 주소 정보에 접근한다.
 
 <br/>
 
-## 구현 코드
+## 
 WlanAPI를 사용하여 현재 연결된 Wi-Fi의 MAC 주소를 추출하는 구현이다.
 
 ```cpp
@@ -87,7 +87,7 @@ int main() {
 
 <br/>
 
-## 주요 기능 설명
+## 
 
 1. **WLAN 클라이언트 초기화**
    - WlanOpenHandle 함수로 WLAN 서비스에 연결한다
@@ -109,7 +109,7 @@ int main() {
    - 6바이트 길이의 MAC 주소를 16진수 형태로 변환한다
    - 각 바이트 사이에 콜론(:)을 삽입하여 표준 형식으로 출력한다
 
-#### 실행 결과:
+#### :
 ![MAC 주소 출력 결과](https://user-images.githubusercontent.com/68185569/219561425-804218a4-137d-47aa-a0be-6c993f9e0ba7.png)
 
 이 구현을 통해 현재 연결된 Wi-Fi AP의 MAC 주소를 쉽게 확인할 수 있다. WlanAPI의 다양한 함수들을 활용하여 네트워크 연결 상태와 관련된 상세 정보를 획득할 수 있다.

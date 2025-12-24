@@ -6,7 +6,7 @@ categories: [Project]
 tags: [eqtransformer, deap learning, machine learning, python, big data science]
 ---
 
-# 머신러닝을 활용한 경량 지진탐지 모델 개발
+# 
 
 - 최초 작성일: 2021년 11월 9일(월)
 - 주소: <https://github.com/harley-hwan/earthquakeTransformer>

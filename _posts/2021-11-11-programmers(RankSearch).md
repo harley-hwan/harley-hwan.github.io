@@ -6,12 +6,12 @@ categories: [Algorithm, Programmers]
 tags: [programmers, 프로그래머스, algorithm, c++]
 ---
 
-# Programmers 순위 검색
+# Programmers 
 
 - 최초 작성일: 2021년 11월 11일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/72412>
 
-## 문제 설명
+## 
 
 - **[본 문제는 정확성과 효율성 테스트 각각 점수가 있는 문제입니다.]**
 
@@ -40,12 +40,12 @@ tags: [programmers, 프로그래머스, algorithm, c++]
   * [조건]을 만족하는 사람 중 코딩테스트 점수를 X점 이상 받은 사람은 모두 몇 명인가?
   ```
 
-## 문제
+## 
 
 - 지원자가 지원서에 입력한 4가지의 정보와 획득한 코딩테스트 점수를 하나의 문자열로 구성한 값의 배열 info, 개발팀이 궁금해하는 문의조건이 문자열 형태로 담긴 배열 query가 매개변수로 주어질 때,
   각 문의조건에 해당하는 사람들의 숫자를 순서대로 배열에 담아 return 하도록 solution 함수를 완성해 주세요.
 
-## 제한 사항
+## 
 
 - info 배열의 크기는 1 이상 50,000 이하입니다.
 - info 배열 각 원소의 값은 지원자가 지원서에 입력한 4가지 값과 코딩테스트 점수를 합친 "개발언어 직군 경력 소울푸드 점수" 형식입니다.
@@ -67,15 +67,15 @@ tags: [programmers, 프로그래머스, algorithm, c++]
   - 각 단어는 공백문자(스페이스 바) 하나로 구분되어 있습니다.
   - 예를 들면, "cpp and - and senior and pizza 500"은 "cpp로 코딩테스트를 봤으며, 경력은 senior 이면서 소울푸드로 pizza를 선택한 지원자 중 코딩테스트 점수를 500점 이상 받은 사람은 모두 몇 명인가?"를 의미합니다.
 
-## 입출력 예
+## 
 
-##### **[입출력 예]**
+##### **[ ]**
 
 | info                                                         | query                                                        | result        |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------- |
 | `["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"]` | `["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]` | [1,1,1,1,2,4] |
 
-##### **입출력 예에 대한 설명**
+##### ** **
 
 지원자 정보를 표로 나타내면 다음과 같습니다.
 
@@ -95,7 +95,7 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 - `"- and - and - and chicken 100"` : 소울푸드로 chicken을 선택한 지원자 중 코딩테스트 점수를 100점 이상을 받은 지원자는 2명 입니다.
 - `"- and - and - and - 150"` : 코딩테스트 점수를 150점 이상 받은 지원자는 4명 입니다.
 
-## 풀이 방법
+## 
 
 - 나는 이 문제를 차근차근 한 단계씩 풀었던 기억이 난다. Python에서는 split과 같은 명령어로 간단하게 공백을 제거할 수 있는 기능을 나는 c++로 직접 구현했다.
 

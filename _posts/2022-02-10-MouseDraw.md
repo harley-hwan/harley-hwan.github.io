@@ -6,11 +6,11 @@ categories: [Dev, MFC]
 tags: [c++, mfc, win32, windowprogramming]
 ---
 
-# [Win32] 그림 그리기 프로그램
+# [Win32] 
 
 - 최초 작성일: 2022년 2월 10일 (목)
 
-## 목적
+## 
 
 이번 예제를 통해 자유롭게 움직여서 그림 그리는 프로젝트를 완성한다.
 
@@ -20,9 +20,9 @@ MousePos 변수는 마우스 위치 좌표 값을 실시간으로 검출되고 �
 
 <br/>
 
-## 실습
+## 
 
-### 프로젝트 생성
+### 
 
 다음과 같이 프로젝트를 새로 생성해주자. (Windows Desktop Application (Windows 데스크톱 응용 프로그램))
 
@@ -32,7 +32,7 @@ MousePos 변수는 마우스 위치 좌표 값을 실시간으로 검출되고 �
 
 <br/>
 
-### 코드 작성
+### 
 
 그럼, 이제 코드를 삽입해보자.
 
@@ -253,6 +253,6 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 ```
 <br/>
 
-### 실행 결과
+### 
 
 <iframe id="video" width="750" height="500" src="/assets/video/2022-02-10-MouseDraw.mp4" frameborder="0"> </iframe>

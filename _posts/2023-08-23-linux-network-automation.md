@@ -6,14 +6,14 @@ categories: [Dev, Linux]
 tags: [linux, embedded, networking, bash, ethernet, automation, system-config]
 ---
 
-# 리눅스 네트워크 자동화: 이더넷 디바이스 설정 스크립트
+# : 
 - 최초 작성일: 2023년 8월 23일(수)
 
 <br/>
 
-## 스크립트 개요
+## 
 
-### 기본 설정 및 변수
+### 
 
 ```bash
 #!/bin/bash
@@ -28,7 +28,7 @@ else
 fi
 ```
 
-### XML 파싱 및 IP 설정
+### XML IP 
 
 ```bash
 IP1=`cat /system_config.xml|grep -i "NET_CONFIG"|gawk -F"<" '{print $2}'|gawk -F">" '{print $2}'`
@@ -36,9 +36,9 @@ ETH_IP="192.168.1."$IP1
 ```
 <br/>
 
-## 구현 세부사항
+## 
 
-### 1. 네트워크 설정 초기화 함수
+### 1. 
 
 ```bash
 function ETH_INIT()
@@ -77,40 +77,40 @@ function INTERFACES_INIT()
 
 <br/>
 
-## 주요 함수 분석
+## 
 
-### 1. 이더넷 인터페이스 검출
+### 1. 
 
 ```bash
-# 이더넷 디바이스 이름 검출
+# 
 ETH_NAME=`ifconfig | grep -i "eth" | gawk -F" " '{print$1}'`
 echo "ETH_NAME: $ETH_NAME"
 
-# 현재 IP 주소 확인
+# IP 
 ETH_ADR=`ifconfig $ETH_NAME|grep "inet "|gawk '{print $2}'`
 echo "ETH ADR: $ETH_ADR"
 
-# interfaces 파일에서 설정 확인
+# interfaces 
 GET_NAME=`cat /etc/network/interfaces|grep $ETH_NAME|grep "inet static"|gawk -F" " '{print $2}'`
 echo "GET_NAME: $GET_NAME"
 
-# 설정된 IP 주소 확인
+# IP 
 GET_ADR=`cat /etc/network/interfaces|grep "192.168.1"|gawk -F" " '{print $2}'`
 echo "GET_ADR: $GET_ADR"
 ```
 
 <br/>
 
-## 실행 흐름과 동작 원리
+## 
 
-### 1. 인터페이스 상태 확인 및 활성화
+### 1. 
 
 ```bash
-# 이더넷 상태 확인
+# 
 ETH_STATUS=`ip link show|grep "eth"|gawk -F" " '{print $9}'`
 echo "ETH_STATUS: $ETH_STATUS"
 
-# 필요시 인터페이스 활성화
+# 
 if [ "$ETH_STATUS" != "UP" ]; then
     sudo ip link set $ETH_NAME up
     sleep 1
@@ -119,7 +119,7 @@ if [ "$ETH_STATUS" != "UP" ]; then
 fi
 ```
 
-### 2. 네트워크 설정 검증 및 적용
+### 2. 
 
 ```bash
 if [ -z $ETH_NAME ]; then
@@ -147,9 +147,9 @@ fi
 
 <br/>
 
-## 고급 기능과 확장성
+## 
 
-### 1. 오류 처리 및 로깅
+### 1. 
 
 ```bash
 function log_message() {
@@ -162,13 +162,13 @@ function handle_error() {
     exit 1
 }
 
-# 사용 예시
+# 
 if [ ! -f "/etc/network/interfaces" ]; then
     handle_error "Network interfaces file not found"
 fi
 ```
 
-### 2. 네트워크 설정 백업
+### 2. 
 
 ```bash
 function backup_interfaces() {
@@ -177,13 +177,13 @@ function backup_interfaces() {
     log_message "Network configuration backed up to $backup_file"
 }
 
-# 설정 변경 전 백업 실행
+# 
 backup_interfaces
 ```
 
 <br/>
 
-## 결론
+## 
 이 스크립트는 임베디드 리눅스 시스템에서 이더넷 인터페이스를 자동으로 감지하고 설정하는 강력한 도구다. 주요 기능은 다음과 같다:
 
 1. 이더넷 인터페이스 자동 감지

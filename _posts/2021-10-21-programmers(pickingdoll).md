@@ -6,12 +6,12 @@ categories: [Algorithm, Programmers]
 tags: [programmers, 프로그래머스, algorithm, c++]
 ---
 
-# Programmers 크레인 인형뽑기 게임
+# Programmers 
 
 - 최초 작성일: 2021년 10월 21일(목)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/64061>
 
-## 풀이 방법 1
+## 1
 
 - moves 벡터는 어떤 인덱스의 가장 위에 위치한 인형을 하나씩 꺼낼지를 나타낸다.
 - 그러므로, board의 size만큼 돌며 해당 인덱스의 가장 위 인형을 하나씩 꺼내며 지워주고, 새로운 빈 벡터에 하나씩 넣어준다.

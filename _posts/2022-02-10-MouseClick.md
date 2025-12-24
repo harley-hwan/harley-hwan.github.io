@@ -6,11 +6,11 @@ categories: [Dev, MFC]
 tags: [c++, mfc, slider, windowprogramming]
 ---
 
-# [Win32] 마우스 클릭 프로그램 
+# [Win32] 
 
 - 최초 작성일: 2022년 2월 10일 (목)
 
-## 목적
+## 
 
 이번 예제를 통해 마우스를 이용해 이벤트가 발생하는 간단한 윈도우 프로그램을 작성한다.
 
@@ -20,9 +20,9 @@ tags: [c++, mfc, slider, windowprogramming]
 
 <br/>
 
-## 실습
+## 
 
-### 프로젝트 생성
+### 
 
 다음과 같이 프로젝트를 새로 생성해주자. (Windows Desktop Application (Windows 데스크톱 응용 프로그램))
 
@@ -32,7 +32,7 @@ tags: [c++, mfc, slider, windowprogramming]
 
 <br/>
 
-### 코드 작성
+### 
 
 그럼, 이제 코드를 삽입해보자.
 
@@ -245,9 +245,9 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 ```
 <br/>
 
-### 정리
+### 
 
-#### WM_MOUSE 메시지
+#### WM_MOUSE 
 
 |메시지|설명|
 |---|---|
@@ -289,13 +289,13 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 
 <br/>
 
-#### WinMain() 함수
+#### WinMain() 
 
 <window.h> 파일에 포함된 함수로서, 윈도우 어플리케이션에서는 WinMain() 함수가 반드시 포함되어야 한다.
 
 <br/>
 
-#### 윈도우 클래스 (WINDCLASS)
+#### (WINDCLASS)
 
 ```c++
 typedef struct tagWNDCLASS
@@ -356,7 +356,7 @@ TextOut(hdc, int n, int y, "문자열", 문자열 길이)
 
 <br/>
 
-### 실행 결과 1
+### 1
 
 ![image](https://user-images.githubusercontent.com/68185569/153347483-4ef5fa05-7412-44e6-a6e9-2105541cadb0.png)
 

@@ -6,13 +6,13 @@ categories: [Dev, CSharp]
 tags: [c#, unity, maze, algorithm, player]
 ---
 
-# 미로에서 플레이어의 이동 구현
+# 
 
 - 최초 작성일: 2021년 3월 30일(수)
 
-## 내용
+## 
 
-### Player 이동 구현
+### Player 
 
 앞서 미로를 생성했으면, 이제 그 미로를 탈출할 플레이어를 생성해준다.
 
@@ -24,7 +24,7 @@ tags: [c#, unity, maze, algorithm, player]
 
 <br/>
 
-### C# 코드
+### C# 
 
 #### Player.cs
 
