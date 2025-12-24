@@ -10,11 +10,6 @@ tags: [c++, wifi, ssid, wlanopenhandle, WlanEnumInterfaces, WlanQueryInterface, 
 
 - 최초 작성일: 2023년 2월 17일(금)
 
-## 목차
-
-
-
-
 ## 내용
 
 시스템 커맨드 "netsh wlan show profiles" 결과와 동일
@@ -82,12 +77,10 @@ int main() {
     return 0;
 }
 
-
 ```
 
 <br/>
 
 ## 결과
-
 
 ![image](https://user-images.githubusercontent.com/68185569/219567840-c4b6e361-a4e4-4b36-b693-99c8895eb5a2.png)

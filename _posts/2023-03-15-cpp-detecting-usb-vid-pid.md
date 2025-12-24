@@ -9,12 +9,6 @@ tags: [c, c c++, libusb, usb, libusb_device, libusb_context, device, vid, pid]
 # 현재 연결된 USB들의 VID/PID 검출하기
 - 최초 작성일: 2023년 3월 15일 (수)
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 libusb 라이브러리를 사용하여 컴퓨터에 연결된 USB 장치의 정보를 출력하는 예제 코드이다.

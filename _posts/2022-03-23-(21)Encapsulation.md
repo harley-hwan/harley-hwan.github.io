@@ -10,10 +10,6 @@ tags: [c#, unity, oop, encapsulation]
 
 - 최초 작성일: 2021년 3월 21일(월)
 
-## 목차
-
-
-
 ## 내용
 
 ```c#
@@ -34,7 +30,6 @@ namespace Encapsulation
         //int hp;             // dafault: private
         //private int hp;     // 공유 안함. 현재 클래스에서만 사용.
         protected int hp;     // 상속받은 클래스들만 사용가능
-
 
         private int id;
         public void SetId(int id)

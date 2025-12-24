@@ -9,12 +9,6 @@ tags: [c, c++, linux, command, pipe, arp]
 # Linux Command pipe로 변수값으로 끌고오기 pipe()
 - 최초 작성일: 2023년 2월 16일 (목)
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 ### 소스코드 1

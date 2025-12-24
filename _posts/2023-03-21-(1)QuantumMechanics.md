@@ -10,10 +10,6 @@ tags: [quantummechanics, mechanics, quantum, science]
 
 - 최초 작성일: 2023년 3월 21일(화)
 
-## 목차
-
-
-
 ## 내용
 
 양자 역학은 원자와 전자와 같은 아주 작은 입자들의 움직임과 상호작용을 기술하는 물리학의 한 분야이다. 

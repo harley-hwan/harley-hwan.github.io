@@ -10,10 +10,6 @@ tags: [c#, unity, maze, algorithm, right hand rule]
 
 - 최초 작성일: 2021년 3월 30일(수)
 
-## 목차
-
-
-
 ## 내용
 
 ### 오른손 법칙을 이용한 플레이어의 이동 구현
@@ -131,7 +127,6 @@ namespace Maze
         }
     }
 }
-
 
 ```
 

@@ -10,12 +10,6 @@ tags: [SIGINT, SIGPIPE, SIGALRM, signal, signal(), signal.h]
 - 최초 작성일: 2022년 11월 9일 (수)
 - 참조: https://www.ibm.com/docs/ko/i/7.3?topic=functions-signal-handle-interrupt-signals
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 signal() 함수를 이용해 프로그램이 운영체제나 raise() 함수에서 인터럽트 신호를 처리할 수 있는 여러 방법 중 하나를 선택할 수 있다.
@@ -90,7 +84,6 @@ SIG_ERR의 리턴값은 signal()에 대한 호출에서의 오류를 표시한�
 성공의 경우, signal()에 대한 호출은 func의 최근 값을 리턴한다.
 
 errno의 값은 EINVAL으로 설정될 수 있다. (신호가 유효하지 X)
-
 
 ## 예제
 

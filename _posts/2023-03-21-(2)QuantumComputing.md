@@ -10,10 +10,6 @@ tags: [quantumcomputing, quantum, computing, science]
 
 - 최초 작성일: 2023년 3월 21일(화)
 
-## 목차
-
-
-
 ## 내용
 
 양자 컴퓨팅은 양자 역학의 원리를 이용하여 정보를 저장하고 처리하는 컴퓨팅 기술이다.

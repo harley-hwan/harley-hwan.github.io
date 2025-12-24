@@ -6,16 +6,9 @@ categories: [Dev, Linux]
 tags: [linux, cat, grep, gawk, XML, parsing]
 ---
 
-
 # Ethernet Configuration Check via Script
 
 - 최초 작성일: 2023년 8월 23일(수)
-
-## 목차
-
-
-
-<br/>
 
 ## 코드
 

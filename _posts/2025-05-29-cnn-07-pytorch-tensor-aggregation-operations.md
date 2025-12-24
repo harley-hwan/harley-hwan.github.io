@@ -12,17 +12,6 @@ tags: [pytorch, tensor, aggregation, sum, mean, max, min, argmax, deep learning]
 
 * 최초 작성일: 2025년 5월 29일 (목)
 
-## 목차
-
-1. [집계 연산의 이해](#집계-연산의-이해)
-2. [기본 집계 함수 사용하기](#기본-집계-함수-사용하기)
-3. [차원별 집계 연산](#차원별-집계-연산)
-4. [다중 차원 집계](#다중-차원-집계)
-5. [argmax와 argmin 활용](#argmax와-argmin-활용)
-6. [실전 활용 예제](#실전-활용-예제)
-
----
-
 ## 📊 집계 연산의 이해
 
 집계(aggregation) 연산은 텐서의 여러 값을 하나 또는 더 적은 수의 값으로 요약하는 핵심 연산이다. 딥러닝에서는 손실 계산, 통계 분석, 특징 추출 등에 필수적으로 사용된다.
@@ -228,7 +217,6 @@ print(class_scores.sum(dim=0))
 <div align="center">
   <img src="https://github.com/user-attachments/assets/936ac5f1-b3c8-4c2a-9253-1eade3a49ac8" width="1800">
 </div>
-
 
 ### 다중 차원 동시 집계
 ```python

@@ -10,10 +10,6 @@ tags: [battery performance, laptop battery, laptop, battery]
 
 - 최초 작성일: 2024년 10월 23일(수)
 
-## 목차
-
-
-
 ## 내용
 
 cmd 창에서 'powercfg/batteryreport' 를 입력하면

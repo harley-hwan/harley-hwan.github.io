@@ -10,11 +10,6 @@ tags: [c++, mfc, slider, rgb, windowprogramming]
 
 - 최초 작성일: 2022년 2월 8일 (화)
 
-
-## 목차
-
-
-
 ## 실습
 
 ### 프로젝트 생성

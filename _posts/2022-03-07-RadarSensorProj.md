@@ -39,4 +39,3 @@ tags: [eqtransformer, deap learning, machine learning, python, big data science]
 
 ![슬라이드13](https://user-images.githubusercontent.com/68185569/157174221-fa2e135c-090f-4ce0-a755-b9017aef862a.PNG)
 
-

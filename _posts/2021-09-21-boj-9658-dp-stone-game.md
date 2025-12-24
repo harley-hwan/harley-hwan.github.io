@@ -11,9 +11,6 @@ tags: [baekjoon, 백준, algorithm, dp]
 - 최초 작성일: 2021년 9월 21일(화)
 - 주소: <https://www.acmicpc.net/problem/9658>
 
-## 목차
-
-
 ## 문제 설명
 
 ![image](https://user-images.githubusercontent.com/68185569/134134241-4d9d27c3-5bbd-4ed1-a489-06485dba8967.png)
@@ -52,7 +49,6 @@ tags: [baekjoon, 백준, algorithm, dp]
   - 돌 6개: dp[6-1]=1, dp[6-3]=0, dp[6-4]=1  	>> 	 dp[6] == 1 (SK 승)
 - 위의 법칙을 구체적으로 설명하자면, 승자 혹은 패자가 생기는 방법은 여러가지가 있다. 마지막 플레이어가 1개를 가져가면서 패배할 수도 있고, 3개 혹은 4개를 가져가면서 패배할 수 있기 때문에, 현재 [갯수에서]() -1, -3, -4번째의 돌에서의 패자가 현재 갯수에서의 승자가 된다.
 - 위의 법칙을 dp 방법으로 반복해나가면 된다.
-
 
 ```c++
 #include <iostream>

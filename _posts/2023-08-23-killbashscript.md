@@ -10,12 +10,6 @@ tags: [linux, embedded, bash, shell, sh, kill, bash, script]
 
 - 최초 작성일: 2023년 8월 23일(수)
 
-## 목차
-
-
-
-<br/>
-
 ## 코드
 
 ```bash
@@ -24,7 +18,6 @@ tags: [linux, embedded, bash, shell, sh, kill, bash, script]
 
 # kjh [2023.08.23]
 # run check proc
-
 
 FILES=0
 CTIME2=10

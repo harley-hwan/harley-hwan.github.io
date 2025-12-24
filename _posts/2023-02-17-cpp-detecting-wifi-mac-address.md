@@ -11,13 +11,6 @@ tags: [c++, windows, wlan, mac, network, wlanapi]
 
 <br/>
 
-## 목차
-1. [소개](#소개)
-2. [구현 코드](#구현-코드)
-3. [주요 기능 설명](#주요-기능-설명)
-
-<br/>
-
 ## 소개
 Windows 환경에서 WlanAPI를 사용하여 현재 연결된 Wi-Fi의 MAC 주소(BSSID)를 추출한다. WLAN_CONNECTION_ATTRIBUTES 구조체를 통해 AP의 MAC 주소 정보에 접근한다.
 

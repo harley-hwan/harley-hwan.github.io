@@ -9,12 +9,6 @@ tags: [c, c++, vs, ransac, algorithm, eigen]
 # Eigen 라이브러리를 이용하여 RANSAC 구현
 - 최초 작성일: 2023년 6월 9일 (금)
 
-## 목차
-
-
-
-<br/>
-
 ## 코드1
 
 ```c++
@@ -240,7 +234,6 @@ int main() {
     outfile1.close();
     outfile2.close();
 
-
     std::cout << "Result H: " << X1.transpose() << std::endl;
     std::cout << "Result W: " << X2.transpose() << std::endl;
 
@@ -256,7 +249,6 @@ int main() {
 Result H: 0.00547198   0.292524   -80.6625
 Result W: -0.00291597     1.01354    -70.4702
 ```
-
 
 <br/>
 

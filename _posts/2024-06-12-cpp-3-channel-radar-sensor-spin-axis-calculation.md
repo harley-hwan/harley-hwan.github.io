@@ -10,12 +10,6 @@ tags: [c++, programming, radar sensor, phase difference, spin axis]
 
 - 최초 작성일: 2024년 6월 12일 (수)
   
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 ### 3채널 레이더 센서로 물체 운동의 스핀축 계산하기

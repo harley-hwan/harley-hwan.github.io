@@ -9,17 +9,6 @@ categories: [Dev, C++]
 
 * 최초 작성일: 2025년 5월 18일 (일)
 
-## 목차
-
-1. [const의 개념과 특징](#const의-개념과-특징)
-2. [constexpr의 개념과 특징](#constexpr의-개념과-특징)
-3. [const와 constexpr의 차이점](#const와-constexpr의-차이점)
-4. [constexpr 함수 이해하기](#constexpr-함수-이해하기)
-5. [실무에서의 const와 constexpr 활용 사례](#실무에서의-const와-constexpr-활용-사례)
-6. [요약](#요약)
-
----
-
 ## const의 개념과 특징
 
 **const**는 "constant"의 약자로, 한 번 값이 정해지면 이후 변경할 수 없는 상수를 나타내는 키워드다.

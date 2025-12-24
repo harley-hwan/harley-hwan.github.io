@@ -9,12 +9,6 @@ tags: [c, c++, boost, asio, boost.asio, bluetooth, ble, bluetoothscanner]
 # Boost.Asio를 사용한 간단한 HTTP 클라이언트 (블루투스 장치 목록 스캔 및 출력)
 - 최초 작성일: 2023년 3월 30일 (목)
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 Boost.Asio를 사용하여 간단한 HTTP 클라이언트를 구현한 것이다.
@@ -135,6 +129,4 @@ std::vector<std::tuple<std::wstring, LONG, CString>> ListAvailableWifiNetworks()
 }
 
 ```
-
-
 

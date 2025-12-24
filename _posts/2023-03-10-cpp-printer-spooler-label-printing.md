@@ -12,14 +12,6 @@ tags: [c++, printer, windows, spooler, labelprinter, tsc, zpl]
 
 <br/>
 
-## 목차
-1. [소개](#소개)
-2. [기본 구현 - TSPL](#기본-구현---tspl)
-3. [확장 구현 - ZPL](#확장-구현---zpl)
-4. [주요 함수 설명](#주요-함수-설명)
-
-<br/>
-
 ## 소개
 Windows 프린터 스풀러를 사용하여 TSC P200 라벨 프린터를 제어하는 방법을 구현한다. 프린터와의 통신은 RAW 모드를 사용하며, TSPL과 ZPL 두 가지 명령어 체계를 모두 지원한다.
 

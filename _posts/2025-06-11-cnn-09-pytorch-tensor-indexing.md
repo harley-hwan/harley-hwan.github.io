@@ -11,16 +11,6 @@ categories: [Dev, CNN]
 
 * 최초 작성일: 2025년 6월 11일 (수)
 
-## 목차
-
-1. [기본 indexing](#기본-indexing)
-2. [슬라이싱(slicing) indexing](#슬라이싱slicing-indexing)
-3. [Fancy(List) indexing](#fancylist-indexing)
-4. [Boolean indexing](#boolean-indexing)
-5. [torch.where 활용](#torchwhere-활용)
-
----
-
 ## 기본 indexing
 
 파이토치 텐서의 indexing 방법은 NumPy 배열과 매우 유사하다. 단일 지정 인덱싱을 하면 원본 텐서의 차원이 하나 줄어든 텐서가 반환된다.

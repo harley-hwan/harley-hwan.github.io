@@ -9,12 +9,6 @@ tags: [c, c++, mfc, bluetooth, devices, ble, listview, blescan, bluetoothscan, a
 # 주변의 모든 블루투스 기기 스캔하여 MFC 리스트 뷰에 출력
 - 최초 작성일: 2023년 3월 31일 (금)
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 주변의 모든 블루투스 기기를 스캔하고, 해당 기기의 장치명(LocalName)과 SSID(신호 세기) 를 출력하는 프로그램이며,
@@ -236,7 +230,6 @@ void CMainDlg::OnBnClickedBtnBlescan()
   bleScanThread = std::thread(&CMainDlg::ScanForBluetoothLEDevices, this);
 }
 
-
 void CMainDlg::OnBnClickedBtnBlescanstop()
 {
   // 기존 스레드가 실행 중이면 종료
@@ -344,7 +337,6 @@ void CMainDlg::ScanForBluetoothLEDevices()
 		std::wcerr << L"Exception thrown: " << ex.message().c_str() << std::endl;
 	}
 }
-
 
 // "BLE SCAN" Button
 void CMainDlg::OnBnClickedBtnBlescan()

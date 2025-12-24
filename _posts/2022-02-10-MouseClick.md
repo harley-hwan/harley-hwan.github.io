@@ -10,10 +10,6 @@ tags: [c++, mfc, slider, windowprogramming]
 
 - 최초 작성일: 2022년 2월 10일 (목)
 
-## 목차
-
-
-
 ## 목적
 
 이번 예제를 통해 마우스를 이용해 이벤트가 발생하는 간단한 윈도우 프로그램을 작성한다.
@@ -66,8 +62,6 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
-
-
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
                      _In_ LPWSTR    lpCmdLine,
@@ -105,7 +99,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     }
     return (int) msg.wParam;
 }
-
 
 //
 //  FUNCTION: MyRegisterClass()

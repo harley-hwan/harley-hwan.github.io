@@ -10,15 +10,6 @@ tags: [c#, wpf, command, relaycommand, mvvm, ui, xaml]
 
 - 최초 작성일: 2025년 3월 27일 (토)
 
-## 목차
-
-1. [Command 패턴이란?](#command-패턴이란)
-2. [ICommand 인터페이스의 역할](#icommand-인터페이스의-역할)
-3. [RelayCommand 클래스 작성 방법 및 목적](#relaycommand-클래스-작성-방법-및-목적)
-4. [ViewModel에서 Command를 사용하는 이유](#viewmodel에서-command를-사용하는-이유)
-
----
-
 ## 1. Command 패턴이란?
 
 WPF에서 **Command 패턴**은 버튼과 같은 UI 요소의 클릭 이벤트 처리를 코드 비하인드가 아닌 ViewModel에서 처리하도록 해주는 방법이다. 이를 통해 UI와 로직을 깔끔하게 분리할 수 있으며, 코드의 유지보수와 확장성을 높일 수 있다.

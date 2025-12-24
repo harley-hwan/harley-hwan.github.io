@@ -10,12 +10,6 @@ tags: [opencv, Mat, cvtColor, GaussianBlur, Canny, findContours, approxPolyDP, d
 
 - 최초 작성일: 2023년 2월 17일(금)
 
-## 목차
-
-
-
-<br/>
-
 ## 목표
 
 MFC에서 opencv 를 활용한 이미지 처리를 통한 직사각형 검출 알고리즘을 만들어보자.
@@ -82,7 +76,6 @@ isContourConvex 함수를 사용하여 해당 근사치가 볼록한 도형인�
 이후 boundingRect 함수를 사용하여 근사치를 감싸는 직사각형을 구하고, std::vector<cv::Rect>에 추가한다.
 
 이렇게 구해진 직사각형 정보를 std::vector<cv::Rect> 형태로 반환한다.
-
 
 <br/>
 

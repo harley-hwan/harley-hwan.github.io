@@ -11,9 +11,6 @@ tags: [baekjoon, 백준, algorithm, greedy]
 - 최초 작성일: 2021년 9월 19일(일)
 - 주소: <https://www.acmicpc.net/problem/10162>
 
-## 목차
-
-
 ## 문제 설명
 ![image](https://user-images.githubusercontent.com/68185569/133917563-09ad9064-6a6b-4035-964c-af102048d8c7.png)
 
@@ -25,8 +22,6 @@ tags: [baekjoon, 백준, algorithm, greedy]
 ## 입력
 - 첫 번째 줄에는 요리시간 T(초)가 정수로 주어져 있으며 그 범위는 1 ≤ T ≤ 10,000 이다. 
 
-
-
 ## 출력
 
 - 여러분은 T초를 위한 최소버튼 조작의 A B C 횟수를 첫 줄에 차례대로 출력해야 한다. 각각의 횟수 사이에는 빈 칸을 둔다. 해당 버튼을 누르지 않는 경우에는 숫자 0을 출력해야한다. 만일 제시된 3개의 버튼으로 T초를 맞출 수 없으면 음수 -1을 첫 줄에 출력해야 한다. 
@@ -34,7 +29,6 @@ tags: [baekjoon, 백준, algorithm, greedy]
 ![image](https://user-images.githubusercontent.com/68185569/133917599-36d9e7db-dd7f-4bb7-9292-1bea116b9fbe.png)
 
 ![image](https://user-images.githubusercontent.com/68185569/133917584-e797a15a-0977-46ec-a528-3e32cb00ed57.png)
-
 
 ## 알고리즘 분류
 
@@ -51,7 +45,6 @@ tags: [baekjoon, 백준, algorithm, greedy]
 - 그리고나서, 남은 나머지에서 1분이 60초를 나눈 몫을 출력하고 60을 나눈 나머지만을 남긴다.
 - 그리고나서, 그 다음 남은 나머지에서 10을 나눈 몫을 출력하면 되는 간단한 문제이다.
 - 하지만, 문제에서 t초를 딱 맞추지 못할 경우, -1을 출력하라고 했기 때문에 제일 처음에 t를 10으로 나눈 나머지가 0이 아니면 -1을 출력하고 프로그램을 종료시킨다.
-
 
 ```c++
 #include <iostream>
@@ -73,7 +66,6 @@ int main() {
     cout << (t / 60) << " ";
     t %= 60;
     cout << (t / 10);
-
 
     return 0;
 }

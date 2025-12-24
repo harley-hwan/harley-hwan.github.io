@@ -10,10 +10,6 @@ tags: [c++, mfc, calculator]
 
 - 최초 작성일: 2022년 2월 25일 (금)
 
-## 목차
-
-
-
 ## 목적
 
 사칙 연산과 CString 함수의 형 변환을 이용하여 계산기 프로그램을 작성한다.
@@ -32,8 +28,6 @@ tags: [c++, mfc, calculator]
 ![image](https://user-images.githubusercontent.com/68185569/155664654-42f13675-ba60-43c9-85fb-e1b83736c382.png)
 
 ![image](https://user-images.githubusercontent.com/68185569/155662132-e66c92ef-b872-40d1-b331-f030b3adf08f.png)
-
-
 
 <br/>
 
@@ -58,7 +52,6 @@ tags: [c++, mfc, calculator]
 또한, 클래스 마법사에서 다음과 같이 버튼 클릭시에 대한 멤버 함수를 추가하고, 코드를 작성하자.
 
 ![image](https://user-images.githubusercontent.com/68185569/155672210-78256d1b-ae21-42ff-be38-c2364cc41119.png)
-
 
 ### 코드 작성
 
@@ -147,9 +140,4 @@ void CCalcDlg::OnClickedButtonExit()
 ![image](https://user-images.githubusercontent.com/68185569/155672597-34f8314c-ad8f-4bd1-a03f-7481b61f39b4.png)
 
 ![image](https://user-images.githubusercontent.com/68185569/155672740-f8732fec-68c4-46d1-88bb-3a9bb31ac747.png)
-
-
-
-
-
 

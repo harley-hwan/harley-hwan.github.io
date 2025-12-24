@@ -6,15 +6,9 @@ categories: [Project]
 tags: [machinelearning, 머신러닝, algorithm, genetic]
 ---
 
-
-
 # 5-Queens Problem (Genetic Algorithm)
 
 - 최초 작성일: 2021년 10월 20일(수)
-
-## 목차
-
-
 
 ## 문제 설명
 
@@ -28,11 +22,9 @@ Genetic Algorithm(유전 알고리즘)으로 풀어보자.
 
 ﻿
 
-
 ## 1) Chromosome design (염색체 디자인)
 
 ![image](https://user-images.githubusercontent.com/68185569/138053274-7e2a7fda-5ac3-48cb-91d6-c03583440d4a.png)
-
 
 체스판 위에 놓인 퀸들의 형태를 표현한 모습을 구현해야 하는데, Vertical(세로)로 퀸이 하나만 반드시 존재하므로 체스판 위에 놓인 퀸의 수는 5개가 됨을 보장한다.
 
@@ -47,7 +39,6 @@ np.array([1, 2, 3, 4, 5] 와 같이
 한 줄이 0~4까지 각각 5개의 y좌표에 Queen이 놓인 보드판을 랜덤으로 생성하여 반환한다.
 인간의 인위적인 판단이나 개입으로 인해 모델의 성능을 정확하게 측정할 수 없게 되는 것을 방지하기 위해 랜덤으로 수행했다.
 
-
 그 후 위의 작업을 100번 반복 수행한다.
 
 아래의 실행 결과값은 100개의 결과값 중에 10개만을 test삼아 출력해본 것이다.
@@ -58,12 +49,8 @@ np.array([1, 2, 3, 4, 5] 와 같이
  
 ## 3) Fitness (적합도)
 
-
-
 나는 중복 체크의 기준점이 되는 퀸이 죽는 상황인지 아닌지를 판별하도록 코드를 짰다.
 Queens-Problem의 조건 상 상하좌우 대각선으로 잡아먹는다는 Queen의 특성을 고려하여 대각선, 대각선 반대방향, horizon 방향에 대한 중복을 체크한다.
-
-
 
 이때, vertical 방향에 대한 중복 체크는 불필요하다.
 왜냐하면 Chromosome design에서도 설명했다시피
@@ -71,13 +58,9 @@ Queens-Problem의 조건 상 상하좌우 대각선으로 잡아먹는다는 Que
 각각 index에서 y축 방향으로 Queen의 위치를 숫자로 표시한 것이기 때문에
 vertical 적으로 한 줄에는 Queen이 하나만 존재한다.
 
-
-
 그렇게 체크된 중복들을 다 더해주고 중복 체크를 3번 진행을 하는데 자기 자신에 대한 중복이 일어나므로 3번의 체크된 중복을 제외해준다.
 
 (처음에 -3을 안해줬는데 결과값이 죽은 퀸의 수치가 15와 같이 과장된 수치를 산출했는데 그것을 보고 디버깅을 하였다.)
-
-
 
 이 과정에서 중복 체크가 1번이라도 일어났다면 자기 자신이 죽는 퀸이 된다.
 
@@ -85,43 +68,31 @@ vertical 적으로 한 줄에는 Queen이 하나만 존재한다.
 
 그렇게 더해진 합계로 array를 만들어주는데, 이때 array 내에 index, 각 체스판 정보에 대한 list, 죽은 퀸의 개수를 하나로 합쳐 array로 저장했다.
 
-
-
 아래의 실행 결과값은 임의로 10개만 보여준 것인데
 
 index값인 0~9를 같이 저장해서 출력한 이유는 나중에 Selection을 할 건데 그때 잘 정렬이 되었는지 확인하기 위함이다.
 
 ![image](https://user-images.githubusercontent.com/68185569/138057062-a9af474d-9255-41cd-89ec-32efa30bf6f5.png)
 
-
 ﻿
 
 ## 4) Selection
-
-
 
 이 단계를 위해서 Fitness 단계를 거친 것인데,
 
 간단히 말하면 좋은 결과를 가진 것들을 선별해서 저장한다.
 
-
-
 이때 Selected rate 선별율은 10%로 한다.
 
 즉, 죽은 퀸의 개수를 기준으로 오름차순으로 sort 해서 상위 10%만을 선별해 저장하고 나머지를 버린다는 것이다.
 
-
-
 결과적으로, 100개 중의 10%를 고르는 것이니 아래의 실행 결과값과 같이 10개가 저장이 된다.
-
-
 
 그렇게 선별된 리스트들이 아래의 실행 결과값과 같고 이때는 index 값과 죽은 퀸의 수의 정보의 출력은 불필요하므로 list들만 array로 저장한다.
 
 ![image](https://user-images.githubusercontent.com/68185569/138053561-d302225c-aecb-483e-9285-5cb75405a5b3.png)
 
 ![image](https://user-images.githubusercontent.com/68185569/138053585-9e9a0aca-30d8-4cea-a351-b27fde577fb2.png)
-
 
 Index값이 무작위로 섞인 모습이므로 죽은 퀸 수를 기준으로 잘 정렬 됐음을 확인할 수 있다.
 
@@ -130,8 +101,6 @@ Index값이 무작위로 섞인 모습이므로 죽은 퀸 수를 기준으로 �
 ﻿
 
 ## 5) Crossover
-
-
 
 간단히 말하면 절반을 쪼개서 쪼갠 것들끼리 재조합을 한다는 것이다.
 
@@ -149,21 +118,15 @@ Index값이 무작위로 섞인 모습이므로 죽은 퀸 수를 기준으로 �
 
 ![image](https://user-images.githubusercontent.com/68185569/138053704-957de6dd-4448-426e-afc5-f0ac87d20610.png)
 
-
 ﻿
 
 ## 6) Mutation (돌연변이 생성) & Update generation
 
-
-
 위의 작업들을 통해 더 나은 값들의 집합들을 모아 해를 구할 수 있지만 그렇게 구해진 값들은 100% 완벽하다고 할 수 있는 해들이 아니기 때문에 위의 단계에서 생성된 100개의 리스트들에서 무작위로 선별된 리스트들의 숫자들을 바꾸어 돌연변이들을 만들어낸다.
-
-
 
 이때 돌연변이 생성율(mutation rate)은 10%로 해보았다.
 
 (50%로도 해보았는데 죽은 퀸의 수가 0으로 수렴하는 데에 너무 오랜 시간이 걸려 비효율적이었다.)
-
 
 실제 실행 결과값들은 아래와 같이 출력이 되었는데,랜덤으로 array에서의 인덱스를 골라 해당 인덱스의 리스트에서 또 그 리스트의 인덱스를 랜덤으로 해당 인덱스에 랜덤으로 0~4 중의 숫자를 교체해서 넣는다.
 
@@ -183,18 +146,13 @@ Index값이 무작위로 섞인 모습이므로 죽은 퀸 수를 기준으로 �
 
 Target value를 0으로 설정을 했는데 모든 것들이 0이 되는 경우는 없었기 때문에 Target value를 특정 값으로 정하거나 반복 시행 시간을 제한해두어 종료하고 중간 결과를 반환하도록 했다.
 
-
-
 ﻿
 
 ## ⩥ 결론
 
-
 Genetic Algorithm의 목적은 유일한 해를 찾기 보다는 적합한 값들을 찾는 것을 목적으로 하는 것이기 때문에 매 실행 때마다 모델이 적합하다고 생각하는 값들은 항상 변할 수밖에 없다.
 
 이때 결과값은 시작점이 어디냐에 따라 큰 영향을 받는다.
-
-
 
 Genetic Algorithm은 Local Search Algorithms처럼 탐욕적 알고리즘의 일부이므로 그때 그때 괜찮은 해를 선택하기 때문에 global maximum에 도달하지 못하고 local maximum에 도달하는 경우가 있다.
 
@@ -202,29 +160,21 @@ Genetic Algorithm은 Local Search Algorithms처럼 탐욕적 알고리즘의 일
 
 ![image](https://user-images.githubusercontent.com/68185569/138053904-8043566a-6261-4bba-a6c8-b577ad568b70.png)
 
-
-
-
 기존의 내가 배웠던 알고리즘들은 정확하게 풀이방법을 컴퓨터에게 명령을 해야했다.
 
 하지만 Genetic Algorithm(유전 알고리즘)은 해당 문제에 대해서 특정한 지식을 요구하진 않고 조건과 적합도(평가 지표)만 정해주기만 하면 모델이 알아서 답을 산출한다는 것이 특징이다.
 
-
 예를 들어, 체스라는 게임을 플레이한다고 했을 때 단지 플레이 방법과 승리 조건을 알려주기만 해도 체스를 둘 수 있다는 것이다.
-
 
 아래의 그림과 같이 Iasi에서 Fegaras로 가는 최적의 해를 구한다고 가정했을 때, 그리디 알고리즘의 일부인 Genetic 알고리즘을 이용한다했을 때 Selection을 통해 g(n) 즉, path cose from the start node to n 을 고려했을 때 Neamt으로 갈 것인데 막다른 길이라 계속 무한 루프에 갇혀 해를 구하지 끝까지 못 구할 수 있다.
 
 하지만 그 이후에 Mutation작업을 통해 일부를 반대 방향인 Vaslui로 가는 것들을 만들어 여러 가지의 경우의 수를 수없이 반복해봐서 목적지까지 도달하는 적합한 해들을 산출할 수 있다.
-
 
 ![image](https://user-images.githubusercontent.com/68185569/138053937-c035d185-f673-4882-bcaf-634e662b5576.png)
 
 ﻿
 
 ### <실제 코드 실행 결과값 (1)>
-
-
 
 아래의 실행 결과값들은 선별하는 비율(selected_rate)을 10% (0.1)로 했을 때의 결과이다.
 
@@ -240,19 +190,13 @@ Genetic Algorithm은 Local Search Algorithms처럼 탐욕적 알고리즘의 일
 
 ### <실제 코드 실행 결과값 (2)>
 
-
-
 아래의 실행 결과값은 선별하는 비율(selected_rate)를 50% (0.5)로 했을 때의 결과이다.
 
 1번 실행 결과에 비해 비교적으로 더 적게 변동하는 폭을 확인할 수 있는데 그 이유는 Selection 단계에서 절반을 남김으로써 더욱 더 다양성을 가지므로 그것을 섞었을 때 적합한 해를 구하기까지 적은 시간이 소요된 것으로 여겨진다.
 
-
-
 출력되는 Array 값들 또한 1번 실행 결과에 비해 더욱 일관된 산출값을 보이는 것을 볼 수 있다.
 
 마찬가지로 2번의 시도가 각각 다른 값들을 산출한다.
-
-
 
 결과적으로 Genetic 알고리즘의 모든 경우의 수를 경험해보고 그 과정으로 인해 적합한 해를 찾아간다는 특성상 더욱 많은 다양성을 두면 적합한 해를 찾기 더 쉬운 모습을 확인할 수 있었다
 
@@ -261,7 +205,6 @@ Genetic Algorithm은 Local Search Algorithms처럼 탐욕적 알고리즘의 일
     
 ﻿
     
-
 
 ```python
 import matplotlib.pyplot as plt
@@ -288,7 +231,6 @@ test_boards = initialization()
 print("< Initialization >")
 print(test_boards[:10])
 print("\n\n")
-
 
 #3) Fitness evaluation
 
@@ -348,7 +290,6 @@ print("< Crossover >")
 print(test_new_seeds[:10])
 print("\n\n")
 
-
 # 6) Mutation & 7) Update generation
 
 def mutate(seeds, mutation_rate = 0.1):
@@ -383,7 +324,6 @@ def n_queens(chess_boards, target_value = 0,selected_rate = 0.5, mutation_rate=0
             break
     return generation_now, fit_scores, (time.time() - stime)
 
-
 #그래프로 보여주기 위함
 
 chess_boards = initialization(n = 100)
@@ -393,7 +333,6 @@ plt.show()
 print("< result1 >")
 print(result_generation[::10]) # 결과값 10개만 출력
 print("\n\n")
-
 
 # 실행할 때마다 값이 다르게 나온다는걸 보여줌
 

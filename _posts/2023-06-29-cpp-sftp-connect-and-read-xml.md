@@ -9,12 +9,6 @@ tags: [c, c++, vs, sftp, ftp, CkSFtp, xml, pugi, pugixml]
 # sftp 접속 및 xml 다운로드 후, 원하는 값 꺼내오기
 - 최초 작성일: 2023년 6월 29일 (목)
 
-## 목차
-
-
-
-<br/>
-
 ## 코드 (CksFtp 라이브러리 활용)
 
 ### 사용한 라이브러리

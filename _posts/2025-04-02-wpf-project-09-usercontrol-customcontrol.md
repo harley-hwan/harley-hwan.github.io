@@ -10,30 +10,6 @@ tags: [c#, wpf, usercontrol, customcontrol, mvvm, xaml, ui]
 
 - 최초 작성일: 2025년 3월 29일 (토)
 
-## 목차
-
-1. [UserControl](#usercontrol)
-   - [정의](#정의)
-   - [생성 방법](#생성-방법)
-   - [XAML 예제](#xaml-예제)
-   - [코드 비하인드 설명](#코드-비하인드-설명)
-   - [ViewModel 바인딩 예시](#viewmodel-바인딩-예시)
-   - [사용 결과](#사용-결과)
-
-2. [Custom Control](#custom-control)
-   - [정의](#정의-1)
-   - [생성 방법](#생성-방법-1)
-   - [XAML 예제](#xaml-예제-1)
-   - [코드 비하인드 설명](#코드-비하인드-설명-1)
-   - [ViewModel 바인딩 예시](#viewmodel-바인딩-예시-1)
-   - [사용 결과](#사용-결과-1)
-
-3. [정리: UserControl과 Custom Control의 차이](#정리-usercontrol과-custom-control의-차이)
-
----
-
-WPF에서 UI를 재사용하거나 확장하기 위해 **사용자 컨트롤(UserControl)**과 **커스텀 컨트롤(Custom Control)**을 만들 수 있다. 두 방식은 목적과 구현 방식이 다르다. 이 문서는 UserControl과 Custom Control이 무엇인지, 어떻게 만들며 어떤 차이가 있는지를 설명한다.
-
 ## UserControl
 
 ### 정의  

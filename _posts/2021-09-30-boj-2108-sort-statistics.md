@@ -11,12 +11,8 @@ tags: [baekjoon, 백준, algorithm, sort]
 - 최초 작성일: 2021년 9월 30일(목)
 - 주소: <https://www.acmicpc.net/problem/2108>
 
-## 목차
-
-
 ## 문제 설명
 ![image](https://user-images.githubusercontent.com/68185569/135301978-78dcb4a7-4112-4599-b91c-b207bb1edb7f.png)
-
 
 - 수를 처리하는 것은 통계학에서 상당히 중요한 일이다. 통계학에서 N개의 수를 대표하는 기본 통계값에는 다음과 같은 것들이 있다. 단, N은 홀수라고 가정하자.
 
@@ -42,7 +38,6 @@ tags: [baekjoon, 백준, algorithm, sort]
 
 ![image](https://user-images.githubusercontent.com/68185569/135302077-29c058dc-2da2-4eb2-9763-3da08596bf50.png)
 
-
 ## 알고리즘 분류
 
 - 구현
@@ -65,8 +60,6 @@ tags: [baekjoon, 백준, algorithm, sort]
 4. 범위
 - 마지막으로, 범위는 그냥 오름차순 된 숫자들 중 가장 마지막 인덱스의 숫자와 가장 처음 인덱스의 숫자를 뺀 것을 출력한다.
 
-
-
 ```c++
 #include <iostream>
 #include <vector>
@@ -77,7 +70,6 @@ tags: [baekjoon, 백준, algorithm, sort]
 using namespace std;
 
 //  백준 2108번: 통계학 (정렬, 구현)
-
 
 // 1. 산술평균: 평균
 // 2. 중앙값:   증가하는 순서로 나열했을 때 그 중앙에 위치하는 값
@@ -113,7 +105,6 @@ int main() {
     cout << round(float(sum) / n) << endl;           // 평균
 
     cout << v[n/2] << endl;                 // 중앙값
-
 
     for (int i = 0; i < v.size()-1; i++) {
         while(1) {

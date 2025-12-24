@@ -13,19 +13,6 @@ tags: [docker, container, cleanup, devops, windows, macos, linux]
 
 <br>
 
-## 목차
-1. [개요](#개요)
-2. [기본 확인 명령어](#기본-확인-명령어)
-3. [OS별 컨테이너 정리 방법](#os별-컨테이너-정리-방법)
-   - macOS/Linux 환경
-   - Windows 환경
-   - Windows Git Bash 환경
-4. [주의사항](#주의사항)
-5. [유용한 팁](#유용한-팁)
-6. [다음 단계](#다음-단계)
-
-<br>
-
 ## Docker 컨테이너 정리하기
 
 ### 개요

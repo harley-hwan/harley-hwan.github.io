@@ -11,15 +11,6 @@ tags: [c++, programming, wifi, wlanapi, windows]
 
 <br/>
 
-## 목차
-1. [소개](#소개)
-2. [Wi-Fi 검색 기능](#wi-fi-검색-기능)
-3. [Wi-Fi 연결 기능](#wi-fi-연결-기능)
-4. [유틸리티 함수들](#유틸리티-함수들)
-5. [결론](#결론)
-
-<br/>
-
 ## 소개
 Windows에서는 WlanAPI를 통해 Wi-Fi 네트워크 관련 기능을 프로그래밍 방식으로 제어할 수 있다. 
 

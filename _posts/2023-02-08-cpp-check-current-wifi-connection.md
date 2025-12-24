@@ -10,12 +10,6 @@ tags: [c, c++, wifi, connect, wlan, msdn]
 - 최초 작성일: 2023년 2월 8일 (수)
 - 참조: https://cpp.hotexamples.com/examples/-/-/WlanOpenHandle/cpp-wlanopenhandle-function-examples.html
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 ```c++
@@ -28,8 +22,6 @@ tags: [c, c++, wifi, connect, wlan, msdn]
 #include <objbase.h>
 #include <wtypes.h>
 #include <iostream>
-
-
 
 // Need to link with Wlanapi.lib and Ole32.lib
 #pragma comment(lib, "wlanapi.lib")

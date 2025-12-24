@@ -9,12 +9,6 @@ tags: [c, c++, linux, command, arp, system, ip, serverip]
 # 현재 연결된 IP 목록 뽑아오기
 - 최초 작성일: 2023년 2월 17일 (금)
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 system() 함수를 이용하여 arp -a 커맨드를 실행하여 나오는 출력물을 텍스트 파일에 입력하고, 그 결과를 다시 불러와 ip 주소들만 뽑아서 ip_list를 뽑는 코드를 짜보았다.
@@ -74,7 +68,6 @@ std::vector<std::string> getE6ServerIP()
 - 파일을 여는 경우, 파일을 정상적으로 닫아야한다. 이 함수는 파일을 열고 난 뒤 파일을 닫는 것을 처리하고 있지만, 파일을 열지 못하는 경우 파일을 닫지 않는 문제가 있다.
 - 이 문제를 해결하기 위해서는 파일을 열지 못한 경우, 반드시 파일을 닫아야한다. 
 - 이를 위해 ifs.is_open()을 사용하여 파일이 열려있는지 확인하고, 파일을 열었을 때에만 파일을 닫도록 수정하는 것이 좋다.
-
 
 ```c++
 std::vector<std::string> getE6ServerIP()
@@ -297,7 +290,6 @@ std::vector<std::string> getIPList() {
     return ip_list;
 }
 
-
 int main() {
     std::vector<std::string> ip_list = getIPList();
 
@@ -315,8 +307,6 @@ int main() {
 위의 소스를 이용해 뽑은 ip가 없을 때, "wasipEmpty"가 출력되도록 조치해두고,
 
 while 문으로 반복해서 실행하다 보니 아래와 같은 에러가 반복적으로 발생했다.
-
-
 
 ```c++
 /proc/net/arp: Too many open files
@@ -486,7 +476,6 @@ IP 주소와 MAC 주소는 std::pair 객체에 저장하고, 이들을 std::vect
 
 마지막으로 자식 프로세스에서 열린 파일 디스크립터를 닫아준다.
 
-
 <br/>
 
 <br/>
@@ -645,7 +634,6 @@ socket 함수로 생성한 소켓 디스크립터를 close 함수로 반드시 �
 #include <net/if.h>
 #include <net/if_arp.h>
 #include <unistd.h>
-
 
 std::vector<std::string> getIPListFromARP()
 {

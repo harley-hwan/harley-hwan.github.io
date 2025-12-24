@@ -6,16 +6,10 @@ categories: [Project]
 tags: [system software, lab, linux]
 ---
 
-
 # Attack Lab
 
 - 최초 작성일: 2021년 11월 11일(목)
 - github 주소: <https://github.com/harley-hwan/SystemSoftwareLecture>
-
-
-## 목차
-
-
 
 ## 풀이 과정
 
@@ -138,8 +132,4 @@ offset은 rax를 불러오는 부분 바로 밑에서부터 cookie의 거리를 
 ![image](https://user-images.githubusercontent.com/68185569/141252606-80b578a6-61a5-404a-ac84-8b03aea1a931.png)
 
 ![image](https://user-images.githubusercontent.com/68185569/141252632-2de11cf9-2563-40a0-9e43-d0962fd0b192.png)
-
-
-
-
 

@@ -10,11 +10,6 @@ tags: [c++, wifi, ssid, wlanopenhandle, WlanEnumInterfaces, WlanQueryInterface, 
 
 - 최초 작성일: 2023년 2월 17일(금)
 
-## 목차
-
-
-
-
 ## 내용
 
 ```c++
@@ -74,12 +69,10 @@ int main() {
     return 0;
 }
 
-
 ```
 
 <br/>
 
 ## 결과
-
 
 ![image](https://user-images.githubusercontent.com/68185569/219562755-0a57223c-955d-483e-8061-9f8a0e5227df.png)

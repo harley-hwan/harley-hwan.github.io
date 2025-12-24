@@ -11,10 +11,6 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 - 최초 작성일: 2021년 10월 26일(화)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/86051>
 
-## 목차
-
-
-
 ## 문제 설명
 
 - 0부터 9까지의 숫자 중 일부가 들어있는 배열 `numbers`가 매개변수로 주어집니다. 

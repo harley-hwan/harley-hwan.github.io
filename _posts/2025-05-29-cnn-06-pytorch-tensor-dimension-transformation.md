@@ -12,16 +12,6 @@ tags: [pytorch, tensor, reshape, view, permute, transpose, deep learning]
 
 * 최초 작성일: 2025년 5월 29일 (목)
 
-## 목차
-
-1. [텐서 차원의 이해](#텐서-차원의-이해)
-2. [reshape와 view로 형태 변환하기](#reshape와-view로-형태-변환하기)
-3. [permute와 transpose로 차원 재배열하기](#permute와-transpose로-차원-재배열하기)
-4. [실전 활용 예제](#실전-활용-예제)
-5. [주의사항과 베스트 프랙티스](#주의사항과-베스트-프랙티스)
-
----
-
 ## 📐 텐서 차원의 이해
 
 딥러닝에서 텐서의 차원을 이해하고 조작하는 것은 필수적이다. 각 차원은 데이터의 특정 속성을 나타낸다.

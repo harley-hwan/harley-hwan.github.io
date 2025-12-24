@@ -11,9 +11,6 @@ tags: [baekjoon, 백준, algorithm, greedy]
 - 최초 작성일: 2021년 9월 19일(일)
 - 주소: <https://www.acmicpc.net/problem/2217>
 
-## 목차
-
-
 ## 문제 설명
 ![image](https://user-images.githubusercontent.com/68185569/133917081-7483b0fb-ad82-45ba-88fc-82f6aef3633b.png)
 
@@ -70,7 +67,6 @@ int main() {
     }
 
     cout << max << endl;
-
 
     return 0;
 }

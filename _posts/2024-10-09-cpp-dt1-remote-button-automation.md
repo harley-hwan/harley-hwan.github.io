@@ -9,12 +9,6 @@ tags: [c, c++, shellapi, windowsapi, system, command, exe, execute, HWND, window
 # DT1-Remote 버튼 자동화 프로그램 (응용 프로그램(.exe 실행파일) 실행 후 버튼 클릭)
 - 최초 작성일: 2023년 4월 4일 (화)
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 이 C++ 코드는 "DT1-Remote.exe" 프로세스를 찾아 실행하고, 해당 프로그램의 창을 찾는 작업을 수행한다.
@@ -148,7 +142,6 @@ int main() {
 
     // 버튼의 현재 상태를 가져옵니다.
     LRESULT state = SendMessage(hwndButton, BM_GETSTATE, 0, 0);
-
 
     // 버튼이 OFF 상태일 때만 ON으로 변경합니다.
     if (!(state & BST_CHECKED)) {

@@ -10,10 +10,7 @@ tags: [baekjoon, 백준, algorithm, dp]
 
 ![image](https://user-images.githubusercontent.com/68185569/133781257-263004ba-099f-4af9-9e28-f7e781db7b50.png)
 
-
 ### 피보나치 수 2 (다이나믹 프로그래밍, 동적 계획법)
-
-
 
 ### 풀이 과정
 
@@ -26,7 +23,6 @@ tags: [baekjoon, 백준, algorithm, dp]
 + 입력값인 n은 90 미만으로 주어진다고 했는데, 피오나치 수를 나열한 것 중 90번 째의 숫자는 int로 cover가 안되기 때문에 long long을 사용해주어야 한다.
 
 ---
-
 
 ```c++
 #include <iostream>

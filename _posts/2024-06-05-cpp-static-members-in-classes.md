@@ -8,12 +8,6 @@ tags: [c++, programming, static keyword, static member variable, static member f
 # C++에서 클래스의 Static 멤버 변수와 Static 멤버 함수 이해하기
 - 최초 작성일: 2024년 6월 5일 (수)
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 # C++ 클래스의 static 멤버 변수와 static 멤버 함수

@@ -34,7 +34,6 @@ std::vector<std::vector<std::complex<double>>> reverseTransposeData(const std::v
 std::vector<std::complex<double>> combineRows(const std::vector<std::vector<std::complex<double>>>& data, int numLines);
 std::vector<std::vector<double>> calculateAmplitude(const std::vector<std::vector<std::complex<double>>>& fftData);
 
-
 int main()
 {
     std::string realFilePath = "2023-11-01 15-03-51_output_real1.log";
@@ -94,7 +93,6 @@ int main()
     }
     realFile.close();
     imagFile.close();
-
 
     // FFT 설정 및 실행
     for (int period = 1; period <= 4; period *= 2) {
@@ -170,7 +168,6 @@ std::vector<std::vector<double>> calculateAmplitude(const std::vector<std::vecto
     return amplitudeData;
 }
 
-
 // 여러 줄의 데이터를 하나의 긴 데이터로 결합
 std::vector<std::complex<double>> combineRows(const std::vector<std::vector<std::complex<double>>>& data, int period) {
     std::vector<std::complex<double>> combined;
@@ -183,7 +180,6 @@ std::vector<std::complex<double>> combineRows(const std::vector<std::vector<std:
     }
     return combined;
 }
-
 
 std::vector<std::vector<double>> calculateAmplitude(const std::vector<std::vector<double>>& realData,
     const std::vector<std::vector<double>>& imaginData) {

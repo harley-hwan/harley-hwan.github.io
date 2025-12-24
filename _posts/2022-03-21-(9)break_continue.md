@@ -10,10 +10,6 @@ tags: [c#, unity, codeflowcontrol, break, continue]
 
 - 최초 작성일: 2021년 3월 21일(월)
 
-## 목차
-
-
-
 ## 내용
 
 ```c#
@@ -44,7 +40,6 @@ namespace break_continue
                 Console.WriteLine("소수입니다!");
             else
                 Console.WriteLine("소수가 아닙니다!");
-
 
             //////////////// continue;
             for (int i = 1; i <= 100; i++)

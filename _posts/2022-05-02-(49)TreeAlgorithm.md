@@ -10,13 +10,7 @@ tags: [c#, datastructure, tree, algorihtm, list, add]
 
 - 최초 작성일: 2023년 5월 2일(화)
 
-## 목차
-
-
-
 ## 내용
-
-
 
 ## 개념
 

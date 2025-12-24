@@ -10,10 +10,6 @@ tags: [c#, unity, maze, algorithm, sidewinder]
 
 - 최초 작성일: 2021년 3월 30일(수)
 
-## 목차
-
-
-
 ## 내용
 
 ### SideWinder 원리

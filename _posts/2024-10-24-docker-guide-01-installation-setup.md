@@ -14,38 +14,6 @@ tags: [docker, installation, configuration, devops, containerization, git-bash, 
 
 <br>
 
-## 목차
-1. [Git 및 Git Bash 설정](#git-및-git-bash-설정)
-   - Git 설치
-   - Git Bash 환경설정
-   - winpty 설정과 이해
-2. [개발 환경 구성](#개발-환경-구성)
-   - Visual Studio Code 설치
-   - Docker Desktop 설치
-   - 작업 환경 설정
-3. [Docker 설치 가이드](#docker-설치-가이드)
-   - Windows 환경 설치
-   - Linux 환경 설치
-   - Mac 환경 설치
-4. [초기 설정](#초기-설정)
-   - Docker 서비스 설정
-   - 네트워크 설정
-   - 볼륨 관리
-   - 보안 초기 설정
-5. [기본 명령어 실습](#기본-명령어-실습)
-   - 컨테이너 생명주기 관리
-   - 이미지 관리
-   - 리소스 모니터링
-6. [실전 컨테이너 구성](#실전-컨테이너-구성)
-   - 웹 애플리케이션 스택 구성
-   - CI/CD 파이프라인 구성
-   - 백업 및 복구 시스템
-7. [문제 해결 가이드](#문제-해결-가이드)
-   - 일반적인 문제와 해결
-   - 성능 최적화
-
-<br>
-
 ## Git 및 Git Bash 설정
 
 ### Git 설치

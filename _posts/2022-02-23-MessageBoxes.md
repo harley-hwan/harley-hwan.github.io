@@ -10,10 +10,6 @@ tags: [c++, mfc, messagebox]
 
 - 최초 작성일: 2022년 2월 23일 (수)
 
-## 목차
-
-
-
 ## 목적
 
 #### 조건 1.  프로젝트 이름은 'MessageBoxes'로 한다.
@@ -137,7 +133,6 @@ void CMessageBoxesDlg::OnClickedButtonYnc()
 	}
 }
 
-
 void CMessageBoxesDlg::OnClickedButtonYn()
 {
 	// TODO: Add your control notification handler code here
@@ -157,7 +152,6 @@ void CMessageBoxesDlg::OnClickedButtonYn()
 		UpdateData(FALSE);
 	}
 }
-
 
 void CMessageBoxesDlg::OnClickedButtonRc()
 {
@@ -179,7 +173,6 @@ void CMessageBoxesDlg::OnClickedButtonRc()
 	}
 }
 
-
 void CMessageBoxesDlg::OnClickedButtonOk()
 {
 	// TODO: Add your control notification handler code here
@@ -189,7 +182,6 @@ void CMessageBoxesDlg::OnClickedButtonOk()
 
 	AfxMessageBox(_T("OK 버튼을 눌렀습니다."), MB_ICONERROR);
 }
-
 
 void CMessageBoxesDlg::OnClickedButtonOc()
 {
@@ -211,7 +203,6 @@ void CMessageBoxesDlg::OnClickedButtonOc()
 	}
 }
 
-
 void CMessageBoxesDlg::OnClickedButtonMfc()
 {
 	// TODO: Add your control notification handler code here
@@ -221,13 +212,11 @@ void CMessageBoxesDlg::OnClickedButtonMfc()
 	MessageBox(_T("Microsoft Foundation Class 입니다."));
 }
 
-
 void CMessageBoxesDlg::OnClickedButtonExit()
 {
 	// TODO: Add your control notification handler code here
 	OnOK();
 }
-
 
 void CMessageBoxesDlg::OnClickedButtonAri()
 {

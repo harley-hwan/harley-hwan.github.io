@@ -10,12 +10,6 @@ tags: [c, c++, file, rename, ifstream, ofstream]
 - 최초 작성일: 2023년 2월 8일 (수)
 - 참조: https://cpp.hotexamples.com/examples/-/-/WlanOpenHandle/cpp-wlanopenhandle-function-examples.html
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 ```c++
@@ -51,6 +45,5 @@ void AnalyzePSNR::RetrieveProcessedFiles()
   fout.close();
 }
 }
-
 
 ```

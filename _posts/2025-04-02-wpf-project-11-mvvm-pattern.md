@@ -8,15 +8,6 @@ tags: [WPF, MVVM, C#, XAML, ViewModel]
 
 # MVVM 패턴 복습 및 이론, 실습
 
-## 목차  
-- [MVVM 패턴의 구성 요소](#mvvm-패턴의-구성-요소)  
-- [MVVM 패턴을 쓰는 이유와 장점](#mvvm-패턴을-쓰는-이유와-장점)  
-- [프로젝트 폴더 구조 예시](#프로젝트-폴더-구조-예시)  
-- [MainWindow.xaml을 Views 폴더로 이동](#mainwindowxaml을-views-폴더로-이동)  
-- [App.xaml의 StartupUri 경로 변경](#appxaml의-startupuri-경로-변경)  
-
----
-
 ## MVVM 패턴의 구성 요소
 
 - **Model**: 애플리케이션에서 사용되는 **데이터**와 그 데이터를 처리하는 **비즈니스 로직**을 담당한다.  

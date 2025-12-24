@@ -10,17 +10,6 @@ tags: [c#, wpf, controls, ui, xaml]
 
 - 최초 작성일: 2025년 2월 11일 (화)
 
-## 목차
-1. [WPF 컨트롤 개요](#wpf-컨트롤-개요)
-2. [라벨(Label) 사용하기](#라벨label-사용하기)
-3. [체크 박스(CheckBox)와 라디오 버튼(RadioButton)](#체크-박스checkbox와-라디오-버튼radiobutton)
-4. [텍스트 박스(TextBox)와 패스워드 박스(PasswordBox)](#텍스트-박스textbox와-패스워드-박스passwordbox)
-5. [버튼(Button)과 이벤트 핸들러](#버튼button과-이벤트-핸들러)
-6. [리스트 뷰(ListView)와 데이터 바인딩](#리스트-뷰listview와-데이터-바인딩)
-7. [스택 패널(StackPanel) 활용](#스택-패널stackpanel-활용)
-
----
-
 ## WPF 컨트롤 개요
 
 WPF(Windows Presentation Foundation)에서는 다양한 UI 컨트롤을 제공하며, 이를 활용하여 사용자 인터페이스를 직관적으로 구성할 수 있다. 이번 글에서는 **라벨(Label), 체크 박스(CheckBox), 라디오 버튼(RadioButton), 텍스트 박스(TextBox), 버튼(Button), 패스워드 박스(PasswordBox), 리스트 뷰(ListView)** 등을 사용하는 방법을 설명한다.

@@ -12,13 +12,6 @@ tags: [pytorch, tensor, matmul, dot, deep learning]
 
 * 최초 작성일: 2025년 6월 11일 (수)
 
-## 목차
-
-1. [torch.dot() - 벡터의 내적](#torchdot---벡터의-내적)
-2. [torch.matmul() - 행렬곱](#torchmatmul---행렬곱)
-
----
-
 ## torch.dot() - 벡터의 내적
 
 `torch.dot()` 함수는 두 1차원 벡터 간 내적(dot product)을 계산한다. **1차원 텐서만 가능**하다.

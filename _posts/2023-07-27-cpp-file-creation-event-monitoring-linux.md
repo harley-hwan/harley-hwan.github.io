@@ -9,12 +9,6 @@ tags: [c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm
 # 원하는 파일 생성 이벤트 모니터링
 - 최초 작성일: 2023년 7월 27일 (수)
 
-## 목차
-
-
-
-<br/>
-
 ## 내용
 
 리눅스에서 제공하는 inotify 기능을 사용하여 특정 디렉터리에서 파일 생성 이벤트를 모니터링하는 프로그램. 
@@ -45,7 +39,6 @@ tags: [c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm
 // Size of read buffer
 #define BUF_LEN 1024
 #define EVENT_SIZE (sizeof(struct inotify_event))
-
 
 int main(int argc, char* argv[]) 
 {

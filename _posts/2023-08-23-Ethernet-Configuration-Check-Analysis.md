@@ -10,12 +10,6 @@ tags: [linux, ifconfig, grep, gawk, sudo, bash, shell, script]
 
 - 최초 작성일: 2023년 8월 23일(수)
 
-## 목차
-
-
-
-<br/>
-
 ## 코드
 
 ```bash

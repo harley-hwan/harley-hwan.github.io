@@ -10,10 +10,6 @@ tags: [c++, mfc, calculator]
 
 - 최초 작성일: 2022년 2월 25일 (금)
 
-## 목차
-
-
-
 ## 목적
 
 사칙 연산과 CString 함수의 형 변환을 이용하여 계산기 프로그램을 작성한다.
@@ -75,15 +71,9 @@ void CCalcExDlg::OnClickedButtonInput()
 }
 ```
 
-
-
 <br/>
 
 ### 결과
 
 ![image](https://user-images.githubusercontent.com/68185569/155679462-6e2ec402-e827-4d54-85c8-c4da55cbb2b2.png)
-
-
-
-
 

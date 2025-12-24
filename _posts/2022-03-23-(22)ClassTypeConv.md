@@ -10,10 +10,6 @@ tags: [c#, unity, oop, class, type, conversion]
 
 - 최초 작성일: 2021년 3월 21일(월)
 
-## 목차
-
-
-
 ## 내용
 
 ```c#
@@ -70,6 +66,5 @@ namespace ClassTypeConv
         }
     }
 }
-
 
 ```

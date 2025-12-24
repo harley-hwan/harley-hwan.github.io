@@ -11,10 +11,6 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 - 최초 작성일: 2021년 10월 21일(목)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/64061>
 
-## 목차
-
-
-
 ## 풀이 방법 1
 
 - moves 벡터는 어떤 인덱스의 가장 위에 위치한 인형을 하나씩 꺼낼지를 나타낸다.

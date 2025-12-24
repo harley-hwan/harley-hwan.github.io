@@ -8,14 +8,7 @@ tags: [linux, STM32F, firmware, download, bash]
 
 # STM32F Digital Board Firmware Download via Bash
 
-
 - 최초 작성일: 2023년 9월 1일(금)
-
-## 목차
-
-
-
-<br/>
 
 ## 코드
 

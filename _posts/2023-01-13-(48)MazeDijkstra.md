@@ -10,13 +10,7 @@ tags: [c#, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
 
 - 최초 작성일: 2023년 1월 13일(금)
 
-## 목차
-
-
-
 ## 내용
-
-
 
 ## 개념
 

@@ -11,10 +11,6 @@ tags: [programmers, 프로그래머스, algorithm, c++]
 - 최초 작성일: 2021년 11월 11일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/72412>
 
-## 목차
-
-
-
 ## 문제 설명
 
 - **[본 문제는 정확성과 효율성 테스트 각각 점수가 있는 문제입니다.]**

@@ -11,12 +11,8 @@ tags: [baekjoon, 백준, algorithm, sort]
 - 최초 작성일: 2021년 10월 1일(금)
 - 주소: <https://www.acmicpc.net/problem/18870>
 
-## 목차
-
-
 ## 문제 설명
 ![image](https://user-images.githubusercontent.com/68185569/135610736-7e1b2301-2372-4c38-9f75-d12dbbd528a3.png)
-
 
 - 수직선 위에 N개의 좌표 X1, X2, ..., XN이 있다. 이 좌표에 좌표 압축을 적용하려고 한다.
 - Xi를 좌표 압축한 결과 X'i의 값은 Xi > Xj를 만족하는 서로 다른 좌표의 개수와 같아야 한다.
@@ -44,9 +40,6 @@ tags: [baekjoon, 백준, algorithm, sort]
 - 그래서 2중 벡터(v)에 입력을 넣을 때 인덱스를 같이 저장해둔다.
 - 그러고 난뒤 입력값을 기준으로 오름차순으로 정렬해주고, 인접한 숫자와 같은지를 비교해 같지 않으면 cnt를 1씩 증가시키고 같으면 현재 cnt 값 그대로를 새로운 이중 벡터(order)에 이전에 저장했던 인덱스와 함께 저장한다. 
 - 마지막으로, order 벡터의 second값(입력 순서를 기억하는 인덱스값)을 기준으로 오름차순 해주고 그대로 출력하면 된다.
-
-
-
 
 ```c++
 #include <iostream>
