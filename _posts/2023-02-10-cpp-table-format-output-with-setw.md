@@ -1,6 +1,6 @@
 ---
 title: "(C++) iomanip을 이용한 표 형식 출력 구현"
-description: ""setw와 cout.setf를 활용한 정렬된 출력 포맷팅""
+description: "setw와 cout.setf를 활용한 정렬된 출력 포맷팅"
 date: 2023-02-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, iomanip, formatting, output, console]

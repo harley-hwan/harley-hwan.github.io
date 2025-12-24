@@ -1,6 +1,6 @@
 ---
 title: "Docker 실전 가이드: Nginx 컨테이너 실습"
-description: ""Docker를 사용하여 웹 서버 컨테이너 실행 및 관리하기""
+description: "Docker를 사용하여 웹 서버 컨테이너 실행 및 관리하기"
 date: 2025-02-06 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, container, nginx, webserver, cli]

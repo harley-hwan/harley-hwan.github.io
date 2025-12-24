@@ -1,6 +1,6 @@
 ---
 title: "리눅스 네트워크 자동화: 이더넷 디바이스 설정 스크립트"
-description: ""임베디드 시스템을 위한 네트워크 자동 구성 가이드""
+description: "임베디드 시스템을 위한 네트워크 자동 구성 가이드"
 date: 2023-08-23 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, embedded, networking, bash, ethernet, automation, system-config]

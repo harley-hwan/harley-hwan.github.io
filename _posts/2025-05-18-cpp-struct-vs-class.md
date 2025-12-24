@@ -1,6 +1,6 @@
 ---
 title: "(C++) 구조체(struct)와 클래스(class)의 차이 명확히 이해하기"
-description: ""C++에서 struct와 class의 개념적, 기술적 차이와 사용법""
+description: "C++에서 struct와 class의 개념적, 기술적 차이와 사용법"
 date: 2025-05-18 10:00:00 +0900
 categories: [Dev, C++]
 ---

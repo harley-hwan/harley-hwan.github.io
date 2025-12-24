@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 8. AsyncRelayCommand로 비동기 작업 처리하기"
-description: ""Async/await를 활용해 UI를 멈추지 않고 작업 실행하기""
+description: "Async/await를 활용해 UI를 멈추지 않고 작업 실행하기"
 date: 2025-03-28 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, async, await, asyncRelayCommand, mvvm, command]

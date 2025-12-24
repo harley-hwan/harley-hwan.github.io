@@ -1,6 +1,6 @@
 ---
 title: "(C++) 이상치(Outlier) 데이터 처리 구현"
-description: ""선형 보간법과 이동 평균을 이용한 데이터 스무딩""
+description: "선형 보간법과 이동 평균을 이용한 데이터 스무딩"
 date: 2023-06-09 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, outlier, filtering, smoothing, interpolation]

@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 9. UserControl과 Custom Control 활용하기"
-description: ""UserControl과 Custom Control의 차이점과 구현 방법""
+description: "UserControl과 Custom Control의 차이점과 구현 방법"
 date: 2025-04-02 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, usercontrol, customcontrol, mvvm, xaml, ui]

@@ -1,6 +1,6 @@
 ---
 title: "(C++) 싱글톤 패턴(Singleton Pattern) 이해하기"
-description: ""C++에서 싱글톤 패턴의 개념과 구현 방법""
+description: "C++에서 싱글톤 패턴의 개념과 구현 방법"
 date: 2025-03-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, singleton, design-pattern, oop, programming]

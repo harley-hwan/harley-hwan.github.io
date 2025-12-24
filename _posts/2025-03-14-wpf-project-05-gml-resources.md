@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 5. WPF에서 GML 리소스 활용하기"
-description: ""GML 리소스를 활용한 스타일 재사용 및 유지보수 방법""
+description: "GML 리소스를 활용한 스타일 재사용 및 유지보수 방법"
 date: 2025-03-14 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, styles, gml, xaml, ui]

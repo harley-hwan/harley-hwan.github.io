@@ -1,6 +1,6 @@
 ---
 title: "Docker 실전 가이드: 컨테이너 vs 하이퍼바이저 가상화"
-description: ""컨테이너 가상화가 현대 애플리케이션 환경에서 선호되는 이유""
+description: "컨테이너 가상화가 현대 애플리케이션 환경에서 선호되는 이유"
 date: 2025-02-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, container, virtualization, hypervisor, lxc]

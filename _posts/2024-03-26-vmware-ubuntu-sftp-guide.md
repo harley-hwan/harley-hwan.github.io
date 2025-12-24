@@ -1,6 +1,6 @@
 ---
 title: "가상머신과 SFTP: VMware Ubuntu 환경에서의 네트워크 설정 가이드"
-description: ""ens33 네트워크 인터페이스를 통한 SFTP 연결 최적화""
+description: "ens33 네트워크 인터페이스를 통한 SFTP 연결 최적화"
 date: 2024-03-26 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, ubuntu, vmware, networking, sftp, filezilla, ens33]

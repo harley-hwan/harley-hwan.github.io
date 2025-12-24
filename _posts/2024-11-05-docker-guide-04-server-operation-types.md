@@ -1,6 +1,6 @@
 ---
 title: "Docker 실전 가이드: 서버 운영 방식의 이해"
-description: ""베어메탈, 하이퍼바이저, 컨테이너 방식의 시각적 비교""
+description: "베어메탈, 하이퍼바이저, 컨테이너 방식의 시각적 비교"
 date: 2024-11-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, server, bare-metal, hypervisor, container, virtualization]

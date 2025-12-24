@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 2. WPF 프로젝트의 구조 및 UI 구성"
-description: ""Visual Studio 활용 및 XAML 기본 이해""
+description: "Visual Studio 활용 및 XAML 기본 이해"
 date: 2023-05-19 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, ui, xaml, visualstudio]

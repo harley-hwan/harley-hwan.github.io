@@ -1,6 +1,6 @@
 ---
 title: "(C++) Windows 환경에서의 이더넷 어댑터 정보 추출"
-description: ""NetworkListManager를 이용한 네트워크 인터페이스 목록 획득""
+description: "NetworkListManager를 이용한 네트워크 인터페이스 목록 획득"
 date: 2024-01-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, windows, ethernet, network, interface, com]

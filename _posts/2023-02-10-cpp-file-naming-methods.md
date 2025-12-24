@@ -1,6 +1,6 @@
 ---
 title: "(C/C++) 동적 파일명 생성 및 파일 열기 구현"
-description: ""MFC와 C 스타일의 파일명 포맷팅 방법""
+description: "MFC와 C 스타일의 파일명 포맷팅 방법"
 date: 2023-02-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, file, stream, formatting, mfc]

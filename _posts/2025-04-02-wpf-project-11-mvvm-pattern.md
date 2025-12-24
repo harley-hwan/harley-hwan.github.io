@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 11. MVVM 패턴 복습 및 이론, 실습"
-description: ""MVVM 패턴 이론과 폴더 구조 실습""
+description: "MVVM 패턴 이론과 폴더 구조 실습"
 date: 2025-04-02 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [WPF, MVVM, C#, XAML, ViewModel]

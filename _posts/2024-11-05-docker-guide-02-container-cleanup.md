@@ -1,6 +1,6 @@
 ---
 title: "Docker 실전 가이드: 컨테이너 정리하기"
-description: ""OS별 Docker 컨테이너 정리 방법 가이드""
+description: "OS별 Docker 컨테이너 정리 방법 가이드"
 date: 2024-11-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, container, cleanup, devops, windows, macos, linux]

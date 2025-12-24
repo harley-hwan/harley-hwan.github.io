@@ -1,6 +1,6 @@
 ---
 title: "(C++) 함수 내부에 함수 정의하기: 지역 함수와 람다 표현식"
-description: ""코드 구조화와 가독성 향상을 위한 내부 함수 활용법""
+description: "코드 구조화와 가독성 향상을 위한 내부 함수 활용법"
 date: 2024-09-02 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, programming, lambda functions, local functions, code structure]

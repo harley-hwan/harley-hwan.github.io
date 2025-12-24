@@ -1,6 +1,6 @@
 ---
 title: "(c++) Understanding 'explicit'"
-description: ""Preventing Implicit Conversions""
+description: "Preventing Implicit Conversions"
 date: 2024-01-31 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, programming, explicit keyword]

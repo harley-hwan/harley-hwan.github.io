@@ -1,6 +1,6 @@
 ---
 title: "(C++) WlanAPI를 이용한 Wi-Fi 검색 및 연결 기능 구현"
-description: ""Windows 환경에서 Wi-Fi 네트워크 검색과 연결하기""
+description: "Windows 환경에서 Wi-Fi 네트워크 검색과 연결하기"
 date: 2023-03-28 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, programming, wifi, wlanapi, windows]

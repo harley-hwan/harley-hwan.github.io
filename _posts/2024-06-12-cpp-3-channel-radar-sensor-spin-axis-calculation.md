@@ -1,6 +1,6 @@
 ---
 title: "(c++) 3채널 레이더 센서로 물체 운동의 스핀축 계산하기"
-description: ""위상차 이용 스핀축 계산 원리""
+description: "위상차 이용 스핀축 계산 원리"
 date: 2024-06-12 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, programming, radar sensor, phase difference, spin axis]

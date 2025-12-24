@@ -1,6 +1,6 @@
 ---
 title: "(C++) DLL Crash가 클라이언트에 미치는 영향과 해결 방법"
-description: ""DLL 충돌(Crash) 발생 시 클라이언트 측 영향과 명확한 해결법""
+description: "DLL 충돌(Crash) 발생 시 클라이언트 측 영향과 명확한 해결법"
 date: 2025-05-20 10:00:00 +0900
 categories: [Dev, C++]
 ---

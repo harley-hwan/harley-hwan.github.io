@@ -1,6 +1,6 @@
 ---
 title: "(CNN) 파이토치 텐서 연산 - 내적과 행렬곱(dot, matmul)"
-description: ""torch의 dot()과 matmul() 함수의 사용법과 차이점""
+description: "torch의 dot()과 matmul() 함수의 사용법과 차이점"
 date: 2025-06-11 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, matmul, dot, deep learning]

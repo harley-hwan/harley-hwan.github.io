@@ -1,6 +1,6 @@
 ---
 title: "(CNN) PyTorch Tensor 차원 변환"
-description: ""reshape, view, permute, transpose를 활용한 텐서 형태 변환""
+description: "reshape, view, permute, transpose를 활용한 텐서 형태 변환"
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, reshape, view, permute, transpose, deep learning]

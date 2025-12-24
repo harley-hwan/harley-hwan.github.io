@@ -1,6 +1,6 @@
 ---
 title: "(CNN) Pytorch의 Tensor 소개"
-description: ""파이토치 텐서의 개념부터 NumPy와의 차이점까지""
+description: "파이토치 텐서의 개념부터 NumPy와의 차이점까지"
 date: 2025-05-28 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, numpy, deep learning, python]

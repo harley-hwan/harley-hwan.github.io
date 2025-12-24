@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 13. 비동기 함수의 예외 처리"
-description: ""async/await 패턴과 예외 처리 방법""
+description: "async/await 패턴과 예외 처리 방법"
 date: 2025-05-09 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [WPF, C#, Async, Await, Exception Handling, Task]

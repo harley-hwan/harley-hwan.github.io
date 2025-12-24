@@ -1,6 +1,6 @@
 ---
 title: "(C++) Windows 소켓 에러 메시지 출력 구현"
-description: ""FormatMessage를 이용한 시스템 에러 코드 해석""
+description: "FormatMessage를 이용한 시스템 에러 코드 해석"
 date: 2023-02-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, windows, socket, error, mfc]

@@ -1,6 +1,6 @@
 ---
 title: "(CNN) arange, zeros, ones, random"
-description: ""arange와 기본 텐서 함수 및 난수 생성 함수""
+description: "arange와 기본 텐서 함수 및 난수 생성 함수"
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, random, arange, deep learning, initialization]

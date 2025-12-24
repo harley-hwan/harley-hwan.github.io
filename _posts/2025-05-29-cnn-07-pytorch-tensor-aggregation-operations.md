@@ -1,6 +1,6 @@
 ---
 title: "(CNN) PyTorch Tensor 집계 연산"
-description: ""sum, min, max, mean과 argmax를 활용한 데이터 집계""
+description: "sum, min, max, mean과 argmax를 활용한 데이터 집계"
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, aggregation, sum, mean, max, min, argmax, deep learning]

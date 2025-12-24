@@ -1,6 +1,6 @@
 ---
 title: "(CNN) 캐글(Kaggle) 커널 사용하기 - 계정 등록 및 GPU 인증"
-description: ""캐글 계정 생성부터 GPU 사용을 위한 전화번호 인증까지 상세 가이드""
+description: "캐글 계정 생성부터 GPU 사용을 위한 전화번호 인증까지 상세 가이드"
 date: 2025-05-26 10:00:00 +0900
 categories: [Dev, CNN]
 ---

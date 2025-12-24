@@ -1,6 +1,6 @@
 ---
 title: "Docker 실전 가이드: 설치와 환경 구성"
-description: ""Docker 환경 구축과 실전 활용을 위한 종합 가이드""
+description: "Docker 환경 구축과 실전 활용을 위한 종합 가이드"
 date: 2024-10-24 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, installation, configuration, devops, containerization, git-bash, winpty]

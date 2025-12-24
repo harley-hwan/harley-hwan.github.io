@@ -1,6 +1,6 @@
 ---
 title: "Strip 명령어: ELF 파일 최적화의 핵심 도구"
-description: ""임베디드 시스템을 위한 실행 파일 용량 최적화에 대한 이론과 실제""
+description: "임베디드 시스템을 위한 실행 파일 용량 최적화에 대한 이론과 실제"
 date: 2024-10-25 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, embedded, optimization, binary, elf, strip, linker]

@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 1. WPF 프로젝트 시작하기 (프로젝트 생성, MVVM)"
-description: ""Data Control with C#""
+description: "Data Control with C#"
 date: 2023-05-18 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, mvvm, data-binding]

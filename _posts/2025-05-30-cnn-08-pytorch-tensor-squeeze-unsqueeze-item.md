@@ -1,6 +1,6 @@
 ---
 title: "(CNN) PyTorch 텐서 차원 조작: squeeze, unsqueeze, item"
-description: ""불필요한 차원 제거와 추가, 그리고 스칼라 값 추출하기""
+description: "불필요한 차원 제거와 추가, 그리고 스칼라 값 추출하기"
 date: 2025-05-30 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, squeeze, unsqueeze, item, dimension manipulation]

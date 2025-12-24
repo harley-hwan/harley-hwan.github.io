@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 6. WPF에서 트리거와 데이터 트리거 활용하기"
-description: ""트리거를 활용한 스타일 및 데이터 연동 방법""
+description: "트리거를 활용한 스타일 및 데이터 연동 방법"
 date: 2025-03-14 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, triggers, data-triggers, ui, xaml]

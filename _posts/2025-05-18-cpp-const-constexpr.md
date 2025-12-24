@@ -1,6 +1,6 @@
 ---
 title: "(C++) const와 constexpr 명확히 이해하기"
-description: ""C++에서 const와 constexpr의 차이점과 활용 방법""
+description: "C++에서 const와 constexpr의 차이점과 활용 방법"
 date: 2025-05-18 10:00:00 +0900
 categories: [Dev, C++]
 ---

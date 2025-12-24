@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 3. WPF에서 컨트롤 사용하기"
-description: ""라벨(Label), 체크 박스(CheckBox), 라디오 버튼(RadioButton), 텍스트 박스(TextBox), 버튼(Button), 패스워드 박스(PasswordBox), 리스트 뷰(ListView) 활용""
+description: "라벨(Label), 체크 박스(CheckBox), 라디오 버튼(RadioButton), 텍스트 박스(TextBox), 버튼(Button), 패스워드 박스(PasswordBox), 리스트 뷰(ListView) 활용"
 date: 2025-02-11 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, controls, ui, xaml]

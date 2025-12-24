@@ -1,6 +1,6 @@
 ---
 title: "(C++) Windows 프린터 스풀러를 이용한 라벨 프린터 제어"
-description: ""TSC P200 라벨 프린터 인쇄 명령 구현""
+description: "TSC P200 라벨 프린터 인쇄 명령 구현"
 date: 2023-03-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, printer, windows, spooler, labelprinter, tsc, zpl]

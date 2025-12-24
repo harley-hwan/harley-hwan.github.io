@@ -1,6 +1,6 @@
 ---
 title: "Docker 실전 가이드: 도커의 개념과 아키텍처"
-description: ""도커의 구조와 동작 원리를 이해하기 쉽게 설명""
+description: "도커의 구조와 동작 원리를 이해하기 쉽게 설명"
 date: 2025-02-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, container, architecture, api, cli]

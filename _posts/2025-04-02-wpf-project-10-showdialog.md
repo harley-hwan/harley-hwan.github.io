@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 10. ShowDialog를 활용한 다른 창 호출하기"
-description: ""MVVM 패턴에서 새 창 호출 및 ViewModel 바인딩 방법""
+description: "MVVM 패턴에서 새 창 호출 및 ViewModel 바인딩 방법"
 date: 2025-04-02 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, showdialog, mvvm, asyncRelayCommand, window, ui]

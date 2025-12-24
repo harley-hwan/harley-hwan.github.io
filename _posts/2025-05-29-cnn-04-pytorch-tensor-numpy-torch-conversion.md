@@ -1,6 +1,6 @@
 ---
 title: "(CNN) NumPy 배열과 PyTorch 텐서 간 상호 변환 방법"
-description: ""쉽고 빠르게 NumPy 배열과 PyTorch 텐서 변환하기""
+description: "쉽고 빠르게 NumPy 배열과 PyTorch 텐서 변환하기"
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, numpy, deep learning, python]

@@ -1,6 +1,6 @@
 ---
 title: "(Radar) 1. 레이더 센서의 IQ 신호 이해하기"
-description: ""레이더 센서의 기본 원리와 IQ 신호의 의미""
+description: "레이더 센서의 기본 원리와 IQ 신호의 의미"
 date: 2025-04-15 10:00:00 +0900
 categories: [ETC]
 tags: [radar, iq signal, signal, radar signal, signal process, sensor, radar sensor]

@@ -1,6 +1,6 @@
 ---
 title: "(CNN) Pytorch Tensor - Indexing"
-description: ""텐서의 다양한 인덱싱 기법과 numpy array와의 차이점까지""
+description: "텐서의 다양한 인덱싱 기법과 numpy array와의 차이점까지"
 date: 2025-06-11 10:00:00 +0900
 categories: [Dev, CNN]
 ---

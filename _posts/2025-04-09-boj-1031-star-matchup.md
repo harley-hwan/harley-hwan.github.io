@@ -1,6 +1,6 @@
 ---
 title: "(BOJ) 1031. 스타 대결 문제 풀이 (C++)"
-description: ""최대 유량을 활용한 사전순 최소 대진표 구성 방법""
+description: "최대 유량을 활용한 사전순 최소 대진표 구성 방법"
 date: 2025-04-09 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
 tags: [c++, baekjoon, network-flow, maxflow, bfs, algorithm]

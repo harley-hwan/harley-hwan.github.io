@@ -1,6 +1,6 @@
 ---
 title: "(CNN) Pytorch의 Tensor 생성, Shape, 차원, 타입"
-description: ""텐서 생성 방법부터 형태, 차원 및 데이터 타입 관리까지 상세 설명""
+description: "텐서 생성 방법부터 형태, 차원 및 데이터 타입 관리까지 상세 설명"
 date: 2025-05-28 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, numpy, deep learning, python]

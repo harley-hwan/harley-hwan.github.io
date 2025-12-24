@@ -1,6 +1,6 @@
 ---
 title: "(C++) 콜백 함수(Callback Function) 이해하기"
-description: ""C++에서 콜백 함수의 개념과 구현 방법""
+description: "C++에서 콜백 함수의 개념과 구현 방법"
 date: 2025-03-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, callback, std-function, lambda, programming]

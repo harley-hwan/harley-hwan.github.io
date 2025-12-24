@@ -1,6 +1,6 @@
 ---
 title: "(C++) WlanAPI를 이용한 Wi-Fi MAC 주소 검출"
-description: ""Windows 환경에서의 Wi-Fi 연결 MAC 주소 추출""
+description: "Windows 환경에서의 Wi-Fi 연결 MAC 주소 추출"
 date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, windows, wlan, mac, network, wlanapi]

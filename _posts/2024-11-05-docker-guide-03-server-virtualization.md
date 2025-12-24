@@ -1,6 +1,6 @@
 ---
 title: "Docker 실전 가이드: 서버와 가상화 이해하기"
-description: ""서버와 가상화 기술의 기본 개념과 필요성""
+description: "서버와 가상화 기술의 기본 개념과 필요성"
 date: 2024-11-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, server, virtualization, devops, infrastructure]

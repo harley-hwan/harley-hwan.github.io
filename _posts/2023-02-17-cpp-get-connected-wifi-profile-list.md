@@ -1,6 +1,6 @@
 ---
 title: "(C++) Windows WLAN API를 이용한 WiFi 프로필 검출"
-description: ""현재 연결된 WiFi 사용자 프로필 정보 추출""
+description: "현재 연결된 WiFi 사용자 프로필 정보 추출"
 date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, windows, wlan, api, profile, network]

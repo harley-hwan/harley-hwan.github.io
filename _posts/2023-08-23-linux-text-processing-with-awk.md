@@ -1,6 +1,6 @@
 ---
 title: "리눅스 텍스트 처리: AWK를 활용한 명령어 출력 파싱"
-description: ""명령어 출력에서 특정 필드를 추출하는 스크립트 작성 가이드""
+description: "명령어 출력에서 특정 필드를 추출하는 스크립트 작성 가이드"
 date: 2023-08-23 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, gawk, awk, bash, shell, text-processing, command-line]

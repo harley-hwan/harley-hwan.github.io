@@ -1,6 +1,6 @@
 ---
 title: "(c++) 클래스의 Static 멤버 변수와 Static 멤버 함수 이해하기"
-description: ""공유되는 멤버의 선언, 정의, 사용 방법 알아보기""
+description: "공유되는 멤버의 선언, 정의, 사용 방법 알아보기"
 date: 2024-06-05 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c++, programming, static keyword, static member variable, static member function]

@@ -1,6 +1,6 @@
 ---
 title: "(WPF) 4. WPF에서 스타일 및 레이아웃 활용하기"
-description: ""그라데이션 배경, 반투명 효과, 자동 크기 조정 및 정렬 활용법""
+description: "그라데이션 배경, 반투명 효과, 자동 크기 조정 및 정렬 활용법"
 date: 2025-03-13 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [c#, wpf, styles, layout, ui, xaml]
