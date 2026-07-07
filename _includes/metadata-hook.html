@@ -5,4 +5,16 @@
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense.client }}"
     crossorigin="anonymous"
   ></script>
+  <style>
+    /* 광고가 채워지지 않으면(unfilled) 광고 영역과 래퍼를 통째로 숨겨 빈 공간을 남기지 않는다 */
+    ins.adsbygoogle[data-ad-status='unfilled'] {
+      display: none !important;
+    }
+    .adsense-unit:has(ins.adsbygoogle[data-ad-status='unfilled']) {
+      display: none;
+    }
+    article.adsense-feed-card:has(ins.adsbygoogle[data-ad-status='unfilled']) {
+      display: none;
+    }
+  </style>
 {% endif %}

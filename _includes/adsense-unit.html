@@ -1,21 +1,50 @@
 {% comment %}
-  Google AdSense 수동 광고 단위 (반응형 디스플레이 광고)
+  Google AdSense 수동 광고 단위
 
-  사용법: include adsense-unit.html slot=site.adsense.slot_post_bottom
+  파라미터:
+    slot       (필수) 광고 단위 슬롯 ID. 비어 있으면 아무것도 렌더링하지 않는다.
+    layout_key (선택) 인피드(In-feed) 광고의 data-ad-layout-key. 지정하면 fluid 인피드로 렌더링.
+    format     (선택) 디스플레이 광고 포맷. 기본 'auto' (반응형).
+    class      (선택) 래퍼 div에 붙일 여백 클래스. 기본 'mt-5 mb-2'.
+    full_width (선택) false 를 넘기면 모바일에서 광고가 부모 컨테이너 밖(전체 화면 폭)으로
+               확장되는 것을 막는다. 카드 등 패딩 있는 컨테이너 안에서는 false 권장. 기본 true.
+
+  사용 예: include adsense-unit.html slot=site.adsense.slot_post_bottom
   _config.yml 의 adsense.client 와 전달받은 slot 이 모두 설정된 경우에만 렌더링된다.
 {% endcomment %}
 {% assign ad_client = site.adsense.client %}
 {% assign ad_slot = include.slot %}
 {% if ad_client and ad_client != '' and ad_slot and ad_slot != '' %}
-  <div class="adsense-unit mt-5 mb-2">
-    <ins
-      class="adsbygoogle"
-      style="display:block"
-      data-ad-client="{{ ad_client }}"
-      data-ad-slot="{{ ad_slot }}"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
+  {% assign ad_wrapper_class = include.class | default: 'mt-5 mb-2' %}
+  <div class="adsense-unit {{ ad_wrapper_class }}">
+    {% if include.layout_key and include.layout_key != '' %}
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="{{ ad_client }}"
+        data-ad-slot="{{ ad_slot }}"
+        data-ad-format="fluid"
+        data-ad-layout-key="{{ include.layout_key }}"
+      ></ins>
+    {% else %}
+      {% comment %}
+        주의: `default` 필터는 false 도 기본값으로 치환하므로 쓰면 안 된다.
+        full_width=false 를 명시적으로 비교해야 한다.
+      {% endcomment %}
+      {% if include.full_width == false %}
+        {% assign ad_full_width = 'false' %}
+      {% else %}
+        {% assign ad_full_width = 'true' %}
+      {% endif %}
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="{{ ad_client }}"
+        data-ad-slot="{{ ad_slot }}"
+        data-ad-format="{{ include.format | default: 'auto' }}"
+        data-full-width-responsive="{{ ad_full_width }}"
+      ></ins>
+    {% endif %}
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
