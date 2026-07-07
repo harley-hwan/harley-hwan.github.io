@@ -1,0 +1,23 @@
+{% comment %}
+  Google AdSense 수동 광고 단위 (반응형 디스플레이 광고)
+
+  사용법: include adsense-unit.html slot=site.adsense.slot_post_bottom
+  _config.yml 의 adsense.client 와 전달받은 slot 이 모두 설정된 경우에만 렌더링된다.
+{% endcomment %}
+{% assign ad_client = site.adsense.client %}
+{% assign ad_slot = include.slot %}
+{% if ad_client and ad_client != '' and ad_slot and ad_slot != '' %}
+  <div class="adsense-unit mt-5 mb-2">
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client="{{ ad_client }}"
+      data-ad-slot="{{ ad_slot }}"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+{% endif %}

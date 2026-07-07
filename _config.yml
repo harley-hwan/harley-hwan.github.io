@@ -74,6 +74,16 @@ analytics:
 pageviews:
   provider: # now only supports 'goatcounter'
 
+# Google AdSense (수동 광고)
+# - client: 애드센스 게시자 ID. 비우면 광고 스크립트 자체가 로드되지 않는다.
+# - slot_post_bottom: 글 하단에 표시할 "디스플레이 광고" 단위의 슬롯 ID.
+#   비워두면 글 하단 광고 영역이 렌더링되지 않는다.
+#   * 본문 중간에 광고가 끼어드는 것은 애드센스 대시보드의 "자동 광고" 설정이므로,
+#     자동 광고를 끄고 이 수동 슬롯만 사용할 것.
+adsense:
+  client: ca-pub-6647502905103926
+  slot_post_bottom: # 예: "1234567890"
+
 # Prefer color scheme setting.
 #
 # Note: Keep empty will follow the system prefer color by default,
