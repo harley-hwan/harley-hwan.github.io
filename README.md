@@ -1,43 +1,49 @@
-# Chirpy Starter
+# harley's dev note
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Jekyll + Chirpy 기반 개인 기술 블로그입니다.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Structure
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+- `_posts`: Markdown posts.
+- `_layouts`, `_includes`: Chirpy layout overrides and AdSense includes.
+- `_plugins`: build-time helpers such as Git-based `last_modified_at`.
+- `_tabs`, `_data`: sidebar tabs and contact/share metadata.
+- `assets/img`, `assets/video`: site-owned media.
+- `assets/lib`: Chirpy static-assets submodule kept for reference/offline use, excluded from the generated site while CDN assets are used.
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+## Local Development
 
 ```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+The VS Code task `Run Jekyll Server` runs `tools/run.sh`.
 
-## Usage
+## Build
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+```shell
+JEKYLL_ENV=production bundle exec jekyll build
+```
 
-## Contributing
+## Test
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+```shell
+bundle exec htmlproofer _site \
+  --disable-external \
+  --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+```
 
-## License
+On Windows, `html-proofer` requires `libcurl.dll` on `PATH`. The most reliable local test environment is the devcontainer or WSL.
 
-This work is published under [MIT][mit] License.
+## Content Notes
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+- Post filenames use lowercase kebab-case.
+- If an old filename had a legacy URL, keep it with front matter `slug`.
+- Use slug-safe tags such as `cpp`, `csharp`, `c-language`, `visual-studio`, and `deep-learning`.
+- Prefer local images under `assets/img/posts/<post-slug>/` instead of external image hosts.
+- Use `pwsh tools/migrate-external-images.ps1` to download external Markdown images and rewrite them to local asset paths.
+
+## Deploy
+
+GitHub Actions builds and deploys the site to GitHub Pages on pushes to `main` or `master`.

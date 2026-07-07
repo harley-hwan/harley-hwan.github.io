@@ -3,13 +3,13 @@ title: (c++) RANSAC 알고리즘 구현 (Eigen 사용)
 description: "c, c++, vs, ransac, algorithm, eigen"
 date: 2023-06-09 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c, c++, vs, ransac, algorithm, eigen]
+tags: [c-language, cpp, vs, ransac, algorithm, eigen]
 ---
 
-# Eigen RANSAC 
+# Eigen 라이브러리를 이용하여 RANSAC 구현
 - 최초 작성일: 2023년 6월 9일 (금)
 
-## 1
+## 코드1
 
 ```c++
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 
 <br/>
 
-## 1
+## 결과1
 
 ```c++
 Best model: y = 2.06363 * x + 1.06259
@@ -100,7 +100,7 @@ Inlier count: 193
 
 <br/>
 
-## 2
+## 코드2
 
 ```c++
 #include <Eigen/Dense>
@@ -243,7 +243,7 @@ int main() {
 
 <br/>
 
-## 2
+## 결과2
 
 ```c++
 Result H: 0.00547198   0.292524   -80.6625
@@ -256,7 +256,7 @@ Result W: -0.00291597     1.01354    -70.4702
 
 내가 원하는 답이 아니다.
 
-![image](https://github.com/harley-hwan/harley-hwan.github.io/assets/68185569/49c2cc66-0c50-4f78-98aa-809735706328)
+<!-- Missing image removed: original GitHub asset returned 404. -->
 
 <br/>
 

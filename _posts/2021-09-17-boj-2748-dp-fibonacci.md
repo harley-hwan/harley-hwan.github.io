@@ -8,11 +8,11 @@ tags: [baekjoon, 백준, algorithm, dp]
 
 <<https://www.acmicpc.net/problem/2748>>
 
-![image](https://user-images.githubusercontent.com/68185569/133781257-263004ba-099f-4af9-9e28-f7e781db7b50.png)
+![image](/assets/img/posts/boj-2748-dp-fibonacci/001-133781257-263004ba-099f-4af9-9e28-f7e781db7b50.png)
 
-### 2 ( , )
+### 피보나치 수 2 (다이나믹 프로그래밍, 동적 계획법)
 
-### 
+### 풀이 과정
 
 + 우선 피보나치 수는 이웃하는 두 수의 합이 다음 숫자가 되는 규칙으로 변화하는 숫자들을 나타낸다.
 + 피보나치 수는 아래와 같은 규칙으로 증가한다.

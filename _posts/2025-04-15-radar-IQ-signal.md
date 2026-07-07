@@ -2,6 +2,7 @@
 title: "(Radar) 1. 레이더 센서의 IQ 신호 이해하기"
 description: "레이더 수신 신호를 I/Q 두 직교 성분으로 표현하는 이유와 원리를 그림과 함께 정리한다 — 위상 정보, 직교 복조 하드웨어, 도플러 부호 판별, 그리고 FMCW 신호처리 체인까지."
 date: 2025-04-15 10:00:00 +0900
+slug: 'radar-IQ-signal'
 categories: [Dev, Radar]
 tags: [radar, iq signal, quadrature, doppler, fmcw, phase, signal process, sensor, radar sensor]
 math: true

@@ -3,6 +3,7 @@ title: "(CNN) Pytorch Tensor - Indexing"
 description: "텐서의 다양한 인덱싱 기법과 numpy array와의 차이점까지"
 date: 2025-06-11 10:00:00 +0900
 categories: [Dev, CNN]
+tags: [pytorch, tensor, indexing, slicing, deep-learning]
 ---
 
 --------------------------------------------------------
@@ -11,14 +12,14 @@ categories: [Dev, CNN]
 
 * 최초 작성일: 2025년 6월 11일 (수)
 
-## indexing
+## 기본 indexing
 
 파이토치 텐서의 indexing 방법은 NumPy 배열과 매우 유사하다. 단일 지정 인덱싱을 하면 원본 텐서의 차원이 하나 줄어든 텐서가 반환된다.
 
 ```python
 import torch
 
-# 
+# 텐서 생성
 ts_01 = torch.arange(0, 10).view(2, 5)
 print(ts_01)
 ```
@@ -48,7 +49,7 @@ torch.Size([]) 0 torch.Size([5]) 1
 
 ---
 
-## (slicing) indexing
+## 슬라이싱(slicing) indexing
 
 슬라이싱을 사용하면 원본 텐서의 차원이 유지된다.
 
@@ -124,7 +125,7 @@ Boolean indexing 결과: tensor([5, 6, 7, 8, 9])
 
 ---
 
-## torch.where 
+## torch.where 활용
 
 `torch.where`를 사용하면 원본 텐서의 차원을 유지하며 조건에 따라 값을 치환할 수 있다.
 

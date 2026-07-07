@@ -3,14 +3,14 @@ title: "동일 파일명 존재할 시, 다음 번호의 파일 생성 (File io)
 description: "wifi, connect, wlan, msdn, c++, c"
 date: 2023-02-08 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c, c++, file, rename, ifstream, ofstream]
+tags: [c-language, cpp, file, rename, ifstream, ofstream]
 ---
 
-# , (file io)
+# 파일명 존재할 시, 다음 번호의 파일 생성 (file io)
 - 최초 작성일: 2023년 2월 8일 (수)
 - 참조: https://cpp.hotexamples.com/examples/-/-/WlanOpenHandle/cpp-wlanopenhandle-function-examples.html
 
-## 
+## 내용
 
 ```c++
 void AnalyzePSNR::RetrieveProcessedFiles()

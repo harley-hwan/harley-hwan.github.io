@@ -3,16 +3,16 @@ title: "(c++) iFFT & FFT algorithm"
 description: "C++, Visual Studio, FFT, iFFT, inverse FFT, 고속 푸리에 변환, Fast Fourier Transform"
 date: 2023-11-21 10:00:00 +0900
 categories: [Dev, C++]
-tags: [C++, Visual Studio, FFT, iFFT, inverse FFT, 고속 푸리에 변환, Fast Fourier Transform]
+tags: [cpp, visual-studio, FFT, iFFT, inverse FFT, 고속 푸리에 변환, Fast Fourier Transform]
 ---
 
-# inverse FFT , FFT 
+# inverse FFT 한 후, 다시 FFT 연산
 
 해당 작업은 분해능을 높이고, 노이즈를 제거하여 높은 해상도의 신호를 추출하기 위함.
 
 <br/>
 
-## 
+## 소스
 
 ```c++
 #include <iostream>

@@ -3,14 +3,14 @@ title: 현재 연결중인 WiFi 이름 확인
 description: "wifi, connect, wlan, msdn, c++, c"
 date: 2023-02-08 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c, c++, wifi, connect, wlan, msdn]
+tags: [c-language, cpp, wifi, connect, wlan, msdn]
 ---
 
-# WiFi 
+# 현재 연결중인 WiFi 이름 확인
 - 최초 작성일: 2023년 2월 8일 (수)
 - 참조: https://cpp.hotexamples.com/examples/-/-/WlanOpenHandle/cpp-wlanopenhandle-function-examples.html
 
-## 
+## 내용
 
 ```c++
 #ifndef UNICODE
