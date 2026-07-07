@@ -2,8 +2,8 @@
 title: 레이더 센서 신호 처리 및 검증 툴 (MFC)
 description: MFC 프로그래밍을 통한 raw 데이터 시각화 툴 개발
 date: 2022-03-07 10:00:00 +0900
-categories: [Project]
-tags: [eqtransformer, deap learning, machine learning, python, big data science]
+categories: [Dev, Radar]
+tags: [radar, radar sensor, mfc, signal process, visualization]
 ---
 
 # (MFC)

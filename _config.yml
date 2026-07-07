@@ -147,7 +147,10 @@ assets:
 pwa:
   enabled: true # The option for PWA feature (installable)
   cache:
-    enabled: true # The option for PWA offline cache
+    # 반드시 비워둘 것 (false 로 쓰면 문자열로 해석되어 오히려 캐시가 켜짐).
+    # 비워두면 방문자 브라우저의 기존 서비스 워커를 자동 해제하여,
+    # 구버전 사이트의 오프라인 캐시가 404/옛 페이지를 서빙하는 문제를 막는다.
+    enabled: # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.
