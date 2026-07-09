@@ -1,6 +1,10 @@
 # Bundler cache
 .bundle
 vendor
+# Do NOT commit Gemfile.lock: it is generated per-platform. A Windows-only lock
+# (x64-mingw-ucrt) breaks the Ubuntu CI build (ruby/setup-ruby frozen install).
+# CI regenerates a correct lock via `bundler-cache: true`.
+Gemfile.lock
 
 # Jekyll cache
 .jekyll-cache

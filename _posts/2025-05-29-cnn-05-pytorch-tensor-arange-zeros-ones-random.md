@@ -9,7 +9,7 @@ toc: false
 
 -------------------------------------------------------
 
-# arange, zeros, ones random
+# arange, zeros, ones와 random
 
 * 최초 작성일: 2025년 5월 29일 (목)
 
