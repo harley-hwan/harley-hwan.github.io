@@ -1,10 +1,10 @@
 # Bundler cache
 .bundle
 vendor
-# Do NOT commit Gemfile.lock: it is generated per-platform. A Windows-only lock
-# (x64-mingw-ucrt) breaks the Ubuntu CI build (ruby/setup-ruby frozen install).
-# CI regenerates a correct lock via `bundler-cache: true`.
-Gemfile.lock
+# Gemfile.lock IS committed for reproducible CI builds.
+# It must contain BOTH platforms (local Windows + CI Ubuntu). After changing
+# gems, run:  bundle lock --add-platform x86_64-linux
+# A Windows-only lock breaks the "Setup Ruby" step on the Ubuntu runner.
 
 # Jekyll cache
 .jekyll-cache
