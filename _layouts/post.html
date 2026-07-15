@@ -133,14 +133,17 @@ script_includes:
 
   {% comment %}
     본문 중간 광고(slot_post_mid): 렌더링된 본문을 '<h2' 기준으로 나눠
-    2번째 h2 섹션 뒤에 인아티클 광고를 삽입한다. h2 섹션이 3개 이상인 긴 글에서만
-    동작하며(짧은 글 보호), 코드 블록 안의 '<h2'는 하이라이터가 &lt;h2 로 이스케이프하므로
-    분할에 걸리지 않는다.
+    post_mid_after_section 번째 h2 섹션 뒤에 인아티클 광고를 삽입한다.
+    h2 섹션이 post_mid_min_sections 개 이상인 긴 글에서만 동작하여 짧은 글의
+    읽기 흐름을 보호한다. 코드 블록 안의 '<h2'는 하이라이터가 &lt;h2 로
+    이스케이프하므로 분할에 걸리지 않는다.
   {% endcomment %}
   {% assign show_mid_ad = false %}
   {% if site.adsense.client and site.adsense.client != '' and site.adsense.slot_post_mid and site.adsense.slot_post_mid != '' %}
+    {% assign mid_min_parts = site.adsense.post_mid_min_sections | default: 5 | plus: 1 %}
+    {% assign mid_insert_at = site.adsense.post_mid_after_section | default: 3 | plus: 1 %}
     {% assign content_parts = content | split: '<h2' %}
-    {% if content_parts.size >= 4 %}
+    {% if content_parts.size >= mid_min_parts %}
       {% assign show_mid_ad = true %}
     {% endif %}
   {% endif %}
@@ -153,8 +156,8 @@ script_includes:
         {% else %}
           <h2{{ part }}
         {% endif %}
-        {% if forloop.index == 3 and forloop.last == false %}
-          {% include adsense-unit.html slot=site.adsense.slot_post_mid layout='in-article' class='my-4' %}
+        {% if forloop.index == mid_insert_at and forloop.last == false %}
+          {% include adsense-unit.html slot=site.adsense.slot_post_mid layout='in-article' class='adsense-in-article my-4' %}
         {% endif %}
       {% endfor %}
     {% else %}

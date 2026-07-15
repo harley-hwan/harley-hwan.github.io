@@ -88,8 +88,13 @@ pageviews:
 adsense:
   client: ca-pub-6647502905103926
   # ── 배치 우선순위(수익 효율): post_mid > post_bottom > home_feed > post_top ──
-  # 본문 중간 (2번째 h2 섹션 뒤, 섹션 3개 이상인 글에서만) — "인아티클(In-article) 광고" 단위 권장
+  # 본문 중간 — "인아티클(In-article) 광고" 단위. 읽기 방해 최소화를 위해
+  # 충분히 긴 글에만, 글 중반 이후에 삽입한다 (아래 두 값으로 조정).
   slot_post_mid: "1850664483" # 인아티클 광고 단위 "post-mid"
+  # h2 섹션이 이 개수 이상인 글에만 삽입 (현재 5 → 최장문 47개 글만 해당)
+  post_mid_min_sections: 5
+  # 몇 번째 h2 섹션 뒤에 삽입할지 (현재 3 → 글 중반 이후)
+  post_mid_after_section: 3
   # 글 하단 (태그/공유 아래, 추천 글 위) — "디스플레이 광고" 단위 권장
   slot_post_bottom: "5813890411" # 디스플레이 광고 단위 "post-bottom"
   # 홈/목록 페이지 5번째 글 카드 아래 — "디스플레이 광고" 또는 "인피드 광고" 단위
