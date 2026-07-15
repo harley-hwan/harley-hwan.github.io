@@ -1,5 +1,15 @@
 # 사이트 설정 마무리 체크리스트
 
+## 진행 상태 (2026-07-16 기준)
+
+- ✅ **giscus**: 완료 (Discussions + 앱 설치 + category_id + provider 활성화)
+- ✅ **GA4**: 측정 ID 입력 완료 (G-1TB5XCP1T3) — 배포 후 실시간 보고서로 확인
+- 🔶 **Search Console**: 인증값 입력 완료 — 배포 후 대시보드에서 "확인" 클릭 + sitemap.xml 제출 필요
+- 🔶 **네이버**: 인증값 입력 완료 — 배포 후 "소유확인" 클릭 + sitemap.xml/rss.xml 제출 필요
+- 🔶 **AdSense**: post_bottom만 가동 — slot_post_mid(인아티클) 등 단위 추가 생성 권장 (섹션 1)
+
+---
+
 코드/설정 인프라는 모두 준비된 상태이며, 아래 항목은 **각 서비스 대시보드에서 값을 발급받아
 `_config.yml`에 붙여넣는 작업**만 남아 있다. 항목당 5~10분 소요.
 값을 채운 뒤 push 하면 GitHub Actions 가 자동 배포한다.
