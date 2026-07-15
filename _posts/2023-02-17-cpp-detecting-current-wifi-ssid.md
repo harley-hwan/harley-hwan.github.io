@@ -3,13 +3,8 @@ title: (c++) 현재 연결된 와이파이의 SSID 검출
 description: "c++, wifi, ssid, wlanopenhandle, WlanEnumInterfaces, WlanQueryInterface, windows, wlan_intf_opcode_current_connection"
 date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]
-tags: [cpp, wifi, ssid, wlanopenhandle, WlanEnumInterfaces, WlanQueryInterface, windows, wlan_intf_opcode_current_connection]
+tags: [cpp, wifi, ssid, wlanopenhandle, wlan-enum-interfaces, wlan-query-interface, windows, wlan-intf-opcode-current-connection]
 ---
-
-# 현재 연결된 와이파이의 SSID 검출
-
-- 최초 작성일: 2023년 2월 17일(금)
-
 ## 내용
 
 ```c++

@@ -3,11 +3,8 @@ title: (c++) C++에서 파이썬 스크립트 불러오기
 description: "c, c++, python, Py_SetProgramName, Py_Initialize, PyRun_SimpleString, Py_Finalize, PyMem_RawFree"
 date: 2023-06-08 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, shellapi, windowsapi, system, command, exe, execute, HWND, windows.h, Shellapi.h, DT1-Remote]
+tags: [c-language, cpp, shellapi, windowsapi, system, command, exe, execute, hwnd, windows-h, shellapi-h, dt1-remote]
 ---
-
-# C++에서 파이썬 스크립트 불러오기
-
 ## 소개
 C++ 프로그램 내에서 파이썬 스크립트를 실행하는 방법을 설명한다. C++의 성능과 파이썬의 유연성을 결합할 수 있다.
 

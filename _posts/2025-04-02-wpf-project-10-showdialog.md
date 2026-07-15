@@ -3,13 +3,8 @@ title: "(WPF) 10. ShowDialog를 활용한 다른 창 호출하기"
 description: "MVVM 패턴에서 새 창 호출 및 ViewModel 바인딩 방법"
 date: 2025-04-02 10:00:00 +0900
 categories: [Dev, WPF]
-tags: [csharp, wpf, showdialog, mvvm, asyncRelayCommand, window, ui]
+tags: [csharp, wpf, showdialog, mvvm, async-relay-command, window, ui]
 ---
-
-# ShowDialog를 활용한 다른 창 호출하기
-
-- 최초 작성일: 2025년 3월 30일 (일)
-
 ## 1. ShowDialog와 Modal 창 개념
 WPF에서 `Window.ShowDialog()` 메서드는 새 윈도우를 **모달 창**으로 표시한다. 모달 창이 뜨면 **사용자가 그 창을 닫기 전까지** 부모 창을 조작할 수 없고, `ShowDialog()`를 호출한 코드 실행도 창이 닫힐 때까지 멈춘다. 예를 들어 확인/취소를 받는 대화상자, 진행 상황을 표시하는 Progress 창 등이 모달 창으로 구현된다. 반면 `Window.Show()`는 **모달이 아닌(non-modal)** 창을 띄워 부모 창과 독립적으로 동작하게 한다.
 

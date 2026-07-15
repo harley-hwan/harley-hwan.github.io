@@ -4,12 +4,8 @@ description: 월간 코드 챌린지 시즌1
 date: 2021-11-11 10:00:00 +0900
 slug: 'ternaryFip'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 3진법 뒤집기
-
-- 최초 작성일: 2021년 11월 11일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/68935>
 
 ## 문제 설명

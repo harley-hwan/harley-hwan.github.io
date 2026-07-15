@@ -6,11 +6,6 @@ slug: 'FindSerialPort'
 categories: [Dev, MFC]
 tags: [cpp, mfc, serialport, registry]
 ---
-
-# [MFC] 레지스트리 값으로 시리얼 번호 자동으로 찾기
-
-- 최초 작성일: 2022년 2월 21일 (월)
-
 ## 목적
 
 컴퓨터에 USB를 통해 하드웨어 연결시 'COMXX' 식의 시리얼 번호를 확인할 수 있는데,

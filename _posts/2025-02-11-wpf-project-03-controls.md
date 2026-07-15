@@ -5,11 +5,6 @@ date: 2025-02-11 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [csharp, wpf, controls, ui, xaml]
 ---
-
-# WPF에서 컨트롤 사용하기
-
-- 최초 작성일: 2025년 2월 11일 (화)
-
 ## WPF 컨트롤 개요
 
 WPF(Windows Presentation Foundation)에서는 다양한 UI 컨트롤을 제공하며, 이를 활용하여 사용자 인터페이스를 직관적으로 구성할 수 있다. 이번 글에서는 **라벨(Label), 체크 박스(CheckBox), 라디오 버튼(RadioButton), 텍스트 박스(TextBox), 버튼(Button), 패스워드 박스(PasswordBox), 리스트 뷰(ListView)** 등을 사용하는 방법을 설명한다.

@@ -3,16 +3,9 @@ title: "(CNN) PyTorch 텐서 차원 조작: squeeze, unsqueeze, item"
 description: "불필요한 차원 제거와 추가, 그리고 스칼라 값 추출하기"
 date: 2025-05-30 10:00:00 +0900
 categories: [Dev, CNN]
-tags: [pytorch, tensor, squeeze, unsqueeze, item, dimension manipulation]
+tags: [pytorch, tensor, squeeze, unsqueeze, item, dimension-manipulation]
 toc: false
 ---
-
--------------------------------------------------------
-
-# PyTorch 차원 조작: squeeze, unsqueeze, item
-
-* 최초 작성일: 2025년 5월 30일 (금)
-
 ## 차원 조작이 필요한 이유
 
 딥러닝에서 텐서의 차원을 조작하는 것은 매우 빈번하게 발생하는 작업이다. 특히 다음과 같은 상황에서 필수적으로 사용된다.

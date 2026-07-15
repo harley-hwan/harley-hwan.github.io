@@ -5,10 +5,6 @@ date: 2023-02-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, iomanip, formatting, output, console]
 ---
-
-# iomanip을 이용한 표 형식 출력 구현
-- 최초 작성일: 2024년 1월 6일 (월)
-
 <br/>
 
 ## 소개

@@ -5,10 +5,6 @@ date: 2023-02-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, windows, socket, error, mfc]
 ---
-
-# Windows 소켓 에러 메시지 출력 구현
-- 최초 작성일: 2023년 2월 10일 (금)
-
 <br/>
 
 ## 소개

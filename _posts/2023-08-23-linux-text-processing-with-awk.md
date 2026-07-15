@@ -5,10 +5,6 @@ date: 2023-08-23 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, gawk, awk, bash, shell, text-processing, command-line]
 ---
-
-# 리눅스 텍스트 처리: AWK를 활용한 명령어 출력 파싱
-- 최초 작성일: 2023년 8월 23일(수)
-
 <br/>
 
 ## 명령어 구조 분석

@@ -3,12 +3,8 @@ title: 로또 번호 랜덤 추출 (c++)
 description: "c++, lotto, srand. algorithm, ctime"
 date: 2023-02-16 10:00:00 +0900
 categories: [Dev, C++]
-tags: [cpp, lotto, srand. algorithm, ctime]
+tags: [cpp, lotto, srand, algorithm, ctime]
 ---
-
-# 로또 번호 랜덤 추출 (c++)
-- 최초 작성일: 2023년 2월 16일 (목)
-
 ## 내용
 
 재미로 만든거니 안됐다고 탓하지 마세요^^

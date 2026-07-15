@@ -4,12 +4,8 @@ description: 찾아라 프로그래밍 마에스터
 date: 2021-11-10 10:00:00 +0900
 slug: 'programmers(ponketmon)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 없는 숫자 더하기
-
-- 최초 작성일: 2021년 11월 10일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/1845>
 
 ## 문제 설명

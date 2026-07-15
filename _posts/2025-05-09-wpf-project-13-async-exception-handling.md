@@ -3,11 +3,8 @@ title: "(WPF) 13. 비동기 함수의 예외 처리"
 description: "async/await 패턴과 예외 처리 방법"
 date: 2025-05-09 10:00:00 +0900
 categories: [Dev, WPF]
-tags: [wpf, csharp, async, await, exception-handling, Task]
+tags: [wpf, csharp, async, await, exception-handling, task]
 ---
-
-# 비동기 함수의 예외 처리: async/await 패턴 이해하기
-
 ## 비동기 프로그래밍 기초
 
 C#에서 비동기 프로그래밍은 `async`와 `await` 키워드를 통해 구현한다. 이 패턴은 I/O 작업이나 시간이 오래 걸리는 작업을 수행할 때 애플리케이션의 응답성을 유지하는 데 중요하다.

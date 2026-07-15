@@ -4,13 +4,8 @@ description: About CString Class
 date: 2022-02-25 10:00:00 +0900
 slug: 'CStringClass'
 categories: [Dev, MFC]
-tags: [cpp, mfc, CString]
+tags: [cpp, mfc, cstring]
 ---
-
-# [MFC] CSting 클래스
-
-- 최초 작성일: 2022년 2월 25일 (금)
-
 ## 설명
 
 CString 클래스는 문자열을 관리하는 클래스이다.

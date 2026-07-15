@@ -5,10 +5,6 @@ date: 2023-08-23 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, embedded, networking, bash, ethernet, automation, system-config]
 ---
-
-# 리눅스 네트워크 자동화: 이더넷 디바이스 설정 스크립트
-- 최초 작성일: 2023년 8월 23일(수)
-
 <br/>
 
 ## 스크립트 개요

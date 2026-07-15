@@ -6,11 +6,6 @@ slug: '(13)MultiplicationTable'
 categories: [Dev, CSharp]
 tags: [csharp, unity, codeflowcontrol, multiplicationtable]
 ---
-
-# 구구단
-
-- 최초 작성일: 2021년 3월 21일(월)
-
 ## 내용
 
 ```c#

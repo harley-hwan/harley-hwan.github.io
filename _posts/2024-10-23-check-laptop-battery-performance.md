@@ -4,13 +4,8 @@ description: Check laptop battery performance
 date: 2024-10-23 10:00:00 +0900
 slug: 'CheckLaptopBatteryPerformance'
 categories: [ETC]
-tags: [battery performance, laptop battery, laptop, battery]
+tags: [battery-performance, laptop-battery, laptop, battery]
 ---
-
-# 노트북 배터리 성능 체크
-
-- 최초 작성일: 2024년 10월 23일(수)
-
 ## 내용
 
 cmd 창에서 'powercfg/batteryreport' 를 입력하면

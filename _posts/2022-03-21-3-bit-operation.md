@@ -6,11 +6,6 @@ slug: '(3)BitOperation'
 categories: [Dev, CSharp]
 tags: [csharp, unity, bitoperation]
 ---
-
-# 데이터 연산
-
-- 최초 작성일: 2021년 3월 21일(월)
-
 ## 내용
 
 ```c#

@@ -3,13 +3,9 @@ title: Baekjoon 9658 돌 게임 4
 description: 백준 9658 돌 게임 4 (c++)
 date: 2021-09-21 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
-tags: [baekjoon, 백준, algorithm, dp]
+tags: [baekjoon, algorithm, dp]
 toc: false
 ---
-
-# Baekjoon 9658 돌 게임 4
-
-- 최초 작성일: 2021년 9월 21일(화)
 - 주소: <https://www.acmicpc.net/problem/9658>
 
 ## 문제

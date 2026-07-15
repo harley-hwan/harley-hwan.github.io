@@ -3,15 +3,8 @@ title: "(CNN) 머신 러닝의 이해 및 딥러닝의 개요"
 description: "머신러닝과 딥러닝의 차이부터 CNN, RNN까지 한눈에 정리"
 date: 2025-05-27 10:00:00 +0900
 categories: [Dev, CNN]
-tags: [cnn, deep-learning, machine-learning, python, data science]
+tags: [cnn, deep-learning, machine-learning, python, data-science]
 ---
-
-----------------------------------------------
-
-# 머신 러닝의 이해 및 딥러닝의 개요
-
-* 최초 작성일: 2025년 5월 27일 (화)
-
 ## 1. 머신러닝과 딥러닝의 차이
 
 ### AI, 머신러닝, 딥러닝의 관계

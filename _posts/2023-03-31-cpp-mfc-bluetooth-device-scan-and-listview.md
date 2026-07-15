@@ -5,10 +5,6 @@ date: 2023-03-31 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, mfc, bluetooth, devices, ble, listview, blescan, bluetoothscan, arcrylic, analyzer]
 ---
-
-# 주변의 모든 블루투스 기기 스캔하여 MFC 리스트 뷰에 출력
-- 최초 작성일: 2023년 3월 31일 (금)
-
 ## 내용
 
 주변의 모든 블루투스 기기를 스캔하고, 해당 기기의 장치명(LocalName)과 SSID(신호 세기) 를 출력하는 프로그램이며,

@@ -6,11 +6,6 @@ slug: 'extractingStringFromXML.md'
 categories: [Dev, Linux]
 tags: [linux, cat, grep, gawk, xml, parsing]
 ---
-
-# Ethernet Configuration Check via Script
-
-- 최초 작성일: 2023년 8월 23일(수)
-
 ## 코드
 
 ```bash

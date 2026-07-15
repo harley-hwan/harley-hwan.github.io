@@ -5,10 +5,6 @@ date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, linux, command, arp, system, ip, serverip]
 ---
-
-# 현재 연결된 IP 목록 뽑아오기
-- 최초 작성일: 2023년 2월 17일 (금)
-
 ## 내용
 
 system() 함수를 이용하여 arp -a 커맨드를 실행하여 나오는 출력물을 텍스트 파일에 입력하고, 그 결과를 다시 불러와 ip 주소들만 뽑아서 ip_list를 뽑는 코드를 짜보았다.

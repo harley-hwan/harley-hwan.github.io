@@ -4,12 +4,8 @@ description: MFC 프로그래밍을 통한 raw 데이터 시각화 툴 개발
 date: 2022-03-07 10:00:00 +0900
 slug: 'RadarSensorProj'
 categories: [Dev, Radar]
-tags: [radar, radar sensor, mfc, signal process, visualization]
+tags: [radar, radar-sensor, mfc, signal-processing, visualization]
 ---
-
-# 레이더 센서 신호 처리 및 검증 툴 (MFC)
-
-- 최초 작성일: 2022년 3월 7일(월)
 - 프로젝트명: 레이더센서 신호 처리 및 검증 툴 (MFC 프로그래밍)
 
 ---

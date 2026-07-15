@@ -4,12 +4,8 @@ description: "Summer, Winter Coding(~2018) (c++)"
 date: 2021-09-20 10:00:00 +0900
 slug: 'programmers(skilltree)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 스킬트리
-
-- 최초 작성일: 2021년 9월 20일(월)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/49993>
 
 ## 문제 설명

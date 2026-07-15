@@ -5,10 +5,6 @@ date: 2025-02-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, container, architecture, api, cli]
 ---
-
-# Docker 실전 가이드: 도커의 개념과 아키텍처
-- 최초 작성일: 2025년 2월 5일 (수)
-
 <br>
 
 ## 도커란 무엇인가?

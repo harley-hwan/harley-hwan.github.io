@@ -3,12 +3,8 @@ title: Baekjoon 2217 로프
 description: 백준 2217 로프 (c++)
 date: 2021-09-19 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
-tags: [baekjoon, 백준, algorithm, greedy]
+tags: [baekjoon, algorithm, greedy]
 ---
-
-# Baekjoon 2217 로프
-
-- 최초 작성일: 2021년 9월 19일(일)
 - 주소: <https://www.acmicpc.net/problem/2217>
 
 ## 문제 설명

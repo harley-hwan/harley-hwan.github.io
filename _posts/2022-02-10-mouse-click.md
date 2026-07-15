@@ -6,11 +6,6 @@ slug: 'MouseClick'
 categories: [Dev, MFC]
 tags: [cpp, mfc, slider, windowprogramming]
 ---
-
-# [Win32] 마우스 클릭 프로그램 
-
-- 최초 작성일: 2022년 2월 10일 (목)
-
 ## 목적
 
 이번 예제를 통해 마우스를 이용해 이벤트가 발생하는 간단한 윈도우 프로그램을 작성한다.

@@ -5,11 +5,6 @@ date: 2025-04-02 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [csharp, wpf, usercontrol, customcontrol, mvvm, xaml, ui]
 ---
-
-# UserControl과 Custom Control 활용하기
-
-- 최초 작성일: 2025년 3월 29일 (토)
-
 ## UserControl
 
 ### 정의

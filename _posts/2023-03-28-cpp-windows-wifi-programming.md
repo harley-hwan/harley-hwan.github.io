@@ -5,10 +5,6 @@ date: 2023-03-28 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, programming, wifi, wlanapi, windows]
 ---
-
-# WlanAPI를 이용한 Wi-Fi 검색 및 연결 기능 구현
-- 최초 작성일: 2023년 3월 28일 (화)
-
 <br/>
 
 ## 소개

@@ -5,10 +5,6 @@ date: 2025-02-06 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, container, nginx, webserver, cli]
 ---
-
-# Docker 실전 가이드: Nginx 컨테이너 실습
-- 최초 작성일: 2025년 2월 6일 (목)
-
 <br>
 
 ## 실습 개요

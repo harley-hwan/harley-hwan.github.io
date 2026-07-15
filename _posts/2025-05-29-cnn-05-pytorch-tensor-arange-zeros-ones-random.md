@@ -6,13 +6,6 @@ categories: [Dev, CNN]
 tags: [pytorch, tensor, random, arange, deep-learning, initialization]
 toc: false
 ---
-
--------------------------------------------------------
-
-# arange, zeros, ones와 random
-
-* 최초 작성일: 2025년 5월 29일 (목)
-
 ## 개요
 
 PyTorch에서 텐서를 생성하는 것은 딥러닝 모델 개발의 첫걸음이다. 이 가이드에서는 가장 자주 사용되는 텐서 생성 함수들을 실용적인 예제와 함께 소개한다.

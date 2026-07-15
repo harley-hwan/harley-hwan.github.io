@@ -3,12 +3,8 @@ title: (c++) RANSAC 알고리즘 구현 (Eigen 사용)
 description: "c, c++, vs, ransac, algorithm, eigen"
 date: 2023-06-09 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, vs, ransac, algorithm, eigen]
+tags: [c-language, cpp, visual-studio, ransac, algorithm, eigen]
 ---
-
-# Eigen 라이브러리를 이용하여 RANSAC 구현
-- 최초 작성일: 2023년 6월 9일 (금)
-
 ## 코드1
 
 ```c++

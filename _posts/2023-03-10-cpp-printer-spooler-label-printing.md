@@ -5,9 +5,6 @@ date: 2023-03-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, printer, windows, spooler, labelprinter, tsc, zpl]
 ---
-
-# Windows 프린터 스풀러를 이용한 라벨 프린터 제어
-- 최초 작성일: 2023년 3월 10일 (금)
 - 참고: [ZPL Programming Guide](https://www.zebra.com/content/dam/zebra_new_ia/en-us/manuals/printers/common/programming/zpl-zbi2-pm-en.pdf)
 
 <br/>

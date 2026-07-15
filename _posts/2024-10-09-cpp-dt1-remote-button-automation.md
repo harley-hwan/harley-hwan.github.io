@@ -3,12 +3,8 @@ title: DT1-Remote 버튼 자동화 프로그램
 description: "c, c++, shellapi, windowsapi, system, command, exe, execute, HWND, windows.h, Shellapi.h, DT1-Remote"
 date: 2024-10-09 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, shellapi, windowsapi, system, command, exe, execute, HWND, windows.h, Shellapi.h, DT1-Remote]
+tags: [c-language, cpp, shellapi, windowsapi, system, command, exe, execute, hwnd, windows-h, shellapi-h, dt1-remote]
 ---
-
-# DT1-Remote 버튼 자동화 프로그램 (응용 프로그램(.exe 실행파일) 실행 후 버튼 클릭)
-- 최초 작성일: 2023년 4월 4일 (화)
-
 ## 내용
 
 이 C++ 코드는 "DT1-Remote.exe" 프로세스를 찾아 실행하고, 해당 프로그램의 창을 찾는 작업을 수행한다.

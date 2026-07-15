@@ -3,11 +3,8 @@ title: (c++) FFT 알고리즘 구현
 description: "C++, Visual Studio, FFT, Cooley-Tukey, 복소수, 재귀"
 date: 2023-09-19 10:00:00 +0900
 categories: [Dev, C++]
-tags: [cpp, visual-studio, FFT, Cooley-Tukey, 복소수, 재귀]
+tags: [cpp, visual-studio, fft, cooley-tukey, complex-number, recursion]
 ---
-
-# Fast Fourier Transform (FFT) 알고리즘
-
 Fast Fourier Transform (FFT)는 Discrete Fourier Transform (DFT) 및 그 역변환을 계산하기 위한 효율적인 알고리즘이다.
 
 필터링, 컨볼루션, 오디오 또는 이미지 압축과 같은 디지털 신호 처리 분야에서 다양한 응용 분야가 있다.

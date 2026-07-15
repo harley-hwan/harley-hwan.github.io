@@ -3,12 +3,8 @@ title: (c++) HTTP 클라이언트 프로그램 - 블루투스 장치 목록 (Boo
 description: "c++, boost, asio, boost.asio, bluetooth, ble, bluetoothscanner"
 date: 2023-03-30 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, boost, asio, boost.asio, bluetooth, ble, bluetoothscanner]
+tags: [c-language, cpp, boost, asio, boost-asio, bluetooth, ble, bluetoothscanner]
 ---
-
-# Boost.Asio를 사용한 간단한 HTTP 클라이언트 (블루투스 장치 목록 스캔 및 출력)
-- 최초 작성일: 2023년 3월 30일 (목)
-
 ## 내용
 
 Boost.Asio를 사용하여 간단한 HTTP 클라이언트를 구현한 것이다.

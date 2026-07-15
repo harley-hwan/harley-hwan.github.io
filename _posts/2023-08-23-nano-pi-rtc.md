@@ -6,11 +6,6 @@ slug: 'NanoPiRTC'
 categories: [Dev, Linux]
 tags: [linux, bash, shell, script, date, hwclock]
 ---
-
-# NanoPi의 RTC 설정 스크립트
-
-- 최초 작성일: 2023년 8월 23일(수)
-
 ## 전체 개요
 
 이 스크립트는 사용자로부터 연, 월, 일, 시, 분, 초를 입력 받아 NanoPi의 시스템 시간을 설정하고, 해당 시간을 하드웨어 클록(RTC)에 동기화하는 역할을 한다.

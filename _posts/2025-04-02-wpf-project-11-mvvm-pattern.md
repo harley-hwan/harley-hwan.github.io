@@ -3,11 +3,8 @@ title: "(WPF) 11. MVVM 패턴 복습 및 이론, 실습"
 description: "MVVM 패턴 이론과 폴더 구조 실습"
 date: 2025-04-02 10:00:00 +0900
 categories: [Dev, WPF]
-tags: [wpf, mvvm, csharp, xaml, ViewModel]
+tags: [wpf, mvvm, csharp, xaml, view-model]
 ---
-
-# MVVM 패턴 복습 및 이론, 실습
-
 ## MVVM 패턴의 구성 요소
 
 - **Model**: 애플리케이션에서 사용되는 **데이터**와 그 데이터를 처리하는 **비즈니스 로직**을 담당한다.  

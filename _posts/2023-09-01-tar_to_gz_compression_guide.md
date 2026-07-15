@@ -3,13 +3,8 @@ title: 리눅스에서의 파일 아카이빙 및 압축
 description: .tar 파일을 .gzip로 변환하는 Bash 사용하기
 date: 2023-09-01 10:00:00 +0900
 categories: [Dev, Linux]
-tags: [linux, tar, gzip, bash, 압축]
+tags: [linux, tar, gzip, bash, compression]
 ---
-
-# Bash를 사용하여 파일 아카이빙 및 압축하기 가이드
-
-- 최초 작성일: 2023년 9월 1일(금)
-
 ## 개요
 
 리눅스에서 파일을 아카이빙 및 압축하는 bash 스크립트. 

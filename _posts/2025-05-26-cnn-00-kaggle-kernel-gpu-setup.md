@@ -5,13 +5,6 @@ date: 2025-05-26 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [kaggle, gpu, cuda, pytorch, deep-learning]
 ---
-
----------------------------------------------------
-
-# 캐글(Kaggle) 커널 사용하기 - 계정 등록 및 GPU 사용 인증
-
-* 최초 작성일: 2025년 5월 26일 (월)
-
 ## 캐글 커널 시작하기
 
 [캐글 홈페이지](https://www.kaggle.com)에 접속한다.

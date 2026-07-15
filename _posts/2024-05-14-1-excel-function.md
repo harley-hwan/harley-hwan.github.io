@@ -4,13 +4,8 @@ description: 조건부 서식을 다른 셀에 적용하는 매크로 작성법
 date: 2024-05-14 10:00:00 +0900
 slug: '(1)excel_function'
 categories: [Dev, ETC]
-tags: [excel, 매크로, 조건부 서식, vba, macro]
+tags: [excel, macro, conditional-formatting, vba]
 ---
-
-# Excel 조건부 서식 매크로 적용하기
-
-- 최초 작성일: 2024년 5월 14일(화)
-
 ## 소개
 
 이 글에서는 Excel에서 조건부 서식으로 설정(변경)된 셀 서식을 그대로 다른 셀들에도 똑같이 적용할 수 있는 매크로 기능을 설명한다. 매크로를 사용하면 반복적인 작업을 자동화하여 생산성을 높일 수 있다.

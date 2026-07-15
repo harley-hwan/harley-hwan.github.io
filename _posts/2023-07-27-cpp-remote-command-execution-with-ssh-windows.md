@@ -3,12 +3,8 @@ title: (c++) SSH를 이용한 원격 명령 실행 (windows)
 description: "c, c++, vs, windows, C++, libssh2, SSH, Remote Command Execution, Networking"
 date: 2023-07-27 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, vs, windows, libssh2, SSH, Remote Command Execution, networking]
+tags: [c-language, cpp, visual-studio, windows, libssh2, ssh, remote-command-execution, networking]
 ---
-
-# libssh2를 활용한 원격 SSH 연결 및 명령어 실행
-- 최초 작성일: 2023년 7월 27일 (수)
-
 ## 내용
 
 SSH(Secure Shell)를 사용하여 원격 서버에 접속하고, 주어진 명령어를 실행한 뒤 그 결과를 출력하는 작업을 수행하는 코드이다.

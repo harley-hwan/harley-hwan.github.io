@@ -3,12 +3,8 @@ title: Baekjoon 18870 좌표 압축
 description: 백준 18870 좌표 압축
 date: 2021-10-01 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
-tags: [baekjoon, 백준, algorithm, sort]
+tags: [baekjoon, algorithm, sort]
 ---
-
-# Baekjoon 18870 좌표 압축
-
-- 최초 작성일: 2021년 10월 1일(금)
 - 주소: <https://www.acmicpc.net/problem/18870>
 
 ## 문제 설명

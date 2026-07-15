@@ -3,11 +3,8 @@ title: 로그를 좀더 보기쉽게 찍기(g++)
 description: "__FILE__, __LINE__, __func__, __PRETTY_FUNCTION__"
 date: 2022-09-21 10:00:00 +0900
 categories: [Dev, C++]
-tags: [file-macro, __func__, line-macro, __PRETTY_FUNCTION__, 로그, 매크로, cpp, g++, log, typeid, typeid(T t).name()]
+tags: [file-macro, func-macro, line-macro, pretty-function-macro, logging, macro, cpp, gcc, log, typeid]
 ---
-
-# 로그를 좀더 보기쉽게 찍기(g++)
-- 최초 작성일: 2022년 9월 21일 (수)
 - 참조: http://dev-crazybird.blogspot.com/2014/04/g.html
 
 ## 내용

@@ -5,11 +5,6 @@ date: 2025-03-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, singleton, design-pattern, oop, programming]
 ---
-
-# (C++) 싱글톤 패턴(Singleton Pattern) 이해하기
-
-- 최초 작성일: 2025년 3월 17일 (월)
-
 ## 싱글톤 패턴의 개념
 
 싱글톤 패턴(Singleton Pattern)이란 하나의 클래스가 오직 한 개의 인스턴스만을 가지며, 이 인스턴스에 대한 전역 접근점을 제공하는 디자인 패턴이다.

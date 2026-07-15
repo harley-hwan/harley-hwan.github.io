@@ -4,13 +4,8 @@ description: Bash Script for STM32F Firmware Update
 date: 2023-09-01 10:00:00 +0900
 slug: 'STM32F_FW_Download'
 categories: [Dev, Linux]
-tags: [linux, STM32F, firmware, download, bash]
+tags: [linux, stm32f, firmware, download, bash]
 ---
-
-# STM32F Digital Board Firmware Download via Bash
-
-- 최초 작성일: 2023년 9월 1일(금)
-
 ## 코드
 
 ```bash

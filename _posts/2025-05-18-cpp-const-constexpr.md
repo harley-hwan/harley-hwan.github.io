@@ -5,11 +5,6 @@ date: 2025-05-18 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, const, constexpr, compile-time, modern-cpp]
 ---
-
-# (C++) const와 constexpr 명확히 이해하기
-
-* 최초 작성일: 2025년 5월 18일 (일)
-
 ## const의 개념과 특징
 
 **const**는 "constant"의 약자로, 한 번 값이 정해지면 이후 변경할 수 없는 상수를 나타내는 키워드다.

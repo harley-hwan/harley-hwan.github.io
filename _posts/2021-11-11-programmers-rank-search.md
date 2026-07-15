@@ -4,12 +4,8 @@ description: 2021 KAKAO BLIND RECRUITMENT
 date: 2021-11-11 10:00:00 +0900
 slug: 'programmers(RankSearch)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 순위 검색
-
-- 최초 작성일: 2021년 11월 11일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/72412>
 
 ## 문제 설명

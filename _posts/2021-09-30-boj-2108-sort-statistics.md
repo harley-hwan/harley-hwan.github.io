@@ -3,13 +3,9 @@ title: Baekjoon 2108 통계학
 description: 백준 2108 통계학 (정렬)
 date: 2021-09-30 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
-tags: [baekjoon, 백준, algorithm, sort]
+tags: [baekjoon, algorithm, sort]
 toc: false
 ---
-
-# Baekjoon 2108 통계학
-
-- 최초 작성일: 2021년 9월 30일(목)
 - 주소: <https://www.acmicpc.net/problem/2108>
 
 ## 문제

@@ -4,9 +4,8 @@ description: Programmers KAKAO 개발자 겨울 인턴십 (c++)
 date: 2021-09-15 10:00:00 +0900
 slug: 'programmers(stepstone)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, kakao, algorithm, cpp]
+tags: [programmers, kakao, algorithm, cpp]
 ---
-
 <https://programmers.co.kr/learn/courses/30/lessons/64062>
 
 ![image](/assets/img/posts/programmers-stepstone/001-133344222-724d8ddc-01e5-4bfd-9813-fe440ba7ad10.png)

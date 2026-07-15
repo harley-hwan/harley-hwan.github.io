@@ -6,11 +6,6 @@ slug: '(18)Constructor'
 categories: [Dev, CSharp]
 tags: [csharp, unity, oop, constructor]
 ---
-
-# 생성자 
-
-- 최초 작성일: 2021년 3월 21일(월)
-
 ## 내용
 
 ```c#

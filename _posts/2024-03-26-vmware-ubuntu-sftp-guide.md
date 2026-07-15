@@ -5,10 +5,6 @@ date: 2024-03-26 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, ubuntu, vmware, networking, sftp, filezilla, ens33]
 ---
-
-# 가상머신과 SFTP: VMware Ubuntu 환경에서의 네트워크 설정 가이드
-- 최초 작성일: 2024년 3월 26일 (화)
-
 <br/>
 
 ## 네트워크 인터페이스 개요

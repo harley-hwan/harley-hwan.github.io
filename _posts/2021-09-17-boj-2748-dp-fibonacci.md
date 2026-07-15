@@ -3,9 +3,8 @@ title: Baekjoon 2748 fibonacci number 2 (dp)
 description: 백준 2748 피보나치 수 2 (동적 계획법) (c++)
 date: 2021-09-17 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
-tags: [baekjoon, 백준, algorithm, dp]
+tags: [baekjoon, algorithm, dp]
 ---
-
 <<https://www.acmicpc.net/problem/2748>>
 
 ![image](/assets/img/posts/boj-2748-dp-fibonacci/001-133781257-263004ba-099f-4af9-9e28-f7e781db7b50.png)

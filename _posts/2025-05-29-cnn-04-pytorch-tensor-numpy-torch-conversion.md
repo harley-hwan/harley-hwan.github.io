@@ -5,13 +5,6 @@ date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, numpy, deep-learning, python]
 ---
-
-------------------------------------------------
-
-# NumPy 배열과 PyTorch 텐서 간 상호 변환 방법
-
-* 최초 작성일: 2025년 5월 29일 (목)
-
 ## NumPy 배열을 텐서로 변환하기
 
 NumPy 배열을 PyTorch 텐서로 변환하는 방법은 두 가지가 있다. 첫 번째는 `torch.tensor()` 함수를 사용하는 방법이고, 두 번째는 `torch.from_numpy()` 함수를 사용하는 방법이다. 아래의 예를 통해 쉽게 이해할 수 있다.

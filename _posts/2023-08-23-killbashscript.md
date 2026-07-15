@@ -5,11 +5,6 @@ date: 2023-08-23 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, embedded, bash, shell, sh, kill, script]
 ---
-
-# 모든 타켓 프로세스 kill하기 (kill_proc.sh 스크립트)
-
-- 최초 작성일: 2023년 8월 23일(수)
-
 ## 코드
 
 ```bash

@@ -6,11 +6,6 @@ slug: '(23)Polymorphism'
 categories: [Dev, CSharp]
 tags: [csharp, unity, oop, polymorphism]
 ---
-
-# 다형성 (Polymorphism) : OOP
-
-- 최초 작성일: 2021년 3월 21일(월)
-
 ## 내용
 
 ```c#

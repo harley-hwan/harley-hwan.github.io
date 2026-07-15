@@ -40,6 +40,7 @@ On Windows, `html-proofer` requires `libcurl.dll` on `PATH`. The most reliable l
 ## Content Notes
 
 - Post filenames use lowercase kebab-case.
+- Post bodies start at `##` (h2) — the theme already renders the front matter `title` as the page's `<h1>`, so don't repeat the title as a body heading, and don't add manual date lines (`최초 작성일` etc.); posted/updated dates come from front matter and git history.
 - If an old filename had a legacy URL, keep it with front matter `slug`.
 - Use slug-safe tags such as `cpp`, `csharp`, `c-language`, `visual-studio`, and `deep-learning`.
 - Prefer local images under `assets/img/posts/<post-slug>/` instead of external image hosts.

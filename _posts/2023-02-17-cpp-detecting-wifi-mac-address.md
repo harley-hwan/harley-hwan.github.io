@@ -5,10 +5,6 @@ date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, windows, wlan, mac, network, wlanapi]
 ---
-
-# WlanAPI를 이용한 Wi-Fi MAC 주소 검출
-- 최초 작성일: 2023년 2월 17일 (금)
-
 <br/>
 
 ## 소개

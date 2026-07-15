@@ -5,11 +5,6 @@ date: 2025-03-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, callback, std-function, lambda, programming]
 ---
-
-# (C++) 콜백 함수(Callback Function) 이해하기
-
-- 최초 작성일: 2025년 3월 17일 (월)
-
 ## 콜백 함수의 개념
 
 C++에서 콜백 함수(Callback Function)는 특정 조건이나 이벤트가 발생했을 때 자동으로 호출되는 함수이다. 개발자가 직접 호출하는 함수가 아니라, 시스템이나 라이브러리가 미리 등록된 함수 포인터 또는 함수 객체를 호출하여 실행하는 방식이다.

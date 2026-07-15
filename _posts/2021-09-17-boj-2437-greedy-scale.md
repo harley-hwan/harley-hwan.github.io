@@ -3,9 +3,8 @@ title: Baekjoon 2437 저울 (그리디)
 description: 백준 2437 저울 (그리디) (c++)
 date: 2021-09-17 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
-tags: [baekjoon, 백준, algorithm, greedy]
+tags: [baekjoon, algorithm, greedy]
 ---
-
 <https://www.acmicpc.net/problem/2437>
 
 ![image](/assets/img/posts/boj-2437-greedy-scale/001-133775215-3b6ccc8a-16ea-4782-9f0d-99c226d3c20b.png)

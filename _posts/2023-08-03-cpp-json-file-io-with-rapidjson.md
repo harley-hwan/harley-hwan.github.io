@@ -3,12 +3,8 @@ title: (c++) json 파일 입출력 (RapidJson)
 description: "C, C++, Visual Studio, JSON, RapidJSON, Exception Handling, File I/O, fopen_s, FileReadStream, FileWriteStream, RapidJSON Document, RapidJSON Value, RapidJSON Writer, String Manipulation"
 date: 2023-08-03 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, visual-studio, JSON, RapidJSON, exception-handling, File I/O, fopen_s, FileReadStream, FileWriteStream, RapidJSON Document, RapidJSON Value, RapidJSON Writer, String Manipulation]
+tags: [c-language, cpp, visual-studio, json, rapidjson, exception-handling, file-io, fopen-s, file-read-stream, file-write-stream, string-manipulation]
 ---
-
-# json 파일 입출력
-- 최초 작성일: 2023년 8월 3일 (목)
-
 ## 주요 동작 설명
 
 1. 파일을 읽기 모드("r")로 열려고 시도한다. 파일을 열 수 없는 경우, 새 파일을 작성 모드("w")로 열고 초기 객체를 작성한 다음 파일을 다시 읽기 모드로 열려고 시도.

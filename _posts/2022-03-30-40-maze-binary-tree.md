@@ -4,13 +4,8 @@ description: Binary Tree 미로 생성 알고리즘
 date: 2022-03-30 10:00:00 +0900
 slug: '(40)Maze_BinaryTree'
 categories: [Dev, CSharp]
-tags: [csharp, unity, maze, algorithm, binary tree]
+tags: [csharp, unity, maze, algorithm, binary-tree]
 ---
-
-# Binary Tree 미로 생성 알고리즘 (Maza Algorithm)
-
-- 최초 작성일: 2021년 3월 30일(수)
-
 ## 내용
 
 ### 맵 만들기

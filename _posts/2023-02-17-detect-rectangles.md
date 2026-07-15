@@ -4,13 +4,8 @@ description: "Mat, cvtColor, GaussianBlur, Canny, findContours, approxPolyDP, dr
 date: 2023-02-17 10:00:00 +0900
 slug: 'DetectRactangles'
 categories: [Dev, OpenCV]
-tags: [opencv, Mat, cvtColor, GaussianBlur, Canny, findContours, approxPolyDP, drawContours, detectRectangle]
+tags: [opencv, mat, cvt-color, gaussian-blur, canny, find-contours, approx-poly-dp, draw-contours, rectangle-detection]
 ---
-
-# opencv c++ 직사각형 검출 알고리즘
-
-- 최초 작성일: 2023년 2월 17일(금)
-
 ## 목표
 
 MFC에서 opencv 를 활용한 이미지 처리를 통한 직사각형 검출 알고리즘을 만들어보자.

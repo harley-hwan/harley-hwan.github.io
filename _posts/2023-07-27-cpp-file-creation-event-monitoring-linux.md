@@ -3,12 +3,8 @@ title: (c++) 파일 생성 이벤트 모니터링 (linux)
 description: "c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm_watch"
 date: 2023-07-27 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm_watch]
+tags: [c-language, cpp, visual-studio, linux, inotify, inotify-init, in-create, in-isdir, inotify-rm-watch]
 ---
-
-# 원하는 파일 생성 이벤트 모니터링
-- 최초 작성일: 2023년 7월 27일 (수)
-
 ## 내용
 
 리눅스에서 제공하는 inotify 기능을 사용하여 특정 디렉터리에서 파일 생성 이벤트를 모니터링하는 프로그램. 

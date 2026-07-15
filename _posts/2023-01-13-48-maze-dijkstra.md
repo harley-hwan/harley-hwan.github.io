@@ -6,11 +6,6 @@ slug: '(48)MazeDijkstra'
 categories: [Dev, CSharp]
 tags: [csharp, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
 ---
-
-# 다익스트라 (Dijkstra) 최단 경로 알고리즘 (Graph)
-
-- 최초 작성일: 2023년 1월 13일(금)
-
 ## 내용
 
 ## 개념

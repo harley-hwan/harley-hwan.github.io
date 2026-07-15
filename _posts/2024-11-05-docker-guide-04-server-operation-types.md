@@ -5,10 +5,6 @@ date: 2024-11-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, server, bare-metal, hypervisor, container, virtualization]
 ---
-
-# Docker 실전 가이드: 서버 운영 방식의 이해
-- 최초 작성일: 2024년 11월 5일 (화)
-
 <br>
 
 ## 서버 운영 방식 개요

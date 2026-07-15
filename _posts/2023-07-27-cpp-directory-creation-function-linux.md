@@ -3,12 +3,8 @@ title: (c++) 리눅스 환경에서 디렉토리 생성을 보장하는 함수
 description: "c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm_watch"
 date: 2023-07-27 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm_watch]
+tags: [c-language, cpp, visual-studio, linux, inotify, inotify-init, in-create, in-isdir, inotify-rm-watch]
 ---
-
-# 원하는 파일 생성 이벤트 모니터링
-- 최초 작성일: 2023년 7월 27일 (수)
-
 ## 내용
 
 이 함수는 주로 리눅스 기반의 시스템에서 파일 시스템 작업을 수행하기 전에 특정 디렉토리의 존재를 보장하는 용도로 사용된다. 

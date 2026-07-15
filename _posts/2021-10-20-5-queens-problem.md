@@ -4,13 +4,8 @@ description: 유전 알고리즘 (Genetic Algorithm)
 date: 2021-10-20 10:00:00 +0900
 slug: '5QueensProblem'
 categories: [Project]
-tags: [machinelearning, 머신러닝, algorithm, genetic]
+tags: [machinelearning, machine-learning, algorithm, genetic]
 ---
-
-# 5-Queens Problem (Genetic Algorithm)
-
-- 최초 작성일: 2021년 10월 20일(수)
-
 ## 문제 설명
 
 N-Queens Problem에서 n의 값을 5로 하고

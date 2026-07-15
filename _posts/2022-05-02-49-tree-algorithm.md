@@ -6,11 +6,6 @@ slug: '(49)TreeAlgorithm'
 categories: [Dev, CSharp]
 tags: [csharp, datastructure, tree, algorihtm, list, add]
 ---
-
-# 트리 (Tree)
-
-- 최초 작성일: 2023년 5월 2일(화)
-
 ## 내용
 
 ## 개념

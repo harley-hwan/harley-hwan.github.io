@@ -6,11 +6,6 @@ slug: '(20)Inheritance'
 categories: [Dev, CSharp]
 tags: [csharp, unity, oop, inheritance]
 ---
-
-# 상속성 (inheritance) : OOP
-
-- 최초 작성일: 2021년 3월 21일(월)
-
 ## 내용
 
 ```c#

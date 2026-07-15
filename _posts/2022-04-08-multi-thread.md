@@ -6,11 +6,6 @@ slug: 'MultiThread'
 categories: [Dev, MFC]
 tags: [cpp, mfc, multi-thread, thread]
 ---
-
-# Multi Thread (멀티 스레드)
-
-- 최초 작성일: 2022년 4월 8일(금)
-
 ## 목적
 
 - 개념 설명과 예제를 통해 멀티스레드를 이해하자.

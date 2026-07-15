@@ -4,12 +4,8 @@ description: SingleLayered Perceptron in Artificial Intelligence
 date: 2021-11-11 10:00:00 +0900
 slug: 'SingleLayeredPerceptronBook'
 categories: [Project]
-tags: [AI, deep-learning, machine-learning, single layered perceptron]
+tags: [ai, deep-learning, machine-learning, single-layered-perceptron]
 ---
-
-#  The Undergraduate's Guide to the Perceptron
-
-- 최초 작성일: 2021년 11월 11일(월)
 - 주소: <https://github.com/harley-hwan/SingleLayeredPerceptronBook>
 - 프로젝트명: The Undergraduate's Guide to the Perceptron ('뭐든지해봐' 프로젝트)
 - 후원: 부산대학교 

@@ -5,10 +5,6 @@ date: 2023-02-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, file, stream, formatting, mfc]
 ---
-
-# 동적 파일명 생성 및 파일 열기 구현
-- 최초 작성일: 2023년 2월 10일 (금)
-
 <br/>
 
 ## 소개

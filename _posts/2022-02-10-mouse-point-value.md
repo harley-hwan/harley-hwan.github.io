@@ -6,11 +6,6 @@ slug: 'MousePointValue'
 categories: [Dev, MFC]
 tags: [cpp, mfc, win32, windowprogramming]
 ---
-
-# [MFC] 마우스 좌표값 구하기 프로그램
-
-- 최초 작성일: 2022년 2월 10일 (목)
-
 ## 목적
 
 이번 예제에서는 빈 프로젝트를 이용하는 것이 아닌, MFC를 이용하여 마우스 좌표값을 보여주는 프로그램을 작성한다.

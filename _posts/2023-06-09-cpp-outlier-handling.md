@@ -5,10 +5,6 @@ date: 2023-06-09 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, outlier, filtering, smoothing, interpolation]
 ---
-
-# 이상치(Outlier) 데이터 처리 구현
-- 최초 작성일: 2023년 6월 9일 (금)
-
 <br/>
 
 ## 소개

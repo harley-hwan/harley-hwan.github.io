@@ -6,13 +6,6 @@ categories: [Dev, CNN]
 tags: [pytorch, tensor, reshape, view, permute, transpose, deep-learning]
 toc: false
 ---
-
--------------------------------------------------------
-
-# PyTorch Tensor 차원 변환
-
-* 최초 작성일: 2025년 5월 29일 (목)
-
 ## 텐서 차원의 이해
 
 딥러닝에서 텐서의 차원을 이해하고 조작하는 것은 필수적이다. 각 차원은 데이터의 특정 속성을 나타낸다.

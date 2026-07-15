@@ -5,10 +5,6 @@ date: 2025-02-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, container, virtualization, hypervisor, lxc]
 ---
-
-# Docker 실전 가이드: 컨테이너 vs 하이퍼바이저 가상화
-- 최초 작성일: 2025년 2월 5일 (수)
-
 <br>
 
 ## 컨테이너 가상화란?

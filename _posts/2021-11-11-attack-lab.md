@@ -4,12 +4,8 @@ description: System Software assignment
 date: 2021-11-11 10:00:00 +0900
 slug: 'AttackLab'
 categories: [Project]
-tags: [system software, lab, linux]
+tags: [system-software, lab, linux]
 ---
-
-# Attack Lab
-
-- 최초 작성일: 2021년 11월 11일(목)
 - github 주소: <https://github.com/harley-hwan/SystemSoftwareLecture>
 
 ## 풀이 과정

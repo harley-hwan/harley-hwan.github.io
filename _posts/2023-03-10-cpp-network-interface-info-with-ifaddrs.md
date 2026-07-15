@@ -5,10 +5,6 @@ date: 2023-03-10 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, linux, windows, network, ifaddrs, ip, interface]
 ---
-
-# getifaddrs를 이용한 네트워크 인터페이스 정보 구현
-- 최초 작성일: 2023년 3월 10일 (금)
-
 <br/>
 
 ## 소개

@@ -4,12 +4,8 @@ description: 2021 Dev-Matching 웹 백엔드 개발자(상반기)
 date: 2021-10-01 10:00:00 +0900
 slug: 'programmers(lottos)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 로또의 최고 순서와 최저 순위
-
-- 최초 작성일: 2021년 10월 01일(금)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/77484>
 
 ## 문제 설명

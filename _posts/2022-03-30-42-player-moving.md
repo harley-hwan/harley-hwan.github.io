@@ -6,11 +6,6 @@ slug: '(42)PlayerMoving'
 categories: [Dev, CSharp]
 tags: [csharp, unity, maze, algorithm, player]
 ---
-
-# 미로에서 플레이어의 이동 구현
-
-- 최초 작성일: 2021년 3월 30일(수)
-
 ## 내용
 
 ### Player 이동 구현

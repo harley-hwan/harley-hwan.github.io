@@ -5,10 +5,6 @@ date: 2024-11-05 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, server, virtualization, devops, infrastructure]
 ---
-
-# Docker 실전 가이드: 서버와 가상화 이해하기
-- 최초 작성일: 2024년 11월 5일 (화)
-
 <br>
 
 ## 서버의 이해

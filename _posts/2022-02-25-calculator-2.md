@@ -6,11 +6,6 @@ slug: 'Calculator2'
 categories: [Dev, MFC]
 tags: [cpp, mfc, calculator]
 ---
-
-# [MFC] 계산기 프로그램 작성 2
-
-- 최초 작성일: 2022년 2월 25일 (금)
-
 ## 목적
 
 사칙 연산과 CString 함수의 형 변환을 이용하여 계산기 프로그램을 작성한다.

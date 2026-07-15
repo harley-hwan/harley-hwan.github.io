@@ -3,12 +3,8 @@ title: (c++) csv 파일 입출력
 description: "c, c++, vs, csv, excel, ifstream, ofstream, std::ifstream, std::ofstream, tellp, map, lambda function"
 date: 2023-08-03 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, vs, csv, excel, ifstream, ofstream, std::ifstream, std::ofstream, tellp, map, lambda function]
+tags: [c-language, cpp, visual-studio, csv, excel, ifstream, ofstream, std-ifstream, std-ofstream, tellp, map, lambda]
 ---
-
-# csv 파일에 헤더 작성 및 입출력
-- 최초 작성일: 2023년 8월 3일 (목)
-
 ## 부분 설명
 
 1. __std::map<std::string, std::string> lines__ : CSV 파일의 각 행을 저장. 키는 시리얼 번호이고, 값은 해당 시리얼 번호에 해당하는 전체 행이다.

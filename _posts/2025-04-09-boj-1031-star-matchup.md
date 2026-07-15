@@ -6,11 +6,6 @@ categories: [Algorithm, Baekjoon]
 tags: [cpp, baekjoon, network-flow, maxflow, bfs, algorithm]
 toc: false
 ---
-
-# 스타 대결 (C++)
-
-- 최초 작성일: 2025년 4월 9일 (수)
-
 <br>
 
 ## 문제 설명

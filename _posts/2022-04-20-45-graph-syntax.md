@@ -6,11 +6,6 @@ slug: '(45)GraphSyntax'
 categories: [Dev, CSharp]
 tags: [csharp, datastructure, graph]
 ---
-
-# 그래프 (Graph)
-
-- 최초 작성일: 2021년 4월 20일(수)
-
 ## 내용
 
 ### 그래프 개념

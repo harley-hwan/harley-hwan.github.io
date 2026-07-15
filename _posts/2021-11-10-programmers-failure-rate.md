@@ -4,12 +4,8 @@ description: 2019 KAKO BLIND RECRUITMENT
 date: 2021-11-10 10:00:00 +0900
 slug: 'programmers(failureRate)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 실패율
-
-- 최초 작성일: 2021년 11월 10일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/42889>
 
 ## 문제 설명

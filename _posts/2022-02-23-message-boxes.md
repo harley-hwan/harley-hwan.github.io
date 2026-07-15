@@ -6,11 +6,6 @@ slug: 'MessageBoxes'
 categories: [Dev, MFC]
 tags: [cpp, mfc, messagebox]
 ---
-
-# [MFC] 메시지 박스 프로그램 작성 -3
-
-- 최초 작성일: 2022년 2월 23일 (수)
-
 ## 목적
 
 #### 조건 1.  프로젝트 이름은 'MessageBoxes'로 한다.

@@ -5,10 +5,6 @@ date: 2023-05-19 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [csharp, wpf, ui, xaml, visualstudio]
 ---
-
-# WPF 프로젝트의 구조 및 UI 구성
-- 최초 작성일: 2023년 5월 19일 (금)
-
 ## Visual Studio에서 WPF 프로젝트 시작하기
 
 WPF 애플리케이션을 개발하기 위해서는 먼저 Visual Studio를 실행하고 새로운 WPF 프로젝트를 생성해야 한다.

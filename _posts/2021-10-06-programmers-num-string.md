@@ -4,12 +4,8 @@ description: 2021 카카오 채용연계형 인턴십
 date: 2021-10-06 10:00:00 +0900
 slug: 'programmers(numString)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 숫자 문자열과 영단어
-
-- 최초 작성일: 2021년 10월 06일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/81301>
 
 ## 문제 설명

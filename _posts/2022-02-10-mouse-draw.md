@@ -6,11 +6,6 @@ slug: 'MouseDraw'
 categories: [Dev, MFC]
 tags: [cpp, mfc, win32, windowprogramming]
 ---
-
-# [Win32] 그림 그리기 프로그램
-
-- 최초 작성일: 2022년 2월 10일 (목)
-
 ## 목적
 
 이번 예제를 통해 자유롭게 움직여서 그림 그리는 프로젝트를 완성한다.

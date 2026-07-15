@@ -4,12 +4,8 @@ description: 2019 카카오 개발자 겨울 인턴십
 date: 2021-10-21 10:00:00 +0900
 slug: 'programmers(pickingdoll)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 크레인 인형뽑기 게임
-
-- 최초 작성일: 2021년 10월 21일(목)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/64061>
 
 ## 풀이 방법 1

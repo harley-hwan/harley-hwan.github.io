@@ -5,11 +5,6 @@ date: 2025-03-13 10:00:00 +0900
 categories: [Dev, WPF]
 tags: [csharp, wpf, styles, layout, ui, xaml]
 ---
-
-# WPF에서 스타일 및 레이아웃 활용하기
-
-- 최초 작성일: 2025년 3월 13일 (목)
-
 ## WPF 스타일 개요
 
 WPF는 Windows Forms에 비해 훨씬 쉽고 효율적인 스타일링 기능을 제공한다. 그라데이션 배경, 반투명 컨트롤 및 동적인 크기 조정 등을 통해 현대적이고 매력적인 UI를 손쉽게 구성할 수 있다.

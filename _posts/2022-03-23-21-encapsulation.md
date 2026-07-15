@@ -6,11 +6,6 @@ slug: '(21)Encapsulation'
 categories: [Dev, CSharp]
 tags: [csharp, unity, oop, encapsulation]
 ---
-
-# 은닉성 (Encapsulation) : OOP
-
-- 최초 작성일: 2021년 3월 21일(월)
-
 ## 내용
 
 ```c#

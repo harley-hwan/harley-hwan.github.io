@@ -4,12 +4,8 @@ description: 월간 코드 챌린지 시즌2
 date: 2021-11-11 10:00:00 +0900
 slug: 'programmers(nOfDivisor)'
 categories: [Algorithm, Programmers]
-tags: [programmers, 프로그래머스, algorithm, cpp]
+tags: [programmers, algorithm, cpp]
 ---
-
-# Programmers 약수의 개수와 덧셈
-
-- 최초 작성일: 2021년 11월 11일(수)
 - 주소: <https://programmers.co.kr/learn/courses/30/lessons/77884>
 
 ## 문제 설명

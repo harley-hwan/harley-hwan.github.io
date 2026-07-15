@@ -4,13 +4,8 @@ description: 우수법
 date: 2022-03-30 10:00:00 +0900
 slug: '(43)RightHandRule'
 categories: [Dev, CSharp]
-tags: [csharp, unity, maze, algorithm, right hand rule]
+tags: [csharp, unity, maze, algorithm, right-hand-rule]
 ---
-
-# 우수법 (오른손 법칙)을 이용한 미로 생성 알고리즘
-
-- 최초 작성일: 2021년 3월 30일(수)
-
 ## 내용
 
 ### 오른손 법칙을 이용한 플레이어의 이동 구현

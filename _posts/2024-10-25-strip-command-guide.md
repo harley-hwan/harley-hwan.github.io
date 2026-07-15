@@ -5,10 +5,6 @@ date: 2024-10-25 10:00:00 +0900
 categories: [Dev, Linux]
 tags: [linux, embedded, optimization, binary, elf, strip, linker]
 ---
-
-# Strip 명령어: ELF 파일 최적화의 핵심 도구
-- 최초 작성일: 2024년 10월 25일 (금)
-
 <br/>
 
 ## 소개

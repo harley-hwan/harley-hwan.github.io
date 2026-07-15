@@ -5,13 +5,6 @@ date: 2025-06-11 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, indexing, slicing, deep-learning]
 ---
-
---------------------------------------------------------
-
-# (CNN) Pytorch Tensor - Indexing
-
-* 최초 작성일: 2025년 6월 11일 (수)
-
 ## 기본 indexing
 
 파이토치 텐서의 indexing 방법은 NumPy 배열과 매우 유사하다. 단일 지정 인덱싱을 하면 원본 텐서의 차원이 하나 줄어든 텐서가 반환된다.

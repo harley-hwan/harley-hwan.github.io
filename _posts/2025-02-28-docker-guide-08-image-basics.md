@@ -5,10 +5,6 @@ date: 2025-02-28 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, container, image, registry, virtualization]
 ---
-
-# Docker 실전 가이드: 이미지의 개념과 역할
-- 최초 작성일: 2025년 2월 28일 (목)
-
 <br>
 
 ## 이미지란 무엇인가?

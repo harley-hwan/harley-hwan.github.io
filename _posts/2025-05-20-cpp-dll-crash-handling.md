@@ -5,11 +5,6 @@ date: 2025-05-20 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, dll, crash-dump, exception-handling, windows]
 ---
-
-# (C++) DLL Crash가 클라이언트에 미치는 영향과 해결 방법
-
-* 최초 작성일: 2025년 5월 20일 (화)
-
 ## DLL Crash의 개념과 발생 이유
 
 DLL(Dynamic-Link Library)은 실행 중인 프로세스에 동적으로 로드되어 해당 기능을 제공하는 공유 라이브러리다. DLL 내부의 코드가 예외 상황을 적절히 처리하지 못하면 클라이언트 프로세스 전체에 심각한 영향을 줄 수 있다.

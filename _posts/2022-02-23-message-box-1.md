@@ -6,11 +6,6 @@ slug: 'MessageBox1'
 categories: [Dev, MFC]
 tags: [cpp, mfc, serialport, registry]
 ---
-
-# [MFC] 메시지 박스 프로그램 작성 -1
-
-- 최초 작성일: 2022년 2월 23일 (수)
-
 ## 목적
 
 2개의 버튼을 생성하고, 생성된 버튼을 클릭하면 새로운 창이 표시된다.

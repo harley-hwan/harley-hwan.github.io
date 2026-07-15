@@ -5,10 +5,6 @@ date: 2024-10-24 10:00:00 +0900
 categories: [Dev, Docker]
 tags: [docker, installation, configuration, devops, containerization, git-bash, winpty]
 ---
-
-# Docker 실전 가이드: 설치와 환경 구성
-- 최초 작성일: 2024년 10월 24일 (금)
-- 수정일: 2024년 11월 4일 (월)
 - Docker 버전: 24.0.6
 - Docker Compose 버전: 2.21.0
 

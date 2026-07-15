@@ -5,13 +5,6 @@ date: 2025-06-11 10:00:00 +0900
 categories: [Dev, CNN]
 tags: [pytorch, tensor, matmul, dot, deep-learning]
 ---
-
-------------------------------------------------------
-
-# (CNN) Pytorch Tensor 연산 - 내적과 행렬곱(dot, matmul)
-
-* 최초 작성일: 2025년 6월 11일 (수)
-
 ## torch.dot() - 벡터의 내적
 
 `torch.dot()` 함수는 두 1차원 벡터 간 내적(dot product)을 계산한다. **1차원 텐서만 가능**하다.

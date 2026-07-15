@@ -6,11 +6,6 @@ slug: 'mfcSlider'
 categories: [Dev, MFC]
 tags: [cpp, mfc, slider, rgb, windowprogramming]
 ---
-
-# [MFC] 색상 슬라이드 프로그램 작성
-
-- 최초 작성일: 2022년 2월 8일 (화)
-
 ## 실습
 
 ### 프로젝트 생성

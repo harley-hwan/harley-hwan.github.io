@@ -3,11 +3,8 @@ title: signal() - 인터럽트 신호 처리 (c++)
 description: "SIGINT, SIGPIPE, SIGALRM, signal, signal()"
 date: 2022-10-28 10:00:00 +0900
 categories: [Dev, C++]
-tags: [SIGINT, SIGPIPE, SIGALRM, signal, signal-function, signal.h]
+tags: [sigint, sigpipe, sigalrm, signal, signal-function, signal-h]
 ---
-
-# signal() - 인터럽트 신호 처리
-- 최초 작성일: 2022년 11월 9일 (수)
 - 참조: https://www.ibm.com/docs/ko/i/7.3?topic=functions-signal-handle-interrupt-signals
 
 ## 내용

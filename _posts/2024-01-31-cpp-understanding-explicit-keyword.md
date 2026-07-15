@@ -3,13 +3,8 @@ title: "(c++) Understanding 'explicit'"
 description: "Preventing Implicit Conversions"
 date: 2024-01-31 10:00:00 +0900
 categories: [Dev, C++]
-tags: [cpp, programming, explicit keyword]
+tags: [cpp, programming, explicit-keyword]
 ---
-
-# Understanding 'explicit' in C++
-
-- 최초 작성일: 2024년 1월 31일 (수)
-
 ## 내용
 
 `explicit` 키워드는 C++ 프로그래밍에서 중요한 역할을 한다. 이는 주로 생성자에서 사용되며, 코드에서의 암시적 형변환을 방지한다. 이러한 기능은 코드의 명확성을 높이고, 예기치 않은 변환으로 인한 버그를 방지하는 데 도움을 준다.
