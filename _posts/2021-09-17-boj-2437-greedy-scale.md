@@ -7,7 +7,7 @@ tags: [baekjoon, algorithm, greedy]
 ---
 <https://www.acmicpc.net/problem/2437>
 
-![image](/assets/img/posts/boj-2437-greedy-scale/001-133775215-3b6ccc8a-16ea-4782-9f0d-99c226d3c20b.png)
+![image](/assets/img/posts/boj-2437-greedy-scale/001-133775215-3b6ccc8a-16ea-4782-9f0d-99c226d3c20b.webp)
 
 ### 저울 (그리디 알고리즘 & 정렬)
 + 주어진 추들로 측정할 수 없는 양의 정수 무게 중 최솟값 구하기

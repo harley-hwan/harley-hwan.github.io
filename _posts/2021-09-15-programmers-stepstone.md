@@ -8,7 +8,7 @@ tags: [programmers, kakao, algorithm, cpp]
 ---
 <https://programmers.co.kr/learn/courses/30/lessons/64062>
 
-![image](/assets/img/posts/programmers-stepstone/001-133344222-724d8ddc-01e5-4bfd-9813-fe440ba7ad10.png)
+![image](/assets/img/posts/programmers-stepstone/001-133344222-724d8ddc-01e5-4bfd-9813-fe440ba7ad10.webp)
 
 이 문제는 각각의 징검다리마다 밟을 수 있는 횟수가 주어지며, 한 번에 건너뛸 수 있는 징검다리 수를 k로 주어, 0을 가진 징검다리가 연속으로 k개를 넘어서면 그때까지 개울을 건너간 친구들의 수를 구하는 문제이다.
 

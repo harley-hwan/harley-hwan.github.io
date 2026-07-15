@@ -37,7 +37,7 @@ tags: [programmers, algorithm, cpp]
 
 ## 입출력 예
 
-![image](/assets/img/posts/programmers-new-id/001-135711898-2dfb6ba2-5058-4a3d-9c7d-5073fc7bb2c4.png)
+![image](/assets/img/posts/programmers-new-id/001-135711898-2dfb6ba2-5058-4a3d-9c7d-5073fc7bb2c4.webp)
 
 ## 풀이 방법
 

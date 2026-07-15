@@ -51,7 +51,7 @@ docker run nginx
 
 이렇게 모든 구성 요소를 포함한 이미지를 통해 **어디서든 동일한 환경에서 프로그램을 실행할 수 있다**.
 
-![image](/assets/img/posts/docker-guide-08-image-basics/001-85e4448d-b3bf-4875-8cbd-937b609b41be.png)
+![image](/assets/img/posts/docker-guide-08-image-basics/001-85e4448d-b3bf-4875-8cbd-937b609b41be.webp)
 
 <br>
 
@@ -61,7 +61,7 @@ docker run nginx
 
 아래 그림은 이미지와 컨테이너의 관계를 나타낸다:
 
-![image](/assets/img/posts/docker-guide-08-image-basics/002-bc18d8ef-13a4-4f81-8f31-b2f78025ee05.png)
+![image](/assets/img/posts/docker-guide-08-image-basics/002-bc18d8ef-13a4-4f81-8f31-b2f78025ee05.webp)
 
 <br>
 
@@ -73,7 +73,7 @@ docker run nginx
 
 즉, 이미지는 **컨테이너의 청사진(Template)**이며, 컨테이너는 이 이미지를 기반으로 생성된 **실제 실행 환경(Instance)** 이다.
 
-![image](/assets/img/posts/docker-guide-08-image-basics/003-b6431450-1137-4173-a984-59a8005ef8e6.png)
+![image](/assets/img/posts/docker-guide-08-image-basics/003-b6431450-1137-4173-a984-59a8005ef8e6.webp)
 
 <br>
 

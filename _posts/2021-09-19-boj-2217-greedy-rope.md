@@ -8,7 +8,7 @@ tags: [baekjoon, algorithm, greedy]
 - 주소: <https://www.acmicpc.net/problem/2217>
 
 ## 문제 설명
-![image](/assets/img/posts/boj-2217-greedy-rope/001-133917081-7483b0fb-ad82-45ba-88fc-82f6aef3633b.png)
+![image](/assets/img/posts/boj-2217-greedy-rope/001-133917081-7483b0fb-ad82-45ba-88fc-82f6aef3633b.webp)
 
 - N(1 ≤ N ≤ 100,000)개의 로프가 있다. 이 로프를 이용하여 이런 저런 물체를 들어올릴 수 있다. 각각의 로프는 그 굵기나 길이가 다르기 때문에 들 수 있는 물체의 중량이 서로 다를 수도 있다.
 - 하지만 여러 개의 로프를 병렬로 연결하면 각각의 로프에 걸리는 중량을 나눌 수 있다. k개의 로프를 사용하여 중량이 w인 물체를 들어올릴 때, 각각의 로프에는 모두 고르게 w/k 만큼의 중량이 걸리게 된다.
@@ -17,7 +17,7 @@ tags: [baekjoon, algorithm, greedy]
 ## 입력
 - 첫째 줄에 정수 N이 주어진다. 다음 N개의 줄에는 각 로프가 버틸 수 있는 최대 중량이 주어진다. 이 값은 10,000을 넘지 않는 자연수이다
 
-![image](/assets/img/posts/boj-2217-greedy-rope/002-133917085-f7fd9a13-d3c4-49b4-865c-24f0c28ef524.png)
+![image](/assets/img/posts/boj-2217-greedy-rope/002-133917085-f7fd9a13-d3c4-49b4-865c-24f0c28ef524.webp)
 ## 알고리즘 분류
 
 - 수학

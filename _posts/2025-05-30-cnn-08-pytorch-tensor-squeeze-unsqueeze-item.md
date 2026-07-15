@@ -31,7 +31,7 @@ print(f"배치 형태 shape: {batch_img.shape}")
 # 출력: 배치 형태 shape: torch.Size([1, 3, 224, 224])
 ```
 
-![squeeze unsqueeze 시각화](/assets/img/posts/cnn-08-pytorch-tensor-squeeze-unsqueeze-item/001-e5600edc-16cb-4cf8-a1a7-a4d0fa9153c3.png)
+![squeeze unsqueeze 시각화](/assets/img/posts/cnn-08-pytorch-tensor-squeeze-unsqueeze-item/001-e5600edc-16cb-4cf8-a1a7-a4d0fa9153c3.webp)
 
 ---
 

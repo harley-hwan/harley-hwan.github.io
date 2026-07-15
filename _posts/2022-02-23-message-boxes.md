@@ -16,13 +16,13 @@ tags: [cpp, mfc, messagebox]
 
 #### 결과 1.  초기화면은 다음과 같다.
 
-![image](/assets/img/posts/message-boxes/001-155272724-abc66b05-6e8c-44cd-94ef-62e2f49ba437.png)
+![image](/assets/img/posts/message-boxes/001-155272724-abc66b05-6e8c-44cd-94ef-62e2f49ba437.webp)
 
 <br/>
 
 #### 결과 2.  [MFC란?] 버튼을 클릭했을 때 결과는 다음과 같다.
 
-![image](/assets/img/posts/message-boxes/002-155272851-b91abe20-ee72-4173-9e62-916b79177279.png)
+![image](/assets/img/posts/message-boxes/002-155272851-b91abe20-ee72-4173-9e62-916b79177279.webp)
 
 <br/>
 
@@ -38,13 +38,13 @@ tags: [cpp, mfc, messagebox]
 
 아래와 같이 MFC Application을 생성해준다. 프로젝트명은 MessageBoxes로 했다.
 
-![image](/assets/img/posts/message-boxes/004-155267462-ed1b5472-223a-46c9-b7c9-858acd19ece2.png)
+![image](/assets/img/posts/message-boxes/004-155267462-ed1b5472-223a-46c9-b7c9-858acd19ece2.webp)
 
 <br/>
 
 그리고, Application type (응용 프로그램 종류)는 'Dialog based (대화 상자 기반)'를 선택하고 [Finish] 버튼을 클릭한다.
 
-![image](/assets/img/posts/message-box-1/002-155261120-68dfaad7-09d3-41fb-b396-e9569d0b5c86.png)
+![image](/assets/img/posts/message-box-1/002-155261120-68dfaad7-09d3-41fb-b396-e9569d0b5c86.webp)
 
 <br/>
 
@@ -52,7 +52,7 @@ tags: [cpp, mfc, messagebox]
 
 그러면 아래와 같은 창이 나오는데, 안 나온다면 [Ctrl]-[Shift]-[R] 혹은 [메뉴]-[보기]-[다른 창]-[리소스 뷰]를 클릭하면 된다.
 
-![image](/assets/img/posts/message-box-1/003-155261424-cbb0d2e8-080d-4e1e-ba5e-0e45e5241bca.png)
+![image](/assets/img/posts/message-box-1/003-155261424-cbb0d2e8-080d-4e1e-ba5e-0e45e5241bca.webp)
 
 <br/>
 
@@ -64,8 +64,8 @@ tags: [cpp, mfc, messagebox]
 
 컨트롤과 속성값은 아래와 같이 설정한다.
 
-![image](/assets/img/posts/message-boxes/005-155273406-5d6b8852-22d4-4089-8c0a-e14b190de1ed.png)
-![image](/assets/img/posts/message-boxes/006-155273293-6288723c-e9d6-4099-97f6-bc33a6855843.png)
+![image](/assets/img/posts/message-boxes/005-155273406-5d6b8852-22d4-4089-8c0a-e14b190de1ed.webp)
+![image](/assets/img/posts/message-boxes/006-155273293-6288723c-e9d6-4099-97f6-bc33a6855843.webp)
 
 <br/>
 
@@ -79,9 +79,9 @@ tags: [cpp, mfc, messagebox]
 
 Control Variable(제어 변수) 창에서 다음과 같이 설정하고 Finish 버튼을 클릭한다. 그 다음, 멤버 변수 'm_strResult'가 추가된 것을 확인하고 확인 버튼을 누른다.
 
-![image](/assets/img/posts/message-boxes/007-155273504-6f43a9fe-beeb-45d7-910e-95843411b14f.png)
+![image](/assets/img/posts/message-boxes/007-155273504-6f43a9fe-beeb-45d7-910e-95843411b14f.webp)
 
-![image](/assets/img/posts/message-boxes/008-155273640-4c4e2dc0-f911-4984-a2c1-054b73579cf0.png)
+![image](/assets/img/posts/message-boxes/008-155273640-4c4e2dc0-f911-4984-a2c1-054b73579cf0.webp)
 
 <br/>
 
@@ -244,11 +244,11 @@ void CMessageBoxesDlg::OnClickedButtonAri()
 
 ### 실행 결과
 
-![image](/assets/img/posts/message-boxes/011-155276020-059d377d-b542-43ce-bd31-bc5a52916fbf.png)
+![image](/assets/img/posts/message-boxes/011-155276020-059d377d-b542-43ce-bd31-bc5a52916fbf.webp)
 
-![image](/assets/img/posts/message-boxes/012-155275844-678f27e9-d55f-4d51-a8a1-8a32a7080cd1.png)
-![image](/assets/img/posts/message-boxes/013-155275883-91434d15-7501-4e5d-84ee-ce67e67dbfec.png)
-![image](/assets/img/posts/message-boxes/014-155275906-4dd54fb9-ad64-4fc9-8676-3a8b9bb5e077.png)
-![image](/assets/img/posts/message-boxes/015-155275922-4c4c528d-3ae1-41fe-ad57-55d55ea979ec.png)
-![image](/assets/img/posts/message-boxes/016-155275940-d9e7ac88-d890-4914-8c00-1313a5f0de06.png)
-![image](/assets/img/posts/message-boxes/017-155275959-a24ee3f0-9f4d-4293-83b1-524366423cf9.png)
+![image](/assets/img/posts/message-boxes/012-155275844-678f27e9-d55f-4d51-a8a1-8a32a7080cd1.webp)
+![image](/assets/img/posts/message-boxes/013-155275883-91434d15-7501-4e5d-84ee-ce67e67dbfec.webp)
+![image](/assets/img/posts/message-boxes/014-155275906-4dd54fb9-ad64-4fc9-8676-3a8b9bb5e077.webp)
+![image](/assets/img/posts/message-boxes/015-155275922-4c4c528d-3ae1-41fe-ad57-55d55ea979ec.webp)
+![image](/assets/img/posts/message-boxes/016-155275940-d9e7ac88-d890-4914-8c00-1313a5f0de06.webp)
+![image](/assets/img/posts/message-boxes/017-155275959-a24ee3f0-9f4d-4293-83b1-524366423cf9.webp)

@@ -12,7 +12,7 @@ tags: [cpp, mfc, serialport, registry]
 
 프로그램 실행시 이 포트 번호를 자동으로 찾아 설정해주는 기능을 구현하고자 한다.
 
-![image](/assets/img/posts/find-serial-port/001-154872501-83b591f9-97b0-448c-965f-cb270c728332.png)
+![image](/assets/img/posts/find-serial-port/001-154872501-83b591f9-97b0-448c-965f-cb270c728332.webp)
 
 <br/>
 

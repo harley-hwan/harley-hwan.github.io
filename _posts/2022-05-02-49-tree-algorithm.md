@@ -19,7 +19,7 @@ tags: [csharp, datastructure, tree, algorihtm, list, add]
 
 ### 트리의 예시
 
-![image](/assets/img/posts/49-tree-algorithm/001-235040840-3b5e7ef4-37b2-4714-b79f-014385aaa948.png)
+![image](/assets/img/posts/49-tree-algorithm/001-235040840-3b5e7ef4-37b2-4714-b79f-014385aaa948.webp)
 
 <br/>
 

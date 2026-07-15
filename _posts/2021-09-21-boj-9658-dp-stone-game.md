@@ -10,7 +10,7 @@ toc: false
 
 ## 문제
 
-![image](/assets/img/posts/boj-9658-dp-stone-game/001-134134241-4d9d27c3-5bbd-4ed1-a489-06485dba8967.png)
+![image](/assets/img/posts/boj-9658-dp-stone-game/001-134134241-4d9d27c3-5bbd-4ed1-a489-06485dba8967.webp)
 
 - 돌 게임은 두 명이서 즐기는 재밌는 게임이다.
 - 탁자 위에 돌 N개가 있다. 상근이와 창영이는 턴을 번갈아가면서 돌을 가져가며, 돌은 1개, 3개 또는 4개 가져갈 수 있다. 마지막 돌을 가져가는 사람이 게임을 지게 된다.
@@ -23,7 +23,7 @@ toc: false
 
 - 상근이가 게임을 이기면 SK를, 창영이가 게임을 이기면 CY을 출력한다.
 
-  ![image](/assets/img/posts/boj-9658-dp-stone-game/002-134134286-cd41c62a-7798-474e-b0bb-b59b25ffcdfd.png)
+  ![image](/assets/img/posts/boj-9658-dp-stone-game/002-134134286-cd41c62a-7798-474e-b0bb-b59b25ffcdfd.webp)
 
 ## 알고리즘 분류
 - 다이나믹 프로그래밍

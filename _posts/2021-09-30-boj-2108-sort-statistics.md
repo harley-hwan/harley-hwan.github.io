@@ -9,7 +9,7 @@ toc: false
 - 주소: <https://www.acmicpc.net/problem/2108>
 
 ## 문제
-![image](/assets/img/posts/boj-2108-sort-statistics/001-135301978-78dcb4a7-4112-4599-b91c-b207bb1edb7f.png)
+![image](/assets/img/posts/boj-2108-sort-statistics/001-135301978-78dcb4a7-4112-4599-b91c-b207bb1edb7f.webp)
 
 - 수를 처리하는 것은 통계학에서 상당히 중요한 일이다. 통계학에서 N개의 수를 대표하는 기본 통계값에는 다음과 같은 것들이 있다. 단, N은 홀수라고 가정하자.
 
@@ -33,7 +33,7 @@ toc: false
 
 - 넷째 줄에는 범위를 출력한다.
 
-![image](/assets/img/posts/boj-2108-sort-statistics/002-135302077-29c058dc-2da2-4eb2-9763-3da08596bf50.png)
+![image](/assets/img/posts/boj-2108-sort-statistics/002-135302077-29c058dc-2da2-4eb2-9763-3da08596bf50.webp)
 
 ## 알고리즘 분류
 

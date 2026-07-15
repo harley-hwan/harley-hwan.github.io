@@ -28,7 +28,7 @@ tags: [cpp, mfc, windowprogramming]
 
 ##### 윈도우 (Window) 화면
 
-![image](/assets/img/posts/wp-outline/002-156481421-4ed55ca6-d58a-4afe-ae7b-0d59309c50cd.png)
+![image](/assets/img/posts/wp-outline/002-156481421-4ed55ca6-d58a-4afe-ae7b-0d59309c50cd.webp)
 
 <br/>
 
@@ -58,7 +58,7 @@ MFC는 사용자 인터페이스 구성 요소를 쉽게 다룰 수 있도록 C+
 4) 응용 프로그램은 자신의 메시지 큐를 감시하다가, 발생한 메시지가 큐에 들어오면 하나씩 꺼내서 처리
 5) 메시지가 없을 때는 대기
 
-![image](/assets/img/posts/wp-outline/003-156483266-0142edb4-dd4c-48b9-beec-90ab46582701.png)
+![image](/assets/img/posts/wp-outline/003-156483266-0142edb4-dd4c-48b9-beec-90ab46582701.webp)
 
 <br/>
 

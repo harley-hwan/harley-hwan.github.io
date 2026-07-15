@@ -26,8 +26,8 @@ tags: [cpp, mfc, slider, rgb, windowprogramming]
 
 그러면, Toolbox를 통해 컨트롤과 속성을 아래와 같이 설정한다.
 
-![image](/assets/img/posts/mfc-slider/002-152954786-dfd9ea8c-d6d4-4b26-b854-31f2c76e6137.png)
-![image](/assets/img/posts/mfc-slider/003-153106446-2434722e-c9b4-4fa5-ad25-1cc40e5635a1.png)
+![image](/assets/img/posts/mfc-slider/002-152954786-dfd9ea8c-d6d4-4b26-b854-31f2c76e6137.webp)
+![image](/assets/img/posts/mfc-slider/003-153106446-2434722e-c9b4-4fa5-ad25-1cc40e5635a1.webp)
 
 <br/>
 
@@ -41,9 +41,9 @@ tags: [cpp, mfc, slider, rgb, windowprogramming]
 
 그러면, 아래 이미지처럼 창이 뜨는데, Class Name을 고르고 [멤버 변수] 탭에서 'IDC_SLIDER_R'을 클릭한 후 'Add Variable (변수 추가)' 버튼을 눌러 다음과 같이 설정한다.
 
-![image](/assets/img/posts/mfc-slider/004-153107609-8ca1f3e4-34bc-4086-93e0-004364f003a8.png)
+![image](/assets/img/posts/mfc-slider/004-153107609-8ca1f3e4-34bc-4086-93e0-004364f003a8.webp)
 
-![image](/assets/img/posts/mfc-slider/005-153106710-7ac6fdc1-0eee-4d60-8d20-cf22ba5b4e12.png)
+![image](/assets/img/posts/mfc-slider/005-153106710-7ac6fdc1-0eee-4d60-8d20-cf22ba5b4e12.webp)
 
 <br/>
 
@@ -53,25 +53,25 @@ tags: [cpp, mfc, slider, rgb, windowprogramming]
 
 다음으로, [멤버 변수] 탭에서 'IDC_EDIT_R'을 클릭하고 'Add Variable (변수 추가)' 버튼을 눌러 다음과 같이 설정하고, 'IDC_EDIT_G', 'IDC_EDIT_B'도 똑같이 설정한다. 
 
-![image](/assets/img/posts/mfc-slider/006-153107847-9beecc9a-ceaa-406c-acf3-c53c5e83eeb2.png)
+![image](/assets/img/posts/mfc-slider/006-153107847-9beecc9a-ceaa-406c-acf3-c53c5e83eeb2.webp)
 
 <br/>
 
 설정을 마치면 아래와 같이 확인할 수 있다.
 
-![image](/assets/img/posts/mfc-slider/007-153107445-3d3cc9ab-54fe-4724-8f8d-0366b922141f.png)
+![image](/assets/img/posts/mfc-slider/007-153107445-3d3cc9ab-54fe-4724-8f8d-0366b922141f.webp)
 
 <br/>
 
 그러면, [Class View]-[RGBSlide]-[CRGBSlideDlg] 에 'SLIDER Control' 변수 3개와 'EDIT Control' 변수 3개가 생성된 것을 확인할 수 있다.
 
-![image](/assets/img/posts/mfc-slider/008-153108693-a3ae6bc4-cd2b-4ad1-b0f1-37e19ff73707.png)
+![image](/assets/img/posts/mfc-slider/008-153108693-a3ae6bc4-cd2b-4ad1-b0f1-37e19ff73707.webp)
 
 <br/>
 
 마지막으로, [Class View]-[CRGBSlideDlg]에서 마우스 오른쪽 버튼을 누르고 [Add]-[Add Variable]를 클릭하여 다음과 같이 변수를 하나 추가해준다.
 
-![image](/assets/img/posts/mfc-slider/009-153109231-5fe5a9cd-5976-43b2-aa27-cd420f94103a.png)
+![image](/assets/img/posts/mfc-slider/009-153109231-5fe5a9cd-5976-43b2-aa27-cd420f94103a.webp)
 
 <br/>
 
@@ -81,7 +81,7 @@ tags: [cpp, mfc, slider, rgb, windowprogramming]
  
  [Class View]-[RGBSlide]-[CRGBSlideDlg]-[OnInitdialog()]를 더블클릭해서 추가하면 된다.
  
-![image](/assets/img/posts/mfc-slider/010-153109498-9d9f5d6d-69b0-4b64-b7de-21a5a4993b82.png)
+![image](/assets/img/posts/mfc-slider/010-153109498-9d9f5d6d-69b0-4b64-b7de-21a5a4993b82.webp)
 
 <br/>
 
@@ -172,15 +172,15 @@ void CRGBSlideDlg::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 
 똑같이, 클래스 마법사를 열어 다음과 같이 멤버 함수를 추가해주자. 'Clear'와 'Exit' 둘다 해준다.
 
-![image](/assets/img/posts/mfc-slider/011-153110474-6b2cd0fd-e323-4389-91c2-d83da44f4082.png)
+![image](/assets/img/posts/mfc-slider/011-153110474-6b2cd0fd-e323-4389-91c2-d83da44f4082.webp)
 
-![image](/assets/img/posts/mfc-slider/012-153110602-74c3156b-cfe0-49ff-8371-6f652778ca69.png)
+![image](/assets/img/posts/mfc-slider/012-153110602-74c3156b-cfe0-49ff-8371-6f652778ca69.webp)
 
 <br/>
 
 그렇게 함수가 추가되면, 코드를 다음과 같이 삽입해준다.
 
-![image](/assets/img/posts/mfc-slider/013-153111285-53ea5748-3a02-487a-a006-0ac3dff3a230.png)
+![image](/assets/img/posts/mfc-slider/013-153111285-53ea5748-3a02-487a-a006-0ac3dff3a230.webp)
 
 <br/>
 
@@ -190,7 +190,7 @@ void CRGBSlideDlg::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 
 초기화 상태로 되돌리는 것이 목적이기 때문에, 모든 값들을 0으로 초기화해주면 된다.
 
-![image](/assets/img/posts/mfc-slider/014-153111263-c405b5b4-9983-4f8b-840d-4c796d6cc977.png)
+![image](/assets/img/posts/mfc-slider/014-153111263-c405b5b4-9983-4f8b-840d-4c796d6cc977.webp)
 
 ```c++
 void CRGBSlideDlg::Clear()
@@ -218,5 +218,5 @@ void CRGBSlideDlg::Clear()
 
 ### 실행 결과 1
 
-<iframe id="video" width="750" height="500" src="/assets/video/2022-02-08-mfcSlider.mp4" frameborder="0"> </iframe>
+<video controls preload="metadata" width="750" style="max-width: 100%; height: auto;"><source src="/assets/video/2022-02-08-mfcSlider.mp4" type="video/mp4"></video>
 

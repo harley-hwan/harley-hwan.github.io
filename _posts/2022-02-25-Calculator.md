@@ -21,9 +21,9 @@ tags: [cpp, mfc, calculator]
 
 ### 다이얼로그 설정
 
-![image](/assets/img/posts/calculator/001-155664654-42f13675-ba60-43c9-85fb-e1b83736c382.png)
+![image](/assets/img/posts/calculator/001-155664654-42f13675-ba60-43c9-85fb-e1b83736c382.webp)
 
-![image](/assets/img/posts/calculator/002-155662132-e66c92ef-b872-40d1-b331-f030b3adf08f.png)
+![image](/assets/img/posts/calculator/002-155662132-e66c92ef-b872-40d1-b331-f030b3adf08f.webp)
 
 <br/>
 
@@ -31,17 +31,17 @@ tags: [cpp, mfc, calculator]
 
 아래와 같이, [클래스 뷰]-[Calc]-[CCalcDlg]에서 [추가]-[변수 추가]를 클릭하고 멤버 변수를 추가한다.
 
-![image](/assets/img/posts/calculator/003-155664966-14d69c18-c8d6-4585-8bcf-6b460bfb7c4c.png)
+![image](/assets/img/posts/calculator/003-155664966-14d69c18-c8d6-4585-8bcf-6b460bfb7c4c.webp)
 
-![image](/assets/img/posts/calculator/004-155661411-b0448ed6-4362-4ef8-970e-88725296171f.png)
+![image](/assets/img/posts/calculator/004-155661411-b0448ed6-4362-4ef8-970e-88725296171f.webp)
 
 <br/>
 
 그리고 클래스 마법사를 실행시키고, [멤버 변수] 탭에서 아래와 같이 멤버 변수들을 추가한다.
 
-![image](/assets/img/posts/calculator/005-155665510-b5e2f007-5740-40c7-8cb0-09071c0ea4da.png)
+![image](/assets/img/posts/calculator/005-155665510-b5e2f007-5740-40c7-8cb0-09071c0ea4da.webp)
 
-![image](/assets/img/posts/calculator/006-155665778-d5f6aecb-7570-4e30-8364-d2b8f917500d.png)
+![image](/assets/img/posts/calculator/006-155665778-d5f6aecb-7570-4e30-8364-d2b8f917500d.webp)
 
 <br/>
 
@@ -129,11 +129,11 @@ void CCalcDlg::OnClickedButtonExit()
 
 ### 결과
 
-![image](/assets/img/posts/calculator/008-155672509-8ce8846c-ae0f-4521-b013-d7484b451a61.png)
+![image](/assets/img/posts/calculator/008-155672509-8ce8846c-ae0f-4521-b013-d7484b451a61.webp)
 
-![image](/assets/img/posts/calculator/009-155672643-a0175b9d-d417-4310-94e0-7377f42b3c9a.png)
+![image](/assets/img/posts/calculator/009-155672643-a0175b9d-d417-4310-94e0-7377f42b3c9a.webp)
 
-![image](/assets/img/posts/calculator/010-155672597-34f8314c-ad8f-4bd1-a03f-7481b61f39b4.png)
+![image](/assets/img/posts/calculator/010-155672597-34f8314c-ad8f-4bd1-a03f-7481b61f39b4.webp)
 
-![image](/assets/img/posts/calculator/011-155672740-f8732fec-68c4-46d1-88bb-3a9bb31ac747.png)
+![image](/assets/img/posts/calculator/011-155672740-f8732fec-68c4-46d1-88bb-3a9bb31ac747.webp)
 

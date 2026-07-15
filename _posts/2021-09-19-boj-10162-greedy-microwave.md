@@ -8,7 +8,7 @@ tags: [baekjoon, algorithm, greedy]
 - 주소: <https://www.acmicpc.net/problem/10162>
 
 ## 문제 설명
-![image](/assets/img/posts/boj-10162-greedy-microwave/001-133917563-09ad9064-6a6b-4035-964c-af102048d8c7.png)
+![image](/assets/img/posts/boj-10162-greedy-microwave/001-133917563-09ad9064-6a6b-4035-964c-af102048d8c7.webp)
 
 - 3개의 시간조절용 버튼 A B C가 달린 전자레인지가 있다. 각 버튼마다 일정한 시간이 지정되어 있어 해당 버튼을 한번 누를 때마다 그 시간이 동작시간에 더해진다. 버튼 A, B, C에 지정된 시간은 각각 5분, 1분, 10초이다.
 - 냉동음식마다 전자레인지로 요리해야할 시간 T가 초단위로 표시되어 있다. 우리는 A, B, C 3개의 버튼을 적절히 눌러서 그 시간의 합이 정확히 T초가 되도록 해야 한다. 단 버튼 A, B, C를 누른 횟수의 합은 항상 최소가 되어야 한다. 이것을 최소버튼 조작이라고 한다. 
@@ -22,9 +22,9 @@ tags: [baekjoon, algorithm, greedy]
 
 - 여러분은 T초를 위한 최소버튼 조작의 A B C 횟수를 첫 줄에 차례대로 출력해야 한다. 각각의 횟수 사이에는 빈 칸을 둔다. 해당 버튼을 누르지 않는 경우에는 숫자 0을 출력해야한다. 만일 제시된 3개의 버튼으로 T초를 맞출 수 없으면 음수 -1을 첫 줄에 출력해야 한다. 
 - 
-![image](/assets/img/posts/boj-10162-greedy-microwave/002-133917599-36d9e7db-dd7f-4bb7-9292-1bea116b9fbe.png)
+![image](/assets/img/posts/boj-10162-greedy-microwave/002-133917599-36d9e7db-dd7f-4bb7-9292-1bea116b9fbe.webp)
 
-![image](/assets/img/posts/boj-10162-greedy-microwave/003-133917584-e797a15a-0977-46ec-a528-3e32cb00ed57.png)
+![image](/assets/img/posts/boj-10162-greedy-microwave/003-133917584-e797a15a-0977-46ec-a528-3e32cb00ed57.webp)
 
 ## 알고리즘 분류
 

@@ -63,7 +63,7 @@ tags: [cpp, mfc, multi-thread, thread]
 
 그리고, CWorkerThread11View 클래스에 WM_LBUTTONDOWN 메시지 핸들러를 추가하고 다음 코드를 작성한다.
 
-![image](/assets/img/posts/multi-thread/001-162364644-d3cabce2-0f2a-4520-ad0a-6f1a3566bb79.png)
+![image](/assets/img/posts/multi-thread/001-162364644-d3cabce2-0f2a-4520-ad0a-6f1a3566bb79.webp)
 
 <br/>
 
@@ -114,7 +114,7 @@ UINT CalcIt(LPVOID arg)
 
 해당 메시지 박스가 나오기 전까지 윈도우를 움직이거나 메뉴를 선택하는 등의 다른 작업을 전혀 할 수 없다는 점을 확인해야한다.
 
-![image](/assets/img/posts/multi-thread/002-162366057-69e61278-410c-4e7b-b0fd-13847592a280.png)
+![image](/assets/img/posts/multi-thread/002-162366057-69e61278-410c-4e7b-b0fd-13847592a280.webp)
 
 <br/>
 
@@ -141,4 +141,4 @@ void CWorkerThread1View::OnLButtonDown(UINT nFlags, CPoint point)
 
 스레드를 사용하면, 이전 단계와는 다르게 클릭을 하고 연산을 하고 있을 때에도 다른 작업을 할 수 있는 것을 확인할 수 있다.
 
-![image](/assets/img/posts/multi-thread/003-162367562-9bbaff01-48ba-456d-a8e6-eaf7a0ed1000.png)
+![image](/assets/img/posts/multi-thread/003-162367562-9bbaff01-48ba-456d-a8e6-eaf7a0ed1000.webp)

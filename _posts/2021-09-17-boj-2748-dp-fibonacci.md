@@ -7,7 +7,7 @@ tags: [baekjoon, algorithm, dp]
 ---
 <<https://www.acmicpc.net/problem/2748>>
 
-![image](/assets/img/posts/boj-2748-dp-fibonacci/001-133781257-263004ba-099f-4af9-9e28-f7e781db7b50.png)
+![image](/assets/img/posts/boj-2748-dp-fibonacci/001-133781257-263004ba-099f-4af9-9e28-f7e781db7b50.webp)
 
 ### 피보나치 수 2 (다이나믹 프로그래밍, 동적 계획법)
 

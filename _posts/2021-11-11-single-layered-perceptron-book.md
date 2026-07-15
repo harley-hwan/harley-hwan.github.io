@@ -16,4 +16,4 @@ tags: [ai, deep-learning, machine-learning, single-layered-perceptron]
 
 ---
 
-![image](/assets/img/posts/single-layered-perceptron-book/001-141271626-425d56a3-2bea-46d8-8da1-43034207cabd.png)
+![image](/assets/img/posts/single-layered-perceptron-book/001-141271626-425d56a3-2bea-46d8-8da1-43034207cabd.webp)

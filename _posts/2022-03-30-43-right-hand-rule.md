@@ -375,4 +375,4 @@ namespace Maze
 
 ### Result Video
 
-<iframe id="video" width="750" height="500" src="/assets/video/2022-03-30-RightHandRule.mp4" frameborder="0"> </iframe>
+<video controls preload="metadata" width="750" style="max-width: 100%; height: auto;"><source src="/assets/video/2022-03-30-RightHandRule.mp4" type="video/mp4"></video>

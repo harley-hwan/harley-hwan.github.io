@@ -22,9 +22,9 @@ tags: [cpp, mfc, win32, windowprogramming]
 
 다음과 같이 프로젝트를 새로 생성해주자. (MFC app)
 
-![image](/assets/img/posts/mouse-point-value/001-153352859-cf3894e7-b5aa-4645-a52e-8b97fa20a43f.png)
+![image](/assets/img/posts/mouse-point-value/001-153352859-cf3894e7-b5aa-4645-a52e-8b97fa20a43f.webp)
 
-![image](/assets/img/posts/mouse-point-value/002-153352957-b9f2525a-797c-447c-a755-9c724b53de96.png)
+![image](/assets/img/posts/mouse-point-value/002-153352957-b9f2525a-797c-447c-a755-9c724b53de96.webp)
 
 프로젝트명은 'MouseMFC'로 하였다.
 
@@ -36,7 +36,7 @@ tags: [cpp, mfc, win32, windowprogramming]
 
 그러면, 해당 헤더 파일의 코드를 확인할 수 있는데, 다음과 같이 코드(변수)를 추가한다.
 
-![image](/assets/img/posts/mouse-point-value/003-153353557-91bf57ae-f11c-434a-9ac0-625b078a01a2.png)
+![image](/assets/img/posts/mouse-point-value/003-153353557-91bf57ae-f11c-434a-9ac0-625b078a01a2.webp)
 
 <br/>
 
@@ -74,7 +74,7 @@ void CMouseMFCView::OnDraw(CDC* /*pDC*/)
 
 그러면, 우측에 'OnMouseMove' 함수가 추가되는 것을 확인할 수 있다.
 
-![image](/assets/img/posts/mouse-point-value/005-153355054-96a95fc0-36e3-4af6-81aa-02b247e49fdb.png)
+![image](/assets/img/posts/mouse-point-value/005-153355054-96a95fc0-36e3-4af6-81aa-02b247e49fdb.webp)
 
 <br/>
 
@@ -97,4 +97,4 @@ void CMouseMFCView::OnMouseMove(UINT nFlags, CPoint point)
 
 ### 실행 결과
 
-<iframe id="video" width="750" height="500" src="/assets/video/2022-02-10-MouseMove.mp4" frameborder="0"> </iframe>
+<video controls preload="metadata" width="750" style="max-width: 100%; height: auto;"><source src="/assets/video/2022-02-10-MouseMove.mp4" type="video/mp4"></video>

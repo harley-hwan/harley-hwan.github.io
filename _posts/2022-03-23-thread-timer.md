@@ -101,7 +101,7 @@ UINT CThreadEXDlg::TimeThread(LPVOID _mothod)
 
 ### Result1
 
-<iframe id="video" width="750" height="500" src="/assets/video/ThreadTimer1.mp4" frameborder="0"> </iframe>
+<video controls preload="metadata" width="750" style="max-width: 100%; height: auto;"><source src="/assets/video/ThreadTimer1.mp4" type="video/mp4"></video>
 
 <br/>
 
@@ -162,7 +162,7 @@ void print_time(struct tm* now, int tail)
 
 ### Result2
 
-<iframe id="video" width="750" height="500" src="/assets/video/ThreadTimer2.mp4" frameborder="0"> </iframe>
+<video controls preload="metadata" width="750" style="max-width: 100%; height: auto;"><source src="/assets/video/ThreadTimer2.mp4" type="video/mp4"></video>
 
 <br/>
 
@@ -184,4 +184,4 @@ void print_time(struct tm* now, int tail)
 
 ### Result3
 
-<iframe id="video" width="750" height="500" src="/assets/video/ThreadTimer3.mp4" frameborder="0"> </iframe>
+<video controls preload="metadata" width="750" style="max-width: 100%; height: auto;"><source src="/assets/video/ThreadTimer3.mp4" type="video/mp4"></video>

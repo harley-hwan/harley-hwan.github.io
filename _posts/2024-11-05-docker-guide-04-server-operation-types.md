@@ -17,7 +17,7 @@ tags: [docker, server, bare-metal, hypervisor, container, virtualization]
 ### 베어메탈의 구조
 다음 다이어그램은 베어메탈 방식의 기본 구조를 보여준다:
 
-![image](/assets/img/posts/docker-guide-04-server-operation-types/001-cb78707d-7d4d-466c-80d9-c40e870c740b.png)
+![image](/assets/img/posts/docker-guide-04-server-operation-types/001-cb78707d-7d4d-466c-80d9-c40e870c740b.webp)
 
 ### 베어메탈이란
 베어메탈은 하드웨어에 운영체제를 직접 설치하여 사용하는 가장 전통적인 방식이다. 위 다이어그램에서 볼 수 있듯이, 하드웨어 위에 운영체제가 직접 설치되고, 그 위에서 애플리케이션이 실행된다.
@@ -42,7 +42,7 @@ tags: [docker, server, bare-metal, hypervisor, container, virtualization]
 ### 하이퍼바이저의 구조
 다음 다이어그램은 하이퍼바이저 방식의 구조를 보여준다:
 
-![image](/assets/img/posts/docker-guide-04-server-operation-types/002-891176e2-604e-4eca-80d4-b2a08a80280e.png)
+![image](/assets/img/posts/docker-guide-04-server-operation-types/002-891176e2-604e-4eca-80d4-b2a08a80280e.webp)
 
 ### 하이퍼바이저란
 하드웨어 위에 가상화 소프트웨어(하이퍼바이저)를 설치하고, 그 위에 여러 개의 가상 머신을 운영하는 방식이다. 다이어그램에서 보듯이, 각 VM은 자신만의 운영체제와 애플리케이션을 가지고 있다.
@@ -78,7 +78,7 @@ tags: [docker, server, bare-metal, hypervisor, container, virtualization]
 ### 컨테이너의 구조
 다음 다이어그램은 컨테이너 방식의 구조를 보여준다:
 
-![image](/assets/img/posts/docker-guide-04-server-operation-types/003-3bf4cac7-c9f5-4686-a77b-1aa18981006d.png)
+![image](/assets/img/posts/docker-guide-04-server-operation-types/003-3bf4cac7-c9f5-4686-a77b-1aa18981006d.webp)
 
 ### 컨테이너란
 운영체제 수준의 가상화로, 하나의 운영체제 위에서 여러 개의 독립된 실행 환경을 제공하는 방식이다. 다이어그램에서 볼 수 있듯이, 컨테이너들은 하나의 운영체제와 Docker Engine을 공유하면서 각자의 애플리케이션을 실행한다.

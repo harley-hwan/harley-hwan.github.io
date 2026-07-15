@@ -22,7 +22,7 @@ tags: [cpp, mfc, slider, windowprogramming]
 
 다음과 같이 프로젝트를 새로 생성해주자. (Windows Desktop Application (Windows 데스크톱 응용 프로그램))
 
-![image](/assets/img/posts/mouse-click/001-153343243-ce2ee8a1-e700-4255-b6e6-80a6a9f9cb49.png)
+![image](/assets/img/posts/mouse-click/001-153343243-ce2ee8a1-e700-4255-b6e6-80a6a9f9cb49.webp)
 
 프로젝트명은 'FirstProject'로 하였다.
 
@@ -354,6 +354,6 @@ TextOut(hdc, int n, int y, "문자열", 문자열 길이)
 
 ### 실행 결과 1
 
-![image](/assets/img/posts/mouse-click/002-153347483-4ef5fa05-7412-44e6-a6e9-2105541cadb0.png)
+![image](/assets/img/posts/mouse-click/002-153347483-4ef5fa05-7412-44e6-a6e9-2105541cadb0.webp)
 
-![image](/assets/img/posts/mouse-click/003-153347507-5284b9ad-ecfb-413c-9fb1-4dfcc4936859.png)
+![image](/assets/img/posts/mouse-click/003-153347507-5284b9ad-ecfb-413c-9fb1-4dfcc4936859.webp)

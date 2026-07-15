@@ -21,14 +21,14 @@ tags: [cpp, mfc, calculator]
 
 ### 다이얼로그 설정
 
-![image](/assets/img/posts/calculator-2/001-155677896-a3412f66-ce1b-45ac-b5c5-f173cafba63c.png)
+![image](/assets/img/posts/calculator-2/001-155677896-a3412f66-ce1b-45ac-b5c5-f173cafba63c.webp)
 ![image](/assets/img/posts/calculator-2/002-155679067-238b10c9-9ba5-4772-97df-07fce87f3b7b.png)
 
 <br/>
 
 ### 멤버 변수 및 함수 추가
 
-![image](/assets/img/posts/calculator-2/003-155679387-335f29f0-5c84-4c2d-8308-f2720771d2d1.png)
+![image](/assets/img/posts/calculator-2/003-155679387-335f29f0-5c84-4c2d-8308-f2720771d2d1.webp)
 
 ![image](/assets/img/posts/calculator-2/004-155679358-74ad9f56-9d0d-42b3-9f93-b9473ee979c5.png)
 
@@ -71,5 +71,5 @@ void CCalcExDlg::OnClickedButtonInput()
 
 ### 결과
 
-![image](/assets/img/posts/calculator-2/005-155679462-6e2ec402-e827-4d54-85c8-c4da55cbb2b2.png)
+![image](/assets/img/posts/calculator-2/005-155679462-6e2ec402-e827-4d54-85c8-c4da55cbb2b2.webp)
 

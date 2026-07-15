@@ -19,7 +19,7 @@ tags: [csharp, datastructure, graph]
 
 ### 그래프 구현
 
-![image](/assets/img/posts/45-graph-syntax/001-164148133-b487957c-01b8-45c6-94c5-3eb932b5e393.png)
+![image](/assets/img/posts/45-graph-syntax/001-164148133-b487957c-01b8-45c6-94c5-3eb932b5e393.webp)
 
 #### 인스턴스 생성 (LinkedList의 Node처럼)
 
