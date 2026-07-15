@@ -4,6 +4,7 @@
   파라미터:
     slot       (필수) 광고 단위 슬롯 ID. 비어 있으면 아무것도 렌더링하지 않는다.
     layout_key (선택) 인피드(In-feed) 광고의 data-ad-layout-key. 지정하면 fluid 인피드로 렌더링.
+    layout     (선택) 'in-article' 을 넘기면 콘텐츠 내 자동 삽입용 인아티클(fluid) 광고로 렌더링.
     format     (선택) 디스플레이 광고 포맷. 기본 'auto' (반응형).
     class      (선택) 래퍼 div에 붙일 여백 클래스. 기본 'mt-5 mb-2'.
     full_width (선택) false 를 넘기면 모바일에서 광고가 부모 컨테이너 밖(전체 화면 폭)으로
@@ -25,6 +26,15 @@
         data-ad-slot="{{ ad_slot }}"
         data-ad-format="fluid"
         data-ad-layout-key="{{ include.layout_key }}"
+      ></ins>
+    {% elsif include.layout and include.layout != '' %}
+      <ins
+        class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-client="{{ ad_client }}"
+        data-ad-slot="{{ ad_slot }}"
+        data-ad-format="fluid"
+        data-ad-layout="{{ include.layout }}"
       ></ins>
     {% else %}
       {% comment %}

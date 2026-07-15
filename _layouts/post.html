@@ -11,9 +11,10 @@ script_includes:
 
 {% comment %}
   jekyll-theme-chirpy 7.6.0 의 _layouts/post.html 을 복사한 오버라이드.
-  변경점: adsense-unit.html 인클루드 두 곳 추가
+  변경점: adsense-unit.html 인클루드 세 곳 추가
     1) 글 상단 (header 다음, content 앞) — slot_post_top (선택)
-    2) 글 하단 (post-tail-wrapper 다음)  — slot_post_bottom
+    2) 본문 중간 (2번째 h2 섹션 뒤)      — slot_post_mid (h2 섹션 3개 이상인 글에서만)
+    3) 글 하단 (post-tail-wrapper 다음)  — slot_post_bottom
   테마 업그레이드 시 원본과 비교하여 갱신할 것.
 {% endcomment %}
 
@@ -130,8 +131,35 @@ script_includes:
   {% comment %} mt-4: 모바일에서 위쪽 TOC 버튼과의 오클릭 방지 간격 확보 {% endcomment %}
   {% include adsense-unit.html slot=site.adsense.slot_post_top class='mt-4 mb-4' %}
 
+  {% comment %}
+    본문 중간 광고(slot_post_mid): 렌더링된 본문을 '<h2' 기준으로 나눠
+    2번째 h2 섹션 뒤에 인아티클 광고를 삽입한다. h2 섹션이 3개 이상인 긴 글에서만
+    동작하며(짧은 글 보호), 코드 블록 안의 '<h2'는 하이라이터가 &lt;h2 로 이스케이프하므로
+    분할에 걸리지 않는다.
+  {% endcomment %}
+  {% assign show_mid_ad = false %}
+  {% if site.adsense.client and site.adsense.client != '' and site.adsense.slot_post_mid and site.adsense.slot_post_mid != '' %}
+    {% assign content_parts = content | split: '<h2' %}
+    {% if content_parts.size >= 4 %}
+      {% assign show_mid_ad = true %}
+    {% endif %}
+  {% endif %}
+
   <div class="content">
-    {{ content }}
+    {% if show_mid_ad %}
+      {% for part in content_parts %}
+        {% if forloop.first %}
+          {{ part }}
+        {% else %}
+          <h2{{ part }}
+        {% endif %}
+        {% if forloop.index == 3 and forloop.last == false %}
+          {% include adsense-unit.html slot=site.adsense.slot_post_mid layout='in-article' class='my-4' %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div>
 
   <div class="post-tail-wrapper text-muted">
