@@ -9,6 +9,8 @@
     class      (선택) 래퍼 div에 붙일 여백 클래스. 기본 'mt-5 mb-2'.
     full_width (선택) false 를 넘기면 모바일에서 광고가 부모 컨테이너 밖(전체 화면 폭)으로
                확장되는 것을 막는다. 카드 등 패딩 있는 컨테이너 안에서는 false 권장. 기본 true.
+    visible_guard (선택) true 면 래퍼가 실제로 보일 때만(display:none 조상이 없을 때만)
+               광고를 요청한다. 특정 해상도에서 숨겨지는 영역(예: 우측 패널)에 권장.
 
   사용 예: include adsense-unit.html slot=site.adsense.slot_post_bottom
   _config.yml 의 adsense.client 와 전달받은 slot 이 모두 설정된 경우에만 렌더링된다.
@@ -55,8 +57,19 @@
         data-full-width-responsive="{{ ad_full_width }}"
       ></ins>
     {% endif %}
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    {% if include.visible_guard %}
+      <script>
+        (function () {
+          var unit = document.currentScript.closest('.adsense-unit');
+          if (unit && unit.offsetParent !== null) {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          }
+        })();
+      </script>
+    {% else %}
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    {% endif %}
   </div>
 {% endif %}

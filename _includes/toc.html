@@ -1,0 +1,23 @@
+{% comment %}
+  jekyll-theme-chirpy 7.6.0 의 _includes/toc.html 을 복사한 오버라이드.
+  변경점: TOC 아래(우측 패널 하단)에 adsense-unit.html (slot_panel) 추가.
+    - 패널은 데스크톱(xl 이상)에서만 보이므로 모바일 독서에는 영향 없음.
+    - visible_guard=true 로, 패널이 숨겨진 화면에서는 광고 요청 자체를 하지 않음.
+  테마 업그레이드 시 원본과 비교하여 갱신할 것.
+{% endcomment %}
+{% include toc-status.html %}
+
+{% if enable_toc %}
+  <div class="toc-border-cover z-3"></div>
+  <section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4">
+    <h2 class="panel-heading ps-3 pb-2 mb-0">{{- site.data.locales[include.lang].panel.toc -}}</h2>
+    <nav id="toc"></nav>
+  </section>
+{% endif %}
+
+{% include adsense-unit.html
+  slot=site.adsense.slot_panel
+  class='adsense-panel mt-4 ps-3 pe-4'
+  full_width=false
+  visible_guard=true
+%}
