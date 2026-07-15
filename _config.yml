@@ -36,6 +36,7 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Janghwan Kim
   email: harley_hwan@naver.com # change to your email address
+  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/harley-hwan # change to your GitHub homepage
@@ -126,6 +127,16 @@ social_preview_image: /assets/img/social-preview.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
+
+actions:
+  # Display "Edit this post" action on each post page to encourage contributions.
+  edit_post:
+    enabled: false # set to true to display the "Edit this post" action.
+    url: "" # repository base URL, e.g. https://github.com/harley-hwan/harley-hwan.github.io/edit/main
+    # Use dynamic or static URL for the edit link.
+    # If `static_url` is false, the post's path will be appended to the `url` above as the final edit link.
+    # Set to true if the URL should remain unchanged, which means each post will share the same edit link.
+    static_url: false # [ true | false ]
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
