@@ -1,3 +1,8 @@
+<!-- Naver Search Advisor 사이트 인증 (jekyll-seo-tag 가 naver 를 지원하지 않아 여기서 렌더링) -->
+{% if site.webmaster_verifications.naver and site.webmaster_verifications.naver != '' %}
+  <meta name="naver-site-verification" content="{{ site.webmaster_verifications.naver }}">
+{% endif %}
+
 <!-- Google AdSense -->
 {% if site.adsense.client and site.adsense.client != '' %}
   <script

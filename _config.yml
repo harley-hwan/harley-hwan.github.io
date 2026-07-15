@@ -42,21 +42,26 @@ social:
     - https://www.instagram.com/harley__hwan # change to your Instagram homepage
 
 # Site Verification Settings
+# 등록 절차: docs/setup-checklist.md 참고
 webmaster_verifications:
-  google: # fill in your Google verification code
+  google: # Google Search Console → 속성 추가 → HTML 태그 방식의 content 값만 입력
   bing: # fill in your Bing verification code
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
   baidu: # fill in your Baidu verification code
   facebook: # fill in your Facebook verification code
+  # naver 는 Chirpy/jekyll-seo-tag 기본 지원이 아니라 _includes/metadata-hook.html 에서 직접 렌더링한다.
+  naver: # 네이버 서치어드바이저 → 사이트 등록 → HTML 태그 방식의 content 값만 입력
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
 # Web Analytics Settings
+# GA4 측정 ID(G-XXXXXXXXXX)를 발급받아 google.id 에 입력하면 production 빌드에서만 로드된다.
+# 발급 절차: docs/setup-checklist.md 참고
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: # fill in your Google Analytics ID (예: G-XXXXXXXXXX)
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
@@ -115,13 +120,19 @@ avatar: /assets/img/git-square.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+# 1200x630. 재생성 스크립트는 저장소 외부(세션 스크래치)에서 GDI+로 만들었으며,
+# 교체 시 동일 경로에 1200x630 PNG를 덮어쓰면 된다.
+social_preview_image: /assets/img/social-preview.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
+  # giscus 사용 준비가 끝나면(아래 category_id 까지 채운 뒤) 'giscus' 로 변경할 것.
+  # 선행 조건 2가지(저장소 Settings → Features → Discussions 체크,
+  # https://github.com/apps/giscus 앱을 이 저장소에 설치)가 안 된 상태로 켜면
+  # 모든 글 하단에 에러 위젯이 노출된다. 절차: docs/setup-checklist.md 참고
   provider: # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
@@ -132,10 +143,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: harley-hwan/harley-hwan.github.io
+    repo_id: R_kgDOQuH8HQ # GitHub API(node_id)로 조회한 값
+    category: Announcements # Discussions 활성화 시 자동 생성되는 announcement 형식 카테고리
+    category_id: # giscus.app 에서 저장소/카테고리 선택 후 표시되는 data-category-id 값 입력
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'

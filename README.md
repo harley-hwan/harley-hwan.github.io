@@ -10,6 +10,7 @@ Jekyll + Chirpy 기반 개인 기술 블로그입니다.
 - `_tabs`, `_data`: sidebar tabs and contact/share metadata.
 - `assets/img`, `assets/video`: site-owned media.
 - `assets/lib`: Chirpy static-assets submodule kept for reference/offline use, excluded from the generated site while CDN assets are used.
+- `docs/setup-checklist.md`: dashboard-side setup checklist (AdSense units, Search Console, Naver Search Advisor, giscus, GA4). Not published to the site.
 
 ## Local Development
 
