@@ -96,7 +96,7 @@ adsense:
   post_mid_min_sections: 5
   post_mid_after_section: 3
   # 우측 패널 하단 (TOC 아래, 스크롤 시 우측 하단 고정, 데스크톱 전용) — "디스플레이 광고" 단위
-  slot_panel: # 예: "4567890123"
+  slot_panel: "2114388363" # 디스플레이 광고 단위 "panel"
   # 글 하단 (태그/공유 아래, 추천 글 위) — "디스플레이 광고" 단위 권장
   slot_post_bottom: "5813890411" # 디스플레이 광고 단위 "post-bottom"
   # 홈/목록 페이지 5번째 글 카드 아래 — "디스플레이 광고" 또는 "인피드 광고" 단위
