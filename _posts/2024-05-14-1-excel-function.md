@@ -3,7 +3,7 @@ title: Excel 조건부 서식 매크로 적용하기
 description: 조건부 서식을 다른 셀에 적용하는 매크로 작성법
 date: 2024-05-14 10:00:00 +0900
 slug: '(1)excel_function'
-categories: [Dev, ETC]
+categories: [ETC]
 tags: [excel, macro, conditional-formatting, vba]
 ---
 ## 소개
