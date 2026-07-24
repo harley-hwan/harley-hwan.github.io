@@ -34,7 +34,6 @@ echo $FILE_4
 if [ $count -gt 0 ] ; then
         #zip $Dir/$FILE_4.zip $Dir/$FILE_4
         gzip $Dir/$FILE_4
-        rm -r $Dir/$FILE_4
 else
         echo "file nothing2"
 fi

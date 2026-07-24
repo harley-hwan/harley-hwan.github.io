@@ -16,6 +16,7 @@ std::vector<std::string> getE6ServerIP()
 {
     std::vector<std::string> ip_list;
 	std::string ip;
+	std::ifstream ifs;
     
 	system("arp -a > /home/pi/test/e6/ip.txt");
     ifs.open("/home/pi/test/e6/ip.txt");
@@ -37,8 +38,9 @@ std::vector<std::string> getE6ServerIP()
     
 	ifs.close();
     if (ifs.is_open()) {
-        error_handling("ifs not closed!");
-         ifs.close();
+        std::cerr << "ifs not closed!" << std::endl;
+        ifs.close();
+    }
 
 	return ip_list;
 }

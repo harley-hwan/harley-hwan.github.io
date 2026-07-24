@@ -32,11 +32,11 @@ int main() {
 }
 ```
 
-</br>
+<br/>
 
 ### 결과 1
 
-```c++
+```text
 ? (192.168.8.152) at 88:36:6c:fc:2c:4f [ether] on wlan0
 ? (192.168.8.114) at 5a:ff:ec:d1:cb:a4 [ether] on wlan0
 ```
@@ -51,8 +51,12 @@ int main() {
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <unistd.h>
 #include <string.h>
+#include <ctype.h>
+#include <string>
+#include <vector>
 
 std::vector<std::string> getE6ServerIPpipe()
 {
@@ -115,7 +119,7 @@ std::vector<std::string> getE6ServerIPpipe()
             line=strtok(NULL,"\n");
         }
         close(my_pipe[0]);
-        wait();
+        wait(NULL);
     }
 	return ip_list;
 }
@@ -125,7 +129,7 @@ std::vector<std::string> getE6ServerIPpipe()
 
 ### 결과 2
 
-```c++
+```text
 192.168.8.152
 192.168.8.114
 ```
@@ -192,7 +196,7 @@ std::vector<std::string> getIPList() {
 
 ### 결과 3
 
-```c++
+```text
 192.168.8.152
 192.168.8.114
 ```

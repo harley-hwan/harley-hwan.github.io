@@ -13,7 +13,7 @@ C++의 iomanip 라이브러리를 사용하여 콘솔 출력을 표 형식으로
 <br/>
 
 ## 구현 코드
-정렬된 표 형식으로 시스템 정보를 출력하는 구현이다.
+정렬된 표 형식으로 시스템 정보를 출력하는 구현이다. 원래는 장비 검사 프로그램에서 발췌한 코드라서, 검사 결과와 버전 값은 예시로 채워 넣었다.
 
 ```cpp
 #include <iostream>
@@ -25,6 +25,15 @@ using namespace std;
 int main() {
     // 왼쪽 정렬 설정
     cout.setf(ios_base::left);
+
+    // 검사 결과 및 버전 값 (예시)
+    string resCameraPass = "Pass";
+    string degreebuffer = "0.3";
+    string resdiagPass = "Pass";
+    string strErrCode = "0x00";
+    string SWVer = "1.0.0";
+    string FWVer = "2.1.3";
+    string E6Ver = "1.0.5";
 
     // 결과 문자열 구성
     string resCamera = resCameraPass + "(" + degreebuffer + ")";    // 카메라 검증 결과
@@ -72,24 +81,9 @@ int main() {
 
 ## 주요 기능 설명
 
-1. **출력 정렬 설정**
-   - cout.setf(ios_base::left)로 왼쪽 정렬을 설정한다
-   - 모든 열의 내용이 왼쪽에서 시작하도록 한다
+cout.setf(ios_base::left)로 왼쪽 정렬을 설정하면 모든 열의 내용이 왼쪽에서 시작한다. 각 열의 너비는 setw()로 지정하는데, 번호열 3칸, 항목열 10칸, 내용열 12칸, 결과열과 비고열은 각 15칸이다.
 
-2. **열 너비 설정**
-   - setw() 함수로 각 열의 너비를 지정한다
-   - 번호열: 3칸
-   - 항목열: 10칸
-   - 내용열: 12칸
-   - 결과열: 15칸
-   - 비고열: 15칸
+테이블은 5개의 열로 구성되고, 각 행은 시스템의 서로 다른 구성 요소를 나타낸다. 값이 없는 자리는 공백 문자로 채워 열 간격을 유지한다.
 
-3. **테이블 구조**
-   - 5개의 열로 구성된 테이블 형식을 사용한다
-   - 각 행은 시스템의 다른 구성 요소를 나타낸다
-   - 빈 행은 공백 문자로 채워진다
-
-#### 실행 결과:
+#### 실행 결과
 ![표 형식 출력 결과](/assets/img/posts/cpp-table-format-output-with-setw/001-218002463-c66dc783-8de1-4220-a3b3-5d4a7f14aa33.png)
-
-이 구현을 통해 데이터를 정렬된 표 형식으로 출력할 수 있다. setw 함수로 열 너비를 일정하게 유지하고, cout.setf로 정렬 방식을 지정하여 가독성 높은 출력을 생성한다.

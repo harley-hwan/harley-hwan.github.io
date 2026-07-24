@@ -17,16 +17,7 @@ namespace Rock_Paper_Scissors
     {
         static void Main(string[] args)
         {
-            enum Choice
-            {
-                // 0:가위     1:바위    2:보
-                const int ROCK = 0;
-                const int SCISSOR = 2;
-               const int PAPER = 1;
-            }
-            
-            
-  
+            // 0:가위     1:바위    2:보
             Random rand = new Random();
             int aiChoice = rand.Next(0, 3);     // 0~2사이의 랜덤 값
             int choice = Convert.ToInt32(Console.ReadLine());

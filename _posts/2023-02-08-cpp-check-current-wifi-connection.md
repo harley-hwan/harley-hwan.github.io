@@ -1,11 +1,11 @@
 ---
 title: 현재 연결중인 WiFi 이름 확인
-description: "wifi, connect, wlan, msdn, c++, c"
+description: "Windows Native WiFi API(WlanOpenHandle, WlanEnumInterfaces)를 사용해 현재 연결 중인 WiFi 이름을 C++로 확인하는 방법을 정리한다."
 date: 2023-02-08 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, wifi, connect, wlan, msdn]
 ---
-- 참조: https://cpp.hotexamples.com/examples/-/-/WlanOpenHandle/cpp-wlanopenhandle-function-examples.html
+- 참조: https://learn.microsoft.com/en-us/windows/win32/api/wlanapi/nf-wlanapi-wlanopenhandle
 
 ## 내용
 
@@ -76,66 +76,5 @@ int wmain()
 
 	WlanCloseHandle(hClient, NULL);
 	return 0;
-}
-```
-<br/>
-
-<br/>
-
-```c++
-void KPR_system_getWifiInfo(xsMachine* the)
-{
-    DWORD dwResult = 0;
-    HANDLE hClient = NULL;
-    DWORD dwMaxClient = 2; 
-    DWORD dwCurVersion = 0;
-    PWLAN_INTERFACE_INFO_LIST pIfList = NULL;
-    int i;
-    PWLAN_INTERFACE_INFO pIfInfo = NULL;
-    DWORD connectInfoSize = sizeof(WLAN_CONNECTION_ATTRIBUTES);
-    PWLAN_CONNECTION_ATTRIBUTES pConnectInfo = NULL;
-    WLAN_OPCODE_VALUE_TYPE opCode = wlan_opcode_value_type_invalid;
-    ULONG length;
-	xsVars(1);
-    dwResult = WlanOpenHandle(dwMaxClient, NULL, &dwCurVersion, &hClient); 
-    if (dwResult != ERROR_SUCCESS) 
-    	goto bail;
-	dwResult = WlanEnumInterfaces(hClient, NULL, &pIfList); 
-    if (dwResult != ERROR_SUCCESS)
-    	goto bail;
-    for (i = 0; i < (int) pIfList->dwNumberOfItems; i++) {
-		pIfInfo = (WLAN_INTERFACE_INFO *) &pIfList->InterfaceInfo[i];
-   		if (pIfInfo->isState == wlan_interface_state_connected) {
-			dwResult = WlanQueryInterface(hClient, &pIfInfo->InterfaceGuid,
-										  wlan_intf_opcode_current_connection,
-										  NULL,
-										  &connectInfoSize,
-										  (PVOID *) &pConnectInfo, 
-										  &opCode);
-			if (dwResult != ERROR_SUCCESS)
-				goto bail;
-			length = pConnectInfo->wlanAssociationAttributes.dot11Ssid.uSSIDLength;
-			if (length > 0) {
-				xsResult = xsNewInstanceOf(xsObjectPrototype);
-				xsVar(0) = xsStringBuffer(NULL, length + 1);
-				FskMemCopy(xsToString(xsVar(0)), pConnectInfo->wlanAssociationAttributes.dot11Ssid.ucSSID, length);
-				xsSet(xsResult, xsID("SSID"), xsVar(0));
-			}
-   			break;
-   		}
-   	}
-bail:
-    if (pConnectInfo != NULL) {
-        WlanFreeMemory(pConnectInfo);
-        pConnectInfo = NULL;
-    }
-    if (pIfList != NULL) {
-        WlanFreeMemory(pIfList);
-        pIfList = NULL;
-    }
-    if (hClient != NULL) {
-        WlanCloseHandle(hClient, NULL);
-        hClient = NULL;
-    }
 }
 ```

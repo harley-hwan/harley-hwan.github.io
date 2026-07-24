@@ -35,9 +35,11 @@ CString 클래스는 문자열을 관리하는 클래스이다.
 
 <br/>
 
-## CString 변환 함수
+## 문자열 변환 함수
 
-(1) atoi() : char형을 int(부호있는 2byte 정수) 로 변환
-(2) atol() : char형을 long(4byte 정수) 로 변환
-(3) atof() : char형을 double(4byte 실수) 로 변환
-(4) itoa() : int형을 char 등으로 변환
+아래 함수들은 CString의 멤버가 아니라 C 런타임(CRT)이 제공하는 변환 함수다. CString과 함께 문자열-숫자 변환에 자주 쓰인다.
+
+- atoi() : char형 문자열을 int(4byte 정수)로 변환
+- atol() : char형 문자열을 long(4byte 정수)로 변환
+- atof() : char형 문자열을 double(8byte 실수)로 변환
+- itoa() : int형을 char 문자열로 변환

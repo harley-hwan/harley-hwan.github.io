@@ -1,13 +1,13 @@
 ---
 title: (c++) 주변의 블루투스 기기 스캔 및 리스트뷰 출력 (MFC)
-description: "c++, mfc, bluetooth, devices, ble, listview, blescan, bluetoothscan, acrylicbleanalyzer, arcrylic, analyzer"
+description: "WinRT의 BluetoothLEAdvertisementWatcher로 주변 BLE 기기를 스캔해 장치명과 RSSI를 MFC 리스트 박스에 출력하는 방법을 정리한다."
 date: 2023-03-31 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, mfc, bluetooth, devices, ble, listview, blescan, bluetoothscan, arcrylic, analyzer]
 ---
 ## 내용
 
-주변의 모든 블루투스 기기를 스캔하고, 해당 기기의 장치명(LocalName)과 SSID(신호 세기) 를 출력하는 프로그램이며,
+주변의 모든 블루투스 기기를 스캔하고, 해당 기기의 장치명(LocalName)과 신호 세기(RSSI)를 출력하는 프로그램이며,
 
 Acrylic Suite 의 "Acrylic BLE Analyzer" 앱을 사용했을 때의 결과와 비슷한 결과를 출력한다.
 
@@ -179,7 +179,6 @@ void CMainDlg::ScanForBluetoothLEDevices()
   using namespace winrt::Windows::Devices::Bluetooth::Advertisement;
   try
   {
-    BluetoothLEAdvertisementWatcher watcher;
     m_completed = false;
 
     // Device found event

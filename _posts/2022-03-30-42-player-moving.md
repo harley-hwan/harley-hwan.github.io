@@ -177,7 +177,7 @@ namespace Maze
                     else
                     {
                         int randomIndex = rand.Next(0, count);  // 연속된 count 수 중의 하나를 선택
-                        Tile[y + 1, x] = TileType.Empty;
+                        Tile[y + 1, x - randomIndex * 2] = TileType.Empty;
                         count = 1;      // 연속이 끝나면 초기화
                     }
                 }

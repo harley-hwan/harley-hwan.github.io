@@ -1,6 +1,6 @@
 ---
 title: (c++) 현재 연결된 와이파이의 SSID 검출
-description: "c++, wifi, ssid, wlanopenhandle, WlanEnumInterfaces, WlanQueryInterface, windows, wlan_intf_opcode_current_connection"
+description: "윈도우 WLAN API의 WlanEnumInterfaces와 WlanQueryInterface를 이용해 현재 연결된 와이파이의 SSID를 C++로 검출하는 방법을 정리한다."
 date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, wifi, ssid, wlanopenhandle, wlan-enum-interfaces, wlan-query-interface, windows, wlan-intf-opcode-current-connection]
@@ -39,13 +39,13 @@ int main() {
         PWLAN_CONNECTION_ATTRIBUTES pConnectInfo = NULL;
 
         // Get the current connection attributes.
-        // Get the current connection attributes.
+        DWORD connectInfoSize = 0;
         ret = WlanQueryInterface(
             clientHandle,
             &pIfInfo->InterfaceGuid,
             wlan_intf_opcode_current_connection,
             NULL,
-            (PDWORD)&pConnectInfo,
+            &connectInfoSize,
             (PVOID*)&pConnectInfo,
             NULL);
 
@@ -54,7 +54,7 @@ int main() {
             continue;
         }
 
-        std::cout << "SSID: " << pConnectInfo->strProfileName << std::endl;
+        std::wcout << L"SSID: " << pConnectInfo->strProfileName << std::endl;
 
         WlanFreeMemory(pConnectInfo);
     }

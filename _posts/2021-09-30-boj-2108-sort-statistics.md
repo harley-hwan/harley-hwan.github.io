@@ -87,7 +87,7 @@ using namespace std;
 // 4. 범위:     최댓값 - 최솟값
 
 bool compare(pair <int, int> p, pair <int, int> p2) {
-    if (p.first == p2.first) return p.first < p2.first;
+    if (p.second == p2.second) return p.first < p2.first;
     return p.second > p2.second;
 }
 

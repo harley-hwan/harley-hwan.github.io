@@ -48,6 +48,7 @@ int main() {
     for (DWORD i = 0; i < ifList->dwNumberOfItems; i++) {
         PWLAN_INTERFACE_INFO pIfInfo = &ifList->InterfaceInfo[i];
         PWLAN_CONNECTION_ATTRIBUTES pConnectInfo = NULL;
+        DWORD connectInfoSize = 0;
 
         // 현재 연결 속성 획득
         ret = WlanQueryInterface(
@@ -55,7 +56,7 @@ int main() {
             &pIfInfo->InterfaceGuid,
             wlan_intf_opcode_current_connection,
             NULL,
-            (PDWORD)&pConnectInfo,
+            &connectInfoSize,
             (PVOID*)&pConnectInfo,
             NULL);
 
@@ -85,27 +86,15 @@ int main() {
 
 ## 주요 기능 설명
 
-1. **WLAN 클라이언트 초기화**
-   - WlanOpenHandle 함수로 WLAN 서비스에 연결한다
-   - 버전 2를 지정하여 최신 기능을 사용한다
-   - 성공 시 클라이언트 핸들을 반환한다
+먼저 WlanOpenHandle로 WLAN 서비스에 연결한다. 버전 2를 지정해 최신 기능을 사용하고, 성공하면 클라이언트 핸들을 얻는다.
 
-2. **인터페이스 열거**
-   - WlanEnumInterfaces로 무선 인터페이스 목록을 가져온다
-   - WLAN_INTERFACE_INFO_LIST 구조체에 정보를 저장한다
-   - 각 인터페이스에 대해 순차적으로 처리한다
+WlanEnumInterfaces는 무선 인터페이스 목록을 WLAN_INTERFACE_INFO_LIST 구조체로 돌려준다. 이 목록을 순회하면서 인터페이스별로 연결 정보를 조회한다.
 
-3. **연결 정보 획득**
-   - WlanQueryInterface로 현재 연결 상태를 조회한다
-   - wlan_intf_opcode_current_connection 옵션으로 현재 연결 정보를 요청한다
-   - WLAN_CONNECTION_ATTRIBUTES 구조체로 정보를 받는다
+연결 정보 조회에는 WlanQueryInterface를 사용한다. wlan_intf_opcode_current_connection 옵션으로 현재 연결 정보를 요청하면 WLAN_CONNECTION_ATTRIBUTES 구조체를 받는다. 이때 다섯 번째 인자에는 반환 데이터의 크기를 받을 DWORD 변수를 따로 넘겨야 한다.
 
-4. **MAC 주소 추출**
-   - wlanAssociationAttributes.dot11Bssid에서 MAC 주소를 읽는다
-   - 6바이트 길이의 MAC 주소를 16진수 형태로 변환한다
-   - 각 바이트 사이에 콜론(:)을 삽입하여 표준 형식으로 출력한다
+MAC 주소는 wlanAssociationAttributes.dot11Bssid에 6바이트로 들어 있다. 각 바이트를 16진수로 변환하고 사이에 콜론(:)을 넣어 표준 형식으로 출력한다.
 
 #### 실행 결과:
 ![MAC 주소 출력 결과](/assets/img/posts/cpp-detecting-wifi-mac-address/001-219561425-804218a4-137d-47aa-a0be-6c993f9e0ba7.png)
 
-이 구현을 통해 현재 연결된 Wi-Fi AP의 MAC 주소를 쉽게 확인할 수 있다. WlanAPI의 다양한 함수들을 활용하여 네트워크 연결 상태와 관련된 상세 정보를 획득할 수 있다.
+WlanAPI의 다른 함수들을 활용하면 네트워크 연결 상태와 관련된 상세 정보도 같은 방식으로 얻을 수 있다.

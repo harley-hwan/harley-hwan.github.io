@@ -1,6 +1,6 @@
 ---
 title: (c++) json 파일 입출력 (RapidJson)
-description: "C, C++, Visual Studio, JSON, RapidJSON, Exception Handling, File I/O, fopen_s, FileReadStream, FileWriteStream, RapidJSON Document, RapidJSON Value, RapidJSON Writer, String Manipulation"
+description: "RapidJSON의 FileReadStream과 FileWriteStream으로 C++에서 JSON 파일을 읽고, 새 객체를 배열에 추가한 뒤 다시 저장하는 과정을 예제 코드로 정리한다."
 date: 2023-08-03 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, visual-studio, json, rapidjson, exception-handling, file-io, fopen-s, file-read-stream, file-write-stream, string-manipulation]
@@ -11,8 +11,8 @@ tags: [c-language, cpp, visual-studio, json, rapidjson, exception-handling, file
 2. 파일의 내용을 저장할 버퍼를 만든 다음, rapidjson::FileReadStream을 사용하여 파일의 내용을 읽는다.
 3. 파일의 내용을 rapidjson::Document로 파싱한다. 이는 파일의 JSON 구조를 메모리에 로드한다.
 4. 새 JSON 객체를 만들고 필요한 필드를 추가한다. 여기서 각 필드는 서로 다른 타입의 정보를 포함하며 이 정보들은 다른 부분의 코드에서 계산되거나 얻어진다.
-5. Document에서 "WaveR1" 배열을 찾고, 배열이 없는 경우 새 배열을 추가한다.
-6. "WaveR1" 배열에 새로 만든 객체를 추가한다.
+5. Document에서 "MyArray" 배열을 찾고, 배열이 없는 경우 새 배열을 추가한다.
+6. "MyArray" 배열에 새로 만든 객체를 추가한다.
 7. 파일을 다시 쓰기 모드로 열고, rapidjson::FileWriteStream을 사용하여 JSON 구조를 파일에 다시 쓸 준비.
 8. JSON Document를 파일에 쓰고, 파일을 닫음.
 9. 읽기/쓰기에 사용한 버퍼 삭제.
@@ -40,7 +40,7 @@ void CMyDlg::UpdateJSON() {
 		}
 
 		char* readBuffer = new char[1000];
-		FileReadStream is(fp, readBuffer, sizeof(readBuffer));
+		FileReadStream is(fp, readBuffer, 1000);
 		Document d;
 		d.ParseStream(is);
 		fclose(fp);

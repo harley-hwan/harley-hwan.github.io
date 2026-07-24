@@ -55,19 +55,8 @@ std::vector<std::string> get_wifi_ips() {
 #### 실행 결과:
 ![리눅스 Wi-Fi IP 목록](/assets/img/posts/cpp-network-interface-info-with-ifaddrs/001-224203955-c5e35379-41da-422c-8081-da33da12b77b.png)
 
-#### 동작 원리:
-1. **초기화**
-   - getifaddrs 함수로 네트워크 인터페이스 정보를 가져온다
-   - 실패 시 빈 벡터를 반환한다
-
-2. **인터페이스 검색**
-   - 모든 인터페이스를 순회하며 Wi-Fi 인터페이스를 찾는다
-   - AF_INET(IPv4) 주소 체계만 처리한다
-   - "wlan" 문자열이 포함된 인터페이스만 선택한다
-
-3. **IP 주소 변환**
-   - inet_ntop 함수로 IP 주소를 문자열로 변환한다
-   - 변환된 주소를 벡터에 저장한다
+#### 동작 원리
+먼저 getifaddrs 함수로 네트워크 인터페이스 목록을 가져오고, 실패하면 빈 벡터를 반환한다. 이후 모든 인터페이스를 순회하면서 주소 체계가 AF_INET(IPv4)이고 이름에 "wlan"이 포함된 인터페이스만 골라낸다. 선택된 주소는 inet_ntop 함수로 문자열로 변환해 벡터에 담아 반환한다.
 
 <br/>
 
@@ -79,6 +68,8 @@ std::vector<std::string> get_wifi_ips() {
 #include <ifaddrs.h>
 #include <netdb.h>
 #include <linux/if_link.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main() {
@@ -135,14 +126,8 @@ int main() {
 #### 실행 결과:
 ![모든 네트워크 인터페이스 정보](/assets/img/posts/cpp-network-interface-info-with-ifaddrs/002-224610333-a240b558-e48c-475b-b006-f9438ef9a43f.png)
 
-#### 주요 기능:
-1. **Wi-Fi 주소 검색**
-   - wlan0 인터페이스의 IPv4 주소를 찾아 출력한다
-   - 다른 Wi-Fi 인터페이스 이름을 사용할 경우 수정이 필요하다
-
-2. **전체 정보 출력**
-   - 모든 네트워크 인터페이스의 정보를 출력한다
-   - 인터페이스 이름, 주소 체계, IP 주소를 표시한다
+#### 주요 기능
+첫 번째 루프는 wlan0 인터페이스의 IPv4 주소를 찾아 출력한다. Wi-Fi 인터페이스 이름이 다른 환경이라면 이 부분을 맞게 고쳐야 한다. 두 번째 루프는 모든 네트워크 인터페이스를 순회하며 인터페이스 이름, 주소 체계, IP 주소를 출력한다.
 
 <br/>
 
@@ -220,20 +205,8 @@ std::vector<std::string> getWiFiIPAddresses() {
 }
 ```
 
-#### 구현 세부사항:
-1. **Windows 환경**
-   - GetAdaptersAddresses API를 사용한다
-   - IP_ADAPTER_ADDRESSES 구조체로 정보를 가져온다
-   - 모든 유니캐스트 주소를 처리한다
-
-2. **Linux 환경**
-   - getifaddrs 함수를 사용한다
-   - ifaddrs 구조체로 정보를 가져온다
-   - IPv4 주소만 처리한다
-
-3. **공통 사항**
-   - inet_ntop 함수로 IP 주소를 문자열로 변환한다
-   - 결과를 vector<string>으로 반환한다
+#### 구현 세부사항
+윈도우에서는 GetAdaptersAddresses API로 IP_ADAPTER_ADDRESSES 구조체를 채운 뒤 모든 유니캐스트 주소를 순회한다. 리눅스에서는 getifaddrs 함수로 ifaddrs 구조체를 받아 IPv4 주소만 처리한다. 두 환경 모두 inet_ntop 함수로 IP 주소를 문자열로 변환해 vector<string>으로 반환한다.
 
 <br/>
 

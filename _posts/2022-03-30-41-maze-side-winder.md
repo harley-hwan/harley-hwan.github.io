@@ -78,6 +78,7 @@ namespace Maze
             for (int y = 0; y < Size; y++)
             {
                 int count = 1;  // 몇 개의 점을 연속으로 뚫었는지 확인하기 위함. (그 중에서 랜덤으로 하나를 뽑아야하므로)
+                int runStartX = 1;  // 연속으로 뚫은 구간(run)의 시작 x 좌표
                 for (int x = 0; x < Size; x++)
                 {
                     if (x % 2 == 0 || y % 2 == 0)
@@ -94,7 +95,10 @@ namespace Maze
 
                     if (x == Size - 2)                      // 오른쪽 벽을 만났을 때
                     {
-                        Tile[y + 1, x] = TileType.Empty;    // 무조건 아래로 길을 뚫는다.
+                        int randomIndex = rand.Next(0, count);  // 연속된 count 수 중의 하나를 선택
+                        Tile[y + 1, runStartX + randomIndex * 2] = TileType.Empty;  // run 중 랜덤한 위치에서 아래로 길을 뚫는다.
+                        count = 1;
+                        runStartX = x + 2;
                         continue;
                     }
 
@@ -106,8 +110,9 @@ namespace Maze
                     else
                     {
                         int randomIndex = rand.Next(0, count);  // 연속된 count 수 중의 하나를 선택
-                        Tile[y + 1, x] = TileType.Empty;
+                        Tile[y + 1, runStartX + randomIndex * 2] = TileType.Empty;  // 선택한 위치에서 아래로 길을 뚫는다.
                         count = 1;      // 연속이 끝나면 초기화
+                        runStartX = x + 2;  // 다음 run의 시작 위치
                     }
                 }
             }

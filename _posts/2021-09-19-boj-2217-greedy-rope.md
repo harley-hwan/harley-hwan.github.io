@@ -56,9 +56,9 @@ int main() {
     }
 
     long long ans, max = 0;
-    for (int i = 0; i < pq.size(); i++) {
+    for (int i = 0; i < n; i++) {
         ans = (n-i) * pq.top();
-        max = (max < ans) ? max : ans;
+        max = (max < ans) ? ans : max;
         pq.pop();
     }
 

@@ -1,6 +1,6 @@
 ---
 title: opencv(c++) 19. 직사각형 검출 알고리즘 (python/MFC 환경 포함)
-description: "Mat, cvtColor, GaussianBlur, Canny, findContours, approxPolyDP, drawContours, detectRectangle, mfc"
+description: "C++과 OpenCV로 이미지에서 직사각형을 검출하는 함수를 만들고, 같은 알고리즘을 MFC와 파이썬 환경에서 구현한 예제를 정리한다."
 date: 2023-02-17 10:00:00 +0900
 slug: 'DetectRactangles'
 categories: [Dev, OpenCV]
@@ -63,15 +63,9 @@ std::vector<cv::Rect> detectRectangles(cv::Mat& inputImage)
 
 에지 검출을 위해 Canny 알고리즘을 적용한다.
 
-이후 findContours 함수를 사용하여 이미지에서 컨투어를 검출한다.
+이후 findContours로 컨투어를 검출하고, 각 컨투어를 approxPolyDP로 근사한 뒤 isContourConvex로 볼록한 도형인지 확인한다.
 
-approxPolyDP 함수를 사용하여 검출된 컨투어의 근사치를 구하고, 
-
-isContourConvex 함수를 사용하여 해당 근사치가 볼록한 도형인지 확인한다. 
-
-이후 boundingRect 함수를 사용하여 근사치를 감싸는 직사각형을 구하고, std::vector<cv::Rect>에 추가한다.
-
-이렇게 구해진 직사각형 정보를 std::vector<cv::Rect> 형태로 반환한다.
+조건을 만족하면 boundingRect로 근사치를 감싸는 직사각형을 구해 std::vector<cv::Rect>에 추가하고, 이 벡터를 반환한다.
 
 <br/>
 

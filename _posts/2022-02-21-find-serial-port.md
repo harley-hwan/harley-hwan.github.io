@@ -20,7 +20,7 @@ tags: [cpp, mfc, serialport, registry]
 
 시리얼 포트를 스캔하기 위해서는 레지스트리의
 
-HKEY_LOCALMACHINE\HARDWARE\DEVICEMAP\SERIALCOMM 항목을 찾아보면 된다.
+HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\SERIALCOMM 항목을 찾아보면 된다.
 
 <br/>
 
@@ -88,12 +88,8 @@ int findComPortList(int *list)
 char * byIndexComPort(int xPort)
 {
 	static char PortName[30] = { 0, };
-	TCHAR PortName2[30];
 
-//	sprintf_s(PortName, 30, "\\\\.\\COM%d", xPort);
-	wsprintf(PortName2, TEXT("\\\\.\\COM%d"), xPort);
-	
-//	MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PortName, strlen(PortName), PortName2, 60);
+	sprintf_s(PortName, 30, "\\\\.\\COM%d", xPort);
 
 	return PortName;
 }

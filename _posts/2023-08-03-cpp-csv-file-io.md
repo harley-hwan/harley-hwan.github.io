@@ -1,6 +1,6 @@
 ---
 title: (c++) csv 파일 입출력
-description: "c, c++, vs, csv, excel, ifstream, ofstream, std::ifstream, std::ofstream, tellp, map, lambda function"
+description: "std::map과 람다 이스케이프 함수를 이용해 CSV 파일을 읽고 시리얼 번호를 키로 행을 갱신하거나 추가한 뒤 다시 쓰는 C++ 구현을 정리한다."
 date: 2023-08-03 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, visual-studio, csv, excel, ifstream, ofstream, std-ifstream, std-ofstream, tellp, map, lambda]

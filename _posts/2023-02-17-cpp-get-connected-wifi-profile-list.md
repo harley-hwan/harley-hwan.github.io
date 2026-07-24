@@ -123,28 +123,19 @@ WlanQueryInterface 함수 호출 시 발생하는 오류를 수정한 개선된 
 
 ```cpp
 // 수정된 WlanQueryInterface 호출
+DWORD connectInfoSize = 0;
+
 ret = WlanQueryInterface(
     clientHandle,
     &pIfInfo->InterfaceGuid,
     wlan_intf_opcode_current_connection,
     NULL,
-    (PDWORD)&pConnectInfo,
+    &connectInfoSize,
     (PVOID*)&pConnectInfo,
     NULL);
 ```
 
-#### 주요 수정사항:
-1. **매개변수 타입 수정**
-   - (PVOID)&pConnectInfo를 (PVOID*)&pConnectInfo로 수정
-   - 포인터의 포인터로 올바르게 캐스팅
-
-2. **에러 처리 개선**
-   - 정확한 에러 코드 확인이 가능
-   - 명확한 에러 메시지 출력
-
-3. **문자열 출력 방식 변경**
-   - std::cout에서 std::wcout으로 변경
-   - 유니코드 문자열 올바르게 처리
+ppData 인자는 (PVOID)&pConnectInfo가 아니라 (PVOID*)&pConnectInfo로, 포인터의 포인터로 캐스팅해야 한다. pdwDataSize 인자도 문제였는데, 원래 코드는 여기에 데이터 포인터와 같은 변수의 주소를 (PDWORD)로 캐스팅해 넘기고 있었다. 크기를 받을 별도의 DWORD 변수를 선언해 그 주소를 넘기도록 고쳤다. 이렇게 수정하면 정확한 에러 코드를 확인할 수 있고, 문자열 출력도 std::cout 대신 std::wcout을 사용해 유니코드 문자열을 올바르게 처리한다.
 
 <br/>
 

@@ -11,7 +11,7 @@ script_includes:
 
 {% comment %}
   jekyll-theme-chirpy 7.6.0 의 _layouts/post.html 을 복사한 오버라이드.
-  변경점: adsense-unit.html 인클루드 세 곳 추가
+  변경점: series-nav.html 인클루드 (content 뒤) + adsense-unit.html 인클루드 세 곳 추가
     1) 글 상단 (header 다음, content 앞) — slot_post_top (선택)
     2) 본문 중간 (2번째 h2 섹션 뒤)      — slot_post_mid (h2 섹션 3개 이상인 글에서만)
     3) 글 하단 (post-tail-wrapper 다음)  — slot_post_bottom
@@ -164,6 +164,8 @@ script_includes:
       {{ content }}
     {% endif %}
   </div>
+
+  {% include series-nav.html %}
 
   <div class="post-tail-wrapper text-muted">
     <div class="d-flex justify-content-between align-items-center gap-3 mb-3">

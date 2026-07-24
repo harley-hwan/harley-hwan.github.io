@@ -55,74 +55,96 @@ Boost.Asio를 사용하여 간단한 HTTP 클라이언트를 구현한 것이다
 
 <br/>
 
-### 소스 1
+### 소스
 
 ```c++
-std::vector<std::tuple<std::wstring, LONG, CString>> ListAvailableWifiNetworks()
+#include <boost/asio.hpp>
+#include <iostream>
+#include <string>
+
+using boost::asio::ip::tcp;
+
+class BluetoothScanner
 {
-	std::vector<std::tuple<std::wstring, LONG, CString>> availableNetworks;
-
-	DWORD negotiatedVersion;
-	HANDLE clientHandle = NULL;
-
-	// Initialize the handle to the WLAN client.
-	DWORD ret = WlanOpenHandle(2, NULL, &negotiatedVersion, &clientHandle);
-	if (ret != ERROR_SUCCESS) {
-		std::cerr << "WlanOpenHandle failed with error: " << ret << std::endl;
-		return availableNetworks;
+public:
+	BluetoothScanner(boost::asio::io_context& io_context)
+		: io_context_(io_context), socket_(io_context)
+	{
 	}
 
-	PWLAN_INTERFACE_INFO_LIST ifList = NULL;
-	ret = WlanEnumInterfaces(clientHandle, NULL, &ifList);
-	if (ret != ERROR_SUCCESS) {
-		std::cerr << "WlanEnumInterfaces failed with error: " << ret << std::endl;
-		return availableNetworks;
-	}
+	void start_scan()
+	{
+		// 로컬호스트의 2323 포트로 연결을 시도한다.
+		tcp::resolver resolver(io_context_);
+		boost::asio::connect(socket_, resolver.resolve("127.0.0.1", "2323"));
 
-	for (DWORD i = 0; i < ifList->dwNumberOfItems; i++) {
-		PWLAN_INTERFACE_INFO pIfInfo = &ifList->InterfaceInfo[i];
+		// HTTP GET 요청을 구성하여 서버에 보낸다.
+		std::string request =
+			"GET /devices HTTP/1.1\r\n"
+			"Host: 127.0.0.1:2323\r\n"
+			"Accept: */*\r\n"
+			"Connection: close\r\n\r\n";
+		boost::asio::write(socket_, boost::asio::buffer(request));
 
-		PWLAN_BSS_LIST pBssList = NULL;
-		ret = WlanGetNetworkBssList(clientHandle, &pIfInfo->InterfaceGuid, NULL, dot11_BSS_type_any, FALSE, NULL, &pBssList);
-		if (ret != ERROR_SUCCESS) {
-			std::cerr << "WlanGetNetworkBssList failed with error: " << ret << std::endl;
-			return availableNetworks;
+		// 상태 라인을 읽어 응답을 확인한다.
+		boost::asio::streambuf response;
+		boost::asio::read_until(socket_, response, "\r\n");
+
+		std::istream response_stream(&response);
+		std::string http_version;
+		unsigned int status_code;
+		response_stream >> http_version >> status_code;
+
+		std::string status_message;
+		std::getline(response_stream, status_message);
+
+		if (!response_stream || http_version.substr(0, 5) != "HTTP/") {
+			std::cerr << "Invalid response" << std::endl;
+			return;
+		}
+		if (status_code != 200) {
+			std::cerr << "Response returned with status code " << status_code << std::endl;
+			return;
 		}
 
-		for (DWORD j = 0; j < pBssList->dwNumberOfItems; j++) {
-			PWLAN_BSS_ENTRY pBssEntry = &pBssList->wlanBssEntries[j];
-			DOT11_SSID ssid = pBssEntry->dot11Ssid;
-
-			std::wstring networkName(reinterpret_cast<const wchar_t*>(ssid.ucSSID), ssid.uSSIDLength);
-
-			LONG rssi = pBssEntry->lRssi; // RSSI 정보
-
-			ULARGE_INTEGER ftSystemTime1970;
-			ftSystemTime1970.QuadPart = 116444736000000000ULL; // 1970년 1월 1일 00:00:00 UTC와의 차이
-
-			ULARGE_INTEGER ftTimestamp;
-			ftTimestamp.QuadPart = ftSystemTime1970.QuadPart + (pBssEntry->ullHostTimestamp * 10); // 100ns 단위로 변환
-
-			FILETIME ftFirstAvailableTime;
-			ftFirstAvailableTime.dwHighDateTime = ftTimestamp.HighPart;
-			ftFirstAvailableTime.dwLowDateTime = ftTimestamp.LowPart;
-
-			SYSTEMTIME stFirstAvailableTime;
-			FileTimeToSystemTime(&ftFirstAvailableTime, &stFirstAvailableTime);
-
-			CString firstAvailableTime;
-			firstAvailableTime.Format(_T("%02u:%02u:%02u"), stFirstAvailableTime.wHour, stFirstAvailableTime.wMinute, stFirstAvailableTime.wSecond);
-
-			availableNetworks.push_back(std::make_tuple(networkName, rssi, firstAvailableTime));
+		// 응답 헤더를 읽어 넘긴다.
+		boost::asio::read_until(socket_, response, "\r\n\r\n");
+		std::string header;
+		while (std::getline(response_stream, header) && header != "\r") {
 		}
-		WlanFreeMemory(pBssList);
+
+		// 응답 본문에 담긴 블루투스 장치 목록을 출력한다.
+		if (response.size() > 0) {
+			std::cout << &response;
+		}
+
+		boost::system::error_code error;
+		while (boost::asio::read(socket_, response, boost::asio::transfer_at_least(1), error)) {
+			std::cout << &response;
+		}
+		if (error != boost::asio::error::eof) {
+			throw boost::system::system_error(error);
+		}
 	}
 
-	WlanFreeMemory(ifList);
-	WlanCloseHandle(clientHandle, NULL);
+private:
+	boost::asio::io_context& io_context_;
+	tcp::socket socket_;
+};
 
-	return availableNetworks;
+int main()
+{
+	try {
+		boost::asio::io_context io_context;
+
+		BluetoothScanner scanner(io_context);
+		scanner.start_scan();
+	}
+	catch (std::exception& e) {
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+
+	return 0;
 }
-
 ```
 
