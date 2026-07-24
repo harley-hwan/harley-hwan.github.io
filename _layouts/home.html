@@ -4,7 +4,8 @@ layout: default
 
 {% comment %}
   jekyll-theme-chirpy 7.6.0 의 _layouts/home.html 을 복사한 오버라이드. (7.4.1과 원본 동일)
-  변경점: 목록 5번째 글 카드 아래에 광고 카드(slot_home_feed) 한 개 삽입.
+  변경점: 글 목록·페이지네이션 아래(바닥)에 광고(slot_home_feed) 한 개 삽입.
+  (글 카드 사이에 광고를 끼우지 않는다 — 목록 읽기 흐름 보호)
   테마 업그레이드 시 원본과 비교하여 갱신할 것.
 {% endcomment %}
 
@@ -50,11 +51,6 @@ layout: default
   {% for i in (normal_start..normal_end) %}
     {% assign posts = posts | push: all_normal[i] %}
   {% endfor %}
-{% endif %}
-
-{% assign show_feed_ad = false %}
-{% if site.adsense.client and site.adsense.client != '' and site.adsense.slot_home_feed and site.adsense.slot_home_feed != '' %}
-  {% assign show_feed_ad = true %}
 {% endif %}
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
@@ -142,19 +138,6 @@ layout: default
         </div>
       </a>
     </article>
-
-    {% if show_feed_ad and forloop.index == 5 and forloop.last == false %}
-      <article class="card-wrapper card adsense-feed-card">
-        <div class="p-3">
-          {% include adsense-unit.html
-            slot=site.adsense.slot_home_feed
-            layout_key=site.adsense.home_feed_layout_key
-            class='m-0'
-            full_width=false
-          %}
-        </div>
-      </article>
-    {% endif %}
   {% endfor %}
 </div>
 <!-- #post-list -->
@@ -162,3 +145,5 @@ layout: default
 {% if paginator.total_pages > 1 %}
   {% include post-paginator.html %}
 {% endif %}
+
+{% include adsense-unit.html slot=site.adsense.slot_home_feed class='mt-2 mb-2' %}
