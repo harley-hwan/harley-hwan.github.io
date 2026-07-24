@@ -1,0 +1,22 @@
+{% comment %}
+  광고를 실을 만한 콘텐츠가 있는 페이지인지 공용 판정.
+  결과를 adsense_page_allowed (true/false) 에 남긴다 — include 뒤에서 참조할 것.
+  (Jekyll 의 include 는 부모 컨텍스트를 공유하므로 assign 이 밖으로 전달된다)
+
+  제외 대상:
+  - /404.html: 콘텐츠 없는 오류 화면. 애드센스 정책이 "게시자 콘텐츠 없는 화면"
+    (오류 페이지 명시)에 광고 게재를 금지하므로 반드시 제외.
+  - 개별 카테고리/태그 목록(jekyll-archives 의 category/tag 레이아웃)에서 글이
+    site.adsense.listing_min_posts (기본 3) 개 미만인 페이지: 링크 한두 줄뿐인
+    내비게이션 전용 화면이라 "빈약한 콘텐츠" 정책 리스크가 크므로 제외.
+    (카테고리/태그/아카이브 인덱스 탭과 글이 충분한 목록 페이지는 광고 유지)
+{% endcomment %}
+{% assign adsense_page_allowed = true %}
+{% if page.url == '/404.html' %}
+  {% assign adsense_page_allowed = false %}
+{% elsif page.layout == 'category' or page.layout == 'tag' %}
+  {% assign adsense_min_posts = site.adsense.listing_min_posts | default: 3 %}
+  {% if page.posts.size < adsense_min_posts %}
+    {% assign adsense_page_allowed = false %}
+  {% endif %}
+{% endif %}

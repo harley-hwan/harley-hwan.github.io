@@ -1,0 +1,116 @@
+---
+layout: compress
+---
+
+{% comment %}
+  jekyll-theme-chirpy 7.6.0 의 _layouts/default.html 을 복사한 오버라이드.
+  변경점: 우측 패널의 '인기 태그'(.access) 아래에 adsense-unit.html (slot_panel) 추가.
+    - 기존에는 _includes/toc.html 오버라이드에 있어 포스트 페이지에서만 표시됐으나,
+      홈/카테고리/태그/아카이브 등 패널이 있는 모든 페이지에서 보이도록 이곳으로 이동.
+      (포스트 페이지에서는 panel_includes 의 toc 보다 앞이므로 기존과 동일한 위치)
+    - 일반 문서 흐름(non-sticky)으로 배치: sticky 는 페이지 상단에서 광고가
+      인기 태그 블록을 덮는 문제가 있어 사용하지 않는다.
+    - TOC(#toc-wrapper, sticky) 뒤에 두면 스크롤 시 고정된 TOC 와 겹치므로
+      반드시 panel_includes 루프 앞에 두어야 한다.
+    - format='rectangle' 로 세로로 긴 광고가 TOC 를 밀어내는 것을 방지.
+    - 패널은 데스크톱(xl 이상)에서만 보이므로 모바일 독서에는 영향 없음.
+    - visible_guard=true 로, 패널이 숨겨진 화면에서는 광고 요청 자체를 하지 않음.
+    - adsense-content-check.html 판정으로 404 페이지와 콘텐츠가 빈약한
+      개별 카테고리/태그 목록 페이지에서는 광고를 렌더링하지 않음 (정책 보호).
+  테마 업그레이드 시 원본과 비교하여 갱신할 것.
+{% endcomment %}
+
+<!doctype html>
+
+{% include origin-type.html %}
+
+{% include lang.html %}
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html
+  lang="{{ page.lang | default: site.alt_lang | default: site.lang }}"
+  {%- if site.theme_mode == 'light' or site.theme_mode == 'dark' -%}
+    data-bs-theme="{{ site.theme_mode }}"
+  {%- endif -%}
+>
+  {% include head.html lang=lang %}
+
+  <body>
+    {% include sidebar.html lang=lang %}
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        {% include topbar.html lang=lang %}
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% if layout.layout == 'default' %}
+              {% include refactor-content.html content=content lang=lang %}
+            {% else %}
+              {{ content }}
+            {% endif %}
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+            <div class="access">
+              {% include_cached update-list.html lang=lang %}
+              {% include_cached trending-tags.html lang=lang %}
+            </div>
+
+            {% include adsense-content-check.html %}
+            {% if adsense_page_allowed %}
+              {% include adsense-unit.html
+                slot=site.adsense.slot_panel
+                class='adsense-panel mt-2 mb-4 ps-2 pe-4'
+                format='rectangle'
+                full_width=false
+                visible_guard=true
+              %}
+            {% endif %}
+
+            {% for _include in layout.panel_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% for _include in layout.tail_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+
+            {% include_cached footer.html lang=lang %}
+          </div>
+        </div>
+
+        {% include_cached search-results.html lang=lang %}
+      </div>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
+    </div>
+
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
+
+    {% if site.pwa.enabled %}
+      {% include_cached notification.html lang=lang %}
+    {% endif %}
+
+    <!-- Embedded scripts -->
+
+    {% for _include in layout.script_includes %}
+      {% assign _include_path = _include | append: '.html' %}
+      {% include {{ _include_path }} %}
+    {% endfor %}
+
+    {% include_cached search-loader.html lang=lang %}
+  </body>
+</html>

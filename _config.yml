@@ -87,7 +87,7 @@ pageviews:
 #   * 자동 광고는 대시보드에서 꺼둔 상태를 유지할 것 (본문 중간 삽입 방지).
 adsense:
   client: ca-pub-6647502905103926
-  # ── 배치 우선순위(수익 효율): post_mid > post_bottom > home_feed > post_top ──
+  # ── 배치 우선순위(수익 효율): post_mid > post_bottom > home_feed > page_bottom > post_top ──
   # 본문 중간 삽입 — 사용하지 않음 (독서 흐름 보호를 위해 의도적으로 비움).
   # 값을 채우면 post_mid_min_sections 개 이상 h2 섹션을 가진 글의
   # post_mid_after_section 번째 섹션 뒤에 인아티클 광고가 삽입된다.
@@ -95,14 +95,24 @@ adsense:
   slot_post_mid:
   post_mid_min_sections: 5
   post_mid_after_section: 3
-  # 우측 패널 하단 (TOC 아래, 스크롤 시 우측 하단 고정, 데스크톱 전용) — "디스플레이 광고" 단위
+  # 우측 패널 (인기 태그 아래, TOC 위, 데스크톱 전용) — "디스플레이 광고" 단위
+  # _layouts/default.html 에서 렌더링되므로 홈/포스트/카테고리/태그 등 모든 페이지에 표시된다.
   slot_panel: "2114388363" # 디스플레이 광고 단위 "panel"
   # 글 하단 (태그/공유 아래, 추천 글 위) — "디스플레이 광고" 단위 권장
   slot_post_bottom: "5813890411" # 디스플레이 광고 단위 "post-bottom"
   # 홈/목록 페이지 5번째 글 카드 아래 — "디스플레이 광고" 또는 "인피드 광고" 단위
-  slot_home_feed: # 예: "2345678901"
+  # 현재 post-bottom 디스플레이 단위를 재사용 중 (AdSense 는 같은 단위의 다중 사용을 허용).
+  # 전용 인피드 단위를 만들면 이 값과 home_feed_layout_key 를 교체할 것.
+  slot_home_feed: "5813890411" # 디스플레이 광고 단위 "post-bottom" 재사용
   # 인피드 광고 단위를 만든 경우 발급되는 data-ad-layout-key (디스플레이 광고면 비워둠)
   home_feed_layout_key: # 예: "-6t+ed+2i-1n-4w"
+  # 포스트/홈 외 페이지(카테고리/태그/아카이브/소개 등) 콘텐츠 하단 — "디스플레이 광고" 단위
+  # 현재 post-bottom 디스플레이 단위를 재사용 중. 전용 단위를 만들면 교체할 것.
+  # 404 페이지와 글 수가 listing_min_posts 미만인 개별 카테고리/태그 목록 페이지는
+  # 콘텐츠 없는 화면 정책 보호를 위해 자동 제외된다 (_includes/adsense-content-check.html).
+  slot_page_bottom: "5813890411" # 디스플레이 광고 단위 "post-bottom" 재사용
+  # 개별 카테고리/태그 목록 페이지에 광고를 실을 최소 글 수 (미만이면 광고 제외. 기본 3)
+  listing_min_posts: 3
   # 글 상단 (제목 아래, 본문 위) — 노출이 많지만 읽기 시작을 늦추므로 선택 사항
   slot_post_top: # 비워두면 표시 안 함
 

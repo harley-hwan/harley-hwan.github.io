@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% comment %}
+  jekyll-theme-chirpy 7.6.0 의 _layouts/page.html 을 복사한 오버라이드.
+  변경점: 콘텐츠 하단에 adsense-unit.html (slot_page_bottom) 추가.
+  카테고리/태그/아카이브/소개 탭과 개별 카테고리·태그 목록 페이지(category/tag 레이아웃)가
+  모두 이 레이아웃을 거치므로, 포스트/홈 외 모든 페이지 하단에 광고가 표시된다.
+  단, adsense-content-check.html 판정으로 404 페이지와 콘텐츠가 빈약한
+  개별 카테고리/태그 목록 페이지는 제외한다 (애드센스 콘텐츠 정책 보호).
+  테마 업그레이드 시 원본과 비교하여 갱신할 것.
+{% endcomment %}
+
+{% include lang.html %}
+
+<article class="px-1">
+  {% if page.layout == 'page' or page.collection == 'tabs' %}
+    {% assign tab_key = page.title | downcase %}
+    {% assign title = site.data.locales[lang].tabs[tab_key] | default: page.title %}
+    <h1 class="dynamic-title">
+      {{ title }}
+    </h1>
+    <div class="content">
+      {{ content }}
+    </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+
+  {% include adsense-content-check.html %}
+  {% if adsense_page_allowed %}
+    {% include adsense-unit.html slot=site.adsense.slot_page_bottom %}
+  {% endif %}
+</article>

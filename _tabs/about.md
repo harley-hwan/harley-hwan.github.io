@@ -17,11 +17,13 @@ order: 4
 ## 볼 만한 글
 
 - [레이더 IQ 신호의 이해](/posts/radar-IQ-signal/) - FMCW 레이더 실무에서 다루는 IQ 신호를 기초부터 정리한 글
-- [C# 프로그래밍 강좌](/posts/csharp-series-index/) - 문법부터 자료구조, 미로 알고리즘까지 49편
-- [OpenCV C++ 강좌](/posts/opencv-series-index/) - 설치부터 필터링, 이진화, 도형 검출까지 19편
-- [WPF 프로젝트 시리즈](/posts/wpf-series-index/) - MVVM 패턴까지 단계별로 만드는 12편
-- [파이토치 CNN 기초](/posts/cnn-series-index/) - 텐서 조작을 중심으로 한 딥러닝 입문 11편
-- [Docker 실전 가이드](/posts/docker-series-index/) - 설치부터 이미지 구조까지 8편
+<!-- 시리즈 목차(허브) 글 발행 후 아래 항목들을 /posts/<시리즈>-series-index/ 링크로 복원할 것.
+     (미발행 상태로 링크하면 htmlproofer 내부 링크 검사에 걸려 배포가 실패한다) -->
+- C# 프로그래밍 강좌 - 문법부터 자료구조, 미로 알고리즘까지 49편
+- OpenCV C++ 강좌 - 설치부터 필터링, 이진화, 도형 검출까지 19편
+- WPF 프로젝트 시리즈 - MVVM 패턴까지 단계별로 만드는 12편
+- 파이토치 CNN 기초 - 텐서 조작을 중심으로 한 딥러닝 입문 11편
+- Docker 실전 가이드 - 설치부터 이미지 구조까지 8편
 
 ---
 
