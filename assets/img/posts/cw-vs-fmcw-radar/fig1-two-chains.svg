@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 640" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="638" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">CW와 FMCW — 같은 IQ에서 갈라지는 두 신호 체인</text>
+<rect x="266" y="52" width="328" height="46" rx="10" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+<text x="430" y="72" font-size="15" fill="#7c3aed" text-anchor="middle" font-weight="700">x[n] = I[n] + jQ[n]</text>
+<text x="430" y="89" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">1편의 종착점 — 여기까지는 두 방식이 완전히 같다</text>
+<path d="M330,98 L330,118 L196,118 L196,138" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-blue)"/>
+<path d="M530,98 L530,118 L664,118 L664,138" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-orange)"/>
+<text x="196" y="133" font-size="14.5" fill="#2563eb" text-anchor="middle" font-weight="700">CW — 접지 않는다</text>
+<text x="664" y="133" font-size="14.5" fill="#ea580c" text-anchor="middle" font-weight="700">FMCW — 접는다</text>
+<rect x="56" y="146" width="280" height="46" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<rect x="56" y="152" width="4.5" height="34" rx="2" fill="#2563eb"/>
+<text x="70" y="167.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">DC · 클러터 제거</text>
+<text x="70" y="184" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">정지물이 전부 0 Hz에 쌓인다</text>
+<rect x="524" y="146" width="280" height="46" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<rect x="524" y="152" width="4.5" height="34" rx="2" fill="#ea580c"/>
+<text x="538" y="167.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">N × M 으로 접기</text>
+<text x="538" y="184" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">chirp당 N 샘플 × chirp M개</text>
+<rect x="344" y="159" width="63" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="375.5" y="172.5" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600">[N_tot]</text>
+<rect x="460" y="159" width="56" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="488" y="172.5" font-size="10.5" fill="#ea580c" text-anchor="middle" font-weight="600">[N, M]</text>
+<line x1="196" y1="192" x2="196" y2="208" stroke="#2563eb" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="664" y1="192" x2="664" y2="208" stroke="#ea580c" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<rect x="56" y="214" width="280" height="46" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<rect x="56" y="220" width="4.5" height="34" rx="2" fill="#2563eb"/>
+<text x="70" y="235.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">I/Q 불균형 보정</text>
+<text x="70" y="252" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">이미지가 −f_d 에 유령 표적으로</text>
+<rect x="524" y="214" width="280" height="46" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<rect x="524" y="220" width="4.5" height="34" rx="2" fill="#ea580c"/>
+<text x="538" y="235.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">Range FFT — 1회</text>
+<text x="538" y="252" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">fast time 축</text>
+<rect x="344" y="227" width="63" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="375.5" y="240.5" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600">[N_tot]</text>
+<rect x="460" y="227" width="56" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="488" y="240.5" font-size="10.5" fill="#ea580c" text-anchor="middle" font-weight="600">[N, M]</text>
+<line x1="196" y1="260" x2="196" y2="276" stroke="#2563eb" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="664" y1="260" x2="664" y2="276" stroke="#ea580c" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<rect x="56" y="282" width="280" height="46" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<rect x="56" y="288" width="4.5" height="34" rx="2" fill="#2563eb"/>
+<text x="70" y="303.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">윈도잉</text>
+<text x="70" y="320" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">사이드로브가 약한 표적을 덮는다</text>
+<rect x="524" y="282" width="280" height="46" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<rect x="524" y="288" width="4.5" height="34" rx="2" fill="#ea580c"/>
+<text x="538" y="303.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">Doppler FFT — 2회</text>
+<text x="538" y="320" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">slow time 축, 간격 T_c</text>
+<rect x="344" y="295" width="63" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="375.5" y="308.5" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600">[N_tot]</text>
+<rect x="460" y="295" width="56" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="488" y="308.5" font-size="10.5" fill="#ea580c" text-anchor="middle" font-weight="600">[N, M]</text>
+<line x1="196" y1="328" x2="196" y2="344" stroke="#2563eb" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="664" y1="328" x2="664" y2="344" stroke="#ea580c" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<rect x="56" y="350" width="280" height="46" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<rect x="56" y="356" width="4.5" height="34" rx="2" fill="#2563eb"/>
+<text x="70" y="371.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">복소 FFT — 1회</text>
+<text x="70" y="388" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">시간축 하나에 그대로</text>
+<rect x="524" y="350" width="280" height="46" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<rect x="524" y="356" width="4.5" height="34" rx="2" fill="#ea580c"/>
+<text x="538" y="371.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">Range–Doppler 맵</text>
+<text x="538" y="388" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">셀마다 잡음 바닥이 다르다</text>
+<rect x="344" y="363" width="63" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="375.5" y="376.5" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600">[N_tot]</text>
+<rect x="460" y="363" width="56" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="488" y="376.5" font-size="10.5" fill="#ea580c" text-anchor="middle" font-weight="600">[N, M]</text>
+<line x1="196" y1="396" x2="196" y2="412" stroke="#2563eb" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="664" y1="396" x2="664" y2="412" stroke="#ea580c" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<rect x="56" y="418" width="280" height="46" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<rect x="56" y="424" width="4.5" height="34" rx="2" fill="#2563eb"/>
+<text x="70" y="439.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">도플러 스펙트럼 + 1D CFAR</text>
+<text x="70" y="456" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">참조 셀을 주파수축 하나에서 잡는다</text>
+<rect x="524" y="418" width="280" height="46" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<rect x="524" y="424" width="4.5" height="34" rx="2" fill="#ea580c"/>
+<text x="538" y="439.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">2D CFAR</text>
+<text x="538" y="456" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">참조 셀을 거리 · 도플러 두 축에서</text>
+<rect x="344" y="431" width="63" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="375.5" y="444.5" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600">[N_tot]</text>
+<rect x="467" y="431" width="49" height="19" rx="9.5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="491.5" y="444.5" font-size="10.5" fill="#ea580c" text-anchor="middle" font-weight="600">검출 목록</text>
+<line x1="196" y1="464" x2="196" y2="480" stroke="#2563eb" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="664" y1="464" x2="664" y2="480" stroke="#ea580c" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<rect x="56" y="486" width="280" height="46" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="1.8"/>
+<rect x="56" y="492" width="4.5" height="34" rx="2" fill="#16a34a"/>
+<text x="70" y="513.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">속도 · 채널 간 위상차 → 각도</text>
+<rect x="524" y="486" width="280" height="46" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="1.8"/>
+<rect x="524" y="492" width="4.5" height="34" rx="2" fill="#16a34a"/>
+<text x="538" y="513.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">거리 · 속도 · 각도</text>
+<rect x="56" y="554" width="280" height="34" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="196" y="575" font-size="12" fill="#64748b" text-anchor="middle" font-weight="400">거리축 없음 — 분해축이 하나뿐이다</text>
+<rect x="524" y="554" width="280" height="34" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="664" y="575" font-size="12" fill="#64748b" text-anchor="middle" font-weight="400">거리축 확보 — 대신 도플러 창이 N배 좁다</text>
+<line x1="56" y1="604" x2="804" y2="604" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="butt"/>
+<text x="430" y="625" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="600">FFT 화살표 1개 대 2개 — 두 방식의 차이는 결국 그것이다.</text>
+</svg>
