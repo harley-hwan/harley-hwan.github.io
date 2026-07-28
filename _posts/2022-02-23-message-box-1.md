@@ -4,7 +4,7 @@ description: MessageBox 프로그램 작성
 date: 2022-02-23 10:00:00 +0900
 slug: 'MessageBox1'
 categories: [Dev, MFC]
-tags: [cpp, mfc, serialport, registry]
+tags: [cpp, mfc, messagebox]
 ---
 ## 목적
 

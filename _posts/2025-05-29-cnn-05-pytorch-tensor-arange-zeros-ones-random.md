@@ -3,6 +3,8 @@ title: "(CNN) arange, zeros, ones, random"
 description: "arange와 기본 텐서 함수 및 난수 생성 함수"
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
+series: cnn
+series_order: 5
 tags: [pytorch, tensor, random, arange, deep-learning, initialization]
 toc: false
 ---
@@ -10,7 +12,7 @@ toc: false
 
 PyTorch에서 텐서를 생성하는 것은 딥러닝 모델 개발의 첫걸음이다. 이 가이드에서는 가장 자주 사용되는 텐서 생성 함수들을 실용적인 예제와 함께 소개한다.
 
-**언제 어떤 함수를 사용할까?**
+언제 어떤 함수를 쓰는지 먼저 간단히 정리한다.
 - `arange`: 인덱스 생성, 시퀀스 데이터 처리
 - `zeros/ones`: 가중치 초기화, 마스크 생성
 - `rand/randn`: 가중치 초기화, 데이터 증강
@@ -29,10 +31,10 @@ torch.arange(start=0, end, step=1, *, out=None, dtype=None,
 ```
 
 ### 주요 파라미터
-- **start**: 시작값 (기본값: 0)
-- **end**: 종료값 (**미포함**)
-- **step**: 증가 간격 (기본값: 1)
-- **dtype**: 데이터 타입 (자동 추론됨)
+- `start`: 시작값 (기본값: 0)
+- `end`: 종료값 (미포함)
+- `step`: 증가 간격 (기본값: 1)
+- `dtype`: 데이터 타입 (자동 추론됨)
 
 ### 실전 예제
 
@@ -85,9 +87,9 @@ torch.ones(*size, out=None, dtype=None, layout=torch.strided,
 ```
 
 ### 주요 파라미터
-- **size**: 텐서의 shape (튜플 또는 개별 인자)
-- **dtype**: 데이터 타입 (기본값: float32)
-- **device**: CPU 또는 GPU 지정
+- `size`: 텐서의 shape (튜플 또는 개별 인자)
+- `dtype`: 데이터 타입 (기본값: float32)
+- `device`: CPU 또는 GPU 지정
 
 ### 실전 예제
 
@@ -158,9 +160,9 @@ if torch.cuda.is_available():
     torch.cuda.manual_seed(42)  # GPU 시드
 ```
 
-### 1⃣ torch.rand() - 균일 분포 [0, 1)
+### torch.rand() - 균일 분포 [0, 1)
 
-**사용 시나리오**: Dropout 마스크, 확률적 샘플링
+Dropout 마스크나 확률적 샘플링에 주로 쓰인다.
 
 ```python
 # 기본 사용법
@@ -185,9 +187,9 @@ print(f"Active neurons: {dropout_mask.sum().item()}/{dropout_mask.numel()}")
 # 출력: Active neurons: 12/20
 ```
 
-### 2⃣ torch.randn() - 표준 정규 분포 N(0, 1)
+### torch.randn() - 표준 정규 분포 N(0, 1)
 
-**사용 시나리오**: 가중치 초기화, 노이즈 추가
+가중치 초기화나 노이즈 추가에 주로 쓰인다.
 
 ```python
 # 기본 사용법
@@ -234,9 +236,9 @@ print(noisy_images)
 # [0.0943, 0.1893]])
 ```
 
-### 3⃣ torch.randint() - 정수 균일 분포
+### torch.randint() - 정수 균일 분포
 
-**사용 시나리오**: 클래스 레이블 생성, 인덱스 샘플링
+클래스 레이블 생성이나 인덱스 샘플링에 주로 쓰인다.
 
 ```python
 # 분류 문제를 위한 랜덤 레이블 생성
@@ -354,17 +356,4 @@ print(f"Tensor is on: {tensor.device}")
 # bad_tensor = bad_tensor.to(device) # GPU로 복사 (추가 시간 소요)
 ```
 
----
-
-## 함수별 사용 시나리오 요약
-
-| 함수 | 주요 용도 | 예시 |
-|------|-----------|------|
-| `arange` | 인덱스, 시퀀스 생성 | 위치 인코딩, 시간 스텝 |
-| `zeros` | 초기화, 마스킹 | 패딩 마스크, 누적 변수 |
-| `ones` | 초기화, 마스킹 | Attention 마스크, 바이어스 초기화 |
-| `rand` | 확률적 처리 | Dropout, 데이터 샘플링 |
-| `randn` | 가중치 초기화 | Xavier/He 초기화, 노이즈 |
-| `randint` | 이산 샘플링 | 레이블 생성, 인덱싱 |
-
-이 가이드를 통해 PyTorch의 텐서 생성 함수들을 효과적으로 활용하여 더 나은 딥러닝 모델을 구축하기 바란다!
+여기까지가 딥러닝 코드에서 실제로 자주 쓰게 되는 텐서 생성 함수들이다.

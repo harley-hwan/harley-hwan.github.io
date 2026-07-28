@@ -1,17 +1,15 @@
 ---
 title: signal() - 인터럽트 신호 처리 (c++)
-description: "SIGINT, SIGPIPE, SIGALRM, signal, signal()"
+description: C++에서 signal() 함수로 SIGINT, SIGPIPE 등 인터럽트 신호를 처리하는 방법과 신호 종류, 예제 코드를 정리한다.
 date: 2022-10-28 10:00:00 +0900
 categories: [Dev, C++]
-tags: [sigint, sigpipe, sigalrm, signal, signal-function, signal-h]
+tags: [sigint, sigpipe, signal, signal-function, signal-h]
 ---
 - 참조: https://www.ibm.com/docs/ko/i/7.3?topic=functions-signal-handle-interrupt-signals
 
 ## 내용
 
-signal() 함수를 이용해 프로그램이 운영체제나 raise() 함수에서 인터럽트 신호를 처리할 수 있는 여러 방법 중 하나를 선택할 수 있다.
-
-SISIFCOPT(\*ASYNCSIGNAL) 옵션으로 컴파일하는 경우 이 함수는 비동기 신호를 사용한다. 이때 이 함수의 비동기 버전은 SA_NODEFER 및 SA_RESETHAND 옵션으로 sigaction() 같이 작동한다. 비동기 신호 핸들러는 abort() 또는 exit()를 호출하지 않을 수 있다고 한다. 
+signal() 함수를 이용하면 운영체제가 보내거나 raise() 함수로 발생시킨 인터럽트 신호를 프로그램이 어떻게 처리할지 지정할 수 있다.
 
 ### 형식
 
@@ -19,68 +17,38 @@ SISIFCOPT(\*ASYNCSIGNAL) 옵션으로 컴파일하는 경우 이 함수는 비�
 #include <signal.h>
 void ( *signal (int sig, void(*func)(int)) )(int);
 ```
-**sig 인수**는 SIGABRT, SIGALL, SIGILL, SIGINT, SIGFPE, SIGIO, SIGOTHER, SIGSEGV, SIGTERM, SIGUSR1 또는 SIGUSR2 가 있다.
+sig 인수에는 처리할 신호를 지정한다. 표준 C에는 SIGABRT, SIGFPE, SIGILL, SIGINT, SIGSEGV, SIGTERM이 정의되어 있고, POSIX 환경에서는 SIGPIPE, SIGUSR1, SIGUSR2 등이 추가로 제공된다.
 
-**func 인수**는 SIG_DFL 또는 SIG_IGN 중 하나이며, <signal.h> 포함 파일이나 함수 주소에 정의된다.
+func 인수에는 SIG_DFL, SIG_IGN 또는 신호 핸들러 함수의 주소를 지정한다.
 
 <br/>
 
 ### sig 인수
 
-**SIGABRT**
-- 비정상 종료
-
-**SIGALL**
-- 현재 핸들링 조치가 SIG_DFL인 신호에 대한 Catch-all이다.
-- SYSICOPT(*ASYNCSIGNAL)이 지정되면 SIGALL은 catch-all 신호가 아니다.
-- SIGALL을 위한 신호 핸들러는 사용자 격상된 SIGALL 신호에 대해서만 호출된다.
-
-**SIGILL**
-- 유효하지 않은 함수 이미지의 발견
-
-**SIGFPE**
-- 오버플로, 0으로 나눔 및 유효하지 않은 조작과 같이 마스크되지 않은 산술 예외
-
-**SIGINT**
-- 대화식 어텐션
-
-**SIGIO**
-- 레코드 파일 I/O 오류
-
-**SIGOTHER**
-- ILE C 신호
-
-**SIGSEGV**
-- 유효하지 않은 메모리에 액세스
-
-**SIGTERM**
-- 프로그램에 전송된 요청 종료
-
-**SIGUSR1**
-- 사용자 애플리케이션용 (ANSI로 연장)
-
-**SIGUSR2**
-- 사용자 애플리케이션용 (ANSI로 연장)
+- SIGABRT: 비정상 종료 (abort() 호출 등)
+- SIGFPE: 0으로 나누기, 오버플로 등 산술 연산 예외
+- SIGILL: 잘못된 명령어 실행
+- SIGINT: 인터럽트 (터미널에서 Ctrl+C 입력 등)
+- SIGSEGV: 잘못된 메모리 접근
+- SIGTERM: 프로그램 종료 요청
+- SIGPIPE: 닫힌 파이프나 소켓에 쓰기 시도 (POSIX)
+- SIGUSR1, SIGUSR2: 사용자 정의 용도 (POSIX)
 
 <br/>
 
 ### func 인수
 
-**SIG_DFL**
-- 신호에 대한 기본 처리기가 발생한다.
-
-**SIG_IGN**
-- 신호가 무시된다.
+- SIG_DFL: 신호에 대한 기본 처리를 수행한다.
+- SIG_IGN: 신호를 무시한다.
+- 핸들러 함수 주소: 신호가 발생하면 해당 함수가 호출된다.
 
 <br/>
 
 ### 리턴 값
 
-SIG_ERR의 리턴값은 signal()에 대한 호출에서의 오류를 표시한다.
+성공하면 signal()은 이전에 등록되어 있던 핸들러를 리턴한다.
 
-성공의 경우, signal()에 대한 호출은 func의 최근 값을 리턴한다.
-
-errno의 값은 EINVAL으로 설정될 수 있다. (신호가 유효하지 X)
+오류가 발생하면 SIG_ERR를 리턴하며, 신호 번호가 유효하지 않은 경우 errno가 EINVAL로 설정될 수 있다.
 
 ## 예제
 

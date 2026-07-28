@@ -4,6 +4,8 @@ description: "Data Control with C#"
 date: 2022-03-21 10:00:00 +0900
 slug: '(1)DataControl'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 1
 tags: [csharp, unity, datacontrol]
 ---
 ## 내용

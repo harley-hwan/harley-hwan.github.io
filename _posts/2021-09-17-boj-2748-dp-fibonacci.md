@@ -5,7 +5,7 @@ date: 2021-09-17 10:00:00 +0900
 categories: [Algorithm, Baekjoon]
 tags: [baekjoon, algorithm, dp]
 ---
-<<https://www.acmicpc.net/problem/2748>>
+<https://www.acmicpc.net/problem/2748>
 
 ![image](/assets/img/posts/boj-2748-dp-fibonacci/001-133781257-263004ba-099f-4af9-9e28-f7e781db7b50.webp)
 
@@ -18,8 +18,8 @@ tags: [baekjoon, algorithm, dp]
 + 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 ...
 + 일단, 0, 1은 규칙을 적용할 수 없기 때문에, 임의로 0, 1번 인덱스에 직접 넣어준다.
 + 그 다음부터는 본인 위치에서 -1, -2 인덱스의 숫자를 더해가는 것을 반복한다.
-+ n번째 숫자를 구하기 위해서는, n번째 피오나치 수를 저장해줄 fibonacci 배열을 선언해주고, fibo라는 함수로 현재 위치에서 -1, -2 위치의 숫자를 더해주기 위해 fibo함수를 재귀함수로 불러준다.
-+ 입력값인 n은 90 미만으로 주어진다고 했는데, 피오나치 수를 나열한 것 중 90번 째의 숫자는 int로 cover가 안되기 때문에 long long을 사용해주어야 한다.
++ n번째 숫자를 구하기 위해서는, n번째 피보나치 수를 저장해줄 fibonacci 배열을 선언해주고, fibo라는 함수로 현재 위치에서 -1, -2 위치의 숫자를 더해주기 위해 fibo함수를 재귀함수로 불러준다.
++ 입력값인 n은 90 미만으로 주어진다고 했는데, 피보나치 수를 나열한 것 중 90번 째의 숫자는 int로 cover가 안되기 때문에 long long을 사용해주어야 한다.
 
 ---
 

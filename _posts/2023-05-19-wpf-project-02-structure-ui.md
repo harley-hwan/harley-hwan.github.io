@@ -3,32 +3,30 @@ title: "(WPF) 2. WPF 프로젝트의 구조 및 UI 구성"
 description: "Visual Studio 활용 및 XAML 기본 이해"
 date: 2023-05-19 10:00:00 +0900
 categories: [Dev, WPF]
+series: wpf
+series_order: 2
 tags: [csharp, wpf, ui, xaml, visualstudio]
 ---
 ## Visual Studio에서 WPF 프로젝트 시작하기
 
 WPF 애플리케이션을 개발하기 위해서는 먼저 Visual Studio를 실행하고 새로운 WPF 프로젝트를 생성해야 한다.
 
-1. **Visual Studio 실행** 후 `새 프로젝트 만들기`를 클릭한다.
+1. Visual Studio 실행 후 `새 프로젝트 만들기`를 클릭한다.
 2. `WPF 애플리케이션 (.NET Core)`을 검색한 후 선택한다.
 3. 프로젝트 이름을 `FirstProject`로 설정하고 저장 경로를 선택한다.
 4. `.NET Core` 또는 최신 `.NET` 버전을 선택한 후 `만들기` 버튼을 클릭한다.
 5. `Ctrl + F5`를 눌러 프로젝트를 실행하면 기본적인 WPF 창이 표시된다.
 
-이제 프로젝트 구조를 살펴보고 UI를 구성하는 방법을 알아보자.
-
 ---
 
 ## 솔루션 탐색기 구조 이해
 
-Visual Studio의 **솔루션 탐색기**에서 기본적인 프로젝트 구조를 확인할 수 있다.
+Visual Studio의 솔루션 탐색기에서 기본적인 프로젝트 구조를 확인할 수 있다.
 
-- **FirstProject** (솔루션)
-  - **Dependencies**: 프로젝트에서 사용하는 외부 라이브러리 및 패키지를 관리하는 공간이다.
-  - **App.xaml 및 App.xaml.cs**: 애플리케이션의 전반적인 설정과 시작 지점을 정의하는 파일이다.
-  - **MainWindow.xaml 및 MainWindow.xaml.cs**: 기본 UI 화면을 담당하며 XAML 파일과 코드 비하인드 파일로 구성된다.
-
-이제 XAML을 활용하여 UI를 구성하는 방법을 살펴보자.
+- FirstProject (솔루션)
+  - Dependencies: 프로젝트에서 사용하는 외부 라이브러리 및 패키지를 관리하는 공간이다.
+  - App.xaml 및 App.xaml.cs: 애플리케이션의 전반적인 설정과 시작 지점을 정의하는 파일이다.
+  - MainWindow.xaml 및 MainWindow.xaml.cs: 기본 UI 화면을 담당하며 XAML 파일과 코드 비하인드 파일로 구성된다.
 
 ---
 
@@ -51,7 +49,7 @@ XAML은 WPF에서 UI를 구성하는 XML 기반의 마크업 언어이다. UI �
 
 ### 도구 상자 활용
 
-Visual Studio의 **도구 상자 (Toolbox)** 에는 WPF에서 사용할 수 있는 다양한 UI 컨트롤이 포함되어 있다.
+Visual Studio의 도구 상자 (Toolbox)에는 WPF에서 사용할 수 있는 다양한 UI 컨트롤이 포함되어 있다.
 
 1. `도구 상자 (Toolbox)`를 열어 `Button` 컨트롤을 드래그하여 `MainWindow.xaml`의 `<Grid>` 내부에 추가한다.
 2. 추가된 버튼은 XAML 코드에서 다음과 같이 자동으로 생성된다.
@@ -59,8 +57,6 @@ Visual Studio의 **도구 상자 (Toolbox)** 에는 WPF에서 사용할 수 있�
   ```xml
   <Button Content="Button" HorizontalAlignment="Left" Margin="641,49,0,0" VerticalAlignment="Top" Height="51" Width="104" Click="Button_Click"/>
   ```
-
-이제 버튼 클릭 이벤트를 처리하는 방법을 살펴보자.
 
 ---
 
@@ -105,7 +101,7 @@ Visual Studio의 **도구 상자 (Toolbox)** 에는 WPF에서 사용할 수 있�
 
 ## 앱 실행 원리 이해
 
-WPF 애플리케이션이 실행될 때 **App.xaml** 파일이 초기 설정을 담당한다.
+WPF 애플리케이션이 실행될 때 `App.xaml` 파일이 초기 설정을 담당한다.
 
 1. `App.xaml` 파일을 열어보면 `StartupUri` 속성이 `MainWindow.xaml`로 지정되어 있다.
 2. 이는 애플리케이션이 실행될 때 자동으로 `MainWindow`를 로드하도록 하는 역할을 한다.
@@ -125,5 +121,5 @@ WPF 애플리케이션이 실행될 때 **App.xaml** 파일이 초기 설정을 
   }
   ```
 
-이제 WPF 프로젝트의 기본 구조와 UI 요소를 구성하는 방법을 이해할 수 있다.
+여기까지 WPF 프로젝트의 기본 구조와 UI 요소를 구성하는 방법을 정리했다.
 

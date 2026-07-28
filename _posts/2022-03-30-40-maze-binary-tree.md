@@ -4,6 +4,8 @@ description: Binary Tree 미로 생성 알고리즘
 date: 2022-03-30 10:00:00 +0900
 slug: '(40)Maze_BinaryTree'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 40
 tags: [csharp, unity, maze, algorithm, binary-tree]
 ---
 ## 내용

@@ -7,12 +7,12 @@ tags: [c-language, cpp, visual-studio, csv, excel, ifstream, ofstream, std-ifstr
 ---
 ## 부분 설명
 
-1. __std::map<std::string, std::string> lines__ : CSV 파일의 각 행을 저장. 키는 시리얼 번호이고, 값은 해당 시리얼 번호에 해당하는 전체 행이다.
-2. __auto escapeCSV 람다 함수__ : 특정 필드(데이터 값)가 CSV 파일에서 제대로 처리되도록 이스케이프한다. 예를 들어, 데이터 값에 쉼표가 포함되어 있으면, 이것은 CSV에서 새로운 필드를 생성하는 데 사용되는 구분자로 해석될 수 있으므로, 이스케이프 처리가 필요.
-3. __파일 읽기__ : ifstream을 사용하여 CSV 파일을 열고, 각 행을 읽어서 시리얼 번호와 행을 map에 저장.
-4. __새로운 행 구성__ : 각각의 변수(예: SerialNumber, MacWifi, SWVer 등)는 escapeCSV 함수를 통해 안전하게 이스케이프 처리되고, 이들은 쉼표로 구분되어 새로운 CSV 행을 생성한다.
-5. __행 업데이트 또는 추가__ : 새로 생성된 행은 map에 추가됩니다. 이미 같은 시리얼 번호를 가진 행이 있다면, 그 행은 새로운 행으로 업데이트되고, 그렇지 않다면 새 행이 추가된다.
-6. __파일 쓰기__ : map에 있는 모든 행을 다시 CSV 파일에 쓴다. 파일이 처음 생성되는 경우에는 헤더도 추가.
+1. `std::map<std::string, std::string> lines` : CSV 파일의 각 행을 저장. 키는 시리얼 번호이고, 값은 해당 시리얼 번호에 해당하는 전체 행이다.
+2. `escapeCSV` 람다 함수 : 특정 필드(데이터 값)가 CSV 파일에서 제대로 처리되도록 이스케이프한다. 예를 들어, 데이터 값에 쉼표가 포함되어 있으면, 이것은 CSV에서 새로운 필드를 생성하는 데 사용되는 구분자로 해석될 수 있으므로, 이스케이프 처리가 필요.
+3. 파일 읽기 : ifstream을 사용하여 CSV 파일을 열고, 헤더 행을 제외한 각 행을 읽어서 시리얼 번호와 행을 map에 저장. 파일이 아직 없으면 읽기를 건너뛴다.
+4. 새로운 행 구성 : 각각의 변수(예: SerialNumber, MacWifi, SWVer 등)는 escapeCSV 함수를 통해 안전하게 이스케이프 처리되고, 이들은 쉼표로 구분되어 새로운 CSV 행을 생성한다.
+5. 행 업데이트 또는 추가 : 새로 생성된 행은 map에 추가된다. 이미 같은 시리얼 번호를 가진 행이 있다면, 그 행은 새로운 행으로 업데이트되고, 그렇지 않다면 새 행이 추가된다.
+6. 파일 쓰기 : 헤더를 먼저 쓴 뒤 map에 있는 모든 행을 다시 CSV 파일에 쓴다. 파일 전체를 매번 새로 쓰는 방식이므로 헤더도 항상 다시 기록한다.
 
 <br/>
 
@@ -39,21 +39,24 @@ void UpdateCSV() {
 			return field;
 		};
 
-		// File input
+		// File input (skip if the file does not exist yet)
 		std::ifstream inFile(fileName);
-		if (inFile.fail()) {
-			throw std::runtime_error("File could not be opened.\n");
-		}
+		if (inFile) {
+			std::string strCsv;
+			while (std::getline(inFile, strCsv)) {
+				if (!strCsv.empty()) {
+					// Extract ID
+					std::string id = strCsv.substr(0, strCsv.find(','));
 
-		std::string strCsv;
-		while (std::getline(inFile, strCsv)) {
-			if (!strCsv.empty()) {
-				// Extract ID
-				std::string id = strCsv.substr(0, strCsv.find(','));
-				lines[id] = strCsv;
+					// Skip header line
+					if (id == "ID") {
+						continue;
+					}
+					lines[id] = strCsv;
+				}
 			}
+			inFile.close();
 		}
-		inFile.close();
 
 		// Convert CString to string
 		std::string idStr = CT2CA(IdField.GetString());
@@ -72,7 +75,7 @@ void UpdateCSV() {
 			+ escapeCSV(ResField11) + "/" + escapeCSV(ResField12) + "(" + escapeCSV(ResField13) + " " + escapeCSV(ResField14) + ")" + " (" + escapeCSV(ResField15) + ")" + ","
 			+ "=\"" + escapeCSV(Field10) + " " + escapeCSV(Field11) + "\"" + ","
 			+ escapeCSV(ResField16) + ","
-			+ escapeCSV(ResField17) + "\n";
+			+ escapeCSV(ResField17);
 
 		// Replace or add line
 		lines[idStr] = newLine;
@@ -83,10 +86,8 @@ void UpdateCSV() {
 			throw std::runtime_error("File could not be written.\n");
 		}
 
-		// Write header if new file
-		if (outFile.tellp() == 0) {
-			outFile << "ID,Field1,Field2,Field3,Field4,Field5,Field6,Field7,Field8,Field9,Field10,Field11,Field12,Field13,Field14\n";
-		}
+		// Write header (the whole file is rewritten every time)
+		outFile << "ID,Field1,Field2,Field3,Field4,Field5,Field6,Field7,Field8,Field9,Field10,Field11,Field12,Field13,Field14\n";
 
 		// Write lines
 		for (const auto& line : lines) {

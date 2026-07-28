@@ -4,6 +4,8 @@ description: class type conversion
 date: 2022-03-23 10:00:00 +0900
 slug: '(22)ClassTypeConv'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 22
 tags: [csharp, unity, oop, class, type, conversion]
 ---
 ## 내용

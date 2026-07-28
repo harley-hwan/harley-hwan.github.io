@@ -4,6 +4,8 @@ description: 플레이어 이동
 date: 2022-03-30 10:00:00 +0900
 slug: '(42)PlayerMoving'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 42
 tags: [csharp, unity, maze, algorithm, player]
 ---
 ## 내용

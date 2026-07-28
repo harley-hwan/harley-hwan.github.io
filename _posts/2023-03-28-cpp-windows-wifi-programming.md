@@ -224,22 +224,7 @@ bool CWifiManagerDlg::ConnectToSelectedWifi(const std::wstring& networkName, con
 }
 ```
 
-#### 구현 세부사항:
-1. **XML 프로파일 구조**
-   - WLANProfile 형식의 XML 문서 생성
-   - SSID 정보를 일반 텍스트와 16진수 형태로 모두 포함
-   - WPA2-PSK/AES 보안 설정 지정
-
-2. **프로파일 설정**
-   - connectionType: ESS(Extended Service Set) 사용
-   - connectionMode: 자동 연결 설정
-   - 인증 방식: WPA2-PSK
-   - 암호화: AES
-   - MAC 무작위화: 비활성화
-
-3. **네트워크 연결**
-   - netsh 명령어를 사용하여 프로파일 추가
-   - 추가된 프로파일을 사용하여 네트워크 연결 시도
+WLANProfile 형식의 XML 문서를 만들면서 SSID 정보를 일반 텍스트와 16진수 형태로 모두 넣고, WPA2-PSK 인증과 AES 암호화를 지정한다. connectionType은 ESS(Extended Service Set), connectionMode는 자동 연결로 설정하고 MAC 무작위화는 비활성화한다. 이렇게 작성한 프로파일을 netsh 명령어로 시스템에 추가한 뒤, 다시 netsh로 해당 네트워크에 연결을 시도한다.
 
 <br/>
 
@@ -249,18 +234,20 @@ bool CWifiManagerDlg::ConnectToSelectedWifi(const std::wstring& networkName, con
 ```cpp
 std::wstring CWifiManagerDlg::ConvertSSID(const unsigned char* ssid, size_t ssidLength)
 {
-	int len = MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS,
+	UINT codePage = CP_UTF8;
+	int len = MultiByteToWideChar(codePage, MB_ERR_INVALID_CHARS,
 		reinterpret_cast<const char*>(ssid), ssidLength, NULL, 0);
 
 	// UTF-8로 변환 실패시 시스템 기본 코드페이지로 시도
 	if (len == 0 && GetLastError() == ERROR_NO_UNICODE_TRANSLATION) {
-		len = MultiByteToWideChar(CP_ACP, 0,
+		codePage = CP_ACP;
+		len = MultiByteToWideChar(codePage, 0,
 			reinterpret_cast<const char*>(ssid), ssidLength, NULL, 0);
 	}
 
 	if (len > 0) {
 		std::wstring networkName(len, L'\0');
-		if (MultiByteToWideChar(CP_UTF8, 0,
+		if (MultiByteToWideChar(codePage, 0,
 			reinterpret_cast<const char*>(ssid), ssidLength,
 			&networkName[0], len) > 0) {
 			return networkName;
@@ -281,36 +268,9 @@ std::string CWifiManagerDlg::WStringToString(const std::wstring& wstr)
 }
 ```
 
-#### 기능 설명:
-1. **ConvertSSID**
-   - 바이트 배열 형태의 SSID를 문자열로 변환
-   - UTF-8 인코딩 우선 시도
-   - UTF-8 실패 시 시스템 기본 코드페이지 사용
-   - 다양한 언어의 SSID 처리 가능
-
-2. **WStringToString**
-   - 유니코드 문자열을 멀티바이트 문자열로 변환
-   - 시스템 기본 인코딩 사용
-   - 메모리 크기 계산 및 할당 자동 처리
+ConvertSSID는 바이트 배열 형태의 SSID를 와이드 문자열로 변환한다. UTF-8 인코딩을 우선 시도하고, 실패하면 시스템 기본 코드페이지로 다시 변환해 다양한 언어의 SSID를 처리할 수 있다. WStringToString은 유니코드 문자열을 시스템 기본 인코딩의 멀티바이트 문자열로 변환하며, 필요한 버퍼 크기 계산과 할당을 함수 안에서 처리한다.
 
 <br/>
 
 ## 결론
-이 구현은 Windows 환경에서 WlanAPI를 사용하여 Wi-Fi 네트워크를 효과적으로 제어하는 방법을 보여준다. 특히 다음과 같은 특징을 가지고 있다:
-
-1. **기능적 특징**
-   - "WAVE" 접두사를 가진 네트워크만 필터링하여 처리
-   - 신호 강도 기반 정렬로 사용자 편의성 제공
-   - WPA2-PSK/AES 보안 설정으로 안전한 연결 지원
-
-2. **구현 특징**
-   - MFC 기반의 사용자 인터페이스 제공
-   - XML 프로파일을 통한 네트워크 설정 관리
-   - 다국어 SSID 지원을 위한 문자열 처리
-
-3. **활용 방안**
-   - 특정 SSID 패턴을 가진 네트워크 관리에 활용
-   - 자동 Wi-Fi 연결 시스템 구축에 응용
-   - 네트워크 모니터링 도구 개발에 참조
-
-이 코드는 Wi-Fi 네트워크 관리 기능이 필요한 Windows 애플리케이션 개발에 유용한 참조가 될 수 있으며, 필요에 따라 SSID 필터링 조건이나 보안 설정을 수정하여 다양한 요구사항에 맞게 확장할 수 있다.
+지금까지 MFC 기반 UI에서 WlanAPI로 주변 네트워크를 스캔해 "WAVE" 접두사를 가진 SSID만 신호 강도순으로 보여주고, XML 프로파일과 netsh 명령어를 통해 WPA2-PSK/AES 설정으로 연결하는 과정을 구현했다. SSID 필터링 조건이나 보안 설정을 바꾸면 자동 연결 시스템이나 네트워크 모니터링 도구 같은 다른 용도에도 응용할 수 있다.

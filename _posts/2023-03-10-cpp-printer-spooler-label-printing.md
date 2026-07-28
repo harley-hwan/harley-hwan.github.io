@@ -122,24 +122,10 @@ Zebra 프린터 호환을 위한 ZPL(Zebra Programming Language) 명령어 구�
 
 ## 주요 함수 설명
 
-1. **OpenPrinterW**
-   - Windows 프린터 연결을 시작한다
-   - 프린터 핸들을 반환한다
+- OpenPrinterW: 프린터 연결을 열고 프린터 핸들을 반환한다
+- StartDocPrinterA: 새 인쇄 작업을 시작하고 작업 ID를 반환한다
+- StartPagePrinter: 새 페이지 인쇄를 시작한다
+- WritePrinter: 프린터에 RAW 데이터를 보내고 전송된 바이트 수를 돌려준다
+- EndPagePrinter / EndDocPrinter: 페이지와 문서 인쇄를 종료하고 리소스를 정리한다
 
-2. **StartDocPrinterA**
-   - 새 인쇄 작업을 시작한다
-   - 작업 ID를 반환한다
-
-3. **StartPagePrinter**
-   - 새 페이지 인쇄를 시작한다
-   - 성공 여부를 반환한다
-
-4. **WritePrinter**
-   - 프린터에 RAW 데이터를 전송한다
-   - 전송된 바이트 수를 반환한다
-
-5. **EndPagePrinter/EndDocPrinter**
-   - 페이지/문서 인쇄를 종료한다
-   - 리소스를 정리한다
-
-이 구현은 라벨 프린터와의 직접 통신을 통해 텍스트 출력, 바코드 생성 등 다양한 라벨링 작업을 수행할 수 있다. TSPL과 ZPL 두 가지 명령어 체계를 지원하여 다양한 프린터 모델에 대응할 수 있다.
+이 방식은 RAW 통신이라 텍스트 출력 외에 바코드 생성 같은 다른 라벨 작업에도 그대로 쓸 수 있고, TSPL과 ZPL을 모두 지원하므로 여러 프린터 모델에 대응할 수 있다.

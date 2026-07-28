@@ -8,16 +8,16 @@ tags: [cpp, windows, ethernet, network, interface, com]
 <br/>
 
 ## 소개
-Windows 환경에서 COM 인터페이스를 통해 현재 연결된 네트워크 어댑터의 정보를 가져오는 기능을 구현한다. NetworkListManager를 사용하여 연결된 모든 네트워크 인터페이스를 열거하고, 각 인터페이스의 이름을 추출한다.
+Windows 환경에서 COM 인터페이스를 통해 현재 인터넷에 연결된 네트워크의 이름을 가져오는 기능을 구현한다. NetworkListManager는 이더넷 어댑터를 포함한 시스템의 네트워크 연결을 열거하며, 그중 인터넷에 연결된 네트워크의 이름을 추출한다.
 
 <br/>
 
 ## 구현 코드
-NetworkListManager를 사용하여 Wi-Fi 인터페이스 이름을 가져오는 함수이다.
+NetworkListManager를 사용하여 인터넷에 연결된 네트워크의 이름을 가져오는 함수이다.
 
 ```cpp
-std::vector<std::wstring> GetWifiInterfaceNames() {
-    std::vector<std::wstring> wifiNames;
+std::vector<std::wstring> GetConnectedNetworkNames() {
+    std::vector<std::wstring> networkNames;
     HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
     if (SUCCEEDED(hr)) {
         INetworkListManager* pNetworkListManager;
@@ -43,7 +43,7 @@ std::vector<std::wstring> GetWifiInterfaceNames() {
                         pNetworkConnection->GetNetwork(&pNetwork);
                         BSTR bstrNetworkName;
                         pNetwork->GetName(&bstrNetworkName);
-                        wifiNames.push_back(bstrNetworkName);
+                        networkNames.push_back(bstrNetworkName);
                         SysFreeString(bstrNetworkName);
                         pNetwork->Release();
                     }
@@ -55,7 +55,7 @@ std::vector<std::wstring> GetWifiInterfaceNames() {
         }
         CoUninitialize();
     }
-    return wifiNames;
+    return networkNames;
 }
 ```
 
@@ -63,56 +63,12 @@ std::vector<std::wstring> GetWifiInterfaceNames() {
 
 ## 주요 기능 설명
 
-1. **COM 초기화 관련 함수**
-   - CoInitializeEx
-     - COM 라이브러리를 초기화한다
-     - 스레드 모델을 설정한다 (COINIT_APARTMENTTHREADED)
-     - 반환값으로 초기화 성공 여부를 확인할 수 있다
-   
-   - CoUninitialize
-     - COM 라이브러리 사용을 종료한다
-     - 이전에 CoInitializeEx로 초기화한 내용을 정리한다
-     - 프로그램 종료 전 반드시 호출해야 한다
+먼저 CoInitializeEx로 COM 라이브러리를 초기화한다. 스레드 모델은 COINIT_APARTMENTTHREADED로 지정하고, 반환값으로 초기화 성공 여부를 확인한다. 작업이 끝나면 CoUninitialize를 호출해 초기화했던 내용을 정리한다.
 
-2. **NetworkListManager 관련 함수**
-   - CoCreateInstance
-     - COM 객체의 인스턴스를 생성한다
-     - CLSID_NetworkListManager: 생성할 클래스의 ID
-     - IID_INetworkListManager: 사용할 인터페이스 ID
-   
-   - GetNetworkConnections
-     - 시스템의 모든 네트워크 연결 목록을 가져온다
-     - 반환된 IEnumNetworkConnections로 연결을 열거할 수 있다
+CoCreateInstance는 COM 객체의 인스턴스를 생성한다. CLSID_NetworkListManager가 생성할 클래스의 ID, IID_INetworkListManager가 사용할 인터페이스 ID다. 이렇게 얻은 NetworkListManager에서 GetNetworkConnections를 호출하면 시스템의 모든 네트워크 연결 목록을 IEnumNetworkConnections로 받아 열거할 수 있다.
 
-3. **네트워크 연결 열거 함수**
-   - Next
-     - IEnumNetworkConnections의 메서드
-     - 다음 네트워크 연결 정보를 가져온다
-     - 매개변수: 가져올 항목 수, 연결 포인터, 실제 가져온 수
+IEnumNetworkConnections의 Next는 네트워크 연결 정보를 하나씩 가져온다. 매개변수는 가져올 항목 수, 연결 포인터, 실제로 가져온 수다. 각 연결에 대해 get_IsConnectedToInternet을 호출하면 인터넷 연결 여부가 VARIANT_BOOL로 반환된다.
 
-   - get_IsConnectedToInternet
-     - 현재 네트워크가 인터넷에 연결되어 있는지 확인한다
-     - VARIANT_BOOL 타입으로 연결 상태를 반환한다
-     - TRUE: 인터넷 연결됨, FALSE: 연결되지 않음
+인터넷에 연결된 연결이라면 GetNetwork로 INetworkConnection에서 INetwork 인터페이스를 얻어 네트워크의 상세 정보에 접근한다. GetName은 네트워크 이름을 BSTR 형식으로 반환하는데, 시스템에 표시되는 네트워크 이름과 동일하다.
 
-4. **네트워크 정보 관련 함수**
-   - GetNetwork
-     - INetworkConnection에서 INetwork 인터페이스를 가져온다
-     - 네트워크의 상세 정보에 접근할 수 있다
-
-   - GetName
-     - INetwork 인터페이스의 메서드
-     - 네트워크의 이름을 BSTR 형식으로 반환한다
-     - 시스템에 표시되는 네트워크 이름과 동일하다
-
-5. **메모리 관리 함수**
-   - SysFreeString
-     - BSTR 타입의 문자열을 해제한다
-     - Windows에서 사용하는 유니코드 문자열 메모리를 정리한다
-
-   - Release
-     - COM 객체의 참조 카운트를 감소시킨다
-     - 카운트가 0이 되면 객체를 해제한다
-     - 모든 COM 인터페이스 사용 후 반드시 호출해야 한다
-
-이 코드는 Windows의 네트워크 관리 API를 사용하여 현재 시스템에 연결된 모든 네트워크 인터페이스의 이름을 가져온다. COM 인터페이스를 사용하므로 적절한 초기화와 정리 과정이 필요하며, 모든 리소스를 올바르게 해제해야 한다.
+BSTR 문자열은 SysFreeString으로 해제하고, 사용이 끝난 COM 인터페이스는 Release로 참조 카운트를 감소시킨다. 카운트가 0이 되면 객체가 해제된다. COM 기반 코드이므로 초기화와 리소스 해제를 빠뜨리지 않아야 한다.

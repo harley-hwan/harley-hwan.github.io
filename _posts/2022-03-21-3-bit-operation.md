@@ -4,6 +4,8 @@ description: "Bit Operation with C#"
 date: 2022-03-21 10:00:00 +0900
 slug: '(3)BitOperation'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 3
 tags: [csharp, unity, bitoperation]
 ---
 ## 내용

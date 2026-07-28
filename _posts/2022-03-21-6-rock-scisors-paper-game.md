@@ -4,6 +4,8 @@ description: Rock-Scissors-Paper Game
 date: 2022-03-21 10:00:00 +0900
 slug: '(6)RockScisorsPaperGame'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 6
 tags: [csharp, unity, codeflowcontrol, rockscissorspaper]
 ---
 ## 내용

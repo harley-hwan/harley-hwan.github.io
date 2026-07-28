@@ -1,6 +1,6 @@
 ---
 title: "(c++) sftp Connect & read xml"
-description: "c, c++, vs, sftp, ftp, CkSFtp, xml, pugi, pugixml"
+description: "CkSFtp와 libssh2 두 라이브러리로 SFTP 서버에 접속해 XML 파일을 내려받고 pugixml로 파싱하는 코드를 정리한다."
 date: 2023-06-29 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, visual-studio, sftp, ftp, cksftp, xml, pugi, pugixml]
@@ -18,7 +18,7 @@ CksFtp 라이브러리는 상용(유료) 소프트웨어로 제공된다. 한 �
 
 필자도 제대로 확인 안 하고 사용했다가 갑자기 작동이 안되어서 당황했다. 
 
-그래서, 아래에 무료인 libssh  라이브러리를 사용한 버전을 구현했다.
+그래서, 아래에 무료인 libssh2 라이브러리를 사용한 버전을 구현했다.
 
 <br/>
 

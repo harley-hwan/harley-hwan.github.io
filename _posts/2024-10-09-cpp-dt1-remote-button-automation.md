@@ -37,9 +37,9 @@ tags: [c-language, cpp, shellapi, windowsapi, system, command, exe, execute, hwn
 
 int main() {
     // DT1-Remote.exe를 실행
-    int result = system("\"E:\\Program Files (x86)\\RFbeam\\DT1-Remote\\DT1-Remote.exe\"");
+    HINSTANCE result = ShellExecute(NULL, "open", "E:\\Program Files (x86)\\RFbeam\\DT1-Remote\\DT1-Remote.exe", NULL, NULL, SW_SHOWNORMAL);
 
-    if (result != 0) {
+    if ((INT_PTR)result <= 32) {
         std::cerr << "Error executing DT1-Remote.exe" << std::endl;
         return 1;
     }
@@ -76,7 +76,7 @@ int main() {
 
 ## 코드 2
 
-DT1-Remote.exe 파일이 이미 실행 중인지 체크하는거 추가
+DT1-Remote.exe가 이미 실행 중인지 확인하는 코드를 추가했다.
 
 ```c++
 #include <iostream>
@@ -108,9 +108,9 @@ int main() {
     bool isRunning = IsProcessRunning("DT1-Remote.exe");
 
     if (!isRunning) {
-        int result = system("\"E:\\Program Files (x86)\\RFbeam\\DT1-Remote\\DT1-Remote.exe\"");
+        HINSTANCE result = ShellExecute(NULL, "open", "E:\\Program Files (x86)\\RFbeam\\DT1-Remote\\DT1-Remote.exe", NULL, NULL, SW_SHOWNORMAL);
 
-        if (result != 0) {
+        if ((INT_PTR)result <= 32) {
             std::cerr << "Error executing DT1-Remote.exe" << std::endl;
             return 1;
         }
@@ -124,11 +124,11 @@ int main() {
         return 1;
     }
 
-    // 창의 제목을 가져옵니다.
+    // 창의 제목을 가져온다.
     char windowTitle[512];
     GetWindowTextA(hwnd, windowTitle, 512);
 
-    // "Target on" 버튼을 찾습니다.
+    // "Target on" 버튼을 찾는다.
     HWND hwndButton = FindWindowEx(hwnd, NULL, "Button", "Target on");
 
     if (!hwndButton) {
@@ -136,10 +136,10 @@ int main() {
         return 1;
     }
 
-    // 버튼의 현재 상태를 가져옵니다.
+    // 버튼의 현재 상태를 가져온다.
     LRESULT state = SendMessage(hwndButton, BM_GETSTATE, 0, 0);
 
-    // 버튼이 OFF 상태일 때만 ON으로 변경합니다.
+    // 버튼이 OFF 상태일 때만 ON으로 변경한다.
     if (!(state & BST_CHECKED)) {
         SendMessage(hwndButton, BM_CLICK, 0, 0);
     }
@@ -150,4 +150,4 @@ int main() {
 
 <br/>
 
-그런데, 이미 프로그램이 실행중이면 "Target ON" 버튼이 OFF 상태여도 ON으로 변경하지 못함...
+다만 프로그램이 이미 실행 중인 경우에는 "Target ON" 버튼이 OFF 상태여도 ON으로 변경되지 않는 문제가 남아 있다.

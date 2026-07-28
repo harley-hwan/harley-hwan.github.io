@@ -1,5 +1,5 @@
 ---
-title: Programmers 로또의 최고 순서와 최저 순위
+title: Programmers 로또의 최고 순위와 최저 순위
 description: 2021 Dev-Matching 웹 백엔드 개발자(상반기)
 date: 2021-10-01 10:00:00 +0900
 slug: 'programmers(lottos)'

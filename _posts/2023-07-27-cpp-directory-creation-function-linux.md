@@ -1,9 +1,9 @@
 ---
 title: (c++) 리눅스 환경에서 디렉토리 생성을 보장하는 함수
-description: "c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm_watch"
+description: "리눅스에서 stat과 mkdir, S_ISDIR를 이용해 주어진 경로에 디렉토리가 존재하는지 확인하고 없으면 생성하는 함수를 정리한다."
 date: 2023-07-27 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, visual-studio, linux, inotify, inotify-init, in-create, in-isdir, inotify-rm-watch]
+tags: [c-language, cpp, linux, mkdir, stat]
 ---
 ## 내용
 

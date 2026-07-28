@@ -4,6 +4,8 @@ description: constructor
 date: 2022-03-22 10:00:00 +0900
 slug: '(18)Constructor'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 18
 tags: [csharp, unity, oop, constructor]
 ---
 ## 내용

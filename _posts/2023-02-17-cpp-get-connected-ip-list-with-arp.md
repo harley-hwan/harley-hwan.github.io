@@ -48,15 +48,15 @@ std::vector<std::string> getE6ServerIP()
 
  이 함수는 시스템 명령어 "arp -a"를 사용하여 로컬 네트워크의 IP 주소 목록을 가져와서 해당 IP 주소 목록을 std::vector<std::string>으로 반환한다.
 
-함수 내부의 동작은 다음과 같습니다.
+함수 내부의 동작은 다음과 같다.
 
 - std::vector<std::string> ip_list를 초기화
 - "arp -a > /home/pi/test/e6/ip.txt" 명령어를 사용하여 IP 주소 목록을 /home/pi/test/e6/ip.txt 파일에 저장
 - /home/pi/test/e6/ip.txt 파일을 열고, 파일이 성공적으로 열렸는지 확인
-- 파일을 끝까지 읽어들여서, 각 줄에서 IP 주소를 추출하여 std::vectorstd::string ip_list에 추가
-- 마지막으로, 마지막으로 추가된 빈 문자열을 제거
+- 파일을 끝까지 읽어들여서, 각 줄에서 IP 주소를 추출하여 std::vector<std::string> ip_list에 추가
+- 마지막에 추가된 빈 문자열을 제거
 - 파일을 닫는다.
-- std::vectorstd::string ip_list를 반환
+- std::vector<std::string> ip_list를 반환
 
 <br/>
 
@@ -99,47 +99,6 @@ std::vector<std::string> getE6ServerIP()
 ```
 
 <br/>
-
-<br/>
-
-다른 방식의 "arp -a" 시스템 명령어로 ip 주소 목록을 뽑는 함수를 만들어보자.
-
-```c++
-std::vector<std::string> getIPListFromARP()
-{
-    std::vector<std::string> ip_list;
-
-    // 시스템 명령어로 arp -a 실행
-    std::string command = "arp -a";
-    std::array<char, 128> buffer;
-    std::string result;
-    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
-    if (!pipe) {
-        throw std::runtime_error("popen() failed!");
-    }
-    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
-        result += buffer.data();
-    }
-
-    // 결과에서 IP 주소 추출
-    std::smatch match;
-    std::regex re("\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b");
-    std::string::const_iterator searchStart(result.cbegin());
-    while (std::regex_search(searchStart, result.cend(), match, re)) {
-        ip_list.push_back(match.str());
-        searchStart = match.suffix().first;
-    }
-
-    return ip_list;
-}
-```
-
-<br/>
-
-- 위 코드에서는 std::array와 std::unique_ptr를 사용하여 시스템 명령어 실행 결과를 문자열로 읽어오고, std::regex를 사용하여 IP 주소를 추출 한다. 
-- 함수 호출 시 std::vector<std::string> 형태로 IP 주소 목록을 반환한다.
-
-- 하지만, 다시 말씀드리지만 보안 취약점을 야기할 수 있는 시스템 명령어 실행을 사용하기 때문에, 사용에 주의하여야 한다.
 
 <br/>
 
@@ -236,7 +195,7 @@ std::string exec(const char* cmd) {
 
 위 코드를 실행하면 아래와 같은 결과가 출력되는데,
 
-```c++
+```text
 ? (192.168.8.114) at <incomplete> on wlan0
 ? (192.168.8.152) at 88:36:6c:fc:2c:4f [ether] on wlan0
 ```
@@ -306,7 +265,7 @@ int main() {
 
 while 문으로 반복해서 실행하다 보니 아래와 같은 에러가 반복적으로 발생했다.
 
-```c++
+```text
 /proc/net/arp: Too many open files
 wasipEmpty
 ```
@@ -317,7 +276,7 @@ wasipEmpty
 
 이 오류는 리눅스 시스템에서 열 수 있는 파일 디스크립터의 개수를 초과하였을 때 발생하는 경우가 많다.
 
-해결 방법으로는 다음과 같은 것들이 있습니다.
+해결 방법으로는 다음과 같은 것들이 있다.
 
 <br/>
 
@@ -327,11 +286,11 @@ wasipEmpty
 
 이 한계를 초과하면 파일 디스크립터를 더 이상 열 수 없게 되어서 해당 오류가 발생한다.
 
-이 경우에는 파일 디스크립터 제한을 해제해 주어야 합니다.
+이 경우에는 파일 디스크립터 제한을 해제해 주어야 한다.
 
 파일 디스크립터 제한을 해제하려면, 다음과 같이 ulimit 명령을 사용하여 제한을 늘리거나, /etc/security/limits.conf 파일에 해당 유저 또는 그룹에 대한 설정을 추가하여 제한을 해제할 수 있다.
 
-```c++
+```bash
 ulimit -n 10000 # 파일 디스크립터 개수를 10000으로 늘림
 ```
 
@@ -414,13 +373,13 @@ vector<string> getARPList() {
 
         while(line)
         {
-            // search for MAC address in parentheses
-            char* mac_start = strstr(line, "(");
-            if(mac_start) {
-                char* mac_end = strstr(mac_start, ")");
-                if(mac_end) {
-                    string mac_address(mac_start + 1, mac_end - mac_start - 1);
-                    ip_list.push_back(mac_address);
+            // 괄호 안의 IP 주소 추출
+            char* ip_start = strstr(line, "(");
+            if(ip_start) {
+                char* ip_end = strstr(ip_start, ")");
+                if(ip_end) {
+                    string ip_address(ip_start + 1, ip_end - ip_start - 1);
+                    ip_list.push_back(ip_address);
                 }
             }
 
@@ -450,9 +409,9 @@ int main() {
 
 <br/>
 
-해당 코드는 C++에서 ARP 테이블에서 MAC 주소를 뽑아 IP 주소와 함께 출력하는 코드이다.
+해당 코드는 ARP 테이블에서 IP 주소 목록을 뽑아 출력하는 코드이다.
 
-우선 getE6ServerIPpipe 함수는 ARP 테이블 정보를 받아오기 위해 arp 명령어를 실행시키고, 명령어 실행 결과를 파이프로부터 읽어와서 처리한다. 
+우선 getARPList 함수는 ARP 테이블 정보를 받아오기 위해 arp 명령어를 실행시키고, 명령어 실행 결과를 파이프로부터 읽어와서 처리한다. 
 
 이를 위해 pipe, fork, dup2, execvp, waitpid 함수를 사용한다.
 
@@ -466,11 +425,11 @@ pipe 함수는 파이프를 생성하고, fork 함수는 새로운 프로세스�
 
 <br/>
 
-읽어온 결과를 처리할 때는 먼저 문자열 버퍼를 만들고, strtok 함수를 이용해 한 줄씩 읽어와서 IP 주소와 MAC 주소를 분리해 출력한다. 
+읽어온 결과를 처리할 때는 먼저 문자열 버퍼를 만들고, strtok 함수를 이용해 한 줄씩 읽어온다. 
 
-이 때, MAC 주소는 괄호로 둘러싸여 있으므로 괄호 안의 문자열만 추출하여 출력한다. 
+이 때, IP 주소는 괄호로 둘러싸여 있으므로 괄호 안의 문자열만 추출한다. 
 
-IP 주소와 MAC 주소는 std::pair 객체에 저장하고, 이들을 std::vector에 추가한다.
+추출한 IP 주소는 std::vector<std::string>에 추가한다.
 
 마지막으로 자식 프로세스에서 열린 파일 디스크립터를 닫아준다.
 
@@ -480,7 +439,7 @@ IP 주소와 MAC 주소는 std::pair 객체에 저장하고, 이들을 std::vect
 
 #### 위의 코드를 이용했을 때도 아래의 에러가 발생하였다.
 
-```c++
+```text
 /proc/net/arp: Too many open files
 /proc/net/arp: Too many open files
 /proc/net/arp: Too many open files
@@ -492,42 +451,9 @@ IP 주소와 MAC 주소는 std::pair 객체에 저장하고, 이들을 std::vect
 
 이유를 모르겠다... 다른 방법을 또 찾아보자.
 
-그래서 다른 버전으로 새로 하나 짜봤다.. 테스트 해보자.
+그래서 앞에서 만든 popen 방식의 getIPListFromARP 함수로 돌아가 다시 테스트해보았다.
 
-```c++
-std::vector<std::string> E6Client::getIPListFromARP()
-{
-    std::vector<std::string> ip_list;
-
-    // 시스템 명령어로 arp -a 실행
-    std::string command = "arp -a";
-    std::array<char, 128> buffer;
-    std::string result;
-    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
-    if (!pipe) {
-        throw std::runtime_error("popen() failed!");
-    }
-    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
-        result += buffer.data();
-    }
-
-    // 결과에서 IP 주소 추출
-    std::smatch match;
-    std::regex re("\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b");
-    std::string::const_iterator searchStart(result.cbegin());
-    while (std::regex_search(searchStart, result.cend(), match, re)) {
-        ip_list.push_back(match.str());
-        searchStart = match.suffix().first;
-    }
-
-    return ip_list;
-}
-```
-<br/>
-
-위 코드는 시스템 명령어로 'arp -a'를 실행하고 그 결과에서 IP 주소를 추출하는 방식으로 ARP 테이블을 가져오는 코드이다.
-
-그런데 짜놓고 보니 이 코드의 문제점이 있다.
+이 코드는 시스템 명령어로 arp -a를 실행하고 그 결과에서 IP 주소를 추출하는 방식으로 ARP 테이블을 가져오는데, 다시 보니 몇 가지 문제점이 있다.
 
 1. 명령어 실행 결과가 운영체제나 버전에 따라 다를 수 있음.
 2. 명령어 실행에 따른 보안 문제 가능성이 존재함
@@ -612,9 +538,9 @@ socket 함수로 생성한 소켓 디스크립터를 close 함수로 반드시 �
 현재 코드에서는 ARP 테이블에 있는 IP 주소인지 확인하는 부분만 구현되어 있다. ARP 테이블이 업데이트되는 경우에 대비해서, ARP 테이블을 주기적으로 업데이트하는 로직을 추가하는 것이 좋다.
 
 4. 무한 루프 수정
-현재 코드는 무한 루프로 돌아가며 ARP 테이블을 주기적으로 업데이트한다. 하지만 이렇게 무한히 돌아가는 경우, 시스템 자원을 과도하게 사용할 수 있습니다. 따라서 ARP 테이블을 업데이트하는 시간 간격을 적절하게 설정해야 한다.
+현재 코드는 무한 루프로 돌아가며 ARP 테이블을 주기적으로 업데이트한다. 하지만 이렇게 무한히 돌아가는 경우, 시스템 자원을 과도하게 사용할 수 있다. 따라서 ARP 테이블을 업데이트하는 시간 간격을 적절하게 설정해야 한다.
 
-다음은 위의 수정사항을 반영한 코드입니다.
+다음은 위의 수정사항을 반영한 코드이다.
 
 <br/>
 
@@ -720,7 +646,7 @@ getIPListFromARP() 함수에서 ARP 테이블에 있는 각 IP 주소를 검사�
 
 이로써 잘못된 IP 주소로 인해 발생할 수 있는 오류를 방지할 수 있을 것이다.
 
-또한, try-catch 문을 추가하여 예외 처리를 하도록 수정했습니다. 
+또한, try-catch 문을 추가하여 예외 처리를 하도록 수정했다. 
 
 popen() 함수가 실패하는 경우와 같이, 예기치 않은 상황이 발생할 수 있는 경우 예외를 던져서 프로그램이 비정상적으로 종료되는 것을 방지한다.
 
@@ -800,7 +726,6 @@ int main() {
 - 외부 명령어를 실행하고 출력을 반환하는 exec 함수를 정의
 - arp -a(Windows) 또는 arp -n(Linux) 명령어를 실행하여, ARP 테이블의 IP 주소를 가져오는 getArpAddresses 함수를 정의
 - main 함수에서 무한 루프를 실행하여 매 초마다 getArpAddresses 함수를 호출하고 결과를 출력
-- 코드의 각 부분에 대해 좀 더 자세히 설명하겠습니다.
 
 <br/>
 
@@ -812,7 +737,7 @@ int main() {
 
 ##### getArpAddresses 함수
 - getArpAddresses 함수는 arp -a(Windows) 또는 arp -n(Linux) 명령어를 실행하여 ARP 테이블에서 IP 주소를 가져온다.
-- 먼저, exec 함수를 호출하여 명령어의 출력을 가져옵니다. 
+- 먼저, exec 함수를 호출하여 명령어의 출력을 가져온다. 
 - 그런 다음 정규 표현식을 사용하여 출력에서 IP 주소를 추출하고, ipAddresses 벡터에 추가한다. 
 - 함수가 완료되면 이 벡터를 반환한다.
 

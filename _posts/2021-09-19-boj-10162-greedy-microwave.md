@@ -21,7 +21,7 @@ tags: [baekjoon, algorithm, greedy]
 ## 출력
 
 - 여러분은 T초를 위한 최소버튼 조작의 A B C 횟수를 첫 줄에 차례대로 출력해야 한다. 각각의 횟수 사이에는 빈 칸을 둔다. 해당 버튼을 누르지 않는 경우에는 숫자 0을 출력해야한다. 만일 제시된 3개의 버튼으로 T초를 맞출 수 없으면 음수 -1을 첫 줄에 출력해야 한다. 
-- 
+
 ![image](/assets/img/posts/boj-10162-greedy-microwave/002-133917599-36d9e7db-dd7f-4bb7-9292-1bea116b9fbe.webp)
 
 ![image](/assets/img/posts/boj-10162-greedy-microwave/003-133917584-e797a15a-0977-46ec-a528-3e32cb00ed57.webp)

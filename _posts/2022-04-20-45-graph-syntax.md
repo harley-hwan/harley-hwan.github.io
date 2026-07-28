@@ -4,6 +4,8 @@ description: Graph Theory
 date: 2022-04-20 10:00:00 +0900
 slug: '(45)GraphSyntax'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 45
 tags: [csharp, datastructure, graph]
 ---
 ## 내용
@@ -76,6 +78,19 @@ List<int>[] adjacent = new List<int>[6]
 #### 가중치 추가
 
 ```c#
+// 간선 정보 (연결된 정점 번호, 가중치)
+class Edge
+{
+    public int vertex;
+    public int weight;
+
+    public Edge(int vertex, int weight)
+    {
+        this.vertex = vertex;
+        this.weight = weight;
+    }
+}
+
 // 가중치 추가
 List<Edge>[] adjacent_1 = new List<Edge>[6]
 {

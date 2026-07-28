@@ -9,6 +9,8 @@ tags: [linux, embedded, networking, bash, ethernet, automation, system-config]
 
 ## 스크립트 개요
 
+임베디드 리눅스 장비를 여러 대 세팅하다 보면 장비마다 이더넷 설정을 잡아주는 일이 반복된다. 매번 콘솔에 들어가 /etc/network/interfaces를 손으로 고치는 대신, 이더넷 인터페이스를 감지해 설정 파일과 실제 IP를 비교하고 필요한 경우에만 다시 설정하는 스크립트를 만들었다. 장비별 IP의 마지막 자리는 시스템 설정 XML에서 읽어온다.
+
 ### 기본 설정 및 변수
 
 ```bash
@@ -39,14 +41,12 @@ ETH_IP="192.168.1."$IP1
 ```bash
 function ETH_INIT()
 {
-  sudo echo " "  >> /etc/network/interfaces
-  sudo echo -n "allow-hotplug " >> /etc/network/interfaces
-  sudo echo $ETH_NAME >> /etc/network/interfaces
-  sudo echo -n "auto " >> /etc/network/interfaces
-  sudo echo $ETH_NAME >> /etc/network/interfaces
-  sudo echo "iface" $ETH_NAME "inet static" >> /etc/network/interfaces
-  sudo echo "address $ETH_IP" >> /etc/network/interfaces
-  sudo echo "netmask 255.255.255.0" >> /etc/network/interfaces
+  echo " " | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "allow-hotplug $ETH_NAME" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "auto $ETH_NAME" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "iface $ETH_NAME inet static" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "address $ETH_IP" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "netmask 255.255.255.0" | sudo tee -a /etc/network/interfaces > /dev/null
   sudo ifconfig $ETH_NAME $ETH_IP netmask 255.255.255.0
 }
 
@@ -60,16 +60,18 @@ function INTERFACES_INIT()
 {
   sudo rm -rf /etc/network/interfaces
   sleep 1
-  sudo echo "source-directory /etc/network/interfaces.d" >> /etc/network/interfaces
-  sudo echo "auto lo" >> /etc/network/interfaces
-  sudo echo "iface lo inet loopback" >> /etc/network/interfaces
-  sudo echo "allow-hotplug eth0" >> /etc/network/interfaces
-  sudo echo "auto eth0" >> /etc/network/interfaces
-  sudo echo "    iface eth0 inet static" >> /etc/network/interfaces
-  sudo echo "    address 192.168.1.1" >> /etc/network/interfaces
-  sudo echo "    netmask 255.255.255.0" >> /etc/network/interfaces
+  echo "source-directory /etc/network/interfaces.d" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "auto lo" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "iface lo inet loopback" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "allow-hotplug eth0" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "auto eth0" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "    iface eth0 inet static" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "    address 192.168.1.1" | sudo tee -a /etc/network/interfaces > /dev/null
+  echo "    netmask 255.255.255.0" | sudo tee -a /etc/network/interfaces > /dev/null
 }
 ```
+
+파일에 쓸 때 `sudo echo ... >> 파일` 형태를 쓰면 리다이렉션이 sudo 권한 밖의 현재 쉘에서 일어나기 때문에, 비root 사용자로 실행하면 권한 오류가 난다. 그래서 `sudo tee -a`로 append한다.
 
 <br/>
 
@@ -143,7 +145,9 @@ fi
 
 <br/>
 
-## 고급 기능과 확장성
+## 확장 예시
+
+오류 처리나 설정 백업이 필요하면 다음처럼 덧붙일 수 있다. 아래 내용은 위 스크립트에는 포함되어 있지 않다.
 
 ### 1. 오류 처리 및 로깅
 
@@ -180,12 +184,4 @@ backup_interfaces
 <br/>
 
 ## 결론
-이 스크립트는 임베디드 리눅스 시스템에서 이더넷 인터페이스를 자동으로 감지하고 설정하는 강력한 도구다. 주요 기능은 다음과 같다:
-
-1. 이더넷 인터페이스 자동 감지
-2. 네트워크 설정 파일 자동 구성
-3. IP 주소 자동 할당 및 변경
-4. 오류 처리 및 로깅
-5. 설정 백업 및 복구
-
-이러한 자동화 스크립트는 임베디드 시스템의 초기 설정과 유지보수를 단순화하고, 설정 오류를 최소화하는데 도움을 준다.
+이더넷 인터페이스 감지부터 설정 파일 구성, IP 할당까지 스크립트 하나로 처리하게 되면서 장비를 세팅할 때 네트워크 설정에 손댈 일이 거의 없어졌다.

@@ -4,6 +4,8 @@ description: "break & continue"
 date: 2022-03-21 10:00:00 +0900
 slug: '(9)break_continue'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 9
 tags: [csharp, unity, codeflowcontrol, break, continue]
 ---
 ## 내용

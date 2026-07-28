@@ -4,6 +4,8 @@ description: inheritance
 date: 2022-03-23 10:00:00 +0900
 slug: '(20)Inheritance'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 20
 tags: [csharp, unity, oop, inheritance]
 ---
 ## 내용

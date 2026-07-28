@@ -4,6 +4,8 @@ description: "Data Operation with C#"
 date: 2022-03-21 10:00:00 +0900
 slug: '(2)DataOperation'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 2
 tags: [csharp, unity, dataoperation]
 ---
 ## 내용
@@ -24,7 +26,7 @@ namespace DataOperation
             bool isAlive = (hp > 0);
             bool isHighLevel = (level >= 40);
 
-            // %% AND   || OR   ! NOT
+            // && AND   || OR   ! NOT
             // a = 살아있는 고랩 유저인가?
             bool a = isAlive && isHighLevel;
 

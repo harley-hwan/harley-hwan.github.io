@@ -4,6 +4,8 @@ description: 우수법
 date: 2022-03-30 10:00:00 +0900
 slug: '(43)RightHandRule'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 43
 tags: [csharp, unity, maze, algorithm, right-hand-rule]
 ---
 ## 내용

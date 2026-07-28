@@ -4,6 +4,7 @@ description: "레이더 수신 신호를 I/Q 두 직교 성분으로 표현하�
 date: 2025-04-15 10:00:00 +0900
 slug: 'radar-IQ-signal'
 categories: [Dev, Radar]
+pin: true
 tags: [radar, iq-signal, quadrature, doppler, fmcw, phase, signal-processing, sensor, radar-sensor]
 math: true
 ---

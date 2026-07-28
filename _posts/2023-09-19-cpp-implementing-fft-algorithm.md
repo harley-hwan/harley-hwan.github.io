@@ -23,13 +23,15 @@ Cooley-Tukey 알고리즘은 크기 N의 DFT를 크기 N/2의 두 개의 작은 
 
 DFT는 다음 공식으로 정의된다:
 
-<!-- Missing image removed: original GitHub asset returned 404. -->
+```
+X(k) = Σ_{n=0}^{N-1} x(n) · e^(-j·2πkn/N),  k = 0, 1, ..., N-1
+```
 
 여기서:
-- \( X(k) \)는 k번째 복소 DFT 계수.
-- \( x(n) \)은 n번째 복소 입력 샘플.
-- \( j \)는 허수 단위 (\( j^2 = -1 \)).
-- \( N \)은 샘플의 총 개수.
+- `X(k)`는 k번째 복소 DFT 계수.
+- `x(n)`은 n번째 복소 입력 샘플.
+- `j`는 허수 단위 (`j^2 = -1`).
+- `N`은 샘플의 총 개수.
 
 <br/>
 
@@ -82,8 +84,8 @@ vector<Complex> fft(vector<Complex>& a) {
 
 1. 입력 벡터 a의 크기 n을 구함.
 2. n이 1이면 a를 반환. 재귀의 기본 조건.
-3. a의 짝수 인덱스와 홀수 인덱스의 원소들을 각각 a_even과 a_odd 벡터에 저장합니다.
-4. a_even과 a_odd에 대해 재귀적으로 fft 함수를 호출하여 y_even과 y_odd를 계산합니다.
+3. a의 짝수 인덱스와 홀수 인덱스의 원소들을 각각 a_even과 a_odd 벡터에 저장.
+4. a_even과 a_odd에 대해 재귀적으로 fft 함수를 호출하여 y_even과 y_odd를 계산.
 5. y_even과 y_odd를 사용하여 최종 결과 y를 반환.
 
 <br/>

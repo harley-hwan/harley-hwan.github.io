@@ -1,6 +1,6 @@
 ---
 title: (c++) SSH를 이용한 원격 명령 실행 (windows)
-description: "c, c++, vs, windows, C++, libssh2, SSH, Remote Command Execution, Networking"
+description: "윈도우 환경에서 libssh2 라이브러리로 SSH 원격 서버에 접속해 명령어를 실행하고 출력 결과를 받아오는 C++ 코드를 정리한다."
 date: 2023-07-27 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, visual-studio, windows, libssh2, ssh, remote-command-execution, networking]
@@ -25,6 +25,11 @@ SSH(Secure Shell)를 사용하여 원격 서버에 접속하고, 주어진 명�
 ```c++
 #include <libssh2/include/libssh2.h>
 #include <winsock2.h>
+#include <ws2tcpip.h>
+#include <iostream>
+#include <string>
+
+#define MAX_BUFFER_SIZE 4096
 
 void CRadarCalibrationDlg::OnBnClickedBtnTest()
 {
@@ -33,6 +38,13 @@ void CRadarCalibrationDlg::OnBnClickedBtnTest()
 	const char* password = "";
 	const char* command = "cd /path && ./command";
 	int port = 22;
+
+	// init winsock
+	WSADATA wsaData;
+	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+		std::cerr << "Failed to initialize winsock!" << std::endl;
+		return;
+	}
 
 	// socket 
 	SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
@@ -104,6 +116,7 @@ void CRadarCalibrationDlg::OnBnClickedBtnTest()
 	libssh2_exit();
 
 	closesocket(sock);
+	WSACleanup();
 }
 ```
 
@@ -122,6 +135,13 @@ std::string CRadarCalibrationDlg::executeRemoteSshCommand(const char* command)
 	const char* username = "";
 	const char* password = "";
 	int port = 22;
+
+	// init winsock
+	WSADATA wsaData;
+	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+		std::cerr << "Failed to initialize winsock!" << std::endl;
+		return "";
+	}
 
 	// socket 
 	SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
@@ -192,6 +212,7 @@ std::string CRadarCalibrationDlg::executeRemoteSshCommand(const char* command)
 	libssh2_exit();
 
 	closesocket(sock);
+	WSACleanup();
 
 	// Extract version
 	std::string prefix = "Version: ";

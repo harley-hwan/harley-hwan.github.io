@@ -4,6 +4,8 @@ description: SideWinder 미로 생성 알고리즘
 date: 2022-03-30 10:00:00 +0900
 slug: '(41)Maze_SideWinder'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 41
 tags: [csharp, unity, maze, algorithm, sidewinder]
 ---
 ## 내용

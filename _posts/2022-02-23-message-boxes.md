@@ -114,12 +114,12 @@ void CMessageBoxesDlg::OnClickedButtonYnc()
 
 	if (iResults == IDYES)
 	{
-		m_strResult = _T("OK 버튼을 눌렀습니다!");
+		m_strResult = _T("YES 버튼을 눌렀습니다!");
 		UpdateData(FALSE);
 	}
 	if (iResults == IDNO)
 	{
-		m_strResult = _T("NO 버튼을 눌렀습니다1");
+		m_strResult = _T("NO 버튼을 눌렀습니다!");
 		UpdateData(FALSE);
 	}
 	if (iResults == IDCANCEL)

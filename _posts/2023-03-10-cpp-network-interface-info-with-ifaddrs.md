@@ -52,10 +52,9 @@ std::vector<std::string> get_wifi_ips() {
 }
 ```
 
-#### 실행 결과:
+#### 실행 결과
 ![리눅스 Wi-Fi IP 목록](/assets/img/posts/cpp-network-interface-info-with-ifaddrs/001-224203955-c5e35379-41da-422c-8081-da33da12b77b.png)
 
-#### 동작 원리
 먼저 getifaddrs 함수로 네트워크 인터페이스 목록을 가져오고, 실패하면 빈 벡터를 반환한다. 이후 모든 인터페이스를 순회하면서 주소 체계가 AF_INET(IPv4)이고 이름에 "wlan"이 포함된 인터페이스만 골라낸다. 선택된 주소는 inet_ntop 함수로 문자열로 변환해 벡터에 담아 반환한다.
 
 <br/>
@@ -123,10 +122,9 @@ int main() {
 }
 ```
 
-#### 실행 결과:
+#### 실행 결과
 ![모든 네트워크 인터페이스 정보](/assets/img/posts/cpp-network-interface-info-with-ifaddrs/002-224610333-a240b558-e48c-475b-b006-f9438ef9a43f.png)
 
-#### 주요 기능
 첫 번째 루프는 wlan0 인터페이스의 IPv4 주소를 찾아 출력한다. Wi-Fi 인터페이스 이름이 다른 환경이라면 이 부분을 맞게 고쳐야 한다. 두 번째 루프는 모든 네트워크 인터페이스를 순회하며 인터페이스 이름, 주소 체계, IP 주소를 출력한다.
 
 <br/>
@@ -205,10 +203,8 @@ std::vector<std::string> getWiFiIPAddresses() {
 }
 ```
 
-#### 구현 세부사항
 윈도우에서는 GetAdaptersAddresses API로 IP_ADAPTER_ADDRESSES 구조체를 채운 뒤 모든 유니캐스트 주소를 순회한다. 리눅스에서는 getifaddrs 함수로 ifaddrs 구조체를 받아 IPv4 주소만 처리한다. 두 환경 모두 inet_ntop 함수로 IP 주소를 문자열로 변환해 vector<string>으로 반환한다.
 
 <br/>
 
-## 결론
-네트워크 인터페이스 정보를 가져오는 방법은 운영체제별로 다른 API를 사용해야 한다. 윈도우에서는 GetAdaptersAddresses를, 리눅스에서는 getifaddrs를 사용하여 구현할 수 있다. 이 코드는 두 환경에서 모두 동작하는 크로스 플랫폼 솔루션을 제공하며, 필요에 따라 특정 인터페이스나 주소 체계만 필터링하여 사용할 수 있다.
+정리하면, 네트워크 인터페이스 정보는 윈도우에서는 GetAdaptersAddresses, 리눅스에서는 getifaddrs로 가져올 수 있고, 위 코드에 인터페이스 이름이나 주소 체계 필터를 더해 필요한 정보만 골라내면 된다.

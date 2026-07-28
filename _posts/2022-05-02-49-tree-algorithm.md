@@ -4,7 +4,9 @@ description: Tree
 date: 2022-05-02 10:00:00 +0900
 slug: '(49)TreeAlgorithm'
 categories: [Dev, CSharp]
-tags: [csharp, datastructure, tree, algorihtm, list, add]
+series: csharp
+series_order: 49
+tags: [csharp, datastructure, tree, algorithm, list, add]
 ---
 ## 내용
 
@@ -169,7 +171,7 @@ namespace Tree
 
 ## 실습 3
 
-이번에는 트리의 높이를 구해는 코드이다.
+이번에는 트리의 높이를 구하는 코드이다.
 
 <br/>
 

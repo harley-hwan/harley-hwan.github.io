@@ -287,11 +287,11 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 
 #### WinMain() 함수
 
-<window.h> 파일에 포함된 함수로서, 윈도우 어플리케이션에서는 WinMain() 함수가 반드시 포함되어야 한다.
+windows.h 파일에 포함된 함수로서, 윈도우 어플리케이션에서는 WinMain() 함수가 반드시 포함되어야 한다.
 
 <br/>
 
-#### 윈도우 클래스 (WINDCLASS)
+#### 윈도우 클래스 (WNDCLASS)
 
 ```c++
 typedef struct tagWNDCLASS
@@ -300,10 +300,10 @@ typedef struct tagWNDCLASS
   WNDPROC   lpfnWndProc;  // 윈도우 메시지 처리 함수 지정
   int       cbClsExtra;   // 특수목적의 여분의 사용 공간
   int       cbWndExtra;   // ''
-  HINSTANCE hInstnace;    // 윈도우클래스 등록 번호
+  HINSTANCE hInstance;    // 윈도우클래스 등록 번호
   HICON     hIcon;        // 마우스 아이콘 지정
   HCURSOR   hCursor;      // 마우스 커서 지정
-  HBRUSH    hbrBackgound; // 윈도우 배경 색상
+  HBRUSH    hbrBackground; // 윈도우 배경 색상
   LPCSTR    lpszMenuName; // 프로그램이 사용할 메뉴 지정
   LPCSTR    lpszClassName // 윈도우 클래스의 이름을 문자열로 정의
 }
@@ -318,7 +318,7 @@ C 언어 또는 C++에서 Window API를 구현하는 데 있어서 기본적인 
 
 #### WndProc
 
-WndProc 는 Window Procedure로서 메시지가 발생할 때 처리하는 메시지 처리 함수이다. 또한 메시지가 이볅되면 윈도우즈에 메시지가 호출되어 처리된다.
+WndProc 는 Window Procedure로서 메시지가 발생할 때 처리하는 메시지 처리 함수이다. 또한 메시지가 입력되면 윈도우즈에 메시지가 호출되어 처리된다.
 
 이러한 함수를 응용 프로그램 내에서 CallBack 함수라 한다.
 
@@ -339,7 +339,7 @@ LRESULT CALLBACK WndProc(
 간단한 텍스트를 출력하는 함수이다.
 
 ```c++
-TextOut(hdc, int n, int y, "문자열", 문자열 길이)
+TextOut(hdc, int x, int y, "문자열", 문자열 길이)
 ```
 
 - (x, y) 좌표를 시작으로 문자열을 출력

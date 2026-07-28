@@ -1,6 +1,6 @@
 ---
 title: (c++) 파일 생성 이벤트 모니터링 (linux)
-description: "c, c++, vs, linux, inotify, inotify_init, IN_CREATE, IN_ISDIR, inotify_rm_watch"
+description: "리눅스 inotify로 특정 디렉토리를 감시해 rbf 확장자 파일의 생성 이벤트를 감지하는 프로그램을 정리한다."
 date: 2023-07-27 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, visual-studio, linux, inotify, inotify-init, in-create, in-isdir, inotify-rm-watch]
@@ -16,7 +16,7 @@ tags: [c-language, cpp, visual-studio, linux, inotify, inotify-init, in-create, 
 ### 작동 방식
 
 - 먼저, inotify 시스템을 초기화하고, 감시할 디렉토리(/path)를 등록한다. 그 후, 무한루프를 돌며 read() 함수를 통해 inotify 이벤트를 읽는다.
-- 무한루프를 돌며 버퍼에서 inotify 이벤트를 하나씩 처리하며, 만약 이 이벤트가 파일 생성(IN_CREATE) 이벤트이고 디렉토리가 아니면, 그 파일의 확장자가 'rbf'인지 확인합니다. (확장자는 원하는대로 변경 가능)
+- 무한루프를 돌며 버퍼에서 inotify 이벤트를 하나씩 처리하며, 만약 이 이벤트가 파일 생성(IN_CREATE) 이벤트이고 디렉토리가 아니면, 그 파일의 확장자가 'rbf'인지 확인한다. (확장자는 원하는대로 변경 가능)
 - 그 파일의 확장자가 rbf라면 원하는 기능을 수행한다.
 - 프로그램을 종료하려면 감시 중인 디렉토리를 감시 목록에서 제거하고, inotify 인스턴스를 닫아야 한다. 그러기 위해선 무한루프에서 빠져나오는 조건을 추가하면 된다.
 - inotify 초기화나 감시할 디렉토리 등록 시 오류가 발생하면 해당 오류 메시지를 출력하고 프로그램을 종료한다. 디렉토리 생성 중 오류가 발생하면 이에 대한 오류 메시지를 출력하고 프로그램을 종료한다.
@@ -83,7 +83,7 @@ int main(int argc, char* argv[])
         }
     }
 
-    // Removing the “/home/dbgftp/ShotDB” directory from the watch list.
+    // Removing the "/path" directory from the watch list.
     inotify_rm_watch(fd, wd);
 
     // Close the INOTIFY instance

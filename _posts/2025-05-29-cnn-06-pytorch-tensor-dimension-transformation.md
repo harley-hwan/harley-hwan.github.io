@@ -3,6 +3,8 @@ title: "(CNN) PyTorch Tensor 차원 변환"
 description: "reshape, view, permute, transpose를 활용한 텐서 형태 변환"
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
+series: cnn
+series_order: 6
 tags: [pytorch, tensor, reshape, view, permute, transpose, deep-learning]
 toc: false
 ---
@@ -11,10 +13,10 @@ toc: false
 딥러닝에서 텐서의 차원을 이해하고 조작하는 것은 필수적이다. 각 차원은 데이터의 특정 속성을 나타낸다.
 
 ### 차원별 예시
-- **1D 텐서**: 벡터 (예: 시계열 데이터)
-- **2D 텐서**: 행렬 (예: 흑백 이미지, 텍스트 임베딩)
-- **3D 텐서**: 큐브 (예: 컬러 이미지, 시퀀스 데이터)
-- **4D 텐서**: 배치 포함 (예: 이미지 배치 [B, C, H, W])
+- 1D 텐서: 벡터 (예: 시계열 데이터)
+- 2D 텐서: 행렬 (예: 흑백 이미지, 텍스트 임베딩)
+- 3D 텐서: 큐브 (예: 컬러 이미지, 시퀀스 데이터)
+- 4D 텐서: 배치 포함 (예: 이미지 배치 [B, C, H, W])
 
 ```python
 import torch
@@ -163,7 +165,7 @@ print(f"After transpose(2, 3): {transposed.shape}")
 # 연속 transpose
 double_trans = feat_map.transpose(1, 2).transpose(2, 3)
 print(f"Double transpose: {double_trans.shape}")
-# 출력: Double transpose: torch.Size([64, 128, 3, 256])
+# 출력: Double transpose: torch.Size([64, 128, 256, 3])
 ```
 
 ### t() - 2D 전용 전치
@@ -279,7 +281,7 @@ print(f"Back to PyTorch: {back_to_pytorch.shape}")
 
 ---
 
-## 주의사항과 베스트 프랙티스
+## 사용 시 주의할 점
 
 ### 1. 성능 고려사항
 ```python
@@ -298,10 +300,10 @@ print(f"After transpose, contiguous: {permuted.is_contiguous()}")
 ```
 
 ### 2. 체크리스트
-- ✅ 변환 전후 원소 개수가 동일한지 확인
-- ✅ contiguous 메모리가 필요한 경우 확인
-- ✅ 차원의 의미가 올바르게 유지되는지 확인
-- ✅ 배치 차원은 보통 첫 번째 차원으로 유지
+- 변환 전후 원소 개수가 동일한지 확인한다
+- contiguous 메모리가 필요한 경우인지 확인한다
+- 차원의 의미가 올바르게 유지되는지 확인한다
+- 배치 차원은 보통 첫 번째 차원으로 유지한다
 
 ### 3. 디버깅 팁
 ```python
@@ -334,4 +336,4 @@ debug_tensor_shape(test_tensor, "Permuted tensor")
 | `transpose` | 두 차원 교환 | 특정 두 차원만 | contiguous 깨짐 |
 | `t` | 2D 전치 | 2차원 전용 | 간단한 행렬 전치 |
 
-이 가이드를 통해 PyTorch 텐서의 차원 변환을 자유자재로 다룰 수 있게 되기를 바란다!
+상황에 맞게 형태 변환은 reshape/view, 차원 재배열은 permute/transpose를 골라 쓰면 된다.

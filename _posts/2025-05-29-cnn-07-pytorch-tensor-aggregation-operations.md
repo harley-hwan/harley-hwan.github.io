@@ -3,6 +3,8 @@ title: "(CNN) PyTorch Tensor 집계 연산"
 description: "sum, min, max, mean과 argmax를 활용한 데이터 집계"
 date: 2025-05-29 10:00:00 +0900
 categories: [Dev, CNN]
+series: cnn
+series_order: 7
 tags: [pytorch, tensor, aggregation, sum, mean, max, min, argmax, deep-learning]
 toc: false
 ---
@@ -11,11 +13,11 @@ toc: false
 집계(aggregation) 연산은 텐서의 여러 값을 하나 또는 더 적은 수의 값으로 요약하는 핵심 연산이다. 딥러닝에서는 손실 계산, 통계 분석, 특징 추출 등에 필수적으로 사용된다.
 
 ### 주요 집계 함수
-- **sum**: 원소들의 합
-- **mean**: 평균값
-- **max/min**: 최대/최소값
-- **std/var**: 표준편차/분산
-- **argmax/argmin**: 최대/최소값의 인덱스
+- sum: 원소들의 합
+- mean: 평균값
+- max/min: 최대/최소값
+- std/var: 표준편차/분산
+- argmax/argmin: 최대/최소값의 인덱스
 
 ```python
 import torch
@@ -70,7 +72,7 @@ print(grades)
 
 # 전체 통계
 print(f"전체 평균: {grades.mean():.2f}")
-# 출력: 전체 평균: 87.87
+# 출력: 전체 평균: 87.93
 
 print(f"전체 최고점: {grades.max()}")
 # 출력: 전체 최고점: 95.0
@@ -79,24 +81,24 @@ print(f"전체 최저점: {grades.min()}")
 # 출력: 전체 최저점: 78.0
 
 print(f"전체 합계: {grades.sum()}")
-# 출력: 전체 합계: 1318.0
+# 출력: 전체 합계: 1319.0
 ```
 
 ### 추가 통계 함수
 ```python
 # 분산과 표준편차
 print(f"표준편차: {grades.std():.2f}")
-# 출력: 표준편차: 4.89
+# 출력: 표준편차: 4.28
 
 print(f"분산: {grades.var():.2f}")
-# 출력: 분산: 23.92
+# 출력: 분산: 18.35
 
 # 중앙값과 분위수
 print(f"중앙값: {grades.median()}")
 # 출력: 중앙값: 88.0
 
 print(f"75% 분위수: {grades.quantile(0.75)}")
-# 출력: 75% 분위수: 91.0
+# 출력: 75% 분위수: 90.5
 ```
 
 ---
@@ -316,7 +318,8 @@ print(f"확률 기반 예측: {prob_predictions}")
 ### top-k 값 찾기
 ```python
 # 상위 k개 값과 인덱스
-values = torch.randn(10)
+values = torch.tensor([-0.3456, 1.2345, -0.7890, 2.3456, 0.1234,
+                       -1.5678, 0.9876, 1.8765, -0.4567, 0.5678])
 print(f"원본 값: {values}")
 # 출력: 원본 값: tensor([-0.3456, 1.2345, -0.7890, 2.3456, 0.1234, -1.5678, 0.9876,
 # 1.8765, -0.4567, 0.5678])
@@ -377,7 +380,7 @@ print(f"최대 어텐션 위치 shape: {max_attn_idx.shape}")
 
 # 헤드별 평균 어텐션
 attn_mean = attn_scores.mean(dim=(2, 3))
-attn_max = attn_scores.max(dim=(2, 3))[0]
+attn_max = attn_scores.amax(dim=(2, 3))  # max는 dim에 튜플을 받지 못하므로 amax 사용
 print(f"헤드별 평균 어텐션: {attn_mean.shape}")
 # 출력: 헤드별 평균 어텐션: torch.Size([8, 12])
 ```
@@ -422,4 +425,4 @@ print(f"상위 10% 어려운 샘플 평균 손실: {hard_mean:.4f}")
 | `argmax/argmin` | 최대/최소 인덱스 | 인덱스 텐서 | dim, keepdim |
 | `topk` | 상위 k개 | (값, 인덱스) | k, dim, largest |
 
-집계 연산은 딥러닝의 모든 단계에서 사용되는 핵심 기능이다. 이 가이드를 통해 다양한 상황에서 적절한 집계 함수를 선택하고 활용할 수 있기를 바란다!
+집계 연산은 딥러닝의 모든 단계에서 사용되는 핵심 기능이다.

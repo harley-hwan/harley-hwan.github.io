@@ -23,7 +23,7 @@ tags: [cpp, programming, radar-sensor, phase-difference, spin-axis]
 
 #### 변수의 의미
 
-1. **lambda ($$\lambda$$)**: 파장
+1. lambda ($$\lambda$$): 파장
    - `lambda`는 레이더 신호의 파장을 나타낸다. 파장은 주파수와 속도의 관계를 나타내며, 특정 주파수의 신호가 공기 중에서 진행될 때의 거리이다.
    - 파장 $$\lambda$$는 주파수 $$f$$와 다음 관계를 가진다:
      
@@ -31,8 +31,8 @@ tags: [cpp, programming, radar-sensor, phase-difference, spin-axis]
      
      여기서 $$c$$는 신호가 전파되는 매질의 속도 (예: 공기 중에서의 빛의 속도)이다.
 
-2. **d**: 안테나 간 거리
-   - `d`는 레이더 시스템의 송신 안테나(TX)와 수신 안테나(RX) 사이의 거리를 나타낸다. 이 거리는 위상차를 기반으로 각도를 계산하는 데 필수적인 요소이다.
+2. d: 안테나 간 거리
+   - `d`는 위상차를 측정하는 두 수신 안테나(RX) 사이의 간격을 나타낸다. 이 거리는 위상차를 기반으로 각도를 계산하는 데 필수적인 요소이다.
    - 안테나 간 거리가 커질수록 위상차의 변화를 더 뚜렷하게 감지할 수 있다.
      
 <br/>
@@ -41,7 +41,7 @@ tags: [cpp, programming, radar-sensor, phase-difference, spin-axis]
 
 위상차를 이용하여 각도를 계산하는 기본 원리는 삼각법과 파동의 간섭 원리를 사용한다. 공의 움직임으로 인한 위상차를 통해 공의 운동 방향을 추정할 수 있다.
 
-1. **위상차와 각도 간의 관계**:
+1. 위상차와 각도 간의 관계
    - 수직 위상차 $$\phi_v$$와 수평 위상차 $$\phi_h$$를 측정한 후, 이를 각도로 변환한다.
    - 위상차를 각도로 변환하는 식은 다음과 같다:
      
@@ -51,7 +51,7 @@ tags: [cpp, programming, radar-sensor, phase-difference, spin-axis]
      
      여기서, $$\theta_v$$와 $$\theta_h$$는 각각 수직 및 수평 방향에서의 각도이다.
      
-2. **각도의 계산**:
+2. 각도의 계산
    - 위상차로부터 계산된 각도를 이용하여 공의 회전 벡터의 성분을 계산한다.
    - 수직 성분 $$V_z$$, 수평 성분 $$V_x$$, $$V_y$$를 계산한다:
      
@@ -61,7 +61,7 @@ tags: [cpp, programming, radar-sensor, phase-difference, spin-axis]
      
      $$V_y = \cos(\theta_v) \cdot \sin(\theta_h)$$
      
-3. **스핀축 각도의 계산**:
+3. 스핀축 각도의 계산
    - 최종적으로 회전축의 각도 $$\theta_{\text{spin}}$$은 다음과 같이 계산된다:
      
      $$\theta_{\text{spin}} = \arctan2(V_y, V_x) \times \frac{180.0}{\pi} \quad (\text{degrees로 변환})$$

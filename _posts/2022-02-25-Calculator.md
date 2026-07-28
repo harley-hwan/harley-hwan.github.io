@@ -103,7 +103,7 @@ void CCalcDlg::OnClickedButtonEqu()
 			break;
 	}
 
-	sprintf_s(temp, "%2.f", tmpResult);
+	sprintf_s(temp, "%.2f", tmpResult);
 	m_nResult = temp;
 	UpdateData(FALSE);
 }

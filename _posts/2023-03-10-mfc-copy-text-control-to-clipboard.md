@@ -1,6 +1,6 @@
 ---
 title: (MFC) Text Control의 값을 버튼 클릭하여 클립보드에 복사하기
-description: "c++, mfc, clipboard, copy, copytoclipboard, OpenClipboard(), EmptyClipboard(), wcstombs_s()"
+description: "MFC 응용 프로그램에서 버튼을 클릭하면 텍스트 컨트롤의 문자열을 OpenClipboard와 SetClipboardData로 클립보드에 복사하는 기능을 구현한다."
 date: 2023-03-10 10:00:00 +0900
 categories: [Dev, MFC]
 tags: [c-language, cpp, mfc, clipboard, copy, copytoclipboard, open-clipboard, empty-clipboard, wcstombs-s]

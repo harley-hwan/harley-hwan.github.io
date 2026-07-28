@@ -1,8 +1,10 @@
 ---
-title: "(WPF) 13. 비동기 함수의 예외 처리"
+title: "(WPF) 12. 비동기 함수의 예외 처리"
 description: "async/await 패턴과 예외 처리 방법"
 date: 2025-05-09 10:00:00 +0900
 categories: [Dev, WPF]
+series: wpf
+series_order: 12
 tags: [wpf, csharp, async, await, exception-handling, task]
 ---
 ## 비동기 프로그래밍 기초
@@ -58,11 +60,7 @@ catch (Exception ex)
 }
 ```
 
-**장점:**
-- 호출 스레드를 차단하지 않음
-- 자연스러운 예외 전파
-- UI 응답성 유지
-- 비동기 컨텍스트 유지
+호출 스레드를 차단하지 않고 예외가 자연스럽게 전파되며, UI 응답성과 비동기 컨텍스트가 그대로 유지된다.
 
 ### 2. Wait() 메서드 사용
 
@@ -78,11 +76,7 @@ catch (Exception ex)
 }
 ```
 
-**특징:**
-- 호출 스레드를 차단(blocking)
-- 예외가 `AggregateException`으로 감싸짐
-- 데드락 가능성 있음
-- UI 스레드에서 사용 시 응답성 저하
+호출 스레드를 차단(blocking)하고 예외가 `AggregateException`으로 감싸져 전달된다. 데드락 가능성이 있으며, UI 스레드에서 사용하면 응답성이 떨어진다.
 
 ### 중요 차이점
 
@@ -183,12 +177,4 @@ public async Task<DataTable> GetDataAsync()
 
 ### 요약
 
-비동기 함수에서 예외를 올바르게 처리하려면:
-
-1. 비동기 메서드에는 `async Task` 또는 `async Task<T>` 반환 타입을 사용한다.
-2. 비동기 작업을 기다릴 때는 `await` 키워드를 사용한다.
-3. `.Wait()` 메서드는 특별한 경우에만 제한적으로 사용한다.
-4. 비동기 컨텍스트에서는 `Thread.Sleep` 대신 `await Task.Delay`를 사용한다.
-5. 비동기 메서드 체인에서 모든 호출에 `async`/`await` 패턴을 일관되게 적용한다.
-
-이러한 원칙을 따르면 비동기 코드에서도 예외를 효과적으로 처리하고 애플리케이션의 안정성을 향상시킬 수 있다.
+비동기 메서드에는 `async Task` 또는 `async Task<T>` 반환 타입을 쓰고, 비동기 작업을 기다릴 때는 `await` 키워드를 사용한다. `.Wait()`는 특별한 경우에만 제한적으로 쓰고, 비동기 컨텍스트에서는 `Thread.Sleep` 대신 `await Task.Delay`를 사용한다. 비동기 메서드 체인의 모든 호출에 `async`/`await` 패턴을 일관되게 적용해야 예외가 끊기지 않고 전파된다.

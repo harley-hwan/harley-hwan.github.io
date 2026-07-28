@@ -69,7 +69,7 @@ void CMyDlg::UpdateJSON() {
 			}
 
 			char* writeBuffer = new char[1000];
-			FileWriteStream os(fp, writeBuffer, sizeof(writeBuffer));
+			FileWriteStream os(fp, writeBuffer, 1000);
 
 			Writer<FileWriteStream> writer(os);
 			d.Accept(writer);

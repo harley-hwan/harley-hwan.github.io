@@ -4,6 +4,8 @@ description: polymorphism
 date: 2022-03-23 10:00:00 +0900
 slug: '(23)Polymorphism'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 23
 tags: [csharp, unity, oop, polymorphism]
 ---
 ## 내용

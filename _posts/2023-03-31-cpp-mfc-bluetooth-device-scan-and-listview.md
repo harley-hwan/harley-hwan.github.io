@@ -3,7 +3,7 @@ title: (c++) 주변의 블루투스 기기 스캔 및 리스트뷰 출력 (MFC)
 description: "WinRT의 BluetoothLEAdvertisementWatcher로 주변 BLE 기기를 스캔해 장치명과 RSSI를 MFC 리스트 박스에 출력하는 방법을 정리한다."
 date: 2023-03-31 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, mfc, bluetooth, devices, ble, listview, blescan, bluetoothscan, arcrylic, analyzer]
+tags: [c-language, cpp, mfc, bluetooth, devices, ble, listview, blescan, bluetoothscan, acrylic, analyzer]
 ---
 ## 내용
 

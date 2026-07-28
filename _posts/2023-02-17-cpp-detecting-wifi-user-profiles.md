@@ -1,6 +1,6 @@
 ---
 title: (c++) 와이파이 사용자 프로필 검출하기
-description: "c++, wifi, netsh, wlan, profiles, ConvertWCharToString, WlanGetProfileList"
+description: "Windows WLAN API의 WlanEnumInterfaces와 WlanGetProfileList를 사용해 netsh wlan show profiles 명령과 동일하게 저장된 와이파이 프로필 목록을 C++로 출력한다."
 date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]
 tags: [cpp, wifi, ssid, wlanopenhandle, wlan-enum-interfaces, wlan-query-interface, windows, wlan-intf-opcode-current-connection]

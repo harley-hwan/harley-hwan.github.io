@@ -3,13 +3,15 @@ title: "Docker 실전 가이드: Nginx 컨테이너 실습"
 description: "Docker를 사용하여 웹 서버 컨테이너 실행 및 관리하기"
 date: 2025-02-06 10:00:00 +0900
 categories: [Dev, Docker]
+series: docker
+series_order: 7
 tags: [docker, container, nginx, webserver, cli]
 ---
 <br>
 
 ## 실습 개요
 
-이 실습에서는 **Docker를 이용하여 Nginx 웹 서버 컨테이너를 실행하고 접속하는 방법**을 설명한다.
+이 실습에서는 Docker를 이용하여 Nginx 웹 서버 컨테이너를 실행하고 접속하는 방법을 설명한다.
 
 ### 실습 목표
 1. Docker 명령어를 사용하여 컨테이너 실행
@@ -27,7 +29,7 @@ Nginx는 전 세계적으로 많이 사용되는 웹 서버이며, 컨테이너 
 docker version
 ```
 
-이 명령어를 실행하면 **클라이언트와 서버의 버전 정보**를 확인할 수 있다.
+이 명령어를 실행하면 클라이언트와 서버의 버전 정보를 확인할 수 있다.
 
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/b4ec4691-0aa1-457e-ab4b-4512ede5f562" />
 
@@ -50,7 +52,7 @@ docker info
 ## Nginx 컨테이너 실행
 
 ### 1. 기본적인 Docker 실행 명령어
-컨테이너를 실행하려면 **docker run** 명령어를 사용한다.
+컨테이너를 실행하려면 `docker run` 명령어를 사용한다.
 
 ```bash
 docker run -p 80:80 --name hellonginx nginx
@@ -61,7 +63,7 @@ docker run -p 80:80 --name hellonginx nginx
 - `--name hellonginx` → 컨테이너 이름을 `hellonginx`로 지정
 - `nginx` → 사용할 이미지(웹서버 소프트웨어) 지정
 
-이 명령어를 실행하면 **Nginx 웹 서버가 컨테이너 내부에서 실행**된다.
+이 명령어를 실행하면 Nginx 웹 서버가 컨테이너 내부에서 실행된다.
 
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/baf29599-440c-4417-972f-ef39971c10a0" />
 
@@ -69,13 +71,13 @@ docker run -p 80:80 --name hellonginx nginx
 
 ## 웹페이지 접속 및 확인
 
-Nginx가 실행되었으면 웹 브라우저를 열고 **localhost** 또는 **127.0.0.1**에 접속한다.
+Nginx가 실행되었으면 웹 브라우저를 열고 `localhost` 또는 `127.0.0.1`에 접속한다.
 
 ```bash
 http://localhost
 ```
 
-정상적으로 실행되었다면 **"Welcome to Nginx!"**라는 기본 웹페이지가 표시된다.
+정상적으로 실행되었다면 "Welcome to Nginx!"라는 기본 웹페이지가 표시된다.
 
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/4ecf7c2a-0a67-4803-80e6-31eaf972bb85" />
 
@@ -116,16 +118,9 @@ docker rm hellonginx
 
 ## 정리
 
-이 실습에서는 **Docker를 사용하여 Nginx 웹 서버 컨테이너를 실행하고 관리하는 방법**을 설명했다.
+Docker 버전과 환경을 확인하고, Nginx 컨테이너를 실행해 웹페이지에 접속한 뒤, 로그 확인과 종료, 삭제까지 진행했다. 컨테이너를 사용하면 명령어 한 줄로 빠르게 웹 서버를 실행할 수 있으며, 별도의 환경 설정 없이 다양한 서비스를 배포할 수 있다.
 
-### 주요 내용 정리
-1. **Docker 버전 및 환경 확인**
-2. **Nginx 컨테이너 실행 및 웹페이지 접속**
-3. **컨테이너 로그 확인 및 종료, 삭제**
-
-컨테이너를 사용하면 단순한 명령어 한 줄로 빠르게 웹 서버를 실행할 수 있으며, 별도의 환경 설정 없이 다양한 서비스를 배포할 수 있다.
-
-다음 파트에서는 **Docker 이미지의 개념과 관리 방법**에 대해 자세히 다룬다.
+다음 파트에서는 Docker 이미지의 개념과 관리 방법을 다룬다.
 
 ---
 

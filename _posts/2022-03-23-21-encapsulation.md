@@ -4,6 +4,8 @@ description: OOP 은닉성
 date: 2022-03-23 10:00:00 +0900
 slug: '(21)Encapsulation'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 21
 tags: [csharp, unity, oop, encapsulation]
 ---
 ## 내용

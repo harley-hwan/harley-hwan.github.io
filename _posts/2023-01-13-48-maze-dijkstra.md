@@ -1,9 +1,11 @@
 ---
 title: "(C#) 48. 다익스트라(Dijkstra) 최단 경로 알고리즘"
-description: Maze with Dijkstra Algorithm
+description: 가중치 그래프에서 최단 경로를 구하는 다익스트라 알고리즘의 동작 원리를 정리하고, 6개 정점 인접행렬 그래프 예제로 C# 구현을 살펴본다.
 date: 2023-01-13 10:00:00 +0900
 slug: '(48)MazeDijkstra'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 48
 tags: [csharp, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
 ---
 ## 내용
@@ -18,10 +20,10 @@ tags: [csharp, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
 
 ## 실습
 
-### Dijistra 함수
+### Dijkstra 함수
 
 ```c#
-  public void Dijikstra(int start)
+  public void Dijkstra(int start)
   {
       bool[] visited = new bool[6];
       int[] distance = new int[6];
@@ -39,7 +41,7 @@ tags: [csharp, datastructure, graph, dijkstra, shortestpath, algorithm, maze]
           int now = -1;
           for (int i = 0; i < 6; i++)
           {
-              // 이미 방문한 정점 싑
+              // 이미 방문한 정점 스킵
               if (visited[i])
                   continue;
 
@@ -104,7 +106,7 @@ namespace MazeDijkstra
             { -1, -1, -1, -1, 05, -1 },
         };
 
-        public void Dijikstra(int start)
+        public void Dijkstra(int start)
         {
             bool[] visited = new bool[6];
             int[] distance = new int[6];
@@ -122,7 +124,7 @@ namespace MazeDijkstra
                 int now = -1;
                 for (int i = 0; i < 6; i++)
                 {
-                    // 이미 방문한 정점 싑
+                    // 이미 방문한 정점 스킵
                     if (visited[i])
                         continue;
 
@@ -169,12 +171,8 @@ namespace MazeDijkstra
     {
         static void Main(string[] args)
         {
-            // DFS (Depth First Search 깊이 우선 탐색)
-            // BFS (Breadth First Search 너비 우선 탐색)
             Graph graph = new Graph();
-            graph.Dijikstra(0);
-            //graph.SearchAll();
-
+            graph.Dijkstra(0);
         }
     }
 }

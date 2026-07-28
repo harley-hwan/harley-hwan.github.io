@@ -10,20 +10,11 @@ tags: [linux, ubuntu, vmware, networking, sftp, filezilla, ens33]
 ## 네트워크 인터페이스 개요
 
 ### 리눅스 네트워크 인터페이스의 이해
-리눅스 시스템에서 네트워크 인터페이스는 다음과 같은 구조로 구성된다:
+리눅스 시스템에서 네트워크 인터페이스는 다음과 같은 계층으로 구성된다.
 
-```plaintext
-네트워크 스택 구조
-├── 물리적 계층
-│   ├── 실제 네트워크 카드
-│   └── 가상 네트워크 어댑터
-├── 데이터 링크 계층
-│   ├── 인터페이스 명명 규칙
-│   └── MAC 주소 관리
-└── 네트워크 계층
-    ├── IP 주소 할당
-    └── 라우팅 테이블
-```
+- 물리적 계층: 실제 네트워크 카드, 가상 네트워크 어댑터
+- 데이터 링크 계층: 인터페이스 명명 규칙, MAC 주소 관리
+- 네트워크 계층: IP 주소 할당, 라우팅 테이블
 
 <br/>
 
@@ -36,14 +27,8 @@ tags: [linux, ubuntu, vmware, networking, sftp, filezilla, ens33]
 - '33': 특정 포트/슬롯 식별자
 
 ### 2. 시스템에서의 기능
-1. **네트워크 추상화**
-   - 물리적/가상 네트워크 하드웨어 추상화
-   - 드라이버와 운영체제 간 인터페이스 제공
-
-2. **통신 제어**
-   - 패킷 송수신 관리
-   - 네트워크 버퍼링 처리
-   - QoS(Quality of Service) 제어
+- 네트워크 추상화: 물리적/가상 네트워크 하드웨어를 추상화하고, 드라이버와 운영체제 간 인터페이스를 제공한다.
+- 통신 제어: 패킷 송수신 관리, 네트워크 버퍼링 처리, QoS(Quality of Service) 제어를 담당한다.
 
 <br/>
 
@@ -100,19 +85,14 @@ sudo ufw allow ssh
 ```
 
 ### 2. FileZilla 클라이언트 설정
-1. **기본 연결 정보**
-   - 프로토콜: SFTP
-   - 포트: 22
-   - 로그온 방식: 일반/키 파일
 
-2. **고급 설정**
-   
-   ```plaintext
-   최적화 설정
-   ├── 전송 버퍼 크기: 4MB
-   ├── 동시 연결 수: 2
-   └── 전송 타입: Binary
-   ```
+기본 연결 정보는 다음과 같이 입력한다.
+
+- 프로토콜: SFTP
+- 포트: 22
+- 로그온 방식: 일반/키 파일
+
+전송 성능을 위해 고급 설정에서 전송 버퍼 크기 4MB, 동시 연결 수 2, 전송 타입 Binary로 지정한다.
 
 <br/>
 
@@ -133,23 +113,24 @@ sudo journalctl -u networking.service
 ```
 
 ### 2. 성능 최적화
-1. **MTU 최적화**
 
-   ```bash
-   # MTU 값 확인
-   ip link show ens33
+MTU 최적화:
 
-   # MTU 설정
-   sudo ip link set ens33 mtu 9000
-   ```
+```bash
+# MTU 값 확인
+ip link show ens33
 
-2. **TCP 튜닝**
-   
-   ```bash
-   # TCP 윈도우 크기 조정
-   sudo sysctl -w net.ipv4.tcp_wmem="4096 87380 16777216"
-   sudo sysctl -w net.ipv4.tcp_rmem="4096 87380 16777216"
-   ```
+# MTU 설정
+sudo ip link set ens33 mtu 9000
+```
+
+TCP 튜닝:
+
+```bash
+# TCP 윈도우 크기 조정
+sudo sysctl -w net.ipv4.tcp_wmem="4096 87380 16777216"
+sudo sysctl -w net.ipv4.tcp_rmem="4096 87380 16777216"
+```
 
 <br/>
 
@@ -163,7 +144,7 @@ sudo nano /etc/ssh/sshd_config
 
 # 주요 보안 설정
 PermitRootLogin no
-PasswordAuthentication yes
+PasswordAuthentication no
 MaxAuthTries 3
 ```
 
@@ -184,5 +165,5 @@ sudo ufw enable
 <br/>
 
 ## 결론
-VMware Ubuntu 환경에서 ens33 네트워크 인터페이스를 통한 SFTP 연결은 적절한 설정과 최적화를 통해 안정적이고 보안성 높은 파일 전송 환경을 구축할 수 있다. 네트워크 인터페이스의 특성을 이해하고 적절한 설정을 적용하는 것이 중요하며, 보안 측면도 함께 고려해야 한다.
+여기까지 VMware Ubuntu 환경에서 ens33 인터페이스 확인부터 SFTP 연결, 보안 설정까지의 과정을 정리했다.
 

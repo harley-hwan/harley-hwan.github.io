@@ -3,6 +3,8 @@ title: "Docker 실전 가이드: 컨테이너 정리하기"
 description: "OS별 Docker 컨테이너 정리 방법 가이드"
 date: 2024-11-05 10:00:00 +0900
 categories: [Dev, Docker]
+series: docker
+series_order: 2
 tags: [docker, container, cleanup, devops, windows, macos, linux]
 ---
 - Docker 버전: 24.0.6
@@ -18,17 +20,17 @@ Docker로 개발을 진행하다 보면 컨테이너가 제대로 종료되지 �
 ### 기본 확인 명령어
 모든 OS에서 동일하게 사용 가능한 기본 명령어다.
 
-1. **실행 중인 컨테이너 확인**
-   ```bash
-   docker ps
-   ```
-   이 명령어로 현재 실행 중인 컨테이너의 목록을 볼 수 있다.
+현재 실행 중인 컨테이너 목록을 확인한다.
 
-2. **모든 컨테이너 확인**
-   ```bash
-   docker ps -a
-   ```
-   중지된 컨테이너를 포함한 모든 컨테이너 목록을 확인할 수 있다.
+```bash
+docker ps
+```
+
+중지된 컨테이너를 포함한 모든 컨테이너를 보려면 `-a` 옵션을 붙인다.
+
+```bash
+docker ps -a
+```
 
 ### OS별 컨테이너 정리 방법
 
@@ -55,7 +57,7 @@ docker ps -aq | xargs docker rm -f
 - 볼륨을 사용하지 않은 데이터는 복구가 불가능하다.
 - 프로덕션 환경에서는 특히 주의해서 사용해야 한다.
 
-### 유용한 팁
+### alias 등록
 자주 사용하는 명령어는 각 환경에 맞게 alias로 등록해두면 편리하다.
 
 #### macOS나 Linux의 경우
@@ -68,7 +70,8 @@ source ~/.bashrc
 #### Windows PowerShell의 경우
 ```powershell
 # PowerShell 프로필에 추가
-echo "function docker-clean { docker ps -aq | ForEach-Object {docker rm -f $_} }" >> $PROFILE
+# 큰따옴표를 쓰면 $_가 echo 시점에 빈 값으로 확장되므로 작은따옴표를 써야 한다
+echo 'function docker-clean { docker ps -aq | ForEach-Object {docker rm -f $_} }' >> $PROFILE
 ```
 
 #### Windows Git Bash의 경우
@@ -77,6 +80,3 @@ echo "function docker-clean { docker ps -aq | ForEach-Object {docker rm -f $_} }
 echo "alias docker-clean='docker ps -aq | xargs docker rm -f'" >> ~/.bashrc
 source ~/.bashrc
 ```
-
-### 다음 단계
-이제 OS에 맞는 컨테이너 정리 방법을 익혔으니, 실제 컨테이너를 생성하고 운영하는 실습을 진행할 수 있다.

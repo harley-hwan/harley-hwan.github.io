@@ -1,8 +1,10 @@
 ---
 title: "(CNN) Pytorch Tensor - Indexing"
-description: "텐서의 다양한 인덱싱 기법과 numpy array와의 차이점까지"
+description: "파이토치 텐서의 기본 인덱싱과 슬라이싱, fancy indexing, boolean indexing, torch.where 사용법을 예제 코드와 함께 정리한다."
 date: 2025-06-11 10:00:00 +0900
 categories: [Dev, CNN]
+series: cnn
+series_order: 9
 tags: [pytorch, tensor, indexing, slicing, deep-learning]
 ---
 ## 기본 indexing
@@ -85,18 +87,30 @@ print('Fancy indexing 결과 ts_01_1:\n', ts_01_1)
 출력 결과:
 
 ```
-random_indexes: tensor([4, 2, 4, 0])
+random_indexes: tensor([1, 4, 4, 1])
 ts_01:
- tensor([[...], [...], [...], [...], [...]])
+ tensor([[0.7470, 0.0215, 0.0654, 0.7855, 0.3883],
+        [0.6340, 0.9447, 0.4773, 0.2861, 0.3887],
+        [0.1099, 0.3606, 0.8450, 0.8059, 0.0520],
+        [0.3438, 0.5326, 0.5318, 0.0709, 0.8716],
+        [0.6798, 0.2956, 0.9812, 0.9813, 0.8118],
+        [0.0463, 0.9592, 0.5132, 0.3941, 0.6953],
+        [0.7350, 0.0309, 0.8294, 0.3368, 0.6413],
+        [0.6471, 0.5964, 0.9792, 0.8084, 0.9328],
+        [0.8772, 0.1945, 0.5616, 0.6019, 0.5040],
+        [0.0028, 0.2127, 0.0655, 0.0905, 0.2134]])
 Fancy indexing 결과 ts_01_1:
- tensor([[...], [...], [...], [...]])
+ tensor([[0.6340, 0.9447, 0.4773, 0.2861, 0.3887],
+        [0.6798, 0.2956, 0.9812, 0.9813, 0.8118],
+        [0.6798, 0.2956, 0.9812, 0.9813, 0.8118],
+        [0.6340, 0.9447, 0.4773, 0.2861, 0.3887]])
 ```
 
 ---
 
 ## Boolean indexing
 
-Boolean indexing은 조건에 따라 원소를 선택한다. NumPy 배열과 다르게 PyTorch는 Boolean indexing 결과가 1차원 텐서로 반환된다.
+Boolean indexing은 조건에 따라 원소를 선택한다. 결과는 NumPy 배열과 마찬가지로 조건을 만족하는 원소만 모은 1차원 텐서로 반환된다.
 
 ```python
 ts_01 = torch.arange(0, 10).view(2, 5)
@@ -132,7 +146,3 @@ print(torch.where(ts_01 > 4, input=ts_01, other=torch.tensor(999)))
 tensor([[999, 999, 999, 999, 999],
         [  5,   6,   7,   8,   9]])
 ```
-
----
-
-이 문서를 통해 PyTorch 텐서의 다양한 indexing 방법과 NumPy 배열과의 차이를 명확하게 이해할 수 있다.

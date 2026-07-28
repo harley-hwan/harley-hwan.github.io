@@ -1,6 +1,6 @@
 ---
 title: (c++) RANSAC 알고리즘 구현 (Eigen 사용)
-description: "c, c++, vs, ransac, algorithm, eigen"
+description: "Eigen 라이브러리를 사용해 RANSAC 알고리즘을 구현하고, 로그 데이터에 2차 곡선을 피팅해본 기록이다."
 date: 2023-06-09 10:00:00 +0900
 categories: [Dev, C++]
 tags: [c-language, cpp, visual-studio, ransac, algorithm, eigen]
@@ -248,11 +248,7 @@ Result W: -0.00291597     1.01354    -70.4702
 
 <br/>
 
-첨부한 input파일을 이용해 output파일을 기록하고, 그 값들을 그래프로 표현해보았다.
-
-내가 원하는 답이 아니다.
-
-<!-- Missing image removed: original GitHub asset returned 404. -->
+첨부한 input파일을 이용해 output파일을 기록하고, 그 값들을 그래프로 그려 확인해봤다. 결과가 내가 원하는 답은 아니라서, 원인은 더 확인해봐야 할 것 같다.
 
 <br/>
 

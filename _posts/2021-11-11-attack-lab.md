@@ -13,7 +13,7 @@ tags: [system-software, lab, linux]
 ### Phase 1
 
 Attack lab은 버퍼 오버플로우를 이용하여 프로그램의 프로세서를 조작하는 방법을 실습해보는 것이다. 우선 target 파일을 다운받고 WinSCP로 해당 파일을 서버에 업로드하고, 압축 해제를 하고, 
-objdump –d ctarget > ans.txt 명령을 사용하면 disass결과를 txt 파일로 저장되어 메모장에서 확인할 수 있다. 해당 실습에서 target 프로그램은 getbuf를 통해 std input으로 string을 읽어들인다. Gets 함수를 사용하므로 \n 혹은 16진수 0x0a가 입력되면 입력을 멈춘다.
+objdump -d ctarget > ans.txt 명령을 사용하면 disass결과를 txt 파일로 저장되어 메모장에서 확인할 수 있다. 해당 실습에서 target 프로그램은 getbuf를 통해 std input으로 string을 읽어들인다. Gets 함수를 사용하므로 \n 혹은 16진수 0x0a가 입력되면 입력을 멈춘다.
 
 ![image](/assets/img/posts/attack-lab/001-141251877-d9b3068e-48f7-46fc-b4a8-11b3f96495a7.webp)
 
@@ -24,7 +24,7 @@ objdump –d ctarget > ans.txt 명령을 사용하면 disass결과를 txt 파일
 ![image](/assets/img/posts/attack-lab/004-141251938-cb69ffa6-d419-4cbc-9fc8-38654513878a.webp)
 
 touch1은 보다시피 불러내기만 하면 함수이다. Byte + return address를 덮어씌울 새로운 touch1의 address를 넣으면 되는데, 스택으로 저장되므로 24byte는 아무거나 넣고 4018c5를 c5 18 40식으로 차례대로 nano 명령어를 치고 들어가 입력하여 txt파일로 저장해주면 된다. 
-그런 후 ./hex2raw <ans1.txt> ans1.raw 명령어로 ans1.raw를 만들어주고 ./ctarget –i ans1.raw.를 입력하면 touch1를 불러내면서 성공한다
+그런 후 ./hex2raw <ans1.txt> ans1.raw 명령어로 ans1.raw를 만들어주고 ./ctarget -i ans1.raw를 입력하면 touch1를 불러내면서 성공한다
 
 ![image](/assets/img/posts/attack-lab/005-141251972-abb14dff-4af0-4eda-9d1d-e5460684b6a0.webp)
 
@@ -36,7 +36,7 @@ touch2는 %rdi를 이용하여 하나의 인자를 받는 함수이다.
 
 ![image](/assets/img/posts/attack-lab/006-141252021-94735188-2e9e-4665-99dc-28cb1cd56f08.webp)
 
-그림과 같이 cookie와 인자가 같아야한다. Cookie는 위에서 언급한 16진수이다. 이때 return address뿐만이 아니라 edi(rdi)에 들어가야할 값까지 수정해야 한다. 그러기 위해 machine code를 작성해주어야 한다. 그래서 %rdi에 쿠키값인 0x76927bbf를 넣도록 mov $0x76927bbf, %edi와 return 주소인 touch2의 주소를 넣어주도록 push1 $0x4018f1, return을 넣어준다. 그리고 이것을 disass해주면 바이트 표현이 나오는데, 이때 이 코드의 리턴 주소는 buffer의 주소여야 한다.
+그림과 같이 cookie와 인자가 같아야한다. Cookie는 위에서 언급한 16진수이다. 이때 return address뿐만이 아니라 edi(rdi)에 들어가야할 값까지 수정해야 한다. 그러기 위해 machine code를 작성해주어야 한다. 그래서 %rdi에 쿠키값인 0x76927bbf를 넣도록 mov $0x76927bbf, %edi와 return 주소인 touch2의 주소를 넣어주도록 push $0x4018f1, return을 넣어준다. 그리고 이것을 disass해주면 바이트 표현이 나오는데, 이때 이 코드의 리턴 주소는 buffer의 주소여야 한다.
 
 ![image](/assets/img/posts/attack-lab/007-141252047-fa9131d3-f85e-438c-8850-1a2a336f0216.webp)
 ![image](/assets/img/posts/attack-lab/008-141252062-aa2acb3a-8877-4791-b200-055e5c48f090.webp)
@@ -68,7 +68,7 @@ Touch3의 주소를 push 명령어로 넣고, touch3 주소 자리에 이제 쿠
 ![image](/assets/img/posts/attack-lab/014-141252233-eda161db-b376-4246-858e-3029f4d4213a.webp)
 
 위의 설명한 사항들을 순서대로 나열하면 code3.o + 패딩(0x28) / 코드 주소 / 쿠키 문자열이다.
-Ans3.txt은 다음과 같고 ./hexraw2 <ans3.txt> ans3.raw 명령어와 ./ctarget -I ans3.raw 명령어를 입력하면 정답임을 확인할 수 있다.
+Ans3.txt은 다음과 같고 ./hex2raw <ans3.txt> ans3.raw 명령어와 ./ctarget -i ans3.raw 명령어를 입력하면 정답임을 확인할 수 있다.
 
 ![image](/assets/img/posts/attack-lab/015-141252252-c0001a04-5cd8-4c57-aa60-2f7dd58c620d.webp)
 ![image](/assets/img/posts/attack-lab/016-141252278-a9637a57-4941-474a-9aa2-0a02d4a81333.webp)
@@ -80,7 +80,7 @@ Ans3.txt은 다음과 같고 ./hexraw2 <ans3.txt> ans3.raw 명령어와 ./ctarge
 ![image](/assets/img/posts/attack-lab/017-141252323-4e665d1b-4bfb-4ac4-96c9-262d856d72ec.webp)
 
 이번 단계부터는 ctarget이 아닌 rtarget을 이용해야 한다. 다른 점이라고 하면 ctarget에서는 해당 주소를 특정해줄 수 있었지만 rtarget에서는 그것이 불가능하다. 즉, rtarget은 실행시킬 때마다 스택의 주소가 변하기 때문에 스택의 주소를 특정할 수가 없다는 것이 ctarget과의 차이점이다.
-우선, objdump –d rtarget > rans.txt 명령어를 통해 disass 결과를 txt파일로 저장해 두어 안의 내용들을 확인해보자. 압축 파일 내에 farm.c 파일이 있음을 확인할 수 있겠지만 rans.txt의 내용을 확인하다 보면 <start_farm>과 <end_farm> 부분을 볼 수 있는데 그 사이 부분들을 보면 여러가지 함수들이 있는데 거기서 아래의 사진과 같은 내용들을 볼 수 있는데 여기서 파란 블록 부분은 오른쪽 사진, 즉 가젯 목록에서 일치한 부분을 rans.txt 파일 내에서 찾아 그 주소를 확인할 수 있다.
+우선, objdump -d rtarget > rans.txt 명령어를 통해 disass 결과를 txt파일로 저장해 두어 안의 내용들을 확인해보자. 압축 파일 내에 farm.c 파일이 있음을 확인할 수 있겠지만 rans.txt의 내용을 확인하다 보면 <start_farm>과 <end_farm> 부분을 볼 수 있는데 그 사이 부분들을 보면 여러가지 함수들이 있는데 거기서 아래의 사진과 같은 내용들을 볼 수 있는데 여기서 파란 블록 부분은 오른쪽 사진, 즉 가젯 목록에서 일치한 부분을 rans.txt 파일 내에서 찾아 그 주소를 확인할 수 있다.
 그러면 이제 이 주소들을 이용하여 touch2에서 했던 것과 동일하게 하면 된다.
 
 ![image](/assets/img/posts/attack-lab/018-141252360-afe0a5cf-7317-4987-80c4-59a05aeac65f.webp)

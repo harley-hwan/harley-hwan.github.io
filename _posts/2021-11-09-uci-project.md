@@ -4,7 +4,7 @@ description: Summer 2021 Global Research Experience in Artificial inTelligence(G
 date: 2021-11-09 10:00:00 +0900
 slug: 'UCIproject'
 categories: [Project]
-tags: [eqtransformer, deep-learning, machine-learning, python, big-data-science]
+tags: [deep-learning, machine-learning, python, big-data-science]
 ---
 - 주소: <https://github.com/harley-hwan/UCIproject>
 - 프로젝트명: Global Research Experience in Artificial inTelligence(GREAT) 

@@ -61,7 +61,7 @@ tags: [cpp, mfc, multi-thread, thread]
 
 <br/>
 
-그리고, CWorkerThread11View 클래스에 WM_LBUTTONDOWN 메시지 핸들러를 추가하고 다음 코드를 작성한다.
+그리고, CWorkerThread1View 클래스에 WM_LBUTTONDOWN 메시지 핸들러를 추가하고 다음 코드를 작성한다.
 
 ![image](/assets/img/posts/multi-thread/001-162364644-d3cabce2-0f2a-4520-ad0a-6f1a3566bb79.webp)
 

@@ -100,18 +100,7 @@ int main() {
 }
 ```
 
-#### 구현 설명:
-1. **초기화 및 설정**
-   - WlanOpenHandle로 WLAN 클라이언트를 초기화한다
-   - WlanEnumInterfaces로 무선 인터페이스 목록을 가져온다
-
-2. **연결 정보 획득**
-   - WlanQueryInterface로 현재 연결 상태를 확인한다
-   - WLAN_CONNECTION_ATTRIBUTES 구조체로 정보를 저장한다
-
-3. **프로필 처리**
-   - WlanGetProfileList로 모든 프로필을 가져온다
-   - 현재 연결된 프로필과 다른 프로필을 구분하여 출력한다
+WlanOpenHandle로 WLAN 클라이언트를 초기화하고 WlanEnumInterfaces로 무선 인터페이스 목록을 가져온다. 각 인터페이스마다 WlanQueryInterface로 현재 연결 정보를 WLAN_CONNECTION_ATTRIBUTES 구조체에 받아온 뒤, WlanGetProfileList로 저장된 프로필 전체를 가져와 현재 연결된 프로필과 나머지를 구분해 출력한다.
 
 #### 실행 결과:
 ![기본 구현 결과](/assets/img/posts/cpp-get-connected-wifi-profile-list/001-219573236-74c8eccc-7a33-4673-a126-c28e20bdaaa5.png)
@@ -140,32 +129,28 @@ ppData 인자는 (PVOID)&pConnectInfo가 아니라 (PVOID*)&pConnectInfo로, 포
 <br/>
 
 ## 특정 프로필 검출
-특정 문자열로 시작하는 프로필만 선택적으로 검출하는 구현이다.
+특정 문자열로 시작하는 프로필만 선택적으로 검출하는 구현이다. 기본 구현의 프로필 목록 순회 부분을 다음과 같이 바꾸면 된다.
 
 ```cpp
-for (DWORD j = 0; j < pProfileList->dwNumberOfItems; j++) {
-    PWLAN_PROFILE_INFO pProfileInfo = &pProfileList->ProfileInfo[j];
-    std::wstring profileName = ConvertWCharToString(pProfileInfo->strProfileName);
+std::wstring connectedProfileName = ConvertWCharToString(pConnectInfo->strProfileName);
+
+for (DWORD j = 0; j < profileList->dwNumberOfItems; j++) {
+    PWLAN_PROFILE_INFO profileInfo = &profileList->ProfileInfo[j];
+    std::wstring profileName = ConvertWCharToString(profileInfo->strProfileName);
+
     if (profileName == connectedProfileName) {
         std::wcout << "Matched connected WiFi profile: " << profileName << std::endl;
         // "VISION"으로 시작하는 프로필 선택
         if (profileName.compare(0, 6, L"VISION") == 0) {
             std::wcout << "Selected profile: " << profileName << std::endl;
         }
-    }    
+    }
 }
 ```
 
-#### 구현 특징:
-1. **프로필 필터링**
-   - compare 함수로 문자열 시작 부분 비교
-   - 특정 접두사를 가진 프로필만 선택
-
-2. **정보 출력**
-   - 매칭된 프로필 정보 출력
-   - 선택된 프로필 별도 표시
+compare 함수로 프로필 이름의 시작 부분을 비교해 특정 접두사를 가진 프로필만 골라낸다. 현재 연결된 프로필과 이름이 일치하는 항목을 출력하고, 그중 VISION으로 시작하는 프로필을 따로 표시한다.
 
 #### 실행 결과:
 ![선택적 프로필 검출 결과](/assets/img/posts/cpp-get-connected-wifi-profile-list/002-219586052-a188aa65-f17a-44b0-bef6-bf65ea401082.png)
 
-이 구현을 통해 Windows 환경에서 Wi-Fi 프로필을 효과적으로 검출하고 관리할 수 있다. WLAN API의 다양한 함수들을 활용하여 현재 연결 상태 확인, 프로필 목록 획득, 특정 프로필 선택 등의 기능을 구현했다.
+WLAN API의 함수들로 현재 연결 상태 확인, 프로필 목록 획득, 특정 프로필 선택까지 구현했다.

@@ -43,7 +43,7 @@ fi
 
 ## 설명
 
-1. **변수 초기화**:
+1. 변수 초기화:
     ```bash
     count=0
     Dir=/home/dbgftp/Result2
@@ -53,7 +53,7 @@ fi
     - `Dir`: 파일들이 위치한 디렉토리의 경로를 저장하는 변수.
     - `File`: 대상 `.tar` 파일의 전체 경로를 저장하는 변수. 이 스크립트에서는 실제로 이 변수를 사용하지 않는다.
 
-2. **.tar 파일 수 카운팅**:
+2. .tar 파일 수 카운팅:
     ```bash
     count=$(ls -ltr $Dir | grep "^-.*\.tar" | wc -l)
     echo "file total" $count
@@ -63,7 +63,7 @@ fi
     - `grep "^-.*\.tar"`: 나열된 파일 중에서 `.tar` 확장자를 가진 파일만을 필터링.
     - `wc -l`: 필터링된 파일의 수를 센다.
 
-3. **대상 .tar 파일 식별**:
+3. 대상 .tar 파일 식별:
     ```bash
     FILE_4=`ls -ltr $Dir | grep .tar | gawk NR==1 | gawk -F" " '{printf $9}'`
     echo $FILE_4
@@ -72,20 +72,18 @@ fi
     - `gawk NR==1`: 나열된 파일 중에서 첫 번째 파일만 선택. (`ls -ltr`에 의해 가장 오래된 파일이 첫 번째로 표시)
     - `gawk -F" " '{printf $9}'`: 선택된 파일의 이름만 추출.
 
-4. **압축 및 파일 제거**:
+4. 압축:
     ```bash
     if [ $count -gt 0 ] ; then
             gzip $Dir/$FILE_4
-            rm -r $Dir/$FILE_4
     else
             echo "file nothing2"
     fi
     ```
     - `.tar` 파일이 하나라도 있으면:
-        - `gzip $Dir/$FILE_4`: 지정된 `.tar` 파일을 `.gzip` 형식으로 압축.
-        - `rm -r $Dir/$FILE_4`: 원본 `.tar` 파일 삭제.
+        - `gzip $Dir/$FILE_4`: 지정된 `.tar` 파일을 압축. gzip은 기본 동작으로 원본 `.tar` 파일을 `.tar.gz` 파일로 대체하므로, 압축이 끝나면 원본은 이미 삭제되어 있다. 뒤에 별도의 `rm`을 붙이면 존재하지 않는 파일을 지우려다 오류가 난다.
     - `.tar` 파일이 없으면: "file nothing2" 메시지 출력.
 
 <br/>
 
-스크립트는 주로 `$Dir` 디렉토리에 위치한 `.tar` 파일들 중 가장 오래된 파일을 `.gzip` 형식으로 압축한 후 원본 `.tar` 파일을 삭제하는 작업을 수행한다.
+스크립트는 주로 `$Dir` 디렉토리에 위치한 `.tar` 파일들 중 가장 오래된 파일을 `.tar.gz` 형식으로 압축하는 작업을 수행한다. 원본 `.tar` 파일은 gzip이 압축 파일로 대체하므로 따로 삭제할 필요가 없다.

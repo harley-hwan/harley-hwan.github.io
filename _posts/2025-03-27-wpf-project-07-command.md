@@ -3,6 +3,8 @@ title: "(WPF) 7. Command 패턴을 활용한 버튼 이벤트 처리"
 description: "커맨드(Command) 패턴을 이용한 이벤트 처리와 MVVM 활용"
 date: 2025-03-27 10:00:00 +0900
 categories: [Dev, WPF]
+series: wpf
+series_order: 7
 tags: [csharp, wpf, command, relaycommand, mvvm, ui, xaml]
 toc: false
 ---
@@ -113,5 +115,3 @@ public class MainViewModel
 - **CommandParameter**: 버튼 클릭 시 ViewModel로 전달할 값을 설정한다.
 
 실행하면 텍스트 박스에 "abc"라고 입력했을 때만 버튼이 활성화되며, 클릭 시 입력한 값과 "aa"가 메시지 박스로 출력된다.
-
----

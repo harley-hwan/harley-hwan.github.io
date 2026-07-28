@@ -4,6 +4,8 @@ description: "multiplication table with C#"
 date: 2022-03-22 10:00:00 +0900
 slug: '(13)MultiplicationTable'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 13
 tags: [csharp, unity, codeflowcontrol, multiplicationtable]
 ---
 ## 내용

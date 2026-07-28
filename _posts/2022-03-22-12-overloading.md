@@ -1,9 +1,11 @@
 ---
 title: "(C#) 12. 코드의 흐름 제어 (overloading)"
-description: overloading
+description: C#에서 같은 이름의 함수를 매개변수 개수와 타입에 따라 여러 개 정의하는 오버로딩과 기본값 매개변수 사용법을 예제 코드로 정리한다.
 date: 2022-03-22 10:00:00 +0900
 slug: '(12)overloading'
 categories: [Dev, CSharp]
+series: csharp
+series_order: 12
 tags: [csharp, unity, codeflowcontrol, overloading]
 ---
 ## 내용
