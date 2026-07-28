@@ -1,5 +1,5 @@
 ---
-title: opencv(c++) 19. 직사각형 검출 알고리즘 (python/MFC 환경 포함)
+title: "(OpenCV C++) 19. 직사각형 검출 알고리즘 (Python/MFC 환경 포함)"
 description: "C++과 OpenCV로 이미지에서 직사각형을 검출하는 함수를 만들고, 같은 알고리즘을 MFC와 파이썬 환경에서 구현한 예제를 정리한다."
 date: 2023-02-17 10:00:00 +0900
 slug: 'DetectRactangles'

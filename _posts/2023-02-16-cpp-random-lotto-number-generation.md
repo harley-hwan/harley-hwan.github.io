@@ -1,5 +1,5 @@
 ---
-title: 로또 번호 랜덤 추출 (c++)
+title: "(C++) 로또 번호 랜덤 추출"
 description: "c++, lotto, srand. algorithm, ctime"
 date: 2023-02-16 10:00:00 +0900
 categories: [Dev, C++]

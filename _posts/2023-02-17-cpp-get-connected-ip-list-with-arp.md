@@ -1,5 +1,5 @@
 ---
-title: 현재 연결된 IP 목록 뽑아보기 (arp)
+title: "(C++) 현재 연결된 IP 목록 뽑아보기 (arp)"
 description: "c++, linux, command, arp, system, ip, serverip"
 date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]

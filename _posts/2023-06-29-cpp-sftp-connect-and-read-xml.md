@@ -1,5 +1,5 @@
 ---
-title: "(c++) sftp Connect & read xml"
+title: "(C++) SFTP 접속 및 XML 파일 읽기"
 description: "CkSFtp와 libssh2 두 라이브러리로 SFTP 서버에 접속해 XML 파일을 내려받고 pugixml로 파싱하는 코드를 정리한다."
 date: 2023-06-29 10:00:00 +0900
 categories: [Dev, C++]

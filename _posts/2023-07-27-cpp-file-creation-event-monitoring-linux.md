@@ -1,5 +1,5 @@
 ---
-title: (c++) 파일 생성 이벤트 모니터링 (linux)
+title: "(C++) 파일 생성 이벤트 모니터링 (Linux)"
 description: "리눅스 inotify로 특정 디렉토리를 감시해 rbf 확장자 파일의 생성 이벤트를 감지하는 프로그램을 정리한다."
 date: 2023-07-27 10:00:00 +0900
 categories: [Dev, C++]

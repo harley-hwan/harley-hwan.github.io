@@ -1,5 +1,5 @@
 ---
-title: (c++) RANSAC 알고리즘 구현 (Eigen 사용)
+title: "(C++) RANSAC 알고리즘 구현 (Eigen)"
 description: "Eigen 라이브러리를 사용해 RANSAC 알고리즘을 구현하고, 로그 데이터에 2차 곡선을 피팅해본 기록이다."
 date: 2023-06-09 10:00:00 +0900
 categories: [Dev, C++]

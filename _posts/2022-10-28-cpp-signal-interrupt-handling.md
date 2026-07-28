@@ -1,5 +1,5 @@
 ---
-title: signal() - 인터럽트 신호 처리 (c++)
+title: "(C++) signal() - 인터럽트 신호 처리"
 description: C++에서 signal() 함수로 SIGINT, SIGPIPE 등 인터럽트 신호를 처리하는 방법과 신호 종류, 예제 코드를 정리한다.
 date: 2022-10-28 10:00:00 +0900
 categories: [Dev, C++]

@@ -1,5 +1,5 @@
 ---
-title: (c++) C++에서 파이썬 스크립트 불러오기
+title: "(C++) 파이썬 스크립트 불러오기"
 description: "c, c++, python, Py_SetProgramName, Py_Initialize, PyRun_SimpleString, Py_Finalize, PyMem_RawFree"
 date: 2023-06-08 10:00:00 +0900
 categories: [Dev, C++]

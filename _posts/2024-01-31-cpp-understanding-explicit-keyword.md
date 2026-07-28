@@ -1,5 +1,5 @@
 ---
-title: "(c++) Understanding 'explicit'"
+title: "(C++) explicit 키워드 이해하기"
 description: "Preventing Implicit Conversions"
 date: 2024-01-31 10:00:00 +0900
 categories: [Dev, C++]

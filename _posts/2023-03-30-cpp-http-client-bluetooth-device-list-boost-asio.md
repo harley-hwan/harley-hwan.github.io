@@ -1,5 +1,5 @@
 ---
-title: (c++) HTTP 클라이언트 프로그램 - 블루투스 장치 목록 (Boost.Asio)
+title: "(C++) HTTP 클라이언트 프로그램 - 블루투스 장치 목록 (Boost.Asio)"
 description: "c++, boost, asio, boost.asio, bluetooth, ble, bluetoothscanner"
 date: 2023-03-30 10:00:00 +0900
 categories: [Dev, C++]

@@ -1,5 +1,5 @@
 ---
-title: 로그를 좀더 보기쉽게 찍기(g++)
+title: "(C++) 로그를 좀더 보기쉽게 찍기 (g++)"
 description: "__FILE__, __LINE__, __func__, __PRETTY_FUNCTION__"
 date: 2022-09-21 10:00:00 +0900
 categories: [Dev, C++]

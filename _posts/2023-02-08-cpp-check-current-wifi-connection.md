@@ -1,5 +1,5 @@
 ---
-title: 현재 연결중인 WiFi 이름 확인
+title: "(C++) 현재 연결중인 WiFi 이름 확인"
 description: "Windows Native WiFi API(WlanOpenHandle, WlanEnumInterfaces)를 사용해 현재 연결 중인 WiFi 이름을 C++로 확인하는 방법을 정리한다."
 date: 2023-02-08 10:00:00 +0900
 categories: [Dev, C++]

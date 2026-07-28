@@ -1,5 +1,5 @@
 ---
-title: (c++) json 파일 입출력 (RapidJson)
+title: "(C++) JSON 파일 입출력 (RapidJSON)"
 description: "RapidJSON의 FileReadStream과 FileWriteStream으로 C++에서 JSON 파일을 읽고, 새 객체를 배열에 추가한 뒤 다시 저장하는 과정을 예제 코드로 정리한다."
 date: 2023-08-03 10:00:00 +0900
 categories: [Dev, C++]

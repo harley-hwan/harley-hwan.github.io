@@ -1,5 +1,5 @@
 ---
-title: (c++) 현재 연결된 와이파이의 SSID 검출
+title: "(C++) 현재 연결된 와이파이의 SSID 검출"
 description: "윈도우 WLAN API의 WlanEnumInterfaces와 WlanQueryInterface를 이용해 현재 연결된 와이파이의 SSID를 C++로 검출하는 방법을 정리한다."
 date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]

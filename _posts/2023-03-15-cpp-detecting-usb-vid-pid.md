@@ -1,5 +1,5 @@
 ---
-title: (c++) 현재 연결된 USB들의 VID/PID 검출
+title: "(C++) 현재 연결된 USB들의 VID/PID 검출"
 description: "libusb 라이브러리로 컴퓨터에 연결된 USB 장치 목록을 받아와 각 장치의 VID와 PID를 확인하는 C++ 예제를 정리한다."
 date: 2023-03-15 10:00:00 +0900
 categories: [Dev, C++]

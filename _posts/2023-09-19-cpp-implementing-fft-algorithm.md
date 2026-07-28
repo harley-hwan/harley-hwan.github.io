@@ -1,5 +1,5 @@
 ---
-title: (c++) FFT 알고리즘 구현
+title: "(C++) FFT 알고리즘 구현"
 description: "C++, Visual Studio, FFT, Cooley-Tukey, 복소수, 재귀"
 date: 2023-09-19 10:00:00 +0900
 categories: [Dev, C++]

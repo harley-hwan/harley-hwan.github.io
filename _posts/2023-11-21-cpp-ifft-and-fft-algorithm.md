@@ -1,5 +1,5 @@
 ---
-title: "(c++) iFFT & FFT algorithm"
+title: "(C++) iFFT & FFT 알고리즘 구현"
 description: "FFTW 라이브러리로 로그 파일의 복소수 데이터를 읽어 iFFT로 복원한 뒤 다시 FFT를 수행해 진폭을 계산하고 파일로 저장하는 C++ 코드를 정리한다."
 date: 2023-11-21 10:00:00 +0900
 categories: [Dev, C++]

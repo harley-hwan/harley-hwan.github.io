@@ -1,5 +1,5 @@
 ---
-title: DT1-Remote 버튼 자동화 프로그램
+title: "(C++) DT1-Remote 버튼 자동화 프로그램"
 description: "c, c++, shellapi, windowsapi, system, command, exe, execute, HWND, windows.h, Shellapi.h, DT1-Remote"
 date: 2024-10-09 10:00:00 +0900
 categories: [Dev, C++]

@@ -1,5 +1,5 @@
 ---
-title: (c++) SSH를 이용한 원격 명령 실행 (windows)
+title: "(C++) SSH를 이용한 원격 명령 실행 (Windows)"
 description: "윈도우 환경에서 libssh2 라이브러리로 SSH 원격 서버에 접속해 명령어를 실행하고 출력 결과를 받아오는 C++ 코드를 정리한다."
 date: 2023-07-27 10:00:00 +0900
 categories: [Dev, C++]

@@ -1,5 +1,5 @@
 ---
-title: Linux Command pipe로 변수값으로 끌고오기
+title: "(C++) Linux Command pipe로 변수값으로 끌고오기"
 description: "c++, linux, command, pipe, arp"
 date: 2023-02-16 10:00:00 +0900
 categories: [Dev, C++]
