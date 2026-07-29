@@ -200,6 +200,13 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
+# 발행 시각이 빌드 시각보다 미래인 글도 생성한다.
+# 이 블로그는 모든 글의 date 를 '작성일 10:00:00 +0900' 으로 통일해 쓰는데,
+# 그날 오전 10시(KST) 이전에 push 하면 Jekyll 이 "has a future date" 로 그 글을
+# 통째로 건너뛴다. 그러면 그 글을 가리키던 내부 링크가 깨지고 htmlproofer 가
+# 배포를 막는다. (2026-07-29 cw-vs-fmcw-radar 글에서 실제로 발생)
+future: true
+
 paginate: 10
 
 # The base URL of your site
