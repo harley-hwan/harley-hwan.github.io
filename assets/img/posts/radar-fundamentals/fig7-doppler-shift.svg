@@ -31,5 +31,5 @@
 <rect x="56" y="384" width="748" height="76" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 <text x="74" y="406" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">왕복이라 2 가 붙는다. 24 GHz 에서 1 m/s 는 160 Hz, 77 GHz 에서는 514 Hz — 짧은 파장이 더 민감하다.</text>
 <text x="74" y="425" font-size="12.5" fill="#0284c7" text-anchor="start" font-weight="700">측정되는 것은 시선 속도 v_r 뿐이다. 센서를 옆으로 지나가는 성분은 도플러에 나타나지 않는다.</text>
-<text x="74" y="444" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">부호(다가옴/멀어짐)를 구분하려면 실수 신호로는 부족하고 I/Q 두 채널이 필요하다 — 1 편의 주제다.</text>
+<text x="74" y="444" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">부호(다가옴/멀어짐)를 구분하려면 실수 신호로는 부족하고 I/Q 두 채널이 필요하다 — 이어지는 글의 주제다.</text>
 </svg>

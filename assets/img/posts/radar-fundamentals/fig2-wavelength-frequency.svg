@@ -42,6 +42,6 @@
 <text x="169.111" y="307" font-size="11" fill="#dc2626" text-anchor="start" font-weight="600">λ/2 = 1.95 mm</text>
 <rect x="56" y="326" width="748" height="78" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 <text x="74" y="348" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">암산: λ[mm] ≈ 300 / f[GHz]. 실제 c 는 299.79 이므로 오차 0.07 % — 설계 감각용으로는 충분하다.</text>
-<text x="74" y="367.5" font-size="12" fill="#dc2626" text-anchor="start" font-weight="600">빨간 선이 λ/2 — 배열 안테나의 표준 소자 간격이다. 3 편의 d_ant = 6.25 mm 가 24 GHz 의 λ/2 다.</text>
+<text x="74" y="367.5" font-size="12" fill="#dc2626" text-anchor="start" font-weight="600">빨간 선이 λ/2 — 배열 안테나의 표준 소자 간격이다. 24 GHz 배열의 소자 간격 6.25 mm 가 바로 이 값이다.</text>
 <text x="74" y="386" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">λ 는 안테나 크기(∝ λ), 빔폭(≈ λ/D), 도플러 감도(f_d = 2v/λ) 를 한꺼번에 정한다.</text>
 </svg>
