@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="438" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이다의 오차 타원은 심하게 찌그러져 있다</text>
+<circle cx="96" cy="268" r="7" fill="#1e293b" stroke="#ffffff" stroke-width="1.6"/>
+<text x="96" y="294" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">레이다</text>
+<line x1="96" y1="268" x2="320" y2="190" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt" stroke-dasharray="5 4"/>
+<ellipse cx="320.00" cy="190.00" rx="12.00" ry="46.00" fill="#dc2626" fill-opacity="0.16" stroke="#dc2626" stroke-width="2.2" transform="rotate(70.80 320.00 190.00)"/>
+<circle cx="320" cy="190" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.6"/>
+<text x="346" y="182" font-size="12" fill="#1e293b" text-anchor="start" font-weight="700">20 km</text>
+<line x1="96" y1="268" x2="640" y2="118" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt" stroke-dasharray="5 4"/>
+<ellipse cx="640.00" cy="118.00" rx="12.00" ry="96.00" fill="#dc2626" fill-opacity="0.16" stroke="#dc2626" stroke-width="2.2" transform="rotate(74.58 640.00 118.00)"/>
+<circle cx="640" cy="118" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.6"/>
+<text x="666" y="110" font-size="12" fill="#1e293b" text-anchor="start" font-weight="700">100 km</text>
+<text x="320" y="268" font-size="11.5" fill="#2563eb" text-anchor="middle" font-weight="700">σ_R = 2.3 m</text>
+<text x="320" y="286" font-size="11.5" fill="#ea580c" text-anchor="middle" font-weight="700">R·σ_θ = 67.5 m</text>
+<text x="640" y="236" font-size="11.5" fill="#2563eb" text-anchor="middle" font-weight="700">σ_R = 2.3 m</text>
+<text x="640" y="254" font-size="11.5" fill="#ea580c" text-anchor="middle" font-weight="700">R·σ_θ = 337.5 m</text>
+<text x="430" y="90" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">거리 방향은 대역폭이, 횡 방향은 빔폭이 정한다 — 그리고 횡 방향만 거리에 비례해 커진다</text>
+<text x="430" y="112" font-size="12.5" fill="#7c3aed" text-anchor="middle" font-weight="700">σ_R = ΔR / √(2·SNR)          R·σ_θ = R · θ₃dB / (k_m √(2·SNR))</text>
+<rect x="34" y="318" width="792" height="108" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="54" y="342" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">같은 표적인데 두 축의 정확도가 100 배 넘게 차이 난다. 100 km 에서는 2.3 m 대 337 m 다.</text>
+<text x="54" y="361" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">그래서 극좌표 측정을 직교좌표로 옮기면 오차가 축에 정렬되지 않는다 — R 이 비대각이 된다.</text>
+<text x="54" y="380" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">이것을 무시하고 대각 R 을 쓰면 필터가 횡 방향을 과신해 트랙이 흔들린다.</text>
+<text x="54" y="399" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">타원은 알아보기 쉽게 크게 그렸다. 실제 비율대로면 100 km 타원은 머리카락 굵기의 선분이다.</text>
+</svg>

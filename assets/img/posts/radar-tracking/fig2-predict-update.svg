@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 424" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="422" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">예측은 불확실성을 키우고, 갱신은 줄인다</text>
+<rect x="48" y="74" width="764" height="196" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<ellipse cx="150.00" cy="200.00" rx="34.00" ry="22.00" fill="#2563eb" fill-opacity="0.1" stroke="#2563eb" stroke-width="2.0" transform="rotate(-12.00 150.00 200.00)"/>
+<circle cx="150" cy="200" r="5" fill="#2563eb" stroke="#ffffff" stroke-width="1.6"/>
+<text x="150" y="246" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="700">이전 추정  x̂(k−1)</text>
+<line x1="180" y1="190" x2="384" y2="162" stroke="#64748b" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<text x="284" y="160" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="700">예측 (운동 모델 + 프로세스 잡음)</text>
+<ellipse cx="430.00" cy="152.00" rx="62.00" ry="40.00" fill="#ea580c" fill-opacity="0.1" stroke="#ea580c" stroke-width="2.0" stroke-dasharray="6 4" transform="rotate(-12.00 430.00 152.00)"/>
+<circle cx="430" cy="152" r="5" fill="#ea580c" stroke="#ffffff" stroke-width="1.6"/>
+<text x="356" y="210" font-size="12" fill="#ea580c" text-anchor="start" font-weight="700">예측  x̂(k|k−1)  — 타원이 커졌다</text>
+<ellipse cx="498.00" cy="132.00" rx="26.00" ry="16.00" fill="#dc2626" fill-opacity="0.1" stroke="#dc2626" stroke-width="2.0" transform="rotate(-12.00 498.00 132.00)"/>
+<circle cx="498" cy="132" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.6"/>
+<text x="532" y="110" font-size="12" fill="#dc2626" text-anchor="start" font-weight="700">측정  z(k)</text>
+<line x1="436" y1="148" x2="490" y2="136" stroke="#7c3aed" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-violet)"/>
+<text x="468" y="174" font-size="11.5" fill="#7c3aed" text-anchor="middle" font-weight="700">이노베이션 ν</text>
+<ellipse cx="462.00" cy="143.00" rx="24.00" ry="15.00" fill="#16a34a" fill-opacity="0.1" stroke="#16a34a" stroke-width="2.2" transform="rotate(-12.00 462.00 143.00)"/>
+<circle cx="462" cy="143" r="5" fill="#16a34a" stroke="#ffffff" stroke-width="1.6"/>
+<text x="502" y="195" font-size="12" fill="#16a34a" text-anchor="start" font-weight="700">갱신  x̂(k|k)  — 다시 작아졌다</text>
+<rect x="34" y="288" width="792" height="128" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="54" y="312" font-size="12.5" fill="#ea580c" text-anchor="start" font-weight="700">예측 :  x̂ = F x̂,   P = F P Fᵀ + Q      — Q 가 더해지므로 타원은 반드시 커진다</text>
+<text x="54" y="331" font-size="12.5" fill="#16a34a" text-anchor="start" font-weight="700">갱신 :  S = H P Hᵀ + R,   K = P Hᵀ S⁻¹,   x̂ ← x̂ + K ν,   P ← (I − K H) P</text>
+<text x="54" y="350" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">이득 K 는 두 불확실성의 비다. 예측이 정확하면 작아지고, 측정이 정확하면 커진다.</text>
+<text x="54" y="369" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">K 가 스칼라가 아니라 행렬인 이유가 여기 있다 — 축마다 어느 쪽을 믿을지가 다르다.</text>
+<text x="54" y="388" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">레이다에서는 그 차이가 극단적이다. 거리축은 측정을, 횡거리축은 예측을 믿는 쪽이 맞다 (그림 3).</text>
+</svg>

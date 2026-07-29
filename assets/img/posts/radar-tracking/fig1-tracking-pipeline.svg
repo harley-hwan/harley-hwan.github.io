@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 432" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="430" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">추적 파이프라인 — 검출 목록에서 트랙까지</text>
+<rect x="40" y="106" width="132" height="56" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.9"/>
+<rect x="40" y="106" width="132" height="56" rx="8" fill="#0284c7" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="106" y="131" font-size="12" fill="#0284c7" text-anchor="middle" font-weight="700">검출 목록</text>
+<text x="106" y="149" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">거리·각도·도플러</text>
+<rect x="202" y="106" width="132" height="56" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.9"/>
+<rect x="202" y="106" width="132" height="56" rx="8" fill="#7c3aed" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="268" y="131" font-size="12" fill="#7c3aed" text-anchor="middle" font-weight="700">좌표 변환</text>
+<text x="268" y="149" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">극 → 직교</text>
+<rect x="364" y="106" width="132" height="56" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.9"/>
+<rect x="364" y="106" width="132" height="56" rx="8" fill="#ea580c" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="430" y="131" font-size="12" fill="#ea580c" text-anchor="middle" font-weight="700">게이팅</text>
+<text x="430" y="149" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">예측 주변만 본다</text>
+<rect x="526" y="106" width="132" height="56" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.9"/>
+<rect x="526" y="106" width="132" height="56" rx="8" fill="#dc2626" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="592" y="131" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="700">연관</text>
+<text x="592" y="149" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">누가 누구인가</text>
+<rect x="688" y="106" width="132" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.9"/>
+<rect x="688" y="106" width="132" height="56" rx="8" fill="#16a34a" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="754" y="131" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="700">필터 갱신</text>
+<text x="754" y="149" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">칼만 / α-β</text>
+<line x1="174" y1="134" x2="198" y2="134" stroke="#64748b" stroke-width="2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="336" y1="134" x2="360" y2="134" stroke="#64748b" stroke-width="2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="498" y1="134" x2="522" y2="134" stroke="#64748b" stroke-width="2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="660" y1="134" x2="684" y2="134" stroke="#64748b" stroke-width="2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<rect x="526" y="240" width="132" height="56" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.9"/>
+<rect x="526" y="240" width="132" height="56" rx="8" fill="#2563eb" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="592" y="265" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="700">트랙 파일</text>
+<text x="592" y="283" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">상태 + 공분산</text>
+<line x1="754" y1="166" x2="754" y2="214" stroke="#16a34a" stroke-width="2" stroke-linecap="butt" marker-end="url(#ar-green)"/>
+<line x1="754" y1="214" x2="662" y2="214" stroke="#16a34a" stroke-width="2" stroke-linecap="butt"/>
+<line x1="662" y1="214" x2="594" y2="236" stroke="#16a34a" stroke-width="2" stroke-linecap="butt" marker-end="url(#ar-green)"/>
+<line x1="526" y1="268" x2="430" y2="268" stroke="#2563eb" stroke-width="2" stroke-linecap="butt" stroke-dasharray="5 4"/>
+<line x1="430" y1="268" x2="430" y2="166" stroke="#2563eb" stroke-width="2" stroke-linecap="butt" stroke-dasharray="5 4" marker-end="url(#ar-blue)"/>
+<text x="424" y="292" font-size="11.5" fill="#2563eb" text-anchor="end" font-weight="700">다음 프레임 예측을 게이트 중심으로</text>
+<rect x="40" y="240" width="132" height="56" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.9"/>
+<rect x="40" y="240" width="132" height="56" rx="8" fill="#ea580c" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="106" y="265" font-size="12" fill="#ea580c" text-anchor="middle" font-weight="700">신규 트랙 후보</text>
+<text x="106" y="283" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">M/N 확인 대기</text>
+<line x1="430" y1="166" x2="430" y2="268" stroke="#ea580c" stroke-width="1.8" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<line x1="430" y1="268" x2="176" y2="268" stroke="#ea580c" stroke-width="1.8" stroke-linecap="butt" stroke-dasharray="4 3" marker-end="url(#ar-orange)"/>
+<text x="438" y="262" font-size="11" fill="#ea580c" text-anchor="start" font-weight="700">게이트 밖 검출</text>
+<rect x="34" y="322" width="792" height="96" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="54" y="346" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">CPI 하나가 내놓는 것은 표적이 아니라 그 프레임의 검출 목록이다. 프레임 사이를 잇는 것이 추적이다.</text>
+<text x="54" y="365" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">문제는 셋이다 — 어느 검출이 어느 트랙인가(연관), 잡음에서 상태를 어떻게 뽑는가(필터),</text>
+<text x="54" y="384" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">그리고 트랙을 언제 만들고 언제 지우는가(관리). 필터만 잘 짜도 절반밖에 안 된다.</text>
+<text x="54" y="403" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">되먹임 고리가 핵심이다. 예측이 게이트를 만들고, 게이트가 연관을 좁히고, 연관이 다시 예측을 고친다.</text>
+</svg>
