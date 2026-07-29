@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
 <rect x="1" y="1" width="858" height="428" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
 <text x="430" y="32" font-size="16.5" fill="#1e293b" text-anchor="middle" font-weight="700">빈 사이에 있는 피크를 어떻게 찾는가</text>
-<text x="430" y="52" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">빈 폭은 0.61 m/s 인데 정밀도는 1 cm/s 다. 그 차이를 만드는 것이 보간이다.</text>
+<text x="430" y="52" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">빈 폭은 0.61 m/s 이고 정밀도는 1 cm/s 다. 이 차이를 만드는 것이 보간이다.</text>
 <rect x="52" y="86" width="372" height="250" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.4"/>
 <line x1="66" y1="295.27" x2="410" y2="295.27" stroke="#e2e8f0" stroke-width="1"/>
 <text x="62" y="299.27" font-size="9.5" fill="#64748b" text-anchor="end" font-weight="400">-25</text>
@@ -37,12 +37,12 @@
 <text x="474" y="156" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="700">세 빈으로 포물선을 맞추면</text>
 <text x="474" y="176" font-size="10.5" fill="#16a34a" text-anchor="start" font-weight="700">  → 109.745 (오차 0.015 bin)</text>
 <text x="474" y="196" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400"></text>
-<text x="474" y="216" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="700">반드시 dB(로그) 값으로 맞출 것.</text>
-<text x="474" y="236" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400">Hann 의 메인로브가 로그 영역에서</text>
-<text x="474" y="256" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400">포물선에 거의 정확히 겹치기 때문이다.</text>
+<text x="474" y="216" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="700">dB(로그) 값으로 맞춰야 한다.</text>
+<text x="474" y="236" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400">Hann 의 메인로브는 로그 영역에서</text>
+<text x="474" y="256" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400">포물선과 거의 일치한다.</text>
 <text x="474" y="276" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400"></text>
 <text x="474" y="296" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400">선형 진폭으로 맞추거나 직사각 창을</text>
 <text x="474" y="316" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400">쓰면 오차가 10배로 커진다.</text>
-<text x="430" y="372" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="600">세 점만으로 빈 간격의 60분의 1까지 짚는다 — 실측 최대 오차 0.016 bin, 9.8 mm/s.</text>
-<text x="430" y="398" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">2편의 CRLB 7.5 mm/s 와 같은 자릿수다. 즉 정밀도의 천장은 잡음이 아니라 이 보간식이다.</text>
+<text x="430" y="372" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="600">세 점으로 빈 간격의 60분의 1까지 구한다. 실측 최대 오차 0.016 bin, 9.8 mm/s.</text>
+<text x="430" y="398" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">2편의 CRLB 7.5 mm/s 와 같은 자릿수다. 정밀도의 한계는 잡음이 아니라 보간식이다.</text>
 </svg>

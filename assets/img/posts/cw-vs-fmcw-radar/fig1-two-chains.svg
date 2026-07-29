@@ -26,7 +26,7 @@
 <rect x="56" y="214" width="280" height="46" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
 <rect x="56" y="220" width="4.5" height="34" rx="2" fill="#2563eb"/>
 <text x="70" y="235.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">I/Q 불균형 보정</text>
-<text x="70" y="252" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">이미지가 −f_d 에 유령 표적으로</text>
+<text x="70" y="252" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">−f_d 에 이미지가 생긴다</text>
 <rect x="524" y="214" width="280" height="46" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
 <rect x="524" y="220" width="4.5" height="34" rx="2" fill="#ea580c"/>
 <text x="538" y="235.5" font-size="13" fill="#1e293b" text-anchor="start" font-weight="600">Range FFT — 1회</text>

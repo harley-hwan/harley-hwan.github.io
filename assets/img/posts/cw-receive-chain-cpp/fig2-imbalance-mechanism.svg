@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
 <defs><marker id="a-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="a-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="a-m" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker></defs>
 <rect x="1" y="1" width="858" height="428" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430" y="32" font-size="16.5" fill="#1e293b" text-anchor="middle" font-weight="700">왜 I/Q 불균형이 반대쪽에 유령을 세우는가</text>
-<text x="430" y="52" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">타원은 서로 반대로 도는 두 개의 원으로 정확히 분해된다.</text>
+<text x="430" y="32" font-size="16.5" fill="#1e293b" text-anchor="middle" font-weight="700">I/Q 불균형이 반대쪽에 이미지를 만드는 원리</text>
+<text x="430" y="52" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">타원은 서로 반대로 도는 두 개의 원으로 분해된다.</text>
 <rect x="44" y="78" width="200" height="200" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.4"/>
 <circle cx="144" cy="178" r="78" fill="none" stroke="#16a34a" stroke-width="2.4"/>
 <line x1="144" y1="178" x2="199.38" y2="122.62" stroke="#16a34a" stroke-width="2"/>
@@ -26,12 +26,12 @@
 <line x1="714" y1="244" x2="714" y2="108" stroke="#2563eb" stroke-width="4"/>
 <line x1="590" y1="244" x2="590" y2="198" stroke="#dc2626" stroke-width="4"/>
 <text x="714" y="102" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">표적</text>
-<text x="590" y="190" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="700">유령</text>
+<text x="590" y="190" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="700">이미지</text>
 <line x1="590" y1="198" x2="726" y2="198" stroke="#64748b" stroke-width="1" stroke-dasharray="3 2"/>
 <line x1="722" y1="198" x2="722" y2="108" stroke="#64748b" stroke-width="1.4" marker-start="url(#a-m)" marker-end="url(#a-m)"/>
 <text x="728" y="157" font-size="9.8" fill="#1e293b" text-anchor="start" font-weight="700">27.9 dB</text>
 <text x="652" y="70" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">그 결과 스펙트럼</text>
-<text x="652" y="298" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">역방향 원이 −f_d 에 선을 세운다</text>
-<text x="430" y="382" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="600">유령이 −f_d 에 서는 이유가 이것이다 — 불균형이 만든 역방향 성분은 "같은 속도로 멀어지는 표적"과 수학적으로 구별되지 않는다.</text>
-<text x="430" y="406" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">이득 0.5 dB · 위상 3° 면 작은 원의 반지름이 큰 원의 4% — 그것이 27.9 dB 차이다.</text>
+<text x="652" y="298" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">역방향 원이 −f_d 에 나타난다</text>
+<text x="430" y="382" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="600">불균형이 만든 역방향 성분은 같은 속도로 멀어지는 표적과 구별되지 않는다.</text>
+<text x="430" y="406" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">이득 0.5 dB, 위상 3° 이면 작은 원의 반지름이 큰 원의 4% 이고, 27.9 dB 차이가 된다.</text>
 </svg>
