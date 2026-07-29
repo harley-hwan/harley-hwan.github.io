@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="378" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이더에서 쓰는 단위의 폭 — 10²⁴ 배를 한 축에 놓으면</text>
+<line x1="80" y1="152" x2="820" y2="152" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-axis)"/>
+<line x1="96" y1="145" x2="96" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="96" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">p</text>
+<text x="96" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10⁻¹²</text>
+<line x1="184" y1="145" x2="184" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="184" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">n</text>
+<text x="184" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10⁻⁹</text>
+<line x1="272" y1="145" x2="272" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="272" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">µ</text>
+<text x="272" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10⁻⁶</text>
+<line x1="360" y1="145" x2="360" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="360" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">m</text>
+<text x="360" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10⁻³</text>
+<line x1="448" y1="145" x2="448" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="448" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">—</text>
+<text x="448" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10⁰</text>
+<line x1="536" y1="145" x2="536" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="536" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">k</text>
+<text x="536" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10³</text>
+<line x1="624" y1="145" x2="624" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="624" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">M</text>
+<text x="624" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10⁶</text>
+<line x1="712" y1="145" x2="712" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="712" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">G</text>
+<text x="712" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10⁹</text>
+<line x1="800" y1="145" x2="800" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="800" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">T</text>
+<text x="800" y="177" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10¹²</text>
+<line x1="104.83" y1="188" x2="104.83" y2="210" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<circle cx="104.83" cy="188" r="4.5" fill="#7c3aed" stroke="none" stroke-width="0"/>
+<text x="104.83" y="226" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">수신 전력</text>
+<text x="104.83" y="242" font-size="12.5" fill="#7c3aed" text-anchor="middle" font-weight="700">2 pW</text>
+<line x1="272" y1="188" x2="272" y2="210" stroke="#ea580c" stroke-width="1.5" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<circle cx="272" cy="188" r="4.5" fill="#ea580c" stroke="none" stroke-width="0"/>
+<text x="272" y="226" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">펄스 폭</text>
+<text x="272" y="242" font-size="12.5" fill="#ea580c" text-anchor="middle" font-weight="700">1 µs</text>
+<line x1="392.176" y1="188" x2="392.176" y2="210" stroke="#16a34a" stroke-width="1.5" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<circle cx="392.176" cy="188" r="4.5" fill="#16a34a" stroke="none" stroke-width="0"/>
+<text x="392.176" y="226" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">파장 λ</text>
+<text x="392.176" y="242" font-size="12.5" fill="#16a34a" text-anchor="middle" font-weight="700">12.5 mm</text>
+<line x1="752.486" y1="188" x2="752.486" y2="210" stroke="#dc2626" stroke-width="1.5" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<circle cx="752.486" cy="188" r="4.5" fill="#dc2626" stroke="none" stroke-width="0"/>
+<text x="752.486" y="226" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">반송파</text>
+<text x="752.486" y="242" font-size="12.5" fill="#dc2626" text-anchor="middle" font-weight="700">24 GHz</text>
+<line x1="184" y1="116" x2="184" y2="94" stroke="#0284c7" stroke-width="1.5" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<circle cx="184" cy="116" r="4.5" fill="#0284c7" stroke="none" stroke-width="0"/>
+<text x="184" y="88" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">샘플 주기</text>
+<text x="184" y="74" font-size="12.5" fill="#0284c7" text-anchor="middle" font-weight="700">1 ns</text>
+<line x1="585.836" y1="116" x2="585.836" y2="94" stroke="#2563eb" stroke-width="1.5" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<circle cx="585.836" cy="116" r="4.5" fill="#2563eb" stroke="none" stroke-width="0"/>
+<text x="585.836" y="88" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">표본화 fs</text>
+<text x="585.836" y="74" font-size="12.5" fill="#2563eb" text-anchor="middle" font-weight="700">50 kHz</text>
+<rect x="56" y="286" width="748" height="78" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="74" y="308" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">빛은 1 ns 에 30 cm, 1 µs 에 300 m 간다. 레이더는 왕복이므로 절반 —</text>
+<text x="74" y="327.5" font-size="13" fill="#dc2626" text-anchor="start" font-weight="700">1 µs ↔ 150 m. 이 환산 하나면 펄스 폭·거리·표본화율의 감각이 한꺼번에 잡힌다.</text>
+<text x="74" y="347" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">같은 신호 안에 pW 의 수신 전력과 GHz 의 반송파가 함께 있다 — 접두어 없이는 표에 적을 수조차 없다.</text>
+</svg>
