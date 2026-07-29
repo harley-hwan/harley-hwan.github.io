@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 510" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
 <defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
 <rect x="1" y="1" width="858" height="508" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">전파 대역 구분(ITU)과 레이더 밴드 지정(IEEE)</text>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">전파 대역 구분(ITU)과 레이다 밴드 지정(IEEE)</text>
 <text x="76" y="68" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">ITU 대역 — 국제 표준, 전 스펙트럼</text>
 <rect x="76" y="102" width="90" height="42" rx="3" fill="#64748b" stroke="#ffffff" stroke-width="1.2" fill-opacity="0.16"/>
 <text x="121" y="120" font-size="12.5" fill="#64748b" text-anchor="middle" font-weight="700">VLF</text>
@@ -49,7 +49,7 @@
 <text x="706" y="175" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">30 GHz</text>
 <line x1="796" y1="151" x2="796" y2="161" stroke="#94a3b8" stroke-width="1.3" stroke-linecap="butt"/>
 <text x="796" y="175" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">300 GHz</text>
-<text x="76" y="238" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">IEEE Std 521 레이더 밴드</text>
+<text x="76" y="238" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">IEEE Std 521 레이다 밴드</text>
 <text x="234" y="238" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">1 GHz 위를 다시 쪼갠 것 — 축이 다르다</text>
 <rect x="76" y="282" width="87.4974" height="40" rx="3" fill="#2563eb" stroke="#ffffff" stroke-width="1.2" fill-opacity="0.16"/>
 <text x="119.749" y="307" font-size="13" fill="#2563eb" text-anchor="middle" font-weight="700">L</text>
@@ -106,7 +106,7 @@
 <circle cx="592.837" cy="322" r="3.6" fill="#7c3aed" stroke="none" stroke-width="0"/>
 <text x="592.837" y="383" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">60 산소</text>
 <rect x="56" y="418" width="748" height="78" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-<text x="74" y="440" font-size="12.5" fill="#7c3aed" text-anchor="start" font-weight="700">보라 점선은 대기 흡수선 — 22.2 GHz 는 수증기, 60 GHz 는 산소. 장거리 레이더는 이 위를 피한다.</text>
+<text x="74" y="440" font-size="12.5" fill="#7c3aed" text-anchor="start" font-weight="700">보라 점선은 대기 흡수선 — 22.2 GHz 는 수증기, 60 GHz 는 산소. 장거리 레이다는 이 위를 피한다.</text>
 <text x="74" y="459" font-size="12" fill="#1e293b" text-anchor="start" font-weight="600">K 밴드가 Ku(under)와 Ka(above)로 갈라진 이유가 22.2 GHz 흡수선이다. 24 GHz ISM 은 그 바로 위에 있다.</text>
 <text x="74" y="477.5" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">NATO/EU 의 A–M 밴드 지정은 완전히 다른 체계다. IEEE 의 X 밴드와 NATO 의 X 밴드는 같은 대역이 아니다.</text>
 </svg>

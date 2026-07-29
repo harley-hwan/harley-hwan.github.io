@@ -1,12 +1,12 @@
 ---
-title: 레이더 센서 신호 처리 및 검증 툴 (MFC)
+title: 레이다 센서 신호 처리 및 검증 툴 (MFC)
 description: MFC 프로그래밍을 통한 raw 데이터 시각화 툴 개발
 date: 2022-03-07 10:00:00 +0900
 slug: 'RadarSensorProj'
 categories: [Dev, Radar]
 tags: [radar, radar-sensor, mfc, signal-processing, visualization]
 ---
-- 프로젝트명: 레이더센서 신호 처리 및 검증 툴 (MFC 프로그래밍)
+- 프로젝트명: 레이다센서 신호 처리 및 검증 툴 (MFC 프로그래밍)
 
 ---
 

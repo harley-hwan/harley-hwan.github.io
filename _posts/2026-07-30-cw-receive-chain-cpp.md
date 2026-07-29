@@ -16,7 +16,7 @@ math: true
 
 실제 구현할 코드는 C++이지만, 개념을 설명할 때는 표현이 간결한 Python을 함께 쓰겠다.
 
-> 이 글의 숫자는 모두 아래 코드를 실행해서 얻은 값이다. 참값을 아는 합성 신호로 측정했기 때문에 오차를 그대로 확인할 수 있다. 실제 센서 측정치는 아니다.
+> 이 글의 숫자는 모두 아래 코드를 실행해서 얻은 값이다. 참값을 아는 합성 신호로 측정했기 때문에 오차를 그대로 확인할 수 있다. 실제 센서 측정치는 아니다. 신호를 만드는 코드는 [부록](#부록-합성-신호-만들기)에 있으니 표를 직접 재현해 볼 수 있다.
 {: .prompt-tip }
 
 * * *
@@ -41,13 +41,28 @@ struct Config {
 
 | 값 | 식 | 결과 |
 | :--- | :--- | ---: |
-| 코히어런트 관측 시간 $T$ | $N/f_s$ | 10.24 ms |
+| 코히어런트 관측 시간 $T$ | $N_\mathrm{FFT}/f_s$ | 10.24 ms |
 | 빈 폭 | $1/T$ | 97.66 Hz |
 | 속도 분해능 $\Delta v$ | $\lambda/2T$ | 0.610 m/s |
 | 비모호 속도 | $\lambda f_s/4$ | ±156.25 m/s |
 | 프레임 간격 | hop$/f_s$ | 2.56 ms |
 
 512 샘플은 임의로 고른 값이 아니다. 2편에서 공의 감속으로 관측 시간 상한이 17 ms가 되고, 스핀 측대역을 구분하려면 1 ms 이상이 필요하다고 했다. 10.24 ms는 그 사이에 들어가는 길이다.
+
+> **기호 하나만 짚고 간다**: 이 글의 $N_\mathrm{FFT}$는 프레임 길이, 곧 FFT 길이 512다. 2편에서 $N$은 **chirp 하나당 샘플 수**를 뜻했는데, CW에는 chirp가 없으므로 같은 글자라도 가리키는 대상이 다르다. 2편의 $N$에 해당하는 것은 이 글에 아예 없다 — 접지 않기 때문이다.
+{: .prompt-warning }
+
+체인 전체는 이 순서로 돌아간다. 이후 절이 각 줄을 하나씩 설명한다.
+
+```cpp
+remove_dc(x);                     // 3절 — 거리 게이트가 없으니 0 Hz 부터 지운다
+apply_iq(x, estimate_iq(x));      // 4절 — 찌그러진 궤적을 원으로 되돌린다
+apply_window(x, w);               // 5절 — 잘린 양 끝을 0 으로 만든다
+fft(x);                           // 2절 — 복소 FFT 한 번이 곧 도플러 스펙트럼
+// 이후: magnitude_db -> 검출(7절) -> 포물선 보간(6절) -> 채널 위상차(8절)
+```
+
+앞의 세 줄은 순서를 바꾸면 안 된다. 왜 안 되는지는 3절과 5절에서 하나씩 나온다.
 
 * * *
 
@@ -146,6 +161,11 @@ x = i + 1j*q_fixed
 ```
 
 ```cpp
+struct IqGain {
+    double gain    = 1.0;   // I 대비 Q 의 이득비
+    double sin_psi = 0.0;   // 직교 오차 sin ψ
+};
+
 inline IqGain estimate_iq(const std::vector<cf>& x) {
     double pii = 0, pqq = 0, piq = 0;
     for (const auto& s : x) {
@@ -163,7 +183,15 @@ inline IqGain estimate_iq(const std::vector<cf>& x) {
     }
     return k;
 }
+
+inline void apply_iq(std::vector<cf>& x, const IqGain& k) {
+    const double norm = std::sqrt(1.0 - k.sin_psi * k.sin_psi);   // 위에서 ±0.9 로 clamp 했다
+    for (auto& s : x)
+        s = cf{ s.real(), (s.imag() * k.gain - k.sin_psi * s.real()) / norm };
+}
 ```
+
+`gain`은 상관계수의 척도 불변성 덕분에 먼저 곱해도 `sin_psi` 추정값을 흔들지 않는다. 그래서 두 보정을 한 줄에 이어 붙일 수 있다.
 
 이 추정은 DC를 제거한 뒤에 해야 한다. 누설이 남아 있으면 그 DC가 $E[I^2]$와 $E[IQ]$를 지배해서 추정값이 표적이 아니라 클러터를 따라간다.
 
@@ -225,6 +253,8 @@ inline void apply_window(std::vector<cf>& x, const std::vector<double>& w) {
 
 직사각 창은 12 빈 떨어져도 8.6 dB 오차가 난다. 약한 표적이 아니라 강한 표적의 누설을 측정하고 있다. 3 빈에서는 Hann도 9.8 dB 오차가 나는데, 이건 사이드로브가 아니라 메인로브가 겹치는 영역이라 창으로 해결할 수 없다.
 
+3 빈 행만은 숫자를 그대로 믿으면 안 된다. Hann의 메인로브가 약 4 빈이라 두 표적이 겹쳐 있고, 겹친 자리에서는 두 성분이 **벡터로** 더해지므로 측정값이 상대 위상에 따라 오르내린다. 같은 조건에서 위상만 한 바퀴 돌려 보면 −51 dB에서 −36 dB까지 15 dB가 움직인다. 반면 12 빈 Hann은 같은 스윕에서 0.2 dB밖에 안 흔들린다. 3 빈 행은 "창으로는 안 된다"는 방향만 읽고, 값은 12 빈 쪽을 믿는 것이 맞다.
+
 대가도 있다. Hann은 메인로브가 넓어서 표적이 빈 사이에 있으면 피크가 낮아진다. 빈 정중앙에서 1.42 dB이고, 스캘롭 손실이라고 부른다. 진폭을 절대값으로 써야 한다면 이 손실을 보정해야 하고, 속도만 필요하면 무시해도 된다.
 
 순서를 정리하면, DC 제거가 창보다 먼저다. 창을 먼저 걸면 DC가 창의 모양대로 퍼져서, 그다음에 평균을 빼도 이미 퍼진 성분은 되돌릴 수 없다.
@@ -252,7 +282,13 @@ const double delta = (std::abs(denom) < 1e-12) ? 0.0
 
 변수 이름이 `db`인 것이 중요하다. 선형 진폭이 아니라 로그 진폭에 포물선을 맞춰야 한다. Hann 창의 메인로브는 로그 영역에서 포물선과 거의 일치한다.
 
-주파수 추정 문헌에서 자주 인용되는 Jacobsen 추정기는 복소값을 그대로 쓰는 식이라 그냥 가져다 쓰기 쉬운데, 창에 따라 결과가 달라진다.
+주파수 추정 문헌에서 자주 인용되는 Jacobsen 추정기는 dB로 바꿀 것도 없이 복소값을 그대로 넣는 한 줄이라 가져다 쓰기 쉽다.
+
+$$
+\delta = -\,\mathrm{Re}\!\left[\frac{X_{k+1} - X_{k-1}}{2X_k - X_{k-1} - X_{k+1}}\right]
+$$
+
+그런데 창에 따라 결과가 달라진다.
 
 | 창 + 추정기 | 최대 오차 |
 | :--- | ---: |
@@ -271,17 +307,39 @@ Jacobsen 추정기는 직사각 창을 전제로 유도된 식이라 Hann에 쓰
 2편에서 순서를 정리했다. 1/f 잡음은 프레임마다 같은 모양으로 나타나는 정적 성분이라 빈 상태에서 미리 측정해 나누고, 적응 문턱은 그 위에 적용한다.
 
 ```cpp
-for (int k = 0; k < n; ++k) {
-    const int km = (k - 1 + n) % n, kp = (k + 1) % n;
-    if (!(db[k] > db[km] && db[k] >= db[kp])) continue;   // 국소 최대만
+struct Detection {
+    double bin;        // 보간된 실수 빈 위치
+    double velocity;   // [m/s]
+    double snr_db;     // 참조 셀 평균 대비
+};
 
-    double sum = 0; int cnt = 0;
-    for (int j = guard + 1; j <= guard + ref; ++j) {      // 보호 셀은 건너뛴다
-        sum += db[(k - j + n) % n] + db[(k + j) % n];
-        cnt += 2;
+// db    : magnitude_db() 출력, 길이 n_fft
+// guard : 보호 셀 수 (Hann 메인로브 폭), ref : 한쪽 참조 셀 수
+std::vector<Detection> detect(const std::vector<double>& db, const Config& cfg,
+                              int guard, int ref, double threshold_db) {
+    std::vector<Detection> out;
+    const int n = int(db.size());
+
+    for (int k = 0; k < n; ++k) {
+        const int km = (k - 1 + n) % n, kp = (k + 1) % n;
+        if (!(db[k] > db[km] && db[k] >= db[kp])) continue;   // 국소 최대만
+
+        double sum = 0; int cnt = 0;
+        for (int j = guard + 1; j <= guard + ref; ++j) {      // 보호 셀은 건너뛴다
+            sum += db[(k - j + n) % n] + db[(k + j) % n];
+            cnt += 2;
+        }
+        const double floor_db = sum / cnt;
+        if (db[k] - floor_db < threshold_db) continue;
+
+        const double denom = db[km] - 2 * db[k] + db[kp];     // 6절 포물선 보간
+        const double delta = (std::abs(denom) < 1e-12) ? 0.0
+                                                       : 0.5 * (db[km] - db[kp]) / denom;
+        const double bin = k + delta;
+        const double hz  = (bin >= n / 2.0 ? bin - n : bin) * cfg.fs / n;   // 2절 빈 매핑
+        out.push_back({ bin, hz * cfg.lambda / 2.0, db[k] - floor_db });
     }
-    if (db[k] - sum / cnt < threshold_db) continue;
-    // ... 포물선 보간 뒤 Detection 채우기
+    return out;
 }
 ```
 
@@ -351,7 +409,7 @@ inline double calibrated_diff(cf a, cf b, double offset) {
 
 오프셋은 알려진 방위에 기준 표적을 두고 측정한다. 세션 시작과 한 시간 뒤의 값을 기록해두면 각도 사양을 온도 조건과 함께 적을 수 있다.
 
-세 채널을 'ㄴ' 자로 배치하고 수평·수직 위상차에서 스핀축을 구하는 방법은 [3채널 레이더 센서로 스핀축 계산하기](/posts/cpp-3-channel-radar-sensor-spin-axis-calculation/)에 정리해두었다.
+세 채널을 'ㄴ' 자로 배치하고 수평·수직 위상차에서 스핀축을 구하는 방법은 [3채널 레이다 센서로 스핀축 계산하기](/posts/cpp-3-channel-radar-sensor-spin-axis-calculation/)에 정리해두었다.
 
 * * *
 
@@ -391,6 +449,8 @@ fft(x);                           // 2절
 이 코드로 확인할 수 없는 것도 있다. 합성 신호에는 실제 믹서의 1/f 잡음도, 프레임마다 모양이 달라지는 이동 클러터도, 온도에 따라 변하는 채널 오프셋도 없다. 2편 마지막 절에서 잡음 바닥, I–Q 궤적, 채널 간 위상 오프셋 세 가지를 실측해야 한다고 적은 이유가 이것이고, 이 셋은 장비에서만 측정할 수 있다.
 
 여기까지가 한 프레임이다. 다음 글에서는 프레임을 시간축으로 이어 붙이는 부분을 다룰 예정이다. STFT로 얻은 추정치를 궤적으로 묶고, 임팩트 시점으로 역외삽하고, 프레임 사이에서 표적을 추적하는 문제다.
+
+시리즈 전체 지도는 [목차](/posts/radar-series-index/)에 있다.
 
 * * *
 
@@ -451,6 +511,46 @@ inline std::vector<double> magnitude_db(const std::vector<cf>& X) {
     return m;
 }
 ```
+
+* * *
+
+## 부록: 합성 신호 만들기
+
+본문의 표를 직접 재현하려면 입력 신호가 있어야 한다. 참값을 아는 신호를 만드는 코드가 이것이다.
+
+```python
+import numpy as np
+
+FS, N, LAM, D = 50_000.0, 512, 0.0125, 0.00625
+n = np.arange(N)
+
+def synth(targets, gain_db=0.5, psi_deg=3.0, dc=30.0, noise=1e-3, ch=0, seed=0):
+    """targets: [(속도[m/s], 진폭, 방위각[deg]), ...],  ch: 채널 번호 (0 이 기준)"""
+    rng = np.random.default_rng(seed)
+    x = np.zeros(N, dtype=complex)
+    for v, amp, az in targets:
+        fd   = 2 * v / LAM                                        # 도플러
+        dphi = ch * 2 * np.pi * D * np.sin(np.deg2rad(az)) / LAM   # 채널 간 위상차
+        x += amp * np.exp(1j * (2 * np.pi * fd * n / FS + dphi))
+
+    x += dc                                                        # TX 누설 + 정지 클러터
+    x += noise * (rng.normal(size=N) + 1j * rng.normal(size=N)) / np.sqrt(2)
+
+    g, psi = 10 ** (gain_db / 20), np.deg2rad(psi_deg)             # I/Q 불균형 주입
+    i0, q0 = x.real, x.imag
+    return i0 + 1j * g * (q0 * np.cos(psi) + i0 * np.sin(psi))
+
+# 9절의 프레임 — 공 67 m/s @ +6°, 클럽 45 m/s @ −4° (공보다 8 dB 약하게)
+targets = [(67.0, 1.0, 6.0), (45.0, 10 ** (-8 / 20), -4.0)]
+chans   = [synth(targets, ch=c, seed=7) for c in range(3)]
+```
+
+불균형 주입식이 4절 보정식의 정확한 역이다. $q = g\,(q_0\cos\psi + i_0\sin\psi)$로 넣으면 `estimate_iq`가 $1/g$와 $\sin\psi$를 되찾고, `apply_iq`가 $q_0$를 복원한다. 그래서 "보정이 듣는다"는 것이 우연이 아니라는 것까지 확인할 수 있다.
+
+3절의 DC 노치 손실표는 표적 하나만 넣고 `dc=0`, `noise=0`, `gain_db=0`, `psi_deg=0`으로 두면 그대로 나온다. 6절의 보간 오차표는 톤 하나를 정수 빈에서 −0.5부터 +0.5까지 밀면서 최대 오차를 재면 된다.
+
+> **한 가지만 주의**: 5절의 누설 표에서 3 빈 행은 이 코드로도 그대로 나오지 않는다. 메인로브가 겹치는 영역이라 두 톤의 상대 위상에 따라 값이 15 dB까지 움직이기 때문이다. 6 빈과 12 빈 행은 위상을 어떻게 두어도 0.2 dB 안에서 재현된다.
+{: .prompt-warning }
 
 * * *
 

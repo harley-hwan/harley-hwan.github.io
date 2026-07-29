@@ -10,7 +10,7 @@
 <marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker>
 </defs>
 <rect x="1" y="1" width="858" height="538" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430.0" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">실전 예시 — FMCW 레이더에서 IQ 데이터가 정보가 되기까지</text>
+<text x="430.0" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">실전 예시 — FMCW 레이다에서 IQ 데이터가 정보가 되기까지</text>
 <rect x="40" y="58" width="380" height="210" rx="12" fill="#fcfdfe" stroke="#e2e8f0" stroke-width="1.6"/>
 <text x="230.0" y="82" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">① chirp 송신 → 지연된 에코 수신</text>
 <line x1="74" y1="234" x2="396" y2="234" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-axis)"/>
@@ -54,7 +54,7 @@
 <line x1="740" y1="102" x2="764" y2="102" stroke="#ea580c" stroke-width="2.6" stroke-linecap="butt"/>
 <text x="770" y="106" font-size="11.5" fill="#ea580c" text-anchor="start" font-weight="700">Q</text>
 <line x1="430.0" y1="276" x2="430.0" y2="306" stroke="#64748b" stroke-width="2.2" stroke-linecap="butt" marker-end="url(#ar-slate)"/>
-<text x="442.0" y="296" font-size="11.5" fill="#64748b" text-anchor="start">N 샘플 × M chirp 저장 (레이더 데이터 큐브)</text>
+<text x="442.0" y="296" font-size="11.5" fill="#64748b" text-anchor="start">N 샘플 × M chirp 저장 (레이다 데이터 큐브)</text>
 <rect x="40" y="312" width="170" height="168" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.7"/>
 <text x="125.0" y="336" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">③ Range FFT</text>
 <line x1="62" y1="420" x2="188" y2="420" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="butt" marker-end="url(#ar-axis)"/>

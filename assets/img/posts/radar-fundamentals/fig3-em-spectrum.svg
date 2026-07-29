@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
 <defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
 <rect x="1" y="1" width="858" height="398" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">전자기 스펙트럼 — 레이더가 쓰는 자리</text>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">전자기 스펙트럼 — 레이다가 쓰는 자리</text>
 <rect x="62" y="126" width="287" height="52" rx="3" fill="#2563eb" stroke="#ffffff" stroke-width="1.2" fill-opacity="0.2"/>
 <text x="205.5" y="157" font-size="12.5" fill="#2563eb" text-anchor="middle" font-weight="700">전파 (Radio)</text>
 <rect x="349" y="126" width="127.424" height="52" rx="3" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" fill-opacity="0.2"/>
@@ -47,7 +47,7 @@
 <line x1="247.45" y1="232" x2="247.45" y2="223" stroke="#dc2626" stroke-width="2.2" stroke-linecap="butt"/>
 <line x1="349.012" y1="232" x2="349.012" y2="223" stroke="#dc2626" stroke-width="2.2" stroke-linecap="butt"/>
 <line x1="298.231" y1="232" x2="298.231" y2="242" stroke="#dc2626" stroke-width="1.6" stroke-linecap="butt"/>
-<text x="298.231" y="258" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="700">레이더 대부분 (1–300 GHz)</text>
+<text x="298.231" y="258" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="700">레이다 대부분 (1–300 GHz)</text>
 <rect x="56" y="300" width="748" height="84" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 <text x="74" y="322" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">경계는 관례다 — 문헌마다 조금씩 다르고, 인접 대역은 서로 겹친다.</text>
 <text x="74" y="341" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">우주선(cosmic ray)은 이 그림에 없다. 전자기파가 아니라 고에너지 입자(양성자·원자핵)이기 때문이다.</text>

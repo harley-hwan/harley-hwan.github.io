@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 432" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
+<rect x="1" y="1" width="858" height="430" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이다 한 장 요약 — 각 절이 이 그림의 어디에 붙는가</text>
+<rect x="34" y="202" width="102" height="58" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.9"/>
+<rect x="34" y="202" width="102" height="58" rx="9" fill="#2563eb" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="85" y="226" font-size="12.5" fill="#2563eb" text-anchor="middle" font-weight="700">발진기 (LO)</text>
+<text x="85" y="244" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">f₀ = 24 GHz</text>
+<text x="85" y="281" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">5절 파장 · 6절 밴드</text>
+<rect x="149" y="202" width="102" height="58" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="1.9"/>
+<rect x="149" y="202" width="102" height="58" rx="9" fill="#ea580c" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="200" y="226" font-size="12.5" fill="#ea580c" text-anchor="middle" font-weight="700">송신 증폭</text>
+<text x="200" y="244" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">P_t</text>
+<text x="200" y="281" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">7절 dB · 8절 듀티</text>
+<rect x="264" y="202" width="102" height="58" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="1.9"/>
+<rect x="264" y="202" width="102" height="58" rx="9" fill="#ea580c" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="315" y="226" font-size="12.5" fill="#ea580c" text-anchor="middle" font-weight="700">안테나</text>
+<text x="315" y="244" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">이득 G</text>
+<text x="315" y="281" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">5절 소자 간격 λ/2</text>
+<rect x="379" y="202" width="102" height="58" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="1.9"/>
+<rect x="379" y="202" width="102" height="58" rx="9" fill="#7c3aed" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="430" y="226" font-size="12.5" fill="#7c3aed" text-anchor="middle" font-weight="700">직교 복조</text>
+<text x="430" y="244" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">I / Q</text>
+<text x="430" y="281" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">1편에서 다룬다</text>
+<rect x="494" y="202" width="102" height="58" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="1.9"/>
+<rect x="494" y="202" width="102" height="58" rx="9" fill="#16a34a" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="545" y="226" font-size="12.5" fill="#16a34a" text-anchor="middle" font-weight="700">ADC</text>
+<text x="545" y="244" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">f_s = 50 kHz</text>
+<text x="545" y="281" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">1절 단위 · 4절 16진수</text>
+<rect x="609" y="202" width="102" height="58" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="1.9"/>
+<rect x="609" y="202" width="102" height="58" rx="9" fill="#16a34a" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="660" y="226" font-size="12.5" fill="#16a34a" text-anchor="middle" font-weight="700">FFT · 검출</text>
+<text x="660" y="244" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">스펙트럼</text>
+<text x="660" y="281" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">7절 dB · 9절 도플러</text>
+<rect x="724" y="202" width="102" height="58" rx="9" fill="#ffffff" stroke="#1e293b" stroke-width="1.9"/>
+<rect x="724" y="202" width="102" height="58" rx="9" fill="#1e293b" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="775" y="226" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">속도 · 각도</text>
+<text x="775" y="244" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">출력</text>
+<text x="775" y="281" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">2편 · 3편</text>
+<line x1="137" y1="231" x2="147" y2="231" stroke="#64748b" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="252" y1="231" x2="262" y2="231" stroke="#64748b" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="482" y1="231" x2="492" y2="231" stroke="#64748b" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="597" y1="231" x2="607" y2="231" stroke="#64748b" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="712" y1="231" x2="722" y2="231" stroke="#64748b" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="367" y1="231" x2="377" y2="231" stroke="#2563eb" stroke-width="2.2" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<path d="M85.0,260 L85.0,300 L430.0,300 L430.0,263" fill="none" stroke="#2563eb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#ar-blue)"/>
+<text x="257.5" y="315" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">같은 발진기가 기준파 노릇도 한다 (호모다인) — 2편 4절 레인지 상관의 근거</text>
+<rect x="411" y="78" width="176" height="54" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="1.9"/>
+<rect x="411" y="78" width="176" height="54" rx="9" fill="#dc2626" stroke="none" stroke-width="0" fill-opacity="0.07"/>
+<text x="499" y="102" font-size="12.5" fill="#dc2626" text-anchor="middle" font-weight="700">표적</text>
+<text x="499" y="120" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">거리 R, 속도 v, RCS σ</text>
+<path d="M325.0,198 C355.0,132 353.0,198 408.0,112" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-orange)"/>
+<text x="381" y="152" font-size="11.5" fill="#ea580c" text-anchor="middle" font-weight="700">송신</text>
+<path d="M408.0,96 C341.0,118 285.0,106 301.0,198" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-blue)"/>
+<text x="253" y="152" font-size="11.5" fill="#2563eb" text-anchor="middle" font-weight="700">에코</text>
+<text x="52" y="180" font-size="12" fill="#1e293b" text-anchor="start" font-weight="700">왕복이 남기는 것: 지연 τ = 2R/c,  도플러 f_d = 2v/λ,  감쇠 R⁻⁴</text>
+<line x1="545" y1="164" x2="545" y2="198" stroke="#dc2626" stroke-width="1.7" stroke-linecap="butt" stroke-dasharray="4 3" marker-end="url(#ar-red)"/>
+<text x="556" y="186" font-size="10.5" fill="#dc2626" text-anchor="start" font-weight="700">잡음 바닥 kT₀B — 2절</text>
+<rect x="34" y="334" width="792" height="76" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="54" y="358" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">이 글은 이 그림을 읽는 데 필요한 눈금을 맞추는 데까지만 간다. 블록 안에서 벌어지는 일은 1편부터다.</text>
+<text x="54" y="379" font-size="12.5" fill="#7c3aed" text-anchor="start" font-weight="700">가장 자주 되돌아오는 값 셋 — 1 µs ↔ 150 m,  24 GHz 에서 1 m/s = 160 Hz,  −174 dBm/Hz</text>
+<text x="54" y="398" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">굵은 화살표만 따라가면 송신 → 표적 → 수신 → 디지털 → 출력이 한 줄이다. 나머지는 그 위에 얹히는 제약이다.</text>
+</svg>

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
 <defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
 <rect x="1" y="1" width="858" height="378" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이더에서 쓰는 단위의 폭 — 10²⁴ 배를 한 축에 놓으면</text>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이다에서 쓰는 단위의 폭 — 10²⁴ 배를 한 축에 놓으면</text>
 <line x1="80" y1="152" x2="820" y2="152" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-axis)"/>
 <line x1="96" y1="145" x2="96" y2="159" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
 <text x="96" y="136" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">p</text>
@@ -55,7 +55,7 @@
 <text x="585.836" y="88" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">표본화 fs</text>
 <text x="585.836" y="74" font-size="12.5" fill="#2563eb" text-anchor="middle" font-weight="700">50 kHz</text>
 <rect x="56" y="286" width="748" height="78" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-<text x="74" y="308" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">빛은 1 ns 에 30 cm, 1 µs 에 300 m 간다. 레이더는 왕복이므로 절반 —</text>
+<text x="74" y="308" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">빛은 1 ns 에 30 cm, 1 µs 에 300 m 간다. 레이다는 왕복이므로 절반 —</text>
 <text x="74" y="327.5" font-size="13" fill="#dc2626" text-anchor="start" font-weight="700">1 µs ↔ 150 m. 이 환산 하나면 펄스 폭·거리·표본화율의 감각이 한꺼번에 잡힌다.</text>
 <text x="74" y="347" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">같은 신호 안에 pW 의 수신 전력과 GHz 의 반송파가 함께 있다 — 접두어 없이는 표에 적을 수조차 없다.</text>
 </svg>
