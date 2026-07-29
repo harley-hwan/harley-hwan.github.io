@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 424" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="422" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">PRF 체제 — 거리와 속도 중 무엇을 접을 것인가</text>
+<text x="335" y="74" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">비모호 거리 (로그축)</text>
+<text x="665" y="74" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">비모호 속도 (로그축)</text>
+<text x="196" y="124" font-size="12.5" fill="#1e293b" text-anchor="end" font-weight="700">저 PRF  1 kHz</text>
+<rect x="210" y="108" width="250" height="26" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="210" y="108" width="222.885" height="26" rx="0" fill="#16a34a" stroke="none" stroke-width="1.6" fill-opacity="0.3"/>
+<line x1="432.885" y1="104" x2="432.885" y2="138" stroke="#16a34a" stroke-width="2.2" stroke-linecap="butt"/>
+<text x="426.885" y="126" font-size="11.5" fill="#16a34a" text-anchor="end" font-weight="700">149.9 km</text>
+<rect x="540" y="108" width="250" height="26" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="540" y="108" width="19.0865" height="26" rx="0" fill="#dc2626" stroke="none" stroke-width="1.6" fill-opacity="0.3"/>
+<line x1="559.087" y1="104" x2="559.087" y2="138" stroke="#dc2626" stroke-width="2.2" stroke-linecap="butt"/>
+<text x="567.087" y="126" font-size="11.5" fill="#dc2626" text-anchor="start" font-weight="700">±7.9 m/s</text>
+<text x="196" y="186" font-size="12.5" fill="#1e293b" text-anchor="end" font-weight="700">중 PRF  10 kHz</text>
+<rect x="210" y="170" width="250" height="26" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="210" y="170" width="132.923" height="26" rx="0" fill="#ea580c" stroke="none" stroke-width="1.6" fill-opacity="0.3"/>
+<line x1="342.923" y1="166" x2="342.923" y2="200" stroke="#ea580c" stroke-width="2.2" stroke-linecap="butt"/>
+<text x="336.923" y="188" font-size="11.5" fill="#ea580c" text-anchor="end" font-weight="700">15 km</text>
+<rect x="540" y="170" width="250" height="26" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="540" y="170" width="115.111" height="26" rx="0" fill="#ea580c" stroke="none" stroke-width="1.6" fill-opacity="0.3"/>
+<line x1="655.111" y1="166" x2="655.111" y2="200" stroke="#ea580c" stroke-width="2.2" stroke-linecap="butt"/>
+<text x="649.111" y="188" font-size="11.5" fill="#ea580c" text-anchor="end" font-weight="700">±78.9 m/s</text>
+<text x="196" y="248" font-size="12.5" fill="#1e293b" text-anchor="end" font-weight="700">고 PRF  200 kHz</text>
+<rect x="210" y="232" width="250" height="26" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="210" y="232" width="15.8461" height="26" rx="0" fill="#dc2626" stroke="none" stroke-width="1.6" fill-opacity="0.3"/>
+<line x1="225.846" y1="228" x2="225.846" y2="262" stroke="#dc2626" stroke-width="2.2" stroke-linecap="butt"/>
+<text x="233.846" y="250" font-size="11.5" fill="#dc2626" text-anchor="start" font-weight="700">0.75 km</text>
+<rect x="540" y="232" width="250" height="26" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="540" y="232" width="240.109" height="26" rx="0" fill="#16a34a" stroke="none" stroke-width="1.6" fill-opacity="0.3"/>
+<line x1="780.109" y1="228" x2="780.109" y2="262" stroke="#16a34a" stroke-width="2.2" stroke-linecap="butt"/>
+<text x="774.109" y="250" font-size="11.5" fill="#16a34a" text-anchor="end" font-weight="700">±1577.9 m/s</text>
+<line x1="417.065" y1="98" x2="417.065" y2="268" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="butt" stroke-dasharray="5 4"/>
+<text x="417.065" y="284" font-size="11.5" fill="#7c3aed" text-anchor="middle" font-weight="700">표적 100 km</text>
+<line x1="710.841" y1="98" x2="710.841" y2="268" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="butt" stroke-dasharray="5 4"/>
+<text x="710.841" y="284" font-size="11.5" fill="#7c3aed" text-anchor="middle" font-weight="700">표적 300 m/s</text>
+<rect x="34" y="322" width="792" height="96" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="54" y="346" font-size="12.5" fill="#16a34a" text-anchor="start" font-weight="700">저 PRF 는 거리를 그대로 보지만 300 m/s 가 19 바퀴 접혀 +0.2 m/s 로 읽힌다.</text>
+<text x="54" y="365" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">고 PRF 는 속도를 그대로 보지만 100 km 표적이 750 m 짜리 창에 133 바퀴 접힌다.</text>
+<text x="54" y="384" font-size="12.5" fill="#ea580c" text-anchor="start" font-weight="700">중 PRF 는 양쪽 다 접히는 대신 어느 쪽도 심하지 않다. PRF 를 여러 개 섞어 해모호한다.</text>
+<text x="54" y="403" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">PRF 를 고르는 일은 성능 조절이 아니라 어느 축을 포기할지 정하는 일이다.</text>
+</svg>

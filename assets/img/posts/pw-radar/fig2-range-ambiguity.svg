@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 424" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="422" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">거리 모호성 — 두 번째 주기에 도착한 에코는 가까운 표적으로 읽힌다</text>
+<line x1="62" y1="112" x2="792" y2="112" stroke="#94a3b8" stroke-width="1.7" stroke-linecap="butt" marker-end="url(#ar-axis)"/>
+<text x="50" y="116" font-size="11.5" fill="#64748b" text-anchor="end" font-weight="700">송신</text>
+<rect x="82" y="68" width="20" height="44" rx="0" fill="#ea580c" stroke="none" stroke-width="1.6" fill-opacity="0.25"/>
+<path d="M82.0,112 L82.0,68 L102.0,68 L102.0,112" fill="none" stroke="#ea580c" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="60" font-size="11.5" fill="#ea580c" text-anchor="middle" font-weight="700">#1</text>
+<rect x="310" y="68" width="20" height="44" rx="0" fill="#ea580c" stroke="none" stroke-width="1.6" fill-opacity="0.25"/>
+<path d="M310.0,112 L310.0,68 L330.0,68 L330.0,112" fill="none" stroke="#ea580c" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="320" y="60" font-size="11.5" fill="#ea580c" text-anchor="middle" font-weight="700">#2</text>
+<rect x="538" y="68" width="20" height="44" rx="0" fill="#ea580c" stroke="none" stroke-width="1.6" fill-opacity="0.25"/>
+<path d="M538.0,112 L538.0,68 L558.0,68 L558.0,112" fill="none" stroke="#ea580c" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="548" y="60" font-size="11.5" fill="#ea580c" text-anchor="middle" font-weight="700">#3</text>
+<line x1="62" y1="236" x2="792" y2="236" stroke="#94a3b8" stroke-width="1.7" stroke-linecap="butt" marker-end="url(#ar-axis)"/>
+<text x="50" y="240" font-size="11.5" fill="#64748b" text-anchor="end" font-weight="700">수신</text>
+<text x="806" y="240" font-size="12" fill="#64748b" text-anchor="start" font-weight="700">t</text>
+<rect x="173.2" y="200" width="15" height="36" rx="0" fill="#16a34a" stroke="none" stroke-width="1.6" fill-opacity="0.28"/>
+<path d="M173.2,236 L173.2,200 L188.2,200 L188.2,236" fill="none" stroke="#16a34a" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180.2" y="190" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="700">A</text>
+<path d="M92.0,118 C133.2,164 149.2,166 175.2,196" fill="none" stroke="#16a34a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-green)"/>
+<rect x="401.656" y="200" width="15" height="36" rx="0" fill="#dc2626" stroke="none" stroke-width="1.6" fill-opacity="0.28"/>
+<path d="M401.656,236 L401.656,200 L416.656,200 L416.656,236" fill="none" stroke="#dc2626" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="408.656" y="190" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="700">B</text>
+<path d="M92.0,118 C203.2,152 331.656,208 403.656,196" fill="none" stroke="#dc2626" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#ar-red)"/>
+<text x="332.8" y="160" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="700">B 는 #1 의 에코인데 #2 가 나간 뒤 도착한다</text>
+<line x1="62" y1="316" x2="792" y2="316" stroke="#94a3b8" stroke-width="1.7" stroke-linecap="butt"/>
+<text x="50" y="320" font-size="11.5" fill="#64748b" text-anchor="end" font-weight="700">겉보기</text>
+<line x1="82" y1="308" x2="82" y2="324" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="butt"/>
+<text x="82" y="340" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">0</text>
+<text x="294" y="340" font-size="11" fill="#64748b" text-anchor="end" font-weight="400">149.9 km</text>
+<line x1="310" y1="308" x2="310" y2="324" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="butt"/>
+<text x="310" y="340" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">0</text>
+<line x1="538" y1="308" x2="538" y2="324" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="butt"/>
+<text x="538" y="340" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">0</text>
+<line x1="180.2" y1="242" x2="180.2" y2="306" stroke="#16a34a" stroke-width="1.4" stroke-linecap="butt" stroke-dasharray="4 3" marker-end="url(#ar-green)"/>
+<text x="168.2" y="300" font-size="11.5" fill="#16a34a" text-anchor="end" font-weight="700">A → 60.0 km</text>
+<line x1="408.656" y1="242" x2="408.656" y2="306" stroke="#dc2626" stroke-width="1.4" stroke-linecap="butt" stroke-dasharray="4 3" marker-end="url(#ar-red)"/>
+<text x="420.656" y="300" font-size="11.5" fill="#dc2626" text-anchor="start" font-weight="700">B → 60.1 km (실제 210 km)</text>
+<rect x="34" y="358" width="792" height="54" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="54" y="382" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">두 표적이 정확히 같은 거리 빈에 들어온다. 한 PRF 만으로는 구분할 방법이 원리적으로 없다.</text>
+<text x="54" y="401" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">PRF 를 바꿔 다시 재면 A 는 그 자리에, B 는 다른 자리로 옮겨간다 — 4절의 다중 PRF 해모호.</text>
+</svg>

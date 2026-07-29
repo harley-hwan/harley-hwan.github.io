@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="438" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이다 데이터 큐브 — 축 하나가 처리 단계 하나다</text>
+<polygon points="250,116 362,50 662,50 550,116" fill="#0284c7" stroke="#cbd5e1" stroke-width="1.5" fill-opacity="0.2"/>
+<polygon points="550,116 662,50 662,200 550,266" fill="#2563eb" stroke="#cbd5e1" stroke-width="1.5" fill-opacity="0.2"/>
+<polygon points="250,116 550,116 550,266 250,266" fill="#7c3aed" stroke="#cbd5e1" stroke-width="1.5" fill-opacity="0.14"/>
+<path d="M250,116 L550,116 L550,266 L250,266 Z" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250,116 L362,50 L662,50 L550,116 Z" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M550,116 L662,50 L662,200 L550,266 Z" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="310" y1="116" x2="310" y2="266" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt"/>
+<line x1="370" y1="116" x2="370" y2="266" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt"/>
+<line x1="430" y1="116" x2="430" y2="266" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt"/>
+<line x1="490" y1="116" x2="490" y2="266" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt"/>
+<line x1="250" y1="153.5" x2="550" y2="153.5" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt"/>
+<line x1="250" y1="191" x2="550" y2="191" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt"/>
+<line x1="250" y1="228.5" x2="550" y2="228.5" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt"/>
+<line x1="228" y1="116" x2="228" y2="266" stroke="#7c3aed" stroke-width="2.2" stroke-linecap="butt" marker-end="url(#ar-violet)"/>
+<text x="218" y="191" font-size="12" fill="#7c3aed" text-anchor="middle" font-weight="700" transform="rotate(-90 218 191)">거리 게이트 (fast-time)</text>
+<text x="200" y="193" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400" transform="rotate(-90 200 193)">9,900</text>
+<line x1="250" y1="288" x2="550" y2="288" stroke="#2563eb" stroke-width="2.2" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<text x="400" y="308" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="700">펄스 (slow-time) — 128</text>
+<line x1="562" y1="122" x2="666" y2="60" stroke="#0284c7" stroke-width="2.2" stroke-linecap="butt" marker-end="url(#ar-sky)"/>
+<text x="674" y="62" font-size="12" fill="#0284c7" text-anchor="start" font-weight="700">채널 — 4</text>
+<text x="628" y="122" font-size="12.5" fill="#7c3aed" text-anchor="start" font-weight="700">① 펄스 압축</text>
+<text x="628" y="137" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">fast-time 방향 정합필터</text>
+<text x="628" y="156" font-size="12.5" fill="#2563eb" text-anchor="start" font-weight="700">② Doppler FFT</text>
+<text x="628" y="171" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">slow-time 방향 128점 FFT</text>
+<text x="628" y="190" font-size="12.5" fill="#0284c7" text-anchor="start" font-weight="700">③ 빔포밍 · 모노펄스</text>
+<text x="628" y="205" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">채널 방향 위상 비교</text>
+<text x="628" y="224" font-size="12.5" fill="#16a34a" text-anchor="start" font-weight="700">④ CFAR 검출</text>
+<text x="628" y="239" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">거리–도플러 2차원 맵 위에서</text>
+<rect x="34" y="320" width="792" height="100" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="54" y="344" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">큐브 하나 = 9,900 × 128 × 4 × 8 B = 40.6 MB, CPI 128 ms. 코너 턴만으로 634 MB/s 가 돈다.</text>
+<text x="54" y="363" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">펄스 압축은 100 탭이라 시간 영역이면 4.0 GMAC/s 다. FFT 곱셈으로 바꾸면 훨씬 싸다.</text>
+<text x="54" y="382" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">Doppler FFT 는 펄스 압축의 3.5 % 밖에 안 된다. 병목은 연산이 아니라 메모리 접근 패턴이다.</text>
+<text x="54" y="401" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">축을 바꿀 때마다 stride 가 바뀐다 — 큐브 레이아웃 결정이 이 코드에서 가장 중요한 설계다.</text>
+</svg>
