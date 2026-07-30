@@ -1,11 +1,11 @@
 ---
-title: "(Radar) 1. 레이다 센서의 IQ 신호 이해하기"
+title: "(Radar) 5. 레이다 센서의 IQ 신호 이해하기"
 description: "레이다 수신 신호를 I/Q 두 직교 성분으로 표현하는 이유와 원리를 그림과 함께 정리한다 — 위상 정보, 직교 복조 하드웨어, 도플러 부호 판별, 그리고 CW·FMCW가 그 IQ를 각각 어떻게 쓰는지까지."
-date: 2025-04-15 10:00:00 +0900
+date: 2025-04-19 10:00:00 +0900
 slug: 'radar-IQ-signal'
 categories: [Dev, Radar]
 series: radar
-series_order: 1
+series_order: 5
 tags: [radar, iq-signal, quadrature, doppler, cw-radar, fmcw, phase, signal-processing, sensor, radar-sensor]
 math: true
 ---
