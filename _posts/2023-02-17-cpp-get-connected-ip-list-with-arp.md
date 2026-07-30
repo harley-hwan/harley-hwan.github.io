@@ -1,15 +1,19 @@
 ---
 title: "(C++) 현재 연결된 IP 목록 뽑아보기 (arp)"
-description: "c++, linux, command, arp, system, ip, serverip"
+description: "같은 망의 장비 IP를 찾으려고 arp 출력을 파싱하다 'Too many open files'에 막혔다. system → popen → fork/exec를 거치며 계속 같은 에러가 났고, 결국 프로세스를 안 띄우는 방향으로 돌아선 기록이다."
 date: 2023-02-17 10:00:00 +0900
 categories: [Dev, C++]
-tags: [c-language, cpp, linux, command, arp, system, ip, serverip]
+tags: [c-language, cpp, linux, command, arp, system, ip, serverip, file-descriptor, proc]
 ---
-## 내용
+## 하려던 것
 
-system() 함수를 이용하여 arp -a 커맨드를 실행하여 나오는 출력물을 텍스트 파일에 입력하고, 그 결과를 다시 불러와 ip 주소들만 뽑아서 ip_list를 뽑는 코드를 짜보았다.
+보드에서 도는 프로그램이 같은 망에 붙어 있는 다른 장비의 IP를 찾아야 했다. 장비는 DHCP로 주소를 받으니 고정 IP를 박아둘 수 없다. 브로드캐스트로 찾는 프로토콜을 따로 만들 수도 있었지만, 이미 통신이 오간 상대라면 ARP 테이블에 남아 있으니 그걸 읽으면 된다고 봤다.
 
-<br/>
+결과부터 적으면, 처음 세 가지 방법은 다 같은 에러에 막혔고 마지막에 접근을 바꿔서 해결했다.
+
+## 1차: system() + 파일 리다이렉션
+
+제일 먼저 떠오른 방법이다. 명령 결과를 파일로 뽑고 그 파일을 읽는다.
 
 ```c++
 std::vector<std::string> getE6ServerIP()
@@ -37,140 +41,25 @@ std::vector<std::string> getE6ServerIP()
     ip_list.pop_back();
     
 	ifs.close();
-    if (ifs.is_open()) {
-        std::cerr << "ifs not closed!" << std::endl;
-        ifs.close();
-    }
-
 	return ip_list;
 }
 ```
 
- 이 함수는 시스템 명령어 "arp -a"를 사용하여 로컬 네트워크의 IP 주소 목록을 가져와서 해당 IP 주소 목록을 std::vector<std::string>으로 반환한다.
+`arp -a`의 출력에서 IP가 괄호 안에 있다는 걸 이용해, 구분자를 `(`와 `)`로 준 `getline`으로 잘라낸다.
 
-함수 내부의 동작은 다음과 같다.
+돌아가긴 했는데 마음에 안 드는 부분이 세 개 있었다.
 
-- std::vector<std::string> ip_list를 초기화
-- "arp -a > /home/pi/test/e6/ip.txt" 명령어를 사용하여 IP 주소 목록을 /home/pi/test/e6/ip.txt 파일에 저장
-- /home/pi/test/e6/ip.txt 파일을 열고, 파일이 성공적으로 열렸는지 확인
-- 파일을 끝까지 읽어들여서, 각 줄에서 IP 주소를 추출하여 std::vector<std::string> ip_list에 추가
-- 마지막에 추가된 빈 문자열을 제거
-- 파일을 닫는다.
-- std::vector<std::string> ip_list를 반환
+`while (!ifs.eof())`는 마지막에 한 번 더 돈다. `eof()`는 읽기가 실패한 다음에야 참이 되기 때문에, 마지막 줄을 읽은 직후에는 아직 거짓이다. 그래서 빈 문자열이 하나 더 들어가고, 그걸 지우려고 `ip_list.pop_back()`을 붙였다. 증상을 원인 자리에서 고치지 않고 결과에서 지우는 코드라 계속 걸렸다. 실제로 파일 끝에 개행이 없으면 이 `pop_back`이 멀쩡한 IP를 지운다.
 
-<br/>
+임시 파일 경로가 코드에 박혀 있는 것도 문제였다. 그 디렉토리가 없으면 리다이렉션이 실패하고, `ifs.open`도 실패해서 빈 목록이 나온다. 원인은 안 보인다.
 
-함수의 동작을 설명했지만, 이 코드는 몇 가지 주의사항이 있다.
+그리고 파일을 거치니 명령 실행과 읽기 사이에 디스크가 낀다. 보드의 SD 카드에 초당 한 번씩 쓰는 것도 별로다.
 
-- 시스템 명령어를 사용하여 외부 명령어를 실행하는 것은 보안 취약점을 야기할 수 있으므로 이 함수를 사용하는 경우 취약점에 대한 위험을 인식하고, 보안 조치를 취해야한다.
-- 파일을 여는 경우, 파일을 정상적으로 닫아야한다. 이 함수는 파일을 열고 난 뒤 파일을 닫는 것을 처리하고 있지만, 파일을 열지 못하는 경우 파일을 닫지 않는 문제가 있다.
-- 이 문제를 해결하기 위해서는 파일을 열지 못한 경우, 반드시 파일을 닫아야한다. 
-- 이를 위해 ifs.is_open()을 사용하여 파일이 열려있는지 확인하고, 파일을 열었을 때에만 파일을 닫도록 수정하는 것이 좋다.
+## 2차: popen
+
+파일을 안 거치도록 바꿨다.
 
 ```c++
-std::vector<std::string> getE6ServerIP()
-{
-    std::vector<std::string> ip_list;
-    std::string ip;
-    system("arp -a > /home/pi/test/e6/ip.txt");
-
-    std::ifstream ifs("/home/pi/test/e6/ip.txt");
-    if (!ifs.is_open()) 
-    {
-        std::cerr << "Can't open ip log file" << std::endl;
-        return ip_list;
-    }
-
-    while (getline(ifs, ip, '(') && getline(ifs, ip, ')')) 
-    {
-        ip_list.push_back(ip);
-        std::string line;
-        getline(ifs, line, '\n');
-    }
-    ip_list.pop_back();
-    
-    ifs.close();
-    if (ifs.is_open()) {
-        std::cerr << "ifs not closed!" << std::endl;
-        ifs.close();
-    }
-    return ip_list;
-}
-```
-
-<br/>
-
-<br/>
-
-#### 그러면 위 코드의 보안 취약점을 보완하려면 어떻게 해야할까?
-
-위 코드에서 system 함수를 사용하여 시스템 명령어를 실행하는 부분이 보안 취약점을 야기할 수 있는 부분이다.
-따라서 이를 보완하기 위해서는 system 함수 대신에 안전하게 명령어를 실행할 수 있는 다른 방법을 사용해야한다.
-
-예를 들어, popen 함수를 사용하면 시스템 명령어를 실행할 수 있다.
-popen 함수는 명령어 실행 결과를 파일로 저장하는 것이 아니라, 파이프로 전달하여 프로그램에서 읽어올 수 있도록 한다.
-
-따라서, system 함수 대신에 popen 함수를 사용하여 arp -a 명령어를 실행하고, 그 결과에서 IP 주소를 추출하는 방법으로 보안 취약점을 보완할 수 있다.
-이 경우, popen 함수에서 실행한 프로세스가 끝나지 않은 경우에는 pclose 함수를 사용하여 강제 종료시켜야 한다.
-
-아래는 popen 함수를 사용하여 arp -a 명령어를 실행하고 IP 주소를 추출하는 예시 코드이다.
-
-```c++
-std::vector<std::string> getIPListFromARP()
-{
-    std::vector<std::string> ip_list;
-
-    // 시스템 명령어로 arp -a 실행
-    std::string command = "arp -a";
-    std::array<char, 128> buffer;
-    std::string result;
-    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
-    if (!pipe) {
-        throw std::runtime_error("popen() failed!");
-    }
-    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
-        result += buffer.data();
-    }
-
-    // 결과에서 IP 주소 추출
-    std::smatch match;
-    std::regex re("\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b");
-    std::string::const_iterator searchStart(result.cbegin());
-    while (std::regex_search(searchStart, result.cend(), match, re)) {
-        ip_list.push_back(match.str());
-        searchStart = match.suffix().first;
-    }
-
-    return ip_list;
-}
-
-```
-
-<br/>
-
-위 코드에서는 std::array와 std::unique_ptr를 사용하여 시스템 명령어 실행 결과를 문자열로 읽어오고, std::regex를 사용하여 IP 주소를 추출한다. 
-함수 호출 시 std::vector<std::string> 형태로 IP 주소 목록을 반환한다.
-
-이렇게 함으로써 system 함수로 인해 발생할 수 있는 보안 취약점을 해결할 수 있다.
-
-<br/>
-
-만약 C++11 이전 버전의 컴파일러를 사용하고 있다면, 'std::unique_ptr' 가 정상적으로 작동하지 않는다.
-
-이를 해결하려면, 컴파일러를 C++11 이상으로 업그레이드하거나, C++11 이상의 표준 라이브러리를 사용해야 한다.
-
-만약 업그레이드가 불가능하다면 다음과 같이 'unique_ptr'을 대신할 수 있는 다른 방법을 사용할 수 있다.
-
-코드는 아래와 같다.
-
-<br/>
-
-```c++
-#include <cstdio>
-#include <memory>
-#include <stdexcept>
-#include <string>
-
 std::string exec(const char* cmd) {
     char buffer[128];
     std::string result = "";
@@ -182,567 +71,269 @@ std::string exec(const char* cmd) {
     pclose(pipe);
     return result;
 }
-
 ```
 
-<br/>
-
-- 위의 코드에서 exec 함수는 주어진 명령어를 실행하고, 실행 결과를 문자열로 반환한다.
-- popen 및 pclose 함수를 사용하여 프로세스를 실행하고, fgets 함수를 사용하여 결과를 읽어온다.
-- 마지막으로, pclose 함수를 사용하여 프로세스를 종료한다.
-
-<br/>
-
-위 코드를 실행하면 아래와 같은 결과가 출력되는데,
-
-```text
-? (192.168.8.114) at <incomplete> on wlan0
-? (192.168.8.152) at 88:36:6c:fc:2c:4f [ether] on wlan0
-```
-
-<br/>
-
-진짜 사용할 부분은 '(', ')' 사이의 ip 주소 목록이기 때문에, 괄호 안의 ip 주소들만 std::vector<std::string> list 형태로 뽑아내보자.
-
-<br/>
-
-### 풀소스
+출력에서 괄호 안만 뽑는다.
 
 ```c++
-#include <iostream>
-#include <vector>
-#include <string>
-#include <cstdio>
-
-std::string exec(const char* cmd) {
-    char buffer[128];
-    std::string result = "";
-    FILE* pipe = popen(cmd, "r");
-    if (!pipe) throw std::runtime_error("popen() failed!");
-    while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
-        result += buffer;
-    }
-    pclose(pipe);
-    return result;
-}
-
 std::vector<std::string> getIPList() {
     std::vector<std::string> ip_list;
     std::string arpOutput = exec("arp -a");
-    std::string delimiter = " ";
-    size_t pos = 0;
-    std::string token;
-    while ((pos = arpOutput.find(delimiter)) != std::string::npos) {
-        token = arpOutput.substr(0, pos);
-        if (token.find("incomplete") == std::string::npos) {
-            size_t start_pos = token.find("(");
-            size_t end_pos = token.find(")");
-            if (start_pos != std::string::npos && end_pos != std::string::npos && end_pos > start_pos) {
-                std::string ip = token.substr(start_pos + 1, end_pos - start_pos - 1);
-                ip_list.push_back(ip);
-            }
+
+    size_t pos_left, pos_right;
+    while ((pos_left = arpOutput.find("(")) != std::string::npos) {
+        pos_right = arpOutput.find(")", pos_left);
+        if (pos_right != std::string::npos) {
+            ip_list.push_back(arpOutput.substr(pos_left + 1, pos_right - pos_left - 1));
         }
-        arpOutput.erase(0, pos + delimiter.length());
+        arpOutput.erase(0, pos_right + 1);
     }
     return ip_list;
 }
-
-int main() {
-    std::vector<std::string> ip_list = getIPList();
-
-    // ip_list 출력
-    for (const auto& ip : ip_list) {
-        std::cout << ip << std::endl;
-    }
-
-    return 0;
-}
 ```
 
-<br/>
+임시 파일이 없어졌고 `pop_back` 같은 보정도 없어졌다. `popen`을 쓰는 방법 자체는 [Linux Command pipe로 변수값으로 끌고오기](/posts/cpp-linux-command-pipe-to-variable/)에 따로 정리해뒀다.
 
-위의 소스를 이용해 뽑은 ip가 없을 때, "wasipEmpty"가 출력되도록 조치해두고,
+여기에도 함정이 하나 남아 있다. 닫는 괄호를 못 찾으면 `pos_right`가 `npos`이고, `erase(0, npos + 1)`은 `npos + 1 == 0`이라 아무것도 안 지운다. 그러면 같은 위치를 계속 찾아서 무한 루프다. 출력이 중간에 잘리면 프로그램이 멈춘다.
 
-while 문으로 반복해서 실행하다 보니 아래와 같은 에러가 반복적으로 발생했다.
+## 그리고 막혔다
+
+이 함수를 1초마다 호출하는 루프에 넣고 한참 돌려놨더니 이런 게 찍히기 시작했다.
 
 ```text
 /proc/net/arp: Too many open files
 wasipEmpty
 ```
 
-<br/>
+한 번이 아니라 그 뒤로 계속이었다. IP가 안 나오니 `wasipEmpty`가 따라 붙는다.
 
-에러 메시지 "/proc/net/arp: Too many open files"는 파일 디스크립터(fd)를 더 이상 열 수 없다는 의미이다.
+처음엔 이 메시지가 내 프로그램 것인 줄 알았다. 아니었다. `arp` 명령이 `/proc/net/arp`를 열려다 실패해서 자기가 찍은 것이다. 즉 **자식 프로세스가 파일을 못 열고 있다**.
 
-이 오류는 리눅스 시스템에서 열 수 있는 파일 디스크립터의 개수를 초과하였을 때 발생하는 경우가 많다.
+자식은 부모의 파일 디스크립터 테이블을 그대로 물려받는다. 부모가 열어둔 게 한도까지 차 있으면 자식은 새로 열 게 없다. 그러니 실제로 새는 쪽은 내 프로그램이었다.
 
-해결 방법으로는 다음과 같은 것들이 있다.
+## 3차: fork/exec를 직접
 
-<br/>
-
-#### 1. 파일 디스크립터 제한 해제
-
-리눅스 시스템은 각 프로세스가 열 수 있는 파일 디스크립터 수를 제한한다.
-
-이 한계를 초과하면 파일 디스크립터를 더 이상 열 수 없게 되어서 해당 오류가 발생한다.
-
-이 경우에는 파일 디스크립터 제한을 해제해 주어야 한다.
-
-파일 디스크립터 제한을 해제하려면, 다음과 같이 ulimit 명령을 사용하여 제한을 늘리거나, /etc/security/limits.conf 파일에 해당 유저 또는 그룹에 대한 설정을 추가하여 제한을 해제할 수 있다.
-
-```bash
-ulimit -n 10000 # 파일 디스크립터 개수를 10000으로 늘림
-```
-
-<br/>
-
-#### 2. 파일 디스크립터를 닫아주기
-
-프로그램이 실행되는 동안 열린 파일 디스크립터를 모두 닫아주지 않으면 이러한 에러가 발생할 수 있다.
-이 경우에는 파일 디스크립터를 닫아주는 코드를 추가하여 해결할 수 있다.
-
-close() 함수를 사용하여 열린 파일 디스크립터를 닫아줄 수 있다.
-
-만약 소켓이나 파일 등을 열었을 때 해당 파일 디스크립터를 변수에 저장해 두었다면, 프로그램이 더 이상 해당 파일 디스크립터를 사용하지 않게 될 때 close() 함수를 호출하여 닫아주어야 한다.
-
-<br/>
-
-그래서 아래와 같이 수정해보았다.
-
-<br/>
-
-<br/>
-
-### 풀소스 2
+셸을 안 거치면 나아질까 싶어서 파이프를 직접 짰다.
 
 ```c++
-#include <iostream>
-#include <string>
-#include <vector>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/wait.h>
-
-using namespace std;
-
 vector<string> getARPList() {
     vector<string> ip_list;
 
     int my_pipe[2];
     const char* arguments[] = {"arp", "-a", NULL}; 
 
-    if(pipe(my_pipe) == -1)
-    {
+    if(pipe(my_pipe) == -1) {
         fprintf(stderr, "Error creating pipe\n");
         return ip_list;
     }
 
-    pid_t child_id;
-    child_id = fork();
-    if(child_id == -1)
-    {
+    pid_t child_id = fork();
+    if(child_id == -1) {
         fprintf(stderr, "Fork error\n");
         return ip_list;
     }
     if(child_id == 0) // child process
     {
-        close(my_pipe[0]); // child doesn't read
-        dup2(my_pipe[1], 1); // redirect stdout
-
+        close(my_pipe[0]);
+        dup2(my_pipe[1], 1);
         execvp(arguments[0], const_cast<char**>(arguments));
-
         fprintf(stderr, "Exec failed\n");
         exit(1);
     }
     else
     {
-        close(my_pipe[1]); // parent doesn't write
+        close(my_pipe[1]);
 
         char* reading_buf = new char[1024];
         char *ptr=reading_buf;
-        while(read(my_pipe[0], ptr, 1) > 0)
-        {
+        while(read(my_pipe[0], ptr, 1) > 0) {
             ptr++;
         }
-
         (*ptr)='\0';
-        char *line=strtok(reading_buf,"\n"); // skip
 
-        while(line)
-        {
-            // 괄호 안의 IP 주소 추출
+        char *line=strtok(reading_buf,"\n");
+        while(line) {
             char* ip_start = strstr(line, "(");
             if(ip_start) {
                 char* ip_end = strstr(ip_start, ")");
                 if(ip_end) {
-                    string ip_address(ip_start + 1, ip_end - ip_start - 1);
-                    ip_list.push_back(ip_address);
+                    ip_list.push_back(string(ip_start + 1, ip_end - ip_start - 1));
                 }
             }
-
             line=strtok(NULL,"\n");
         }
 
         delete[] reading_buf;
         close(my_pipe[0]);
-        waitpid(child_id, NULL, 0); // wait for child process to terminate
+        waitpid(child_id, NULL, 0);
     }
 
     return ip_list;
 }
-
-int main() {
-    while (1)
-    {
-        vector<string> arp_list = getARPList();
-        for (int i = 0; i < arp_list.size(); i++) {
-            cout << arp_list[i] << endl;
-        }
-        sleep(1);
-    }
-    return 0;
-}
 ```
 
-<br/>
-
-해당 코드는 ARP 테이블에서 IP 주소 목록을 뽑아 출력하는 코드이다.
-
-우선 getARPList 함수는 ARP 테이블 정보를 받아오기 위해 arp 명령어를 실행시키고, 명령어 실행 결과를 파이프로부터 읽어와서 처리한다. 
-
-이를 위해 pipe, fork, dup2, execvp, waitpid 함수를 사용한다.
-
-<br/>
-
-pipe 함수는 파이프를 생성하고, fork 함수는 새로운 프로세스를 만든다.
-
-자식 프로세스는 execvp 함수를 이용해 arp 명령어를 실행하고, 결과를 파이프에 출력한다. 
-
-부모 프로세스는 파이프로부터 읽어온 결과를 처리하고, 자식 프로세스가 종료될 때까지 대기한다.
-
-<br/>
-
-읽어온 결과를 처리할 때는 먼저 문자열 버퍼를 만들고, strtok 함수를 이용해 한 줄씩 읽어온다. 
-
-이 때, IP 주소는 괄호로 둘러싸여 있으므로 괄호 안의 문자열만 추출한다. 
-
-추출한 IP 주소는 std::vector<std::string>에 추가한다.
-
-마지막으로 자식 프로세스에서 열린 파일 디스크립터를 닫아준다.
-
-<br/>
-
-<br/>
-
-#### 위의 코드를 이용했을 때도 아래의 에러가 발생하였다.
+결과는 같았다.
 
 ```text
 /proc/net/arp: Too many open files
 /proc/net/arp: Too many open files
 /proc/net/arp: Too many open files
-/proc/net/arp: Too many open files
-/proc/net/arp: Too many open files
 ```
 
-<br/>
+당시에는 여기서 원인을 못 찾고 다른 방향으로 돌아섰다. 지금 다시 보면 확인해봤어야 할 게 몇 가지 있다.
 
-이유를 모르겠다... 다른 방법을 또 찾아보자.
+## 지금이라면 이렇게 확인한다
 
-그래서 앞에서 만든 popen 방식의 getIPListFromARP 함수로 돌아가 다시 테스트해보았다.
+파일 디스크립터가 새는지는 세어보면 바로 안다. 리눅스는 프로세스가 연 것들을 파일로 보여준다.
 
-이 코드는 시스템 명령어로 arp -a를 실행하고 그 결과에서 IP 주소를 추출하는 방식으로 ARP 테이블을 가져오는데, 다시 보니 몇 가지 문제점이 있다.
-
-1. 명령어 실행 결과가 운영체제나 버전에 따라 다를 수 있음.
-2. 명령어 실행에 따른 보안 문제 가능성이 존재함
-3. 명령어 실행에 따른 오버헤드가 존재함
-
-이 문제점들은 다음과 같이 해결이 가능한데..
-
-1. ARP 테이블을 직접 가져오는 방식을 사용
-2. 적절한 권한과 제한된 범위 내에서 명령어를 실행하도록 구현
-3. ARP 테이블을 직접 가져오므로 오버헤드 없음
-
-따라서 'getIPListFromARP' 함수를 다음과 같이 수정할 수 있다.
-
-```c++
-std::vector<std::string> E6Client::getIPListFromARP()
-{
-    std::vector<std::string> ip_list;
-
-    struct ifaddrs *ifaddr, *ifa;
-    int family, s;
-
-    if (getifaddrs(&ifaddr) == -1) {
-        perror("getifaddrs");
-        return ip_list;
-    }
-
-    for (ifa = ifaddr; ifa != nullptr; ifa = ifa->ifa_next) {
-        if (ifa->ifa_addr == nullptr) {
-            continue;
-        }
-
-        family = ifa->ifa_addr->sa_family;
-
-        if (family == AF_PACKET && ifa->ifa_flags & IFF_LOOPBACK) {
-            continue;
-        }
-
-        if (family == AF_INET) {
-            s = socket(AF_INET, SOCK_DGRAM, 0);
-            if (s == -1) {
-                perror("socket");
-                continue;
-            }
-
-            struct arpreq arp;
-            memset(&arp, 0, sizeof(arp));
-            arp.arp_pa.sa_family = AF_INET;
-            arp.arp_ha.sa_family = AF_UNSPEC;
-            struct sockaddr_in *addr = (struct sockaddr_in *)ifa->ifa_addr;
-            memcpy(&arp.arp_pa.sa_data, &addr->sin_addr, sizeof(addr->sin_addr));
-
-            if (ioctl(s, SIOCGARP, &arp) == 0) {
-                struct sockaddr_in *hwaddr = (struct sockaddr_in *)&arp.arp_ha;
-                char ip[INET_ADDRSTRLEN];
-                inet_ntop(AF_INET, &addr->sin_addr, ip, sizeof(ip));
-                ip_list.push_back(ip);
-            }
-
-            close(s);
-        }
-    }
-
-    freeifaddrs(ifaddr);
-
-    return ip_list;
-}
+```bash
+ls /proc/<pid>/fd | wc -l
 ```
 
-<br/>
+이걸 몇 분 간격으로 찍어서 늘어나면 새는 것이고, 일정하면 다른 문제다. 뭐가 열려 있는지는 `ls -l /proc/<pid>/fd`나 `lsof -p <pid>`로 보인다. 소켓인지 파이프인지 파일인지가 나오니 어느 코드가 범인인지 좁혀진다.
 
-<br/>
+현재 한도는 이걸로 본다.
 
-추가로 코드의 안정성을 높이기 위해 아래와 같이 몇 가지 수정하였다.
-
-1. 예외 처리 추가
-코드 실행 중 예외가 발생할 수 있는 부분에서 적절한 예외 처리를 추가해야 한다. 예를 들어, socket 함수 호출이 실패했을 때는 perror 함수로 에러 메시지를 출력하고 다음 작업으로 넘어가야 한다.
-
-2. 리소스 누수 방지
-socket 함수로 생성한 소켓 디스크립터를 close 함수로 반드시 닫아주어야 한다. 따라서 getIPListFromARP 함수에서 소켓 디스크립터를 생성하고 사용한 후에는 close 함수로 닫아주어야 한다.
-
-3. ARP 테이블 업데이트
-현재 코드에서는 ARP 테이블에 있는 IP 주소인지 확인하는 부분만 구현되어 있다. ARP 테이블이 업데이트되는 경우에 대비해서, ARP 테이블을 주기적으로 업데이트하는 로직을 추가하는 것이 좋다.
-
-4. 무한 루프 수정
-현재 코드는 무한 루프로 돌아가며 ARP 테이블을 주기적으로 업데이트한다. 하지만 이렇게 무한히 돌아가는 경우, 시스템 자원을 과도하게 사용할 수 있다. 따라서 ARP 테이블을 업데이트하는 시간 간격을 적절하게 설정해야 한다.
-
-다음은 위의 수정사항을 반영한 코드이다.
-
-<br/>
-
-```c++
-#include <iostream>
-#include <vector>
-#include <regex>
-#include <memory>
-#include <stdexcept>
-#include <array>
-#include <cstdio>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <sys/ioctl.h>
-#include <net/if.h>
-#include <net/if_arp.h>
-#include <unistd.h>
-
-std::vector<std::string> getIPListFromARP()
-{
-    std::vector<std::string> ip_list;
-
-    // 시스템 명령어로 arp -a 실행
-    std::string command = "arp -a";
-    std::array<char, 128> buffer;
-    std::string result;
-    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
-    if (!pipe) {
-        throw std::runtime_error("popen() failed!");
-    }
-    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
-        result += buffer.data();
-    }
-
-    // 결과에서 IP 주소 추출
-    std::smatch match;
-    std::regex re("\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b");
-    std::string::const_iterator searchStart(result.cbegin());
-    while (std::regex_search(searchStart, result.cend(), match, re)) {
-        ip_list.push_back(match.str());
-        searchStart = match.suffix().first;
-    }
-
-    // ARP 테이블에 있는 IP 주소인지 확인
-    for (const auto &ip : ip_list) {
-        struct arpreq arp;
-        memset(&arp, 0, sizeof(arp));
-        struct sockaddr_in *sin = (struct sockaddr_in *)&arp.arp_pa;
-        sin->sin_family = AF_INET;
-        if (inet_aton(ip.c_str(), &sin->sin_addr) == 0) {
-            continue; // 올바른 IP 주소가 아닌 경우 continue
-        }
-        int sock_fd = socket(AF_INET, SOCK_DGRAM, 0);
-        if (sock_fd == -1) {
-            perror("socket");
-            continue;
-        }
-        if (ioctl(sock_fd, SIOCGARP, &arp) == -1) {
-            // ARP 테이블에 없는 IP 주소일 경우
-            close(sock_fd);
-            continue;
-        }
-        // ARP 테이블에 있는 IP 주소일 경우
-        close(sock_fd);
-    }
-
-    return ip_list;
-}
-
-int main()
-{
-    while(1) 
-    {
-        try {
-            std::vector<std::string> ip_list = getIPListFromARP();
-
-            if (ip_list.empty())
-            {
-                std::cout << "ARP table is empty" << std::endl;
-            }
-            else
-            {
-                std::cout << "ARP table:" << std::endl;
-                for (auto ip : ip_list)
-                {
-                    std::cout << ip << std::endl;
-                }
-            }
-        } catch (const std::exception &e) {
-            std::cerr << "Error: " << e.what() << std::endl;
-        }
-    }
-
-    return 0;
-}
+```bash
+ulimit -n              # 소프트 한도 (보통 1024)
+cat /proc/<pid>/limits # 실제 적용값
 ```
 
-<br/>
+1초에 한 번 호출하는데 한 호출에 하나씩 새면, 1024초 즉 17분쯤 뒤에 터진다. 실제로 "한참 돌려놨더니" 나기 시작한 것과 시간대가 맞는다.
 
-getIPListFromARP() 함수에서 ARP 테이블에 있는 각 IP 주소를 검사하기 전에, 해당 IP 주소가 올바른 형식인지 먼저 확인한다.
+새는 자리로 의심되는 곳도 있다. 위 코드에서 `fork()`가 실패하면 그대로 `return`하는데, 그 직전에 만든 파이프 두 개를 안 닫는다. 아주 드물지만 한 번 일어날 때마다 두 개가 샌다.
 
-이를 위해 inet_aton 함수를 호출하기 전에 IP 주소를 확인하는 코드를 추가했다. 
+더 넓게 보면, 이 함수가 실제로는 다른 통신 코드와 같은 프로세스 안에서 돌고 있었다는 점이 중요하다. 소켓을 열고 닫는 코드가 근처에 여러 개 있었고, 그중 하나가 예외 경로에서 안 닫혔다면 `arp`를 띄우는 이 함수는 그냥 **먼저 비명을 지른 쪽**일 뿐이다. 자식 프로세스는 파일을 하나만 열면 되니까 한도에 제일 먼저 부딪힌다.
 
-이로써 잘못된 IP 주소로 인해 발생할 수 있는 오류를 방지할 수 있을 것이다.
+그래서 "arp 호출부를 계속 고치는" 방향 자체가 틀렸다. 프로세스 전체의 fd 수를 먼저 봤어야 했다.
 
-또한, try-catch 문을 추가하여 예외 처리를 하도록 수정했다. 
+`ulimit -n`을 올리는 건 임시방편이다. 새는 걸 안 고치면 시간만 늘어난다. 다만 새지 않는데도 동시에 여는 개수가 많아 부족한 경우에는 이게 맞는 해결이다. 둘을 구분하려면 결국 시간에 따라 fd 수가 늘어나는지 봐야 한다.
 
-popen() 함수가 실패하는 경우와 같이, 예기치 않은 상황이 발생할 수 있는 경우 예외를 던져서 프로그램이 비정상적으로 종료되는 것을 방지한다.
+## 4차: 프로세스를 안 띄우기
 
-예외가 발생한 경우 해당 예외를 적절히 처리하도록 코드를 수정했다.
+에러의 원인과 별개로, `arp` 명령을 초당 한 번씩 띄우는 것 자체가 과했다. 매번 `fork`하고 `exec`하고 회수하는 비용을 내면서 얻는 게 텍스트 몇 줄이다.
 
-<br/>
+같은 정보를 커널이 파일로 준다.
 
-<br/>
+```text
+$ cat /proc/net/arp
+IP address       HW type     Flags       HW address            Mask     Device
+192.168.8.152    0x1         0x2         88:36:6c:fc:2c:4f     *        wlan0
+192.168.8.114    0x1         0x0         00:00:00:00:00:00     *        wlan0
+```
 
-### 윈도우 / 리눅스 환경에서 모두 사용할 수 있는 코드로 수정
+프로세스를 안 띄우고, 열었다 닫는 파일이 하나뿐이고, 열 위치가 고정이라 파싱이 단순하다. 무엇보다 `arp` 명령의 출력 형식이나 로케일에 안 휘둘린다.
 
 ```c++
-#include <iostream>
+#include <fstream>
+#include <sstream>
 #include <string>
 #include <vector>
-#include <cstdio>
-#include <memory>
-#include <stdexcept>
-#include <array>
-#include <regex>
-#include <thread>
-#include <chrono>
 
-std::string pipe_exec(const char* cmd) {
-    std::array<char, 128> buffer;
-    std::string result;
-    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
-    if (!pipe) {
-        throw std::runtime_error("popen() failed!");
+std::vector<std::string> getArpEntries(bool only_resolved = true)
+{
+    std::vector<std::string> ips;
+    std::ifstream f("/proc/net/arp");
+    if (!f) return ips;
+
+    std::string line;
+    std::getline(f, line);                 // 헤더 한 줄 버린다
+
+    while (std::getline(f, line)) {
+        std::istringstream ss(line);
+        std::string ip, hwtype, flags, hw, mask, dev;
+        if (!(ss >> ip >> hwtype >> flags >> hw >> mask >> dev)) continue;
+
+        // flags 의 0x2 (ATF_COM) 가 서 있어야 MAC 이 확정된 항목이다
+        if (only_resolved && std::stoul(flags, nullptr, 16) != 0x2) continue;
+
+        ips.push_back(ip);
     }
-    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
-        result += buffer.data();
-    }
-    return result;
+    return ips;
 }
-
-std::vector<std::string> getArpAddresses() {
-    std::vector<std::string> ipAddresses;
-    std::string output;
-
-#ifdef _WIN32
-    output = pipe_exec("arp -a");
-    std::regex ip_regex(R"((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))");
-#else
-    output = pipe_exec("arp -n");
-    std::regex ip_regex(R"((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))");
-#endif
-
-    std::sregex_iterator it(output.begin(), output.end(), ip_regex);
-    std::sregex_iterator reg_end;
-
-    for (; it != reg_end; ++it) {
-        ipAddresses.push_back(it->str());
-    }
-
-    return ipAddresses;
-}
-
-int main() {
-    while(1)
-    {
-        std::vector<std::string> ipList = getArpAddresses();
-        for (const auto& ip : ipList) {
-            std::cout << "IP Address: " << ip << std::endl;
-        }
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-    }
-    return 0;
-}
-
 ```
 
-<br/>
+`flags`를 보는 게 중요하다. `0x0`인 항목은 ARP 요청을 보냈지만 아직 응답을 못 받은 상태라 MAC이 `00:00:00:00:00:00`이다. 명령 출력에서는 `<incomplete>`로 보이는 것들이다. 이걸 안 거르면 응답 없는 IP가 목록에 섞인다. 처음 `arp -a`를 파싱할 때 `incomplete`라는 문자열을 찾아서 걸렀던 것과 같은 처리인데, 플래그 비교가 훨씬 명확하다.
 
-이 코드는 하기와 같이 기능을 수행한다.
+`/proc` 파일은 실제 디스크 파일이 아니라 읽을 때마다 커널이 만들어주는 내용이라, 열어놓고 재사용하면 안 된다. 매번 열고 닫아야 최신 값이 나온다. 대신 여는 비용이 프로세스를 띄우는 것보다 훨씬 싸다.
 
-- 외부 명령어를 실행하고 출력을 반환하는 exec 함수를 정의
-- arp -a(Windows) 또는 arp -n(Linux) 명령어를 실행하여, ARP 테이블의 IP 주소를 가져오는 getArpAddresses 함수를 정의
-- main 함수에서 무한 루프를 실행하여 매 초마다 getArpAddresses 함수를 호출하고 결과를 출력
+## ARP 테이블은 만능이 아니다
 
-<br/>
+방향을 바꾸고 나서 알게 된 한계도 적어둔다.
 
-##### exec 함수
+ARP 테이블에는 **최근에 통신한 상대만** 남는다. 장비가 켜져 있어도 한 번도 패킷을 주고받지 않았으면 항목이 없다. 그리고 리눅스는 오래된 항목을 정리하기 때문에, 몇 분 조용하면 사라지거나 `incomplete`가 된다.
 
-- exec 함수는 C++에서 외부 명령어를 실행하고 출력을 반환하는 데 사용된다.
-- popen 함수를 사용하여 프로세스를 생성하고, fgets 함수를 사용하여 출력을 읽는다. 
-- 출력은 result 문자열에 추가되고, 완료되면 반환된다.
+그래서 실제로는 이렇게 썼다. 먼저 브로드캐스트나 서브넷 스윕으로 한 번 건드려서 ARP 테이블을 채우고, 그다음에 테이블을 읽는다.
 
-##### getArpAddresses 함수
-- getArpAddresses 함수는 arp -a(Windows) 또는 arp -n(Linux) 명령어를 실행하여 ARP 테이블에서 IP 주소를 가져온다.
-- 먼저, exec 함수를 호출하여 명령어의 출력을 가져온다. 
-- 그런 다음 정규 표현식을 사용하여 출력에서 IP 주소를 추출하고, ipAddresses 벡터에 추가한다. 
-- 함수가 완료되면 이 벡터를 반환한다.
+```c++
+// 서브넷을 한 번 훑어 ARP 테이블을 채운다 (응답은 안 봐도 된다)
+for (int i = 1; i < 255; ++i) {
+    // UDP 소켓으로 아무 포트에 한 바이트 보내면 ARP 가 먼저 나간다
+}
+```
 
-##### main 함수
-- main 함수는 무한 루프를 실행하여 매 초마다 getArpAddresses 함수를 호출하고 결과를 출력한다. 
-- std::this_thread::sleep_for(std::chrono::seconds(1))를 사용하여 루프의 각 반복 사이에 1초 동안 대기하도록 설정하였다.
-- 이 코드는 arp -a(Windows) 또는 arp -n(Linux) 명령어와 유사한 결과를 출력하며, ARP 테이블의 IP 주소를 가져온다. 
-- 무한 루프를 실행하므로 프로그램이 계속 실행되지만, 대부분의 경우 시스템에 큰 부담을 주지 않으며, 필요에 따라 루프 횟수를 제한하거나 간격을 조절할 수 있다.
+이 방식도 결국 소켓을 많이 열게 되니, 여기서야말로 fd 관리를 조심해야 한다. 앞의 에러를 겪고 나서는 소켓을 만드는 자리마다 RAII로 감쌌다.
+
+```c++
+struct Fd {
+    int fd = -1;
+    Fd() = default;
+    explicit Fd(int f) : fd(f) {}
+    ~Fd() { if (fd >= 0) ::close(fd); }
+    Fd(const Fd&) = delete;
+    Fd& operator=(const Fd&) = delete;
+    Fd(Fd&& o) noexcept : fd(o.fd) { o.fd = -1; }
+    explicit operator bool() const { return fd >= 0; }
+};
+```
+
+이걸 쓰기 시작한 뒤로는 같은 종류의 문제가 안 생겼다. 어디로 빠져나가든, 예외가 나든 닫힌다.
+
+더 정확하게 하려면 netlink 소켓으로 `RTM_GETNEIGH`를 물어보는 방법이 있다. 커널과 직접 이야기하니 텍스트 파싱이 아예 없고 이웃 상태(`NUD_REACHABLE`, `NUD_STALE` 등)까지 세분해서 준다. `/proc/net/arp`로 충분해서 거기까지는 안 갔지만, IPv6까지 다뤄야 하면 `/proc/net/arp`에는 IPv6가 안 나오므로 netlink가 필요하다.
+
+## 윈도우도 같이 지원해야 했다
+
+검사 프로그램은 윈도우에서 돌아서, 같은 기능을 양쪽에 맞춰야 했다.
+
+```c++
+#ifdef _WIN32
+    output = pipe_exec("arp -a");
+#else
+    output = pipe_exec("arp -n");
+#endif
+    std::regex ip_regex(R"((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))");
+```
+
+이렇게 정규식으로 IP를 긁는 방식으로 잠깐 썼는데, 두 가지가 걸렸다.
+
+윈도우 `arp -a` 출력에는 맨 위에 `인터페이스: 192.168.0.5 --- 0x5`처럼 **자기 IP가 먼저** 나온다. 정규식이 그것까지 잡아서 목록에 자기 자신이 들어간다. 그리고 `_popen`은 콘솔 창을 띄우기 때문에, GUI 프로그램에서 1초마다 부르면 검은 창이 계속 깜빡인다.
+
+윈도우에는 API가 따로 있다. `GetIpNetTable2`가 ARP 테이블을 구조체 배열로 준다. 프로세스도 안 띄우고 파싱도 없다.
+
+```c++
+#include <netioapi.h>
+#pragma comment(lib, "iphlpapi.lib")
+
+MIB_IPNET_TABLE2* table = nullptr;
+if (GetIpNetTable2(AF_INET, &table) == NO_ERROR) {
+    for (ULONG i = 0; i < table->NumEntries; ++i) {
+        const auto& e = table->Table[i];
+        if (e.State == NlnsReachable || e.State == NlnsStale) {
+            // e.Address.Ipv4.sin_addr, e.PhysicalAddress
+        }
+    }
+    FreeMibTable(table);
+}
+```
+
+결국 양쪽 다 "명령을 띄워서 출력을 파싱한다"에서 "OS가 주는 구조화된 데이터를 읽는다"로 갔다. 코드가 갈리긴 하지만 각각은 더 짧고 안정적이다.
+
+## 정리하면
+
+- `Too many open files`가 자식 프로세스에서 났다면 새는 쪽은 부모다. 자식은 fd 테이블을 물려받는다
+- fd 누수는 `ls /proc/<pid>/fd | wc -l`을 시간에 따라 찍어보면 바로 판별된다. 늘어나면 누수, 일정하면 한도 부족이다
+- `ulimit -n`을 올리는 건 누수를 안 고치면 시간만 늘린다
+- 에러를 낸 코드가 원인인 코드가 아닐 수 있다. 파일을 하나만 여는 쪽이 먼저 비명을 지른다
+- 명령 출력을 파싱하기 전에 `/proc/net/arp`(리눅스), `GetIpNetTable2`(윈도우)처럼 구조화된 경로가 있는지 본다
+- ARP 테이블에는 최근 통신한 상대만 남는다. 조회 전에 한 번 건드려서 채워야 한다
+- 소켓과 파일은 처음부터 RAII로 감싸두면 이 종류의 문제 자체가 안 생긴다
