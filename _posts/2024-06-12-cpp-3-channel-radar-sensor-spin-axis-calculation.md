@@ -41,7 +41,7 @@ math: true
 
 <br/>
 
-> **간격을 키우면 정밀도와 시야를 맞바꾼다.** 위상차가 $\lvert\phi\rvert \le \pi$ 안에 있어야 각도가 하나로 정해지므로, 유일하게 풀리는 구간은 $\pm\arcsin(\lambda/2d)$다. 아래 예시 값인 $\lambda = 0.03$ m, $d = 0.1$ m이면 $d/\lambda = 3.33$이라 정밀도는 좋지만 유일 구간이 **±8.6°**밖에 안 된다. 그 밖에서 들어온 표적은 접힌 각도로 읽힌다.
+> **간격을 키우면 정밀도와 시야를 맞바꾼다.** 위상차가 $\lvert\phi\rvert \le \pi$ 안에 있어야 각도가 하나로 정해지므로, 유일하게 풀리는 구간은 $\pm\arcsin(\lambda/2d)$다. 예컨대 $\lambda = 0.03$ m(10 GHz), $d = 0.1$ m이면 $d/\lambda = 3.33$이라 정밀도는 좋지만 유일 구간이 **±8.6°**밖에 안 된다. 그 밖에서 들어온 표적은 접힌 각도로 읽힌다.
 >
 > 시야 전체를 유일하게 풀려면 $d \le \lambda/2$여야 한다. 어느 쪽을 고를지는 표적이 들어오는 원뿔이 얼마나 좁은지가 정한다. 같은 상충을 숫자로 펼친 것이 [6장](/posts/cw-vs-fmcw-radar/)에 있다.
 {: .prompt-warning }
@@ -50,97 +50,64 @@ math: true
 
 #### 동작 원리
 
-위상차를 이용하여 각도를 계산하는 기본 원리는 삼각법과 파동의 간섭 원리를 사용한다. 공의 움직임으로 인한 위상차를 통해 공의 운동 방향을 추정할 수 있다.
+'ㄴ' 배열에서 두 위상차는 도래 방향 단위벡터의 기선 방향 성분(방향 코사인)에 비례한다.
 
-1. 위상차와 각도 간의 관계
-   - 수직 위상차 $\phi_v$와 수평 위상차 $\phi_h$를 측정한 후, 이를 각도로 변환한다.
-   - 위상차를 각도로 변환하는 식은 다음과 같다:
-     
-     $$\theta_v = \arcsin\left( \frac{\phi_v \cdot \lambda}{2 \pi d} \right)$$
-     
-     $$\theta_h = \arcsin\left( \frac{\phi_h \cdot \lambda}{2 \pi d} \right)$$
-     
-     여기서, $\theta_v$와 $\theta_h$는 각각 수직 및 수평 방향에서의 각도이다.
-     
-2. 각도의 계산
-   - 위상차로부터 계산된 각도를 이용하여 공의 회전 벡터의 성분을 계산한다.
-   - 수직 성분 $V_z$, 수평 성분 $V_x$, $V_y$를 계산한다:
-     
-     $$V_z = \sin(\theta_v)$$
-     
-     $$V_x = \cos(\theta_v) \cdot \cos(\theta_h)$$
-     
-     $$V_y = \cos(\theta_v) \cdot \sin(\theta_h)$$
-     
-3. 스핀축 각도의 계산
-   - 최종적으로 회전축의 각도 $\theta_{\text{spin}}$은 다음과 같이 계산된다:
-     
-     $$\theta_{\text{spin}} = \arctan2(V_y, V_x) \times \frac{180.0}{\pi} \quad (\text{degrees로 변환})$$
-     
-   - 이 각도는 공의 회전축이 XY 평면에 대해 얼마나 기울어져 있는지를 나타낸다.
-     
-<br/>
+$$
+\phi_h = \frac{2\pi d}{\lambda}\sin\theta_h, \qquad
+\phi_v = \frac{2\pi d}{\lambda}\sin\theta_v
+$$
 
-#### 예시 코드
+수평 기선은 $\sin\theta_h$를 재는 자이고, 수직 기선은 $\sin\theta_v$를 재는 자다. 시선에 수직인 평면에서 표적 방향의 기울기는 두 성분의 비로 정해진다.
 
-```cpp
-double calculateSpinAxisAngle(double phaseV, double phaseH) {
-    // lambda (wavelength), d (antenna distance)
-    const double lambda = 0.03; // Example value in meters
-    const double d = 0.1; // Example value in meters
-    double theta_v = std::asin((phaseV * lambda) / (2 * M_PI * d));
-    double theta_h = std::asin((phaseH * lambda) / (2 * M_PI * d));
-    double V_z = std::sin(theta_v);
-    double V_x = std::cos(theta_v) * std::cos(theta_h);
-    double V_y = std::cos(theta_v) * std::sin(theta_h);
-    double spinAxisAngle = std::atan2(V_y, V_x) * 180.0 / M_PI; // Convert to degrees
-    return spinAxisAngle;
-}
-```
+$$
+\theta_{\text{spin}} = \operatorname{atan2}(\sin\theta_v,\ \sin\theta_h) = \operatorname{atan2}(\phi_v,\ \phi_h)
+$$
 
-이 코드는 주어진 수직 및 수평 위상차를 이용하여 공의 회전축 각도를 계산한다. `lambda`와 `d`는 시스템에 따라 다를 수 있으며, 정확한 값을 사용하여야 정확한 각도를 계산할 수 있다.
+두 기선의 $d$와 $\lambda$가 같으면 공통 인수 $\lambda/2\pi d$가 약분되어 위상차를 그대로 넣으면 된다. 각도로 되돌리는 $\arcsin$이 계산 경로에 아예 등장하지 않는다는 것이 요점이다. 개별 각도가 따로 필요할 때만 $\theta = \arcsin(\phi\lambda/2\pi d)$로 복원한다.
 
 <br/>
 
-#### 위 코드에서 고쳐야 할 두 가지
-
-시리즈를 정리하면서 다시 보니 위 예시에 문제가 둘 있다. 남겨 두고 아래에 정정한다.
-
-**첫째, $V_z$가 결과에 전혀 기여하지 않는다.** 대입해 보면 바로 보인다.
-
-$$
-\arctan2(V_y,\,V_x)
-= \arctan2\big(\cos\theta_v \sin\theta_h,\; \cos\theta_v \cos\theta_h\big)
-= \theta_h
-$$
-
-$\theta_v$는 $\arcsin$의 출력이라 항상 $\lvert\theta_v\rvert \le 90°$이고 따라서 $\cos\theta_v \ge 0$이다. 양수인 공통 인수는 $\arctan2$에서 그대로 약분되므로, 위 함수가 돌려주는 값은 **수평 각도 $\theta_h$ 그 자체**다. 수직 위상차를 재려고 채널을 하나 더 놓은 의미가 사라진다.
-
-스핀축의 기울기를 원한다면 두 각도를 횡단면에서 합성해야 한다. 즉 $\arctan2(V_y, V_x)$가 아니라 $\arctan2(\theta_v, \theta_h)$ 꼴이다.
-
-**둘째, `asin`의 인자가 1을 넘으면 NaN이 나온다.** 잡음이나 캘리브레이션 오차로 위상차가 조금만 튀어도 인자가 1을 넘고, NaN은 이후 계산으로 조용히 전파된다. 클램프가 필요하다.
+#### 계산 코드
 
 ```cpp
-#include <algorithm>
 #include <cmath>
 
 // phaseV, phaseH : [rad], 켤레곱으로 구해 (−π, π] 로 접힌 값 (7장)
-double calculateSpinAxisAngle(double phaseV, double phaseH,
-                              double lambda = 0.0125,   // 24 GHz
-                              double d      = 0.00625)  // λ/2
+// 두 기선의 d 와 λ 가 같다는 전제. 다르면 각 위상차를 자기 d 로 나눠 맞춘 뒤 넣는다.
+double calculateSpinAxisAngle(double phaseV, double phaseH)
 {
-    const double kv = phaseV * lambda / (2.0 * M_PI * d);
-    const double kh = phaseH * lambda / (2.0 * M_PI * d);
-
-    // 인자가 ±1 을 넘으면 asin 이 NaN 을 낸다
-    const double theta_v = std::asin(std::clamp(kv, -1.0, 1.0));
-    const double theta_h = std::asin(std::clamp(kh, -1.0, 1.0));
-
-    // 시선에 수직인 평면에서 두 각도를 합성한 것이 스핀축의 기울기다
-    return std::atan2(theta_v, theta_h) * 180.0 / M_PI;
+    // 위상차가 방향 코사인에 비례하므로 비를 취하면 λ/(2πd) 가 약분된다
+    return std::atan2(phaseV, phaseH) * 180.0 / M_PI;
 }
 ```
 
-기본값도 시리즈에서 쓰는 24 GHz 설정($\lambda = 12.5$ mm, $d = \lambda/2$)으로 바꿨다. 원래 예시의 $\lambda = 0.03$ m는 10 GHz 값이라 이 시리즈의 하드웨어와 맞지 않는다.
-
 부호와 축 방향은 안테나를 실제로 어느 쪽에 붙였는지에 따라 달라진다. 알려진 방향으로 회전하는 표적을 놓고 한 번 확인하고 부호를 고정하는 편이 안전하다.
+
+<br/>
+
+#### 틀리기 쉬운 합성 두 가지
+
+같은 재료를 다르게 합성하면 그럴듯해 보이지만 틀린다. 첫 번째는 이 글의 초판이 실제로 썼던 방식이다(전체 이력은 git에 있다).
+
+**각도를 3차원 단위벡터로 펼쳐 합성하면 수직 정보가 소멸한다.** $V_z = \sin\theta_v$, $V_x = \cos\theta_v\cos\theta_h$, $V_y = \cos\theta_v\sin\theta_h$로 단위벡터를 만들고 $\operatorname{atan2}(V_y, V_x)$를 취하는 방식이다. 대입해 보면 문제가 바로 보인다.
+
+$$
+\operatorname{atan2}(V_y,\,V_x)
+= \operatorname{atan2}\big(\cos\theta_v \sin\theta_h,\; \cos\theta_v \cos\theta_h\big)
+= \theta_h
+$$
+
+$\theta_v$는 $\arcsin$의 출력이라 항상 $\lvert\theta_v\rvert \le 90°$이고 따라서 $\cos\theta_v \ge 0$이다. 양수인 공통 인수는 $\operatorname{atan2}$에서 그대로 약분되므로, 돌려받는 값은 **수평 각도 $\theta_h$ 그 자체**다. 수직 위상차를 재려고 채널을 하나 더 놓은 의미가 사라진다.
+
+**각도로 바꾼 뒤 각도끼리 합성하는 것은 근사다.** $\arcsin$을 거친 $\operatorname{atan2}(\theta_v, \theta_h)$는 소각에서만 방향 코사인 비와 일치하고, 각도가 커질수록 $\arcsin$의 비선형이 왜곡으로 들어온다. 게다가 $\arcsin$은 잡음이나 캘리브레이션 오차로 인자가 1을 조금만 넘어도 NaN을 내고, NaN은 이후 계산으로 조용히 전파된다. 개별 각도를 보고할 일이 있으면 `std::asin(std::clamp(k, -1.0, 1.0))`처럼 인자를 먼저 묶어야 한다. 위 계산 코드처럼 위상차 비로 바로 가면 두 문제 모두 생기지 않는다.
+
+<br/>
+
+#### 이 각도를 '스핀축'이라 부르려면
+
+위 함수가 주는 것은 **위상차 한 쌍을 시선에 수직인 평면에서 합성한 방향**이다. 그 자체는 도래각 계산이지 스핀축이 아니고, 무엇의 위상차를 넣느냐가 물리적 의미를 정한다.
+
+- 주 도플러 피크 빈의 위상차를 넣으면 나오는 것은 그 시점 위상 중심의 각위치이고, 프레임 간 변화를 이으면 **궤적의 진행 방향**이다.
+- 스핀 자체는 [6장](/posts/cw-vs-fmcw-radar/)에서 본 대로 주 피크 양옆의 측대역(백스핀 2,700 rpm에서 ±966 Hz)에 실린다. 스핀축을 직접 겨냥하려면 측대역 성분의 도래각까지 봐야 한다.
+
+그래서 이 함수를 쓰는 코드에는 입력이 어느 빈에서 나온 위상차인지를 함께 적어 두어야 한다.

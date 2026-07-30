@@ -347,6 +347,9 @@ std::vector<Detection> detect(const std::vector<double>& db, const Config& cfg,
 
 복소 스펙트럼은 원형이라 인덱스를 `% n`으로 순환시킨다. 0 Hz의 왼쪽은 음의 최대 속도이고, 앞의 빈 매핑과 같은 이야기다.
 
+> **이 검출기는 참조 셀을 dB로 평균한다.** 선형 전력으로 평균하는 교과서의 셀 평균(CA) CFAR와는 다른 물건이고, log-CFAR 계열에 속한다. 레일리 잡음에서 dB 평균 바닥은 선형 평균보다 $10\gamma/\ln 10 \approx 2.5$ dB 낮게 잡히므로($\gamma$는 오일러 상수), [6장](/posts/cw-vs-fmcw-radar/)의 문턱 계수 $\alpha = N_{ref}(P_{fa}^{-1/N_{ref}}-1)$는 선형 평균 전제라 `threshold_db`에 그대로 넣으면 $P_{fa}$가 설계값보다 커진다. 같은 이유로 이 코드가 보고하는 SNR도 잡음 전력 대비보다 그만큼 높게 읽힌다. $P_{fa}$를 사양으로 보증해야 한다면 참조 평균은 선형 전력으로 하고 dB는 표시에만 쓰는 것이 맞다.
+{: .prompt-warning }
+
 * * *
 
 ## 8. 각도 계산
@@ -383,7 +386,7 @@ inline double aoa_rad(double dphi, double lambda, double d) {
 
 ### 세 채널은 같은 빈에서 뽑는다
 
-피크가 빈 사이에 있으면 정수 빈의 복소값은 창 누설 때문에 회전해 있다. 이웃 빈과 섞어서 보간하는 편이 낫다.
+피크가 빈 사이에 있으면 정수 빈의 복소값은 창 누설 때문에 회전해 있다. 이 회전은 세 채널에 공통이라 위상차에서는 소거된다. 이웃 빈과 섞는 보간은 그 회전을 고치는 것이 아니라, 빈 경계 근처에서 신호 성분을 더 모아 위상에 실리는 잡음을 줄이는 쪽이다.
 
 ```cpp
 inline cf bin_value(const std::vector<cf>& X, double bin_refined) {

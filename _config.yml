@@ -271,6 +271,7 @@ exclude:
   - docs
   - tools
   - README.md
+  - CLAUDE.md
   - LICENSE
   # The Chirpy static-assets submodule is kept in the repo for reference/offline use.
   # This site currently loads theme libraries from CDN, so avoid copying it to _site.
