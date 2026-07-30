@@ -250,4 +250,4 @@ log("read fail");   // 호출한 줄 번호가 찍힌다
 ## 참고
 
 - [GCC 매뉴얼: Function Names as Strings](https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html)
-- [dev-crazybird: g++ 로그 매크로](http://dev-crazybird.blogspot.com/2014/04/g.html)
+- [dev-crazybird: 로그를 좀더 이쁘게 박아보자(g++ 기준)](https://dev-crazybird.blogspot.com/2014/04/g.html)

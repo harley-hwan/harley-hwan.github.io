@@ -43,6 +43,7 @@ On Windows, `html-proofer` requires `libcurl.dll` on `PATH`. The most reliable l
 - Post bodies start at `##` (h2) — the theme already renders the front matter `title` as the page's `<h1>`, so don't repeat the title as a body heading, and don't add manual date lines (`최초 작성일` etc.); posted/updated dates come from front matter and git history.
 - If an old filename had a legacy URL, keep it with front matter `slug`.
 - Use slug-safe tags such as `cpp`, `csharp`, `c-language`, `visual-studio`, and `deep-learning`.
+- External links must use `https://`. `html-proofer` enforces this by default (`enforce_https`), and `--disable-external` does not exempt it — the scheme is checked even when reachability is not. A bare URL in body text is rendered as plain text by kramdown and slips through, but the moment it becomes `[text](http://…)` the build fails.
 - Prefer local images under `assets/img/posts/<post-slug>/` instead of external image hosts.
 - Use `pwsh tools/migrate-external-images.ps1` to download external Markdown images and rewrite them to local asset paths.
 
