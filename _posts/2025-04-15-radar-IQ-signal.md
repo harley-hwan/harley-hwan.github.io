@@ -10,7 +10,7 @@ tags: [radar, iq-signal, quadrature, doppler, cw-radar, fmcw, phase, signal-proc
 math: true
 ---
 
-[0편](/posts/radar-fundamentals/)의 마지막 절은 "도플러의 부호를 살리려면 서로 90° 어긋난 두 채널이 필요하다"에서 끊었다. 이 글이 그 자리에서 이어진다.
+도플러의 부호를 살리려면 90° 어긋난 두 채널이 필요하다([0장](/posts/radar-fundamentals/)). 그 두 채널이 I와 Q다.
 
 레이다 센서 데이터를 처음 받아보면 대개 여기서 한 번 멈춘다. 센서가 뱉어내는 것이 "거리 값"이 아니라 **I와 Q라는 두 줄기의 숫자열**이기 때문이다. 그 IQ 신호가 무엇이고, 왜 하필 두 개인지, 하드웨어가 이를 어떻게 만들어내며, 그로부터 거리·속도·각도·미세 움직임이 어떻게 나오는지를 순서대로 적어 둔다. 여기서 다루는 IQ는 특정 파형의 것이 아니라 CW·펄스·FMCW에 공통인 표현이다.
 
@@ -37,7 +37,7 @@ $$
 
 단 $\tau$를 재려면 송신파에 시간 표식, 즉 **변조**가 있어야 한다. 주파수가 고정된 단일 톤 CW에는 그 표식이 없어 거리를 원리적으로 얻지 못하고 속도와 각도만 남는다. 거리축의 유무가 CW와 FMCW를 가르는 첫 갈림길이다. 여기서는 두 파형에 공통인 IQ만 보고, 갈림길 자체는 [다음 글](/posts/cw-vs-fmcw-radar/)로 넘긴다.
 
-> **감이 오는 숫자로**: 24 GHz 레이다의 파장은 $\lambda = 12.5\,\mathrm{mm}$다. 사람이 1 m/s로 걸어오면 도플러 편이는 $f_d = 2 \times 1 / 0.0125 = 160\,\mathrm{Hz}$. 수십 GHz의 반송파에 얹힌 겨우 수백 Hz의 변화를 읽어내는 것이 레이다 신호처리의 본질이다.
+> **숫자로 보면**: 24 GHz 레이다의 파장은 $\lambda = 12.5\,\mathrm{mm}$다. 사람이 1 m/s로 걸어오면 도플러 편이는 $f_d = 2 \times 1 / 0.0125 = 160\,\mathrm{Hz}$. 수십 GHz의 반송파에 얹힌 겨우 수백 Hz의 변화를 읽어내는 것이 레이다 신호처리의 본질이다.
 {: .prompt-tip }
 
 * * *
@@ -59,7 +59,7 @@ $$
 
 이 위상이라는 것이 놀랄 만큼 예민하다. 거리가 $\Delta R$만큼 변할 때 위상 변화는 $\Delta\phi = 4\pi \Delta R / \lambda$이므로, **파장의 절반만 움직여도 위상은 한 바퀴(360°)를 돈다**.
 
-> **감이 오는 숫자로**: 60 GHz 레이다($\lambda = 5\,\mathrm{mm}$) 앞에서 심박에 의한 흉벽 진동 0.5 mm는 위상으로 $\Delta\phi = 4\pi \times 0.0005 / 0.005 \approx 72°$, 호흡에 의한 5 mm는 720°(두 바퀴)로 나타난다. 진폭으로는 보이지도 않는 움직임이 위상에서는 선명하게 보인다. 비접촉 호흡·심박 센서가 가능한 이유이고, 동시에 호흡 정도의 변위만 되어도 위상이 이미 감기기 시작한다는 뜻이라 언랩(unwrap)이 필요해진다.
+> **숫자로 보면**: 60 GHz 레이다($\lambda = 5\,\mathrm{mm}$) 앞에서 심박에 의한 흉벽 진동 0.5 mm는 위상으로 $\Delta\phi = 4\pi \times 0.0005 / 0.005 \approx 72°$, 호흡에 의한 5 mm는 720°(두 바퀴)로 나타난다. 진폭으로는 보이지도 않는 움직임이 위상에서는 선명하게 보인다. 비접촉 호흡·심박 센서가 가능한 이유이고, 동시에 호흡 정도의 변위만 되어도 위상이 이미 감기기 시작한다는 뜻이라 언랩(unwrap)이 필요해진다.
 {: .prompt-tip }
 
 문제는 **위상을 어떻게 꺼내느냐**다. 수신 신호를 기준 신호 $2\cos(2\pi f_0 t)$ 하나와만 비교(믹싱)하면 얻는 값은 $A\cos\phi$ 한 개뿐인데, 여기엔 두 가지 치명적인 모호함이 남는다. (진폭 앞의 2는 곱-합 공식에서 붙는 $1/2$을 되돌려 진폭을 보존하려는 정규화일 뿐 물리적 의미는 없다. 뒤에서 전개해 보면 바로 보인다.)
@@ -165,7 +165,7 @@ $$
 ![실수 1채널의 대칭 스펙트럼과 IQ 신호의 비대칭 스펙트럼 비교](/assets/img/posts/radar-iq-signal/fig5-doppler-sign.svg){: width="860"}
 _그림 5. 실수 신호의 스펙트럼(왼쪽)은 켤레 대칭이라 접근/이탈이 겹쳐 보이지만, 복소 IQ 신호(가운데·오른쪽)는 한쪽에만 피크가 서므로 방향이 그대로 드러난다._
 
-> **감이 오는 숫자로**: 77 GHz 차량용 레이다($\lambda \approx 3.9\,\mathrm{mm}$)에서 100 km/h로 접근하는 차는 $f_d \approx +14.3\,\mathrm{kHz}$, 같은 속도로 멀어지는 차는 $-14.3\,\mathrm{kHz}$. IQ가 있어야 이 둘을 갈라, 다가오는 차에만 경보를 울릴 수 있다.
+> **숫자로 보면**: 77 GHz 차량용 레이다($\lambda \approx 3.9\,\mathrm{mm}$)에서 100 km/h로 접근하는 차는 $f_d \approx +14.3\,\mathrm{kHz}$, 같은 속도로 멀어지는 차는 $-14.3\,\mathrm{kHz}$. IQ가 있어야 이 둘을 갈라, 다가오는 차에만 경보를 울릴 수 있다.
 {: .prompt-tip }
 
 ### 5.2 어떤 위상에서도 감도 유지 — 널 포인트(null point) 문제
@@ -256,7 +256,3 @@ _그림 7. FMCW 처리 체인. 송신 chirp와 τ 지연된 에코의 주파수 
 - Wikipedia, [In-phase and quadrature components](https://en.wikipedia.org/wiki/In-phase_and_quadrature_components)
 - A. Droitcour et al., "Range Correlation and I/Q Performance Benefits in Single-Chip Silicon Doppler Radars for Noncontact Cardiopulmonary Monitoring," *IEEE Trans. MTT*, 2004 — **CW 도플러 레이다**에서 널 포인트, I/Q 이점, 레인지 상관을 정리한 원 논문
 - B.-K. Park, O. Boric-Lubecke, V. M. Lubecke, "Arctangent Demodulation With DC Offset Compensation in Quadrature Doppler Radar Receiver Systems," *IEEE Trans. MTT*, 2007 — CW arctangent 복조의 DC 오프셋 보상
-
-* * *
-
-_최종 보완: 2026-07-29 — 직교 복조 구조의 파형 귀속 정정, 거리–도플러 결합과 AoA 성립 조건 보강, 파형 무관 관점으로 정리. 0편이 추가되면서 도입부와 각도 모호성 설명을 시리즈에 맞춰 손봤다._

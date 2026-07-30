@@ -535,7 +535,7 @@ $$
 
 부호를 살리려면 서로 90° 어긋난 두 채널, 즉 I와 Q가 필요하다.
 
-부호를 살리는 방법은 [다음 글](/posts/radar-IQ-signal/)에서 정리한다.
+부호를 살리는 방법은 [다음 글](/posts/radar-IQ-signal/)에 적었다.
 
 ### 비모호 속도
 
@@ -572,7 +572,7 @@ $$
 2. **24 GHz에서 1 m/s = 160 Hz** — 속도와 주파수를 잇는 환산
 3. **−174 dBm/Hz** — 잡음 바닥의 출발점
 
-마지막에 남겨 둔 질문, 도플러의 부호를 어떻게 살리는가는 [레이다 센서의 IQ 신호 이해하기](/posts/radar-IQ-signal/)로 이어진다. 시리즈 전체 지도는 [목차](/posts/radar-series-index/)에 있다.
+도플러 부호를 살리는 방법은 [IQ 신호](/posts/radar-IQ-signal/)에 적어 뒀다. 전체 목차는 [여기](/posts/radar-series-index/).
 
 * * *
 
