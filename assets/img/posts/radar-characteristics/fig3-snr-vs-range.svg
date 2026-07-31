@@ -1,26 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
-<rect x="1" y="1" width="858" height="468" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">거리에 따른 SNR — 기울기는 어느 쪽도 −40 dB/decade 다</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 530" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="s-dark" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="528" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="32" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">멀어지면 SNR 이 얼마나 떨어지고, 어디까지 보이는가</text>
+<text x="430" y="52" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">가로축은 로그 눈금이라 25 → 50 → 100 → 200 이 같은 간격이다. 그래서 곡선이 직선으로 펴진다.</text>
 
-<text x="240" y="62" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">RCS 를 바꾸면 (P_t = 1.5 MW)</text>
-<text x="640" y="62" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">송신 전력을 바꾸면 (σ = 0.1 m²)</text>
+<text x="240" y="74" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">표적이 클수록 (RCS 변화, P_t = 1.5 MW)</text>
+<text x="640" y="74" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">송신 전력을 올리면 (σ = 0.1 m²)</text>
 
 <g stroke="#eef2f7" stroke-width="1.2">
 <line x1="80" y1="116.3" x2="400" y2="116.3"/><line x1="80" y1="154.7" x2="400" y2="154.7"/>
 <line x1="80" y1="193" x2="400" y2="193"/><line x1="80" y1="231.3" x2="400" y2="231.3"/>
 <line x1="80" y1="269.7" x2="400" y2="269.7"/>
-<line x1="111" y1="78" x2="111" y2="308"/><line x1="207.3" y1="78" x2="207.3" y2="308"/>
-<line x1="303.7" y1="78" x2="303.7" y2="308"/>
+<line x1="111" y1="88" x2="111" y2="308"/><line x1="207.3" y1="88" x2="207.3" y2="308"/>
+<line x1="303.7" y1="88" x2="303.7" y2="308"/>
 <line x1="480" y1="116.3" x2="800" y2="116.3"/><line x1="480" y1="154.7" x2="800" y2="154.7"/>
 <line x1="480" y1="193" x2="800" y2="193"/><line x1="480" y1="231.3" x2="800" y2="231.3"/>
 <line x1="480" y1="269.7" x2="800" y2="269.7"/>
-<line x1="511" y1="78" x2="511" y2="308"/><line x1="607.3" y1="78" x2="607.3" y2="308"/>
-<line x1="703.7" y1="78" x2="703.7" y2="308"/>
+<line x1="511" y1="88" x2="511" y2="308"/><line x1="607.3" y1="88" x2="607.3" y2="308"/>
+<line x1="703.7" y1="88" x2="703.7" y2="308"/>
 </g>
 
-<line x1="80" y1="78" x2="80" y2="308" stroke="#94a3b8" stroke-width="1.6"/>
+<rect x="80" y="219.8" width="320" height="88.2" fill="#fef2f2" opacity="0.7"/>
+<rect x="480" y="219.8" width="320" height="88.2" fill="#fef2f2" opacity="0.7"/>
+<text x="392" y="302" font-size="10.5" fill="#dc2626" text-anchor="end" font-weight="700">이 아래는 검출되지 않는다</text>
+<text x="792" y="302" font-size="10.5" fill="#dc2626" text-anchor="end" font-weight="700">이 아래는 검출되지 않는다</text>
+
+<line x1="80" y1="88" x2="80" y2="308" stroke="#94a3b8" stroke-width="1.6"/>
 <line x1="80" y1="308" x2="400" y2="308" stroke="#94a3b8" stroke-width="1.6"/>
-<line x1="480" y1="78" x2="480" y2="308" stroke="#94a3b8" stroke-width="1.6"/>
+<line x1="480" y1="88" x2="480" y2="308" stroke="#94a3b8" stroke-width="1.6"/>
 <line x1="480" y1="308" x2="800" y2="308" stroke="#94a3b8" stroke-width="1.6"/>
 
 <g font-size="10" fill="#94a3b8" text-anchor="end">
@@ -33,27 +40,50 @@
 <text x="111" y="324">25</text><text x="207.3" y="324">50</text><text x="303.7" y="324">100</text><text x="400" y="324">200</text>
 <text x="511" y="324">25</text><text x="607.3" y="324">50</text><text x="703.7" y="324">100</text><text x="800" y="324">200</text>
 </g>
-<text x="240" y="344" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">거리 [km, 로그축]</text>
-<text x="640" y="344" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">거리 [km, 로그축]</text>
-<text x="34" y="196" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400" transform="rotate(-90 34 196)">SNR [dB]</text>
+<text x="240" y="342" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">거리 [km]</text>
+<text x="640" y="342" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">거리 [km]</text>
+<text x="34" y="198" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400" transform="rotate(-90 34 198)">SNR [dB]</text>
 
-<line x1="80" y1="219.8" x2="400" y2="219.8" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="6 4"/>
-<line x1="480" y1="219.8" x2="800" y2="219.8" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="6 4"/>
-<text x="396" y="214" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="700">검출 문턱 13 dB</text>
-<text x="796" y="214" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="700">검출 문턱 13 dB</text>
+<line x1="80" y1="219.8" x2="400" y2="219.8" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="7 4"/>
+<line x1="480" y1="219.8" x2="800" y2="219.8" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="7 4"/>
+<text x="84" y="214" font-size="10.5" fill="#dc2626" text-anchor="start" font-weight="700">검출 문턱 13 dB</text>
+<text x="484" y="214" font-size="10.5" fill="#dc2626" text-anchor="start" font-weight="700">검출 문턱 13 dB</text>
 
 <line x1="80" y1="80.7" x2="400" y2="234.0" stroke="#16a34a" stroke-width="2.6"/>
 <line x1="80" y1="92.2" x2="400" y2="245.6" stroke="#0284c7" stroke-width="2.6"/>
 <line x1="80" y1="119.0" x2="400" y2="272.4" stroke="#dc2626" stroke-width="2.6"/>
-
 <line x1="480" y1="119.0" x2="800" y2="272.4" stroke="#dc2626" stroke-width="2.6"/>
 <line x1="480" y1="125.8" x2="800" y2="279.1" stroke="#7c3aed" stroke-width="2.6"/>
 <line x1="480" y1="137.3" x2="800" y2="290.6" stroke="#f59e0b" stroke-width="2.6"/>
 
-<circle cx="340.5" cy="219.8" r="4" fill="#16a34a"/>
-<circle cx="288.2" cy="219.8" r="4" fill="#dc2626"/>
-<line x1="288.2" y1="219.8" x2="340.5" y2="219.8" stroke="#1e293b" stroke-width="1.4"/>
-<text x="314" y="296" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="700">90.9 → 161.6 km</text>
+<g stroke="#1e293b" stroke-width="1.5" stroke-dasharray="3 3">
+<line x1="290.4" y1="219.8" x2="290.4" y2="308"/>
+<line x1="346.3" y1="219.8" x2="346.3" y2="308"/>
+<line x1="370.4" y1="219.8" x2="370.4" y2="308"/>
+<line x1="652.2" y1="219.8" x2="652.2" y2="308"/>
+<line x1="676.3" y1="219.8" x2="676.3" y2="308"/>
+<line x1="690.4" y1="219.8" x2="690.4" y2="308"/>
+</g>
+<circle cx="290.4" cy="219.8" r="4.5" fill="#dc2626"/>
+<circle cx="346.3" cy="219.8" r="4.5" fill="#0284c7"/>
+<circle cx="370.4" cy="219.8" r="4.5" fill="#16a34a"/>
+<circle cx="652.2" cy="219.8" r="4.5" fill="#f59e0b"/>
+<circle cx="676.3" cy="219.8" r="4.5" fill="#7c3aed"/>
+<circle cx="690.4" cy="219.8" r="4.5" fill="#dc2626"/>
+
+<text x="286" y="245" font-size="11" fill="#dc2626" text-anchor="end" font-weight="700">91 km</text>
+<text x="343" y="267" font-size="11" fill="#0284c7" text-anchor="end" font-weight="700">136</text>
+<text x="375" y="289" font-size="11" fill="#16a34a" text-anchor="start" font-weight="700">162 km</text>
+<text x="648" y="245" font-size="11" fill="#f59e0b" text-anchor="end" font-weight="700">69</text>
+<text x="673" y="267" font-size="11" fill="#7c3aed" text-anchor="end" font-weight="700">82</text>
+<text x="695" y="289" font-size="11" fill="#dc2626" text-anchor="start" font-weight="700">91 km</text>
+
+<g stroke="#1e293b" stroke-width="2">
+<line x1="207.3" y1="141.7" x2="303.7" y2="141.7" marker-end="url(#s-dark)"/>
+<line x1="303.7" y1="141.7" x2="303.7" y2="187.9" marker-end="url(#s-dark)"/>
+</g>
+<text x="255" y="134" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="700">거리 2배</text>
+<text x="312" y="170" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="700">SNR 12 dB 하락</text>
 
 <g font-size="11.5" font-weight="700">
 <line x1="96" y1="366" x2="126" y2="366" stroke="#dc2626" stroke-width="2.6"/><text x="132" y="370" fill="#64748b">σ = 0.1 m²</text>
@@ -64,8 +94,10 @@
 <line x1="708" y1="366" x2="738" y2="366" stroke="#dc2626" stroke-width="2.6"/><text x="744" y="370" fill="#64748b">1.5 MW</text>
 </g>
 
-<rect x="56" y="386" width="748" height="66" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-<text x="74" y="408" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">여섯 곡선이 전부 평행하다. 무엇을 바꿔도 기울기는 −40 dB/decade 이고, 설계는 이 직선을 위아래로 옮기는 일이다.</text>
-<text x="74" y="427" font-size="12.5" fill="#0284c7" text-anchor="start" font-weight="700">RCS 10 배(10 dB)는 거리 1.78 배 — 90.9 km 가 161.6 km 가 된다.</text>
-<text x="74" y="446" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">반면 송신 전력 3 배(4.8 dB)는 거리 1.32 배에 그친다. 오른쪽 세 곡선이 붙어 있는 이유이고, 전력으로 거리를 사는 것이 비싼 이유다.</text>
+<rect x="56" y="386" width="748" height="128" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="74" y="410" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">읽는 법 — 세 단계면 된다</text>
+<text x="74" y="432" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">① 보고 싶은 거리를 가로축에서 찾는다.    ② 그 위에서 곡선을 읽으면 그때의 SNR 이다.</text>
+<text x="74" y="451" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">③ 곡선이 빨간 문턱선(13 dB)과 만나는 가로 위치가 그 조건의 탐지거리다 — 점을 찍고 km 를 적어 두었다.</text>
+<text x="74" y="476" font-size="12.5" fill="#0284c7" text-anchor="start" font-weight="700">거리가 2 배 멀어질 때마다 SNR 은 12 dB 씩 떨어진다. 여섯 곡선 모두 이 기울기가 같아 나란하다.</text>
+<text x="74" y="497" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">왼쪽은 RCS 10 배가 거리 1.78 배(91 → 162 km), 오른쪽은 송신 전력 3 배가 1.32 배(69 → 91 km)뿐이다. 전력으로 거리를 사는 것이 비싼 이유다.</text>
 </svg>

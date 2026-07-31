@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
 <defs><marker id="p-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="p-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="p-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker></defs>
 <rect x="1" y="1" width="858" height="468" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이다의 기본 원리 — 쏘고, 부딪히고, 돌아온 것을 읽는다</text>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이다의 기본 원리 — ① 쏘고 ② 부딪히고 ③ 돌아온 것을 ④ 읽는다</text>
 
 <rect x="52" y="112" width="118" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
 <text x="111" y="141" font-size="13" fill="#1e40af" text-anchor="middle" font-weight="700">송신기 Tx</text>
@@ -18,11 +18,11 @@
 <text x="268" y="248" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">안테나</text>
 
 <line x1="296" y1="150" x2="606" y2="150" stroke="#0284c7" stroke-width="2.6" marker-end="url(#p-sky)"/>
-<text x="450" y="140" font-size="12.5" fill="#0284c7" text-anchor="middle" font-weight="700">송신 신호 — 전력 P_t, 파장 λ</text>
+<circle cx="330" cy="134" r="11" fill="#0284c7"/><text x="330" y="139" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">1</text><text x="470" y="139" font-size="12.5" fill="#0284c7" text-anchor="middle" font-weight="700">송신 신호 — 전력 P_t, 파장 λ</text>
 <line x1="606" y1="206" x2="296" y2="206" stroke="#dc2626" stroke-width="2.6" marker-end="url(#p-red)"/>
-<text x="450" y="226" font-size="12.5" fill="#dc2626" text-anchor="middle" font-weight="700">에코 — 되돌아온 반사파, 전력 P_r</text>
+<circle cx="330" cy="226" r="11" fill="#dc2626"/><text x="330" y="231" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">3</text><text x="470" y="231" font-size="12.5" fill="#dc2626" text-anchor="middle" font-weight="700">에코 — 되돌아온 반사파, 전력 P_r</text>
 
-<ellipse cx="648" cy="178" rx="34" ry="24" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8"/>
+<circle cx="700" cy="140" r="11" fill="#f59e0b"/><text x="700" y="145" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">2</text><ellipse cx="648" cy="178" rx="34" ry="24" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8"/>
 <text x="648" y="183" font-size="12.5" fill="#dc2626" text-anchor="middle" font-weight="700">표적</text>
 <text x="700" y="158" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="700">RCS σ</text>
 <line x1="686" y1="196" x2="726" y2="212" stroke="#7c3aed" stroke-width="2.4" marker-end="url(#p-mute)"/>
@@ -34,8 +34,8 @@
 <text x="459" y="310" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">표적까지의 거리 R = c · τ(왕복) / 2</text>
 
 <rect x="52" y="330" width="756" height="52" rx="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-<text x="70" y="352" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">탐지와 정보 추출 — 되돌아온 신호 하나에서 네 가지가 나온다</text>
-<text x="70" y="371" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">왕복 시간 τ → 거리 R    ·    주파수 변이 f_d → 시선 속도 v_r    ·    도착 방향 → 각도 θ, φ    ·    세기 P_r → RCS σ</text>
+<circle cx="80" cy="347" r="11" fill="#16a34a"/><text x="80" y="352" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">4</text><text x="100" y="352" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">탐지와 정보 추출 — 되돌아온 신호 하나에서 네 가지가 나온다</text>
+<text x="100" y="371" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">왕복 시간 τ → 거리 R    ·    주파수 변이 f_d → 시선 속도 v_r    ·    도착 방향 → 각도 θ, φ    ·    세기 P_r → RCS σ</text>
 
 <rect x="52" y="394" width="756" height="58" rx="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 <text x="70" y="416" font-size="12.5" fill="#0284c7" text-anchor="start" font-weight="700">레이다는 자기 신호를 쏘는 능동 센서다 — 밤낮과 날씨에 강하고 거리를 직접 잰다.</text>
