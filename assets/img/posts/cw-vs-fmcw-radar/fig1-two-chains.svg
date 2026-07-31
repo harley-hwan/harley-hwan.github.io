@@ -4,7 +4,7 @@
 <text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">CW와 FMCW — 같은 IQ에서 갈라지는 두 신호 체인</text>
 <rect x="266" y="52" width="328" height="46" rx="10" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
 <text x="430" y="72" font-size="15" fill="#7c3aed" text-anchor="middle" font-weight="700">x[n] = I[n] + jQ[n]</text>
-<text x="430" y="89" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">1편의 종착점 — 여기까지는 두 방식이 완전히 같다</text>
+<text x="430" y="89" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">5장의 종착점 — 여기까지는 두 방식이 완전히 같다</text>
 <path d="M330,98 L330,118 L196,118 L196,138" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-blue)"/>
 <path d="M530,98 L530,118 L664,118 L664,138" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-orange)"/>
 <text x="196" y="133" font-size="14.5" fill="#2563eb" text-anchor="middle" font-weight="700">CW — 접지 않는다</text>

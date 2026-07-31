@@ -67,5 +67,5 @@
 <text x="430" y="396" font-size="12" fill="#64748b" text-anchor="middle" font-weight="700">추적 점유율 [%]   →   탐색 프레임 시간 [s]</text>
 <rect x="34" y="412" width="792" height="40" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 <text x="54" y="436" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">트랙 100 개를 1 Hz 로 갱신하면 40 % 를 쓴다. 200 개면 80 % 이고 탐색 프레임이 33.8 s 로 늘어난다.</text>
-<text x="54" y="455" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">해법은 균등 갱신을 버리는 것이다 — 5편의 공분산이 커진 트랙만 자주 본다.</text>
+<text x="54" y="455" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">해법은 균등 갱신을 버리는 것이다 — 9장의 공분산이 커진 트랙만 자주 본다.</text>
 </svg>

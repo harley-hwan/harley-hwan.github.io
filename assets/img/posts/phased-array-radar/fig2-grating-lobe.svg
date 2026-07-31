@@ -41,6 +41,6 @@
 <rect x="34" y="322" width="792" height="96" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 <text x="54" y="346" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">격자엽은 (d/λ)(sin θ − sin θ₀) = ±1 인 곳에 선다. 그 방향의 표적을 정면으로 착각한다.</text>
 <text x="54" y="365" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">조건은 d/λ ≤ 1/(1 + |sin θ_max|). θ_max = 60° 면 0.536λ, 전 방향이면 0.5λ 다.</text>
-<text x="54" y="384" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">0편 5절의 '소자 간격은 보통 λ/2' 가 여기서 나온다. 1·2편의 각도 모호성과 같은 현상이다.</text>
+<text x="54" y="384" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">0장 5절의 '소자 간격은 보통 λ/2' 가 여기서 나온다. 5·6장의 각도 모호성과 같은 현상이다.</text>
 <text x="54" y="403" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">반대로 성긴 배열(sparse array)은 격자엽을 감수하고 개구를 사는 설계다 — 공짜가 아니다.</text>
 </svg>

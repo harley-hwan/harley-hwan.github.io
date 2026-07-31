@@ -86,5 +86,5 @@
 <text x="430" y="402" font-size="12" fill="#64748b" text-anchor="middle" font-weight="700">배열 인자 |AF| [dB]   —   소자 50 개, d = λ/2, 균일 여기</text>
 <rect x="34" y="416" width="792" height="44" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 <text x="54" y="440" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">AF(θ) = Σ wₙ e^{j n (2πd/λ · sinθ + α)},   α = −2πd/λ · sin θ₀ 로 두면 빔이 θ₀ 로 간다.</text>
-<text x="54" y="459" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">첫 사이드로브 −13.2 dB 는 균일 가중의 값이다 — 4편 펄스 압축의 sinc 와 같은 이유다.</text>
+<text x="54" y="459" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">첫 사이드로브 −13.2 dB 는 균일 가중의 값이다 — 8장 펄스 압축의 sinc 와 같은 이유다.</text>
 </svg>

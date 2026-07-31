@@ -44,5 +44,5 @@
 <text x="474" y="296" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400">선형 진폭으로 맞추거나 직사각 창을</text>
 <text x="474" y="316" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="400">쓰면 오차가 10배로 커진다.</text>
 <text x="430" y="372" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="600">세 점으로 빈 간격의 60분의 1까지 구한다. 실측 최대 오차 0.016 bin, 9.8 mm/s.</text>
-<text x="430" y="398" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">2편의 CRLB 7.5 mm/s 와 같은 자릿수다. 정밀도의 한계는 잡음이 아니라 보간식이다.</text>
+<text x="430" y="398" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">6장의 CRLB 7.5 mm/s 와 같은 자릿수다. 정밀도의 한계는 잡음이 아니라 보간식이다.</text>
 </svg>
