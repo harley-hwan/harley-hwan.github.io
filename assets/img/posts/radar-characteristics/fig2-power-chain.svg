@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="c-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="858" height="498" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이다 방정식 — 다섯 단계를 곱하면 끝난다</text>
+<text x="430" y="56" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">괄호 안은 기준 시스템(P_t 1.5 MW, G 45 dBi, σ 0.1 m², λ 53.5 mm)을 R = 100 km 에 넣은 값</text>
+
+<rect x="40" y="76" width="780" height="62" rx="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<circle cx="66" cy="107" r="13" fill="#0284c7"/>
+<text x="66" y="112" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
+<text x="92" y="100" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">무지향성으로 뿌리면 구면에 고르게 퍼진다</text>
+<text x="92" y="123" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">전력이 겉넓이 4πR² 위에 나뉜다 — 첫 번째 퍼짐</text>
+<text x="800" y="102" font-size="13.5" fill="#0284c7" text-anchor="end" font-weight="700">P_t / 4πR²</text>
+<text x="800" y="122" font-size="11" fill="#94a3b8" text-anchor="end" font-weight="400">1.19 × 10⁻⁵ W/m²</text>
+
+<line x1="430" y1="140" x2="430" y2="154" stroke="#64748b" stroke-width="1.6" marker-end="url(#c-mute)"/>
+
+<rect x="40" y="158" width="780" height="62" rx="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<circle cx="66" cy="189" r="13" fill="#0284c7"/>
+<text x="66" y="194" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
+<text x="92" y="182" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">안테나가 한 방향으로 몰아 준다 — 이득 G</text>
+<text x="92" y="205" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">G = 4πA_e / λ²  ·  이득이 크다는 것은 빔이 좁다는 뜻이다</text>
+<text x="800" y="184" font-size="13.5" fill="#0284c7" text-anchor="end" font-weight="700">P_t G / 4πR²</text>
+<text x="800" y="204" font-size="11" fill="#94a3b8" text-anchor="end" font-weight="400">0.378 W/m²</text>
+
+<line x1="430" y1="222" x2="430" y2="236" stroke="#64748b" stroke-width="1.6" marker-end="url(#c-mute)"/>
+
+<rect x="40" y="240" width="780" height="62" rx="9" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+<circle cx="66" cy="271" r="13" fill="#f59e0b"/>
+<text x="66" y="276" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="700">3</text>
+<text x="92" y="264" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">표적이 넓이 σ 만큼 가로챈다 — RCS</text>
+<text x="92" y="287" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">실제 크기가 아니라 되돌려 보내는 세기를 넓이로 환산한 등가값</text>
+<text x="800" y="266" font-size="13.5" fill="#b45309" text-anchor="end" font-weight="700">P_t G σ / 4πR²</text>
+<text x="800" y="286" font-size="11" fill="#94a3b8" text-anchor="end" font-weight="400">37.8 mW</text>
+
+<line x1="430" y1="304" x2="430" y2="318" stroke="#64748b" stroke-width="1.6" marker-end="url(#c-mute)"/>
+
+<rect x="40" y="322" width="780" height="62" rx="9" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+<circle cx="66" cy="353" r="13" fill="#dc2626"/>
+<text x="66" y="358" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="700">4</text>
+<text x="92" y="346" font-size="13" fill="#dc2626" text-anchor="start" font-weight="700">표적이 다시 뿌린다 — 두 번째 퍼짐, 여기서 R⁴ 이 나온다</text>
+<text x="92" y="369" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">4πR² 로 또 한 번 나뉜다. 가는 길에 한 번, 오는 길에 한 번</text>
+<text x="800" y="348" font-size="13.5" fill="#dc2626" text-anchor="end" font-weight="700">P_t G σ / (4πR²)²</text>
+<text x="800" y="368" font-size="11" fill="#94a3b8" text-anchor="end" font-weight="400">3.00 × 10⁻¹³ W/m²</text>
+
+<line x1="430" y1="386" x2="430" y2="400" stroke="#64748b" stroke-width="1.6" marker-end="url(#c-mute)"/>
+
+<rect x="40" y="404" width="780" height="62" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+<circle cx="66" cy="435" r="13" fill="#16a34a"/>
+<text x="66" y="440" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="700">5</text>
+<text x="92" y="428" font-size="13" fill="#15803d" text-anchor="start" font-weight="700">수신 안테나가 유효 개구 A_e = Gλ²/4π 만큼 거둔다</text>
+<text x="92" y="451" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">A_e = 7.21 m² — 여기서 G 가 한 번 더 곱해져 G² 이 된다</text>
+<text x="800" y="430" font-size="14" fill="#15803d" text-anchor="end" font-weight="700">P_r = P_t G²λ²σ / (4π)³R⁴</text>
+<text x="800" y="450" font-size="11" fill="#94a3b8" text-anchor="end" font-weight="400">2.17 pW = −86.6 dBm</text>
+
+<text x="430" y="486" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">퍼짐이 두 번(4πR² × 4πR²)이고 여기에 수신 개구의 4π 가 더해져 분모가 (4π)³ 이 된다.</text>
+</svg>

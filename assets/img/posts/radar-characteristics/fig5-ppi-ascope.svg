@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 450" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<rect x="1" y="1" width="858" height="448" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">두 가지 전시 — 위에서 내려다보는가, 잘라서 보는가</text>
+
+<text x="222" y="62" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">PPI — 거리 × 방위, 강도 변조</text>
+<text x="638" y="62" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">A-스코프 — 거리 × 진폭, 편향 변조</text>
+
+<circle cx="222" cy="200" r="118" fill="#0b1f16" stroke="#334155" stroke-width="1.6"/>
+<g fill="none" stroke="#1f4d38" stroke-width="1.2">
+<circle cx="222" cy="200" r="39"/><circle cx="222" cy="200" r="78"/><circle cx="222" cy="200" r="118"/>
+</g>
+<g stroke="#1f4d38" stroke-width="1.2">
+<line x1="104" y1="200" x2="340" y2="200"/><line x1="222" y1="82" x2="222" y2="318"/>
+<line x1="138.6" y1="116.6" x2="305.4" y2="283.4"/><line x1="138.6" y1="283.4" x2="305.4" y2="116.6"/>
+</g>
+<path d="M222,200 L305.4,116.6 A118,118 0 0,0 222,82 Z" fill="#22c55e" opacity="0.16"/>
+<line x1="222" y1="200" x2="305.4" y2="116.6" stroke="#22c55e" stroke-width="2.2"/>
+<circle cx="268" cy="154" r="4.5" fill="#4ade80"/>
+<circle cx="180" cy="128" r="3.6" fill="#22c55e" opacity="0.75"/>
+<circle cx="150" cy="238" r="3.2" fill="#22c55e" opacity="0.6"/>
+<circle cx="276" cy="252" r="5.2" fill="#4ade80"/>
+<circle cx="222" cy="200" r="4" fill="#e2e8f0"/>
+<text x="222" y="70" font-size="10" fill="#94a3b8" text-anchor="middle" font-weight="700">N</text>
+<text x="352" y="204" font-size="10" fill="#94a3b8" text-anchor="start" font-weight="700">E</text>
+<text x="222" y="340" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">중심이 레이다, 반경이 거리, 각도가 방위</text>
+<text x="222" y="357" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">세기는 밝기로 표시된다</text>
+
+<line x1="470" y1="300" x2="806" y2="300" stroke="#94a3b8" stroke-width="1.6"/>
+<line x1="470" y1="90" x2="470" y2="300" stroke="#94a3b8" stroke-width="1.6"/>
+<g stroke="#eef2f7" stroke-width="1.2">
+<line x1="470" y1="250" x2="806" y2="250"/><line x1="470" y1="200" x2="806" y2="200"/><line x1="470" y1="150" x2="806" y2="150"/>
+</g>
+<line x1="470" y1="232" x2="806" y2="232" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="802" y="226" font-size="10.5" fill="#dc2626" text-anchor="end" font-weight="700">검출 문턱</text>
+
+<path d="M470,288 L486,282 L494,290 L508,278 L520,288 L532,281 L546,290 L556,150 L566,290 L580,282 L594,288 L606,279 L620,289 L634,283 L648,288 L660,196 L672,289 L686,281 L700,288 L712,284 L726,290 L740,280 L754,288 L768,285 L782,289 L796,283 L806,288"
+      fill="none" stroke="#0284c7" stroke-width="2"/>
+<circle cx="556" cy="150" r="4" fill="#0284c7"/>
+<circle cx="660" cy="196" r="4" fill="#0284c7"/>
+<text x="556" y="140" font-size="10.5" fill="#0284c7" text-anchor="middle" font-weight="700">표적 1</text>
+<text x="660" y="186" font-size="10.5" fill="#0284c7" text-anchor="middle" font-weight="700">표적 2</text>
+<text x="640" y="272" font-size="10.5" fill="#94a3b8" text-anchor="middle" font-weight="400">잡음 바닥</text>
+
+<g font-size="10" fill="#94a3b8" text-anchor="middle">
+<text x="470" y="318">0</text><text x="554" y="318">25</text><text x="638" y="318">50</text><text x="722" y="318">75</text><text x="806" y="318">100</text>
+</g>
+<text x="638" y="340" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">거리 [km] — 한 방위만 잘라서 본다</text>
+<text x="638" y="357" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">세로가 진폭이라 잡음 위 여유가 그대로 보인다</text>
+<text x="452" y="195" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400" transform="rotate(-90 452 195)">진폭</text>
+
+<rect x="56" y="374" width="748" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="74" y="396" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">PPI 는 어디에 무엇이 있는지를 한눈에 주는 대신 신호 세기를 밝기로 뭉갠다 — 운용 화면에 맞는다.</text>
+<text x="74" y="417" font-size="12.5" fill="#0284c7" text-anchor="start" font-weight="700">A-스코프는 한 방향만 보여 주는 대신 잡음 위 여유와 사이드로브가 그대로 보인다 — 정비와 시험에 맞는다.</text>
+</svg>
