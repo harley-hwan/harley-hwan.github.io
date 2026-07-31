@@ -179,6 +179,20 @@ std::vector<std::vector<double>> calculateAmplitude(const std::vector<std::vecto
     return amplitudeData;
 }
 
+std::vector<std::vector<double>> calculateAmplitude(const std::vector<std::vector<double>>& realData,
+    const std::vector<std::vector<double>>& imaginData) {
+    std::vector<std::vector<double>> amplitudeData(realData.size(), std::vector<double>(realData[0].size()));
+
+    for (size_t i = 0; i < realData.size(); ++i) {
+        for (size_t j = 0; j < realData[i].size(); ++j) {
+            double realPart = realData[i][j];
+            double imaginaryPart = imaginData[i][j];
+            amplitudeData[i][j] = sqrt(realPart * realPart + imaginaryPart * imaginaryPart);
+        }
+    }
+    return amplitudeData;
+}
+
 // 여러 줄의 데이터를 하나의 긴 데이터로 결합
 std::vector<std::complex<double>> combineRows(const std::vector<std::vector<std::complex<double>>>& data, int period) {
     std::vector<std::complex<double>> combined;
@@ -238,6 +252,16 @@ std::vector<std::vector<std::complex<double>>> reverseTransposeData(const std::v
     return reversedData;
 }
 ```
+
+## 안 쓰이는 오버로드가 하나 있다
+
+`calculateAmplitude`가 두 개다. 하나는 복소수 배열을 받고, 다른 하나는 실수부와 허수부를 따로 받는다.
+
+실제로 불리는 건 복소수 버전뿐이다. 실수부/허수부 버전은 선언도 없이 정의만 있고 아무도 안 부른다. 아마 처음에 이쪽으로 짰다가 복소수로 바꾸면서 지우는 걸 잊은 것 같다.
+
+이런 게 남아 있으면 나중에 읽을 때 "어느 쪽이 쓰이나" 하고 양쪽을 다 따라가게 된다. 오버로드라 이름이 같아서 더 헷갈린다. 안 쓰는 코드는 지우는 게 맞다. 필요하면 형상 관리에서 찾으면 된다.
+
+컴파일러가 경고를 안 주는 것도 이유가 있다. `static`이나 익명 네임스페이스 안에 있으면 "사용되지 않음" 경고가 나오는데, 전역 함수라 다른 파일에서 부를 수도 있다고 보고 넘어간다.
 
 ## combineRows의 period가 아무 일도 안 한다
 

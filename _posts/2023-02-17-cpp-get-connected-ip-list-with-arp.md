@@ -209,6 +209,95 @@ cat /proc/<pid>/limits # 실제 적용값
 
 `ulimit -n`을 올리는 건 임시방편이다. 새는 걸 안 고치면 시간만 늘어난다. 다만 새지 않는데도 동시에 여는 개수가 많아 부족한 경우에는 이게 맞는 해결이다. 둘을 구분하려면 결국 시간에 따라 fd 수가 늘어나는지 봐야 한다.
 
+## 명령을 안 쓰고 커널에 직접 물어보려던 시도
+
+명령을 띄우는 게 문제라면 아예 안 띄우면 되지 않을까 싶어서, 소켓과 `ioctl`로 ARP 항목을 직접 조회해봤다.
+
+```c++
+std::vector<std::string> E6Client::getIPListFromARP()
+{
+    std::vector<std::string> ip_list;
+
+    struct ifaddrs *ifaddr, *ifa;
+    int family, s;
+
+    if (getifaddrs(&ifaddr) == -1) {
+        perror("getifaddrs");
+        return ip_list;
+    }
+
+    for (ifa = ifaddr; ifa != nullptr; ifa = ifa->ifa_next) {
+        if (ifa->ifa_addr == nullptr) {
+            continue;
+        }
+
+        family = ifa->ifa_addr->sa_family;
+
+        if (family == AF_PACKET && ifa->ifa_flags & IFF_LOOPBACK) {
+            continue;
+        }
+
+        if (family == AF_INET) {
+            s = socket(AF_INET, SOCK_DGRAM, 0);
+            if (s == -1) {
+                perror("socket");
+                continue;
+            }
+
+            struct arpreq arp;
+            memset(&arp, 0, sizeof(arp));
+            arp.arp_pa.sa_family = AF_INET;
+            arp.arp_ha.sa_family = AF_UNSPEC;
+            struct sockaddr_in *addr = (struct sockaddr_in *)ifa->ifa_addr;
+            memcpy(&arp.arp_pa.sa_data, &addr->sin_addr, sizeof(addr->sin_addr));
+
+            if (ioctl(s, SIOCGARP, &arp) == 0) {
+                struct sockaddr_in *hwaddr = (struct sockaddr_in *)&arp.arp_ha;
+                char ip[INET_ADDRSTRLEN];
+                inet_ntop(AF_INET, &addr->sin_addr, ip, sizeof(ip));
+                ip_list.push_back(ip);
+            }
+
+            close(s);
+        }
+    }
+
+    freeifaddrs(ifaddr);
+
+    return ip_list;
+}
+```
+
+이건 방향이 틀렸다. `getifaddrs`가 주는 건 **내 인터페이스 목록**이지 상대 목록이 아니다. 그 주소로 `SIOCGARP`를 물어보면 "내 IP가 ARP 테이블에 있는가"를 확인하는 셈이라, 찾으려던 다른 장비는 애초에 후보에 없다.
+
+`SIOCGARP`는 특정 IP 하나의 MAC을 조회하는 용도다. 테이블 전체를 훑는 기능이 아니다. 그러니 후보 IP를 이미 알고 있어야 쓸 수 있다.
+
+`hwaddr` 변수도 만들어놓고 안 쓴다. MAC을 꺼내려던 흔적인데 `inet_ntop`으로 IP만 담고 끝난다.
+
+소켓을 인터페이스마다 새로 열고 닫는 것도 마음에 안 든다. `close`가 다 있어서 새지는 않지만, 하나만 만들어 재사용하면 될 일이다.
+
+그다음에는 절충안으로 popen + 정규식으로 IP를 모은 뒤, 각 IP를 `SIOCGARP`로 한 번씩 확인하는 형태도 만들어봤다. 그런데 그 루프가 이렇게 생겼다.
+
+```c++
+for (const auto &ip : ip_list) {
+    // ... arpreq 준비 ...
+    if (ioctl(sock_fd, SIOCGARP, &arp) == -1) {
+        // ARP 테이블에 없는 IP 주소일 경우
+        close(sock_fd);
+        continue;
+    }
+    // ARP 테이블에 있는 IP 주소일 경우
+    close(sock_fd);
+}
+return ip_list;
+```
+
+**검사 결과로 아무것도 안 한다.** 있으면 `close`하고, 없어도 `close`하고 `continue`한다. `ip_list`에서 빼지도 않고 다른 목록에 담지도 않는다. 결국 `ioctl`을 부르기 전과 정확히 같은 목록이 반환된다.
+
+주석에는 "ARP 테이블에 있는 IP 주소일 경우"라고 분기가 나뉜 것처럼 적혀 있어서, 코드를 훑을 때는 걸러지는 줄 알았다. 주석이 의도를 적고 코드가 그걸 안 하면 읽는 사람이 속는다.
+
+방향이 틀렸다는 걸 알고 나서 "테이블 전체를 주는 곳이 어디인가"를 다시 찾았고, 그게 다음 절이다.
+
 ## 4차: 프로세스를 안 띄우기
 
 에러의 원인과 별개로, `arp` 명령을 초당 한 번씩 띄우는 것 자체가 과했다. 매번 `fork`하고 `exec`하고 회수하는 비용을 내면서 얻는 게 텍스트 몇 줄이다.
@@ -293,16 +382,71 @@ struct Fd {
 
 ## 윈도우도 같이 지원해야 했다
 
-검사 프로그램은 윈도우에서 돌아서, 같은 기능을 양쪽에 맞춰야 했다.
+검사 프로그램은 윈도우에서 돌아서, 같은 기능을 양쪽에 맞춰야 했다. 명령 이름만 갈라주고 파싱은 정규식으로 통일한 버전이다.
 
 ```c++
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cstdio>
+#include <memory>
+#include <stdexcept>
+#include <array>
+#include <regex>
+#include <thread>
+#include <chrono>
+
+std::string pipe_exec(const char* cmd) {
+    std::array<char, 128> buffer;
+    std::string result;
+    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
+    }
+    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+        result += buffer.data();
+    }
+    return result;
+}
+
+std::vector<std::string> getArpAddresses() {
+    std::vector<std::string> ipAddresses;
+    std::string output;
+
 #ifdef _WIN32
     output = pipe_exec("arp -a");
+    std::regex ip_regex(R"((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))");
 #else
     output = pipe_exec("arp -n");
-#endif
     std::regex ip_regex(R"((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))");
+#endif
+
+    std::sregex_iterator it(output.begin(), output.end(), ip_regex);
+    std::sregex_iterator reg_end;
+
+    for (; it != reg_end; ++it) {
+        ipAddresses.push_back(it->str());
+    }
+
+    return ipAddresses;
+}
+
+int main() {
+    while(1)
+    {
+        std::vector<std::string> ipList = getArpAddresses();
+        for (const auto& ip : ipList) {
+            std::cout << "IP Address: " << ip << std::endl;
+        }
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    return 0;
+}
 ```
+
+`unique_ptr`에 `pclose`를 삭제자로 물려둔 게 [2차 시도](#2차-popen)보다 나아진 부분이다. 중간에 예외가 나도 파이프가 닫힌다. 앞에서 fd 한도에 부딪힌 뒤로 생긴 습관이다.
+
+`#ifdef` 양쪽의 정규식이 완전히 같아서 밖으로 뺄 수 있다. 갈라지는 건 명령 이름뿐이다.
 
 이렇게 정규식으로 IP를 긁는 방식으로 잠깐 썼는데, 두 가지가 걸렸다.
 

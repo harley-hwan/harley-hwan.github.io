@@ -395,6 +395,52 @@ std::wstring CWifiManagerDlg::ConvertSSID(const unsigned char* ssid, size_t ssid
 
 길이를 `-1`이 아니라 `ssidLength`로 넘긴 것도 맞다. SSID는 널로 끝나지 않는 바이트 배열이라 `-1`을 쓰면 뒤쪽 쓰레기까지 읽는다.
 
+반대 방향 변환도 하나 있었다. 접속에 성공한 뒤 창 제목에 SSID를 넣으려고 만든 것이다.
+
+```cpp
+std::string CWifiManagerDlg::WStringToString(const std::wstring& wstr)
+{
+	string str;
+	size_t size;
+	str.resize(wstr.length());
+	wcstombs_s(&size, &str[0], str.size() + 1, wstr.c_str(), wstr.size());
+	return str;
+}
+```
+
+```cpp
+			// 윈도우 타이틀 업데이트
+			CString windowTitle;
+			windowTitle.Format(_T("FTP Client - Connected to %s"),
+				CString(WStringToString(networkName).c_str()));
+			this->SetWindowText(windowTitle);
+```
+
+이쪽은 `ConvertSSID`만큼 잘 짜지 못했다. `str.resize(wstr.length())`로 잡는 길이가 **문자 수**인데, 멀티바이트로 바꾸면 한글은 문자당 2바이트 이상이라 버퍼가 모자란다. `wcstombs_s`가 잘라내거나 실패한다.
+
+그리고 `str.size() + 1`을 버퍼 크기로 넘기는 게 위험하다. `std::string`이 널 종료용 자리를 따로 보장하긴 하지만, 실제 확보된 크기보다 1 큰 값을 넘기는 형태라 의도가 불분명하다.
+
+필요한 크기를 먼저 물어보는 방식이 맞다. [프로필 목록 글](/posts/cpp-detecting-wifi-user-profiles/)에 적은 것과 같은 패턴이다.
+
+```cpp
+std::string wide_to_utf8(const std::wstring& w)
+{
+    if (w.empty()) return {};
+    const int len = WideCharToMultiByte(CP_UTF8, 0, w.data(), (int)w.size(),
+                                        nullptr, 0, nullptr, nullptr);
+    std::string out(len, '\0');
+    WideCharToMultiByte(CP_UTF8, 0, w.data(), (int)w.size(),
+                        out.data(), len, nullptr, nullptr);
+    return out;
+}
+```
+
+애초에 여기서는 변환할 이유도 없었다. `CString`은 유니코드 빌드에서 와이드 문자열이라 `networkName`을 그대로 넣으면 된다.
+
+```cpp
+windowTitle.Format(_T("FTP Client - Connected to %s"), networkName.c_str());
+```
+
 ## 목록에 같은 SSID가 여러 번 나온다
 
 빠뜨렸던 게 하나 있다. `WlanGetNetworkBssList`는 **BSS 단위**라, 같은 SSID를 여러 AP가 쓰거나 듀얼 밴드면 항목이 여러 개 나온다. 리스트에 같은 이름이 두세 개 뜨는 걸 사용자가 이상하게 봤다.

@@ -107,6 +107,10 @@ popen(cmd.c_str(), "r");
 std::vector<std::string> getE6ServerIPpipe()
 {
     std::vector<std::string> ip_list;
+    //static bool initflag=false;
+    //if(initflag)
+    //	return ip_list;
+    //initflag=true;
     int my_pipe[2];
     char* arguments[] = {"arp",NULL}; 
 
@@ -114,6 +118,9 @@ std::vector<std::string> getE6ServerIPpipe()
     {
         fprintf(stderr, "Error creating pipe\n");
     }
+
+	//std::string ip;
+	//system("arp -a > /home/pi/test/e6/ip.txt");
 
     pid_t child_id;
     child_id = fork();
@@ -138,6 +145,7 @@ std::vector<std::string> getE6ServerIPpipe()
         char *ptr=reading_buf;
         while(read(my_pipe[0], ptr, 1) > 0)
         {
+            //write(1, reading_buf, 1); // 1 -> stdout
             ptr++;
         }
 
@@ -153,6 +161,7 @@ std::vector<std::string> getE6ServerIPpipe()
             line[i]='\0';
             ip_list.push_back(line);
 
+            //printf("%s--------------------\n",line);
             line=strtok(NULL,"\n");
         }
         close(my_pipe[0]);
@@ -176,7 +185,7 @@ std::vector<std::string> getE6ServerIPpipe()
 ### 컴파일 경고부터
 
 ```c++
-warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
      char* arguments[] = {"arp",NULL}; 
 ```
 

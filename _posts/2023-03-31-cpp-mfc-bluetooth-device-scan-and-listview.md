@@ -56,6 +56,31 @@ winrt::init_apartment(winrt::apartment_type::single_threaded);
 
 이렇게 STA를 명시하면 이미 초기화된 상태와 맞아떨어진다. 아니면 아예 호출하지 않아도 된다. MFC가 이미 해준 상태라서다. 스캔을 별도 스레드에서 돌리면 그 스레드에서는 다시 초기화가 필요하다.
 
+클래스 선언은 이런 형태가 된다. `watcher`와 수집용 맵을 멤버로 들고 있어야 콜백과 UI 갱신이 같은 데이터를 본다.
+
+```c++
+#pragma once
+#include <winrt/Windows.Devices.Bluetooth.Advertisement.h>
+#include <map>
+#include <string>
+#include <chrono>
+
+class CMainDlg
+{
+public:
+    void ScanForBluetoothLEDevices();
+
+private:
+    winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher m_watcher;
+    std::map<std::wstring, int16_t> m_bleDevices;
+    std::map<std::wstring, std::chrono::steady_clock::time_point> m_bleDevicesLastSeen;
+    bool m_completed;
+    static constexpr UINT WM_UPDATE_BLE_LIST = WM_USER + 1; // 사용자 정의 메시지
+};
+```
+
+`WM_USER + 1`로 사용자 정의 메시지 번호를 잡았다. `WM_USER` 아래는 시스템이 쓰는 영역이라 겹치면 안 된다. 대화상자 안에서만 쓰는 메시지라 이 범위로 충분하다.
+
 ## 헤더와 메시지 맵
 
 ```c++
@@ -327,6 +352,7 @@ void CMainDlg::OnBnClickedBtnBlescan()
 ```c++
 void CMainDlg::OnBnClickedBtnBlescanstop()
 {
+  // 기존 스레드가 실행 중이면 종료
   if (bleScanThread.joinable())
   {
     m_completed = true;        // 먼저 세워버린다
@@ -343,6 +369,37 @@ void CMainDlg::OnBnClickedBtnBlescanstop()
 ## 한 번만 갱신하는 버전
 
 계속 갱신하는 대신 버튼을 누른 시점의 결과만 한 번 보여주도록 바꾼 버전이다. 이름 필터도 넣었다.
+
+목록 출력 쪽에서는 만료 제거를 뺐다. 스캔이 끝난 뒤 한 번만 그리니 "3초 넘게 안 보인 기기"라는 개념이 필요 없다.
+
+```c++
+// 블루투스 기기 목록을 리스트 박스에 출력하는 메시지 핸들러
+LRESULT CMainDlg::OnUpdateBLEList(WPARAM wParam, LPARAM lParam)
+{
+	// 리스트 박스 (IDC_LIST_BLE_DEVICES: 리스트 박스의 리소스 ID).
+	//CListBox* pListBox = (CListBox*)GetDlgItem(IDC_LIST_BLE);
+	//if (pListBox == nullptr)
+	//{
+	//	return 0;
+	//}
+
+	// 리스트 박스 리셋.
+	m_list_ble.ResetContent();
+
+	// 맵에 저장된 블루투스 기기를 리스트 박스에 추가
+	for (const auto& device : m_bleDevices)
+	{
+		CString deviceInfo;
+		std::string localName(device.first.begin(), device.first.end()); // Convert to std::string
+		deviceInfo.Format(_T("%s - RSSI: %d"), localName.c_str(), device.second);
+		m_list_ble.AddString(deviceInfo);
+	}
+
+	return 0;
+}
+```
+
+주석으로 남은 `GetDlgItem` 방식은 리소스 ID로 컨트롤을 매번 찾아오는 것이다. `m_list_ble`처럼 DDX로 멤버에 묶어두면 그 조회가 필요 없고 널 검사도 사라진다.
 
 ```c++
 void CMainDlg::ScanForBluetoothLEDevices()
@@ -389,9 +446,19 @@ void CMainDlg::ScanForBluetoothLEDevices()
 }
 ```
 
+버튼 핸들러도 스레드 없이 그냥 부른다.
+
+```c++
+// "BLE SCAN" Button
+void CMainDlg::OnBnClickedBtnBlescan()
+{
+	ScanForBluetoothLEDevices();
+}
+```
+
 `PostMessage`가 스캔이 끝난 뒤 한 번만 호출되니 UI 부담이 없다. 여기서 `watcher`를 멤버가 아니라 지역 변수로 만든 것도 낫다. 스캔이 끝나면 같이 없어져서 상태가 남지 않는다.
 
-다만 `OnBnClickedBtnBlescan`이 이 함수를 UI 스레드에서 직접 부르면 2초 동안 창이 멈춘다. 스레드로 돌리고 완료를 메시지로 받는 게 맞다.
+다만 위 핸들러는 UI 스레드에서 직접 부르는 것이라 2초 동안 창이 멈춘다. 스레드로 돌리고 완료를 메시지로 받는 게 맞다.
 
 콘솔에서 확인할 때 쓴 버전도 남겨둔다. MFC 없이 동작을 먼저 확인할 때 유용했다.
 
@@ -399,41 +466,89 @@ void CMainDlg::ScanForBluetoothLEDevices()
 #include <winrt/Windows.Devices.Bluetooth.Advertisement.h>
 #include <winrt/Windows.Foundation.h>
 #include <iostream>
+#include <string>
 #include <map>
 #include <thread>
 #include <chrono>
 
+class BluetoothLEScanner
+{
+public:
+    void ScanForBluetoothLEDevices()
+    {
+        using namespace winrt::Windows::Devices::Bluetooth::Advertisement;
+        try
+        {
+            BluetoothLEAdvertisementWatcher watcher;
+            m_completed = false;
+
+            // Device found event
+            watcher.Received([&](BluetoothLEAdvertisementWatcher sender, BluetoothLEAdvertisementReceivedEventArgs args)
+                {
+                    std::wstring localName = args.Advertisement().LocalName().c_str();
+                    if (localName.find(L"BLE") == 0)
+                    {
+                        // Save the Bluetooth device in the map and update the RSSI value
+                        m_bleDevices[localName] = args.RawSignalStrengthInDBm();
+                        m_bleDevicesLastSeen[localName] = std::chrono::steady_clock::now();
+                    }
+                });
+
+            // Stopped event
+            watcher.Stopped([&](BluetoothLEAdvertisementWatcher sender, BluetoothLEAdvertisementWatcherStoppedEventArgs args)
+                {
+                    m_completed = true;
+                });
+
+            // Start the watcher
+            watcher.Start();
+
+            // Wait for a short period of time (e.g., 2 seconds) to allow the watcher to scan devices
+            std::this_thread::sleep_for(std::chrono::seconds(2));
+
+            // Stop the watcher
+            watcher.Stop();
+
+            // Wait until the watcher stops
+            while (!m_completed)
+            {
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            }
+
+            // Update the list of devices
+            UpdateDeviceList();
+        }
+        catch (const winrt::hresult_error& ex)
+        {
+            std::wcerr << L"Exception thrown: " << ex.message().c_str() << std::endl;
+        }
+    }
+
+private:
+    void UpdateDeviceList()
+    {
+        for (const auto& device : m_bleDevices)
+        {
+            std::wcout << L"Device: " << device.first << L" RSSI: " << device.second << std::endl;
+        }
+    }
+
+    bool m_completed;
+    std::map<std::wstring, int16_t> m_bleDevices;
+    std::map<std::wstring, std::chrono::steady_clock::time_point> m_bleDevicesLastSeen;
+};
+
 int main()
 {
-    using namespace winrt::Windows::Devices::Bluetooth::Advertisement;
     winrt::init_apartment();
-
-    std::map<uint64_t, std::pair<std::wstring, int16_t>> devices;
-    std::mutex mtx;
-
-    BluetoothLEAdvertisementWatcher watcher;
-    watcher.ScanningMode(BluetoothLEScanningMode::Active);
-
-    watcher.Received([&](auto&&, BluetoothLEAdvertisementReceivedEventArgs args)
-        {
-            std::lock_guard<std::mutex> lock(mtx);
-            auto& d = devices[args.BluetoothAddress()];
-            d.second = args.RawSignalStrengthInDBm();
-            if (!args.Advertisement().LocalName().empty())
-                d.first = args.Advertisement().LocalName().c_str();
-        });
-
-    watcher.Start();
-    std::this_thread::sleep_for(std::chrono::seconds(5));
-    watcher.Stop();
-
-    std::lock_guard<std::mutex> lock(mtx);
-    for (const auto& [addr, d] : devices)
-        std::wcout << std::hex << addr << L"  " << d.second << L" dBm  " << d.first << L"\n";
-
+    BluetoothLEScanner scanner;
+    scanner.ScanForBluetoothLEDevices();
     return 0;
 }
+
 ```
+
+위에서 짚은 문제들이 이 버전에도 그대로 있다. 키가 `LocalName`이라 이름 없는 기기가 뭉치고, 콜백과 `UpdateDeviceList`가 같은 맵을 다른 스레드에서 만진다. `m_completed`도 초기화되지 않은 채 `while (!m_completed)`에 쓰인다. 콘솔이라 증상이 덜 보일 뿐 구조는 같다.
 
 ## 정리하면
 

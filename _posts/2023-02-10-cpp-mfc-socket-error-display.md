@@ -42,6 +42,20 @@ void displayerror(int nErrorCode)
 - `FORMAT_MESSAGE_FROM_SYSTEM`: 시스템 메시지 테이블에서 찾는다
 - `FORMAT_MESSAGE_IGNORE_INSERTS`: `%1`, `%2` 같은 삽입 자리를 그대로 둔다. 이걸 빼면 삽입할 인자를 안 넘긴 메시지에서 함수가 실패한다
 
+부르는 쪽은 이렇게 쓴다. 소켓이든 일반 API든 에러 코드만 넘기면 된다.
+
+```cpp
+// 소켓 함수 호출 후 에러 발생 시
+int error = WSAGetLastError();
+displayerror(error);
+
+// 일반 시스템 함수 호출 후 에러 발생 시
+int error = GetLastError();
+displayerror(error);
+```
+
+두 함수가 나뉘어 있는 게 처음엔 번거로워 보였는데, 소켓 API는 `WSAGetLastError`를, 나머지 Win32 API는 `GetLastError`를 쓰는 게 규칙이다. 실제로 두 값은 같은 저장소를 쓰지만 문서상 보장된 건 아니라서 짝을 맞춰 쓰는 게 맞다.
+
 여기까지는 검색하면 나오는 그대로다. 문제는 이걸 실제로 붙이고 나서 하나씩 튀어나왔다.
 
 ## 함정 1: 유니코드 빌드에서 메시지가 깨진다

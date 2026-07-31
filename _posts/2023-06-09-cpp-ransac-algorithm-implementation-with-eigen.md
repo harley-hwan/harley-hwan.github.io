@@ -185,6 +185,102 @@ Eigen::VectorXd ransac(const Eigen::MatrixXd& A, const Eigen::VectorXd& B, int N
     Eigen::VectorXd X1 = ransac(A1, B1, N, T);
 ```
 
+로그를 읽고 결과를 다시 파일로 쓰는 부분까지 포함한 전체는 이렇다.
+
+```c++
+#include <Eigen/Dense>
+#include <vector>
+#include <random>
+#include <algorithm>
+#include <cmath>
+#include <fstream>
+#include <iostream>
+
+// Define random generator
+std::random_device rd;
+std::mt19937 gen(rd());
+
+double computeResidual(Eigen::MatrixXd A, Eigen::VectorXd B, Eigen::VectorXd X) {
+    Eigen::VectorXd residual = B - A * X;
+    return residual.norm();
+}
+
+int main() {
+    std::ifstream file1("maxAmplitudePhasesH.log");
+    std::ifstream file2("maxAmplitudePhasesW.log");
+    if (!file1.is_open() || !file2.is_open()) {
+        std::cout << "Failed to open the file.\n";
+        return 1;
+    }
+
+    std::vector<double> data1;
+    std::vector<double> data2;
+    double value;
+    while (file1 >> value) {
+        data1.push_back(value);
+    }   
+    while (file2 >> value) {
+        data2.push_back(value);
+    }
+    file1.close();
+    file2.close();
+
+    int n_data1 = data1.size();
+    int n_data2 = data2.size();
+
+    Eigen::MatrixXd A1(n_data1, 3);
+    Eigen::VectorXd B1(n_data1);
+    for (int i = 0; i < n_data1; ++i) {
+        A1(i, 0) = i * i;
+        A1(i, 1) = i;
+        A1(i, 2) = 1;
+        B1(i) = data1[i];
+    }
+    
+    Eigen::MatrixXd A2(n_data2, 3);
+    Eigen::VectorXd B2(n_data2);
+    for (int i = 0; i < n_data2; ++i) {
+        A2(i, 0) = i * i;
+        A2(i, 1) = i;
+        A2(i, 2) = 1;
+        B2(i) = data2[i];
+    }
+
+    int N = 100;
+    double T = 3 * 100; // 3 * noise_sigma
+    Eigen::VectorXd X1 = ransac(A1, B1, N, T);
+    Eigen::VectorXd X2 = ransac(A2, B2, N, T);
+
+    Eigen::VectorXd F1 = A1 * X1;
+    Eigen::VectorXd F2 = A2 * X2;
+
+    std::ofstream outfile1("outputH.log");
+    std::ofstream outfile2("outputW.log");
+    if (!outfile1.is_open() || !outfile2.is_open()) {
+        std::cout << "Failed to open the output file.\n";
+        return 1;
+    }
+
+    for (int i = 0; i < F1.size(); ++i) {
+        outfile1 << F1(i) << std::endl;
+    }
+    for (int i = 0; i < F2.size(); ++i) {
+        outfile2 << F2(i) << std::endl;
+    }
+    outfile1.close();
+    outfile2.close();
+
+    std::cout << "Result H: " << X1.transpose() << std::endl;
+    std::cout << "Result W: " << X2.transpose() << std::endl;
+
+    return 0;
+}
+```
+
+`computeResidual`은 선언해두고 실제로는 안 쓴다. `ransac` 안에서 잔차를 직접 계산하기 때문이다. 이런 함수가 남아 있으면 나중에 읽을 때 "어디서 쓰나" 하고 찾게 되니 지우는 편이 낫다.
+
+`gen`을 전역으로 둔 것도 지금 보면 걸린다. [로또 번호 글](/posts/cpp-random-lotto-number-generation/)에 적었듯이 시드를 로그에 남겨두면 같은 결과를 재현할 수 있는데, 전역이라 그 시점을 잡기 어렵다.
+
 결과는 이랬다.
 
 ```c++

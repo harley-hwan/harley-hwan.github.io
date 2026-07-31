@@ -60,6 +60,39 @@ bool CExampleDlg::downloadRemoteFile(CkSFtp& sftp, const char* remoteFilePath, c
 }
 ```
 
+이 둘을 묶어 실제로 값을 꺼내는 부분이다.
+
+```c++
+std::pair<std::string, std::string> CExampleDlg::connectSftp() {
+	CkSFtp sftp;
+
+	if (!connectToServer(sftp, "192.168.8.1", 22)) {
+		return { "", "" };
+	}
+
+	if (!downloadRemoteFile(sftp, "/home/pi/test/test.xml", "./xml/test.xml")) {
+		return { "", "" };
+	}
+
+	pugi::xml_document doc = loadAndParseXml("./xml/test.xml");
+	if (!doc) {
+		return { "", "" };
+	}
+
+	std::string setPhaseCalW = findAndValidateNode(doc, "SetPhaseCalW");
+	std::string setPhaseCalH = findAndValidateNode(doc, "SetPhaseCalH");
+
+	if (setPhaseCalW.empty() || setPhaseCalH.empty()) {
+		return { "", "" };
+	}
+
+	std::cout << "setPhaseCalW: " << setPhaseCalW << std::endl;
+	std::cout << "setPhaseCalH: " << setPhaseCalH << std::endl;
+
+	return { setPhaseCalW, setPhaseCalH };
+}
+```
+
 `lastErrorText()`가 실패 원인을 자세히 알려주는 건 확실히 편했다. libssh2는 에러 코드만 주기 때문에 원인 파악에 손이 더 간다.
 
 ## libssh2로 옮기기
@@ -158,7 +191,49 @@ bool CExampleDlg::downloadRemoteFile(LIBSSH2_SESSION*& session, const char* remo
 }
 ```
 
-동작은 했다. 실패 경로마다 정리 코드를 늘어놓는 게 눈에 거슬리는데, 이게 나중에 실제 문제로 이어졌다.
+묶는 쪽은 이렇게 된다. `loadAndParseXml`과 `findAndValidateNode`는 라이브러리와 무관해서 CkSFtp 버전과 같은 것을 그대로 쓴다.
+
+```c++
+std::pair<std::string, std::string> CExampleDlg::connectSftp() {
+	LIBSSH2_SESSION* session;
+
+	if (!connectToServer(session, "192.168.8.1", 22, "root", "fa")) {
+		return { "", "" };
+	}
+
+	if (!downloadRemoteFile(session, "/home/pi/test/test.xml", "./xml/test.xml")) {
+		libssh2_session_disconnect(session, "Finished session");
+		libssh2_session_free(session);
+		return { "", "" };
+	}
+
+	pugi::xml_document doc = loadAndParseXml("./xml/test.xml");
+	if (!doc) {
+		libssh2_session_disconnect(session, "Finished session");
+		libssh2_session_free(session);
+		return { "", "" };
+	}
+
+	std::string setPhaseCalW = findAndValidateNode(doc, "SetPhaseCalW");
+	std::string setPhaseCalH = findAndValidateNode(doc, "SetPhaseCalH");
+
+	if (setPhaseCalW.empty() || setPhaseCalH.empty()) {
+		libssh2_session_disconnect(session, "Finished session");
+		libssh2_session_free(session);
+		return { "", "" };
+	}
+
+	std::cout << "setPhaseCalW: " << setPhaseCalW << std::endl;
+	std::cout << "setPhaseCalH: " << setPhaseCalH << std::endl;
+
+	libssh2_session_disconnect(session, "Finished session");
+	libssh2_session_free(session);
+
+	return { setPhaseCalW, setPhaseCalH };
+}
+```
+
+동작은 했다. 실패 경로마다 정리 코드를 늘어놓는 게 눈에 거슬리는데, 이게 나중에 실제 문제로 이어졌다. 위에서 `libssh2_session_disconnect`와 `libssh2_session_free` 두 줄이 네 번 반복되는 것만 봐도 알 수 있다.
 
 ## 소켓이 샌다
 
