@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 478" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ax" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-mut" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d97706"/></marker></defs>
+<rect x="1" y="1" width="858" height="476" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="32" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">적분 — 예산에서 유일하게 거리를 늘려 주는 항</text>
+<text x="430" y="52" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">빔이 표적을 스치는 동안 들어온 펄스를 모으면 문턱이 내려간다. 위상을 지키면 정직하게, 크기만 더하면 그보다 덜.</text>
+<rect x="40" y="80" width="404" height="240" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<rect x="464" y="80" width="356" height="240" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<line x1="135.777" y1="272" x2="135.777" y2="116" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="204.223" y1="272" x2="204.223" y2="116" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="256" y1="272" x2="256" y2="116" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="307.777" y1="272" x2="307.777" y2="116" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="376.223" y1="272" x2="376.223" y2="116" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="428" y1="272" x2="428" y2="116" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="84" y1="238.087" x2="428" y2="238.087" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="84" y1="204.174" x2="428" y2="204.174" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="84" y1="170.261" x2="428" y2="170.261" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="84" y1="136.348" x2="428" y2="136.348" stroke="#eef2f7" stroke-width="1.2"/>
+<line x1="84" y1="272" x2="436" y2="272" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="84" y1="272" x2="84" y2="108" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="84" y="287" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">1</text>
+<text x="135.777" y="287" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">2</text>
+<text x="204.223" y="287" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">5</text>
+<text x="256" y="287" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">10</text>
+<text x="307.777" y="287" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">20</text>
+<text x="376.223" y="287" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">50</text>
+<text x="428" y="287" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">100</text>
+<text x="77" y="241.587" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="400">5</text>
+<text x="77" y="207.674" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="400">10</text>
+<text x="77" y="173.761" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="400">15</text>
+<text x="77" y="139.848" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="400">20</text>
+<text x="88" y="104" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">개선 [dB]</text>
+<text x="256" y="306" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="700">적분 펄스 수 N  (로그 눈금)</text>
+<line x1="327.375" y1="272" x2="327.375" y2="125.496" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3 4"/>
+<text x="327.375" y="118.496" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="700">이 시스템의 26 펄스</text>
+<path d="M84.0,272.0 L135.8,229.1 L166.1,210.9 L204.2,192.1 L239.3,177.5 L275.6,164.4 L307.8,153.9 L327.4,148.0 L349.6,141.5 L376.2,134.2 L401.4,127.7 L428.0,121.0" fill="none" stroke="#16a34a" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<path d="M84.0,272.0 L135.8,251.6 L166.1,239.6 L204.2,224.6 L239.3,210.7 L275.6,196.4 L307.8,183.8 L327.4,176.0 L349.6,167.3 L376.2,156.8 L401.4,146.9 L428.0,136.3" fill="none" stroke="#2563eb" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M84.0,272.0 L135.8,254.8 L166.1,245.2 L204.2,233.4 L239.3,223.1 L275.6,212.8 L307.8,204.1 L327.4,198.9 L349.6,193.2 L376.2,186.5 L401.4,180.4 L428.0,174.1" fill="none" stroke="#ea580c" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="327.375" cy="176.026" r="4.2" fill="#2563eb"/>
+<circle cx="327.375" cy="198.951" r="4.2" fill="#ea580c"/>
+<circle cx="327.375" cy="147.946" r="4.2" fill="#16a34a"/>
+<rect x="252.168" y="218.235" width="12" height="12" rx="3" fill="#16a34a" stroke="#16a34a" stroke-width="1.2" fill-opacity="0.55"/>
+<text x="271.168" y="227.235" font-size="11.3" fill="#16a34a" text-anchor="start" font-weight="700">비코히어런트 · Swerling 2</text>
+<rect x="252.168" y="235.87" width="12" height="12" rx="3" fill="#2563eb" stroke="#2563eb" stroke-width="1.2" fill-opacity="0.55"/>
+<text x="271.168" y="244.87" font-size="11.3" fill="#2563eb" text-anchor="start" font-weight="700">코히어런트  10 log N</text>
+<rect x="252.168" y="253.504" width="12" height="12" rx="3" fill="#ea580c" stroke="#ea580c" stroke-width="1.2" fill-opacity="0.55"/>
+<text x="271.168" y="262.504" font-size="11.3" fill="#ea580c" text-anchor="start" font-weight="700">비코히어런트 · 비요동</text>
+<rect x="482" y="110" width="322" height="38" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="496" y="134" font-size="12" fill="#2563eb" text-anchor="start" font-weight="700">코히어런트 26 펄스</text>
+<text x="722" y="134" font-size="12.5" fill="#2563eb" text-anchor="end" font-weight="700">14.15 dB</text>
+<text x="792" y="134" font-size="11.5" fill="#64748b" text-anchor="end" font-weight="400">×1.94</text>
+<rect x="482" y="156" width="322" height="38" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="496" y="180" font-size="12" fill="#ea580c" text-anchor="start" font-weight="700">비코히어런트 26 펄스 (비요동)</text>
+<text x="722" y="180" font-size="12.5" fill="#ea580c" text-anchor="end" font-weight="700">10.77 dB</text>
+<text x="792" y="180" font-size="11.5" fill="#64748b" text-anchor="end" font-weight="400">×1.83</text>
+<rect x="482" y="202" width="322" height="38" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="496" y="226" font-size="12" fill="#64748b" text-anchor="start" font-weight="700">적분 효율 (26 펄스)</text>
+<text x="722" y="226" font-size="12.5" fill="#64748b" text-anchor="end" font-weight="700">0.46</text>
+<text x="792" y="226" font-size="11.5" fill="#64748b" text-anchor="end" font-weight="400">—</text>
+<rect x="482" y="248" width="322" height="38" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="496" y="272" font-size="12" fill="#dc2626" text-anchor="start" font-weight="700">빔 모양 손실</text>
+<text x="722" y="272" font-size="12.5" fill="#dc2626" text-anchor="end" font-weight="700">−1.67 dB</text>
+<text x="792" y="272" font-size="11.5" fill="#64748b" text-anchor="end" font-weight="400">×0.91</text>
+<text x="482" y="306" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">거리 배수는 개선량의 4 제곱근으로 환산한 값이다.</text>
+<rect x="34" y="338" width="792" height="126" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="54" y="362" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">빔폭 0.96°, PRF 1 kHz, 6 rpm 이면 표적이 빔 안에 있는 동안 26 펄스가 맞는다 — n_B = θ_B · PRF / (6 · rpm).</text>
+<text x="54" y="381" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">26 개를 크기만 더해도 10.8 dB, 거리로 1.83 배다. 이 한 항이 예산에서 유일하게 거리를 늘려 준다.</text>
+<text x="54" y="400" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">대신 그 26 개가 전부 빔 정점에서 오지는 않으므로 1.67 dB 를 되돌려 준다. 이것이 빔 모양 손실이다.</text>
+<text x="54" y="422" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">적분 효율은 N 이 커질수록 떨어진다 — N=2 에서 0.90, N=26 에서 0.46, N=100 에서 0.28.</text>
+<text x="54" y="442" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">Swerling 2 곡선이 더 가파른 것은 출발점이 21.1 dB 로 나빠서다. 요동이 펄스마다 독립이면 적분이 그 손실을 되찾아 준다.</text>
+</svg>
