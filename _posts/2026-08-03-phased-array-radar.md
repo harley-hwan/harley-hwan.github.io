@@ -404,7 +404,8 @@ AESA 의 장점이 고장이 점진적이라는 것인데, 그 "점진적"이 �
 | :--- | :--- | :--- |
 | [0](/posts/radar-fundamentals/) | 단위, 파장, 데시벨, 도플러 | 눈금 |
 | [1](/posts/radar-characteristics/) | 재는 것 넷, 밴드, 레이다 방정식 | 탐지거리 |
-| [2](/posts/radar-detection-range/) | 문턱, 잡음, 적분, 요동, 손실, 전파 | 실제 탐지거리 |
+| [2](/posts/radar-detection-range/) | 검출 문턱, 잡음 바닥, 펄스 적분 | 필요 SNR |
+| [3](/posts/radar-range-degradation/) | 표적 요동, 시스템 손실, 전파 환경 | 실제 탐지거리 |
 | [5](/posts/radar-IQ-signal/) | 위상과 IQ, 직교 복조 | 복소 기저대역 |
 | [6](/posts/cw-vs-fmcw-radar/) | CW 와 FMCW, 접기의 대가 | 파형 선택 |
 | [7](/posts/cw-receive-chain-cpp/) | CW 수신 체인 구현 | 한 프레임의 표적 목록 |
