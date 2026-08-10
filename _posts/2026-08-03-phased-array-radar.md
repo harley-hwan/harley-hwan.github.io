@@ -400,17 +400,18 @@ AESA 의 장점이 고장이 점진적이라는 것인데, 그 "점진적"이 �
 
 ### 시리즈를 한 장으로
 
-| 편 | 다루는 것 | 남기는 것 |
+| 장 | 다루는 것 | 남기는 것 |
 | :--- | :--- | :--- |
 | [0](/posts/radar-fundamentals/) | 단위, 파장, 데시벨, 도플러 | 눈금 |
-| [1](/posts/radar-IQ-signal/) | 위상과 IQ, 직교 복조 | 복소 기저대역 |
-| [2](/posts/cw-vs-fmcw-radar/) | CW 와 FMCW, 접기의 대가 | 파형 선택 |
-| [3](/posts/cw-receive-chain-cpp/) | CW 수신 체인 구현 | 한 프레임의 표적 목록 |
-| [4](/posts/pw-radar/) | 펄스, 압축, PRF, MTI | 거리–도플러 맵 |
-| [5](/posts/radar-tracking/) | 연관, 필터, 트랙 관리 | 트랙 |
-| 6 | 배열, 조향, 자원 관리 | 무엇을 언제 볼지 |
+| [1](/posts/radar-characteristics/) | 재는 것 넷, 밴드, 레이다 방정식 | 탐지거리 |
+| [5](/posts/radar-IQ-signal/) | 위상과 IQ, 직교 복조 | 복소 기저대역 |
+| [6](/posts/cw-vs-fmcw-radar/) | CW 와 FMCW, 접기의 대가 | 파형 선택 |
+| [7](/posts/cw-receive-chain-cpp/) | CW 수신 체인 구현 | 한 프레임의 표적 목록 |
+| [8](/posts/pw-radar/) | 펄스, 압축, PRF, MTI | 거리–도플러 맵 |
+| [9](/posts/radar-tracking/) | 연관, 필터, 트랙 관리 | 트랙 |
+| 10 | 배열, 조향, 자원 관리 | 무엇을 언제 볼지 |
 
-안테나에 들어온 전파가 화면의 트랙 심볼이 되고, 그 트랙이 다시 다음 빔을 어디로 보낼지 결정하기까지 — 고리가 여기서 닫힌다. 전체 목차는 [여기](/posts/radar-series-index/).
+안테나에 들어온 전파가 화면의 트랙 심볼이 되고, 그 트랙이 다시 다음 빔을 어디로 보낼지 결정하기까지 — 고리가 여기서 닫힌다.
 
 * * *
 

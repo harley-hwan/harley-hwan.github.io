@@ -628,7 +628,7 @@ $$
 2. **24 GHz에서 1 m/s = 160 Hz** — 속도와 주파수를 잇는 환산
 3. **−174 dBm/Hz** — 잡음 바닥의 출발점
 
-도플러 부호를 살리는 방법은 [IQ 신호](/posts/radar-IQ-signal/)에 적어 뒀다. 전체 목차는 [여기](/posts/radar-series-index/).
+도플러 부호를 살리는 방법은 [IQ 신호](/posts/radar-IQ-signal/)에 적어 뒀다.
 
 * * *
 

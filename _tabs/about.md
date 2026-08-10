@@ -34,11 +34,11 @@ Outside of work, I enjoy learning new things and staying active through exercise
 
 - [Understanding radar IQ signals](/posts/radar-IQ-signal/) - IQ signals in radar practice, explained from the basics
 - [CW vs FMCW radar](/posts/cw-vs-fmcw-radar/) - why the waveform choice decides what a radar can measure
-- [C# programming course](/posts/csharp-series-index/) - 49 posts covering syntax, data structures, and maze algorithms
-- [OpenCV C++ course](/posts/opencv-series-index/) - 20 posts from setup to filtering, thresholding, and shape detection
-- [WPF project series](/posts/wpf-series-index/) - 12 posts building up to the MVVM pattern step by step
-- [PyTorch CNN basics](/posts/cnn-series-index/) - 11 posts on tensor manipulation for deep learning
-- [Docker practical guide](/posts/docker-series-index/) - 8 posts from installation to image internals
+- [C# programming course](/posts/%281%29DataControl/) - 49 posts covering syntax, data structures, and maze algorithms
+- [OpenCV C++ course](/posts/opencv0/) - 20 posts from setup to filtering, thresholding, and shape detection
+- [WPF project series](/posts/wpf-project-01-getting-started/) - 12 posts building up to the MVVM pattern step by step
+- [PyTorch CNN basics](/posts/cnn-00-kaggle-kernel-gpu-setup/) - 11 posts on tensor manipulation for deep learning
+- [Docker practical guide](/posts/docker-guide-01-installation-setup/) - 8 posts from installation to image internals
 
 ---
 

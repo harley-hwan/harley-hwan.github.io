@@ -24,5 +24,5 @@
 <text x="54" y="331" font-size="12.5" fill="#16a34a" text-anchor="start" font-weight="700">갱신 :  S = H P Hᵀ + R,   K = P Hᵀ S⁻¹,   x̂ ← x̂ + K ν,   P ← (I − K H) P</text>
 <text x="54" y="350" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">이득 K 는 두 불확실성의 비다. 예측이 정확하면 작아지고, 측정이 정확하면 커진다.</text>
 <text x="54" y="369" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">K 가 스칼라가 아니라 행렬인 이유가 여기 있다 — 축마다 어느 쪽을 믿을지가 다르다.</text>
-<text x="54" y="388" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">레이다에서는 그 차이가 극단적이다. 거리축은 측정을, 횡거리축은 예측을 믿는 쪽이 맞다 (그림 3).</text>
+<text x="54" y="388" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">레이다에서는 그 차이가 극단적이다. 거리축은 측정을, 횡거리축은 예측을 믿는 쪽이 맞다 (그림 2).</text>
 </svg>
