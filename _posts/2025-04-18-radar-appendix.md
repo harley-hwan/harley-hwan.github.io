@@ -1,6 +1,6 @@
 ---
 title: "(Radar) 4. 부록 — 용어, RCS 기준 표적, 국방 연구개발 체계"
-description: "0장부터 3장까지 스쳐 간 용어와, 앞으로 계속 만나게 될 것들을 한자리에 모은다 — 좌표와 지형 자료, 전자기 환경, 빔과 하드웨어, 시험 계측, RCS 를 재기 전에 자를 맞추는 기준 표적, 그리고 국방 연구개발이 나뉘는 세 단계까지."
+description: "설명 없이 넘어갔던 레이다 용어, RCS 기준 표적, 국방 연구개발 세 단계."
 date: 2025-04-18 10:00:00 +0900
 slug: 'radar-appendix'
 categories: [Dev, Radar]
@@ -10,9 +10,7 @@ tags: [radar, glossary, rcs, calibration, corner-reflector, test-and-evaluation,
 math: true
 ---
 
-[0장](/posts/radar-fundamentals/)부터 [3장](/posts/radar-range-degradation/)까지 오면서 용어가 여럿 지나갔다. 그중에는 레이다 문헌보다 사업 문서와 시험 계획서에서 더 자주 만나는 것들이 있고, 처음 보면 무슨 말인지 알 수 없는데 아무도 설명해 주지 않는 것들도 있다.
-
-이 장은 그것들을 한자리에 모은 참조용 글이다. **앞 장들처럼 순서대로 읽을 필요는 없다.** 필요할 때 해당 절만 찾아보면 된다.
+[0장](https://harley-hwan.github.io/posts/radar-fundamentals/)부터 [3장](https://harley-hwan.github.io/posts/radar-range-degradation/)까지 쓰면서 설명 없이 넘어간 용어가 꽤 쌓였다. 사업 문서나 시험 계획서에서 처음 만나 그때그때 찾아보고 지나쳤던 것들이다. 나중에 또 찾을 것 같아 여기 모아 둔다. RCS 기준 표적과 국방 연구개발 체계도 같은 이유로 넣었다.
 
 | 절 | 무엇이 있는가 |
 | :--- | :--- |

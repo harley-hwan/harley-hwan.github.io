@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<rect width="860" height="440" fill="#ffffff"/>
+<text x="20.0" y="28.0" font-size="15" fill="#0b0b0b" text-anchor="start" font-weight="600">하늘을 격자로 깐다 — 빔그리드와 모드</text>
+<circle cx="190.0" cy="196.0" r="44.0" fill="#2563eb" stroke="#2563eb" stroke-width="1.6" opacity="0.07"/>
+<circle cx="190.0" cy="196.0" r="2.4" fill="#2563eb"/>
+<circle cx="266.2" cy="240.0" r="44.0" fill="#2563eb" stroke="#2563eb" stroke-width="1.6" opacity="0.07"/>
+<circle cx="266.2" cy="240.0" r="2.4" fill="#2563eb"/>
+<circle cx="190.0" cy="284.0" r="44.0" fill="#2563eb" stroke="#2563eb" stroke-width="1.6" opacity="0.07"/>
+<circle cx="190.0" cy="284.0" r="2.4" fill="#2563eb"/>
+<circle cx="113.8" cy="240.0" r="44.0" fill="#2563eb" stroke="#2563eb" stroke-width="1.6" opacity="0.07"/>
+<circle cx="113.8" cy="240.0" r="2.4" fill="#2563eb"/>
+<circle cx="113.8" cy="152.0" r="44.0" fill="#2563eb" stroke="#2563eb" stroke-width="1.6" opacity="0.07"/>
+<circle cx="113.8" cy="152.0" r="2.4" fill="#2563eb"/>
+<circle cx="190.0" cy="108.0" r="44.0" fill="#2563eb" stroke="#2563eb" stroke-width="1.6" opacity="0.07"/>
+<circle cx="190.0" cy="108.0" r="2.4" fill="#2563eb"/>
+<circle cx="266.2" cy="152.0" r="44.0" fill="#2563eb" stroke="#2563eb" stroke-width="1.6" opacity="0.07"/>
+<circle cx="266.2" cy="152.0" r="2.4" fill="#2563eb"/>
+<line x1="190.0" y1="196.0" x2="266.2" y2="240.0" stroke="#52514e" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="234.1" y="212.0" font-size="12.5" fill="#0b0b0b" text-anchor="start" font-weight="600" font-style="italic">Δ = θ3</text>
+<circle cx="228.1" cy="218.0" r="4.0" fill="#ea580c"/>
+<text x="238.1" y="232.0" font-size="12" fill="#ea580c" text-anchor="start" font-weight="600">교차점 −3 dB</text>
+<text x="60.0" y="356.0" font-size="12.5" fill="#0b0b0b" text-anchor="start">원은 빔의 −3 dB 윤곽.  간격 Δ 를 좁히면</text>
+<text x="60.0" y="375.0" font-size="12.5" fill="#0b0b0b" text-anchor="start">교차 손실은 주는 대신 빔 수가 1/Δ² 로 는다</text>
+<text x="60.0" y="400.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="600">빔 수  M ≈ Ω / (0.866 Δ²)</text>
+<line x1="470.0" y1="330.0" x2="830.0" y2="330.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="463.0" y="334.0" font-size="11.5" fill="#898781" text-anchor="end">0°</text>
+<line x1="470.0" y1="242.0" x2="830.0" y2="242.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="463.0" y="246.0" font-size="11.5" fill="#898781" text-anchor="end">30°</text>
+<line x1="470.0" y1="154.0" x2="830.0" y2="154.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="463.0" y="158.0" font-size="11.5" fill="#898781" text-anchor="end">60°</text>
+<line x1="470.0" y1="66.0" x2="830.0" y2="66.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="463.0" y="70.0" font-size="11.5" fill="#898781" text-anchor="end">90°</text>
+<text x="470.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">-60°</text>
+<line x1="470.0" y1="330.0" x2="470.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="560.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">-30°</text>
+<line x1="560.0" y1="330.0" x2="560.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="650.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">0°</text>
+<line x1="650.0" y1="330.0" x2="650.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="740.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">30°</text>
+<line x1="740.0" y1="330.0" x2="740.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="830.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">60°</text>
+<line x1="830.0" y1="330.0" x2="830.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<line x1="470.0" y1="330.0" x2="830.0" y2="330.0" stroke="#c3c2b7" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="650.0" y="364.0" font-size="12.5" fill="#52514e" text-anchor="middle">방위 [°]</text>
+<text x="434.0" y="56.0" font-size="12.5" fill="#52514e" text-anchor="start">고각 [°]</text>
+<rect x="470.0" y="95.3" width="360.0" height="205.3" fill="#e1e0d9" rx="0" opacity="0.35"/>
+<text x="479.0" y="85.1" font-size="11" fill="#52514e" text-anchor="start">광역감시 10–80° (느린 갱신)</text>
+<rect x="470.0" y="291.3" width="360.0" height="9.4" fill="#ea580c" rx="0" opacity="0.3"/>
+<text x="479.0" y="281.6" font-size="11" fill="#ea580c" text-anchor="start" font-weight="600">저궤도 울타리 el 10–13.2° (한 줄)</text>
+<rect x="560.0" y="124.7" width="180.0" height="117.3" fill="none" rx="4" stroke="#2563eb" stroke-width="1.6"/>
+<text x="650.0" y="136.4" font-size="11.5" fill="#2563eb" text-anchor="middle" font-weight="600">저궤도 근거리 탐색</text>
+<circle cx="572.0" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="588.5" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="605.0" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="621.5" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="638.0" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="654.5" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="671.0" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="687.5" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="704.0" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="720.5" cy="230.3" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="580.2" cy="214.1" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="728.8" cy="214.1" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="572.0" cy="198.0" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="720.5" cy="198.0" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="580.2" cy="181.9" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="728.8" cy="181.9" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="572.0" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="588.5" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="605.0" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="621.5" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="638.0" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="654.5" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="671.0" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="687.5" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="704.0" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="720.5" cy="165.7" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="580.2" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="596.8" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="613.2" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="629.8" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="646.2" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="662.8" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="679.2" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="695.8" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="712.2" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<circle cx="728.8" cy="149.6" r="1.5" fill="#2563eb" opacity="0.5"/>
+<rect x="620.0" y="183.3" width="60.0" height="29.3" fill="none" rx="4" stroke="#7c3aed" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="650.0" y="200.3" font-size="11.5" fill="#7c3aed" text-anchor="middle" font-weight="600">중궤도 (긴 드웰)</text>
+<circle cx="779.0" cy="244.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="779.0" cy="253.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="779.0" cy="262.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="788.0" cy="244.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="788.0" cy="253.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="788.0" cy="262.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="797.0" cy="244.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="797.0" cy="253.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="797.0" cy="262.7" r="3.4" fill="none" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="788.0" cy="253.7" r="20.0" fill="none" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="788.0" y="223.7" font-size="11.5" fill="#16a34a" text-anchor="middle" font-weight="600">큐잉탐색 ±5°</text>
+<text x="470.0" y="400.0" font-size="12.5" fill="#0b0b0b" text-anchor="start">모드는 같은 배열 위의 다른 격자다 — 영역·드웰·재방문만 다르다</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<rect width="860" height="430" fill="#ffffff"/>
+<text x="20.0" y="28.0" font-size="15" fill="#0b0b0b" text-anchor="start" font-weight="600">합으로 찾고 차로 잰다 — 한 펄스로 나오는 각도</text>
+<line x1="62.0" y1="60.0" x2="420.0" y2="60.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="55.0" y="64.0" font-size="11.5" fill="#898781" text-anchor="end">0</text>
+<line x1="62.0" y1="127.5" x2="420.0" y2="127.5" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="55.0" y="131.5" font-size="11.5" fill="#898781" text-anchor="end">-10</text>
+<line x1="62.0" y1="195.0" x2="420.0" y2="195.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="55.0" y="199.0" font-size="11.5" fill="#898781" text-anchor="end">-20</text>
+<line x1="62.0" y1="262.5" x2="420.0" y2="262.5" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="55.0" y="266.5" font-size="11.5" fill="#898781" text-anchor="end">-30</text>
+<line x1="62.0" y1="330.0" x2="420.0" y2="330.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="55.0" y="334.0" font-size="11.5" fill="#898781" text-anchor="end">-40</text>
+<line x1="62.0" y1="330.0" x2="62.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="62.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">-6°</text>
+<line x1="151.5" y1="330.0" x2="151.5" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="151.5" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">-3°</text>
+<line x1="241.0" y1="330.0" x2="241.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="241.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">0°</text>
+<line x1="330.5" y1="330.0" x2="330.5" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="330.5" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">3°</text>
+<line x1="420.0" y1="330.0" x2="420.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="420.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">6°</text>
+<line x1="62.0" y1="330.0" x2="420.0" y2="330.0" stroke="#c3c2b7" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="62.0" y1="60.0" x2="62.0" y2="330.0" stroke="#c3c2b7" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="241.0" y="364.0" font-size="12.5" fill="#52514e" text-anchor="middle">각도 θ [°]</text>
+<text x="28.0" y="52.0" font-size="12.5" fill="#52514e" text-anchor="start">[dB]</text>
+<path d="M62.0,187.0 L64.0,184.6 L65.9,182.8 L67.9,181.4 L69.9,180.6 L71.9,180.1 L73.9,180.2 L75.9,180.8 L77.8,181.8 L79.6,183.3 L81.4,185.2 L83.2,187.7 L84.9,190.6 L88.0,197.5 L90.9,206.1 L93.3,215.8 L95.4,226.6 L97.3,239.4 L98.8,253.2 L100.0,268.1 L101.1,285.5 L101.9,303.4 L102.8,330.0 L105.4,330.0 L106.2,303.9 L107.0,284.7 L108.1,265.9 L109.3,249.6 L110.9,234.3 L112.7,220.3 L114.7,207.5 L117.0,196.0 L119.6,185.6 L122.5,176.3 L125.5,168.5 L128.9,161.8 L132.3,156.4 L134.1,154.3 L135.9,152.6 L137.7,151.2 L139.6,150.2 L141.4,149.6 L143.2,149.4 L144.9,149.6 L146.5,150.1 L148.1,151.0 L149.7,152.3 L151.2,153.8 L152.8,155.8 L155.5,160.5 L158.1,166.6 L160.4,173.9 L162.5,182.3 L164.4,192.2 L165.8,201.9 L167.1,212.6 L169.0,236.4 L170.0,254.4 L170.8,275.6 L171.5,300.5 L171.9,329.0 L172.0,330.0 L173.2,330.0 L173.9,292.8 L174.6,266.0 L175.7,239.7 L177.0,217.4 L178.8,196.1 L180.9,177.2 L183.5,159.8 L186.6,143.8 L190.3,128.2 L194.6,114.0 L197.0,107.5 L199.5,101.3 L202.1,95.5 L204.8,90.0 L207.7,85.0 L210.7,80.4 L213.7,76.3 L216.9,72.5 L220.1,69.3 L223.5,66.5 L226.9,64.2 L230.3,62.4 L234.5,60.9 L238.8,60.1 L243.1,60.1 L247.3,60.8 L251.5,62.3 L255.7,64.5 L259.8,67.5 L263.7,71.1 L267.6,75.4 L271.3,80.4 L274.9,86.0 L278.3,92.2 L281.6,99.2 L284.7,106.6 L287.5,114.5 L290.2,123.1 L292.5,131.2 L294.6,140.1 L296.6,149.5 L298.4,159.2 L301.4,180.0 L303.8,202.8 L305.7,228.3 L307.1,255.9 L308.0,288.7 L308.8,330.0 L310.0,330.0 L310.1,329.0 L310.8,288.5 L312.0,254.4 L313.6,227.5 L314.6,216.1 L315.7,205.4 L317.0,196.2 L318.4,187.7 L319.9,180.3 L321.6,173.6 L323.5,167.6 L325.5,162.6 L327.6,158.3 L330.0,154.8 L331.9,152.6 L334.0,151.0 L336.1,149.9 L338.3,149.5 L340.5,149.6 L342.8,150.4 L345.0,151.7 L347.2,153.6 L349.4,156.1 L351.5,159.1 L353.6,162.6 L355.6,166.7 L357.6,171.3 L359.5,176.3 L362.9,187.5 L365.7,199.3 L368.2,212.7 L370.3,227.6 L372.1,243.7 L373.6,262.0 L374.8,281.1 L375.7,301.5 L376.6,330.0 L379.3,329.9 L380.1,303.4 L381.2,280.6 L382.6,260.1 L384.4,242.3 L385.9,231.0 L387.6,221.1 L389.5,212.3 L391.6,204.3 L394.5,196.1 L397.6,189.6 L399.3,186.9 L401.0,184.7 L402.8,182.9 L404.7,181.5 L406.6,180.6 L408.5,180.2 L410.4,180.2 L412.4,180.7 L414.4,181.6 L416.2,182.9 L418.1,184.7 L420.0,187.0" stroke="#2563eb" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M62.0,165.7 L65.1,170.9 L68.1,176.8 L70.9,183.4 L73.6,190.6 L76.2,198.5 L78.6,206.9 L81.0,216.1 L83.2,226.2 L85.3,236.8 L87.1,247.7 L90.6,271.5 L93.4,297.5 L96.2,330.0 L111.6,330.0 L111.7,329.8 L113.8,299.9 L116.4,271.5 L119.4,245.7 L122.8,221.6 L126.6,199.4 L130.9,178.9 L135.7,160.1 L138.3,151.2 L140.9,142.8 L145.1,131.2 L149.6,120.5 L154.3,111.0 L159.1,102.7 L164.1,95.5 L169.2,89.6 L171.8,87.1 L174.5,84.9 L177.1,83.1 L179.8,81.5 L183.5,80.0 L187.0,79.1 L190.6,78.9 L194.2,79.3 L197.7,80.3 L201.1,82.0 L204.4,84.3 L207.5,87.2 L210.6,90.7 L213.4,94.7 L216.2,99.4 L218.8,104.6 L221.2,110.3 L223.5,116.7 L225.6,123.4 L227.6,130.8 L230.7,145.6 L233.3,162.2 L235.5,181.1 L237.2,202.4 L238.4,225.4 L239.4,253.3 L240.0,282.2 L240.6,330.0 L241.4,330.0 L241.4,328.4 L241.8,293.9 L242.3,264.0 L243.1,238.9 L244.0,217.8 L244.9,201.0 L246.2,185.0 L247.6,170.8 L249.3,157.7 L251.5,144.7 L254.0,132.7 L256.8,121.9 L260.0,112.4 L263.6,103.8 L267.4,96.6 L271.6,90.5 L273.8,87.8 L276.1,85.6 L279.7,82.8 L283.4,80.7 L287.3,79.4 L291.2,78.9 L295.2,79.2 L299.3,80.3 L303.3,82.1 L307.3,84.8 L311.3,88.1 L315.2,92.2 L319.0,97.1 L322.9,102.7 L326.7,109.1 L330.2,116.0 L333.7,123.6 L337.0,131.7 L340.1,140.0 L343.0,148.9 L345.9,158.5 L348.6,168.5 L351.1,178.9 L353.5,189.9 L357.9,213.4 L361.7,238.9 L365.0,266.4 L367.8,295.5 L370.4,330.0 L385.8,330.0 L385.9,329.8 L388.4,299.4 L391.4,272.3 L394.9,247.7 L396.7,236.8 L398.8,226.2 L401.0,216.1 L403.4,206.9 L405.8,198.5 L408.4,190.6 L411.1,183.4 L413.9,176.8 L416.9,170.9 L420.0,165.7" stroke="#ea580c" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="241.0" y="58.8" font-size="12.5" fill="#2563eb" text-anchor="middle" font-weight="600">합 Σ</text>
+<text x="73.9" y="124.1" font-size="12.5" fill="#ea580c" text-anchor="start" font-weight="600">차 Δ</text>
+<text x="30.0" y="385.0" font-size="12.5" fill="#0b0b0b" text-anchor="start">기준 배열 50소자. Σ 는 보어사이트에서 최대, Δ 는 그 지점이 영점이다</text>
+<text x="30.0" y="404.0" font-size="12" fill="#898781" text-anchor="start">표적이 축에서 벗어난 만큼 Δ 가 살아난다</text>
+<line x1="505.0" y1="330.0" x2="830.0" y2="330.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="498.0" y="334.0" font-size="11.5" fill="#898781" text-anchor="end">-2</text>
+<line x1="505.0" y1="262.5" x2="830.0" y2="262.5" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="498.0" y="266.5" font-size="11.5" fill="#898781" text-anchor="end">-1</text>
+<line x1="505.0" y1="195.0" x2="830.0" y2="195.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="498.0" y="199.0" font-size="11.5" fill="#898781" text-anchor="end">0</text>
+<line x1="505.0" y1="127.5" x2="830.0" y2="127.5" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="498.0" y="131.5" font-size="11.5" fill="#898781" text-anchor="end">1</text>
+<line x1="505.0" y1="60.0" x2="830.0" y2="60.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="butt"/>
+<text x="498.0" y="64.0" font-size="11.5" fill="#898781" text-anchor="end">2</text>
+<line x1="505.0" y1="330.0" x2="505.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="505.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">-2°</text>
+<line x1="586.2" y1="330.0" x2="586.2" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="586.2" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">-1°</text>
+<line x1="667.5" y1="330.0" x2="667.5" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="667.5" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">0°</text>
+<line x1="748.8" y1="330.0" x2="748.8" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="748.8" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">1°</text>
+<line x1="830.0" y1="330.0" x2="830.0" y2="334.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt"/>
+<text x="830.0" y="347.0" font-size="11.5" fill="#898781" text-anchor="middle">2°</text>
+<line x1="505.0" y1="330.0" x2="830.0" y2="330.0" stroke="#c3c2b7" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="505.0" y1="60.0" x2="505.0" y2="330.0" stroke="#c3c2b7" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="667.5" y="364.0" font-size="12.5" fill="#52514e" text-anchor="middle">각도 θ [°]  (±θ3)</text>
+<text x="471.0" y="52.0" font-size="12.5" fill="#52514e" text-anchor="start">Δ/Σ</text>
+<path d="M536.4,329.6 L540.6,318.5 L545.1,307.9 L550.0,298.1 L555.4,288.5 L561.1,279.7 L567.2,271.2 L573.7,263.2 L580.9,255.5 L588.9,247.8 L597.6,240.1 L607.2,232.6 L617.8,225.1 L628.5,218.0 L640.7,210.5 L688.3,183.0 L708.1,170.9 L718.4,164.1 L727.8,157.4 L736.4,150.7 L744.4,143.9 L753.5,135.2 L761.8,126.2 L769.2,116.9 L776.2,106.9 L782.5,96.4 L788.4,85.2 L793.8,73.1 L798.6,60.4" stroke="#16a34a" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="553.8" y1="260.3" x2="781.2" y2="129.7" stroke="#898781" stroke-width="1" stroke-linecap="butt" stroke-dasharray="5 4"/>
+<text x="513.1" y="72.1" font-size="11.5" fill="#52514e" text-anchor="start">기울기 k_m ≈ 1.4 (θ/θ3 기준)</text>
+<text x="505.0" y="385.0" font-size="12.5" fill="#0b0b0b" text-anchor="start">빔폭 안에서 Δ/Σ 는 각도에 거의 비례하고, 부호가 방향을 준다</text>
+<text x="505.0" y="404.0" font-size="12" fill="#898781" text-anchor="start">이 직선이 가파를수록 같은 SNR 에서 각도가 정확하다</text>
+</svg>
