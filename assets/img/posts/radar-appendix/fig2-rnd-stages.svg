@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 486" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ax" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-mut" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d97706"/></marker></defs>
+<rect x="1" y="1" width="858" height="484" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="32" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">국방 연구개발은 세 단계로 나뉜다</text>
+<text x="430" y="52" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">단계마다 묻는 질문이 다르고, 그래서 수행 주체와 산출물도 다르다.</text>
+<rect x="58" y="84" width="236" height="232" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="1.8"/>
+<rect x="58" y="84" width="236" height="34" rx="12" fill="#16a34a" stroke="none" stroke-width="0" fill-opacity="0.14"/>
+<text x="176" y="106" font-size="14" fill="#16a34a" text-anchor="middle" font-weight="700">기초연구</text>
+<text x="176" y="138" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">"되는가?"</text>
+<text x="176" y="158" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">원리와 가능성을 확인한다</text>
+<text x="74" y="186" font-size="11" fill="#1e293b" text-anchor="start" font-weight="400">· 개별기초연구 · 순수기초연구</text>
+<text x="74" y="205" font-size="11" fill="#1e293b" text-anchor="start" font-weight="400">· 국제공동기초연구</text>
+<text x="74" y="224" font-size="11" fill="#1e293b" text-anchor="start" font-weight="400">· 국방특화연구센터 · 연구실</text>
+<line x1="74" y1="254" x2="278" y2="254" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="74" y="272" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="700">수행</text>
+<text x="110" y="272" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="400">대학, 대학 부설연구소,</text>
+<text x="110" y="287" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="400">정부출연연구기관</text>
+<text x="74" y="306" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="700">산출</text>
+<text x="110" y="306" font-size="10.5" fill="#16a34a" text-anchor="start" font-weight="700">논문 · 개념 검증</text>
+<rect x="312" y="84" width="236" height="232" rx="12" fill="#f8fafc" stroke="#2563eb" stroke-width="1.8"/>
+<rect x="312" y="84" width="236" height="34" rx="12" fill="#2563eb" stroke="none" stroke-width="0" fill-opacity="0.14"/>
+<text x="430" y="106" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="700">응용연구</text>
+<text x="430" y="138" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">"쓸 만한가?"</text>
+<text x="430" y="158" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">무기체계에 적용할 수 있는지 본다</text>
+<text x="328" y="186" font-size="11" fill="#1e293b" text-anchor="start" font-weight="400">· 핵심기술 과제의 주된 자리</text>
+<text x="328" y="205" font-size="11" fill="#1e293b" text-anchor="start" font-weight="400">· 부분 시제와 실험으로 확인</text>
+<line x1="328" y1="254" x2="532" y2="254" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="328" y="272" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="700">수행</text>
+<text x="364" y="272" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="400">전문연구기관, 기업,</text>
+<text x="364" y="287" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="400">연구개발기관</text>
+<text x="328" y="306" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="700">산출</text>
+<text x="364" y="306" font-size="10.5" fill="#2563eb" text-anchor="start" font-weight="700">부분 시제 · 성능 자료</text>
+<rect x="566" y="84" width="236" height="232" rx="12" fill="#f8fafc" stroke="#7c3aed" stroke-width="1.8"/>
+<rect x="566" y="84" width="236" height="34" rx="12" fill="#7c3aed" stroke="none" stroke-width="0" fill-opacity="0.14"/>
+<text x="684" y="106" font-size="14" fill="#7c3aed" text-anchor="middle" font-weight="700">시험개발</text>
+<text x="684" y="138" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="700">"만들 수 있는가?"</text>
+<text x="684" y="158" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">시제품을 만들어 규격을 굳힌다</text>
+<text x="582" y="186" font-size="11" fill="#1e293b" text-anchor="start" font-weight="400">· 체계개발로 넘기기 직전 단계</text>
+<text x="582" y="205" font-size="11" fill="#1e293b" text-anchor="start" font-weight="400">· 성능·환경 시험으로 검증</text>
+<line x1="582" y1="254" x2="786" y2="254" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="582" y="272" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="700">수행</text>
+<text x="618" y="272" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="400">연구개발기관, 기업</text>
+<text x="582" y="306" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="700">산출</text>
+<text x="618" y="306" font-size="10.5" fill="#7c3aed" text-anchor="start" font-weight="700">시제품 · 기술자료</text>
+<line x1="300" y1="200" x2="308" y2="200" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar-ax)"/>
+<line x1="554" y1="200" x2="562" y2="200" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar-ax)"/>
+<rect x="34" y="332" width="792" height="58" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="54" y="356" font-size="12" fill="#d97706" text-anchor="start" font-weight="700">선행핵심기술</text>
+<text x="150" y="356" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="400">아직 소요가 확정되지 않았지만 미리 확보해 두는 기술 — 주로 기초·응용 단계에 놓인다</text>
+<text x="54" y="378" font-size="12" fill="#dc2626" text-anchor="start" font-weight="700">핵심기술</text>
+<text x="150" y="378" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="400">무기체계에 쓰려고 개발 대상으로 지정한 기술 — 응용연구와 시험개발이 주 무대다</text>
+<rect x="34" y="400" width="792" height="72" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="54" y="424" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">단계를 가르는 기준은 예산이 아니라 답해야 하는 질문이다. 질문이 다르면 성공 판정 기준도 달라진다.</text>
+<text x="54" y="444" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">과제를 통제하는 쪽에는 사업통제부서와 프로그램 관리자(PM)가 있고, 산출된 기술자료는 국방기술정보통합관리체계로 모인다.</text>
+<text x="54" y="464" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">이 그림은 제도의 뼈대를 그린 것이다. 정확한 법적 정의와 절차는 국가법령정보센터의 원문을 봐야 한다.</text>
+</svg>
