@@ -33,7 +33,7 @@ Outside of work, I enjoy learning new things and staying active through exercise
 ## Featured posts
 
 - [Understanding radar IQ signals](/posts/radar-IQ-signal/) - IQ signals in radar practice, explained from the basics
-- [CW vs FMCW radar](/posts/cw-vs-fmcw-radar/) - why the waveform choice decides what a radar can measure
+- [CW, FMCW and PW radar](/posts/cw-fmcw-pw-radar/) - what each waveform buys and what it pays for
 - [C# programming course](/posts/%281%29DataControl/) - 49 posts covering syntax, data structures, and maze algorithms
 - [OpenCV C++ course](/posts/opencv0/) - 20 posts from setup to filtering, thresholding, and shape detection
 - [WPF project series](/posts/wpf-project-01-getting-started/) - 12 posts building up to the MVVM pattern step by step
