@@ -1,0 +1,69 @@
+<svg width="2580" height="1716" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 572" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="570" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">빔 방향을 u, v 로 적는다</text>
+<text x="224.0" y="78.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">표적 방향을 배열 면에 내린 그림자</text>
+<rect x="40.0" y="92.0" width="368.0" height="252.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<path d="M159.0,230.8 L406.8,230.8 L273.0,305.2 L25.2,305.2 Z" fill="#2563eb" stroke="#cbd5e1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0.07"/>
+<line x1="124.0" y1="250.3" x2="371.8" y2="250.3" stroke="#cbd5e1" stroke-width="0.9" stroke-linecap="butt"/>
+<line x1="223.9" y1="230.8" x2="90.1" y2="305.2" stroke="#cbd5e1" stroke-width="0.9" stroke-linecap="butt"/>
+<line x1="92.1" y1="268.0" x2="339.9" y2="268.0" stroke="#cbd5e1" stroke-width="0.9" stroke-linecap="butt"/>
+<line x1="282.9" y1="230.8" x2="149.1" y2="305.2" stroke="#cbd5e1" stroke-width="0.9" stroke-linecap="butt"/>
+<line x1="60.2" y1="285.7" x2="308.0" y2="285.7" stroke="#cbd5e1" stroke-width="0.9" stroke-linecap="butt"/>
+<line x1="341.9" y1="230.8" x2="208.1" y2="305.2" stroke="#cbd5e1" stroke-width="0.9" stroke-linecap="butt"/>
+<text x="289.9" y="226.9" font-size="10" fill="#64748b" text-anchor="middle" font-weight="700">배열 면</text>
+<line x1="216.0" y1="268.0" x2="216.0" y2="122.3" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt" stroke-dasharray="5 4"/>
+<text x="223.1" y="115.5" font-size="10" fill="#64748b" text-anchor="start" font-weight="400">정면</text>
+<line x1="216.0" y1="268.0" x2="268.0" y2="172.9" stroke="#2563eb" stroke-width="2.4" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<circle cx="268.0" cy="172.9" r="5" fill="#dc2626"/>
+<text x="277.0" y="175.9" font-size="10.5" fill="#dc2626" text-anchor="start" font-weight="700">표적</text>
+<line x1="256.0" y1="194.9" x2="256.0" y2="280.7" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt" stroke-dasharray="3 3"/>
+<circle cx="256.0" cy="280.7" r="4" fill="#ea580c"/>
+<line x1="216.0" y1="268.0" x2="278.9" y2="268.0" stroke="#ea580c" stroke-width="2.2" stroke-linecap="butt"/>
+<line x1="278.9" y1="268.0" x2="256.0" y2="280.7" stroke="#16a34a" stroke-width="2.2" stroke-linecap="butt"/>
+<text x="260.2" y="260.9" font-size="12.5" fill="#ea580c" text-anchor="middle" font-weight="700">u</text>
+<text x="293.4" y="274.4" font-size="12.5" fill="#16a34a" text-anchor="middle" font-weight="700">v</text>
+<text x="150.0" y="362.0" font-size="12" fill="#ea580c" text-anchor="middle" font-weight="700">u = sinθ · cosφ</text>
+<text x="298.0" y="362.0" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="700">v = sinθ · sinφ</text>
+<text x="224.0" y="382.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">각도가 아니라 사인 값이다. 정면이 (0, 0) 이다.</text>
+<text x="632.0" y="78.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">u–v 평면</text>
+<rect x="502.0" y="92.0" width="260.0" height="252.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<circle cx="632.0" cy="218.0" r="55.1" fill="none" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="671.7" y="179.4" font-size="8.5" fill="#94a3b8" text-anchor="start" font-weight="400">30°</text>
+<circle cx="632.0" cy="218.0" r="95.4" fill="none" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="700.7" y="151.2" font-size="8.5" fill="#94a3b8" text-anchor="start" font-weight="400">60°</text>
+<line x1="505.0" y1="218.0" x2="759.0" y2="218.0" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="butt"/>
+<line x1="632.0" y1="95.0" x2="632.0" y2="341.0" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="butt"/>
+<circle cx="632.0" cy="218.0" r="110.2" fill="#0284c7" fill-opacity="0.07" stroke="#0284c7" stroke-width="1.8"/>
+<line x1="521.8" y1="214.0" x2="521.8" y2="222.0" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="butt"/>
+<line x1="576.9" y1="214.0" x2="576.9" y2="222.0" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="butt"/>
+<line x1="687.1" y1="214.0" x2="687.1" y2="222.0" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="butt"/>
+<line x1="742.2" y1="214.0" x2="742.2" y2="222.0" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="butt"/>
+<text x="757.0" y="211.0" font-size="11" fill="#64748b" text-anchor="end" font-weight="700">u</text>
+<text x="639.0" y="105.0" font-size="11" fill="#64748b" text-anchor="start" font-weight="700">v</text>
+<text x="552.7" y="306.1" font-size="10" fill="#0284c7" text-anchor="middle" font-weight="700">가시 영역</text>
+<text x="552.7" y="320.1" font-size="9.5" fill="#0284c7" text-anchor="middle" font-weight="400">u² + v² ≤ 1</text>
+<ellipse cx="665.1" cy="193.8" rx="7.72" ry="7.72" fill="#2563eb" fill-opacity="0.32" stroke="#2563eb" stroke-width="1.1"/>
+<ellipse cx="581.3" cy="233.4" rx="7.72" ry="7.72" fill="#2563eb" fill-opacity="0.32" stroke="#2563eb" stroke-width="1.1"/>
+<ellipse cx="698.1" cy="262.1" rx="7.72" ry="7.72" fill="#2563eb" fill-opacity="0.32" stroke="#2563eb" stroke-width="1.1"/>
+<text x="632.0" y="362.0" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">빔이 어디를 향하든 이 평면에서는 크기가 같다</text>
+<text x="632.0" y="382.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">원 밖은 실제 방향이 없는 자리다</text>
+<rect x="40.0" y="402.0" width="780.0" height="62.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="430.0" y="426.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">배열의 응답은 u − u₀ 의 함수다. 조향을 해도 모양이 그대로 옮겨 갈 뿐 넓이가 변하지 않는다.</text>
+<text x="430.0" y="448.0" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">각도로 적으면 같은 빔이 조향할수록 넓어져서, 빔을 어디에 놓을지 정할 때마다 다시 계산해야 한다.</text>
+<rect x="40.0" y="476.0" width="780.0" height="76.0" rx="8" fill="#ea580c" fill-opacity="0.06"/>
+<rect x="40.0" y="476.0" width="780.0" height="76.0" rx="8" fill="none" stroke="#ea580c" stroke-width="1.3"/>
+<text x="430.0" y="498.0" font-size="11.5" fill="#ea580c" text-anchor="middle" font-weight="700">u 를 같은 간격으로 띄우면 각도 간격은 바깥으로 갈수록 벌어진다</text>
+<text x="128.0" y="522.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">u = 0.00</text>
+<text x="128.0" y="538.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="700">0.0°</text>
+<text x="250.0" y="522.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">u = 0.17</text>
+<text x="250.0" y="538.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="700">9.6°</text>
+<text x="372.0" y="522.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">u = 0.33</text>
+<text x="372.0" y="538.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="700">19.5°</text>
+<text x="494.0" y="522.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">u = 0.50</text>
+<text x="494.0" y="538.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="700">30.0°</text>
+<text x="616.0" y="522.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">u = 0.67</text>
+<text x="616.0" y="538.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="700">41.8°</text>
+<text x="738.0" y="522.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">u = 0.83</text>
+<text x="738.0" y="538.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="700">56.4°</text>
+</svg>
