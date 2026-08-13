@@ -1,0 +1,95 @@
+<svg width="2580" height="1656" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 552" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="550" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">다중경로 — 저고도 표적의 고각이 흔들리는 이유</text>
+<text x="240.0" y="78.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">지면에 비친 상이 표적 아래에 선다</text>
+<rect x="44.0" y="92.0" width="392.0" height="176.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<line x1="56.0" y1="186.0" x2="424.0" y2="186.0" stroke="#64748b" stroke-width="2.0" stroke-linecap="butt"/>
+<text x="64.0" y="178.0" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="700">지면</text>
+<rect x="76.0" y="159.0" width="20.0" height="22.0" rx="3" fill="#1e293b" fill-opacity="0.55"/>
+<text x="86.0" y="204.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="700">레이다</text>
+<circle cx="350.0" cy="112.0" r="6" fill="#dc2626"/>
+<text x="362.0" y="116.0" font-size="11" fill="#dc2626" text-anchor="start" font-weight="700">표적</text>
+<line x1="96.0" y1="164.0" x2="342.0" y2="115.0" stroke="#2563eb" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<text x="214.0" y="118.0" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="700">직접파</text>
+<line x1="96.0" y1="174.0" x2="249.7" y2="186.0" stroke="#ea580c" stroke-width="1.5" stroke-linecap="butt"/>
+<line x1="249.7" y1="186.0" x2="344.0" y2="121.0" stroke="#ea580c" stroke-width="1.5" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<text x="257.7" y="176.0" font-size="10.5" fill="#ea580c" text-anchor="start" font-weight="700">반사파</text>
+<circle cx="350.0" cy="260.0" r="5.5" fill="#f6b48a"/>
+<line x1="96.0" y1="178.0" x2="344.0" y2="255.0" stroke="#ea580c" stroke-width="1.0" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<text x="362.0" y="264.0" font-size="10.5" fill="#ea580c" text-anchor="start" font-weight="700">상</text>
+<text x="362.0" y="279.0" font-size="9.5" fill="#64748b" text-anchor="start" font-weight="400">레이다에는 여기서도 온 것처럼 보인다</text>
+<line x1="394.0" y1="112.0" x2="394.0" y2="260.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" stroke-dasharray="3 3"/>
+<text x="400.0" y="182.0" font-size="10" fill="#64748b" text-anchor="start" font-weight="700">2θt</text>
+<text x="650.0" y="78.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">빔 안에 둘이 함께 들어온다</text>
+<rect x="474.0" y="92.0" width="352.0" height="176.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<line x1="474.0" y1="268.0" x2="826.0" y2="268.0" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="butt"/>
+<line x1="474.0" y1="268.0" x2="474.0" y2="92.0" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="butt"/>
+<line x1="469.0" y1="108.0" x2="474.0" y2="108.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="466.0" y="112.0" font-size="10" fill="#64748b" text-anchor="end" font-weight="400">0</text>
+<line x1="474.0" y1="108.0" x2="826.0" y2="108.0" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="469.0" y1="161.3" x2="474.0" y2="161.3" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="466.0" y="165.3" font-size="10" fill="#64748b" text-anchor="end" font-weight="400">-10</text>
+<line x1="474.0" y1="161.3" x2="826.0" y2="161.3" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="469.0" y1="214.7" x2="474.0" y2="214.7" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="466.0" y="218.7" font-size="10" fill="#64748b" text-anchor="end" font-weight="400">-20</text>
+<line x1="474.0" y1="214.7" x2="826.0" y2="214.7" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="469.0" y1="268.0" x2="474.0" y2="268.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="466.0" y="272.0" font-size="10" fill="#64748b" text-anchor="end" font-weight="400">-30</text>
+<line x1="474.0" y1="268.0" x2="826.0" y2="268.0" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="518.0" y1="268.0" x2="518.0" y2="274.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="518.0" y="283.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">−3°</text>
+<line x1="562.0" y1="268.0" x2="562.0" y2="274.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="562.0" y="283.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400"></text>
+<line x1="606.0" y1="268.0" x2="606.0" y2="274.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="606.0" y="283.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">−1°</text>
+<line x1="650.0" y1="268.0" x2="650.0" y2="274.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="650.0" y="283.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">0°</text>
+<line x1="694.0" y1="268.0" x2="694.0" y2="274.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="694.0" y="283.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">1°</text>
+<line x1="738.0" y1="268.0" x2="738.0" y2="274.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="738.0" y="283.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400"></text>
+<line x1="782.0" y1="268.0" x2="782.0" y2="274.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="782.0" y="283.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">3°</text>
+<path d="M474.7,237.9 L475.6,235.0 L476.4,232.2 L477.2,229.5 L478.1,226.8 L478.9,224.3 L479.7,221.9 L480.6,219.5 L481.4,217.2 L482.2,215.0 L483.1,212.8 L483.9,210.7 L484.7,208.7 L485.6,206.7 L486.4,204.7 L487.3,202.7 L488.1,200.9 L489.0,199.0 L489.8,197.3 L490.6,195.5 L491.5,193.9 L492.3,192.2 L493.2,190.6 L494.0,189.0 L494.8,187.4 L495.7,185.9 L496.5,184.4 L497.3,182.9 L498.2,181.5 L499.0,180.1 L499.8,178.7 L500.7,177.3 L501.5,176.0 L502.3,174.7 L503.2,173.4 L504.0,172.1 L504.9,170.8 L505.7,169.6 L506.6,168.4 L507.4,167.2 L508.2,166.0 L509.1,164.9 L509.9,163.8 L510.8,162.6 L511.6,161.6 L512.4,160.5 L513.3,159.4 L514.1,158.4 L514.9,157.4 L515.8,156.3 L516.6,155.4 L517.4,154.4 L518.3,153.4 L519.1,152.5 L519.9,151.5 L520.8,150.6 L521.6,149.7 L522.5,148.8 L523.3,147.9 L524.2,147.0 L525.0,146.2 L525.8,145.3 L526.7,144.5 L527.5,143.7 L528.4,142.9 L529.2,142.1 L530.0,141.3 L530.9,140.6 L531.7,139.8 L532.5,139.1 L533.4,138.3 L534.2,137.6 L535.0,136.9 L535.9,136.2 L536.7,135.5 L537.5,134.8 L538.4,134.2 L539.2,133.5 L540.1,132.8 L540.9,132.2 L541.8,131.6 L542.6,131.0 L543.4,130.4 L544.3,129.8 L545.1,129.2 L546.0,128.6 L546.8,128.0 L547.6,127.5 L548.5,126.9 L549.3,126.4 L550.1,125.9 L551.0,125.3 L551.8,124.8 L552.6,124.3 L553.5,123.8 L554.3,123.3 L555.1,122.9 L556.0,122.4 L556.8,121.9 L557.7,121.4 L558.5,121.0 L559.4,120.6 L560.2,120.1 L561.0,119.7 L561.9,119.3 L562.7,118.9 L563.6,118.5 L564.4,118.1 L565.2,117.7 L566.1,117.4 L566.9,117.0 L567.7,116.6 L568.6,116.3 L569.4,116.0 L570.2,115.6 L571.1,115.3 L571.9,115.0 L572.7,114.7 L573.6,114.4 L574.4,114.1 L575.3,113.8 L576.1,113.5 L577.0,113.2 L577.8,112.9 L578.6,112.7 L579.5,112.4 L580.3,112.2 L581.2,112.0 L582.0,111.7 L582.8,111.5 L583.7,111.3 L584.5,111.1 L585.3,110.9 L586.2,110.7 L587.0,110.5 L587.8,110.3 L588.7,110.1 L589.5,110.0 L590.3,109.8 L591.2,109.6 L592.0,109.5 L592.9,109.4 L593.7,109.2 L594.6,109.1 L595.4,109.0 L596.2,108.9 L597.1,108.8 L597.9,108.7 L598.8,108.6 L599.6,108.5 L600.4,108.4 L601.3,108.3 L602.1,108.3 L602.9,108.2 L603.8,108.2 L604.6,108.1 L605.4,108.1 L606.3,108.1 L607.1,108.0 L607.9,108.0 L608.8,108.0 L609.6,108.0 L609.7,108.0 L610.5,108.0 L611.4,108.0 L612.2,108.0 L613.1,108.1 L613.9,108.1 L614.7,108.1 L615.6,108.2 L616.4,108.2 L617.2,108.3 L618.1,108.3 L618.9,108.4 L619.7,108.5 L620.6,108.6 L621.4,108.7 L622.2,108.8 L623.1,108.9 L623.9,109.0 L624.8,109.1 L625.6,109.2 L626.4,109.4 L627.3,109.5 L628.1,109.6 L629.0,109.8 L629.8,110.0 L630.7,110.1 L631.5,110.3 L632.3,110.5 L633.2,110.7 L634.0,110.9 L634.8,111.1 L635.7,111.3 L636.5,111.5 L637.3,111.7 L638.2,112.0 L639.0,112.2 L639.8,112.4 L640.7,112.7 L641.5,112.9 L642.4,113.2 L643.2,113.5 L644.0,113.8 L644.9,114.1 L645.7,114.4 L646.6,114.7 L647.4,115.0 L648.3,115.3 L649.1,115.6 L649.9,116.0 L650.8,116.3 L651.6,116.6 L652.4,117.0 L653.3,117.4 L654.1,117.7 L654.9,118.1 L655.8,118.5 L656.6,118.9 L657.4,119.3 L658.3,119.7 L659.1,120.1 L660.0,120.6 L660.8,121.0 L661.6,121.4 L662.5,121.9 L663.3,122.4 L664.2,122.9 L665.0,123.3 L665.9,123.8 L666.7,124.3 L667.5,124.8 L668.4,125.3 L669.2,125.9 L670.0,126.4 L670.9,126.9 L671.7,127.5 L672.5,128.0 L673.4,128.6 L674.2,129.2 L675.0,129.8 L675.9,130.4 L676.7,131.0 L677.6,131.6 L678.4,132.2 L679.2,132.8 L680.1,133.5 L680.9,134.2 L681.8,134.8 L682.6,135.5 L683.5,136.2 L684.3,136.9 L685.1,137.6 L686.0,138.3 L686.8,139.1 L687.6,139.8 L688.5,140.6 L689.3,141.3 L690.1,142.1 L691.0,142.9 L691.8,143.7 L692.6,144.5 L693.5,145.3 L694.3,146.2 L695.2,147.0 L696.0,147.9 L696.8,148.8 L697.7,149.7 L698.5,150.6 L699.4,151.5 L700.2,152.5 L701.1,153.4 L701.9,154.4 L702.7,155.4 L703.6,156.3 L704.4,157.4 L705.2,158.4 L706.1,159.4 L706.9,160.5 L707.7,161.6 L708.6,162.6 L709.4,163.8 L710.2,164.9 L711.1,166.0 L711.9,167.2 L712.8,168.4 L713.6,169.6 L714.4,170.8 L715.3,172.1 L716.1,173.4 L717.0,174.7 L717.8,176.0 L718.7,177.3 L719.5,178.7 L720.3,180.1 L721.2,181.5 L722.0,182.9 L722.8,184.4 L723.7,185.9 L724.5,187.4 L725.3,189.0 L726.2,190.6 L727.0,192.2 L727.8,193.9 L728.7,195.5 L729.5,197.3 L730.4,199.0 L731.2,200.9 L732.0,202.7 L732.9,204.7 L733.7,206.7 L734.6,208.7 L735.4,210.7 L736.3,212.8 L737.1,215.0 L737.9,217.2 L738.8,219.5 L739.6,221.9 L740.4,224.3 L741.3,226.8 L742.1,229.5 L742.9,232.2 L743.8,235.0 L744.6,237.9 L745.4,240.9 L746.3,244.1 L747.1,247.5 L748.0,251.0 L748.8,254.6 L749.6,258.5 L750.5,262.9 L751.3,267.3 L752.2,268.0 L753.0,268.0 L753.9,268.0 L754.7,268.0 L755.5,268.0 L756.4,268.0 L757.2,268.0 L758.0,268.0 L758.9,268.0 L759.7,268.0 L760.5,268.0 L762.2,268.0 L763.0,268.0 L763.8,268.0 L764.7,268.0 L765.5,268.0 L766.3,268.0 L767.2,268.0 L768.0,268.0 L768.9,268.0 L769.7,268.0 L770.6,268.0 L771.4,268.0 L772.2,268.0 L773.1,268.0 L773.9,268.0 L774.8,268.0 L775.6,268.0 L776.4,268.0 L777.3,268.0 L778.1,268.0 L778.9,268.0 L779.8,268.0 L780.6,268.0 L781.4,268.0 L782.3,268.0 L783.1,268.0 L783.9,268.0 L784.8,268.0 L785.7,268.0" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="650.0" y1="92.0" x2="650.0" y2="268.0" stroke="#dc2626" stroke-width="1.3" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<line x1="569.3" y1="92.0" x2="569.3" y2="268.0" stroke="#ea580c" stroke-width="1.3" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<text x="656.6" y="101.6" font-size="10.5" fill="#dc2626" text-anchor="start" font-weight="700">표적</text>
+<text x="562.7" y="101.6" font-size="10.5" fill="#ea580c" text-anchor="end" font-weight="700">상</text>
+<text x="482.8" y="246.7" font-size="10" fill="#64748b" text-anchor="start" font-weight="700">고도 800 m, 50 km → 고각 0.92°</text>
+<text x="650.0" y="304.0" font-size="11" fill="#64748b" text-anchor="middle" font-weight="700">빔 정면에서 벗어난 각도</text>
+<text x="430.0" y="330.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">표적 고도에 따른 고각 오차</text>
+<text x="140.0" y="354.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="700">표적 고도</text>
+<text x="288.0" y="354.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="700">고각</text>
+<text x="436.0" y="354.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="700">빔폭 대비</text>
+<text x="584.0" y="354.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="700">고각 오차 (중앙값)</text>
+<text x="732.0" y="354.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="700">90 %</text>
+<text x="140.0" y="376.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">200 m</text>
+<text x="288.0" y="376.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.23°</text>
+<text x="436.0" y="376.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.09 배</text>
+<text x="584.0" y="376.0" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="700">0.205°</text>
+<text x="732.0" y="376.0" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="700">0.216°</text>
+<text x="140.0" y="397.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">400 m</text>
+<text x="288.0" y="397.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.46°</text>
+<text x="436.0" y="397.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.18 배</text>
+<text x="584.0" y="397.0" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="700">0.395°</text>
+<text x="732.0" y="397.0" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="700">0.425°</text>
+<text x="140.0" y="418.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">800 m</text>
+<text x="288.0" y="418.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.92°</text>
+<text x="436.0" y="418.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.36 배</text>
+<text x="584.0" y="418.0" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="700">0.687°</text>
+<text x="732.0" y="418.0" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="700">1.572°</text>
+<text x="140.0" y="439.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">1600 m</text>
+<text x="288.0" y="439.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">1.83°</text>
+<text x="436.0" y="439.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.71 배</text>
+<text x="584.0" y="439.0" font-size="10.5" fill="#16a34a" text-anchor="middle" font-weight="700">0.478°</text>
+<text x="732.0" y="439.0" font-size="10.5" fill="#16a34a" text-anchor="middle" font-weight="700">0.664°</text>
+<text x="140.0" y="460.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">3200 m</text>
+<text x="288.0" y="460.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">3.67°</text>
+<text x="436.0" y="460.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">1.43 배</text>
+<text x="584.0" y="460.0" font-size="10.5" fill="#16a34a" text-anchor="middle" font-weight="700">0.225°</text>
+<text x="732.0" y="460.0" font-size="10.5" fill="#16a34a" text-anchor="middle" font-weight="700">0.313°</text>
+<rect x="44.0" y="486.0" width="772.0" height="56.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="430.0" y="508.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">고각이 빔폭의 절반(1.28°) 아래로 내려가면 상이 같은 빔 안에 들어와 갈라 볼 수 없다. 50 km 라면 고도 1120 m 다.</text>
+<text x="430.0" y="530.0" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="700">그 아래 표적은 고각을 믿을 수 없다. 방위는 멀쩡한데 고각만 무너지는 것이 저고도 추적의 오랜 문제다.</text>
+</svg>

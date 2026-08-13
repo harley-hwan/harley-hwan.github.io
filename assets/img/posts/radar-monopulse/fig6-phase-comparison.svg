@@ -1,0 +1,101 @@
+<svg width="2580" height="1722" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 574" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="572" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">위상 비교 모노펄스 — 두 개구의 위상차로 각도를 잰다</text>
+<text x="232.0" y="78.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">두 개구가 받는 시각이 다르다</text>
+<rect x="40.0" y="92.0" width="384.0" height="194.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<rect x="114.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="114.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="129.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="129.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="144.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="144.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="159.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="159.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="174.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="174.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<text x="150.0" y="260.0" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">개구 A</text>
+<rect x="278.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="278.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="293.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="293.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="308.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="308.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="323.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="323.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="338.0" y="231.0" width="12.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="338.0" y="231.0" width="12.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+<text x="314.0" y="260.0" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">개구 B</text>
+<line x1="150.0" y1="270.0" x2="314.0" y2="270.0" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="150.0" y1="266.0" x2="150.0" y2="274.0" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="314.0" y1="266.0" x2="314.0" y2="274.0" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="232.0" y="286.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="700">기선 D = 30 cm (9.6 λ)</text>
+<line x1="230.9" y1="178.0" x2="353.8" y2="249.0" stroke="#ea580c" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="247.9" y1="148.6" x2="370.8" y2="219.6" stroke="#ea580c" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="264.9" y1="119.1" x2="387.8" y2="190.1" stroke="#ea580c" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="390.0" y="116.0" font-size="10.5" fill="#ea580c" text-anchor="end" font-weight="700">파면</text>
+<line x1="150.0" y1="226.0" x2="191.0" y2="155.0" stroke="#dc2626" stroke-width="2.8" stroke-linecap="butt"/>
+<text x="142.0" y="194.0" font-size="10.5" fill="#dc2626" text-anchor="end" font-weight="700">A 는 이만큼 더 간다</text>
+<text x="142.0" y="210.0" font-size="10.5" fill="#dc2626" text-anchor="end" font-weight="700">= D·sinθ</text>
+<line x1="314.0" y1="224.0" x2="314.0" y2="164.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" stroke-dasharray="3 3"/>
+<line x1="314.0" y1="224.0" x2="342.0" y2="175.5" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
+<text x="324.0" y="180.0" font-size="12" fill="#64748b" text-anchor="start" font-weight="700">θ</text>
+<text x="650.0" y="78.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">위상차를 재면 각도가 나온다</text>
+<rect x="470.0" y="92.0" width="356.0" height="194.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<line x1="470.0" y1="286.0" x2="826.0" y2="286.0" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="butt"/>
+<line x1="470.0" y1="286.0" x2="470.0" y2="92.0" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="butt"/>
+<line x1="465.0" y1="276.3" x2="470.0" y2="276.3" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="462.0" y="280.3" font-size="9.5" fill="#64748b" text-anchor="end" font-weight="400">−360°</text>
+<line x1="470.0" y1="276.3" x2="826.0" y2="276.3" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="465.0" y1="232.7" x2="470.0" y2="232.7" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="462.0" y="236.7" font-size="9.5" fill="#64748b" text-anchor="end" font-weight="400">−180°</text>
+<line x1="470.0" y1="232.7" x2="826.0" y2="232.7" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="465.0" y1="189.0" x2="470.0" y2="189.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="462.0" y="193.0" font-size="9.5" fill="#64748b" text-anchor="end" font-weight="400">0°</text>
+<line x1="470.0" y1="189.0" x2="826.0" y2="189.0" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="465.0" y1="145.3" x2="470.0" y2="145.3" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="462.0" y="149.3" font-size="9.5" fill="#64748b" text-anchor="end" font-weight="400">180°</text>
+<line x1="470.0" y1="145.3" x2="826.0" y2="145.3" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="465.0" y1="101.7" x2="470.0" y2="101.7" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="462.0" y="105.7" font-size="9.5" fill="#64748b" text-anchor="end" font-weight="400">360°</text>
+<line x1="470.0" y1="101.7" x2="826.0" y2="101.7" stroke="#cbd5e1" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3 4"/>
+<line x1="470.0" y1="286.0" x2="470.0" y2="292.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="470.0" y="301.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">−6°</text>
+<line x1="559.0" y1="286.0" x2="559.0" y2="292.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="559.0" y="301.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">−3°</text>
+<line x1="648.0" y1="286.0" x2="648.0" y2="292.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="648.0" y="301.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">0°</text>
+<line x1="737.0" y1="286.0" x2="737.0" y2="292.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="737.0" y="301.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">3°</text>
+<line x1="826.0" y1="286.0" x2="826.0" y2="292.0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="826.0" y="301.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">6°</text>
+<rect x="559.0" y="92.0" width="177.9" height="194.0" rx="4" fill="#16a34a" fill-opacity="0.1"/>
+<path d="M470.8,228.7 L471.7,228.7 L472.5,228.7 L473.4,228.7 L474.2,228.6 L474.7,228.6 L475.1,228.6 L475.9,228.6 L476.8,228.7 L477.7,228.7 L478.5,228.7 L479.3,228.8 L480.2,228.8 L481.0,228.9 L481.9,228.9 L482.7,229.0 L483.6,229.1 L484.4,229.2 L485.3,229.3 L486.1,229.4 L487.0,229.5 L487.8,229.6 L488.7,229.7 L489.5,229.9 L490.4,230.0 L491.2,230.2 L492.0,230.3 L492.9,230.5 L493.7,230.7 L494.6,230.8 L495.5,231.0 L496.3,231.2 L497.1,231.4 L498.0,231.5 L498.8,231.7 L499.7,231.9 L500.5,232.1 L501.4,232.3 L502.2,232.5 L503.1,232.7 L503.9,232.8 L504.8,233.0 L505.6,233.2 L506.5,233.4 L507.3,233.6 L508.2,233.7 L509.0,233.9 L509.8,234.0 L510.7,234.2 L511.5,234.3 L512.4,234.4 L513.3,234.6 L514.1,234.7 L514.9,234.8 L515.8,234.9 L516.6,235.0 L517.5,235.1 L518.3,235.1 L519.2,235.2 L520.0,235.3 L520.9,235.3 L521.7,235.3 L522.6,235.4 L523.4,235.4 L525.1,235.4 L525.9,235.4 L526.8,235.4 L527.6,235.3 L528.5,235.3 L529.3,235.2 L530.2,235.2 L531.0,235.1 L531.9,235.0 L532.7,234.9 L533.5,234.8 L534.4,234.7 L535.2,234.6 L536.1,234.5 L537.0,234.4 L537.8,234.2 L538.6,234.1 L539.5,234.0 L540.3,233.8 L541.2,233.6 L542.0,233.5 L542.9,233.3 L543.7,233.1 L544.6,232.9 L545.4,232.7 L546.3,232.5 L547.1,232.3 L548.0,232.1 L548.8,231.9 L549.7,231.6 L550.5,231.4 L551.3,231.2 L552.2,230.9 L553.0,230.7 L553.9,230.4 L554.8,230.2 L555.6,229.9 L556.4,229.6 L557.3,229.4 L558.1,229.1 L559.0,228.8 L559.8,228.5 L560.7,228.2 L561.5,228.0 L562.4,227.7 L563.2,227.4 L564.1,227.1 L564.9,226.8 L565.8,226.4 L566.6,226.1 L567.5,225.8 L568.3,225.5 L569.1,225.2 L570.0,224.9 L570.8,224.5 L571.7,224.2 L572.6,223.9 L573.4,223.5 L574.2,223.2 L575.1,222.9 L575.9,222.5 L576.8,222.2 L577.6,221.8 L578.5,221.5 L579.3,221.1 L580.2,220.8 L581.0,220.4 L581.9,220.1 L582.7,219.7 L583.6,219.4 L584.4,219.0 L585.3,218.6 L586.1,218.3 L586.9,217.9 L587.8,217.5 L588.6,217.2 L589.5,216.8 L590.4,216.4 L591.2,216.0 L592.0,215.7 L592.9,215.3 L593.7,214.9 L594.6,214.5 L595.4,214.2 L596.3,213.8 L597.1,213.4 L598.0,213.0 L598.8,212.6 L599.7,212.2 L600.5,211.8 L601.4,211.4 L602.2,211.0 L603.1,210.7 L603.9,210.3 L604.7,209.9 L605.6,209.5 L606.4,209.1 L607.3,208.7 L608.2,208.3 L609.0,207.9 L609.8,207.5 L610.7,207.1 L611.5,206.7 L612.4,206.3 L613.2,205.9 L614.1,205.5 L614.9,205.1 L615.8,204.7 L616.6,204.3 L617.5,203.9 L618.3,203.5 L619.2,203.1 L620.0,202.6 L620.9,202.2 L621.7,201.8 L622.5,201.4 L623.4,201.0 L624.2,200.6 L625.1,200.2 L626.0,199.8 L626.8,199.4 L627.6,199.0 L628.5,198.6 L629.3,198.1 L630.2,197.7 L631.0,197.3 L631.9,196.9 L632.7,196.5 L633.6,196.1 L634.4,195.7 L635.3,195.2 L636.1,194.8 L637.0,194.4 L637.8,194.0 L638.7,193.6 L639.5,193.2 L640.3,192.8 L641.2,192.3 L642.0,191.9 L642.9,191.5 L643.8,191.1 L644.6,190.7 L645.4,190.3 L646.3,189.8 L647.1,189.4 L648.0,189.0 L648.8,188.6 L649.7,188.2 L650.5,187.8 L651.4,187.3 L652.2,186.9 L653.1,186.5 L653.9,186.1 L654.8,185.7 L655.6,185.3 L656.5,184.9 L657.3,184.4 L658.1,184.0 L659.0,183.6 L659.8,183.2 L660.7,182.8 L661.6,182.4 L662.4,181.9 L663.2,181.5 L664.1,181.1 L664.9,180.7 L665.8,180.3 L666.6,179.9 L667.5,179.5 L668.3,179.1 L669.2,178.6 L670.0,178.2 L670.9,177.8 L671.7,177.4 L672.6,177.0 L673.4,176.6 L674.3,176.2 L675.1,175.8 L675.9,175.4 L676.8,175.0 L677.6,174.6 L678.5,174.1 L679.4,173.7 L680.2,173.3 L681.0,172.9 L681.9,172.5 L682.7,172.1 L683.6,171.7 L684.4,171.3 L685.3,170.9 L686.1,170.5 L687.0,170.1 L687.8,169.7 L688.7,169.3 L689.5,168.9 L690.4,168.5 L691.2,168.1 L692.1,167.7 L692.9,167.4 L693.7,167.0 L694.6,166.6 L695.4,166.2 L696.3,165.8 L697.2,165.4 L698.0,165.0 L698.8,164.6 L699.7,164.3 L700.5,163.9 L701.4,163.5 L702.2,163.1 L703.1,162.7 L703.9,162.3 L704.8,162.0 L705.6,161.6 L706.5,161.2 L707.3,160.9 L708.2,160.5 L709.0,160.1 L709.9,159.7 L710.7,159.4 L711.5,159.0 L712.4,158.7 L713.2,158.3 L714.1,157.9 L715.0,157.6 L715.8,157.2 L716.6,156.9 L717.5,156.5 L718.3,156.2 L719.2,155.8 L720.0,155.5 L720.9,155.1 L721.7,154.8 L722.6,154.5 L723.4,154.1 L724.3,153.8 L725.1,153.5 L726.0,153.2 L726.8,152.8 L727.7,152.5 L728.5,152.2 L729.3,151.9 L730.2,151.6 L731.0,151.3 L731.9,151.0 L732.8,150.6 L733.6,150.4 L734.4,150.1 L735.3,149.8 L736.1,149.5 L737.0,149.2 L737.8,148.9 L738.7,148.6 L739.5,148.4 L740.4,148.1 L741.2,147.9 L742.1,147.6 L742.9,147.3 L743.8,147.1 L744.6,146.8 L745.5,146.6 L746.3,146.4 L747.1,146.2 L748.0,145.9 L748.8,145.7 L749.7,145.5 L750.6,145.3 L751.4,145.1 L752.2,144.9 L753.1,144.7 L753.9,144.5 L754.8,144.4 L755.6,144.2 L756.5,144.1 L757.3,143.9 L758.2,143.8 L759.0,143.6 L759.9,143.5 L760.7,143.4 L761.6,143.3 L762.4,143.2 L763.3,143.1 L764.1,143.0 L764.9,142.9 L765.8,142.8 L766.6,142.8 L767.5,142.7 L768.4,142.7 L769.2,142.6 L770.0,142.6 L770.9,142.6 L771.6,142.6 L771.8,142.6 L772.6,142.6 L773.5,142.6 L774.3,142.7 L775.2,142.7 L776.0,142.7 L776.8,142.8 L777.7,142.9 L778.5,142.9 L779.4,143.0 L780.3,143.1 L781.1,143.2 L781.9,143.3 L782.8,143.4 L783.6,143.6 L784.5,143.7 L785.3,143.8 L786.2,144.0 L787.0,144.1 L787.9,144.3 L788.7,144.5 L789.6,144.6 L790.4,144.8 L791.3,145.0 L792.1,145.2 L793.0,145.3 L793.8,145.5 L794.6,145.7 L795.5,145.9 L796.3,146.1 L797.2,146.3 L798.1,146.5 L798.9,146.6 L799.7,146.8 L800.6,147.0 L801.4,147.2 L802.3,147.3 L803.1,147.5 L804.0,147.7 L804.8,147.8 L805.7,148.0 L806.5,148.1 L807.4,148.3 L808.2,148.4 L809.1,148.5 L809.9,148.6 L810.8,148.7 L811.6,148.8 L812.4,148.9 L813.3,149.0 L814.1,149.1 L815.0,149.1 L815.9,149.2 L816.7,149.2 L817.5,149.3 L818.4,149.3 L819.2,149.3 L820.1,149.4 L821.8,149.4 L822.6,149.4 L823.4,149.3 L824.3,149.3 L825.1,149.3 L826.0,149.2" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="470.0" y1="232.7" x2="826.0" y2="232.7" stroke="#dc2626" stroke-width="1.2" stroke-linecap="butt" stroke-dasharray="5 3"/>
+<line x1="470.0" y1="145.3" x2="826.0" y2="145.3" stroke="#dc2626" stroke-width="1.2" stroke-linecap="butt" stroke-dasharray="5 3"/>
+<text x="648.0" y="111.4" font-size="10.5" fill="#16a34a" text-anchor="middle" font-weight="700">모호성 없는 구간 ±3.0°</text>
+<text x="648.0" y="273.9" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="700">이 밖에서는 같은 위상차가 여러 각도를 뜻한다</text>
+<text x="648.0" y="322.0" font-size="11" fill="#64748b" text-anchor="middle" font-weight="700">정면에서 벗어난 각도</text>
+<rect x="40.0" y="336.0" width="786.0" height="96.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="433.0" y="360.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">개구를 둘로 나눠 각각 합친 뒤 두 값의 위상차를 잰다. 위상차와 각도는 sinθ 로 곧장 이어진다.</text>
+<text x="433.0" y="382.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">기선이 길수록 같은 각도에 위상차가 크게 벌어져 정확해진다. 대신 위상이 ±180° 를 넘는 각도가 빨리 온다.</text>
+<text x="433.0" y="404.0" font-size="12.5" fill="#2563eb" text-anchor="middle" font-weight="700">위상차가 한 바퀴를 넘으면 어느 각도인지 정할 수 없다. 기선 길이가 정확도와 맞바꾸는 값이다.</text>
+<text x="433.0" y="424.0" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">기선을 두 배로 늘리면 정확도는 두 배가 되고 모호성 없는 구간은 ±1.5° 로 줄어든다.</text>
+<rect x="40.0" y="444.0" width="786.0" height="116.0" rx="8" fill="#16a34a" fill-opacity="0.07"/>
+<rect x="40.0" y="444.0" width="786.0" height="116.0" rx="8" fill="none" stroke="#16a34a" stroke-width="1.3"/>
+<text x="433.0" y="466.0" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="700">이 배열에서 두 방식을 견주면</text>
+<text x="340.0" y="488.0" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">진폭 비교</text>
+<text x="580.0" y="488.0" font-size="11" fill="#ea580c" text-anchor="middle" font-weight="700">위상 비교</text>
+<text x="200.0" y="508.0" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="700">빔폭</text>
+<text x="340.0" y="508.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">2.57°</text>
+<text x="580.0" y="508.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">2.57°</text>
+<text x="200.0" y="524.0" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="700">SNR 13 dB 각도 오차</text>
+<text x="340.0" y="524.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.302°</text>
+<text x="580.0" y="524.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.151°</text>
+<text x="200.0" y="540.0" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="700">SNR 20 dB 각도 오차</text>
+<text x="340.0" y="540.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.135°</text>
+<text x="580.0" y="540.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.067°</text>
+<text x="200.0" y="556.0" font-size="10.5" fill="#64748b" text-anchor="end" font-weight="700">잴 수 있는 범위</text>
+<text x="340.0" y="556.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">주엽 안</text>
+<text x="580.0" y="556.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">±3.0° (그 밖은 모호)</text>
+</svg>
