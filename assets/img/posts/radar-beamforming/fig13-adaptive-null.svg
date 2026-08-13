@@ -42,5 +42,5 @@
 <text x="88.0" y="78.0" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="700">dB</text>
 <rect x="76.0" y="388.0" width="730.0" height="58.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
 <text x="441.0" y="410.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">50 소자 배열이면 최대 49개 방향에 널을 세울 수 있다. 정면 이득 손실은 0.02 dB 로 사실상 없다.</text>
-<text x="441.0" y="432.0" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">재머 방향을 데이터 공분산에서 추정해 w 를 갱신하는 것이 적응 빔포밍이고, 디지털이라야 실용이 된다.</text>
+<text x="441.0" y="432.0" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">재머 방향을 받은 데이터에서 추정해 가중을 갱신하는 것이 적응 빔포밍이고, 디지털이라야 실용이 된다.</text>
 </svg>

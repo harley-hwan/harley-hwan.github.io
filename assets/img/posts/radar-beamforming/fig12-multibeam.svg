@@ -108,30 +108,30 @@
 <line x1="556.0" y1="408.0" x2="592.0" y2="369.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <rect x="594.0" y="360.0" width="42.0" height="18.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
 <rect x="594.0" y="360.0" width="42.0" height="18.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.2"/>
-<text x="615.0" y="373.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w₁</text>
+<text x="615.0" y="373.0" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="700">가중 1</text>
 <line x1="638.0" y1="369.0" x2="664.0" y2="369.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <text x="670.0" y="373.0" font-size="10.5" fill="#2563eb" text-anchor="start" font-weight="700">빔 1</text>
 <line x1="556.0" y1="408.0" x2="592.0" y2="393.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <rect x="594.0" y="384.0" width="42.0" height="18.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
 <rect x="594.0" y="384.0" width="42.0" height="18.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.2"/>
-<text x="615.0" y="397.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w₂</text>
+<text x="615.0" y="397.0" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="700">가중 2</text>
 <line x1="638.0" y1="393.0" x2="664.0" y2="393.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <text x="670.0" y="397.0" font-size="10.5" fill="#2563eb" text-anchor="start" font-weight="700">빔 2</text>
 <line x1="556.0" y1="408.0" x2="592.0" y2="417.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <rect x="594.0" y="408.0" width="42.0" height="18.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
 <rect x="594.0" y="408.0" width="42.0" height="18.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.2"/>
-<text x="615.0" y="421.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w₃</text>
+<text x="615.0" y="421.0" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="700">가중 3</text>
 <line x1="638.0" y1="417.0" x2="664.0" y2="417.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <text x="670.0" y="421.0" font-size="10.5" fill="#2563eb" text-anchor="start" font-weight="700">빔 3</text>
 <line x1="556.0" y1="408.0" x2="592.0" y2="441.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <rect x="594.0" y="432.0" width="42.0" height="18.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
 <rect x="594.0" y="432.0" width="42.0" height="18.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.2"/>
-<text x="615.0" y="445.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w₄</text>
+<text x="615.0" y="445.0" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="700">가중 4</text>
 <line x1="638.0" y1="441.0" x2="664.0" y2="441.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <text x="670.0" y="445.0" font-size="10.5" fill="#2563eb" text-anchor="start" font-weight="700">빔 4</text>
 <rect x="62.0" y="480.0" width="744.0" height="96.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
 <text x="434.0" y="504.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">송신을 넓히면 각도당 전력은 옅어지지만, 그 구역을 좁은 수신 빔 여러 개가 덮으므로 빔마다의 이득과 분해능은 그대로다.</text>
 <text x="434.0" y="526.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">한 번 뿌릴 때 네 방향을 보므로 탐색 시간이 넷으로 나뉜다. 빔 개수는 송신 빔이 덮는 넓이가 정한다.</text>
 <text x="434.0" y="548.0" font-size="12.5" fill="#2563eb" text-anchor="middle" font-weight="700">빔 사이 방향은 어느 빔으로도 정점보다 낮게 받는다. 사양의 최소 이득은 빔 정점이 아니라 이 교차점에서 잡는다.</text>
-<text x="434.0" y="568.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">가중을 몇 벌 곱하느냐일 뿐이라 안테나도 수신기도 늘지 않는다. 늘어나는 것은 프로세서의 곱셈 횟수다.</text>
+<text x="434.0" y="568.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">가중은 소자마다 곱해 주는 크기와 위상이다. 그것을 몇 벌 곱하느냐일 뿐이라 안테나도 수신기도 늘지 않는다.</text>
 </svg>
