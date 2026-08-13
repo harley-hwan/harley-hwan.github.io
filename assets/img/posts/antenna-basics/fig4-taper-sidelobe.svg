@@ -58,7 +58,7 @@
 <text x="704.0" y="462.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="400">0.68 dB</text>
 <rect x="112.0" y="474.0" width="14.0" height="3.2" rx="1" fill="#7c3aed"/>
 <text x="134.0" y="482.0" font-size="11.5" fill="#7c3aed" text-anchor="start" font-weight="700">Hamming</text>
-<text x="414.0" y="482.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="400">−42.30 dB</text>
-<text x="564.0" y="482.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="400">3.02°</text>
-<text x="704.0" y="482.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="400">1.41 dB</text>
+<text x="414.0" y="482.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="400">−42.31 dB</text>
+<text x="564.0" y="482.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="400">2.99°</text>
+<text x="704.0" y="482.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="400">1.34 dB</text>
 </svg>
