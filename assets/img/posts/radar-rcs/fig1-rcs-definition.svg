@@ -1,0 +1,47 @@
+<svg width="2580" height="1176" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 392" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
+<rect x="1" y="1" width="858" height="390" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">RCS 의 정의 — 등가 등방 산란 면적</text>
+<rect x="56.0" y="76.0" width="356.0" height="210.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="234.0" y="66.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">실제 표적</text>
+<line x1="80.0" y1="120.0" x2="180.0" y2="120.0" stroke="#2563eb" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="80.0" y1="160.0" x2="180.0" y2="160.0" stroke="#2563eb" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="80.0" y1="200.0" x2="180.0" y2="200.0" stroke="#2563eb" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="80.0" y1="240.0" x2="180.0" y2="240.0" stroke="#2563eb" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<text x="128.0" y="106.0" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">입사 전력밀도 Sᵢ</text>
+<path d="M232.0,150.0 L262.0,138.0 L288.0,152.0 L296.0,180.0 L282.0,210.0 L250.0,222.0 L224.0,206.0 L218.0,176.0 Z" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0.5"/>
+<line x1="256.0" y1="180.0" x2="301.0" y2="154.0" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="256.0" y1="180.0" x2="271.0" y2="138.7" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="256.0" y1="180.0" x2="240.3" y2="136.8" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="256.0" y1="180.0" x2="221.4" y2="160.0" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="256.0" y1="180.0" x2="240.3" y2="223.2" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="256.0" y1="180.0" x2="294.3" y2="212.1" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="218.0" y1="186.0" x2="92.0" y2="252.0" stroke="#ea580c" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<text x="140.0" y="268.0" font-size="11" fill="#ea580c" text-anchor="middle" font-weight="700">후방산란 (레이다 방향)</text>
+<rect x="448.0" y="76.0" width="356.0" height="210.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="626.0" y="66.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">등가 모델</text>
+<line x1="472.0" y1="120.0" x2="560.0" y2="120.0" stroke="#2563eb" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="472.0" y1="160.0" x2="560.0" y2="160.0" stroke="#2563eb" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="472.0" y1="200.0" x2="560.0" y2="200.0" stroke="#2563eb" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<line x1="472.0" y1="240.0" x2="560.0" y2="240.0" stroke="#2563eb" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
+<rect x="586.0" y="130.0" width="10.0" height="100.0" rx="3" fill="#16a34a"/>
+<text x="591.0" y="118.0" font-size="11.5" fill="#16a34a" text-anchor="middle" font-weight="700">면적 σ</text>
+<line x1="591.0" y1="180.0" x2="637.0" y2="180.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="630.8" y2="157.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="614.0" y2="140.2" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="591.0" y2="134.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="568.0" y2="140.2" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="551.2" y2="157.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="545.0" y2="180.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="551.2" y2="203.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="568.0" y2="219.8" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="591.0" y2="226.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="614.0" y2="219.8" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<line x1="591.0" y1="180.0" x2="630.8" y2="203.0" stroke="#64748b" stroke-width="1.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
+<text x="700.0" y="150.0" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">σ 로 받은 전력을</text>
+<text x="700.0" y="168.0" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">모든 방향에 고르게</text>
+<text x="700.0" y="186.0" font-size="11" fill="#64748b" text-anchor="start" font-weight="400">다시 뿌린다고 가정</text>
+<rect x="56.0" y="306.0" width="748.0" height="66.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="430.0" y="330.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="400">실제 표적이 레이다 방향으로 돌려보내는 세기와 같은 세기를 만드는 가상의 등방 산란 면적이 σ 다.</text>
+<text x="430.0" y="354.0" font-size="12" fill="#64748b" text-anchor="middle" font-weight="400">물리 단면적이 아니라 관측되는 값이라서, 방향·주파수·편파가 바뀌면 σ 도 바뀐다.</text>
+</svg>
