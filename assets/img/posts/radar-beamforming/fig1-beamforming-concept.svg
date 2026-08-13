@@ -1,75 +1,62 @@
-<svg width="2580" height="1290" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<svg width="2580" height="1458" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 486" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
 <defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
-<rect x="1" y="1" width="858" height="428" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">빔포밍 — 지연을 보정해 동상으로 더한다</text>
-<rect x="56.0" y="76.0" width="356.0" height="250.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
-<text x="234.0" y="66.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">기울어져 들어오는 파면</text>
-<rect x="86.0" y="276.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="86.0" y="276.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<rect x="146.0" y="276.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="146.0" y="276.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<rect x="206.0" y="276.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="206.0" y="276.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<rect x="266.0" y="276.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="266.0" y="276.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<rect x="326.0" y="276.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="326.0" y="276.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<line x1="76.0" y1="118.0" x2="396.0" y2="208.0" stroke="#ea580c" stroke-width="2.0" stroke-linecap="butt"/>
-<line x1="76.0" y1="152.0" x2="396.0" y2="242.0" stroke="#ea580c" stroke-width="2.0" stroke-linecap="butt"/>
-<line x1="76.0" y1="186.0" x2="396.0" y2="276.0" stroke="#ea580c" stroke-width="2.0" stroke-linecap="butt"/>
-<text x="120.0" y="104.0" font-size="11" fill="#ea580c" text-anchor="middle" font-weight="700">파면</text>
-<line x1="96.0" y1="127.6" x2="96.0" y2="274.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
-<line x1="156.0" y1="144.5" x2="156.0" y2="274.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
-<line x1="216.0" y1="161.4" x2="216.0" y2="274.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
-<line x1="276.0" y1="178.2" x2="276.0" y2="274.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
-<line x1="336.0" y1="195.1" x2="336.0" y2="274.0" stroke="#64748b" stroke-width="1.1" stroke-linecap="butt" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
-<line x1="96.0" y1="240.0" x2="336.0" y2="240.0" stroke="none" stroke-width="1.4" stroke-linecap="butt"/>
-<text x="234.0" y="316.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">왼쪽 소자일수록 파면이 늦게 닿는다. 경로차 = d·sinθ</text>
-<rect x="448.0" y="76.0" width="356.0" height="250.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
-<text x="626.0" y="66.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">위상을 되돌려 합산</text>
-<rect x="478.0" y="96.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="478.0" y="96.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<line x1="488.0" y1="108.0" x2="488.0" y2="128.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="473.0" y="128.0" width="30.0" height="24.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
-<rect x="473.0" y="128.0" width="30.0" height="24.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.3"/>
-<text x="488.0" y="145.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w1</text>
-<line x1="488.0" y1="152.0" x2="488.0" y2="196.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="538.0" y="96.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="538.0" y="96.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<line x1="548.0" y1="108.0" x2="548.0" y2="128.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="533.0" y="128.0" width="30.0" height="24.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
-<rect x="533.0" y="128.0" width="30.0" height="24.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.3"/>
-<text x="548.0" y="145.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w2</text>
-<line x1="548.0" y1="152.0" x2="548.0" y2="196.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="598.0" y="96.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="598.0" y="96.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<line x1="608.0" y1="108.0" x2="608.0" y2="128.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="593.0" y="128.0" width="30.0" height="24.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
-<rect x="593.0" y="128.0" width="30.0" height="24.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.3"/>
-<text x="608.0" y="145.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w3</text>
-<line x1="608.0" y1="152.0" x2="608.0" y2="196.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="658.0" y="96.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="658.0" y="96.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<line x1="668.0" y1="108.0" x2="668.0" y2="128.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="653.0" y="128.0" width="30.0" height="24.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
-<rect x="653.0" y="128.0" width="30.0" height="24.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.3"/>
-<text x="668.0" y="145.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w4</text>
-<line x1="668.0" y1="152.0" x2="668.0" y2="196.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="718.0" y="96.0" width="20.0" height="12.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
-<rect x="718.0" y="96.0" width="20.0" height="12.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.4"/>
-<line x1="728.0" y1="108.0" x2="728.0" y2="128.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<rect x="713.0" y="128.0" width="30.0" height="24.0" rx="3" fill="#7c3aed" fill-opacity="0.2"/>
-<rect x="713.0" y="128.0" width="30.0" height="24.0" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.3"/>
-<text x="728.0" y="145.0" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">w5</text>
-<line x1="728.0" y1="152.0" x2="728.0" y2="196.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="butt"/>
-<line x1="488.0" y1="196.0" x2="728.0" y2="196.0" stroke="#64748b" stroke-width="1.6" stroke-linecap="butt"/>
-<circle cx="626.0" cy="218.0" r="15" fill="none" stroke="#16a34a" stroke-width="2.0"/>
-<text x="626.0" y="224.0" font-size="14" fill="#16a34a" text-anchor="middle" font-weight="700">Σ</text>
-<line x1="626.0" y1="196.0" x2="626.0" y2="203.0" stroke="#64748b" stroke-width="1.6" stroke-linecap="butt"/>
-<line x1="626.0" y1="233.0" x2="626.0" y2="258.0" stroke="#64748b" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
-<text x="626.0" y="276.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="700">빔 출력  y = Σ wₙ xₙ</text>
-<text x="626.0" y="300.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">wₙ 의 위상이 경로차를 지우면 그 방향이 주엽이 된다</text>
-<rect x="56.0" y="346.0" width="748.0" height="60.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
-<text x="430.0" y="370.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="400">가중 wₙ 을 설계로 미리 정하면 결정적 빔포밍, 들어온 데이터로 계산하면 적응 빔포밍이다.</text>
-<text x="430.0" y="392.0" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">7장의 테이퍼는 |wₙ| 설계였다. 이번 장은 위상 쪽 이야기다.</text>
+<rect x="1" y="1" width="858" height="484" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">파면이 소자에 닿는 시각 — 정면일 때와 비스듬할 때</text>
+<rect x="44.0" y="90.0" width="376.0" height="240.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="232.0" y="80.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">① 정면에서 올 때</text>
+<line x1="52.0" y1="264.0" x2="412.0" y2="264.0" stroke="#ea580c" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="52.0" y1="218.0" x2="412.0" y2="218.0" stroke="#ea580c" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="52.0" y1="172.0" x2="412.0" y2="172.0" stroke="#ea580c" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="96.0" y1="116.0" x2="96.0" y2="160.0" stroke="#ea580c" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<text x="104.0" y="128.0" font-size="10" fill="#ea580c" text-anchor="start" font-weight="700">진행 방향</text>
+<rect x="109.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="109.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="165.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="165.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="221.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="221.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="277.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="277.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="333.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="333.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<text x="232.0" y="294.0" font-size="11" fill="#16a34a" text-anchor="middle" font-weight="700">경로차가 없다</text>
+<text x="232.0" y="316.0" font-size="11" fill="#16a34a" text-anchor="middle" font-weight="700">다섯 소자에 한꺼번에 닿는다</text>
+<text x="232.0" y="350.0" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">파의 마루가 다섯 소자에 같은 시각에 도착한다</text>
+<rect x="440.0" y="90.0" width="376.0" height="240.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="628.0" y="80.0" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">② 비스듬히 올 때</text>
+<line x1="452.5" y1="98.0" x2="808.0" y2="303.3" stroke="#ea580c" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="544.5" y1="98.0" x2="808.0" y2="250.1" stroke="#ea580c" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="636.5" y1="98.0" x2="808.0" y2="197.0" stroke="#ea580c" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="750.0" y1="100.0" x2="728.0" y2="138.1" stroke="#ea580c" stroke-width="1.6" stroke-linecap="butt" marker-end="url(#ar-orange)"/>
+<text x="758.0" y="112.0" font-size="10" fill="#ea580c" text-anchor="start" font-weight="700">진행 방향</text>
+<line x1="516.0" y1="252.0" x2="572.0" y2="155.0" stroke="#2563eb" stroke-width="1.3" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<rect x="505.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="505.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<text x="516.0" y="290.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="700">5</text>
+<line x1="572.0" y1="252.0" x2="614.0" y2="179.3" stroke="#2563eb" stroke-width="1.3" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<rect x="561.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="561.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<text x="572.0" y="290.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="700">4</text>
+<line x1="628.0" y1="252.0" x2="656.0" y2="203.5" stroke="#2563eb" stroke-width="1.3" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<rect x="617.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="617.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<text x="628.0" y="290.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="700">3</text>
+<line x1="684.0" y1="252.0" x2="698.0" y2="227.8" stroke="#2563eb" stroke-width="1.3" stroke-linecap="butt" stroke-dasharray="4 3"/>
+<rect x="673.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="673.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<text x="684.0" y="290.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="700">2</text>
+<rect x="729.0" y="252.0" width="22.0" height="13.0" rx="2" fill="#2563eb" fill-opacity="0.3"/>
+<rect x="729.0" y="252.0" width="22.0" height="13.0" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<text x="740.0" y="290.0" font-size="11.5" fill="#1e293b" text-anchor="middle" font-weight="700">1</text>
+<line x1="684.0" y1="252.0" x2="698.0" y2="227.8" stroke="#dc2626" stroke-width="2.6" stroke-linecap="butt"/>
+<text x="628.0" y="316.0" font-size="11" fill="#dc2626" text-anchor="middle" font-weight="700">빨간 선이 이웃 소자 사이의 경로차 d·sinθ 다</text>
+<line x1="740.0" y1="250.0" x2="740.0" y2="176.0" stroke="#64748b" stroke-width="1.2" stroke-linecap="butt" stroke-dasharray="3 3"/>
+<line x1="740.0" y1="250.0" x2="779.0" y2="182.5" stroke="#64748b" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="749.0" y="202.0" font-size="12.5" fill="#64748b" text-anchor="start" font-weight="700">θ</text>
+<text x="628.0" y="350.0" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">오른쪽 소자부터 차례로 도착한다 (숫자가 닿는 순서)</text>
+<rect x="44.0" y="372.0" width="772.0" height="94.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="430.0" y="396.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">정면에서 오면 파면이 소자들에 동시에 닿으므로 마루와 골이 나란히 맞는다. 그대로 더하면 소자 수만큼 커진다.</text>
+<text x="430.0" y="418.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">비스듬히 오면 왼쪽 소자일수록 그만큼 더 가야 해서 늦게 닿는다. 이웃 소자 사이의 차이가 d·sinθ 다.</text>
+<text x="430.0" y="440.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">그래서 소자마다 파의 위치가 어긋난 채로 도착한다. 그대로 더하면 어떻게 되는지는 다음 그림에 있다.</text>
+<text x="430.0" y="459.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">주황색 선이 파면이다. 마루가 같은 시각에 놓이는 면이고 파가 나아가는 방향과 직각이다.</text>
 </svg>
