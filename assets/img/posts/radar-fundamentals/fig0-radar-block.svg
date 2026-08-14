@@ -44,7 +44,7 @@
 <line x1="712" y1="231" x2="722" y2="231" stroke="#64748b" stroke-width="2.0" stroke-linecap="butt" marker-end="url(#ar-mute)"/>
 <line x1="367" y1="231" x2="377" y2="231" stroke="#2563eb" stroke-width="2.2" stroke-linecap="butt" marker-end="url(#ar-blue)"/>
 <path d="M85.0,260 L85.0,300 L430.0,300 L430.0,263" fill="none" stroke="#2563eb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#ar-blue)"/>
-<text x="257.5" y="315" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">같은 발진기가 기준파 노릇도 한다 (호모다인) — 6장 4절 레인지 상관의 근거</text>
+<text x="257.5" y="315" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">같은 발진기가 기준파 노릇도 한다 (호모다인) — 6장 레인지 상관의 근거</text>
 <rect x="411" y="78" width="176" height="54" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="1.9"/>
 <rect x="411" y="78" width="176" height="54" rx="9" fill="#dc2626" stroke="none" stroke-width="0" fill-opacity="0.07"/>
 <text x="499" y="102" font-size="12.5" fill="#dc2626" text-anchor="middle" font-weight="700">표적</text>

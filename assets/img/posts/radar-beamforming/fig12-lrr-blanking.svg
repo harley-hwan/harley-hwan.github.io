@@ -2,7 +2,7 @@
 <defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker></defs>
 <rect x="1" y="1" width="858" height="608" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
 <text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">장거리 레이다의 블랭킹 — 무엇을 얼마나 버리느냐</text>
-<text x="430.0" y="84.0" font-size="12" fill="#64748b" text-anchor="middle" font-weight="400">받은 신호의 스펙트로그램 (한 PRI 확대) — 간섭은 시간축의 일부만 차지한다</text>
+<text x="430.0" y="84.0" font-size="12" fill="#64748b" text-anchor="middle" font-weight="400">받은 신호의 스펙트로그램 (PRI 앞부분 확대) — 간섭은 시간축의 일부만 차지한다</text>
 <rect x="70.0" y="96.0" width="736.0" height="168.0" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
 <rect x="93.5" y="261.4" width="3.3" height="3.0" rx="0" fill="#dbeafe"/>
 <rect x="99.3" y="261.4" width="3.3" height="3.0" rx="0" fill="#dbeafe"/>
@@ -1161,7 +1161,7 @@
 <rect x="88.0" y="358.0" width="13.0" height="3.0" rx="1" fill="#64748b"/>
 <text x="106.0" y="364.0" font-size="10.5" fill="#64748b" text-anchor="start" font-weight="700">버리지 않았을 때 (설계값) — 최대 부엽 −35.2 dB</text>
 <rect x="70.0" y="516.0" width="736.0" height="76.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
-<text x="438.0" y="540.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">간섭이 한 PRI 의 1.5 % 만 오염시켜도 그 펄스를 통째로 버리면 CPI 의 15.6 % 가 사라진다.</text>
-<text x="438.0" y="562.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">오염된 거리 셀만 버리면 한 거리 셀이 잃는 펄스는 평균 0.3 개다. 도플러 부엽이 설계값 그대로 남는다.</text>
+<text x="438.0" y="540.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">간섭 펄스는 PRI 의 0.3 % 만 차지하는데, 그 펄스를 통째로 버리면 CPI 의 15.6 % 가 사라진다.</text>
+<text x="438.0" y="562.0" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="400">오염된 거리 셀만 버리면 대부분의 거리 셀은 한 발도 잃지 않는다. 도플러 부엽이 설계값 가까이 남는다.</text>
 <text x="438.0" y="582.0" font-size="11" fill="#64748b" text-anchor="middle" font-weight="400">블랭킹은 공짜가 아니다. 얼마나 버리느냐가 아니라 무엇을 버리느냐를 정하는 것이 설계다.</text>
 </svg>

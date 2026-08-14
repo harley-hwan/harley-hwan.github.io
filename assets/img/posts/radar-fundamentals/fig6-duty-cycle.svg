@@ -31,7 +31,7 @@
 <text x="742" y="278" font-size="12" fill="#16a34a" text-anchor="start" font-weight="700">듀티 100 %</text>
 <rect x="56" y="300" width="748" height="112" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 <text x="74" y="322" font-size="12.5" fill="#1e293b" text-anchor="start" font-weight="700">첨두 10 kW, 듀티 0.1 % 면 평균은 10 W 다. 방열은 평균으로, 내압은 첨두로 설계한다.</text>
-<text x="74" y="341" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">최소 거리  R_min = cτ/2 — 송신 중에는 못 받는다. τ = 1 µs 면 150 m 안쪽이 통째로 안 보인다.</text>
+<text x="74" y="341" font-size="12.5" fill="#dc2626" text-anchor="start" font-weight="700">최소 거리  R_min = cτ/2 — 송신 중에는 못 받는다. τ = 1 µs 면 150 m 안쪽은 제대로 못 듣는다.</text>
 <text x="74" y="360" font-size="12.5" fill="#2563eb" text-anchor="start" font-weight="700">최대 비모호 거리  R_max = c/(2·PRF) — PRF = 1 kHz 면 150 km. 이 둘이 서로 반대로 당긴다.</text>
 <text x="74" y="379" font-size="11.5" fill="#64748b" text-anchor="start" font-weight="400">CW 는 듀티가 100 % 라 최소 거리가 없는 대신 거리를 아예 못 잰다. 그리고 송수신이 동시라 TX 누설이 남는다.</text>
 </svg>

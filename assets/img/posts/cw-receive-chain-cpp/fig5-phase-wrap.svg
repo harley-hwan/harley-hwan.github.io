@@ -41,6 +41,6 @@
 <text x="684" y="70" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">a × conj(b) 로 구하면</text>
 <text x="684" y="306" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">곱셈에서 위상이 자동으로 접힌다</text>
 <text x="684" y="326" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="700">→ 항상 (−180°, 180°]</text>
-<text x="430" y="352" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="600">각도가 가끔씩만 튄다면 이 경우일 가능성이 높다. 표적이 정면 근처에 있을 때만 경계를 넘는다.</text>
+<text x="430" y="352" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="600">각도가 가끔씩만 튄다면 이 경우일 가능성이 높다. 정면에서는 일어나지 않고 표적이 옆으로 갈수록 잦아진다.</text>
 <text x="430" y="376" font-size="11.5" fill="#64748b" text-anchor="middle" font-weight="400">std::arg(a * std::conj(b)) 한 줄이면 된다.</text>
 </svg>
