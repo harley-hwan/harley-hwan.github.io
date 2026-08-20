@@ -1,0 +1,51 @@
+<svg width="2580" height="1176" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 392" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker></defs>
+<rect x="1" y="1" width="858.0" height="390.0" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">특수 비트 셋은 서로 다른 세 가지 일을 한다</text>
+<rect x="42.0" y="58.0" width="250.0" height="300.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="167.0" y="84.0" font-size="13" fill="#2563eb" text-anchor="middle" font-weight="700">setuid  4000</text>
+<text x="167.0" y="102.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">실행 파일에만 뜻이 있다</text>
+<rect x="68.0" y="120.0" width="198.0" height="46.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="167.0" y="140.0" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">-rwsr-xr-x  root</text>
+<text x="167.0" y="158.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">/usr/bin/passwd</text>
+<line x1="120.0" y1="172.0" x2="120.0" y2="194.0" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ar-blue)"/>
+<text x="134.0" y="189.0" font-size="9.5" fill="#64748b" text-anchor="start" font-weight="400">alice 가 실행한다</text>
+<rect x="68.0" y="200.0" width="198.0" height="64.0" rx="6" fill="#2563eb" fill-opacity="0.1" stroke="#2563eb" stroke-width="1.3"/>
+<text x="167.0" y="222.0" font-size="11" fill="#1e293b" text-anchor="middle" font-weight="700">실제 uid = alice</text>
+<text x="167.0" y="244.0" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="700">실효 uid = root</text>
+<rect x="68.0" y="276.0" width="198.0" height="62.0" rx="6" fill="#dc2626" fill-opacity="0.07" stroke="#dc2626" stroke-width="1.2"/>
+<text x="167.0" y="298.0" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="700">스크립트에는 걸리지 않는다</text>
+<text x="167.0" y="318.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">#! 로 시작하는 파일에 붙여도</text>
+<text x="167.0" y="332.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">리눅스 커널이 무시한다</text>
+<rect x="305.0" y="58.0" width="250.0" height="300.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="430.0" y="84.0" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="700">setgid  2000</text>
+<text x="430.0" y="102.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">디렉터리에 붙일 때 쓸모가 크다</text>
+<rect x="331.0" y="120.0" width="198.0" height="46.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="430.0" y="140.0" font-size="12" fill="#ea580c" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">drwxrwsr-x  team</text>
+<text x="430.0" y="158.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">공유 디렉터리</text>
+<line x1="373.0" y1="172.0" x2="373.0" y2="194.0" stroke="#ea580c" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ar-orange)"/>
+<text x="387.0" y="189.0" font-size="9.5" fill="#64748b" text-anchor="start" font-weight="400">alice 가 파일을 만든다</text>
+<rect x="331.0" y="200.0" width="198.0" height="64.0" rx="6" fill="#ea580c" fill-opacity="0.1" stroke="#ea580c" stroke-width="1.3"/>
+<text x="430.0" y="222.0" font-size="11" fill="#1e293b" text-anchor="middle" font-weight="700">소유자 = alice</text>
+<text x="430.0" y="244.0" font-size="11" fill="#ea580c" text-anchor="middle" font-weight="700">그룹 = team</text>
+<rect x="331.0" y="276.0" width="198.0" height="62.0" rx="6" fill="#16a34a" fill-opacity="0.07" stroke="#16a34a" stroke-width="1.2"/>
+<text x="430.0" y="298.0" font-size="10.5" fill="#16a34a" text-anchor="middle" font-weight="700">하위 디렉터리로 이어진다</text>
+<text x="430.0" y="318.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">새로 만든 디렉터리는 그룹과</text>
+<text x="430.0" y="332.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">setgid 비트를 함께 물려받는다</text>
+<rect x="568.0" y="58.0" width="250.0" height="300.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="693.0" y="84.0" font-size="13" fill="#7c3aed" text-anchor="middle" font-weight="700">sticky  1000</text>
+<text x="693.0" y="102.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">디렉터리에만 뜻이 있다</text>
+<rect x="594.0" y="120.0" width="198.0" height="46.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="693.0" y="140.0" font-size="12" fill="#7c3aed" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">drwxrwxrwt</text>
+<text x="693.0" y="158.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">/tmp</text>
+<line x1="626.0" y1="172.0" x2="626.0" y2="194.0" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ar-violet)"/>
+<text x="640.0" y="189.0" font-size="9.5" fill="#64748b" text-anchor="start" font-weight="400">bob 이 alice 파일을 지운다</text>
+<rect x="594.0" y="200.0" width="198.0" height="64.0" rx="6" fill="#7c3aed" fill-opacity="0.1" stroke="#7c3aed" stroke-width="1.3"/>
+<text x="693.0" y="222.0" font-size="10.5" fill="#1e293b" text-anchor="middle" font-weight="400">누구나 쓸 수 있는 곳인데도</text>
+<text x="693.0" y="244.0" font-size="11" fill="#7c3aed" text-anchor="middle" font-weight="700">삭제가 거부된다</text>
+<rect x="594.0" y="276.0" width="198.0" height="62.0" rx="6" fill="#16a34a" fill-opacity="0.07" stroke="#16a34a" stroke-width="1.2"/>
+<text x="693.0" y="298.0" font-size="10.5" fill="#16a34a" text-anchor="middle" font-weight="700">지울 수 있는 사람</text>
+<text x="693.0" y="318.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">그 항목의 소유자,</text>
+<text x="693.0" y="332.0" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="400">디렉터리 소유자, root</text>
+<text x="430.0" y="378.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">ls -l 에서는 셋 다 x 자리를 빌려 쓴다. x 가 함께 있으면 s·s·t, 없으면 대문자 S·S·T 로 보인다.</text>
+</svg>

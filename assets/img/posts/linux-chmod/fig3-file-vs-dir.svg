@@ -1,0 +1,36 @@
+<svg width="2580" height="1044" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 348" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker></defs>
+<rect x="1" y="1" width="858.0" height="346.0" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">같은 글자가 파일과 디렉터리에서 다른 것을 뜻한다</text>
+<rect x="62.0" y="58.0" width="350.0" height="262.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<rect x="448.0" y="58.0" width="350.0" height="262.0" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="237.0" y="84.0" font-size="13.5" fill="#2563eb" text-anchor="middle" font-weight="700">파일</text>
+<text x="623.0" y="84.0" font-size="13.5" fill="#ea580c" text-anchor="middle" font-weight="700">디렉터리</text>
+<text x="237.0" y="102.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">바이트가 들어 있는 상자</text>
+<text x="623.0" y="102.0" font-size="10" fill="#64748b" text-anchor="middle" font-weight="400">이름과 아이노드 번호의 표</text>
+<rect x="78.0" y="128.0" width="318.0" height="56.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.1"/>
+<rect x="90.0" y="141.0" width="30.0" height="30.0" rx="5" fill="#2563eb" fill-opacity="0.14" stroke="#2563eb" stroke-width="1.2"/>
+<text x="105.0" y="161.0" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">r</text>
+<text x="134.0" y="161.0" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="400">내용을 읽는다</text>
+<rect x="464.0" y="128.0" width="318.0" height="56.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.1"/>
+<rect x="476.0" y="141.0" width="30.0" height="30.0" rx="5" fill="#ea580c" fill-opacity="0.14" stroke="#ea580c" stroke-width="1.2"/>
+<text x="491.0" y="161.0" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">r</text>
+<text x="520.0" y="161.0" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="400">안에 어떤 이름들이 있는지 본다</text>
+<rect x="78.0" y="192.0" width="318.0" height="56.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.1"/>
+<rect x="90.0" y="205.0" width="30.0" height="30.0" rx="5" fill="#2563eb" fill-opacity="0.14" stroke="#2563eb" stroke-width="1.2"/>
+<text x="105.0" y="225.0" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">w</text>
+<text x="134.0" y="225.0" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="400">내용을 고친다</text>
+<rect x="464.0" y="192.0" width="318.0" height="56.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.1"/>
+<rect x="476.0" y="205.0" width="30.0" height="30.0" rx="5" fill="#ea580c" fill-opacity="0.14" stroke="#ea580c" stroke-width="1.2"/>
+<text x="491.0" y="225.0" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">w</text>
+<text x="520.0" y="225.0" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="400">항목을 만들고 지우고 이름을 바꾼다</text>
+<rect x="78.0" y="256.0" width="318.0" height="56.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.1"/>
+<rect x="90.0" y="269.0" width="30.0" height="30.0" rx="5" fill="#2563eb" fill-opacity="0.14" stroke="#2563eb" stroke-width="1.2"/>
+<text x="105.0" y="289.0" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">x</text>
+<text x="134.0" y="289.0" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="400">프로그램으로 실행한다</text>
+<rect x="464.0" y="256.0" width="318.0" height="56.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.1"/>
+<rect x="476.0" y="269.0" width="30.0" height="30.0" rx="5" fill="#ea580c" fill-opacity="0.14" stroke="#ea580c" stroke-width="1.2"/>
+<text x="491.0" y="289.0" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">x</text>
+<text x="520.0" y="289.0" font-size="11.5" fill="#1e293b" text-anchor="start" font-weight="400">그 아래 경로를 지나간다</text>
+<text x="430.0" y="336.0" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="400">디렉터리의 x 는 실행이 아니라 통행이다. x 가 없으면 그 아래 이름을 알고 있어도 닿지 못한다.</text>
+</svg>
