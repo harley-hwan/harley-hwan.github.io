@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" width="860" height="340" role="img">
+<defs></defs>
+<rect x="0" y="0" width="860" height="340" rx="10" fill="#FFFFFF"/>
+<text x="430" y="32" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12.5" fill="#1E2329" text-anchor="middle" font-weight="700">프로세스는 남의 메모리를 직접 못 만진다. 둘 다 닿는 곳을 몇 번 거치느냐가 갈린다</text>
+<rect x="24" y="54" width="812" height="80" rx="6" fill="#FFFFFF" stroke="#D9532B" stroke-width="1.5"/>
+<text x="44" y="86" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#D9532B" text-anchor="start" font-weight="700">메시지 큐</text>
+<text x="44" y="108" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="15" fill="#D9532B" text-anchor="start" font-weight="700">2 회</text>
+<rect x="150" y="74" width="130" height="42" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="215" y="100" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="400">프로세스 A</text>
+<rect x="560" y="74" width="130" height="42" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="625" y="100" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="400">프로세스 B</text>
+<rect x="330" y="74" width="180" height="42" rx="4" fill="#F2F4F7" stroke="#D9532B" stroke-width="1.4"/>
+<text x="420" y="100" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="700">커널 큐</text>
+<line x1="288" y1="95" x2="315.0" y2="95.0" stroke="#D9532B" stroke-width="1.8" stroke-linecap="round"/><path d="M 324.0 95.0 L 315.0 99.2 L 315.0 90.8 Z" fill="#D9532B"/>
+<text x="306" y="70" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10" fill="#D9532B" text-anchor="middle" font-weight="700">1</text>
+<line x1="516" y1="95" x2="543.0" y2="95.0" stroke="#D9532B" stroke-width="1.8" stroke-linecap="round"/><path d="M 552.0 95.0 L 543.0 99.2 L 543.0 90.8 Z" fill="#D9532B"/>
+<text x="534" y="70" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10" fill="#D9532B" text-anchor="middle" font-weight="700">2</text>
+<text x="420" y="128" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10" fill="#7A828F" text-anchor="middle" font-weight="400">커널 공간 — 시스템 콜 비용이 더 붙는다</text>
+<rect x="24" y="146" width="812" height="80" rx="6" fill="#FFFFFF" stroke="#C8891F" stroke-width="1.5"/>
+<text x="44" y="178" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#C8891F" text-anchor="start" font-weight="700">링버퍼</text>
+<text x="44" y="200" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="15" fill="#C8891F" text-anchor="start" font-weight="700">1 회</text>
+<rect x="150" y="166" width="130" height="42" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="215" y="192" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="400">프로세스 A</text>
+<rect x="560" y="166" width="130" height="42" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="625" y="192" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="400">프로세스 B</text>
+<rect x="330" y="166" width="180" height="42" rx="4" fill="#F2F4F7" stroke="#C8891F" stroke-width="1.4"/>
+<text x="420" y="192" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="700">공유 슬롯</text>
+<line x1="288" y1="187" x2="315.0" y2="187.0" stroke="#C8891F" stroke-width="1.8" stroke-linecap="round"/><path d="M 324.0 187.0 L 315.0 191.2 L 315.0 182.8 Z" fill="#C8891F"/>
+<text x="306" y="162" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10" fill="#C8891F" text-anchor="middle" font-weight="700">1</text>
+<line x1="552" y1="187" x2="516.0" y2="187.0" stroke="#7A828F" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<text x="534" y="162" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10" fill="#7A828F" text-anchor="middle" font-weight="400">읽기만</text>
+<text x="420" y="220" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10" fill="#7A828F" text-anchor="middle" font-weight="400">슬롯이 곧 상대가 읽는 자리다</text>
+<rect x="24" y="238" width="812" height="80" rx="6" fill="#FFFFFF" stroke="#13757A" stroke-width="1.5"/>
+<text x="44" y="270" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#13757A" text-anchor="start" font-weight="700">공유메모리</text>
+<text x="44" y="292" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="15" fill="#13757A" text-anchor="start" font-weight="700">0 회</text>
+<rect x="150" y="258" width="130" height="42" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="215" y="284" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="400">프로세스 A</text>
+<rect x="560" y="258" width="130" height="42" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="625" y="284" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="400">프로세스 B</text>
+<rect x="330" y="258" width="180" height="42" rx="4" fill="#13757A" stroke="#13757A" stroke-width="1.2"/>
+<text x="420" y="284" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#FFFFFF" text-anchor="middle" font-weight="700">같은 물리 메모리</text>
+<line x1="288" y1="279" x2="324.0" y2="279.0" stroke="#13757A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="516" y1="279" x2="552.0" y2="279.0" stroke="#13757A" stroke-width="1.6" stroke-linecap="round"/>
+<text x="420" y="254" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">옮겨 담는 단계가 없다</text>
+<text x="420" y="312" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10" fill="#7A828F" text-anchor="middle" font-weight="400">양쪽 주소공간에 같은 메모리가 붙어 있다</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 310" width="860" height="310" role="img">
+<defs></defs>
+<rect x="0" y="0" width="860" height="310" rx="10" fill="#FFFFFF"/>
+<rect x="24" y="20" width="262" height="250" rx="6" fill="#FFFFFF" stroke="#13757A" stroke-width="1.6"/>
+<text x="155" y="46" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#13757A" text-anchor="middle" font-weight="700">① 같은 프로세스 안</text>
+<rect x="40" y="60" width="230" height="74" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="155" y="92" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12" fill="#1E2329" text-anchor="middle" font-weight="700">쓰레드 ↔ 쓰레드</text>
+<text x="155" y="114" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7A828F" text-anchor="middle" font-weight="400">주소공간을 공유한다</text>
+<text x="155" y="168" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">쓰는 수단</text>
+<text x="155" y="190" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="700">전역변수 · 공유 자료구조</text>
+<text x="155" y="234" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#3D4451" text-anchor="middle" font-weight="400">가장 빠르다 · 동기화 필수</text>
+<rect x="302" y="20" width="262" height="250" rx="6" fill="#FFFFFF" stroke="#C8891F" stroke-width="1.6"/>
+<text x="433" y="46" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#C8891F" text-anchor="middle" font-weight="700">② 같은 PC, 다른 프로세스</text>
+<rect x="318" y="60" width="230" height="74" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="433" y="92" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12" fill="#1E2329" text-anchor="middle" font-weight="700">프로세스 ↔ 커널 ↔ 프로세스</text>
+<text x="433" y="114" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7A828F" text-anchor="middle" font-weight="400">주소공간이 분리돼 있다</text>
+<text x="433" y="168" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">쓰는 수단</text>
+<text x="433" y="190" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="700">메시지 큐 · 공유메모리 · 파이프</text>
+<text x="433" y="234" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#3D4451" text-anchor="middle" font-weight="400">커널이 만든 통로를 거친다</text>
+<rect x="580" y="20" width="262" height="250" rx="6" fill="#FFFFFF" stroke="#D9532B" stroke-width="1.6"/>
+<text x="711" y="46" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="13" fill="#D9532B" text-anchor="middle" font-weight="700">③ 다른 PC</text>
+<rect x="596" y="60" width="230" height="74" rx="4" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="711" y="92" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12" fill="#1E2329" text-anchor="middle" font-weight="700">PC ↔ 네트워크 ↔ PC</text>
+<text x="711" y="114" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7A828F" text-anchor="middle" font-weight="400">커널조차 공유하지 않는다</text>
+<text x="711" y="168" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">쓰는 수단</text>
+<text x="711" y="190" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11.5" fill="#1E2329" text-anchor="middle" font-weight="700">TCP · UDP 소켓</text>
+<text x="711" y="234" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#3D4451" text-anchor="middle" font-weight="400">순서 · 유실을 따져야 한다</text>
+<text x="430" y="292" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12" fill="#1E2329" text-anchor="middle" font-weight="700">얼마나 멀리 보내야 하는가 하나로 갈린다</text>
+</svg>

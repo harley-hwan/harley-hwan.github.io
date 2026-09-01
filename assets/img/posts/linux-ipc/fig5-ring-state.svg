@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 334" width="860" height="334" role="img">
+<defs></defs>
+<rect x="0" y="0" width="860" height="334" rx="10" fill="#FFFFFF"/>
+<text x="430" y="32" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12.5" fill="#1E2329" text-anchor="middle" font-weight="700">head 는 읽는 자리, tail 은 쓰는 자리. 끝에 닿으면 0 으로 돌아간다</text>
+<rect x="24" y="48" width="262" height="212" rx="6" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="155" y="72" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12.5" fill="#1E2329" text-anchor="middle" font-weight="700">비었다</text>
+<circle cx="155.0" cy="106.0" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="155.0" y="110.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">0</text>
+<circle cx="187.5" cy="119.5" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="187.5269119345812" y="123.4730880654188" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">1</text>
+<circle cx="201.0" cy="152.0" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="201.0" y="156.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">2</text>
+<circle cx="187.5" cy="184.5" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="187.5269119345812" y="188.5269119345812" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">3</text>
+<circle cx="155.0" cy="198.0" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="155.0" y="202.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">4</text>
+<circle cx="122.5" cy="184.5" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="122.4730880654188" y="188.5269119345812" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">5</text>
+<circle cx="109.0" cy="152.0" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="109.0" y="156.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">6</text>
+<circle cx="122.5" cy="119.5" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="122.4730880654188" y="123.4730880654188" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">7</text>
+<text x="155" y="226" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="12" fill="#1E2329" text-anchor="middle" font-weight="700">count = 0</text>
+<text x="155" y="246" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="11" fill="#3D4451" text-anchor="middle" font-weight="400">head = 0   ·   tail = 0</text>
+<rect x="302" y="48" width="262" height="212" rx="6" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="433" y="72" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12.5" fill="#1E2329" text-anchor="middle" font-weight="700">3 개 찼다</text>
+<circle cx="433.0" cy="106.0" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="433.0" y="110.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">0</text>
+<circle cx="465.5" cy="119.5" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="465.52691193458116" y="123.4730880654188" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">1</text>
+<circle cx="479.0" cy="152.0" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="479.0" y="156.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">2</text>
+<circle cx="465.5" cy="184.5" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="465.52691193458116" y="188.5269119345812" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">3</text>
+<circle cx="433.0" cy="198.0" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="433.0" y="202.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">4</text>
+<circle cx="400.5" cy="184.5" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="400.47308806541884" y="188.5269119345812" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">5</text>
+<circle cx="387.0" cy="152.0" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="387.0" y="156.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">6</text>
+<circle cx="400.5" cy="119.5" r="14" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.4"/>
+<text x="400.4730880654188" y="123.4730880654188" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#7A828F" text-anchor="middle" font-weight="400">7</text>
+<text x="433" y="226" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="12" fill="#1E2329" text-anchor="middle" font-weight="700">count = 3</text>
+<text x="433" y="246" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="11" fill="#3D4451" text-anchor="middle" font-weight="400">head = 0   ·   tail = 3</text>
+<rect x="580" y="48" width="262" height="212" rx="6" fill="#FFFFFF" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="711" y="72" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12.5" fill="#1E2329" text-anchor="middle" font-weight="700">가득 찼다</text>
+<circle cx="711.0" cy="106.0" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="711.0" y="110.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">0</text>
+<circle cx="743.5" cy="119.5" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="743.5269119345812" y="123.4730880654188" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">1</text>
+<circle cx="757.0" cy="152.0" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="757.0" y="156.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">2</text>
+<circle cx="743.5" cy="184.5" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="743.5269119345812" y="188.5269119345812" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">3</text>
+<circle cx="711.0" cy="198.0" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="711.0" y="202.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">4</text>
+<circle cx="678.5" cy="184.5" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="678.4730880654188" y="188.5269119345812" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">5</text>
+<circle cx="665.0" cy="152.0" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="665.0" y="156.0" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">6</text>
+<circle cx="678.5" cy="119.5" r="14" fill="#C8891F" stroke="#C8891F" stroke-width="1.4"/>
+<text x="678.4730880654188" y="123.4730880654188" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-weight="400">7</text>
+<text x="711" y="226" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="12" fill="#1E2329" text-anchor="middle" font-weight="700">count = 8</text>
+<text x="711" y="246" font-family="Consolas,'D2Coding',Menlo,monospace" font-size="11" fill="#3D4451" text-anchor="middle" font-weight="400">head = 0   ·   tail = 0</text>
+<rect x="24" y="274" width="812" height="44" rx="6" fill="#F2F4F7" stroke="#D5DBE4" stroke-width="1.2"/>
+<text x="430" y="292" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="12" fill="#1E2329" text-anchor="middle" font-weight="700">head == tail 이 '비었다' 와 '가득 찼다' 양쪽에서 성립한다</text>
+<text x="430" y="309" font-family="'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif" font-size="11" fill="#7A828F" text-anchor="middle" font-weight="400">그래서 count 를 따로 세거나 한 칸을 비워 두는 관례를 쓴다</text>
+</svg>
