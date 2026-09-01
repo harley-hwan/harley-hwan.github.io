@@ -83,7 +83,7 @@ math: true
 
 표적은 가만히 있다. 움직이는 것은 **자(ruler)** 다.
 
-![같은 표적을 안테나 좌표계와 함선 좌표계에서 읽은 결과](/assets/img/radar-coordinate-frames/fig05_same_target.png)
+![같은 표적을 안테나 좌표계와 함선 좌표계에서 읽은 결과](/assets/img/posts/radar-coordinate-frames/fig05_same_target.png)
 
 *그림 0-1. 두 그림에서 주황색 화살표(표적)의 위치는 완전히 같다. 달라진 것은 축뿐이다.*
 
@@ -97,7 +97,7 @@ math: true
 그때 필요한 게 sin·cos이고, 그것을 표로 정리해 놓은 것이 **회전행렬**이다.
 어렵게 외울 것이 아니라 **삼각함수 덧셈정리 한 줄에서 바로 나온다.**
 
-![2차원 회전 유도](/assets/img/radar-coordinate-frames/fig04_rot_derive.png)
+![2차원 회전 유도](/assets/img/posts/radar-coordinate-frames/fig04_rot_derive.png)
 
 *그림 0-2. 회전행렬의 유도. 점을 극좌표로 쓰고 각도만 θ 만큼 더하면 끝이다.*
 
@@ -216,7 +216,7 @@ p_함선  =  Rz(90°) × p_안테나  +  레버암
 | 방위각 | **Az** (Azimuth) | 보어사이트에서 **오른쪽으로** 잰 각 |
 | 고각 | **El** (Elevation) | 안테나 수평면에서 **위로** 잰 각 |
 
-![안테나 극좌표 R, Az, El 의 정의](/assets/img/radar-coordinate-frames/fig02_polar.png)
+![안테나 극좌표 R, Az, El 의 정의](/assets/img/posts/radar-coordinate-frames/fig02_polar.png)
 
 *그림 1-1. 방위각 Az 는 위에서 본 그림에서, 고각 El 은 옆에서 본 그림에서 읽는다.*
 
@@ -278,7 +278,7 @@ w = cos(El) × cos(Az)     ← 보어사이트 성분
 
 예제 값(Az 30°, El 0°)이면 `u = 0.5, v = 0, w = 0.866` 이다.
 
-![UV 가시영역과 예제 표적의 UV 위치](/assets/img/radar-coordinate-frames/fig03_uv.png)
+![UV 가시영역과 예제 표적의 UV 위치](/assets/img/posts/radar-coordinate-frames/fig03_uv.png)
 
 *그림 1-2. UV 는 반지름 1 인 원판 안의 좌표다. 원판 밖은 전파가 나가지 않는 영역이다.*
 
@@ -339,7 +339,7 @@ w = cos(El) × cos(Az)     ← 보어사이트 성분
 
 축 배치의 머리글자를 따서 **FRD**(Forward-Right-Down)라고 부른다.
 
-![동체 좌표계 FRD 와 자세각 세 가지](/assets/img/radar-coordinate-frames/fig06_body.png)
+![동체 좌표계 FRD 와 자세각 세 가지](/assets/img/posts/radar-coordinate-frames/fig06_body.png)
 
 *그림 1-3. 동체 좌표계의 축과 roll·pitch·yaw. z축은 지면 속으로 들어간다.*
 
@@ -420,7 +420,7 @@ INS 안에는 두 종류의 센서가 각각 3개씩 들어 있다. 둘 다 **�
 
 INS에는 역사적으로 두 방식이 있고, 이 차이가 "플랫폼 좌표계"라는 말의 의미를 갈라놓는다.
 
-![스트랩다운 INS와 짐벌형 INS](/assets/img/radar-coordinate-frames/fig13_ins.png)
+![스트랩다운 INS와 짐벌형 INS](/assets/img/posts/radar-coordinate-frames/fig13_ins.png)
 
 *그림 1-7. 짐벌형은 수평 플랫폼이 물리적으로 존재하고, 스트랩다운은 계산상으로만 존재한다.*
 
@@ -510,7 +510,7 @@ INS는 좌표계가 아니라 **값의 공급원** 역할만 한다.
 | **NED** | 북 (N) | 동 (E) | **아래** (D) | 항공우주·항법·무기체계 |
 | **ENU** | 동 (E) | 북 (N) | **위** (U) | 측지·측량·GIS·로보틱스 |
 
-![NED 와 ENU 축 비교](/assets/img/radar-coordinate-frames/fig07_ned_enu.png)
+![NED 와 ENU 축 비교](/assets/img/posts/radar-coordinate-frames/fig07_ned_enu.png)
 
 *그림 1-4. 두 좌표계는 같은 정보를 담는다. 축 순서와 z 부호만 다르다.*
 
@@ -608,7 +608,7 @@ ECEF는 그 **다리** 역할을 한다. 또 여러 배·여러 레이다의 결
 
 ECEF와 원점은 같고 **축이 도느냐 안 도느냐**만 다르다.
 
-![ECEF 와 ECI 의 차이](/assets/img/radar-coordinate-frames/fig09_ecef_eci.png)
+![ECEF 와 ECI 의 차이](/assets/img/posts/radar-coordinate-frames/fig09_ecef_eci.png)
 
 *그림 1-5. 원점은 같고 축이 도느냐 마느냐만 다르다.*
 
@@ -673,7 +673,7 @@ ECI는 표적을 **관성 동역학으로 전파**해야 할 때(탄도탄 방�
 적도 반지름과 극 반지름의 차이가 약 **21 km**다. 지구 크기에 비하면 0.3 % 정도지만,
 이걸 무시하고 구로 계산하면 위치 오차가 수십 km까지 벌어진다.
 
-![지구 타원체, 측지위도와 지심위도, 고도의 두 기준](/assets/img/radar-coordinate-frames/fig08_ellipsoid.png)
+![지구 타원체, 측지위도와 지심위도, 고도의 두 기준](/assets/img/posts/radar-coordinate-frames/fig08_ellipsoid.png)
 
 *그림 1-6. 타원체 법선은 지구 중심을 지나지 않는다. 그래서 측지위도와 지심위도가 다르고,
 고도의 기준도 타원체(LLA)와 지오이드(해발)로 갈린다.*
@@ -737,7 +737,7 @@ LLA의 "고도"는 **타원체 표면에서 잰 높이**(타원체고, HAE)다.
 
 #### 변환 체인 한 장 요약
 
-![좌표변환 체인 전체도](/assets/img/radar-coordinate-frames/fig01_chain.png)
+![좌표변환 체인 전체도](/assets/img/posts/radar-coordinate-frames/fig01_chain.png)
 
 *그림 1-8. 각 단계의 회전과 평행이동을 무엇이 공급하는지가 오차 예산의 항목이 된다.*
 
@@ -896,7 +896,7 @@ p_ned = C_ned_from_body × p_body
 배의 흔들림을 보상할 기계적 수단이 없다. **전부 이 회전행렬이 감당한다.**
 따라서 이 단계의 정확도가 시스템 전체의 지향 정확도를 결정한다.
 
-![예제 배치도 — 방위각이 더해지는 관계](/assets/img/radar-coordinate-frames/fig10_layout.png)
+![예제 배치도 — 방위각이 더해지는 관계](/assets/img/posts/radar-coordinate-frames/fig10_layout.png)
 
 *그림 2-1. 배가 기울지 않았을 때는 세 각도가 그대로 더해진다: 45° + 90° + 30° = 165°.*
 
@@ -1261,7 +1261,7 @@ D가 −10 이므로 표적은 로컬 평면보다 10 m **위**에 있다.
 20 km 지점에서 그 차이가 **31.5 m**이고, 10 + 31.5 = 41.5 m가 된다.
 로컬 평면 좌표를 그대로 고도로 쓰면 안 되는 이유가 바로 이것이다.
 
-![지구 곡률 때문에 생기는 고도 차이](/assets/img/radar-coordinate-frames/fig11_curvature.png)
+![지구 곡률 때문에 생기는 고도 차이](/assets/img/posts/radar-coordinate-frames/fig11_curvature.png)
 
 *그림 3-1. 빔은 직진하지만 바다 표면은 멀어질수록 내려간다. 그 차이가 거리의 제곱에 비례해 커진다.*
 
@@ -1443,7 +1443,7 @@ T9  부호 민감도
 
 #### 실험 B — 배가 기울면 각도 덧셈이 깨진다
 
-![배가 기울면 빔이 실제로 향하는 방향](/assets/img/radar-coordinate-frames/fig12_roll.png)
+![배가 기울면 빔이 실제로 향하는 방향](/assets/img/posts/radar-coordinate-frames/fig12_roll.png)
 
 *그림 3-2. 안테나는 배에 고정되어 있으므로 배가 기울면 안테나도 같이 기운다.
 레이다는 여전히 "고각 0도"라고 보고하지만 그건 안테나 기준일 뿐이다.*
