@@ -77,7 +77,7 @@ $failures = New-Object System.Collections.Generic.List[string]
 $changedFiles = 0
 $downloadedFiles = 0
 
-Get-ChildItem -LiteralPath $PostsDir -File -Filter "*.md" | ForEach-Object {
+Get-ChildItem -LiteralPath $PostsDir -Recurse -File -Filter "*.md" | ForEach-Object {
   $postFile = $_
   $text = [System.IO.File]::ReadAllText($postFile.FullName, [System.Text.Encoding]::UTF8)
   $matches = $imagePattern.Matches($text)

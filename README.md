@@ -4,7 +4,7 @@ Jekyll + Chirpy 기반 개인 기술 블로그입니다.
 
 ## Structure
 
-- `_posts`: Markdown posts.
+- `_posts/<category>/`: Markdown posts, grouped into folders that mirror front matter `categories` (`_posts/dev/radar/`, `_posts/algorithm/baekjoon/`, …). The folders only make files easier to find: URLs come from front matter `slug` (or the filename when it is absent) and site categories from `categories`, never from the folder path.
 - `_layouts`, `_includes`: Chirpy layout overrides and AdSense includes.
 - `_plugins`: build-time helpers such as Git-based `last_modified_at`.
 - `_tabs`, `_data`: sidebar tabs and contact/share metadata.

@@ -4,13 +4,37 @@ Jekyll + Chirpy 기반 개인 기술 블로그 `harley's dev note`. 이 파일�
 
 ## 저장소 구조
 
-- `_posts/` — 모든 글. 파일명은 `YYYY-MM-DD-<slug>.md`
+- `_posts/<카테고리 폴더>/` — 모든 글. 파일명은 `YYYY-MM-DD-<slug>.md`. 폴더는 아래 「글 폴더」 표를 따른다
 - `_includes/series-nav.html` — 시리즈 내비게이션. Chirpy 원본에 없는 자체 추가
 - `_layouts/post.html` — Chirpy 7.6.0 오버라이드. 변경점은 series-nav 인클루드와 AdSense 슬롯 3곳뿐이다
-- `_plugins/posts-lastmod-hook.rb` — git log 에서 `last_modified_at` 을 유도한다. **프론트매터에 수정일을 직접 쓰지 않는다**
+- `_plugins/posts-lastmod-hook.rb` — git log 에서 `last_modified_at` 을 유도한다. 이름 변경을 따라가므로 글을 다른 폴더로 옮겨도 수정일이 유지된다. **프론트매터에 수정일을 직접 쓰지 않는다**
 - `assets/img/posts/<slug>/` — 글별 그림
 - `assets/lib/` — Chirpy 정적 자산 서브모듈. 사이트 빌드에서 제외돼 있다. 건드리지 않는다
 - `docs/setup-checklist.md` — 발행되지 않는 대시보드 설정 체크리스트
+
+## 글 폴더
+
+글 파일은 `_posts/` 바로 아래에 두지 않고 `categories` 에 맞는 폴더에 둔다. 폴더는 파일을 찾기 쉽게 나눈 것이다. URL 은 프론트매터의 `slug` 가(`slug` 가 없는 옛 글은 파일명에서 날짜를 뗀 부분이), 사이트의 카테고리는 `categories` 가 정하므로 폴더를 옮겨도 URL 과 카테고리 페이지는 달라지지 않는다. 다만 `date` 가 같은 글끼리는 경로 순으로 놓이므로, 같은 날 낸 글의 목록 순서와 이전·다음 글 링크는 폴더 이름을 따른다.
+
+| `categories` | 폴더 |
+|---|---|
+| `[Algorithm, Baekjoon]` | `_posts/algorithm/baekjoon/` |
+| `[Algorithm, Programmers]` | `_posts/algorithm/programmers/` |
+| `[Dev, C++]` | `_posts/dev/cpp/` |
+| `[Dev, CNN]` | `_posts/dev/cnn/` |
+| `[Dev, CSharp]` | `_posts/dev/csharp/` |
+| `[Dev, CUDA]` | `_posts/dev/cuda/` |
+| `[Dev, Docker]` | `_posts/dev/docker/` |
+| `[Dev, Linux]` | `_posts/dev/linux/` |
+| `[Dev, MFC]` | `_posts/dev/mfc/` |
+| `[Dev, OpenCV]` | `_posts/dev/opencv/` |
+| `[Dev, Radar]` | `_posts/dev/radar/` |
+| `[Dev, WPF]` | `_posts/dev/wpf/` |
+| `[ETC]` | `_posts/etc/` |
+| `[Project]` | `_posts/project/` |
+
+- 새 카테고리를 만들면 폴더도 소문자 하이픈 이름으로 같이 만들고 이 표에 한 줄을 추가한다
+- 글의 `categories` 를 바꾸면 파일도 맞는 폴더로 옮긴다
 
 ## 프론트매터
 
