@@ -1,0 +1,42 @@
+<svg width="2580" height="990" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="328" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">참값은 레이다가 재는 형태로 바꾼 뒤에 잡음을 더한다</text>
+<rect x="40" y="108" width="136" height="66" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="108" y="130" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">표적 ECEF</text>
+<text x="108" y="146" font-size="10" fill="#475569" text-anchor="middle">지구 중심 직교좌표</text>
+<rect x="208" y="108" width="136" height="66" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="276" y="130" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">NED</text>
+<text x="276" y="146" font-size="10" fill="#475569" text-anchor="middle">레이다 자리의 북 · 동 · 아래</text>
+<rect x="376" y="108" width="136" height="66" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="444" y="130" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">동체</text>
+<text x="444" y="146" font-size="10" fill="#475569" text-anchor="middle">플랫폼 선수 · 우현 · 아래</text>
+<rect x="544" y="108" width="136" height="66" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="612" y="130" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">안테나</text>
+<text x="612" y="146" font-size="10" fill="#475569" text-anchor="middle">왼쪽 · 위 · 조준축</text>
+<rect x="712" y="108" width="136" height="66" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="780" y="130" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="700">구좌표</text>
+<text x="780" y="146" font-size="10" fill="#475569" text-anchor="middle">거리 · 방위각 · 고각</text>
+<line x1="179" y1="132" x2="205" y2="132" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-blue)"/>
+<line x1="205" y1="152" x2="179" y2="152" stroke="#64748b" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
+<text x="192" y="86" font-size="10" fill="#2563eb" text-anchor="middle">플랫폼 위치와 위경도</text>
+<line x1="347" y1="132" x2="373" y2="132" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-blue)"/>
+<line x1="373" y1="152" x2="347" y2="152" stroke="#64748b" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
+<text x="360" y="100" font-size="10" fill="#2563eb" text-anchor="middle">플랫폼 자세</text>
+<line x1="515" y1="132" x2="541" y2="132" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-blue)"/>
+<line x1="541" y1="152" x2="515" y2="152" stroke="#64748b" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
+<text x="528" y="86" font-size="10" fill="#2563eb" text-anchor="middle">축 바꾸기</text>
+<line x1="683" y1="132" x2="709" y2="132" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-blue)"/>
+<line x1="709" y1="152" x2="683" y2="152" stroke="#64748b" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3" marker-end="url(#ar-mute)"/>
+<text x="696" y="100" font-size="10" fill="#2563eb" text-anchor="middle">삼각함수</text>
+<text x="444" y="72" font-size="11" fill="#2563eb" text-anchor="middle">참값 x 를 만들 때 (위 화살표)</text>
+<text x="430" y="212" font-size="11" fill="#475569" text-anchor="middle">플롯 z 를 지도에 찍을 때는 아래 점선 화살표를 따라 거꾸로 밟아 ECEF 까지 간 뒤 위도 · 경도 · 고도로 바꾼다</text>
+<rect x="40" y="232" width="300" height="84" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<line x1="150" y1="292" x2="150" y2="246" stroke="#1e293b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-ink)"/>
+<text x="158" y="252" font-size="10" fill="#1e293b" text-anchor="start">조준축 = 북 (플랫폼 자세 0)</text>
+<path d="M 150,256 A 24,24 0 0 0 128,272" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-blue)"/>
+<text x="120" y="282" font-size="10" fill="#2563eb" text-anchor="end">방위각 +</text>
+<text x="120" y="296" font-size="9.5" fill="#64748b" text-anchor="end">(왼쪽, 서쪽)</text>
+<text x="590" y="262" font-size="10.5" fill="#475569" text-anchor="middle">제공 코드의 규약을 그대로 따른다. 방위각은 조준축에서 왼쪽이 +, 고각은 위가 + 다.</text>
+<text x="590" y="282" font-size="10.5" fill="#475569" text-anchor="middle">플랫폼이 멈춰 있고 자세가 0 이라 이번 시나리오의 조준축은 늘 북쪽이다.</text>
+</svg>
