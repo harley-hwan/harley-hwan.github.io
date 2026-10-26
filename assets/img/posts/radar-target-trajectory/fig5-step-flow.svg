@@ -1,0 +1,33 @@
+<svg width="2580" height="900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="298" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">한 스텝은 다섯 단계이고, 0.1 초마다 표적마다 반복한다</text>
+<rect x="42" y="90" width="140" height="84" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="112" y="112" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">① 기동 찾기</text>
+<text x="112" y="129" font-size="10.5" fill="#475569" text-anchor="middle">지금 시각에 걸린</text>
+<text x="112" y="146" font-size="10.5" fill="#475569" text-anchor="middle">기동의 각속도</text>
+<line x1="185" y1="132" x2="201" y2="132" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ar-mute)"/>
+<rect x="204" y="90" width="140" height="84" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="274" y="112" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">② 자세 회전</text>
+<text x="274" y="129" font-size="10.5" fill="#475569" text-anchor="middle">각속도 × 간격만큼</text>
+<text x="274" y="146" font-size="10.5" fill="#475569" text-anchor="middle">자세를 돌린다</text>
+<line x1="347" y1="132" x2="363" y2="132" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ar-mute)"/>
+<rect x="366" y="90" width="140" height="84" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="436" y="112" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="700">③ 속도 변환</text>
+<text x="436" y="129" font-size="10.5" fill="#475569" text-anchor="middle">속력을 ECEF</text>
+<text x="436" y="146" font-size="10.5" fill="#475569" text-anchor="middle">속도 벡터로</text>
+<line x1="509" y1="132" x2="525" y2="132" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ar-mute)"/>
+<rect x="528" y="90" width="140" height="84" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="598" y="112" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="700">④ 위치 이동</text>
+<text x="598" y="129" font-size="10.5" fill="#475569" text-anchor="middle">속도 × 간격만큼</text>
+<text x="598" y="146" font-size="10.5" fill="#475569" text-anchor="middle">위치를 옮긴다</text>
+<line x1="671" y1="132" x2="687" y2="132" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ar-mute)"/>
+<rect x="690" y="90" width="140" height="84" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="760" y="112" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="700">⑤ 결과 기록</text>
+<text x="760" y="129" font-size="10.5" fill="#475569" text-anchor="middle">위경도로 바꿔</text>
+<text x="760" y="146" font-size="10.5" fill="#475569" text-anchor="middle">결과에 담는다</text>
+<path d="M 366,184 L 366,194 L 668,194 L 668,184" fill="none" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="517" y="212" font-size="11" fill="#2563eb" text-anchor="middle">③ 과 ④ 는 반 스텝 앞 지점에서 한 번 더 계산한다 (중점법)</text>
+<path d="M 834,132.0 C 830,132.0 830,262 112.0,262 L 112.0,180" fill="none" stroke="#64748b" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#ar-mute)"/>
+<text x="430" y="278" font-size="11" fill="#475569" text-anchor="middle">표적 수만큼 반복한다. 표적끼리는 서로 영향을 주지 않는다</text>
+</svg>

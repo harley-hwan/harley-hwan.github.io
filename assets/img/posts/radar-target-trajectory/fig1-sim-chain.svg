@@ -1,0 +1,30 @@
+<svg width="2580" height="750" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="248" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">레이다 처리 흐름에서 궤적 모의가 놓이는 자리</text>
+<rect x="96" y="92" width="160" height="84" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="176" y="114" font-size="12.5" fill="#2563eb" text-anchor="middle" font-weight="700">표적 궤적 모의</text>
+<text x="176" y="131" font-size="11" fill="#475569" text-anchor="middle">시각별 위도·경도·고도의</text>
+<text x="176" y="148" font-size="11" fill="#475569" text-anchor="middle">참값을 만든다</text>
+<line x1="260" y1="134" x2="276" y2="134" stroke="#64748b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-mute)"/>
+<rect x="280" y="92" width="160" height="84" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="360" y="114" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">측정 모의</text>
+<text x="360" y="131" font-size="11" fill="#475569" text-anchor="middle">안테나 기준 거리·각도에</text>
+<text x="360" y="148" font-size="11" fill="#475569" text-anchor="middle">잡음을 더한다</text>
+<line x1="444" y1="134" x2="460" y2="134" stroke="#64748b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-mute)"/>
+<rect x="464" y="92" width="160" height="84" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="544" y="114" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">추적 필터</text>
+<text x="544" y="131" font-size="11" fill="#475569" text-anchor="middle">측정값으로 표적 상태를</text>
+<text x="544" y="148" font-size="11" fill="#475569" text-anchor="middle">추정한다</text>
+<line x1="628" y1="134" x2="644" y2="134" stroke="#64748b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-mute)"/>
+<rect x="648" y="92" width="160" height="84" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="728" y="114" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">전시·통제</text>
+<text x="728" y="131" font-size="11" fill="#475569" text-anchor="middle">항적을 화면에 표시한다</text>
+<rect x="94" y="62" width="60" height="20" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1.4"/>
+<text x="124" y="76" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="700">이번 장</text>
+<text x="48" y="114" font-size="10.5" fill="#475569" text-anchor="middle">초기 위치</text>
+<text x="48" y="130" font-size="10.5" fill="#475569" text-anchor="middle">자세 · 속력</text>
+<text x="48" y="146" font-size="10.5" fill="#475569" text-anchor="middle">기동 지시</text>
+<line x1="74" y1="158" x2="90" y2="158" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ar-blue)"/>
+<text x="430" y="214" font-size="12" fill="#475569" text-anchor="middle">뒤쪽 블록이 맞게 동작했는지는 맨 앞 블록이 만든 참값과 비교해서 판정한다</text>
+</svg>
