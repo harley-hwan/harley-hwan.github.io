@@ -1,0 +1,73 @@
+<svg width="2580" height="1290" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="428" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">표적 1 의 플롯 열에서 게이트를 지난 쌍만 트랙이 되고, 트랙에 쓴 플롯은 다음 쌍의 검사에서 빠진다</text>
+<text x="60" y="114" font-size="11" fill="#475569" text-anchor="end" font-weight="700">플롯</text>
+<path d="M110.0,110.0h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<text x="110" y="94" font-size="10" fill="#64748b" text-anchor="middle">스캔 698</text>
+<path d="M207.1,110.0h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<text x="207.14" y="94" font-size="10" fill="#64748b" text-anchor="middle">스캔 699</text>
+<path d="M304.3,110.0h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<text x="304.29" y="94" font-size="10" fill="#64748b" text-anchor="middle">스캔 700</text>
+<path d="M401.4,110.0h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<text x="401.43" y="94" font-size="10" fill="#64748b" text-anchor="middle">스캔 701</text>
+<path d="M498.6,110.0h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<text x="498.57" y="94" font-size="10" fill="#64748b" text-anchor="middle">스캔 702</text>
+<path d="M595.7,110.0h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<text x="595.71" y="94" font-size="10" fill="#64748b" text-anchor="middle">스캔 703</text>
+<path d="M692.9,110.0h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<text x="692.86" y="94" font-size="10" fill="#64748b" text-anchor="middle">스캔 704</text>
+<path d="M790.0,110.0h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<text x="790" y="94" font-size="10" fill="#64748b" text-anchor="middle">스캔 705</text>
+<line x1="118" y1="110" x2="199.14" y2="110" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round"/>
+<text x="158.57" y="130" font-size="9.5" fill="#16a34a" text-anchor="middle" font-weight="700">통과</text>
+<text x="158.57" y="143" font-size="9.5" fill="#16a34a" text-anchor="middle">29.8 m</text>
+<line x1="215.14" y1="110" x2="296.29" y2="110" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="255.71" y="130" font-size="9.5" fill="#64748b" text-anchor="middle">검사 안 함</text>
+<text x="255.71" y="143" font-size="9.5" fill="#64748b" text-anchor="middle">(136.4 m)</text>
+<line x1="312.29" y1="110" x2="393.43" y2="110" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round"/>
+<text x="352.86" y="130" font-size="9.5" fill="#16a34a" text-anchor="middle" font-weight="700">통과</text>
+<text x="352.86" y="143" font-size="9.5" fill="#16a34a" text-anchor="middle">57.3 m</text>
+<line x1="409.43" y1="110" x2="490.57" y2="110" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="450" y="130" font-size="9.5" fill="#64748b" text-anchor="middle">검사 안 함</text>
+<text x="450" y="143" font-size="9.5" fill="#64748b" text-anchor="middle">(20.9 m)</text>
+<line x1="506.57" y1="110" x2="587.71" y2="110" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="543.14" y1="106" x2="551.14" y2="114" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="543.14" y1="114" x2="551.14" y2="106" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+<text x="547.14" y="130" font-size="9.5" fill="#dc2626" text-anchor="middle" font-weight="700">탈락</text>
+<text x="547.14" y="143" font-size="9.5" fill="#dc2626" text-anchor="middle">200.8 m</text>
+<line x1="603.71" y1="110" x2="684.86" y2="110" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="640.29" y1="106" x2="648.29" y2="114" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="640.29" y1="114" x2="648.29" y2="106" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+<text x="644.29" y="130" font-size="9.5" fill="#dc2626" text-anchor="middle" font-weight="700">탈락</text>
+<text x="644.29" y="143" font-size="9.5" fill="#dc2626" text-anchor="middle">139.3 m</text>
+<line x1="700.86" y1="110" x2="782" y2="110" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round"/>
+<text x="741.43" y="130" font-size="9.5" fill="#16a34a" text-anchor="middle" font-weight="700">통과</text>
+<text x="741.43" y="143" font-size="9.5" fill="#16a34a" text-anchor="middle">62.5 m</text>
+<text x="430" y="166" font-size="10" fill="#64748b" text-anchor="middle">선 위의 숫자는 연속한 두 플롯 사이 거리. 게이트는 80 m</text>
+<text x="60" y="204" font-size="11" fill="#ea580c" text-anchor="end" font-weight="700">트랙 282</text>
+<rect x="185.14" y="186" width="44" height="28" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="1.4"/>
+<text x="207.14" y="204" font-size="9.5" fill="#1e293b" text-anchor="middle">임시 2</text>
+<rect x="282.29" y="186" width="44" height="28" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="1.4"/>
+<text x="304.29" y="204" font-size="9.5" fill="#1e293b" text-anchor="middle">임시 1</text>
+<rect x="379.43" y="186" width="44" height="28" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="401.43" y="204" font-size="9.5" fill="#1e293b" text-anchor="middle">삭제 0</text>
+<line x1="110" y1="120" x2="110" y2="184" stroke="#ea580c" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+<line x1="207.14" y1="120" x2="207.14" y2="184" stroke="#ea580c" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+<text x="60" y="250" font-size="11" fill="#ea580c" text-anchor="end" font-weight="700">트랙 284</text>
+<rect x="379.43" y="232" width="44" height="28" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="1.4"/>
+<text x="401.43" y="250" font-size="9.5" fill="#1e293b" text-anchor="middle">임시 2</text>
+<rect x="476.57" y="232" width="44" height="28" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="1.4"/>
+<text x="498.57" y="250" font-size="9.5" fill="#1e293b" text-anchor="middle">임시 1</text>
+<rect x="573.71" y="232" width="44" height="28" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="595.71" y="250" font-size="9.5" fill="#1e293b" text-anchor="middle">삭제 0</text>
+<line x1="304.29" y1="120" x2="304.29" y2="230" stroke="#ea580c" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+<line x1="401.43" y1="120" x2="401.43" y2="230" stroke="#ea580c" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+<text x="60" y="296" font-size="11" fill="#ea580c" text-anchor="end" font-weight="700">트랙 286</text>
+<rect x="768" y="278" width="44" height="28" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="1.4"/>
+<text x="790" y="296" font-size="9.5" fill="#1e293b" text-anchor="middle">임시 2</text>
+<line x1="692.86" y1="120" x2="692.86" y2="276" stroke="#ea580c" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+<line x1="790" y1="120" x2="790" y2="276" stroke="#ea580c" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+<text x="430" y="342" font-size="10" fill="#64748b" text-anchor="middle">칸의 숫자는 그 스캔을 처리한 뒤의 TrackScore. 점선은 트랙을 만든 두 플롯</text>
+<text x="430" y="410" font-size="10.5" fill="#475569" text-anchor="middle">702 → 703 과 703 → 704 는 게이트 밖이라 트랙이 없고, 701 → 702 는 20.9 m 로 가까웠지만 701 의 플롯이 이미 트랙 284 에 쓰여 검사하지 않았다</text>
+</svg>

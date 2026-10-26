@@ -1,0 +1,35 @@
+<svg width="2580" height="990" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="328" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">예측 위치 둘레의 연관 게이트 안에 플롯이 있으면 Assigned_Flag 가 1, 없으면 0 이다</text>
+<rect x="40" y="56" width="380" height="240" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="230" y="80" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="700">연관 성공 (Assigned_Flag = 1)</text>
+<rect x="121" y="201" width="18" height="18" rx="1.5" fill="none" stroke="#ea580c" stroke-width="2"/>
+<text x="130" y="240" font-size="10" fill="#475569" text-anchor="middle">앞 스캔의 트랙</text>
+<line x1="142" y1="202" x2="276" y2="159" stroke="#ea580c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ar-orange)"/>
+<text x="220" y="204" font-size="10" fill="#ea580c" text-anchor="middle">위치 + 속도 × T</text>
+<line x1="284" y1="150" x2="296" y2="150" stroke="#1e293b" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="290" y1="144" x2="290" y2="156" stroke="#1e293b" stroke-width="1.6" stroke-linecap="round"/>
+<text x="290" y="96" font-size="10" fill="#1e293b" text-anchor="middle">예측 위치</text>
+<circle cx="290" cy="150" r="44" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="338" y="110" font-size="10" fill="#16a34a" text-anchor="start">연관 게이트</text>
+<path d="M308.0,164.0h0" fill="none" stroke="#1f2937" stroke-width="10" stroke-linecap="round"/>
+<line x1="294" y1="153" x2="304" y2="161" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+<text x="318" y="178" font-size="10" fill="#1e293b" text-anchor="start">이번 스캔 플롯</text>
+<text x="230" y="282" font-size="10.5" fill="#475569" text-anchor="middle">게이트 안의 가장 가까운 플롯을 트랙에 붙인다</text>
+<rect x="440" y="56" width="380" height="240" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="630" y="80" font-size="12" fill="#dc2626" text-anchor="middle" font-weight="700">연관 실패 (Assigned_Flag = 0)</text>
+<rect x="521" y="201" width="18" height="18" rx="1.5" fill="none" stroke="#ea580c" stroke-width="2"/>
+<text x="530" y="240" font-size="10" fill="#475569" text-anchor="middle">앞 스캔의 트랙</text>
+<line x1="542" y1="202" x2="676" y2="159" stroke="#ea580c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ar-orange)"/>
+<text x="620" y="204" font-size="10" fill="#ea580c" text-anchor="middle">위치 + 속도 × T</text>
+<line x1="684" y1="150" x2="696" y2="150" stroke="#1e293b" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="690" y1="144" x2="690" y2="156" stroke="#1e293b" stroke-width="1.6" stroke-linecap="round"/>
+<text x="690" y="96" font-size="10" fill="#1e293b" text-anchor="middle">예측 위치</text>
+<circle cx="690" cy="150" r="44" fill="#fef2f2" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="738" y="110" font-size="10" fill="#dc2626" text-anchor="start">연관 게이트</text>
+<path d="M785.0,205.0h0" fill="none" stroke="#1f2937" stroke-width="10" stroke-linecap="round"/>
+<text x="785" y="223" font-size="10" fill="#1e293b" text-anchor="middle">게이트 밖</text>
+<text x="630" y="282" font-size="10.5" fill="#475569" text-anchor="middle">붙일 플롯이 없어 트랙은 그대로 다음 스캔을 기다린다</text>
+<text x="430" y="318" font-size="10.5" fill="#64748b" text-anchor="middle">이번 과제에는 이 단계가 없어 플래그가 늘 0 이다. 상태 전이와 9절의 확정 확률은 전부 이 한 비트에 걸려 있다</text>
+</svg>

@@ -1,7 +1,7 @@
 <svg width="2580" height="1110" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 370" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
 <defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
 <rect x="1" y="1" width="858" height="368" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">출발할 때의 속도로만 가면 선회 궤적 바깥으로 벗어난다</text>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">출발할 때의 속도로만 가면 선회 궤적에서 벗어난다</text>
 <rect x="40" y="60" width="380" height="290" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
 <text x="230" y="84" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">출발 속도로 한 스텝</text>
 <path d="M 121.04,289.19 A 170,170 0 0 1 360.17,153.16" fill="none" stroke="#cbd5e1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>
@@ -13,7 +13,7 @@
 <text x="272.48" y="162.58" font-size="11" fill="#16a34a" text-anchor="start">있어야 할 자리</text>
 <text x="237.33" y="105.12" font-size="11" fill="#dc2626" text-anchor="start">도착한 자리</text>
 <line x1="227.33" y1="101.12" x2="260.48" y2="140.58" stroke="#dc2626" stroke-width="1.0" stroke-linecap="round" stroke-dasharray="3 3"/>
-<text x="230" y="330" font-size="11" fill="#475569" text-anchor="middle">스텝마다 바깥으로 조금씩 밀려난다</text>
+<text x="230" y="330" font-size="11" fill="#475569" text-anchor="middle">참 궤적이 출발 방향으로 반 스텝 옮겨진다</text>
 <rect x="450" y="60" width="380" height="290" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
 <text x="640" y="84" font-size="12.5" fill="#1e293b" text-anchor="middle" font-weight="700">반 스텝 지점의 속도로 한 스텝 (중점법)</text>
 <path d="M 531.04,289.19 A 170,170 0 0 1 770.17,153.16" fill="none" stroke="#cbd5e1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>

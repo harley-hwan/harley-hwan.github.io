@@ -14,7 +14,7 @@
 <path d="M140,154 L145.04,176.4 L165.2,186.2 L165.2,191.8 L145.04,187.6 L143.92,201.6 L151.2,205.8 L151.2,210 L140,207.2 L128.8,210 L128.8,205.8 L136.08,201.6 L134.96,187.6 L114.8,191.8 L114.8,186.2 L134.96,176.4 L140,154" fill="#ea580c" stroke="#ea580c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="140" y1="154" x2="140" y2="112" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ar-ink)"/>
 <text x="154" y="120" font-size="13" fill="#1e293b" text-anchor="start" font-weight="700">V</text>
-<text x="140" y="240" font-size="10.5" fill="#64748b" text-anchor="middle">방향은 자세각이 쥐고 있다</text>
+<text x="140" y="240" font-size="10.5" fill="#64748b" text-anchor="middle">방향은 자세각이 정한다</text>
 <line x1="430" y1="192" x2="430" y2="136" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" marker-end="url(#ar-axis)"/>
 <line x1="430" y1="192" x2="494" y2="192" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" marker-end="url(#ar-axis)"/>
 <line x1="430" y1="192" x2="406" y2="216" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" marker-end="url(#ar-axis)"/>
