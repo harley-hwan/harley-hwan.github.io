@@ -1,0 +1,76 @@
+<svg width="2580" height="1260" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="418" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">표적이 멀수록 이어지는 두 플롯이 80 m 게이트 안에 드는 비율이 떨어진다</text>
+<line x1="90" y1="286" x2="790" y2="286" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="232" x2="790" y2="232" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="178" x2="790" y2="178" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="124" x2="790" y2="124" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="70" x2="790" y2="70" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="340" x2="790" y2="340" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="90" y1="340" x2="90" y2="70" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="90" y1="340" x2="90" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="90" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">2</text>
+<line x1="143.85" y1="340" x2="143.85" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="143.85" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">3</text>
+<line x1="197.69" y1="340" x2="197.69" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="197.69" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">4</text>
+<line x1="251.54" y1="340" x2="251.54" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="251.54" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">5</text>
+<line x1="305.38" y1="340" x2="305.38" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="305.38" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">6</text>
+<line x1="359.23" y1="340" x2="359.23" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="359.23" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">7</text>
+<line x1="413.08" y1="340" x2="413.08" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="413.08" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">8</text>
+<line x1="466.92" y1="340" x2="466.92" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="466.92" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">9</text>
+<line x1="520.77" y1="340" x2="520.77" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="520.77" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">10</text>
+<line x1="574.62" y1="340" x2="574.62" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="574.62" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">11</text>
+<line x1="628.46" y1="340" x2="628.46" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="628.46" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">12</text>
+<line x1="682.31" y1="340" x2="682.31" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="682.31" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">13</text>
+<line x1="736.15" y1="340" x2="736.15" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="736.15" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">14</text>
+<line x1="790" y1="340" x2="790" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="790" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">15</text>
+<line x1="87" y1="340" x2="90" y2="340" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="343.5" font-size="9.5" fill="#64748b" text-anchor="end">0</text>
+<line x1="87" y1="286" x2="90" y2="286" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="289.5" font-size="9.5" fill="#64748b" text-anchor="end">20</text>
+<line x1="87" y1="232" x2="90" y2="232" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="235.5" font-size="9.5" fill="#64748b" text-anchor="end">40</text>
+<line x1="87" y1="178" x2="90" y2="178" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="181.5" font-size="9.5" fill="#64748b" text-anchor="end">60</text>
+<line x1="87" y1="124" x2="90" y2="124" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="127.5" font-size="9.5" fill="#64748b" text-anchor="end">80</text>
+<line x1="87" y1="70" x2="90" y2="70" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="73.5" font-size="9.5" fill="#64748b" text-anchor="end">100</text>
+<text x="440" y="370" font-size="10.5" fill="#64748b" text-anchor="middle">표적 거리 [km]</text>
+<text x="54" y="205" font-size="10.5" fill="#64748b" text-anchor="middle" transform="rotate(-90 54 205)">게이트 통과 비율 [%]</text>
+<path d="M116.9,72.7 L143.8,83.1 L170.8,103.0 L197.7,126.6 L224.6,151.6 L251.5,173.5 L278.5,194.2 L305.4,211.7 L332.3,226.1 L359.2,238.5 L386.2,250.9 L413.1,260.0 L440.0,268.2 L466.9,274.3 L493.8,280.8 L520.8,285.5 L547.7,289.9 L574.6,294.3 L601.5,298.2 L628.5,301.5 L655.4,305.6 L682.3,306.8 L709.2,310.1 L736.2,311.4 L763.1,312.7 L790.0,314.5" fill="none" stroke="#dc2626" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90.0,71.0 L116.9,78.3 L143.8,93.6 L170.8,114.3 L197.7,138.7 L224.6,160.9 L251.5,181.5 L278.5,200.3 L305.4,218.1 L332.3,231.1 L359.2,240.9 L386.2,253.4 L413.1,261.7 L440.0,268.3 L466.9,275.8 L493.8,280.0 L520.8,287.0 L547.7,290.8 L574.6,294.6 L601.5,298.5 L628.5,300.4 L655.4,304.3 L682.3,307.0 L709.2,309.4 L736.2,311.5 L763.1,312.8 L790.0,315.8" fill="none" stroke="#2563eb" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<circle cx="278.46" cy="193.56" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<circle cx="332.31" cy="230.79" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<circle cx="386.15" cy="255" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<circle cx="440" cy="273.17" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<circle cx="493.85" cy="289.18" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<circle cx="547.69" cy="295" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<circle cx="601.54" cy="299.72" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<circle cx="655.38" cy="297.65" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<circle cx="709.23" cy="306.87" r="5" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="763.08" cy="308.95" r="5" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<rect x="460" y="82" width="320" height="92" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<line x1="470" y1="100" x2="500" y2="100" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+<text x="508" y="104" font-size="10" fill="#475569" text-anchor="start">계산: 표적 2 의 기하 (고도 2 000 m)</text>
+<line x1="470" y1="120" x2="500" y2="120" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4"/>
+<text x="508" y="124" font-size="10" fill="#475569" text-anchor="start">계산: 표적 1 의 기하 (해수면)</text>
+<circle cx="485" cy="140" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<text x="508" y="144" font-size="10" fill="#475569" text-anchor="start">시뮬레이션 1 km 구간별 실측 (표적 2)</text>
+<circle cx="485" cy="158" r="5" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="508" y="162" font-size="10" fill="#475569" text-anchor="start">시뮬레이션 1 km 구간별 실측 (표적 1)</text>
+<text x="430" y="400" font-size="10.5" fill="#64748b" text-anchor="middle">계산 곡선은 플롯 잡음 (거리 4.74 m, 각도 0.48° · 0.49°) 으로 두 플롯 차이의 분포를 만들어 80 m 안에 들 확률을 구한 것이다</text>
+</svg>

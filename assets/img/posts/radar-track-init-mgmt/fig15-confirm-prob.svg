@@ -1,0 +1,84 @@
+<svg width="2580" height="1260" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="418" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">연관 성공 확률에 따라 임시 트랙이 확정에 이를 확률이 정해진다</text>
+<line x1="90" y1="286" x2="550" y2="286" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="232" x2="550" y2="232" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="178" x2="550" y2="178" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="124" x2="550" y2="124" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="70" x2="550" y2="70" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<line x1="90" y1="340" x2="550" y2="340" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="90" y1="340" x2="90" y2="70" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="90" y1="340" x2="90" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="90" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">0.0</text>
+<line x1="182" y1="340" x2="182" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="182" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">0.2</text>
+<line x1="274" y1="340" x2="274" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="274" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">0.4</text>
+<line x1="366" y1="340" x2="366" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="366" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">0.6</text>
+<line x1="458" y1="340" x2="458" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="458" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">0.8</text>
+<line x1="550" y1="340" x2="550" y2="344" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="550" y="355" font-size="9.5" fill="#64748b" text-anchor="middle">1.0</text>
+<line x1="87" y1="340" x2="90" y2="340" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="343.5" font-size="9.5" fill="#64748b" text-anchor="end">0</text>
+<line x1="87" y1="286" x2="90" y2="286" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="289.5" font-size="9.5" fill="#64748b" text-anchor="end">20</text>
+<line x1="87" y1="232" x2="90" y2="232" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="235.5" font-size="9.5" fill="#64748b" text-anchor="end">40</text>
+<line x1="87" y1="178" x2="90" y2="178" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="181.5" font-size="9.5" fill="#64748b" text-anchor="end">60</text>
+<line x1="87" y1="124" x2="90" y2="124" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="127.5" font-size="9.5" fill="#64748b" text-anchor="end">80</text>
+<line x1="87" y1="70" x2="90" y2="70" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="84" y="73.5" font-size="9.5" fill="#64748b" text-anchor="end">100</text>
+<text x="320" y="370" font-size="10.5" fill="#64748b" text-anchor="middle">스캔마다 연관에 성공할 확률 p</text>
+<text x="54" y="205" font-size="10.5" fill="#64748b" text-anchor="middle" transform="rotate(-90 54 205)">확정 확률 [%]</text>
+<path d="M94.6,340.0 L99.2,340.0 L103.8,340.0 L108.4,340.0 L113.0,340.0 L117.6,339.9 L122.2,339.9 L126.8,339.8 L131.4,339.7 L136.0,339.6 L140.6,339.5 L145.2,339.3 L149.8,339.1 L154.4,338.9 L159.0,338.6 L163.6,338.2 L168.2,337.8 L172.8,337.3 L177.4,336.7 L182.0,336.0 L186.6,335.3 L191.2,334.4 L195.8,333.4 L200.4,332.3 L205.0,331.1 L209.6,329.7 L214.2,328.1 L218.8,326.4 L223.4,324.5 L228.0,322.4 L232.6,320.1 L237.2,317.6 L241.8,314.8 L246.4,311.9 L251.0,308.6 L255.6,305.2 L260.2,301.5 L264.8,297.5 L269.4,293.3 L274.0,288.8 L278.6,284.1 L283.2,279.1 L287.8,273.9 L292.4,268.5 L297.0,262.8 L301.6,257.0 L306.2,250.9 L310.8,244.8 L315.4,238.4 L320.0,232.0 L324.6,225.5 L329.2,218.9 L333.8,212.3 L338.4,205.7 L343.0,199.1 L347.6,192.5 L352.2,186.0 L356.8,179.7 L361.4,173.4 L366.0,167.3 L370.6,161.3 L375.2,155.5 L379.8,149.8 L384.4,144.4 L389.0,139.2 L393.6,134.2 L398.2,129.4 L402.8,124.8 L407.4,120.5 L412.0,116.4 L416.6,112.5 L421.2,108.8 L425.8,105.3 L430.4,102.1 L435.0,99.0 L439.6,96.2 L444.2,93.5 L448.8,91.0 L453.4,88.7 L458.0,86.6 L462.6,84.7 L467.2,82.9 L471.8,81.2 L476.4,79.7 L481.0,78.4 L485.6,77.1 L490.2,76.0 L494.8,75.0 L499.4,74.1 L504.0,73.3 L508.6,72.6 L513.2,72.0 L517.8,71.5 L522.4,71.1 L527.0,70.7 L531.6,70.5 L536.2,70.3 L540.8,70.1 L545.4,70.0" fill="none" stroke="#ea580c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="228" cy="270.55" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="274" cy="216.37" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="320" cy="162.46" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="366" cy="119.71" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="412" cy="91.76" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="458" cy="76.64" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="504" cy="70.77" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="527" cy="70.11" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<path d="M228.0,270.5 L274.0,216.4 L320.0,162.5 L366.0,119.7 L412.0,91.8 L458.0,76.6 L504.0,70.8 L527.0,70.1" fill="none" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<line x1="228" y1="340" x2="228" y2="322.40" stroke="#cbd5e1" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M228.0,322.4h0" fill="none" stroke="#ea580c" stroke-width="9.0" stroke-linecap="round"/>
+<line x1="504" y1="340" x2="504" y2="73.33" stroke="#cbd5e1" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M504.0,73.3h0" fill="none" stroke="#ea580c" stroke-width="9.0" stroke-linecap="round"/>
+<text x="496" y="61.33" font-size="10" fill="#ea580c" text-anchor="end">표적 (탐지 확률 0.9)</text>
+<text x="250" y="330" font-size="10" fill="#ea580c" text-anchor="start">클러터라면 (p ≈ 0.3)</text>
+<line x1="384" y1="196" x2="414" y2="196" stroke="#ea580c" stroke-width="2.4" stroke-linecap="round"/>
+<text x="422" y="200" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="700">스코어 방식</text>
+<text x="422" y="216" font-size="10" fill="#475569" text-anchor="start">개시 2 · 확정 5 · 삭제 0</text>
+<line x1="384" y1="240" x2="414" y2="240" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 4"/>
+<circle cx="399" cy="240" r="4.5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="422" y="244" font-size="10.5" fill="#1e293b" text-anchor="start" font-weight="700">M/N 방식</text>
+<text x="422" y="260" font-size="10" fill="#475569" text-anchor="start">최근 5 번 중 3 번이면 확정</text>
+<text x="690" y="80" font-size="11" fill="#1e293b" text-anchor="middle" font-weight="700">스코어 방식의 평균 판정 스캔 수</text>
+<text x="630" y="104" font-size="10" fill="#475569" text-anchor="middle" font-weight="700">p</text>
+<text x="695" y="104" font-size="10" fill="#475569" text-anchor="middle" font-weight="700">확정 확률</text>
+<text x="765" y="104" font-size="10" fill="#475569" text-anchor="middle" font-weight="700">판정까지</text>
+<line x1="600" y1="110" x2="800" y2="110" stroke="#cbd5e1" stroke-width="1" stroke-linecap="round"/>
+<text x="630" y="126" font-size="10" fill="#1e293b" text-anchor="middle">0.30</text>
+<text x="695" y="126" font-size="10" fill="#1e293b" text-anchor="middle">6.5 %</text>
+<text x="765" y="126" font-size="10" fill="#1e293b" text-anchor="middle">4.2 스캔</text>
+<text x="630" y="145" font-size="10" fill="#1e293b" text-anchor="middle">0.50</text>
+<text x="695" y="145" font-size="10" fill="#1e293b" text-anchor="middle">40.0 %</text>
+<text x="765" y="145" font-size="10" fill="#1e293b" text-anchor="middle">6.0 스캔</text>
+<text x="630" y="164" font-size="10" fill="#1e293b" text-anchor="middle">0.70</text>
+<text x="695" y="164" font-size="10" fill="#1e293b" text-anchor="middle">82.8 %</text>
+<text x="765" y="164" font-size="10" fill="#1e293b" text-anchor="middle">5.4 스캔</text>
+<text x="630" y="183" font-size="10" fill="#1e293b" text-anchor="middle">0.90</text>
+<text x="695" y="183" font-size="10" fill="#1e293b" text-anchor="middle">98.8 %</text>
+<text x="765" y="183" font-size="10" fill="#1e293b" text-anchor="middle">3.7 스캔</text>
+<text x="630" y="202" font-size="10" fill="#1e293b" text-anchor="middle">0.95</text>
+<text x="695" y="202" font-size="10" fill="#1e293b" text-anchor="middle">99.7 %</text>
+<text x="765" y="202" font-size="10" fill="#1e293b" text-anchor="middle">3.3 스캔</text>
+<text x="700" y="229" font-size="9.5" fill="#64748b" text-anchor="middle">판정 = 확정 또는 삭제가 날 때까지</text>
+<text x="700" y="245" font-size="9.5" fill="#64748b" text-anchor="middle">(두 문턱 사이 임의 보행의 흡수 시간)</text>
+<text x="430" y="400" font-size="10.5" fill="#64748b" text-anchor="middle">스코어 방식은 성공 3 번이 실패 2 번보다 먼저 쌓여야 확정된다. M/N 은 창 안에서 세므로 같은 p 에서 더 쉽게 확정하고, 그만큼 가짜 트랙도 더 많이 확정한다</text>
+</svg>

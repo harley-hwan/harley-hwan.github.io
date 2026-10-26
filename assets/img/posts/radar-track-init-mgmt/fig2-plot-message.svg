@@ -1,0 +1,41 @@
+<svg width="2580" height="936" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 312" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="310" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">플롯 메시지 하나가 스캔 하나다. 머리 뒤에 플롯이 개수만큼 이어진다</text>
+<rect x="50" y="84" width="70" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="85" y="110" font-size="9.5" fill="#1e293b" text-anchor="middle">메시지 ID</text>
+<rect x="120" y="84" width="50" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="145" y="110" font-size="9.5" fill="#1e293b" text-anchor="middle">크기</text>
+<rect x="170" y="84" width="70" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="205" y="110" font-size="9.5" fill="#1e293b" text-anchor="middle">스캔 번호</text>
+<rect x="240" y="84" width="80" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="280" y="110" font-size="9.5" fill="#1e293b" text-anchor="middle">시각 s · ns</text>
+<rect x="320" y="84" width="60" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="350" y="110" font-size="9.5" fill="#1e293b" text-anchor="middle">플롯 수</text>
+<rect x="380" y="84" width="110" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="435" y="110" font-size="9.5" fill="#1e293b" text-anchor="middle">R 표준편차 3 개</text>
+<rect x="490" y="84" width="130" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="555" y="110" font-size="9.5" fill="#1e293b" text-anchor="middle">플랫폼 위치 · 자세</text>
+<rect x="620" y="84" width="190" height="44" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="715" y="104" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="700">플롯 1 … 플롯 N</text>
+<text x="715" y="120" font-size="9.5" fill="#475569" text-anchor="middle">N = 표적 플롯 + 클러터</text>
+<path d="M 50,74 L 50,68 L 618,68 L 618,74" fill="none" stroke="#64748b" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="335" y="62" font-size="10" fill="#64748b" text-anchor="middle">머리 (고정 길이)</text>
+<path d="M 622,74 L 622,68 L 808,68 L 808,74" fill="none" stroke="#2563eb" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="715" y="62" font-size="10" fill="#2563eb" text-anchor="middle">플롯 수만큼</text>
+<text x="50" y="166" font-size="11" fill="#475569" text-anchor="start" font-weight="700">플롯 하나에 담는 것</text>
+<rect x="50" y="172" width="90" height="44" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="95" y="198" font-size="9.5" fill="#2563eb" text-anchor="middle" font-weight="700">플롯 ID</text>
+<rect x="140" y="172" width="150" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="215" y="198" font-size="9.5" fill="#1e293b" text-anchor="middle">드웰 · 스캔 · 빔 번호</text>
+<rect x="290" y="172" width="60" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="320" y="198" font-size="9.5" fill="#1e293b" text-anchor="middle">시각</text>
+<rect x="350" y="172" width="60" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="380" y="198" font-size="9.5" fill="#1e293b" text-anchor="middle">빔 종류</text>
+<rect x="410" y="172" width="220" height="44" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="520" y="198" font-size="9.5" fill="#2563eb" text-anchor="middle" font-weight="700">거리 · 방위각 · 고각 (안테나 기준)</text>
+<rect x="630" y="172" width="180" height="44" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="720" y="198" font-size="9.5" fill="#1e293b" text-anchor="middle">변환 좌표 칸 (받는 쪽이 채움)</text>
+<text x="430" y="252" font-size="10.5" fill="#475569" text-anchor="middle">보내는 쪽은 ID 와 안테나 기준 구좌표만 채운다. 표적인지 클러터인지는 넣지 않으므로 받는 쪽은 모든 플롯을 같은 방법으로 다룬다</text>
+<text x="430" y="278" font-size="10.5" fill="#64748b" text-anchor="middle">R 표준편차를 메시지에 실어 보내는 것은 받는 쪽이 플롯을 만든 잡음을 알 수 없기 때문이다. 레이다가 자기 정확도를 알려 주는 자리다</text>
+</svg>

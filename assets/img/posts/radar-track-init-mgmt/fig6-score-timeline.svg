@@ -1,0 +1,88 @@
+<svg width="2580" height="1200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="398" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">연관 성공은 점수를 올리고 실패는 내린다. 점수가 문턱을 넘는 순간 상태가 바뀐다</text>
+<rect x="58.73" y="70" width="62.55" height="26" rx="3" fill="#ffedd5" stroke="none" stroke-width="1.4"/>
+<text x="90" y="87" font-size="9.5" fill="#ea580c" text-anchor="middle" font-weight="700">임시</text>
+<rect x="123.27" y="70" width="62.55" height="26" rx="3" fill="#ffedd5" stroke="none" stroke-width="1.4"/>
+<text x="154.55" y="87" font-size="9.5" fill="#ea580c" text-anchor="middle" font-weight="700">임시</text>
+<rect x="187.82" y="70" width="62.55" height="26" rx="3" fill="#ffedd5" stroke="none" stroke-width="1.4"/>
+<text x="219.09" y="87" font-size="9.5" fill="#ea580c" text-anchor="middle" font-weight="700">임시</text>
+<rect x="252.36" y="70" width="62.55" height="26" rx="3" fill="#dcfce7" stroke="none" stroke-width="1.4"/>
+<text x="283.64" y="87" font-size="9.5" fill="#16a34a" text-anchor="middle" font-weight="700">확정</text>
+<rect x="316.91" y="70" width="62.55" height="26" rx="3" fill="#ede9fe" stroke="none" stroke-width="1.4"/>
+<text x="348.18" y="87" font-size="9.5" fill="#7c3aed" text-anchor="middle" font-weight="700">메모리</text>
+<rect x="381.45" y="70" width="62.55" height="26" rx="3" fill="#ede9fe" stroke="none" stroke-width="1.4"/>
+<text x="412.73" y="87" font-size="9.5" fill="#7c3aed" text-anchor="middle" font-weight="700">메모리</text>
+<rect x="446" y="70" width="62.55" height="26" rx="3" fill="#dcfce7" stroke="none" stroke-width="1.4"/>
+<text x="477.27" y="87" font-size="9.5" fill="#16a34a" text-anchor="middle" font-weight="700">확정</text>
+<rect x="510.55" y="70" width="62.55" height="26" rx="3" fill="#ede9fe" stroke="none" stroke-width="1.4"/>
+<text x="541.82" y="87" font-size="9.5" fill="#7c3aed" text-anchor="middle" font-weight="700">메모리</text>
+<rect x="575.09" y="70" width="62.55" height="26" rx="3" fill="#ede9fe" stroke="none" stroke-width="1.4"/>
+<text x="606.36" y="87" font-size="9.5" fill="#7c3aed" text-anchor="middle" font-weight="700">메모리</text>
+<rect x="639.64" y="70" width="62.55" height="26" rx="3" fill="#ede9fe" stroke="none" stroke-width="1.4"/>
+<text x="670.91" y="87" font-size="9.5" fill="#7c3aed" text-anchor="middle" font-weight="700">메모리</text>
+<rect x="704.18" y="70" width="62.55" height="26" rx="3" fill="#ede9fe" stroke="none" stroke-width="1.4"/>
+<text x="735.45" y="87" font-size="9.5" fill="#7c3aed" text-anchor="middle" font-weight="700">메모리</text>
+<rect x="768.73" y="70" width="62.55" height="26" rx="3" fill="#f1f5f9" stroke="none" stroke-width="1.4"/>
+<text x="800" y="87" font-size="9.5" fill="#64748b" text-anchor="middle" font-weight="700">삭제</text>
+<text x="76" y="87" font-size="10" fill="#475569" text-anchor="end">상태</text>
+<text x="90" y="112" font-size="9.5" fill="#64748b" text-anchor="middle">개시</text>
+<circle cx="154.55" cy="108" r="6" fill="#16a34a" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="219.09" cy="108" r="6" fill="#16a34a" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="283.64" cy="108" r="6" fill="#16a34a" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="348.18" cy="108" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/>
+<circle cx="412.73" cy="108" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/>
+<circle cx="477.27" cy="108" r="6" fill="#16a34a" stroke="#16a34a" stroke-width="1.4"/>
+<circle cx="541.82" cy="108" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/>
+<circle cx="606.36" cy="108" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/>
+<circle cx="670.91" cy="108" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/>
+<circle cx="735.45" cy="108" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/>
+<circle cx="800" cy="108" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/>
+<text x="76" y="112" font-size="10" fill="#475569" text-anchor="end">연관</text>
+<line x1="86" y1="320" x2="810" y2="320" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="80" y="323.5" font-size="9.5" fill="#64748b" text-anchor="end">0</text>
+<line x1="86" y1="291.67" x2="810" y2="291.67" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="80" y="295.17" font-size="9.5" fill="#64748b" text-anchor="end">1</text>
+<line x1="86" y1="263.33" x2="810" y2="263.33" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="80" y="266.83" font-size="9.5" fill="#64748b" text-anchor="end">2</text>
+<line x1="86" y1="235" x2="810" y2="235" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="80" y="238.5" font-size="9.5" fill="#64748b" text-anchor="end">3</text>
+<line x1="86" y1="206.67" x2="810" y2="206.67" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="80" y="210.17" font-size="9.5" fill="#64748b" text-anchor="end">4</text>
+<line x1="86" y1="178.33" x2="810" y2="178.33" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="80" y="181.83" font-size="9.5" fill="#64748b" text-anchor="end">5</text>
+<line x1="86" y1="150" x2="810" y2="150" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="80" y="153.5" font-size="9.5" fill="#64748b" text-anchor="end">6</text>
+<line x1="86" y1="178.33" x2="810" y2="178.33" stroke="#16a34a" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="814" y="181.83" font-size="9.5" fill="#16a34a" text-anchor="start">확정 문턱</text>
+<line x1="86" y1="320" x2="810" y2="320" stroke="#dc2626" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="5 4"/>
+<path d="M90.0,263.3 L154.5,235.0 L219.1,206.7 L283.6,178.3 L348.2,178.3 L412.7,178.3 L477.3,178.3 L541.8,178.3 L606.4,178.3 L670.9,178.3 L735.5,178.3 L800.0,178.3" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90.0,320.0 L154.5,320.0 L219.1,320.0 L283.6,320.0 L348.2,291.7 L412.7,263.3 L477.3,320.0 L541.8,291.7 L606.4,263.3 L670.9,235.0 L735.5,206.7 L800.0,178.3" fill="none" stroke="#7c3aed" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<path d="M90.0,263.3h0M154.5,235.0h0M219.1,206.7h0M283.6,178.3h0M348.2,178.3h0M412.7,178.3h0M477.3,178.3h0M541.8,178.3h0M606.4,178.3h0M670.9,178.3h0M735.5,178.3h0M800.0,178.3h0" fill="none" stroke="#ea580c" stroke-width="7.0" stroke-linecap="round"/>
+<path d="M90.0,320.0h0M154.5,320.0h0M219.1,320.0h0M283.6,320.0h0M348.2,291.7h0M412.7,263.3h0M477.3,320.0h0M541.8,291.7h0M606.4,263.3h0M670.9,235.0h0M735.5,206.7h0M800.0,178.3h0" fill="none" stroke="#7c3aed" stroke-width="6.0" stroke-linecap="round"/>
+<line x1="86" y1="320" x2="810" y2="320" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="90" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">0</text>
+<text x="154.55" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">1</text>
+<text x="219.09" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">2</text>
+<text x="283.64" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">3</text>
+<text x="348.18" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">4</text>
+<text x="412.73" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">5</text>
+<text x="477.27" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">6</text>
+<text x="541.82" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">7</text>
+<text x="606.36" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">8</text>
+<text x="670.91" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">9</text>
+<text x="735.45" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">10</text>
+<text x="800" y="335" font-size="9.5" fill="#64748b" text-anchor="middle">11</text>
+<text x="445" y="352" font-size="10.5" fill="#64748b" text-anchor="middle">개시 뒤 스캔</text>
+<text x="44" y="235" font-size="10.5" fill="#64748b" text-anchor="middle" transform="rotate(-90 44 235.0)">점수</text>
+<line x1="560" y1="362" x2="590" y2="362" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round"/>
+<text x="596" y="366" font-size="10" fill="#475569" text-anchor="start">TrackScore</text>
+<line x1="680" y1="362" x2="710" y2="362" stroke="#7c3aed" stroke-width="2.0" stroke-linecap="round" stroke-dasharray="6 4"/>
+<text x="716" y="366" font-size="10" fill="#475569" text-anchor="start">MemoryScore</text>
+<circle cx="100" cy="362" r="6" fill="#16a34a" stroke="#16a34a" stroke-width="1.4"/>
+<text x="112" y="366" font-size="10" fill="#475569" text-anchor="start">연관 성공 (1)</text>
+<circle cx="220" cy="362" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/>
+<text x="232" y="366" font-size="10" fill="#475569" text-anchor="start">연관 실패 (0)</text>
+<text x="430" y="390" font-size="10.5" fill="#64748b" text-anchor="middle">플래그 열 1 1 1 0 0 1 0 0 0 0 0 을 넣은 경우다. 확정된 뒤에는 TrackScore 가 더 움직이지 않고 MemoryScore 만 센다</text>
+</svg>

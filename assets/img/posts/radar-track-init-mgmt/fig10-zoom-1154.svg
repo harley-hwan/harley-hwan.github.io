@@ -1,0 +1,61 @@
+<svg width="2580" height="1476" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 492" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="ar-sky" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/></marker><marker id="ar-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/></marker></defs>
+<rect x="1" y="1" width="858" height="490" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430" y="34" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">스캔 1154: 앞 스캔 플롯의 게이트 안에 이번 플롯이 들어와 트랙이 생기고, 두 스캔 전 트랙은 삭제된다</text>
+<rect x="110" y="70" width="640" height="340" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<line x1="190" y1="70" x2="190" y2="410" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="190" y="424" font-size="9.5" fill="#64748b" text-anchor="middle">-50</text>
+<line x1="270" y1="70" x2="270" y2="410" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="270" y="424" font-size="9.5" fill="#64748b" text-anchor="middle">-25</text>
+<line x1="350" y1="70" x2="350" y2="410" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="350" y="424" font-size="9.5" fill="#64748b" text-anchor="middle">0</text>
+<line x1="430" y1="70" x2="430" y2="410" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="430" y="424" font-size="9.5" fill="#64748b" text-anchor="middle">25</text>
+<line x1="510" y1="70" x2="510" y2="410" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="510" y="424" font-size="9.5" fill="#64748b" text-anchor="middle">50</text>
+<line x1="590" y1="70" x2="590" y2="410" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="590" y="424" font-size="9.5" fill="#64748b" text-anchor="middle">75</text>
+<line x1="670" y1="70" x2="670" y2="410" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="670" y="424" font-size="9.5" fill="#64748b" text-anchor="middle">100</text>
+<line x1="750" y1="70" x2="750" y2="410" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="750" y="424" font-size="9.5" fill="#64748b" text-anchor="middle">125</text>
+<line x1="110" y1="396.92" x2="750" y2="396.92" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="104" y="400.42" font-size="9.5" fill="#64748b" text-anchor="end">-50</text>
+<line x1="110" y1="331.54" x2="750" y2="331.54" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="104" y="335.04" font-size="9.5" fill="#64748b" text-anchor="end">-25</text>
+<line x1="110" y1="266.15" x2="750" y2="266.15" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="104" y="269.65" font-size="9.5" fill="#64748b" text-anchor="end">0</text>
+<line x1="110" y1="200.77" x2="750" y2="200.77" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="104" y="204.27" font-size="9.5" fill="#64748b" text-anchor="end">25</text>
+<line x1="110" y1="135.38" x2="750" y2="135.38" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="104" y="138.88" font-size="9.5" fill="#64748b" text-anchor="end">50</text>
+<line x1="110" y1="70" x2="750" y2="70" stroke="#f1f5f9" stroke-width="1" stroke-linecap="round"/>
+<text x="104" y="73.5" font-size="9.5" fill="#64748b" text-anchor="end">75</text>
+<text x="430" y="440" font-size="10.5" fill="#64748b" text-anchor="middle">동 [m]  (스캔 1154 의 참값 기준)</text>
+<text x="70" y="240" font-size="10.5" fill="#64748b" text-anchor="middle" transform="rotate(-90 70 240.0)">북 [m]</text>
+<clipPath id="clipz"><rect x="110" y="70" width="640" height="340"/></clipPath>
+<g clip-path="url(#clipz)">
+<path d="M993.2,-240.4 L953.1,-199.6 L912.1,-159.5 L870.1,-120.0 L827.2,-81.2 L783.3,-43.1 L738.6,-5.7 L692.9,31.0 L646.4,66.9 L599.0,102.1 L550.8,136.5 L501.8,170.1 L452.0,202.9 L401.4,234.9 L350.0,266.2" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M350.0,266.2 L297.9,296.5 L245.1,326.1 L191.6,354.8 L137.4,382.6 L82.5,409.5 L27.0,435.6" fill="none" stroke="#fecaca" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="441.03" cy="258.38" r="256" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6" stroke-dasharray="6 4"/>
+</g>
+<line x1="441.03" y1="258.38" x2="343.24" y2="270.37" stroke="#16a34a" stroke-width="2.0" stroke-linecap="round"/>
+<circle cx="441.03" cy="258.38" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M343.2,270.4h0" fill="none" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+<rect x="333.24" y="260.37" width="20" height="20" rx="1.5" fill="none" stroke="#ea580c" stroke-width="2.2"/>
+<line x1="329.35" y1="272.07" x2="253.91" y2="281.31" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ar-orange)"/>
+<rect x="554.09" y="182.12" width="20" height="20" rx="1.5" fill="none" stroke="#94a3b8" stroke-width="2.0"/>
+<line x1="557.09" y1="185.12" x2="571.09" y2="199.12" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="557.09" y1="199.12" x2="571.09" y2="185.12" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M350.0,266.2h0" fill="none" stroke="#dc2626" stroke-width="8" stroke-linecap="round"/>
+<text x="453.03" y="280.38" font-size="10.5" fill="#1e293b" text-anchor="start">앞 스캔 (1153) 플롯</text>
+<text x="359.24" y="306.37" font-size="10.5" fill="#1e293b" text-anchor="start">이번 스캔 (1154) 플롯</text>
+<text x="359.24" y="322.37" font-size="10.5" fill="#ea580c" text-anchor="start">= 트랙 451 의 위치 (임시, 점수 2)</text>
+<text x="247.91" y="271.31" font-size="10" fill="#ea580c" text-anchor="end">2-Point 속도의 방향</text>
+<text x="578.09" y="180.12" font-size="10.5" fill="#64748b" text-anchor="start">트랙 450 (삭제, 점수 0)</text>
+<text x="578.09" y="196.12" font-size="10" fill="#64748b" text-anchor="start">스캔 1152 에 개시</text>
+<text x="360" y="256.15" font-size="10" fill="#dc2626" text-anchor="start">지금 참값</text>
+<text x="671.69" y="131.65" font-size="10.5" fill="#16a34a" text-anchor="start">속도 게이트</text>
+<text x="609.01" y="106.05" font-size="10" fill="#dc2626" text-anchor="start">참값 궤적</text>
+<text x="430" y="474" font-size="10.5" fill="#64748b" text-anchor="middle">게이트 반경은 최대 속도 800 m/s × 0.1 s = 80 m 다. 두 플롯 사이가 31 m 라 통과했고, 그 31 m 를 0.1 s 로 나눈 310 m/s 가 트랙의 속도가 됐다</text>
+</svg>
