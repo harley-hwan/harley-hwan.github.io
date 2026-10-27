@@ -31,5 +31,5 @@
 <path d="M785.0,205.0h0" fill="none" stroke="#1f2937" stroke-width="10" stroke-linecap="round"/>
 <text x="785" y="223" font-size="10" fill="#1e293b" text-anchor="middle">게이트 밖</text>
 <text x="630" y="282" font-size="10.5" fill="#475569" text-anchor="middle">붙일 플롯이 없어 트랙은 그대로 다음 스캔을 기다린다</text>
-<text x="430" y="318" font-size="10.5" fill="#64748b" text-anchor="middle">이번 과제에는 이 단계가 없어 플래그가 늘 0 이다. 상태 전이와 9절의 확정 확률은 전부 이 한 비트에 걸려 있다</text>
+<text x="430" y="318" font-size="10.5" fill="#64748b" text-anchor="middle">이번 구현에는 이 단계가 없어 플래그가 늘 0 이다. 상태 전이와 9절의 확정 확률은 전부 이 한 비트에 걸려 있다</text>
 </svg>
