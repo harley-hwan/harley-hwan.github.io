@@ -1,0 +1,49 @@
+<svg width="2580" height="1290" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
+<rect x="1.0" y="1.0" width="858.0" height="428.0" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">RAG 의 두 단계</text>
+<text x="30.0" y="82.0" font-size="13.5" fill="#16a34a" text-anchor="start" font-weight="700">색인: 문서가 바뀔 때마다 미리 해 둔다</text>
+<rect x="24.0" y="96.0" width="118.0" height="62.0" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.4"/>
+<text x="83.0" y="131.6" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">문서</text>
+<rect x="164.0" y="96.0" width="118.0" height="62.0" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.4"/>
+<text x="223.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">텍스트</text>
+<text x="223.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">추출</text>
+<rect x="304.0" y="96.0" width="118.0" height="62.0" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.4"/>
+<text x="363.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">청크로</text>
+<text x="363.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">자르기</text>
+<rect x="444.0" y="96.0" width="118.0" height="62.0" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.4"/>
+<text x="503.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">청크마다</text>
+<text x="503.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">임베딩</text>
+<rect x="584.0" y="96.0" width="118.0" height="62.0" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.4"/>
+<text x="643.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">벡터 색인</text>
+<text x="643.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">+ 키워드 색인</text>
+<line x1="144.0" y1="127.0" x2="161.0" y2="127.0" stroke="#16a34a" stroke-width="1.6" marker-end="url(#ar-green)"/>
+<line x1="284.0" y1="127.0" x2="301.0" y2="127.0" stroke="#16a34a" stroke-width="1.6" marker-end="url(#ar-green)"/>
+<line x1="424.0" y1="127.0" x2="441.0" y2="127.0" stroke="#16a34a" stroke-width="1.6" marker-end="url(#ar-green)"/>
+<line x1="564.0" y1="127.0" x2="581.0" y2="127.0" stroke="#16a34a" stroke-width="1.6" marker-end="url(#ar-green)"/>
+<text x="30.0" y="252.0" font-size="13.5" fill="#2563eb" text-anchor="start" font-weight="700">질의: 물을 때마다 한다</text>
+<rect x="24.0" y="266.0" width="118.0" height="62.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="83.0" y="301.6" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">질문</text>
+<rect x="164.0" y="266.0" width="118.0" height="62.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="223.0" y="292.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">검색</text>
+<text x="223.0" y="310.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">(권한 필터)</text>
+<rect x="304.0" y="266.0" width="118.0" height="62.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="363.0" y="301.6" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">재순위</text>
+<rect x="444.0" y="266.0" width="118.0" height="62.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="503.0" y="292.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">프롬프트</text>
+<text x="503.0" y="310.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">조립</text>
+<rect x="584.0" y="266.0" width="118.0" height="62.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="643.0" y="301.6" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">모델</text>
+<rect x="724.0" y="266.0" width="118.0" height="62.0" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="783.0" y="301.6" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">답과 출처</text>
+<line x1="144.0" y1="297.0" x2="161.0" y2="297.0" stroke="#2563eb" stroke-width="1.6" marker-end="url(#ar-blue)"/>
+<line x1="284.0" y1="297.0" x2="301.0" y2="297.0" stroke="#2563eb" stroke-width="1.6" marker-end="url(#ar-blue)"/>
+<line x1="424.0" y1="297.0" x2="441.0" y2="297.0" stroke="#2563eb" stroke-width="1.6" marker-end="url(#ar-blue)"/>
+<line x1="564.0" y1="297.0" x2="581.0" y2="297.0" stroke="#2563eb" stroke-width="1.6" marker-end="url(#ar-blue)"/>
+<line x1="704.0" y1="297.0" x2="721.0" y2="297.0" stroke="#2563eb" stroke-width="1.6" marker-end="url(#ar-blue)"/>
+<line x1="643.0" y1="160.0" x2="253.0" y2="262.0" stroke="#16a34a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ar-green)"/>
+<rect x="322.0" y="196.0" width="170.0" height="24.0" rx="4" fill="#ffffff" stroke="none" stroke-width="1.4"/>
+<text x="407.0" y="213.0" font-size="12" fill="#16a34a" text-anchor="middle" font-weight="400">색인에서 후보 청크를 꺼낸다</text>
+<text x="430.0" y="380.0" font-size="12.5" fill="#64748b" text-anchor="middle" font-weight="400">답의 품질은 모델보다 앞 단계에서 정해지는 경우가 많다</text>
+<text x="430.0" y="400.0" font-size="12.5" fill="#64748b" text-anchor="middle" font-weight="400">찾아오지 못한 문서는 모델이 읽을 수 없다</text>
+</svg>

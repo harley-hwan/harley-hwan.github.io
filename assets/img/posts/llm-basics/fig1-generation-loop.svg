@@ -1,0 +1,31 @@
+<svg width="2580" height="990" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
+<rect x="1.0" y="1.0" width="858.0" height="328.0" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">LLM 이 문장을 만드는 순서</text>
+<rect x="24.0" y="92.0" width="118.0" height="70.0" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="83.0" y="131.6" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">입력 문장</text>
+<rect x="164.0" y="92.0" width="118.0" height="70.0" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="223.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">토큰으로</text>
+<text x="223.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">자르기</text>
+<rect x="304.0" y="92.0" width="118.0" height="70.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="363.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">토큰마다</text>
+<text x="363.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">벡터로 바꾸기</text>
+<rect x="444.0" y="92.0" width="118.0" height="70.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="503.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">트랜스포머 층</text>
+<text x="503.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">N 번 통과</text>
+<rect x="584.0" y="92.0" width="118.0" height="70.0" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="1.4"/>
+<text x="643.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">다음 토큰의</text>
+<text x="643.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">확률 분포</text>
+<rect x="724.0" y="92.0" width="118.0" height="70.0" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="1.4"/>
+<text x="783.0" y="122.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">토큰 하나</text>
+<text x="783.0" y="140.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">고르기</text>
+<line x1="144.0" y1="127.0" x2="161.0" y2="127.0" stroke="#64748b" stroke-width="1.6" marker-end="url(#ar-mute)"/>
+<line x1="284.0" y1="127.0" x2="301.0" y2="127.0" stroke="#64748b" stroke-width="1.6" marker-end="url(#ar-mute)"/>
+<line x1="424.0" y1="127.0" x2="441.0" y2="127.0" stroke="#64748b" stroke-width="1.6" marker-end="url(#ar-mute)"/>
+<line x1="564.0" y1="127.0" x2="581.0" y2="127.0" stroke="#64748b" stroke-width="1.6" marker-end="url(#ar-mute)"/>
+<line x1="704.0" y1="127.0" x2="721.0" y2="127.0" stroke="#64748b" stroke-width="1.6" marker-end="url(#ar-mute)"/>
+<path d="M783.0,164 L783.0,242 L83.0,242 L83.0,167" fill="none" stroke="#ea580c" stroke-width="1.6" marker-end="url(#ar-orange)"/>
+<rect x="250.0" y="228.0" width="360.0" height="28.0" rx="4" fill="#ffffff" stroke="none" stroke-width="1.4"/>
+<text x="430.0" y="247.0" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="600">고른 토큰을 입력 끝에 붙이고 처음부터 다시</text>
+<text x="430.0" y="290.0" font-size="12.5" fill="#64748b" text-anchor="middle" font-weight="400">문장 전체를 한 번에 만드는 것이 아니라, 이 고리를 토큰 하나마다 한 바퀴씩 돈다</text>
+</svg>

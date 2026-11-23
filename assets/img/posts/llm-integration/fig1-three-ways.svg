@@ -1,0 +1,28 @@
+<svg width="2580" height="1080" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+<defs><marker id="ar-mute" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="ar-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ar-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="ar-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="ar-violet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ar-axis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
+<rect x="1.0" y="1.0" width="858.0" height="358.0" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="430.0" y="34.0" font-size="17" fill="#1e293b" text-anchor="middle" font-weight="700">모델을 업무에 붙이는 세 갈래</text>
+<rect x="60.0" y="155.0" width="170.0" height="70.0" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="145.0" y="195.2" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">입력</text>
+<rect x="345.0" y="145.0" width="170.0" height="90.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="430.0" y="195.6" font-size="16" fill="#2563eb" text-anchor="middle" font-weight="700">모델</text>
+<rect x="630.0" y="155.0" width="170.0" height="70.0" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="715.0" y="195.2" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="700">출력</text>
+<line x1="232.0" y1="190.0" x2="342.0" y2="190.0" stroke="#64748b" stroke-width="1.8" marker-end="url(#ar-mute)"/>
+<line x1="517.0" y1="190.0" x2="627.0" y2="190.0" stroke="#64748b" stroke-width="1.8" marker-end="url(#ar-mute)"/>
+<rect x="45.0" y="62.0" width="200.0" height="62.0" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.4"/>
+<text x="145.0" y="88.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">입력을 바꾼다</text>
+<text x="145.0" y="106.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">프롬프트, RAG</text>
+<rect x="330.0" y="62.0" width="200.0" height="62.0" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="1.4"/>
+<text x="430.0" y="88.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">모델을 바꾼다</text>
+<text x="430.0" y="106.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">파인튜닝</text>
+<rect x="615.0" y="62.0" width="200.0" height="62.0" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="715.0" y="88.8" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">행동을 준다</text>
+<text x="715.0" y="106.3" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="400">도구 호출, 에이전트</text>
+<line x1="145.0" y1="126.0" x2="145.0" y2="152.0" stroke="#16a34a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ar-green)"/>
+<line x1="430.0" y1="126.0" x2="430.0" y2="142.0" stroke="#ea580c" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ar-orange)"/>
+<line x1="715.0" y1="126.0" x2="715.0" y2="152.0" stroke="#7c3aed" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ar-violet)"/>
+<path d="M715,227 L715,285 L145,285 L145,230" fill="none" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#ar-violet)"/>
+<rect x="300.0" y="272.0" width="260.0" height="26.0" rx="4" fill="#ffffff" stroke="none" stroke-width="1.4"/>
+<text x="430.0" y="290.0" font-size="12.5" fill="#7c3aed" text-anchor="middle" font-weight="600">도구를 실행한 결과가 다시 입력이 된다</text>
+</svg>

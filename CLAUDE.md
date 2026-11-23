@@ -20,6 +20,7 @@ Jekyll + Chirpy 기반 개인 기술 블로그 `harley's dev note`. 이 파일�
 |---|---|
 | `[Algorithm, Baekjoon]` | `_posts/algorithm/baekjoon/` |
 | `[Algorithm, Programmers]` | `_posts/algorithm/programmers/` |
+| `[Dev, AI]` | `_posts/dev/ai/` |
 | `[Dev, C++]` | `_posts/dev/cpp/` |
 | `[Dev, CNN]` | `_posts/dev/cnn/` |
 | `[Dev, CSharp]` | `_posts/dev/csharp/` |
@@ -56,7 +57,7 @@ math: true
 
 | 키 | 필수 | 규칙 |
 |---|---|---|
-| `title` | O | `"(접두어) N. 제목"`. 개념 글은 ` — 부제` 를 덧붙인다. N은 `series_order` 와 일치시킨다. 접두어는 `(Radar)`, `(C#)`, `(WPF)`, `(OpenCV C++)` |
+| `title` | O | `"(접두어) N. 제목"`. 개념 글은 ` — 부제` 를 덧붙인다. N은 `series_order` 와 일치시킨다. 접두어는 `(Radar)`, `(C#)`, `(WPF)`, `(OpenCV C++)`, `(AI)` |
 | `description` | O | 무엇을 다루는지 열거하는 한 문장. `— ... 까지.` 형태가 기본이다. SEO 메타와 피드에 그대로 나가므로 제목을 되풀이하지 않는다 |
 | `date` | O | `YYYY-MM-DD 10:00:00 +0900` |
 | `slug` | O | 파일명의 slug 와 같은 값. 인용 부호로 감싼다 |
@@ -73,7 +74,7 @@ math: true
 `_includes/series-nav.html` 의 계약이다.
 
 - `series: <키>` 와 `series_order: <번호>` 가 함께 있으면 이전 장·다음 장 링크가 자동 생성된다
-- 현재 키: `radar`, `csharp`, `opencv`, `wpf`, `cnn`, `docker`
+- 현재 키: `radar`, `csharp`, `opencv`, `wpf`, `cnn`, `docker`, `ai`
 - 허브(목차) 글은 `series_hub: true`, `series_order: -1`, `pin: true`, `toc: false` 를 쓴다. 이전/다음 체인에서 제외된다
 - **새 장을 추가하면 허브 글의 목차 목록도 같이 갱신한다.** 목차 본문은 자동 생성이 아니다
 - 아직 쓰지 않은 장은 허브에 `N. 제목 — 작성 예정` 으로 자리를 남긴다
